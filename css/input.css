@@ -3,3 +3,15 @@
 @tailwind utilities;
 
 /* make your tailwind components in this document */
+
+@layer components{
+    .regButton{
+        @apply
+        bg-black
+        rounded-xl
+        text-white
+        px-2
+        py-1
+        font-xs
+    }
+}
