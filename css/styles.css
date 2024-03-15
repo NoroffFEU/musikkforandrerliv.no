@@ -544,14 +544,17 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.regButton {
-  border-radius: 0.75rem;
+.altButton {
+  border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(238 99 82 / var(--tw-bg-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -632,6 +635,11 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .uppercase {
