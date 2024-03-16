@@ -5,7 +5,7 @@
 /* make your tailwind components in this document */
 
 @layer components{
-    .reg-Button{
+    .reg-button{
         @apply
         bg-white
         rounded-md
@@ -16,7 +16,7 @@
         font-semibold
         /* font-montserrat */  /* TODO: Add this font later*/
     }
-    .alt-Button{
+    .alt-button{
         @apply
         bg-[#EE6352] /*TODO: change to correct color later.*/
         rounded-md
