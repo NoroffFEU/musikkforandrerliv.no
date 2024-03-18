@@ -12,8 +12,13 @@ module.exports = {
       'forest-green': '#304B42',
       'frost-blue': '#EBF7FF'
     },
+    
+    fontFamily: {
+      "montserrat": ["Montserrat", "sans-serif"],
+      "justAnotherHand": ["Just Another Hand","sans-serif"]
+    },
+    
     extend: {
-      //add your extensions here colors, fonts, etc..
     },
   },
   plugins: [],
