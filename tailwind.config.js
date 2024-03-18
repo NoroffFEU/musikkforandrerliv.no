@@ -2,20 +2,21 @@
 module.exports = {
   content: ["./**/**/*.{html,js}"],
   theme: {
+    colors: {
+      'sunset-red': '#EE6352',
+      'primary-green': '#5B8E7D',
+      'sky-blue': '#66C3FF',
+      'ivory-beige': '#F8EED1',
+      'dark-green': '#363732',
+      'alt-red': '#81362C',
+      'forest-green': '#304B42',
+      'frost-blue': '#EBF7FF'
+    },
     extend: {
       //add your extensions here colors, fonts, etc..
-      colors: {
-        sunsetRed: '#EE6352',
-        primaryGreen: '#5b8e7d',
-        skyBlue: '#66C3FF',
-        ivoryBeige: '#F8EED1',
-        darkGreen: '#363732',
-        altRed: '#81362C',
-        forestGreen: '#304B42',
-        frostBlue: '#EBF7FF',
-      }
     },
   },
   plugins: [],
 }
+
 
