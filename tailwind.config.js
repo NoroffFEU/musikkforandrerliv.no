@@ -10,12 +10,14 @@ module.exports = {
       'dark-green': '#363732',
       'alt-red': '#81362C',
       'forest-green': '#304B42',
-      'frost-blue': '#EBF7FF'
+      'frost-blue': '#EBF7FF',
+      'white': '#FFFFFF',
+      'black': '#000000'
     },
     
     fontFamily: {
-      "montserrat": ["Montserrat", "sans-serif"],
-      "justAnotherHand": ["Just Another Hand","sans-serif"]
+      sans: ["Montserrat", "sans-serif"], 
+      justAnotherHand: ["Just Another Hand","sans-serif"],
     },
     
     extend: {
