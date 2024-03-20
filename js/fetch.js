@@ -13,7 +13,7 @@ async function fetchData(url) {
 
 async function getPosts(){
     if(!blogPosts) {
-        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+        const apiUrl = 'https://jsonplaceholder.typicode.com/posts'; // use the real api if needed
         blogPosts  = await fetchData(apiUrl)
     }
 }
