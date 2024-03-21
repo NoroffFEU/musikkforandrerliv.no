@@ -4,27 +4,54 @@
 
 /* make your tailwind components in this document */
 
-@layer components{
-    .reg-button{
-        @apply
-        bg-white
+@layer components {
+  .reg-button {
+    @apply bg-white
         rounded-md
         text-black
         px-2
         py-1
         text-xs
         font-semibold
-        /* font-montserrat */  /* TODO: Add this font later*/
-    }
-    .alt-button{
-        @apply
-        bg-[#EE6352] /*TODO: change to correct color later.*/
+        font-sans /* Default font AKA montserrat */;
+  }
+  .alt-button {
+    @apply bg-[#EE6352] /*TODO: change to correct color later.*/
         rounded-md
         text-white
         px-2
-        py-1
+        pb-1
+        pt-2
         text-xs
         font-semibold
-        /* font-justAnotherHand */  /* TODO: Add this font later*/
-    }
+        font-justAnotherHand;
+  }
+}
+
+/* Hide the default search input clear button */
+.search-drawer_input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Language selection animation */
+
+#language-options {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s, max-height 0.5s ease;
+  position: absolute;
+  left: 0;
+  background-color: white;
+}
+
+.group:hover #language-options {
+  opacity: 1;
+  max-height: 200px;
+}
+
+/* Border radius for input fields */
+.rounded-ib {
+  border-radius: 10px;
 }
