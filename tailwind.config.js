@@ -20,6 +20,9 @@ module.exports = {
     },
     
     extend: {
+      backgroundImage: {
+        'hero-image': "url('/assets/placeholder-images/IMG_3779.webp')",
+      }
     },
   },
   plugins: [],
