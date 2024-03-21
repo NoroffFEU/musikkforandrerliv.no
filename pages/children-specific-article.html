@@ -1,12 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get to know the wonderful children of MMF through their music and art">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get to know the wonderful children of MMF through their music and art"
+    />
     <title>Children Specific Article</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="flex h-24 items-center justify-between px-10 mt-6">
+      <div class="flex flex-row items-center gap-10 text-base">
+        <a href="#">
+          <img
+            src="/images/SVGs/headerLogo.svg"
+            aria-label="Header Logo"
+            alt="Header Logo"
+            class="cursor-pointer w-20 h-20"
+          />
+        </a>
+      </div>
+      <nav class="flex flex-row items-center gap-10">
+        <button
+          id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+        >
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img
+            src="/images/SVGs/Search.svg"
+            class="w-5 h-5 -mr-1"
+            aria-label="Search Button"
+            alt="Search Button"
+          />
+          <span class="text-2xl font-medium">Search</span>
+        </button>
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center">
+            <span class="text-2xl font-medium">Projects</span>
+            <img
+              src="/images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
+          </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div class="absolute hidden mt-2 bg-white">
+            <a
+              href="#"
+              class="block p-2 border-t border-b border-black hover:bg-gray-100"
+              >Project 1</a
+            >
+            <a
+              href="#"
+              class="block p-2 border-b border-black hover:bg-gray-100"
+              >Project 2</a
+            >
+          </div>
+        </div>
+        <button
+          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+        >
+          DONATE
+        </button>
+        <div
+          class="relative flex w-5 h-5 items-center group"
+          id="language-selector"
+        >
+          <img
+            src="/images/SVGs/globe-solid.svg"
+            aria-label="Globe Icon For Language Selection"
+            alt="Language Selection"
+            class="cursor-pointer object-contain h-5 w-5"
+          />
+          <div class="absolute left-0 w-full bg-white" id="language-options">
+            <a href="#" class="block">
+              <img
+                src="/images/SVGs/norway.svg"
+                aria-label="Norwegian Flag Language Selection"
+                alt="Norwegian Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="/images/SVGs/unitedKingdom.svg"
+                aria-label="English Flag Language Selection"
+                alt="English Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="/images/SVGs/madagascar.svg"
+                aria-label="Malagasy Flag Language Selection"
+                alt="Malagasy Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Section 1-->
+    <section class="flex flex-col items-center justify-center">
+      <h1 class="font-normal text-[40px] mt-24">Anna and the art of violin</h1>
+      <img
+        class="w-[709px] h-[629px] rounded-[40px] my-5"
+        src="../assets/placeholder-images/IMG_1457.webp"
+        alt="Anna playing violin"
+      />
+      <div>
+        <h2 class="font-normal text-[40px] mt-7">Lorem ipsum dolor</h2>
+        <div
+          class="flex flex-col items-center font-normal text-xl w-[709px] h-[619px] gap-10 mt-2"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Section 1-->
+  </body>
 </html>
