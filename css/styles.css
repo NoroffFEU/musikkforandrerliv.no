@@ -544,6 +544,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+
 .reg-button {
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
@@ -628,6 +629,15 @@ video {
   position: sticky;
 }
 
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.bottom-9 {
+  bottom: 2.25rem;
+}
+
 .inset-x-0 {
   left: 0px;
   right: 0px;
@@ -666,6 +676,34 @@ video {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.box-border {
+  box-sizing: border-box;
 }
 
 .my-3 {
@@ -963,6 +1001,22 @@ video {
   height: auto;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
 .max-h-\[270px\] {
   max-height: 270px;
 }
@@ -1073,6 +1127,26 @@ video {
   resize: both;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1093,6 +1167,10 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-7 {
   gap: 1.75rem;
 }
@@ -1103,6 +1181,9 @@ video {
 
 .gap-16 {
   gap: 4rem;
+}
+
+.gap-12 {
 }
 
 .gap-0 {
@@ -1125,6 +1206,19 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.bg-\[\#363732\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 55 50 / var(--tw-bg-opacity));
+}
+
+.p-20 {
+  padding: 5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .rounded-md {
@@ -1283,6 +1377,73 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.pl-20 {
+  padding-left: 5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
+.pr-16 {
+  padding-right: 4rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pl-16 {
+  padding-left: 4rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-xl {
