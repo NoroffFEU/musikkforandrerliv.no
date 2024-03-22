@@ -20,6 +20,9 @@ module.exports = {
     },
     
     extend: {
+      backgroundImage: {
+        "ourWorkHeroImage": "url('../assets/placeholder-images/heroImg_testing.jpg')",
+      }
     },
   },
   plugins: [],
