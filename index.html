@@ -1,75 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MMF - Non-profit educational organisation that provide musical education upliftment to children in Madagascar. Learn more and support our work!">
+  <meta
+      name="description"
+      content="MMF - Non-profit educational organisation that provide musical education upliftment to children in Madagascar. Learn more and support our work!"
+    />
   <title>MMF</title>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  <script type="module" src="js/displayPosts.js"></script>
 </head>
+  
 <body class="">
 <header class="flex h-24 items-center justify-between px-10 mt-6">
     <div class="flex flex-row items-center gap-10 text-base">
         <a href="#">
-            <img src="images/SVGs/headerLogo.svg" aria-label="Header Logo" alt="Header Logo" class="cursor-pointer w-20 h-20">
+          <img
+            src="images/SVGs/headerLogo.svg"
+            aria-label="Header Logo"
+            alt="Header Logo"
+            class="cursor-pointer w-20 h-20"
+          />
         </a>
-    </div>
-    <nav class="flex flex-row items-center gap-10">
-        <button id="openSearchBarDrawer" class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform">  <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-            <img src="images/SVGs/Search.svg" class="w-5 h-5 -mr-1" aria-label="Search Button" alt="Search Button">
-            <span class="text-2xl font-medium">Search</span>
+      </div>
+      <nav class="flex flex-row items-center gap-10">
+        <button
+          id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+        >
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img
+            src="images/SVGs/Search.svg"
+            class="w-5 h-5 -mr-1"
+            aria-label="Search Button"
+            alt="Search Button"
+          />
+          <span class="text-2xl font-medium">Search</span>
         </button>
-        <a href="#" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">News</a>
-        <a href="#" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">About Us</a>
-        <div class="relative cursor-pointer hover:scale-105 transition-transform">
-            <div class="flex items-center">
-                <span class="text-2xl font-medium">Projects</span>
-                <img src="images/SVGs/chevron-down.svg" aria-label="Projects Dropdown Menu" alt="Projects Dropdown Menu" class="ml-3">
-            </div>
-            <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-            <div class="absolute hidden mt-2 bg-white">
-                <a href="#" class="block p-2 border-t border-b border-black hover:bg-gray-100">Project 1</a>
-                <a href="#" class="block p-2 border-b border-black  hover:bg-gray-100">Project 2</a>
-            </div>
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center">
+            <span class="text-2xl font-medium">Projects</span>
+            <img
+              src="images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
+          </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div class="absolute hidden mt-2 bg-white">
+            <a
+              href="#"
+              class="block p-2 border-t border-b border-black hover:bg-gray-100"
+              >Project 1</a
+            >
+            <a
+              href="#"
+              class="block p-2 border-b border-black hover:bg-gray-100"
+              >Project 2</a
+            >
+          </div>
         </div>
-        <button class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal">
-            DONATE
+        <button
+          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+        >
+          DONATE
         </button>
-        <div class="relative flex w-5 h-5 items-center group" id="language-selector">
-            <img src="images/SVGs/globe-solid.svg" aria-label="Globe Icon For Language Selection" alt="Language Selection" class="cursor-pointer object-contain h-5 w-5">
-            <div class="absolute left-0 w-full bg-white" id="language-options">
-                <a href="#" class="block">
-                    <img src="images/SVGs/norway.svg" aria-label="Norwegian Flag Language Selection" alt="Norwegian Flag" class="inline h-6 w-8"> 
-                </a>
-                <a href="#" class="block">
-                    <img src="images/SVGs/unitedKingdom.svg" aria-label="English Flag Language Selection" alt="English Flag" class="inline h-6 w-8"> 
-                </a>
-                <a href="#" class="block">
-                    <img src="images/SVGs/madagascar.svg" aria-label="Malagasy Flag Language Selection" alt="Malagasy Flag" class="inline h-6 w-8"> 
-                </a>
-            </div>
+        <div
+          class="relative flex w-5 h-5 items-center group"
+          id="language-selector"
+        >
+          <img
+            src="images/SVGs/globe-solid.svg"
+            aria-label="Globe Icon For Language Selection"
+            alt="Language Selection"
+            class="cursor-pointer object-contain h-5 w-5"
+          />
+          <div class="absolute left-0 w-full bg-white" id="language-options">
+            <a href="#" class="block">
+              <img
+                src="images/SVGs/norway.svg"
+                aria-label="Norwegian Flag Language Selection"
+                alt="Norwegian Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="images/SVGs/unitedKingdom.svg"
+                aria-label="English Flag Language Selection"
+                alt="English Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="images/SVGs/madagascar.svg"
+                aria-label="Malagasy Flag Language Selection"
+                alt="Malagasy Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+          </div>
         </div>
-    </nav>
-</header>
-<!-- Search Bar Overlay, hidden initially. -->
-<section id="search-drawer-from-header" class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50" aria-label="search-bar">
-    <h2 id="search-label" class="sr-only">Search Bar</h2>
-    <div class="flex justify-center items-center pt-3">
-        <div class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center">
-            <form class="flex flex-grow">
-                <label for="Search-Drawer" class="sr-only">Search Site</label>
-                <input type="search" class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm" id="Search-Drawer" placeholder="Search..." autocomplete="off">
-                <button type="submit" class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center">
-                    <img src="images/SVGs/Search.svg" class="w-4 h-4" aria-label="Search Now Button" alt="Search Now Button">
-                </button>
-            </form>
+      </nav>
+    </header>
+    <!-- Search Bar Overlay, hidden initially. -->
+    <section
+      id="search-drawer-from-header"
+      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
+      aria-label="search-bar"
+    >
+      <h2 id="search-label" class="sr-only">Search Bar</h2>
+      <div class="flex justify-center items-center pt-3">
+        <div
+          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+        >
+          <form class="flex flex-grow">
+            <label for="Search-Drawer" class="sr-only">Search Site</label>
+            <input
+              type="search"
+              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+              id="Search-Drawer"
+              placeholder="Search..."
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+            >
+              <img
+                src="images/SVGs/Search.svg"
+                class="w-4 h-4"
+                aria-label="Search Now Button"
+                alt="Search Now Button"
+              />
+            </button>
+          </form>
         </div>
         <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-        <button id="closeSearchBarDrawer" class="search-drawer_close text-sm pr-5">Close</button>  <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-    </div>
-</section>
-</body>
+        <button
+          id="closeSearchBarDrawer"
+          class="search-drawer_close text-sm pr-5"
+        >
+          Close
+        </button>
+        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+      </div>
+    </section>
+    <main>
+      <!--Main Content Section 2-->
+      <div class="flex justify-center my-[100px]">
+        <div class="max-w-[960px] flex flex-col items-center">
+          <h2 class="text-center text-6xl mb-6">History of MMF</h2>
+          <div class="max-h-20 overflow-hidden">
+            <p class="text-center text-lg">
+              The MMF's journey began in a modest community center, equipped
+              with little more than a handful of instruments and a burning
+              passion to make a difference. Early on, the Foundation focused on
+              providing free music lessons to children in the local community,
+              often reaching out to those in under served neighborhoods where
+              music education was considered a luxury far beyond reach. The
+              curriculum, crafted with care and expertise, was not merely about
+              teaching notes and rhythms; it was about instilling confidence,
+              fostering creativity, and building a sense of community among
+              young learners. written by Chat GPT -
+            </p>
+          </div>
+          <button class="reg-button my-10 bg-primary-green text-white">Read More</button>
+          <div class="max-h-[576px] overflow-hidden">
+            <img
+              src="/assets/placeholder-images/IMG_4130.webp"
+              alt="Images of three children"
+            />
+          </div>
+        </div>
+      </div>
+      <!--End Main Content Section 2-->
+      <!-- Main Content Section 3 -->
+      <div class="flex flex-col items-center my-[100px]">
+        <div class="max-w-[1200px] flex flex-col items-center">
+          <div
+            class="flex flex-col items-center max-w-[530px] text-center pb-16"
+          >
+            <h2 class="pb-4 text-6xl">Our Staff</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem.
+            </p>
+          </div>
+          <div class="flex justify-evenly">
+            <div class="max-w-[368px] max-h-[439px] flex flex-col items-center">
+              <div class="max-w-[270px] max-h-[270px] overflow-hidden">
+                <img
+                  src="/assets/placeholder-images/IMG_3078.webp"
+                  alt="Picture of an employee"
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="font-bold">Full name</h3>
+                <p class="mb-4">Job title</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elemen tum tristique.
+                </p>
+              </div>
+            </div>
+            <div class="max-w-[368px] max-h-[439px] flex flex-col items-center">
+              <div class="max-w-[270px] max-h-[270px] overflow-hidden">
+                <img
+                  src="/assets/placeholder-images/IMG_7511.webp"
+                  alt="Picture of an employee"
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="font-bold">Full name</h3>
+                <p class="mb-4">Job title</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elemen tum tristique.
+                </p>
+              </div>
+            </div>
+            <div class="max-w-[368px] max-h-[439px] flex flex-col items-center">
+              <div class="max-w-[270px] max-h-[270px] overflow-hidden">
+                <img
+                  class="object-cover h-[270px]"
+                  height="270px"
+                  src="/assets/placeholder-images/IMG_7542.webp"
+                  alt="Picture of an employee"
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="font-bold">Full name</h3>
+                <p class="mb-4">Job title</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elemen tum tristique.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-green w-[100%] flex justify-center items-center py-[60px] px-6 my-16 gap-[60px]">
+          <div>
+            <h2 class="text-6xl text-white">Our work</h2>
+            <p class="text-white max-w-[560px] py-6 text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
+            </p>
+            <button class="reg-button font-bold">READ MORE</button>
+          </div>
+          <div class="max-h-[393px] max-w-[560px] overflow-hidden">
+            <img src="/assets/placeholder-images/IMG_7419.webp" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- End Main Content Section 3-->
+      <!-- Main Content Section 4 -->
+      <section class="home-section4">
+          <div class="flex justify-center items-center gap-20 m-28 mb-40">
+              <div id="home-section4-imgContainer" class="max-w-[560px] h-auto">
+                  <img src="assets/placeholder-images/IMG_1457.webp" aria-label="Girl playing violin" alt="Girl playing violin">
+              </div>
+              <div class="home-section4-heading-text-button">
+                  <h3 id="home-section4-heading" class="text-6xl">Meet the children</h3>
+                  <p class="text-lg my-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
+                      Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                  </p>
+                  <button class="reg-button cursor-pointer uppercase my-5">Read more</button>
+              </div>
+          </div>
+          <div class="flex justify-center items-center gap-20 m-28 mb-40">
+              <div class="home-section4-heading-text-button">
+                  <h3 id="home-section4-heading" class="text-6xl">Support us</h3>
+                  <p class="text-lg my-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
+                      Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                  </p>
+                  <button class="reg-button cursor-pointer uppercase my-5">Donate</button>
+              </div>
+              <div id="home-section4-imgContainer" class="max-w-[560px] h-auto">
+                  <img src="assets/placeholder-images/IMG_5351.webp" aria-label="Small chairs with books and toys" alt="Small chairs with books and toys">
+              </div>
+          </div>
+          <div class="flex justify-center items-center gap-20 m-28 mb-40">
+              <div id="home-section4-imgContainer" class="max-w-[560px] h-auto">
+                  <img src="assets/placeholder-images/IMG_3078.webp" aria-label="Man playing piano and smiling happily" alt="Man playing piano and smiling happily">
+              </div>
+              <div class="home-section4-heading-text-button">
+                  <h3 id="home-section4-heading" class="text-6xl">Volunteer</h3>
+                  <p class="text-lg my-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
+                      Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                  </p>
+                  <button class="reg-button cursor-pointer uppercase my-5">Apply</button>
+              </div>
+          </div>
+      </section>
+      <!-- End Main Content Section 4-->
+      <!-- Main Content Section 5 -->
+      <section>
+        <div class="grid grid-cols-5 grid-rows-3 max-h-[1300px]">
+          <div class="col-span-2 relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_4202.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3597.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_4109.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_4121.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3610.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3568.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3205.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_6437.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3628.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_8979.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3538.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_6391.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/CF058C04-846A-47DA-9861-6F7A3EEB445E.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_8975.webp">
+            <div class="absolute inset-0 flex justify-center items-center hover:bg-[#66c2ff9b]">
+              <a class="text-white px-6 py-2 rounded-full border-2 border-solid text-lg font-semibold" href="./pages/gallery-page.html" title="Link to gallery" aria-label="link">Gallery</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Main Content Section 5 -->
+      <!-- Footer -->
+      <footer class="bg-[#363732] text-white p-20 h-auto max-w-full">
+      <img src="" alt="The logo for MFL" />
+
+      <!--News and sign up-->
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col items-baseline pt-20">
+          <div class="flex flex-col items-baseline">
+            <p class="text-xl pb-2">News Letter</p>
+            <p class="text-base w-60 pb-1">
+              Join our newsletter to be kept up to date on what we are doing!
+            </p>
+            <input
+              class="my-2 rounded"
+              type="text"
+              id="email"
+              placeholder="Enter email address "
+            />
+            <button class="alt-button">Sign up</button>
+          </div>
+        </div>
+
+        <!-- Links and button-->
+        <div class="flex flex-col gap-16">
+          <a href="#">About Us</a>
+          <a href="#">News</a>
+          <a href="#">Blog</a>
+          <a href="#">Projects</a>
+        </div>
+        <div class="flex flex-col gap-16">
+          <a href="#">How You Can Help</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Contact Us</a>
+        </div>
+
+        <div class="flex flex-col">
+          <button class="alt-button uppercase">donate</button>
+          <p class="flex justify-center uppercase pt-4">follow us</p>
+          <div class="flex pt-3">
+            <svg
+              width="56px"
+              height="56px"
+              viewBox="-9.6 -9.6 43.20 43.20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#E8645F"
+              stroke-width="0.43200000000000005"
+            >
+              <g
+                id="SVGRepo_bgCarrier"
+                stroke-width="0"
+                transform="translate(0,0), scale(1)"
+              >
+                <rect
+                  x="-9.6"
+                  y="-9.6"
+                  width="43.20"
+                  height="43.20"
+                  rx="21.6"
+                  fill="#E8645F"
+                  strokewidth="0"
+                ></rect>
+              </g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#CCCCCC"
+                stroke-width="0.24000000000000005"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                  fill="#ffffff"
+                ></path>
+              </g>
+            </svg>
+            <svg class="ml-2"
+              width="56px"
+              height="56px"
+              viewBox="-9.84 -9.84 43.68 43.68"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#E8645F"
+              stroke-width="0.4800000000000001"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0">
+                <rect
+                  x="-9.84"
+                  y="-9.84"
+                  width="43.68"
+                  height="43.68"
+                  rx="21.84"
+                  fill="#E8645F"
+                  strokewidth="0"
+                ></rect>
+              </g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                  fill="#ffffff"
+                ></path>
+                <path
+                  d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                  fill="#ffffff"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                  fill="#ffffff"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!--PP, TC and ©-->
+      <div class="flex justify-center mt-32">
+        <a class="underline pr-6" href="#">Privacy Policy</a>
+        <a class="underline pl-6" href="#">Terms and Conditions</a>
+      </div>
+      <div class="flex justify-center p-6">&copy;Musikkforandrerliv</div>
+    </footer>
+    </main>
+  </body>
 </html>
