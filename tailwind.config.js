@@ -28,7 +28,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         "ourWorkHeroImage": "url('../assets/placeholder-images/heroImg_testing.jpg')",
-        "hero-image": "url('../assets/placeholder-images/IMG_3779.webp')"
       }
     },
 
