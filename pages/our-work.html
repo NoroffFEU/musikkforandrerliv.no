@@ -1,75 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about our work with healthcare, education, the living situation, food distribution, music lessons and our future goals.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn more about our work with healthcare, education, the living situation, food distribution, music lessons and our future goals."
+    />
     <title>Our Work</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
-        <div class="flex flex-row items-center gap-10 text-base">
-            <a href="#">
-                <img src="../images/SVGs/headerLogo.svg" aria-label="Header Logo" alt="Header Logo" class="cursor-pointer w-20 h-20">
-            </a>
+      <div class="flex flex-row items-center gap-10 text-base">
+        <a href="#">
+          <img
+            src="/images/SVGs/headerLogo.svg"
+            aria-label="Header Logo"
+            alt="Header Logo"
+            class="cursor-pointer w-20 h-20"
+          />
+        </a>
+      </div>
+      <nav class="flex flex-row items-center gap-10">
+        <button
+          id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+        >
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img
+            src="/images/SVGs/Search.svg"
+            class="w-5 h-5 -mr-1"
+            aria-label="Search Button"
+            alt="Search Button"
+          />
+          <span class="text-2xl font-medium">Search</span>
+        </button>
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center">
+            <span class="text-2xl font-medium">Projects</span>
+            <img
+              src="/images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
+          </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div class="absolute hidden mt-2 bg-white">
+            <a
+              href="#"
+              class="block p-2 border-t border-b border-black hover:bg-gray-100"
+              >Project 1</a
+            >
+            <a
+              href="#"
+              class="block p-2 border-b border-black hover:bg-gray-100"
+              >Project 2</a
+            >
+          </div>
         </div>
-        <nav class="flex flex-row items-center gap-10">
-            <button id="openSearchBarDrawer" class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform">  <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-                <img src="../images/SVGs/Search.svg" class="w-5 h-5 -mr-1" aria-label="Search Button" alt="Search Button">
-                <span class="text-2xl font-medium">Search</span>
-            </button>
-            <a href="#" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">News</a>
-            <a href="#" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">About Us</a>
-            <div class="relative cursor-pointer hover:scale-105 transition-transform">
-                <div class="flex items-center">
-                    <span class="text-2xl font-medium">Projects</span>
-                    <img src="../images/SVGs/chevron-down.svg" aria-label="Projects Dropdown Menu" alt="Projects Dropdown Menu" class="ml-3">
-                </div>
-                <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-                <div class="absolute hidden mt-2 bg-white">
-                    <a href="#" class="block p-2 border-t border-b border-black hover:bg-gray-100">Project 1</a>
-                    <a href="#" class="block p-2 border-b border-black  hover:bg-gray-100">Project 2</a>
-                </div>
-            </div>
-            <button class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal">
-                DONATE
-            </button>
-            <div class="relative flex w-5 h-5 items-center group" id="language-selector">
-                <img src="../images/SVGs/globe-solid.svg" aria-label="Globe Icon For Language Selection" alt="Language Selection" class="cursor-pointer object-contain h-5 w-5">
-                <div class="absolute left-0 w-full bg-white" id="language-options">
-                    <a href="#" class="block">
-                        <img src="../images/SVGs/norway.svg" aria-label="Norwegian Flag Language Selection" alt="Norwegian Flag" class="inline h-6 w-8"> 
-                    </a>
-                    <a href="#" class="block">
-                        <img src="../images/SVGs/unitedKingdom.svg" aria-label="English Flag Language Selection" alt="English Flag" class="inline h-6 w-8"> 
-                    </a>
-                    <a href="#" class="block">
-                        <img src="../images/SVGs/madagascar.svg" aria-label="Malagasy Flag Language Selection" alt="Malagasy Flag" class="inline h-6 w-8"> 
-                    </a>
-                </div>
-            </div>
-        </nav>
+        <button
+          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+        >
+          DONATE
+        </button>
+        <div
+          class="relative flex w-5 h-5 items-center group"
+          id="language-selector"
+        >
+          <img
+            src="/images/SVGs/globe-solid.svg"
+            aria-label="Globe Icon For Language Selection"
+            alt="Language Selection"
+            class="cursor-pointer object-contain h-5 w-5"
+          />
+          <div class="absolute left-0 w-full bg-white" id="language-options">
+            <a href="#" class="block">
+              <img
+                src="/images/SVGs/norway.svg"
+                aria-label="Norwegian Flag Language Selection"
+                alt="Norwegian Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="/images/SVGs/unitedKingdom.svg"
+                aria-label="English Flag Language Selection"
+                alt="English Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="/images/SVGs/madagascar.svg"
+                aria-label="Malagasy Flag Language Selection"
+                alt="Malagasy Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- Search Bar Overlay, hidden initially. -->
-    <section id="search-drawer-from-header" class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50" aria-label="search-bar">
-        <h2 id="search-label" class="sr-only">Search Bar</h2>
-        <div class="flex justify-center items-center pt-3">
-            <div class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center">
-                <form class="flex flex-grow">
-                    <label for="Search-Drawer" class="sr-only">Search Site</label>
-                    <input type="search" class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm" id="Search-Drawer" placeholder="Search..." autocomplete="off">
-                    <button type="submit" class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center">
-                        <img src="../images/SVGs/Search.svg" class="w-4 h-4" aria-label="Search Now Button" alt="Search Now Button">
-                    </button>
-                </form>
-            </div>
-            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-            <button id="closeSearchBarDrawer" class="search-drawer_close text-sm pr-5">Close</button>  <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+    <section
+      id="search-drawer-from-header"
+      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
+      aria-label="search-bar"
+    >
+      <h2 id="search-label" class="sr-only">Search Bar</h2>
+      <div class="flex justify-center items-center pt-3">
+        <div
+          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+        >
+          <form class="flex flex-grow">
+            <label for="Search-Drawer" class="sr-only">Search Site</label>
+            <input
+              type="search"
+              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+              id="Search-Drawer"
+              placeholder="Search..."
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+            >
+              <img
+                src="images/SVGs/Search.svg"
+                class="w-4 h-4"
+                aria-label="Search Now Button"
+                alt="Search Now Button"
+              />
+            </button>
+          </form>
         </div>
+        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+        <button
+          id="closeSearchBarDrawer"
+          class="search-drawer_close text-sm pr-5"
+        >
+          Close
+        </button>
+        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+      </div>
     </section>
-</body>
+
+    <!-- Section 3 -->
+
+    <section
+      class="grid gap-y-12 grid-rows-2 grid-cols-6 relative mx-28 font-normal"
+    >
+      <!- Events -->
+      <div class="row-span-1 col-span-5">
+        <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
+        <ul class="grid gap-5 text-2xl">
+          <li>
+            <p class="bg-light-red pl-4 py-[3.5px]">
+              May 20, 2024 - MMF Annual Charity Concert
+            </p>
+          </li>
+          <li>
+            <p class="bg-light-red pl-4 py-[3.5px]">
+              June 10, 2024 - Run for Music 5K Charity Race
+            </p>
+          </li>
+          <li>
+            <p class="bg-light-red pl-4 py-[3.5px]">
+              July 15, 2024 - MMF Culture and Arts Festival
+            </p>
+          </li>
+          <li>
+            <p class="bg-light-red pl-4 py-[3.5px]">
+              August 25, 2024 - Back-to-School Fundraiser Gala
+            </p>
+          </li>
+          <li>
+            <p class="bg-light-red pl-4 py-[3.5px]">
+              November 25, 2024 - Holiday Giving Campaign Kickoff
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Calendar -->
+
+      <div
+        class="row-span-1 col-start-5 col-end-7 absolute top-0 right-0 w-[400px] h-[400px] border rounded-[30px] border-sunset-red p-10 text-lg bg-white font-inter"
+      >
+        <div class="font-inter flex items-center justify-around mb-6">
+          <div
+            class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded cursor-pointer"
+          >
+            <p><</p>
+          </div>
+          <p>April 2024</p>
+          <div
+            class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded text-center cursor-pointer"
+          >
+            <p>></p>
+          </div>
+        </div>
+        <div class="grid grid-cols-7 gap-2 text-center">
+          <p>Mon</p>
+          <p>Tue</p>
+          <p>Wed</p>
+          <p>Thu</p>
+          <p>Fri</p>
+          <p>Sat</p>
+          <p>Sun</p>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>1</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>2</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>3</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>4</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>5</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>6</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>7</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>8</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>9</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>10</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>11</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>12</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>13</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>14</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>15</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>16</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>17</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>18</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>19</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>20</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>21</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>22</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>23</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>24</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>25</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>26</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>27</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>28</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>29</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>30</p>
+          </div>
+          <div
+            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+          >
+            <p>31</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+
+      <div
+        class="flex flex-col items-center gap-6 row-span-2 col-start-3 col-end-5 flex flex-col justify-center"
+      >
+        <h3 class="text-2xl font-medium">Subscribe to our newsletter</h3>
+        <div class="relative">
+          <input
+            placeholder="example@example.com"
+            name="email"
+            class="border border-sunset-red rounded-lg w-[457px] p-3"
+          />
+          <label for="email" class="hidden">Email</label>
+          <button
+            class="font-sans text-base lowercase font-normal w-[110px] h-[27px] alt-button hover:bg-hover-red absolute right-3 top-3 pt-0.5"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
