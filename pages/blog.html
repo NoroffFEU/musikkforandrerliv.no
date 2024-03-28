@@ -10,71 +10,247 @@
     Fiainana (MMF): Stories of hope and progress covering our work for Malagasy
     children in need. Join the conversation!"
     />
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
       <div class="flex flex-row items-center gap-10 text-base">
-          <a href="#">
-              <img src="../images/SVGs/headerLogo.svg" aria-label="Header Logo" alt="Header Logo" class="cursor-pointer w-20 h-20">
-          </a>
+        <a href="#">
+          <img
+            src="../images/SVGs/headerLogo.svg"
+            aria-label="Header Logo"
+            alt="Header Logo"
+            class="cursor-pointer w-20 h-20"
+          />
+        </a>
       </div>
       <nav class="flex flex-row items-center gap-10">
-          <button id="openSearchBarDrawer" class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform">  <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-              <img src="../images/SVGs/Search.svg" class="w-5 h-5 -mr-1" aria-label="Search Button" alt="Search Button">
-              <span class="text-2xl font-medium">Search</span>
-          </button>
-          <a href="#" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">News</a>
-          <a href="#" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">About Us</a>
-          <div class="relative cursor-pointer hover:scale-105 transition-transform">
-              <div class="flex items-center">
-                  <span class="text-2xl font-medium">Projects</span>
-                  <img src="../images/SVGs/chevron-down.svg" aria-label="Projects Dropdown Menu" alt="Projects Dropdown Menu" class="ml-3">
-              </div>
-              <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-              <div class="absolute hidden mt-2 bg-white">
-                  <a href="#" class="block p-2 border-t border-b border-black hover:bg-gray-100">Project 1</a>
-                  <a href="#" class="block p-2 border-b border-black  hover:bg-gray-100">Project 2</a>
-              </div>
+        <button
+          id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+        >
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img
+            src="../images/SVGs/Search.svg"
+            class="w-5 h-5 -mr-1"
+            aria-label="Search Button"
+            alt="Search Button"
+          />
+          <span class="text-2xl font-medium">Search</span>
+        </button>
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="#"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center">
+            <span class="text-2xl font-medium">Projects</span>
+            <img
+              src="../images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
           </div>
-          <button class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal">
-              DONATE
-          </button>
-          <div class="relative flex w-5 h-5 items-center group" id="language-selector">
-              <img src="../images/SVGs/globe-solid.svg" aria-label="Globe Icon For Language Selection" alt="Language Selection" class="cursor-pointer object-contain h-5 w-5">
-              <div class="absolute left-0 w-full bg-white" id="language-options">
-                  <a href="#" class="block">
-                      <img src="../images/SVGs/norway.svg" aria-label="Norwegian Flag Language Selection" alt="Norwegian Flag" class="inline h-6 w-8"> 
-                  </a>
-                  <a href="#" class="block">
-                      <img src="../images/SVGs/unitedKingdom.svg" aria-label="English Flag Language Selection" alt="English Flag" class="inline h-6 w-8"> 
-                  </a>
-                  <a href="#" class="block">
-                      <img src="../images/SVGs/madagascar.svg" aria-label="Malagasy Flag Language Selection" alt="Malagasy Flag" class="inline h-6 w-8"> 
-                  </a>
-              </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div class="absolute hidden mt-2 bg-white">
+            <a
+              href="#"
+              class="block p-2 border-t border-b border-black hover:bg-gray-100"
+              >Project 1</a
+            >
+            <a
+              href="#"
+              class="block p-2 border-b border-black hover:bg-gray-100"
+              >Project 2</a
+            >
           </div>
+        </div>
+        <button
+          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+        >
+          DONATE
+        </button>
+        <div
+          class="relative flex w-5 h-5 items-center group"
+          id="language-selector"
+        >
+          <img
+            src="../images/SVGs/globe-solid.svg"
+            aria-label="Globe Icon For Language Selection"
+            alt="Language Selection"
+            class="cursor-pointer object-contain h-5 w-5"
+          />
+          <div class="absolute left-0 w-full bg-white" id="language-options">
+            <a href="#" class="block">
+              <img
+                src="../images/SVGs/norway.svg"
+                aria-label="Norwegian Flag Language Selection"
+                alt="Norwegian Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="../images/SVGs/unitedKingdom.svg"
+                aria-label="English Flag Language Selection"
+                alt="English Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="../images/SVGs/madagascar.svg"
+                aria-label="Malagasy Flag Language Selection"
+                alt="Malagasy Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+          </div>
+        </div>
       </nav>
-  </header>
-  <!-- Search Bar Overlay, hidden initially. -->
-  <section id="search-drawer-from-header" class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50" aria-label="search-bar">
+    </header>
+    <!-- Search Bar Overlay, hidden initially. -->
+    <section
+      id="search-drawer-from-header"
+      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
+      aria-label="search-bar"
+    >
       <h2 id="search-label" class="sr-only">Search Bar</h2>
       <div class="flex justify-center items-center pt-3">
-          <div class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center">
-              <form class="flex flex-grow">
-                  <label for="Search-Drawer" class="sr-only">Search Site</label>
-                  <input type="search" class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm" id="Search-Drawer" placeholder="Search..." autocomplete="off">
-                  <button type="submit" class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center">
-                      <img src="../images/SVGs/Search.svg" class="w-4 h-4" aria-label="Search Now Button" alt="Search Now Button">
-                  </button>
-              </form>
-          </div>
-          <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-          <button id="closeSearchBarDrawer" class="search-drawer_close text-sm pr-5">Close</button>  <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+        <div
+          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+        >
+          <form class="flex flex-grow">
+            <label for="Search-Drawer" class="sr-only">Search Site</label>
+            <input
+              type="search"
+              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+              id="Search-Drawer"
+              placeholder="Search..."
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+            >
+              <img
+                src="../images/SVGs/Search.svg"
+                class="w-4 h-4"
+                aria-label="Search Now Button"
+                alt="Search Now Button"
+              />
+            </button>
+          </form>
+        </div>
+        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+        <button
+          id="closeSearchBarDrawer"
+          class="search-drawer_close text-sm pr-5"
+        >
+          Close
+        </button>
+        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
       </div>
+<<<<<<< HEAD
   </section>
+  <main>
+    <!-- main content section1-->
+
+    <!--section blogpost-1 start-->
+    <div class="bg-[url('/assets/placeholder-images/IMG_4216.webp')] bg-cover bg-center">
+        <section class="section1 relative h-full flex items-center justify-center">
+            <div class="relative text-white flex flex-col items-start pl-10">
+                <h2 class="text-9xl font-normal mb-4 pb-10 pt-20 ml-20 font-justAnotherHand">Headliner</h2>
+                <p class="text-3xl font-sans  w-1/2 leading-9 pb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="alt-button text-4xl font-normal self-center mr-60 mb-20 px-10">
+                    READ MORE
+                </button>
+            </div>
+        </section>
+    </div>
+    <!--section blogpost-1 end-->
+    
+    
+
+  </main>
 </body>
+=======
+    </section>
+    <main>
+      <!--Main Content Section 2-->
+      <section class="flex flex-col items-center">
+        <div class="max-w-[1200px] flex my-[119px] items-center gap-4">
+          <div class="overflow-hidden max-w-[586px] max-h-[584px] size-full">
+            <img class="" src="/assets/placeholder-images/IMG_5348.webp" alt="" />
+          </div>
+          <div class="flex flex-col gap-6">
+            <p>Category</p>
+            <h2 class="font-semibold text-3xl">Title Here</h2>
+            <p class="text-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+            <button class="reg-button self-start mx-5">READ MORE</button>
+          </div>
+        </div>
+        <div class="max-w-[1200px] flex mb-[119px] items-center gap-4">
+          <div class="overflow-hidden max-w-[586px] max-h-[584px] size-full">
+            <img src="/assets/placeholder-images/IMG_4130.webp" alt="" />
+          </div>
+          <div class="flex flex-col gap-6">
+            <p>Category</p>
+            <h2 class="font-semibold text-3xl">Title Here</h2>
+            <p class="text-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+            <button class="reg-button self-start mx-5">READ MORE</button>
+          </div>
+        </div>
+        <div>
+            <button class="font-bold underline font-inter mx-1" >1</button>
+            <button class="underline font-inter mx-1">2</button>
+            <button class="underline font-inter mx-1">3</button>
+            <button class="font-inter mx-1">...</button>
+        </div>
+      </section>
+      <!--End Main Content Section 2-->
+      <!--Main Content Section 3-->
+      <div class="flex justify-center">
+        <div class="max-w-[1200px] w-full bg-ivory-beige flex flex-col items-center pt-20 pb-10 px-20">
+          <p class="text-2xl my-5">
+            The funds that come in go towards covering everything from food,
+            clothing, education, equipment, healthcare, medicines, and dental
+            care for the children, as well as the operation of the music school
+            and salaries for our staff. The families of the children are also
+            included in the food program and receive monthly distributions of
+            food and hygiene products. We are constantly working to improve the
+            living conditions of the children, and we use much of the surplus we
+            have to repair houses and homes.
+          </p>
+          <button class="alt-button self-end mx-10 text-xl font-normal">SUPPORT US</button>
+        </div>
+      </div>
+      <!--End Main Content Section 3-->
+    </main>
+  </body>
+>>>>>>> 49b588374b3291473f681858d215048ed842744a
 </html>
+

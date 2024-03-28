@@ -26,6 +26,19 @@
         font-semibold
         font-justAnotherHand;
   }
+  .our-work-hero-button {
+    @apply bg-[#5B8E7D]
+        rounded-md
+        text-[#F8EED1]
+        border
+        border-solid
+        border-black
+        min-w-[76px]
+        h-[68px]
+        text-[8px]
+        font-medium
+        text-center
+  }
 }
 
 /* Hide the default search input clear button */
