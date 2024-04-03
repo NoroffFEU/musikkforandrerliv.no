@@ -31,7 +31,10 @@ module.exports = {
       }
     },
 
-    extend: {},
+    extend: {
+        backgroundImage: {
+          'tompe': "url('/assets/placeholder-images/IMG_4216.webp')",
+    },
   },
   plugins: [],
 };
