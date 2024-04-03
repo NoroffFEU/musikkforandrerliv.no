@@ -39,6 +39,17 @@
         font-medium
         text-center
   }
+  .meet-the-children-pageButton {
+    @apply bg-[#CCCCCC]
+        rounded-md
+        text-black
+        font-inter
+        font-medium
+        text-center
+        text-lg
+        px-4
+        py-2
+  }
 }
 
 /* Hide the default search input clear button */
