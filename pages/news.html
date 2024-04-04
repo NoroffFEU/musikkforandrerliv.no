@@ -15,13 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
       <div class="flex flex-row items-center gap-10 text-base">
         <a href="#">
           <img
-            src="../images/SVGs/headerLogo.svg"
+            src="../assets/images/SVGs/headerLogo.svg"
             aria-label="Header Logo"
             alt="Header Logo"
             class="cursor-pointer w-20 h-20"
@@ -35,7 +36,7 @@
         >
           <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
           <img
-            src="../images/SVGs/Search.svg"
+            src="../assets/images/SVGs/Search.svg"
             class="w-5 h-5 -mr-1"
             aria-label="Search Button"
             alt="Search Button"
@@ -58,7 +59,7 @@
           <div class="flex items-center">
             <span class="text-2xl font-medium">Projects</span>
             <img
-              src="../images/SVGs/chevron-down.svg"
+              src="../assets/images/SVGs/chevron-down.svg"
               aria-label="Projects Dropdown Menu"
               alt="Projects Dropdown Menu"
               class="ml-3"
@@ -88,7 +89,7 @@
           id="language-selector"
         >
           <img
-            src="../images/SVGs/globe-solid.svg"
+            src="../assets/images/SVGs/globe-solid.svg"
             aria-label="Globe Icon For Language Selection"
             alt="Language Selection"
             class="cursor-pointer object-contain h-5 w-5"
@@ -96,7 +97,7 @@
           <div class="absolute left-0 w-full bg-white" id="language-options">
             <a href="#" class="block">
               <img
-                src="../images/SVGs/norway.svg"
+                src="../assets/images/SVGs/norway.svg"
                 aria-label="Norwegian Flag Language Selection"
                 alt="Norwegian Flag"
                 class="inline h-6 w-8"
@@ -104,7 +105,7 @@
             </a>
             <a href="#" class="block">
               <img
-                src="../images/SVGs/unitedKingdom.svg"
+                src="../assets/images/SVGs/unitedKingdom.svg"
                 aria-label="English Flag Language Selection"
                 alt="English Flag"
                 class="inline h-6 w-8"
@@ -112,7 +113,7 @@
             </a>
             <a href="#" class="block">
               <img
-                src="../images/SVGs/madagascar.svg"
+                src="../assets/images/SVGs/madagascar.svg"
                 aria-label="Malagasy Flag Language Selection"
                 alt="Malagasy Flag"
                 class="inline h-6 w-8"
@@ -147,7 +148,7 @@
               class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
             >
               <img
-                src="../images/SVGs/Search.svg"
+                src="../assets/images/SVGs/Search.svg"
                 class="w-4 h-4"
                 aria-label="Search Now Button"
                 alt="Search Now Button"
@@ -165,7 +166,63 @@
         <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
       </div>
     </section>
+   
+    <!---Section 2-->
+    <section>
+        <div class="flex items-center justify-center bg-[#363732] h-[162px] w-auto">
+            <h2 class="text-white font-justAnotherHand text-8xl">Upcoming events</h2>
+        </div>
 
+        <div class="grid grid-cols-3 gap-y-8 mt-20 justify-items-center">
+            <div class="h-[564px] w-[324px] overflow-hidden rounded bg-white">
+              <img class="w-[341px] h-[333px] -top-9 -left-10 gap-0" src="/assets/placeholder-images/IMG_6438.webp" alt="To children smiling, one with a violin">
+              <div class="px-6 py-4 flex items-center">
+                <div class="font-sans">
+                  <p class="text-base font-normal leading-6 uppercase">events</p>
+                  <div class="flex">
+                    <p class="text-3xl font-medium leading-8 tracking-wider">Run for Music 5k Charity Race</p>
+                    <a href="#"><img class="ml-10 mt-2 w-4 h-5" src="/assets/placeholder-images/Arrow-forward-circle.png" alt="clickable arrow pointing to the right"></a>
+                  </div>
+                  <p class="mt-10 text-xl leading-8">June 10, 2024</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="w-[320px] h-[564px] overflow-hidden rounded bg-white">
+              <img class="w-[340px] h-[340px] -top-9 -left-10 gap-0" src="/assets/placeholder-images/IMG_3078.webp" alt="Teacher playing keyboard">
+              <div class="px-6 py-4">
+                <div class="font-sans">
+                  <p class="text-base font-normal leading-6 uppercase">events</p>
+                  <div class="flex">
+                    <p class="text-3xl font-medium leading-8 tracking-wider">Back-to-School Fundraiser Gala</p>
+                    <a href="#"><img class="ml-10 mt-0 w-4 h-5" src="/assets/placeholder-images/Arrow-forward-circle.png" alt="clickable arrow pointing to the right"></a>
+                  </div>
+                  <p class="mt-1 text-xl leading-8">August 25, 2024</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="w-[321px] h-[564px] overflow-hidden rounded bg-white relative">
+              <img class="w-[340px] h-[340px] -top-9 -left-10 gap-0" src="/assets/placeholder-images/IMG_7542.webp" alt="Teacher teaching three children violin">
+              <div class="px-6 py-4">
+                <div class="font-sans">
+                  <p class="text-base font-normal leading-6 uppercase">events</p>
+                  <div class="flex">
+                    <p class="text-3xl font-medium leading-8 tracking-wider">Holiday Giving Campaign Kickoff</p>
+                    <a href="#"><img class="ml-10 mt-0 w-4 h-5" src="/assets/placeholder-images/Arrow-forward-circle.png" alt="clickable arrow pointing to the right"></a>
+                  </div>
+                  <p class=" text-xl leading-8">November 25, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex place-content-between font-justAnotherHand text-[#EE6352] font-normal text-xl mt-12"> <!-- JS:  Looks like there is going to be a carousel here-->
+            <a class="ml-20" href="#">Previous events</a>
+            <a class="mr-20" href="#">See more events...</a>
+          </div>
+                   
+    </section>
+    <!---Section 2 end-->
     <!-- Section 3  -->
     <section
       class="grid mx-auto m-auto bg-ivory-beige p-20 gap-8 font-sans"
@@ -199,5 +256,87 @@
         </p>
       </div>
     </section>
+    <!-- Section 3 end  -->
+    <!-- Section 4 -->
+    <section class="flex flex-col gap-20">
+      <div class="bg-dark-green py-[120px] pl-[70px] pr-0 flex justify-center">
+        <div class="overflow-x-scroll">
+          <div class="flex gap-[70px] w-max">
+            <img
+              class="absolute self-center cursor-pointer hidden"
+              src="/assets/placeholder-images/Arrow-forward-circle (1).png"
+              alt=""
+            />
+            <img
+              class="absolute self-center right-16 cursor-pointer"
+              src="/assets/placeholder-images/Arrow-forward-circle.png"
+              alt=""
+            />
+            <div class="w-[478px] h-[533px]">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/placeholder-images/IMG_8979.webp"
+                alt=""
+              />
+            </div>
+            <div class="w-[478px] h-[533px]">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/placeholder-images/IMG_3568.webp"
+                alt=""
+              />
+            </div>
+            <div class="w-[478px] h-[533px]">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/placeholder-images/IMG_3078.webp"
+                alt=""
+              />
+            </div>
+            <div class="w-[478px] h-[533px]">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/placeholder-images/IMG_4202.webp"
+                alt=""
+              />
+            </div>
+            <div class="w-[478px] h-[533px]">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/placeholder-images/IMG_7425.webp"
+                alt=""
+              />
+            </div>
+            <div class="w-[478px] h-[533px]">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/placeholder-images/IMG_1457.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+
+      <div class="flex flex-col items-center gap-6 row-span-2 justify-center">
+        <h3 class="text-2xl font-[550]">Subscribe to our newsletter</h3>
+        <div class="flex items-center relative">
+          <input
+            placeholder="example@example.com"
+            name="email"
+            class="border border-sunset-red rounded-lg w-[388px] p-3"
+          />
+          <label for="email" class="hidden">Email</label>
+          <button
+            class="rounded-[9px] text-2xl uppercase font-thin tracking-wide w-[148px] h-[33px] alt-button hover:bg-hover-red absolute right-2 top-2 py-1 self-center"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Section 4 End -->
   </body>
 </html>

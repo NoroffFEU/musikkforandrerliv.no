@@ -24,14 +24,15 @@ module.exports = {
       justAnotherHand: ["Just Another Hand","sans-serif"],
       inter: ["Inter", "sans-serif"],
     },
-    
-    extend: {
-      backgroundImage: {
-        "ourWorkHeroImage": "url('../assets/placeholder-images/heroImg_testing.jpg')",
-      }
-    },
 
-    extend: {},
-  },
-  plugins: [],
-};
+    extend: {
+        backgroundImage: {
+          'tompe': "url('/assets/placeholder-images/IMG_4216.webp')",
+        },
+        backgroundImage: {
+          'ourWorkHeroImage': "url('../assets/placeholder-images/heroImg_testing.jpg')",
+        },
+    plugins: [],
+    },
+  }
+}

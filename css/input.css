@@ -39,6 +39,17 @@
         font-medium
         text-center
   }
+  .meet-the-children-pageButton {
+    @apply bg-[#CCCCCC]
+        rounded-md
+        text-black
+        font-inter
+        font-medium
+        text-center
+        text-lg
+        px-4
+        py-2
+  }
 }
 
 /* Hide the default search input clear button */
@@ -67,4 +78,10 @@
 /* Border radius for input fields */
 .rounded-ib {
   border-radius: 10px;
+}
+
+
+/* Custom drop-shadow color for image frames */
+.blue-shadow {
+  box-shadow: 10px 10px 4px 0px #66C3FF;
 }
