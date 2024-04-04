@@ -13,7 +13,12 @@
         py-1
         text-xs
         font-semibold
-        font-sans /* Default font AKA montserrat */;
+        font-sans /* Default font AKA montserrat */
+        hover:bg-[#333333]
+        focus:bg-white
+        focus:outline-none
+        focus:ring
+        focus:ring-black;
   }
   .alt-button {
     @apply bg-[#EE6352] /*TODO: change to correct color later.*/
@@ -24,7 +29,12 @@
         pt-2
         text-xs
         font-semibold
-        font-justAnotherHand;
+        font-justAnotherHand
+        hover:bg-[#F18275]
+        active:bg-[#BE4F42]
+        focus:outline-none
+        focus:ring
+        focus:ring-black;
   }
   .our-work-hero-button {
     @apply bg-[#5B8E7D]
@@ -37,7 +47,7 @@
         h-[68px]
         text-[8px]
         font-medium
-        text-center
+        text-center;
   }
   .meet-the-children-pageButton {
     @apply bg-[#CCCCCC]
@@ -80,8 +90,7 @@
   border-radius: 10px;
 }
 
-
 /* Custom drop-shadow color for image frames */
 .blue-shadow {
-  box-shadow: 10px 10px 4px 0px #66C3FF;
+  box-shadow: 10px 10px 4px 0px #66c3ff;
 }
