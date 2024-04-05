@@ -93,3 +93,12 @@
 .blue-shadow {
   box-shadow: 10px 10px 4px 0px #66c3ff;
 }
+
+.scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
