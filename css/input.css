@@ -58,7 +58,7 @@
         text-center
         text-lg
         px-4
-        py-2
+        py-2;
   }
 }
 
@@ -99,6 +99,10 @@
 }
 
 .scroll-container {
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.newsletter::placeholder {
+  color: rgba(0, 0, 0, 0.7);
 }
