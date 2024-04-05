@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
     <meta
       name="description"
-      content="Read the latest news from Mozika Manova Fiainana (MMF) – a Norwegian-Malagasy non-profit educational organisation for children. Follow our journey!"
+      content="Explore the blog of Mozika Manova
+    Fiainana (MMF): Stories of hope and progress covering our work for Malagasy
+    children in need. Join the conversation!"
     />
-    <title>News</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,9 +28,9 @@
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
       <div class="flex flex-row items-center gap-10 text-base">
-        <a href="#">
+        <a href="../index.html">
           <img
-            src="../images/SVGs/headerLogo.svg"
+            src="../assets/images/SVGs/headerLogo.svg"
             aria-label="Header Logo"
             alt="Header Logo"
             class="cursor-pointer w-20 h-20"
@@ -42,7 +44,7 @@
         >
           <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
           <img
-            src="../images/SVGs/Search.svg"
+            src="../assets/images/SVGs/Search.svg"
             class="w-5 h-5 -mr-1"
             aria-label="Search Button"
             alt="Search Button"
@@ -50,12 +52,12 @@
           <span class="text-2xl font-medium">Search</span>
         </button>
         <a
-          href="#"
+          href="./news.html"
           class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
           >News</a
         >
         <a
-          href="#"
+          href="./about-page.html"
           class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
           >About Us</a
         >
@@ -63,9 +65,9 @@
           class="relative cursor-pointer hover:scale-105 transition-transform"
         >
           <div class="flex items-center">
-            <span class="text-2xl font-medium">Projects</span>
+            <span class="text-2xl font-medium">More</span>
             <img
-              src="../images/SVGs/chevron-down.svg"
+              src="../assets/images/SVGs/chevron-down.svg"
               aria-label="Projects Dropdown Menu"
               alt="Projects Dropdown Menu"
               class="ml-3"
@@ -95,7 +97,9 @@
           id="language-selector"
         >
           <img
-            src="../images/SVGs/globe-solid.svg"
+
+            src="../assets/images/SVGs/globe-solid.svg"
+
             aria-label="Globe Icon For Language Selection"
             alt="Language Selection"
             class="cursor-pointer object-contain h-5 w-5"
@@ -103,7 +107,9 @@
           <div class="absolute left-0 w-full bg-white" id="language-options">
             <a href="#" class="block">
               <img
-                src="../images/SVGs/norway.svg"
+
+                src="../assets/images/SVGs/norway.svg"
+
                 aria-label="Norwegian Flag Language Selection"
                 alt="Norwegian Flag"
                 class="inline h-6 w-8"
@@ -111,7 +117,9 @@
             </a>
             <a href="#" class="block">
               <img
-                src="../images/SVGs/unitedKingdom.svg"
+
+                src="../assets/images/SVGs/unitedKingdom.svg"
+
                 aria-label="English Flag Language Selection"
                 alt="English Flag"
                 class="inline h-6 w-8"
@@ -119,7 +127,9 @@
             </a>
             <a href="#" class="block">
               <img
-                src="../images/SVGs/madagascar.svg"
+
+                src="../assets/images/SVGs/madagascar.svg"
+
                 aria-label="Malagasy Flag Language Selection"
                 alt="Malagasy Flag"
                 class="inline h-6 w-8"
@@ -129,6 +139,7 @@
         </div>
       </nav>
     </header>
+
     <!-- Search Bar Overlay, hidden initially. -->
     <section
       id="search-drawer-from-header"
@@ -154,7 +165,9 @@
               class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
             >
               <img
-                src="../images/SVGs/Search.svg"
+
+                src="../assets/images/SVGs/Search.svg"
+
                 class="w-4 h-4"
                 aria-label="Search Now Button"
                 alt="Search Now Button"
@@ -172,6 +185,7 @@
         <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
       </div>
     </section>
+
     <!-- Main Section 1 -->
     <main class="flex flex-col justify-center mx-auto pt-[80px] max-w-[1200px]">
       <section class="max-w-screen-xl mx-20 flex flex-col gap-10">
@@ -296,7 +310,55 @@
                       </div>
               </div>
       </section>
-    </main>
+    
     <!-- Section 1 End -->
+
+   
+    
+      <!-- Section 2-->
+      <!-- Support us -->
+<section class="flex flex-col gap-20">
+    <div class="flex flex-col justify-center mx-[169px] my-5 max-w-[1200px] bg-ivory-beige items-center pt-16 pb-10 px-[200px] rounded-[5px] shadow-[10px_10px_3px] shadow-sunset-red"
+      >
+        <button class="rounded-lg alt-button text-center px-5 py-4 mx-10 text-6xl font-normal tracking-wider mb-8">
+          Support us
+        </button>
+        <p class="text-lg my-2">
+          The funds that come in go towards covering everything from food,
+          clothing, education, equipment, healthcare, medicines, and dental care
+          for the children, as well as the operation of the music school and
+          salaries for our staff.
+          <p class="text-lg my-2">The families of the children are also included
+          in the food program and receive monthly distributions of food and
+          hygiene products.</p>
+          <p class="text-lg my-2">We are constantly working to improve the living
+          conditions of the children, and we use much of the surplus we have to
+          repair houses and homes.</p>
+        </p>
+      </div>
+
+    <!-- Newsletter -->
+
+    <div
+    class="flex flex-col items-center gap-6 row-span-2 justify-center"
+  >
+    <h3 class="text-2xl font-[550]">Subscribe to our newsletter</h3>
+    <div class="flex items-center relative">
+      <input
+        placeholder="example@example.com"
+        name="email"
+        class="border border-sunset-red rounded-lg w-[388px] p-3"
+      />
+      <label for="email" class="hidden">Email</label>
+      <button
+        class="rounded-[9px] text-2xl uppercase font-thin tracking-wide w-[148px] h-[33px] alt-button hover:bg-hover-red absolute right-2 top-2 py-1 self-center"
+      >
+        Sign up
+      </button>
+    </div>
+  </div>
+  </section>
+    <!-- Section 2 End -->
+        </main>
   </body>
 </html>
