@@ -95,11 +95,11 @@
   box-shadow: 10px 10px 4px 0px #66c3ff;
 }
 
-.scrollContent::-webkit-scrollbar {
+.scroll-content::-webkit-scrollbar {
   display: none;
 }
 
-.scrollContainer {
+.scroll-container {
   scrollbar-width: none; 
   -ms-overflow-style: none; 
 }
