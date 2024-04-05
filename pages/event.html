@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Check out what's happening at Mozika Manova Fiainana (MMF) – a Norwegian-Malagasy non-profit educational organisation for children. Let's see what's up and join the next event!"
+    />
+    <title>Event</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="flex h-24 items-center justify-between px-10 mt-6">
+      <div class="flex flex-row items-center gap-10 text-base">
+        <a href="../index.html">
+          <img
+            src="../assets/images/SVGs/headerLogo.svg"
+            aria-label="Header Logo"
+            alt="Header Logo"
+            class="cursor-pointer w-20 h-20"
+          />
+        </a>
+      </div>
+      <nav class="flex flex-row items-center gap-10">
+        <button
+          id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+        >
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img
+            src="../assets/images/SVGs/Search.svg"
+            class="w-5 h-5 -mr-1"
+            aria-label="Search Button"
+            alt="Search Button"
+          />
+          <span class="text-2xl font-medium">Search</span>
+        </button>
+        <a
+          href="./news.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="./about-page.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center">
+            <span class="text-2xl font-medium">Projects</span>
+            <img
+              src="../assets/images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
+          </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div class="absolute hidden mt-2 bg-white">
+            <a
+              href="#"
+              class="block p-2 border-t border-b border-black hover:bg-gray-100"
+              >Project 1</a
+            >
+            <a
+              href="#"
+              class="block p-2 border-b border-black hover:bg-gray-100"
+              >Project 2</a
+            >
+          </div>
+        </div>
+        <button
+          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+        >
+          DONATE
+        </button>
+        <div
+          class="relative flex w-5 h-5 items-center group"
+          id="language-selector"
+        >
+          <img
+            src="../assets/images/SVGs/globe-solid.svg"
+            aria-label="Globe Icon For Language Selection"
+            alt="Language Selection"
+            class="cursor-pointer object-contain h-5 w-5"
+          />
+          <div class="absolute left-0 w-full bg-white" id="language-options">
+            <a href="#" class="block">
+              <img
+                src="../assets/images/SVGs/norway.svg"
+                aria-label="Norwegian Flag Language Selection"
+                alt="Norwegian Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="../assets/images/SVGs/unitedKingdom.svg"
+                aria-label="English Flag Language Selection"
+                alt="English Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="../assets/images/SVGs/madagascar.svg"
+                aria-label="Malagasy Flag Language Selection"
+                alt="Malagasy Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Search Bar Overlay, hidden initially. -->
+    <section
+      id="search-drawer-from-header"
+      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
+      aria-label="search-bar"
+    >
+      <h2 id="search-label" class="sr-only">Search Bar</h2>
+      <div class="flex justify-center items-center pt-3">
+        <div
+          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+        >
+          <form class="flex flex-grow">
+            <label for="Search-Drawer" class="sr-only">Search Site</label>
+            <input
+              type="search"
+              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+              id="Search-Drawer"
+              placeholder="Search..."
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+            >
+              <img
+                src="../assets/images/SVGs/Search.svg"
+                class="w-4 h-4"
+                aria-label="Search Now Button"
+                alt="Search Now Button"
+              />
+            </button>
+          </form>
+        </div>
+        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+        <button
+          id="closeSearchBarDrawer"
+          class="search-drawer_close text-sm pr-5"
+        >
+          Close
+        </button>
+        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+      </div>
+    </section>
+    <!-- Main Section 1 -->
+    <main class="flex flex-col justify-center mx-auto pt-[80px] max-w-[1200px]">
+      <section class="max-w-screen-xl mx-20 flex flex-col gap-10">
+        <div>
+          <p class="uppercase">Event</p>
+          <h1 class="font-justAnotherHand text-[100px]">
+            Join Us for the Back-to-School Fundraiser Gala
+          </h1>
+          <div class="flex max-w-[1200px]">
+            <div class="w-7/12 flex flex-col gap-5 pr-10">
+              <p class="text-[18px]">Date: August 25, 2024</p>
+              <p class="text-[18px]">
+                Location: Le Jardin Étoilé, Route Royale, Antananarivo,
+                Madagascar
+              </p>
+              <p class="text-[25px]">
+                As summer winds down and the anticipation of a new school year
+                begins, Music Makes Futures (MMF) invites you to an evening
+                filled with elegance, inspiration, and purpose. Mark your
+                calendars for August 25, 2024, as we host our annual
+                Back-to-School Fundraiser Gala at the prestigious Le Jardin
+                Étoilé, Route Royale, Antananarivo, Madagascar. This gala isn't
+                just an event; it's a celebration of hope, a testament to the
+                power of education, and a night that promises to make a
+                significant difference in the lives of children in Madagascar.
+              </p>
+            </div>
+            <div class="w-5/12">
+              <img
+                class="contain"
+                src="../assets/placeholder-images/IMG_6436.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="font-justAnotherHand text-[100px]">Why Attend?</h2>
+          <p class="text-[25px]">
+            The Back-to-School Fundraiser Gala is more than a gathering; it's a
+            pivotal moment where you can directly impact the educational journey
+            of countless children. Every ticket purchased, every auction item
+            bid on, and every donation made during the gala will go directly
+            towards supporting MMF's comprehensive education programs. From
+            school supplies and tuition fees to teacher salaries and educational
+            materials, your support will lay the foundation for a brighter, more
+            promising future for the children we serve.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-justAnotherHand text-[100px]">What to Expect?</h2>
+          <ul class="list-disc pl-10 text-[25px] flex flex-col gap-5">
+            <li class="pl-2">
+              <span class="font-semibold">Elegant Dining Experience: </span>
+              Enjoy a gourmet dinner prepared by some of the finest chefs in
+              Madagascar, accompanied by a selection of exquisite wines and
+              beverages.
+            </li>
+            <li class="pl-2">
+              <span class="font-semibold">Silent Auction: </span>Bid on an array
+              of unique items and experiences, with all proceeds going directly
+              towards our educational initiatives.
+            </li>
+            <li class="pl-2">
+              <span class="font-semibold">Inspiring Speeches: </span>Hear
+              firsthand from the founders of MMF, educators, and the children
+              whose lives you've touched, sharing stories of hope and triumph.
+            </li>
+            <li class="pl-2">
+              <span class="font-semibold">Live Entertainment: </span>The evening
+              will feature breathtaking performances by MMF students, showcasing
+              the talents nurtured through your support.
+            </li>
+            <li class="pl-2">
+              <span class="font-semibold">Networking: </span>Mingle with
+              like-minded individuals, philanthropists, and community leaders
+              who share your passion for making a difference.
+            </li>
+          </ul>
+        </div>
+        <div>
+            <h2 class="font-justAnotherHand text-[100px] capitalize">How can you support?</h2>
+          <ul class="list-disc pl-10 text-[25px] flex flex-col gap-5">
+            <li class="pl-2"><span class="font-semibold">Purchase a Ticket: </span>Secure your spot at this unforgettable evening and be part of the change.</li>
+            <li class="pl-2"><span class="font-semibold">Sponsor a Table: </span>Gather friends, family, or colleagues for a special night out and amplify your impact.</li>
+            <li class="pl-2"><span class="font-semibold">Donate: </span>If you're unable to attend, consider making a donation to support MMF's mission. Every contribution, big or small, makes a difference.</li>
+            <li class="pl-2"><span class="font-semibold">Volunteer: </span>Lend your time and skills to make the gala a resounding success</li>
+        </div>
+        <div class="flex flex-col gap-5">
+            <h2 class="font-justAnotherHand text-[100px]">Details at a Glance:</h2>
+          <ul class="list-disc pl-10 text-[25px] flex flex-col">
+              <li>Date: August 25, 2024</li>
+              <li>Time: 6:00 PM - 11:00 PM</li>
+              <li>Dress Code: Formal Attire</li>
+              <li>Tickets: [Link to purchase tickets or reservation details]</li>
+              </ul>
+              <p class="text-[25px]">Your presence and support at the Back-to-School Fundraiser Gala will echo in the classrooms and futures of the children we serve. Together, we can ensure that education, the most powerful tool for change, is within their reach.</p>
+              <p class="text-[25px]">For more information, to purchase tickets, or to make a donation, please visit MMF's website or <a class="text-sunset-red font-semibold" href="">contact us</a>.</p>
+              <p class="text-[25px]">We look forward to welcoming you to an evening of celebration, hope, and impact. Let's make this back-to-school season a turning point for children who dream of a brighter tomorrow.</p>
+              <p class="text-[25px]">Music Makes Futures (MMF) - Transforming lives through the power of education and music. Join us, because every child deserves a chance to succeed.</p>
+
+                    <!-- Social icons and previous/next event -->
+              <div class="w-full flex flex-col justify-between mt-10 mb-10 gap-16">
+                      <div class="flex gap-4 text-xs">
+                        <button class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red">
+                          <img src="../assets/images/SVGs/heart.svg" alt="Like" class="w-6 h-6 mr-2"/> 
+                          Like
+                        </button>
+                        <button class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red">
+                          <img src="../assets/images/SVGs/facebook.svg" alt="Share" class="w-6 h-6 mr-2"/>
+                          Share
+                        </button>
+                      </div>
+                      <!-- Previous/Next Event button -->
+                      <div class="flex justify-between -mx-10">
+                        <button class="alt-button uppercase bg-black font-normal text-[20px] px-3 rounded-[9px]">
+                            Previous event
+                          </button>
+                      <button class="alt-button uppercase bg-sunset-red font-normal text-[20px] px-3 rounded-[9px]">
+                        Next event
+                      </button>
+                      </div>
+              </div>
+
+      </section>
+    </main>
+    <!-- Section 1 End -->
+  </body>
+</html>
