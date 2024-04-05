@@ -58,7 +58,7 @@
         text-center
         text-lg
         px-4
-        py-2
+        py-2;
   }
 }
 
@@ -90,6 +90,10 @@
 }
 
 /* Custom drop-shadow color for image frames */
+.red-shadow {
+  box-shadow: 10px 10px 4px 0px #ee6352;
+}
+
 .blue-shadow {
   box-shadow: 10px 10px 4px 0px #66c3ff;
 }
@@ -99,6 +103,6 @@
 }
 
 .scroll-container {
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
