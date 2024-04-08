@@ -45,6 +45,49 @@
           />
           <span class="text-2xl font-medium">Search</span>
         </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div
+          id="search-drawer-from-header"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          aria-label="search-bar"
+        >
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div
+              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+            >
+              <form class="flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input
+                  type="search"
+                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button
+                  type="submit"
+                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/images/SVGs/Search.svg"
+                    class="w-4 h-4"
+                    aria-label="Search Now Button"
+                    alt="Search Now Button"
+                  />
+                </button>
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
         <a
           href="./news.html"
           class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
@@ -125,75 +168,50 @@
         </div>
       </nav>
     </header>
-    <!-- Search Bar Overlay, hidden initially. -->
-    <section
-      id="search-drawer-from-header"
-      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
-      aria-label="search-bar"
-    >
-      <h2 id="search-label" class="sr-only">Search Bar</h2>
-      <div class="flex justify-center items-center pt-3">
-        <div
-          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-        >
-          <form class="flex flex-grow">
-            <label for="Search-Drawer" class="sr-only">Search Site</label>
-            <input
-              type="search"
-              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-              id="Search-Drawer"
-              placeholder="Search..."
-              autocomplete="off"
-            />
-            <button
-              type="submit"
-              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-            >
-              <img
-                src="../assets/images/SVGs/Search.svg"
-                class="w-4 h-4"
-                aria-label="Search Now Button"
-                alt="Search Now Button"
-              />
-            </button>
-          </form>
-        </div>
-        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-        <button
-          id="closeSearchBarDrawer"
-          class="search-drawer_close text-sm pr-5"
-        >
-          Close
-        </button>
-        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-        </div>      
-    </section>
+
     <main>
-          <!--Section 1 Start-->
-    <section>
+      <!--Section 1 Start-->
+      <section>
         <div class="flex flex-col items-center justify-between mt-[25px]">
-            <!-- Image Container -->
-            <div class="max-w-[1440px] h-[1110px]">
-                <img src="../assets/placeholder-images/IMG_7359.webp" alt="Group of children">
+          <!-- Image Container -->
+          <div class="max-w-[1440px] h-[1110px]">
+            <img
+              src="../assets/placeholder-images/IMG_7359.webp"
+              alt="Group of children"
+            />
+          </div>
+          <!-- Text Container -->
+          <div class="mx-[220px]">
+            <h1 class="font-justAnotherHand text-[150px] text-center">
+              Let us introduce ourselves
+            </h1>
+            <div class="flex flex-col gap-5 mb-[62px]">
+              <p class="text-[25px]">
+                Mozika Manova Fiainana is a music school for deprived
+                communities of young people in Antsirabe, Madagascar, founded
+                January 2021 by the Norwegian violinist Eline Rodvelt Hansen and
+                the Malagasy musician Dina Rasalina.
+              </p>
+              <p class="text-[25px]">
+                The school is a vibrant holistic community that not only
+                provides music and art lessons, but also supports children from
+                the most underprivileged backgrounds in Antsirabe with food,
+                health care and learning supplies, clothing and shelter.
+              </p>
             </div>
-            <!-- Text Container -->
-            <div class="mx-[220px]">
-                <h1 class="font-justAnotherHand text-[150px] text-center">Let us introduce ourselves</h1>
-                <div class="flex flex-col gap-5 mb-[62px]">
-                    <p class="text-[25px]">
-                        Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.
-                    </p>
-                    <p class="text-[25px]">
-                        The school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care and learning supplies, clothing and shelter.
-                    </p>
-                </div>
-            </div>
-            <!--Cropped Image Container-->
-            <div class="w-[1000px] h-[478px] bg-no-repeat bg-center bg-cover" style="background-image: url('../assets/placeholder-images/IMG_3568.webp');" aria-label="Child learning theory"></div>
+          </div>
+          <!--Cropped Image Container-->
+          <div
+            class="w-[1000px] h-[478px] bg-no-repeat bg-center bg-cover"
+            style="
+              background-image: url('../assets/placeholder-images/IMG_3568.webp');
+            "
+            aria-label="Child learning theory"
+          ></div>
         </div>
-    </section>
-    <!---Section 1 End-->
-       <!---Section 3-->
+      </section>
+      <!---Section 1 End-->
+      <!---Section 3-->
       <section class="flex flex-col items-center mt-16">
         <div class="text-left">
           <h2 class="font-justAnotherHand text-[90px] text-black mt-16 ml">
@@ -221,32 +239,33 @@
         ></div>
       </section>
       <!---Section 3 end-->
-    <!--Section 4-->
-    <section class="flex flex-col items-center mt-16">
-      <div class="text-left">
-        <h2 class="font-justAnotherHand text-[90px] text-black mt-16 ml">
-          Sustainable Growth and Community Impact
-        </h2>
-        <p class="font-sans text-2xl w-[1000px] mt-16">
-          Providing a safe, caring and supportive environment we see how the
-          girls and young women further inspire their parents to live healthier,
-          more stable lives. As such, we witness an intergenerational
-          transformation that education has a power to set in motion– and that
-          inspires us to continue to work with dedication, passion and
-          commitment.  Since 2021 Mozika Manova Fiainana registered as an NGO
-          and has an independent board of directors, supporting over 60
-          children. As we are expanding our teaching capacities, we are happy to
-          be working with the local music teachers and creating new local jobs.
-        </p>
-      </div>
-      <div
-        class="mt-16 mb-16 w-[1000px] h-[478px] bg-lightgray bg-cover bg-center bg-no-repeat box-border"
-        style="
-          background-image: url('/assets/placeholder-images/IMG_3473.webp');
-        "
-      ></div>
-    </section>
-    <!--Section 4 end-->
+      <!--Section 4-->
+      <section class="flex flex-col items-center mt-16">
+        <div class="text-left">
+          <h2 class="font-justAnotherHand text-[90px] text-black mt-16 ml">
+            Sustainable Growth and Community Impact
+          </h2>
+          <p class="font-sans text-2xl w-[1000px] mt-16">
+            Providing a safe, caring and supportive environment we see how the
+            girls and young women further inspire their parents to live
+            healthier, more stable lives. As such, we witness an
+            intergenerational transformation that education has a power to set
+            in motion– and that inspires us to continue to work with dedication,
+            passion and commitment.  Since 2021 Mozika Manova Fiainana
+            registered as an NGO and has an independent board of directors,
+            supporting over 60 children. As we are expanding our teaching
+            capacities, we are happy to be working with the local music teachers
+            and creating new local jobs.
+          </p>
+        </div>
+        <div
+          class="mt-16 mb-16 w-[1000px] h-[478px] bg-lightgray bg-cover bg-center bg-no-repeat box-border"
+          style="
+            background-image: url('/assets/placeholder-images/IMG_3473.webp');
+          "
+        ></div>
+      </section>
+      <!--Section 4 end-->
       <!--Section 5-->
     <section class="flex flex-col items-center mt-16">
       <div class="text-left">
@@ -273,6 +292,132 @@
       </div>
     </section>
     <!--Section 5 end-->
-    </main>
-  </body>
+    <!--Section 7 Start-->
+    <section class="flex flex-col justify-center items-center py-10 my-24 text-center">
+      <!-- Our Staff Heading -->
+      <div class="w-full max-w-[1440px] h-[296px] bg-primary-green mx-auto flex justify-center items-center">
+        <h2 class="font-justAnotherHand text-[150px] text-white">Our Staff</h2>
+      </div>
+      <!-- Profile Card -->
+      <div class="w-[1056px] h-auto bg-[#FBF7E8] rounded-tl-[200px] my-[205px] mx-auto">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start">
+          <!-- Profile Image Container -->
+        <div class="flex flex-col items-center pl-[100px] pt-[71px]">
+        <!-- Profile Image -->
+        <div class="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-none mb-4 mt-12">
+          <img class="w-full h-full object-cover rounded-full" src="../assets/placeholder-images/IMG_7544.webp" alt="Staff image" />
+        </div>
+            <!-- Details Container -->
+            <div class="text-center">
+              <p class="text-[30px] font-justAnotherHand">Eline Rodtveit Hansen</p>
+              <p class="text-sm">Violin Teacher</p>
+              <p class="text-sm">MMF Co-Founder, Madagascar</p>
+              <p class="text-sm">MMF Board Leader, Norway</p>
+              <a class="text-sm" href="mailto:email@mmf.no">e-mail@mmf.no</a>
+            </div>
+          </div>
+          <!-- Profile Content -->
+          <div class="text-center">
+            <h3 class="font-justAnotherHand text-[70px] pt-[40px] pb-3">Eline Rodtvelt Hansen</h3>
+            <p class="text-[18px] mr-[67px] pl-[87px]">Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres.</p><br>
+            <p class="text-[18px] mr-[67px] pl-[87px]">Additionally, she is a dedicated violin teacher. With two violins, she went to Madagascar with a desire to start a music school to help children out of poverty.</p><br>
+            <p class="text-[18px] mr-[67px] pl-[87px]">In Antsirabe, she met her husband, Dina, who was also a musician and shared a similar dream. Together, they founded MMF in 2021 and now lead the work together.</p><br>
+            <p class="text-[18px] mr-[67px] pl-[87px] pb-[48px]">In addition, Eline works as a violin teacher at the music school, and she follows up ensembles and students on several instruments. Eline is also the leader of the Norwegian board of MMF.</p>
+          </div>
+        </div>
+      </div>
+      <!--Background color-->
+      <div class="bg-primary-green w-full max-w-[1440px]">
+        <!-- Profile Card 2 -->
+        <div class="w-[1056px] h-auto bg-[#FBF7E8] rounded-tl-[200px] my-[205px] mx-auto">
+          <div class="flex flex-col lg:flex-row items-center lg:items-start">
+            <!-- Profile Image Container -->
+          <div class="flex flex-col items-center pl-[100px] pt-[71px]">
+          <!-- Profile Image -->
+          <div class="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-none mb-4 mt-12">
+            <img class="w-full h-full object-cover rounded-full" src="../assets/placeholder-images/IMG_3078.webp" alt="Staff image" />
+          </div>
+              <!-- Details Container -->
+              <div class="text-center">
+                <p class="text-[30px] font-justAnotherHand">Dina Rasalina Andriamanalina</p>
+                <p class="text-sm">Piano Teacher</p>
+                <p class="text-sm">MMF Co-Founder, Madagascar</p>
+                <a class="text-sm" href="mailto:email@mmf.no">e-mail@mmf.no</a>
+              </div>
+            </div>
+            <!-- Profile Content -->
+            <div class="text-center">
+              <h3 class="font-justAnotherHand text-[70px] pt-[40px] pb-3">Dina Rasalina Andriamanalina</h3>
+              <p class="text-[18px] mr-[67px] pl-[87px]">Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood</p><br>
+              <p class="text-[18px] mr-[67px] pl-[87px]">However, it was eventually the piano that became his dominant instrument. In London, he studied music technology and eventually worked in a music studio.</p><br>
+              <p class="text-[18px] mr-[67px] pl-[87px]">With enthusiasm for children and development work, he returned to Madagascar, where he has been, among other roles, a project manager for international aid projects. </p><br>
+              <p class="text-[18px] mr-[67px] pl-[87px] pb-[48px]">He now leads the work of MMF alongside Eline, in addition to teaching piano and traditional Malagasy music and dance in the project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Profile Card 3 -->
+    <div class="w-[1056px] h-auto bg-[#FBF7E8] rounded-tl-[200px] my-[205px] mx-auto">
+      <div class="flex flex-col lg:flex-row items-center lg:items-start">
+        <!-- Profile Image Container -->
+      <div class="flex flex-col items-center pl-[100px] pt-[71px]">
+      <!-- Profile Image -->
+      <div class="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-none mb-4 mt-12">
+        <img class="w-full h-full object-cover rounded-full" src="../assets/placeholder-images/IMG_3473.webp" alt="Staff image" />
+      </div>
+          <!-- Details Container -->
+          <div class="text-center">
+            <p class="text-[30px] font-justAnotherHand">Karoline Hartvigsen</p>
+            <p class="text-sm">B.A. Nursing (2017)</p>
+            <p class="text-sm">MMF Board Deputy Leader</p>
+            <p class="text-sm">Project Coordinator, Norway</p>
+            <a class="text-sm" href="mailto:email@mmf.no">e-mail@mmf.no</a>
+          </div>
+        </div>
+        <!-- Profile Content -->
+        <div class="text-center">
+          <h3 class="font-justAnotherHand text-[70px] pt-[40px] pb-3">Karoline Hartvigsen</h3>
+          <p class="text-[18px] mr-[67px] pl-[87px]">Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo</p><br>
+          <p class="text-[18px] mr-[67px] pl-[87px]">Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen. </p><br>
+          <p class="text-[18px] mr-[67px] pl-[87px]">In connection with this, she traveled to Bolivia to conduct fieldwork at an orphanage focusing on the children's quality of life.</p><br>
+          <p class="text-[18px] mr-[67px] pl-[87px]">Karoline has always had a great interest and commitment to humanitarian work and has volunteered as a nurse at a public hospital in Madagascar alongside Thea. </p><br>
+          <p class="text-[18px] mr-[67px] pl-[87px] pb-[48px]">She is now the deputy leader of the Norwegian board of MMF and helps coordinate the work done from Norway.</p>
+        </div>
+      </div>
+    </div>
+    <!--Background color-->
+    <div class="bg-primary-green w-full max-w-[1440px]">
+      <!-- Profile Card 4 -->
+      <div class="w-[1056px] h-auto bg-[#FBF7E8] rounded-tl-[200px] my-[205px] mx-auto">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start">
+          <!-- Profile Image Container -->
+        <div class="flex flex-col items-center pl-[100px] pt-[71px]">
+        <!-- Profile Image -->
+        <div class="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-none mb-4 mt-12">
+          <img class="w-full h-full object-cover rounded-full" src="../assets/placeholder-images/IMG_3078.webp" alt="Staff image" />
+        </div>
+            <!-- Details Container -->
+            <div class="text-center">
+              <p class="text-[30px] font-justAnotherHand">Thea Harbo</p>
+              <p class="text-sm">B.A. Nursing (2017)</p>
+              <p class="text-sm">MMF Board Member</p>
+              <p class="text-sm">Project Manager, Norway</p>
+              <a class="text-sm" href="mailto:email@mmf.no">e-mail@mmf.no</a>
+            </div>
+          </div>
+          <!-- Profile Content -->
+          <div class="text-center">
+            <h3 class="font-justAnotherHand text-[70px] pt-[40px] pb-3">Thea Harbo</h3>
+            <p class="text-[18px] mr-[67px] pl-[87px]">Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger.</p><br>
+            <p class="text-[18px] mr-[67px] pl-[87px]">She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet, and currently works full-time in a specially adapted department in a kindergarten.</p><br>
+            <p class="text-[18px] mr-[67px] pl-[87px]">She has extensive experience working with children and enjoys it.</p><br>
+            <p class="text-[18px] mr-[67px] pl-[87px] pb-[48px]">Thea is a board member of MMF and is responsible for the finances of the project. She volunteers for the project and is responsible for the work carried out in Norway.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Section 7 End-->
+  </main>
+</body>
 </html>
