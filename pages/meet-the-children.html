@@ -50,6 +50,49 @@
           />
           <span class="text-2xl font-medium">Search</span>
         </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div
+          id="search-drawer-from-header"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          aria-label="search-bar"
+        >
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div
+              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+            >
+              <form class="flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input
+                  type="search"
+                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button
+                  type="submit"
+                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/images/SVGs/Search.svg"
+                    class="w-4 h-4"
+                    aria-label="Search Now Button"
+                    alt="Search Now Button"
+                  />
+                </button>
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
         <a
           href="./news.html"
           class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
@@ -130,49 +173,6 @@
         </div>
       </nav>
     </header>
-    <!-- Search Bar Overlay, hidden initially. -->
-    <section
-      id="search-drawer-from-header"
-      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
-      aria-label="search-bar"
-    >
-      <h2 id="search-label" class="sr-only">Search Bar</h2>
-      <div class="flex justify-center items-center pt-3">
-        <div
-          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-        >
-          <form class="flex flex-grow">
-            <label for="Search-Drawer" class="sr-only">Search Site</label>
-            <input
-              type="search"
-              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-              id="Search-Drawer"
-              placeholder="Search..."
-              autocomplete="off"
-            />
-            <button
-              type="submit"
-              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-            >
-              <img
-                src="../assets/images/SVGs/Search.svg"
-                class="w-4 h-4"
-                aria-label="Search Now Button"
-                alt="Search Now Button"
-              />
-            </button>
-          </form>
-        </div>
-        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-        <button
-          id="closeSearchBarDrawer"
-          class="search-drawer_close text-sm pr-5"
-        >
-          Close
-        </button>
-        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-      </div>
-    </section>
 
     <main class="px-10">
       <!-- Main content section 1 -->

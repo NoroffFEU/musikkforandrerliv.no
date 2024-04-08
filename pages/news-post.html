@@ -8,11 +8,20 @@
       content="Read the latest news from Mozika Manova Fiainana (MMF) – a Norwegian-Malagasy non-profit educational organisation for children. Follow our journey!"
     />
     <title>News</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
@@ -40,6 +49,49 @@
           />
           <span class="text-2xl font-medium">Search</span>
         </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div
+          id="search-drawer-from-header"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          aria-label="search-bar"
+        >
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div
+              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+            >
+              <form class="flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input
+                  type="search"
+                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button
+                  type="submit"
+                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/images/SVGs/Search.svg"
+                    class="w-4 h-4"
+                    aria-label="Search Now Button"
+                    alt="Search Now Button"
+                  />
+                </button>
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
         <a
           href="./news.html"
           class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
@@ -120,110 +172,102 @@
         </div>
       </nav>
     </header>
-    <!-- Search Bar Overlay, hidden initially. -->
-    <section
-      id="search-drawer-from-header"
-      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
-      aria-label="search-bar"
-    >
-      <h2 id="search-label" class="sr-only">Search Bar</h2>
-      <div class="flex justify-center items-center pt-3">
-        <div
-          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-        >
-          <form class="flex flex-grow">
-            <label for="Search-Drawer" class="sr-only">Search Site</label>
-            <input
-              type="search"
-              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-              id="Search-Drawer"
-              placeholder="Search..."
-              autocomplete="off"
-            />
-            <button
-              type="submit"
-              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-            >
+    <!-- Section 2 -->
+    <section class="flex justify-center mt-[155px]">
+      <div class="max-w-[1200px] size-full">
+        <div class="flex flex-wrap mb-0">
+          <!-- Text and Image content container -->
+          <div class="w-2/3 pl-4 pr-[32px] mb-6 leading-10">
+            <h2 class="text-[40px] font-[550] mb-4">A Day to Remember</h2>
+            <p class="text-[25px] mb-10">
+              From the early hours, the air buzzed with anticipation as visitors
+              from near and far gathered, eager to immerse themselves in the
+              rich tapestry of Malagasy culture. The festival kicked off with a
+              traditional welcome dance, performed by the children of MMF,
+              setting the tone for a day filled with laughter, music, and
+              collective joy.
+            </p>
+            <h3 class="text-[40px] font-[550] mb-4">
+              A Symphony of Sights and Sounds
+            </h3>
+            <p class="text-[25px] mb-4">
+              The festival grounds came alive with a plethora of activities and
+              performances. Stages showcased the talents of MMF students
+              alongside local artists, each performance a story told through
+              rhythm and melody. Workshops on traditional dance, crafts, and
+              musical instruments offered hands-on experiences, bridging
+              generations and cultures.
+            </p>
+            <p class="text-[25px] mb-4">
+              A highlight was the art exhibit, featuring works created by MMF
+              students and local artists, illustrating their hopes, dreams, and
+              the shared journey of growth and empowerment. The vibrant colors
+              and intricate patterns spoke volumes of the talent and potential
+              that thrives within the hearts of these young artists.
+            </p>
+          </div>
+          <!-- Images container -->
+          <div class="w-1/3 pr-4 flex flex-col">
+            <div class="mb-20">
               <img
-                src="../assets/images/SVGs/Search.svg"
-                class="w-4 h-4"
-                aria-label="Search Now Button"
-                alt="Search Now Button"
+                src="../assets/placeholder-images/3baa531a04b524d4090032444534fad9.webp"
+                alt="Children at the festival"
+                class="blue-shadow"
               />
+            </div>
+            <div class="mr-[10px] mb-0">
+              <img
+                src="../assets/placeholder-images/e0ccdb9690fda944db924af17374101c.webp"
+                alt="More children at the festival"
+                class="blue-shadow"
+              />
+            </div>
+          </div>
+          <!-- Social media like, share buttons and 'Read Next Blog Post' container -->
+          <div
+            class="w-full px-4 flex flex-row justify-between items-center mt-[75px] mb-[75px]"
+          >
+            <div class="flex gap-4">
+              <button
+                class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red"
+              >
+                <img
+                  src="../assets/images/SVGs/heart.svg"
+                  alt="Like"
+                  class="w-6 h-6 mr-2"
+                />
+                Like
+              </button>
+              <button
+                class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red"
+              >
+                <img
+                  src="../assets/images/SVGs/facebook.svg"
+                  alt="Share"
+                  class="w-6 h-6 mr-2"
+                />
+                Share
+              </button>
+            </div>
+            <!-- Read Next Blog Post button -->
+            <button
+              class="alt-button bg-black font-normal text-[20px] w-[164px] mr-0"
+            >
+              READ NEXT BLOG POST
             </button>
-          </form>
+          </div>
         </div>
-        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-        <button
-          id="closeSearchBarDrawer"
-          class="search-drawer_close text-sm pr-5"
-        >
-          Close
-        </button>
-        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
       </div>
     </section>
-<!-- Section 2 -->
-<section class="flex justify-center mt-[155px]">
-    <div class="max-w-[1200px] size-full">
-      <div class="flex flex-wrap mb-0">
-        <!-- Text and Image content container -->
-        <div class="w-2/3 pl-4 pr-[32px] mb-6 leading-10">
-          <h2 class="text-[40px] font-[550] mb-4">A Day to Remember</h2>
-            <p class="text-[25px] mb-10">
-              From the early hours, the air buzzed with anticipation as visitors from near and far gathered, 
-              eager to immerse themselves in the rich tapestry of Malagasy culture. 
-              The festival kicked off with a traditional welcome dance, performed by the children of MMF, 
-              setting the tone for a day filled with laughter, music, and collective joy.
-            </p>
-          <h3 class="text-[40px] font-[550] mb-4">A Symphony of Sights and Sounds</h3>
-            <p class="text-[25px] mb-4">
-              The festival grounds came alive with a plethora of activities and performances. 
-              Stages showcased the talents of MMF students alongside local artists, each performance 
-              a story told through rhythm and melody. Workshops on traditional dance, crafts, 
-              and musical instruments offered hands-on experiences, bridging generations and cultures.
-            </p>
-            <p class="text-[25px] mb-4">
-              A highlight was the art exhibit, featuring works created by MMF students 
-              and local artists, illustrating their hopes, dreams, and the shared journey 
-              of growth and empowerment. The vibrant colors and intricate patterns spoke 
-              volumes of the talent and potential that thrives within the hearts of these young artists.
-            </p>
-        </div>
-        <!-- Images container -->
-        <div class="w-1/3 pr-4 flex flex-col">
-          <div class="mb-20">
-            <img src="../assets/placeholder-images/3baa531a04b524d4090032444534fad9.webp" alt="Children at the festival" class="blue-shadow">
-          </div>
-          <div class="mr-[10px] mb-0">
-            <img src="../assets/placeholder-images/e0ccdb9690fda944db924af17374101c.webp" alt="More children at the festival" class="blue-shadow">
-          </div>
-        </div>
-        <!-- Social media like, share buttons and 'Read Next Blog Post' container -->
-        <div class="w-full px-4 flex flex-row justify-between items-center mt-[75px] mb-[75px]">
-          <div class="flex gap-4">
-            <button class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red">
-              <img src="../assets/images/SVGs/heart.svg" alt="Like" class="w-6 h-6 mr-2"/> 
-              Like
-            </button>
-            <button class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red">
-              <img src="../assets/images/SVGs/facebook.svg" alt="Share" class="w-6 h-6 mr-2"/>
-              Share
-            </button>
-          </div>
-          <!-- Read Next Blog Post button -->
-          <button class="alt-button bg-black font-normal text-[20px] w-[164px] mr-0">
-            READ NEXT BLOG POST
-          </button>
-        </div>
-      </div>
-  </section>
-    <!-- Section 2 End -->                                                             
+    <!-- Section 2 End -->
     <!-- Section 3 -->
-<section class="flex flex-col gap-20 mx-20">
-    <div class="flex flex-col justify-center mx-auto my-5 max-w-[1200px] bg-ivory-beige items-center pt-16 pb-10 px-[200px] rounded-[5px] shadow-[10px_10px_3px] shadow-sunset-red"
+    <section class="flex flex-col gap-20 mx-20">
+      <div
+        class="flex flex-col justify-center mx-auto my-5 max-w-[1200px] bg-ivory-beige items-center pt-16 pb-10 px-[200px] rounded-[5px] shadow-[10px_10px_3px] shadow-sunset-red"
       >
-        <button class="rounded-lg alt-button text-center px-5 py-4 mx-10 text-6xl font-normal tracking-wider mb-8">
+        <button
+          class="rounded-lg alt-button text-center px-5 py-4 mx-10 text-6xl font-normal tracking-wider mb-8"
+        >
           <h3>Support us</h3>
         </button>
         <p class="text-lg my-2">
@@ -231,35 +275,38 @@
           clothing, education, equipment, healthcare, medicines, and dental care
           for the children, as well as the operation of the music school and
           salaries for our staff.
-          <p class="text-lg my-2">The families of the children are also included
-          in the food program and receive monthly distributions of food and
-          hygiene products.</p>
-          <p class="text-lg my-2">We are constantly working to improve the living
-          conditions of the children, and we use much of the surplus we have to
-          repair houses and homes.</p>
+        </p>
+        <p class="text-lg my-2">
+          The families of the children are also included in the food program and
+          receive monthly distributions of food and hygiene products.
+        </p>
+        <p class="text-lg my-2">
+          We are constantly working to improve the living conditions of the
+          children, and we use much of the surplus we have to repair houses and
+          homes.
         </p>
       </div>
-  </section>
-<!-- Section 3 End -->
-<!-- Section 4 -->
-<section
-    class="flex flex-col items-center gap-6 row-span-2 justify-center my-20"
-  >
-    <h3 class="text-2xl font-[550]">Subscribe to our newsletter</h3>
-    <div class="flex items-center relative">
-      <input
-        placeholder="example@example.com"
-        name="email"
-        class="newsletter border border-sunset-red rounded-lg w-[388px] p-3"
-      />
-      <label for="email" class="hidden">Email</label>
-      <button
-        class="rounded-[9px] text-2xl uppercase font-thin tracking-wide w-[148px] h-[33px] alt-button hover:bg-hover-red absolute right-2 top-2 py-1 self-center"
-      >
-        Sign up
-      </button>
-    </div>
-  </section>
-<!-- Section 4 End -->
+    </section>
+    <!-- Section 3 End -->
+    <!-- Section 4 -->
+    <section
+      class="flex flex-col items-center gap-6 row-span-2 justify-center my-20"
+    >
+      <h3 class="text-2xl font-[550]">Subscribe to our newsletter</h3>
+      <div class="flex items-center relative">
+        <input
+          placeholder="example@example.com"
+          name="email"
+          class="newsletter border border-sunset-red rounded-lg w-[388px] p-3"
+        />
+        <label for="email" class="hidden">Email</label>
+        <button
+          class="rounded-[9px] text-2xl uppercase font-thin tracking-wide w-[148px] h-[33px] alt-button hover:bg-hover-red absolute right-2 top-2 py-1 self-center"
+        >
+          Sign up
+        </button>
+      </div>
+    </section>
+    <!-- Section 4 End -->
   </body>
 </html>
