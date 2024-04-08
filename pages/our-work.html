@@ -446,9 +446,9 @@
     <!-- Section 3 -->
 
     <section
-      class="grid gap-y-12 grid-rows-2 grid-cols-6 relative mx-28 font-normal"
+      class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal"
     >
-      <!- Events -->
+      <!-- Events -->
       <div class="row-span-1 col-span-5">
         <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
         <ul class="grid gap-5 text-2xl">
@@ -663,27 +663,36 @@
           </div>
         </div>
       </div>
-
-      <!-- Newsletter -->
-
-      <div
-        class="flex flex-col items-center gap-6 row-span-2 col-start-3 col-end-5 flex flex-col justify-center"
-      >
-        <h3 class="text-2xl font-medium">Subscribe to our newsletter</h3>
-        <div class="relative">
-          <input
-            placeholder="example@example.com"
-            name="email"
-            class="border border-sunset-red rounded-lg w-[457px] p-3"
-          />
-          <label for="email" class="hidden">Email</label>
-          <button
-            class="font-sans text-base lowercase font-normal w-[110px] h-[27px] alt-button hover:bg-hover-red absolute right-3 top-3 pt-0.5"
+    </section>
+    <!-- Section 4 starts here -->
+    <section>
+      <!-- Newsletter Subscription -->
+      <div class="w-full text-center my-28">
+        <h3 class="text-2xl font-semibold mb-6">Subscribe to our newsletter</h3>
+        <div
+          class="max-w-[452px] mx-auto border-[1px] border-[#EE6352] rounded-lg p-2"
+        >
+          <form
+            action="#"
+            method="POST"
+            class="flex justify-center items-center gap-4"
           >
-            Subscribe
-          </button>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@example.com"
+              class="w-[300px] p-2 outline-none"
+            />
+            <button
+              type="submit"
+              class="alt-button text-2xl font-normal w-[148px] h-[33px] py-1"
+            >
+              SIGN UP
+            </button>
+          </form>
         </div>
       </div>
     </section>
+    <!-- Section 4 ends here -->
   </body>
 </html>
