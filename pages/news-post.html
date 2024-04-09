@@ -49,6 +49,49 @@
           />
           <span class="text-2xl font-medium">Search</span>
         </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div
+          id="search-drawer-from-header"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          aria-label="search-bar"
+        >
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div
+              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+            >
+              <form class="flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input
+                  type="search"
+                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button
+                  type="submit"
+                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/images/SVGs/Search.svg"
+                    class="w-4 h-4"
+                    aria-label="Search Now Button"
+                    alt="Search Now Button"
+                  />
+                </button>
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
         <a
           href="./news.html"
           class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
@@ -129,49 +172,6 @@
         </div>
       </nav>
     </header>
-    <!-- Search Bar Overlay, hidden initially. -->
-    <section
-      id="search-drawer-from-header"
-      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
-      aria-label="search-bar"
-    >
-      <h2 id="search-label" class="sr-only">Search Bar</h2>
-      <div class="flex justify-center items-center pt-3">
-        <div
-          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-        >
-          <form class="flex flex-grow">
-            <label for="Search-Drawer" class="sr-only">Search Site</label>
-            <input
-              type="search"
-              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-              id="Search-Drawer"
-              placeholder="Search..."
-              autocomplete="off"
-            />
-            <button
-              type="submit"
-              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-            >
-              <img
-                src="../assets/images/SVGs/Search.svg"
-                class="w-4 h-4"
-                aria-label="Search Now Button"
-                alt="Search Now Button"
-              />
-            </button>
-          </form>
-        </div>
-        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-        <button
-          id="closeSearchBarDrawer"
-          class="search-drawer_close text-sm pr-5"
-        >
-          Close
-        </button>
-        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-      </div>
-    </section>
     <!-- Section 1 -->
     <section class="flex flex-col items-center mx-auto mt-20">
       <div
@@ -201,7 +201,6 @@
       </div>
     </section>
     <!-- Section 1 End -->
-
     <!-- Section 2 -->
     <section class="flex justify-center mt-[155px]">
       <div class="max-w-[1200px] size-full">
@@ -290,5 +289,53 @@
       </div>
     </section>
     <!-- Section 2 End -->
+    <!-- Section 3 -->
+    <section class="flex flex-col gap-20 mx-20">
+      <div
+        class="flex flex-col justify-center mx-auto my-5 max-w-[1200px] bg-ivory-beige items-center pt-16 pb-10 px-[200px] rounded-[5px] shadow-[10px_10px_3px] shadow-sunset-red"
+      >
+        <button
+          class="rounded-lg alt-button text-center px-5 py-4 mx-10 text-6xl font-normal tracking-wider mb-8"
+        >
+          <h3>Support us</h3>
+        </button>
+        <p class="text-lg my-2">
+          The funds that come in go towards covering everything from food,
+          clothing, education, equipment, healthcare, medicines, and dental care
+          for the children, as well as the operation of the music school and
+          salaries for our staff.
+        </p>
+        <p class="text-lg my-2">
+          The families of the children are also included in the food program and
+          receive monthly distributions of food and hygiene products.
+        </p>
+        <p class="text-lg my-2">
+          We are constantly working to improve the living conditions of the
+          children, and we use much of the surplus we have to repair houses and
+          homes.
+        </p>
+      </div>
+    </section>
+    <!-- Section 3 End -->
+    <!-- Section 4 -->
+    <section
+      class="flex flex-col items-center gap-6 row-span-2 justify-center my-20"
+    >
+      <h3 class="text-2xl font-[550]">Subscribe to our newsletter</h3>
+      <div class="flex items-center relative">
+        <input
+          placeholder="example@example.com"
+          name="email"
+          class="newsletter border border-sunset-red rounded-lg w-[388px] p-3"
+        />
+        <label for="email" class="hidden">Email</label>
+        <button
+          class="rounded-[9px] text-2xl uppercase font-thin tracking-wide w-[148px] h-[33px] alt-button hover:bg-hover-red absolute right-2 top-2 py-1 self-center"
+        >
+          Sign up
+        </button>
+      </div>
+    </section>
+    <!-- Section 4 End -->
   </body>
 </html>

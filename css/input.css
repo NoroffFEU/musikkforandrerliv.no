@@ -106,3 +106,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+.newsletter::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
