@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Support us and make a meaningful difference today! Discover how to contribute to our cause. Join us in changing lives through the power of music."
+    />
+    <title>Support us</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="flex h-24 items-center justify-between px-10 mt-6">
+      <div class="flex flex-row items-center gap-10 text-base">
+        <a href="../index.html">
+          <img
+            src="../assets/images/SVGs/headerLogo.svg"
+            aria-label="Header Logo"
+            alt="Header Logo"
+            class="cursor-pointer w-20 h-20"
+          />
+        </a>
+      </div>
+      <nav class="flex flex-row items-center gap-10">
+        <button
+          id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+        >
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img
+            src="../assets/images/SVGs/Search.svg"
+            class="w-5 h-5 -mr-1"
+            aria-label="Search Button"
+            alt="Search Button"
+          />
+          <span class="text-2xl font-medium">Search</span>
+        </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div
+          id="search-drawer-from-header"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          aria-label="search-bar"
+        >
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div
+              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+            >
+              <form class="flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input
+                  type="search"
+                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button
+                  type="submit"
+                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/images/SVGs/Search.svg"
+                    class="w-4 h-4"
+                    aria-label="Search Now Button"
+                    alt="Search Now Button"
+                  />
+                </button>
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
+        <a
+          href="./news.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="./about-page.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center">
+            <span class="text-2xl font-medium">More</span>
+            <img
+              src="../assets/images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
+          </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div class="absolute hidden mt-2 bg-white">
+            <a
+              href="#"
+              class="block p-2 border-t border-b border-black hover:bg-gray-100"
+              >Project 1</a
+            >
+            <a
+              href="#"
+              class="block p-2 border-b border-black hover:bg-gray-100"
+              >Project 2</a
+            >
+          </div>
+        </div>
+        <button
+          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+        >
+          DONATE
+        </button>
+        <div
+          class="relative flex w-5 h-5 items-center group"
+          id="language-selector"
+        >
+          <img
+            src="../assets/images/SVGs/globe-solid.svg"
+            aria-label="Globe Icon For Language Selection"
+            alt="Language Selection"
+            class="cursor-pointer object-contain h-5 w-5"
+          />
+          <div class="absolute left-0 w-full bg-white" id="language-options">
+            <a href="#" class="block">
+              <img
+                src="../assets/images/SVGs/norway.svg"
+                aria-label="Norwegian Flag Language Selection"
+                alt="Norwegian Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="../assets/images/SVGs/unitedKingdom.svg"
+                aria-label="English Flag Language Selection"
+                alt="English Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="../assets/images/SVGs/madagascar.svg"
+                aria-label="Malagasy Flag Language Selection"
+                alt="Malagasy Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main section starts here -->
+    <main class="relative">
+      <!-- Breadcrumb -->
+      <nav class="py-10 mx-11">
+        <ul class="flex gap-3 text-sunset-red font-medium">
+          <li>
+            <a class="underline" href="../index.html">Home</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-angle-right fa-xs"></i>
+          </li>
+          <li>
+            <a class="underline" href="#">Support Us</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="font-justAnotherHand text-[200px] text-center">Support</h1>
+
+      <section class="flex gap-56 justify-center py-20 bg-sunset-red">
+        <div>
+          <img
+            class="w-[400px] object-cover"
+            src="../assets/placeholder-images/50AD5B70-0975-4147-B7A6-D95CDB774778.webp "
+            alt="Children sitting on the ground outside eating a meal"
+          />
+        </div>
+        <div class="w-[600px]">
+          <h2 class="font-semibold text-2xl m-0">
+            Where do we get funding from?
+          </h2>
+          <p class="text-lg">
+            MMF is a small grassroots organization that mainly receives support
+            from private donors in Norway. Regular donors (MMF sponsors) provide
+            us with financial security and predictability. Additionally, we are
+            fortunate to have many enthusiastic individuals who fundraise on
+            occasions such as birthdays and events. Apart from private donors,
+            our most important supporter is Musikk Gir Liv (musicians from the
+            Kristiansand Symphony Orchestra), who provide funding for the
+            operation of the music school and instruments. Furthermore, Musikk
+            Gir Liv has, in the last couple of years, visited Antsirabe with a
+            group of musicians from the symphony orchestra who have taught the
+            children at MMF and participated in concerts alongside the students.
+          </p>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-20 w-[910px] m-auto py-20">
+        <!-- Volunteer -->
+        <div class="text-center">
+          <!-- Add JS - click button to show/hide text and change icon -->
+          <button class="show-hide-btn text-[40px] font-bold uppercase">
+            Volunteer
+            <span class="info-hide"
+              ><i
+                class="fa-solid fa-angle-right fa-xs text-sunset-red pl-10"
+              ></i
+            ></span>
+            <span class="info-show hidden"
+              ><i class="fa-solid fa-angle-down fa-xs text-sunset-red pl-10"></i
+            ></span>
+          </button>
+          <div class="flex flex-col gap-4 my-10 text-lg text-left hidden">
+            <!-- Not displayed(hidden) initially until show-hide-btn is clicked -->
+            <p>
+              Would you like to make a difference for street children in one of
+              the world's poorest countries? We are looking for individuals who
+              want to volunteer with us in Madagascar.
+            </p>
+            <p>
+              Primarily, we are seeking those with an interest in or education
+              related to music. We find that students greatly benefit from
+              instruction by professional musicians. Currently, there is no
+              professional symphony orchestra in Madagascar, so we rely on
+              bringing in teaching expertise from outside. We hope to have
+              volunteers in shorter or longer periods during 2024, especially
+              for viola, cello, flute, and clarinet, possibly a conductor as
+              well.
+            </p>
+            <p>
+              Furthermore, we always need people with talents for practical work
+              such as maintenance, carpentry, artists, arts and craft teachers,
+              healthcare professionals, photographers, and more.
+            </p>
+            <p>
+              We are also open to other groups and talents, so please get in
+              touch, and we'll see if MMF is the right fit for you!
+            </p>
+            <p>
+              If you are curious and think this could be exciting, please fill
+              out the form, and we will contact you.
+            </p>
+          </div>
+          <hr class="text-[#00000030] mb-10 mt-5" />
+          <!-- Remove class style and add style component once component is updated -->
+          <button
+            class="volunteer-form-btn block py-1 px-3 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px]"
+          >
+            Go to form
+          </button>
+          <!-- Add JS - open modal when clicked -->
+        </div>
+        <!-- Volunteer modal -->
+        <div
+          class="volunteer-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+        >
+          <!-- Not displayed(hidden) initially until volunteer-form-btn is clicked -->
+          <div
+            class="modal-content w-[1346px] h-[864px] bg-white flex flex-col items-center relative"
+          >
+            <i
+              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+            ></i>
+            <!-- Add JS - close modal when clicking icon -->
+            <div
+              class="bg-ivory-beige bg-opacity-50 rounded-[5px] py-12 px-6 w-[1118px] h-[666px] m-auto"
+            >
+              <h3 class="text-xl font-semibold text-center">
+                Contact information
+              </h3>
+              <form class="py-12">
+                <div class="grid grid-cols-2 gap-8">
+                  <!-- Remove class styles and add style components once components are updated -->
+                  <input
+                    type="text"
+                    placeholder="First name"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Phone number"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Address"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Postal code"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="City"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Country"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                </div>
+                <div class="py-16 flex gap-4 justify-center">
+                  <input
+                    type="radio"
+                    name="terms-radio"
+                    class="accent-sunset-red cursor-pointer"
+                  />
+                  <label for="terms-radio"
+                    >By clicking Submit, you agree to our
+                    <a href="#" class="text-sunset-red">Terms & Conditions</a>,
+                    and that you have read our
+                    <a href="#" class="text-sunset-red"
+                      >Privacy Policy</a
+                    ></label
+                  >
+                </div>
+                <span class="flex justify-center">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="py-1 px-4 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px] hover:cursor-pointer hover:bg-hover-red active:bg-[#ac4e42]"
+                  />
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donation -->
+        <div class="text-center">
+          <!-- Add JS - click button to show/hide text and change icon -->
+          <button
+            class="show-hide-btn text-[40px] font-bold uppercase text-center"
+          >
+            Donation
+            <span class="info-hide"
+              ><i
+                class="fa-solid fa-angle-right fa-xs text-sunset-red pl-10"
+              ></i
+            ></span>
+            <span class="info-show hidden"
+              ><i class="fa-solid fa-angle-down fa-xs text-sunset-red pl-10"></i
+            ></span>
+          </button>
+          <div class="flex flex-col gap-4 my-10 text-lg text-left hidden">
+            <!-- Not displayed(hidden) initially until show-hide-btn is clicked -->
+            <p>
+              The funds that come in go towards covering everything from food,
+              clothing, education, equipment, healthcare, medicines, and dental
+              care for the children, as well as the operation of the music
+              school and salaries for our staff.
+            </p>
+            <p>
+              Give a simple amount: You choose how much you want to support
+              with. Vipps to 784870 or transfer to account number:
+              3260.13.190387.
+            </p>
+            <p>
+              You can also fill out the form and choose a payment plan and
+              payment method. Thank you for your support!
+            </p>
+          </div>
+          <hr class="text-[#00000030] mb-10 mt-5" />
+          <!-- Remove class style and add style component once component is updated -->
+          <button
+            class="block py-1 px-3 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px]"
+          >
+            Go to form
+          </button>
+          <!-- Add JS - open modal when clicked -->
+        </div>
+        <!-- Donation modal -->
+        <div
+          class="donation-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+        >
+          <!-- Not displayed(hidden) initially until volunteer-form-btn is clicked -->
+          <div
+            class="modal-content w-[1346px] h-[1287px] bg-white flex flex-col items-center relative"
+          >
+            <i
+              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+            ></i>
+            <!-- Add JS - close modal when clicking icon -->
+            <div
+              class="bg-ivory-beige bg-opacity-50 rounded-[5px] py-12 px-6 w-[1118px] h-[1054px] m-auto"
+            >
+              <h3 class="text-xl font-semibold text-center">
+                Contact information
+              </h3>
+              <form class="py-12">
+                <div class="grid grid-cols-2 gap-8">
+                  <!-- Remove class styles and add style components once components are updated -->
+                  <input
+                    type="text"
+                    placeholder="First name"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Phone number"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Address"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Postal code"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="City"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Country"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                </div>
+                <div class="flex gap-14 justify-center mt-20">
+                  <div
+                    class="bg-white border border-[#00000050] rounded-[9px] p-8 w-full"
+                  >
+                    <h3 class="text-xl font-semibold mb-8">Choose a plan</h3>
+                    <div class="flex flex-col gap-6">
+                      <div class="flex gap-10">
+                        <input
+                          type="radio"
+                          name="donation"
+                          class="accent-sunset-red cursor-pointer"
+                        />
+                        <label for="donation">One-time payment</label>
+                      </div>
+                      <div class="flex gap-10">
+                        <input
+                          type="radio"
+                          name="donation"
+                          class="accent-sunset-red cursor-pointer"
+                        />
+                        <label for="donation">Every month donation</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white border border-[#00000050] rounded-[9px] p-8 w-full"
+                  >
+                    <h3 class="text-xl font-semibold mb-8">
+                      Choose a payment method
+                    </h3>
+                    <div class="flex flex-col gap-6">
+                      <div class="flex gap-10">
+                        <input
+                          type="radio"
+                          name="payment-method"
+                          class="accent-sunset-red cursor-pointer"
+                        />
+                        <label for="payment-method">Credit card</label>
+                      </div>
+                      <div class="flex gap-10">
+                        <input
+                          type="radio"
+                          name="payment-method"
+                          class="accent-sunset-red cursor-pointer"
+                        />
+                        <label for="payment-method">Debit card</label>
+                      </div>
+                      <div class="flex gap-10">
+                        <input
+                          type="radio"
+                          name="payment-method"
+                          class="accent-sunset-red cursor-pointer"
+                        />
+                        <label for="payment-method">Vipps</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-16 flex gap-4 justify-center">
+                  <input
+                    type="radio"
+                    name="terms-radio"
+                    class="accent-sunset-red cursor-pointer"
+                  />
+                  <label for="terms-radio"
+                    >By clicking Submit, you agree to our
+                    <a href="#" class="text-sunset-red">Terms & Conditions</a>,
+                    and that you have read our
+                    <a href="#" class="text-sunset-red"
+                      >Privacy Policy</a
+                    ></label
+                  >
+                </div>
+                <span class="flex justify-center">
+                  <!-- Add JS - Show donation submitted modal when clicked -->
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="dono-submit py-1 px-4 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px] hover:cursor-pointer hover:bg-hover-red active:bg-[#ac4e42]"
+                  />
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Donation submitted modal -->
+        <div
+          class="volunteer-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+        >
+          <!-- Not displayed(hidden) initially until dono-submit is clicked -->
+          <div
+            class="modal-content w-[1346px] h-[864px] bg-white flex flex-col justify-center relative"
+          >
+            <i
+              class="fa-solid fa-x text-dark-green text-3xl pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+            ></i>
+            <!-- Add JS - close modal when clicking icon -->
+            <div class="flex flex-col gap-20 items-center text-8xl">
+              <h2 class="font-justAnotherHand">Thank you for your support!</h2>
+              <i class="fa-regular fa-heart text-sunset-red"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fundraising -->
+        <div class="text-center">
+          <!-- Add JS - click button to show/hide text and change icon -->
+          <button
+            class="show-hide-btn text-[40px] font-bold uppercase text-center"
+          >
+            Fundraising
+            <span class="info-hide"
+              ><i
+                class="fa-solid fa-angle-right fa-xs text-sunset-red pl-10"
+              ></i
+            ></span>
+            <span class="info-show hidden"
+              ><i class="fa-solid fa-angle-down fa-xs text-sunset-red pl-10"></i
+            ></span>
+          </button>
+          <div class="flex flex-col gap-4 my-10 text-lg text-left hidden">
+            <!-- Not displayed(hidden) initially until show-hide-btn is clicked -->
+            <p>
+              Over the past few years, we have been fortunate to have many
+              enthusiastic individuals who have fundraised in connection with
+              birthdays and other events. We have also had several people who
+              have organized collections of equipment for both the children and
+              instruments for the music school. Please feel free to contact us
+              if you wish to start a fundraiser or crowdfunding campaign to
+              support our work.
+            </p>
+          </div>
+          <hr class="text-[#00000030] mb-10 mt-5" />
+          <!-- Remove class style and add style component once component is updated -->
+          <button
+            class="block py-1 px-3 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px]"
+          >
+            Go to form
+          </button>
+        </div>
+        <!-- Fundraiser modal -->
+        <div
+          class="fundraiser-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+        >
+          <!-- Not displayed(hidden) initially until volunteer-form-btn is clicked -->
+          <div
+            class="modal-content w-[1346px] h-[864px] bg-white flex flex-col items-center relative"
+          >
+            <i
+              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+            ></i>
+            <!-- Add JS - close modal when clicking icon -->
+            <div
+              class="bg-ivory-beige bg-opacity-50 rounded-[5px] py-12 px-6 w-[1118px] h-[666px] m-auto"
+            >
+              <h3 class="text-xl font-semibold text-center">
+                Contact information
+              </h3>
+              <form class="py-12">
+                <div class="grid grid-cols-2 gap-8">
+                  <!-- Remove class styles and add style components once components are updated -->
+                  <input
+                    type="text"
+                    placeholder="First name"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Phone number"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Address"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="number"
+                    placeholder="Postal code"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="City"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Country"
+                    class="w-[509px] h-[52px] rounded-[10px] border border-sunset-red pl-6"
+                  />
+                </div>
+                <div class="py-16 flex gap-4 justify-center">
+                  <input
+                    type="radio"
+                    name="terms-radio"
+                    class="accent-sunset-red cursor-pointer"
+                  />
+                  <label for="terms-radio"
+                    >By clicking Submit, you agree to our
+                    <a href="#" class="text-sunset-red">Terms & Conditions</a>,
+                    and that you have read our
+                    <a href="#" class="text-sunset-red"
+                      >Privacy Policy</a
+                    ></label
+                  >
+                </div>
+                <span class="flex justify-center">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="py-1 px-4 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px] hover:cursor-pointer hover:bg-hover-red active:bg-[#ac4e42]"
+                  />
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="flex gap-36 py-20 bg-sunset-red justify-center items-center"
+      >
+        <div class="w-[450px] text-lg">
+          <p>
+            The funds that come in go towards covering everything from food,
+            clothing, education, equipment, healthcare, medicines, and dental
+            care for the children, as well as the operation of the music school
+            and salaries for our staff. The families of the children are also
+            included in the food program and receive monthly distributions of
+            food and hygiene products. We are constantly working to improve the
+            living conditions of the children, and we use much of the surplus we
+            have to repair houses and homes.
+          </p>
+        </div>
+        <div class="flex flex-col gap-6 items-center text-8xl">
+          <h2 class="font-justAnotherHand">Thank you for your support!</h2>
+          <i class="fa-regular fa-heart text-white"></i>
+        </div>
+      </section>
+      <section>
+        <div
+          class="flex flex-col items-center gap-6 row-span-2 col-start-3 col-end-5 justify-center py-20"
+        >
+          <h3 class="text-2xl font-semibold">Subscribe to our newsletter</h3>
+          <div class="relative">
+            <input
+              placeholder="example@example.com"
+              name="email"
+              class="border border-sunset-red rounded-lg w-[457px] p-3"
+            />
+            <label for="email" class="hidden">Email</label>
+            <button
+              class="font-justAnotherHand text-2xl uppercase font-normal rounded-[9px] w-[148px] h-[33px] alt-button hover:bg-hover-red absolute right-3 top-[10px] pt-0.5"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Main section ends here -->
+  </body>
+</html>
