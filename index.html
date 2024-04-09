@@ -23,6 +23,7 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" src="js/displayPosts.js"></script>
+    <script type="module" src="js/calendar.mjs"></script>
   </head>
 
   <body class="">
@@ -659,188 +660,36 @@
 
         <!-- Calendar -->
 
-        <div
-          class="row-span-1 col-start-5 col-end-7 absolute top-0 right-0 w-[400px] h-[400px] border rounded-[30px] border-sunset-red p-10 text-lg bg-white font-inter"
-        >
-          <div class="font-inter flex items-center justify-around mb-6">
-            <div
-              class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded cursor-pointer"
-            >
+        <div class="calendar-container bg-white absolute top-0 right-0 w-[400px] h-[400px] border border-sunset-red rounded-[30px] shadow-md font-inter">
+          <header class="calendar-header flex items-center pt-6 px-7 pb-2.5">
+            <div class="calendar-navigation flex items-center justify-between w-full px-10">
+              <span id="calendar-prev"
+              class="material-symbols-rounded h-10 w-10 pb-[1px] hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
               <p><</p>
-            </div>
-            <p>April 2024</p>
-            <div
-              class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded text-center cursor-pointer"
-            >
-              <p>></p>
-            </div>
+            </span>
+            <p class="calendar-current-date font-medium"></p>
+                  <span id="calendar-next"
+                        class="material-symbols-rounded h-10 w-10 pb-[1px] hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
+                      <p>></p>
+                  </span>
+              </div>
+          </header>
+   
+          <div class="calendar-body p-5 [&_li]:w-[14%] [&_*]:cursor-default">
+              <ul class="calendar-weekdays list-none flex flex-wrap text-center w-full [&>*]:mb-5">
+                  <li>Sun</li>
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+              </ul>
+              <ul class="calendar-dates [&>li]:relative [&>*]:mb-5 flex flex-wrap text-center [&>li.inactive]:text-[#aaa] [&>li]:z-10 [&>li.active]:text-white [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-z-10 [&>li]:before:w-[40px] [&>li]:before:h-[40px] [&>li]:before:top-[50%] [&>li]:before:left-[50%] [&>li]:before:rounded-lg [&>li]:before:-translate-x-[50%] translate [&>li]:before:-translate-y-[50%] [&>li.active]:before:bg-sunset-red hover:[&>li:not(.active)]:before:bg-sunset-red hover:[&>li:not(.active)]:text-white [&>li.event]:before:border"></ul>
           </div>
-          <div class="grid grid-cols-7 gap-2 text-center">
-            <p>Mon</p>
-            <p>Tue</p>
-            <p>Wed</p>
-            <p>Thu</p>
-            <p>Fri</p>
-            <p>Sat</p>
-            <p>Sun</p>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>1</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>2</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>3</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>4</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>5</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>6</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>7</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>8</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>9</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>10</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>11</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>12</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>13</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>14</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>15</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>16</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>17</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>18</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>19</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>20</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>21</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>22</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>23</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>24</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>25</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>26</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>27</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>28</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>29</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>30</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>31</p>
-            </div>
-          </div>
-        </div>
+      </div>
       </section>
+
       <!-- Section 6 End -->
 
       <!-- Section 7 starts here -->
