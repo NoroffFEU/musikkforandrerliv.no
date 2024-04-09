@@ -16,6 +16,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      deployments: write
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -41,6 +44,6 @@ jobs:
 
         with:
           # This is the branch you wish to deploy to, for example gh-pages or docs.
-          branch: main
+          branch: gh-pages
           # The folder in your repository that you want to deploy. If your build script compiles into a directory named build you would put it here. Folder paths cannot have a leading / or ./. If you wish to deploy the root directory you can place a . here.
           folder: .
