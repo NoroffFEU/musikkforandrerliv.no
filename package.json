@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
     "build": "npx tailwindcss -o ./css/styles.css --minify"
   },
