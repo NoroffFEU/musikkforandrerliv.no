@@ -1,5 +1,6 @@
 import { months } from "./calendar.mjs"
 
+const currentDate = new Date()
 // Placeholder events
 const events = [
   {
@@ -38,7 +39,11 @@ function getSortedEvents(listOfEvents) {
 
   // Create a copy of the event-list to avoid mutating the original
   const newList = [...listOfEvents]
-  return newList.sort((a, b) => {
+
+  // Filter out past events
+  const upcomingEvents = newList.filter(event => event.date >= currentDate);
+
+  return upcomingEvents.sort((a, b) => {
     // Compare years
     if (a.date.getFullYear() !== b.date.getFullYear()) {
       return a.date.getFullYear() - b.date.getFullYear()
