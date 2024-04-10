@@ -18,7 +18,7 @@ const currdate = document.querySelector(".calendar-current-date")
 const prenexIcons = document.querySelectorAll(".calendar-navigation span")
 
 // Array of month names
-const months = [
+export const months = [
   "January",
   "February",
   "March",
