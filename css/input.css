@@ -60,6 +60,9 @@
         px-4
         py-2;
   }
+  .screen-width {
+    @apply max-w-[1440px];
+  }
 }
 
 /* Hide the default search input clear button */

@@ -5,6 +5,16 @@ module.exports = {
     "./pages/*.html"
   ],
   theme: {
+    screens: {
+      'mobile': {'max': '599px'},
+      // => @media (max-width: 599px) { ... }
+ 
+      'tablet': {'min': '600px', 'max': '1199px'},
+      // => @media (min-width: 600px and max-width: 1199px) { ... }
+ 
+      'desktop': {'min': '1200px', 'max': '1440px'},
+      // => @media (min-width: 1200px and max-width: 1440px) { ... }
+    },
     colors: {
       "sunset-red": "#EE6352",
       "primary-green": "#5B8E7D",
