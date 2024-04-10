@@ -15,13 +15,23 @@
       href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script type="module" src="js/displayPosts.js"></script>
-</head>
-  
-<body class="">
-<header class="flex h-24 items-center justify-between px-10 mt-6">
-    <div class="flex flex-row items-center gap-10 text-base">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="js/displayPosts.js"></script>
+    <script type="module" src="js/calendar.mjs"></script>
+    <link rel="stylesheet"
+    href=
+"https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  </head>
+
+  <body class="">
+    <header class="flex h-24 items-center justify-between px-10 mt-6">
+      <div class="flex flex-row items-center gap-10 text-base">
         <a href="./index.html">
           <img
             src="./assets/images/SVGs/headerLogo.svg"
@@ -45,6 +55,49 @@
           />
           <span class="text-2xl font-medium">Search</span>
         </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div
+          id="search-drawer-from-header"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          aria-label="search-bar"
+        >
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div
+              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+            >
+              <form class="flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input
+                  type="search"
+                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button
+                  type="submit"
+                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/SVGs/Search.svg"
+                    class="w-4 h-4"
+                    aria-label="Search Now Button"
+                    alt="Search Now Button"
+                  />
+                </button>
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
         <a
           href="./pages/news.html"
           class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
@@ -125,49 +178,7 @@
         </div>
       </nav>
     </header>
-    <!-- Search Bar Overlay, hidden initially. -->
-    <section
-      id="search-drawer-from-header"
-      class="fixed border border-black inset-x-0 top-0 w-full h-16 bg-white hidden transform -translate-y-full transition-transform duration-500 ease-out z-50"
-      aria-label="search-bar"
-    >
-      <h2 id="search-label" class="sr-only">Search Bar</h2>
-      <div class="flex justify-center items-center pt-3">
-        <div
-          class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-        >
-          <form class="flex flex-grow">
-            <label for="Search-Drawer" class="sr-only">Search Site</label>
-            <input
-              type="search"
-              class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-              id="Search-Drawer"
-              placeholder="Search..."
-              autocomplete="off"
-            />
-            <button
-              type="submit"
-              class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-            >
-              <img
-                src="./assets/images/SVGs/Search.svg"
-                class="w-4 h-4"
-                aria-label="Search Now Button"
-                alt="Search Now Button"
-              />
-            </button>
-          </form>
-        </div>
-        <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-        <button
-          id="closeSearchBarDrawer"
-          class="search-drawer_close text-sm pr-5"
-        >
-          Close
-        </button>
-        <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-      </div>
-    </section>
+
     <main>
       <!-- Section 1  -->
       <section
@@ -279,90 +290,123 @@
             </div>
           </div>
         </div>
-        <div
-          class="bg-dark-green w-[100%] flex justify-center items-center py-[60px] px-6 my-16 gap-[60px]"
-        >
-          <div>
-            <h2 class="text-6xl text-white">Our work</h2>
-            <p class="text-white max-w-[560px] py-6 text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-            <button class="reg-button font-bold">READ MORE</button>
-          </div>
-          <div class="max-h-[393px] max-w-[560px] overflow-hidden">
-            <img src="/assets/placeholder-images/IMG_7419.webp" alt="" />
-          </div>
-        </div>
       </div>
       <!-- End Main Content Section 3-->
       <!-- Main Content Section 4 -->
-      <section class="home-section4">
-        <div class="flex justify-center items-center gap-20 m-28 mb-40">
-          <div id="home-section4-imgContainer" class="max-w-[560px] h-auto">
-            <img
-              src="assets/placeholder-images/IMG_1457.webp"
-              aria-label="Girl playing violin"
-              alt="Girl playing violin"
-            />
-          </div>
-          <div class="home-section4-heading-text-button">
-            <h3 id="home-section4-heading" class="text-6xl">
-              Meet the children
-            </h3>
-            <p class="text-lg my-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-            <button class="reg-button cursor-pointer uppercase my-5">
-              Read more
-            </button>
-          </div>
-        </div>
-        <div class="flex justify-center items-center gap-20 m-28 mb-40">
-          <div class="home-section4-heading-text-button">
-            <h3 id="home-section4-heading" class="text-6xl">Support us</h3>
-            <p class="text-lg my-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-            <button class="reg-button cursor-pointer uppercase my-5">
-              Donate
-            </button>
-          </div>
-          <div id="home-section4-imgContainer" class="max-w-[560px] h-auto">
-            <img
-              src="assets/placeholder-images/IMG_5351.webp"
-              aria-label="Small chairs with books and toys"
-              alt="Small chairs with books and toys"
-            />
+      <section
+        class="home-section4 w-full flex flex-col items-center justify-center gap-20 mb-20"
+      >
+        <div class="w-full flex justify-center bg-mint-green overflow-hidden">
+          <div
+            class="flex justify-center items-center max-w-[1200px] h-[600px] p-[50px] gap-20 overflow-hidden"
+          >
+            <div class="w-[500px] h-[500px] overflow-hidden">
+              <img
+                class="w-full object-cover"
+                src="/assets/placeholder-images/IMG_7419.webp"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col w-[500px] gap-6">
+              <h2 class="text-[32px] font-semibold">Our work</h2>
+              <p class="text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat.
+              </p>
+              <div class="flex gap-5">
+                <button class="uppercase reg-button text-2xl">Read more</button>
+                <button
+                  class="uppercase reg-button text-2xl bg-white text-sunset-red hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red ;"
+                >
+                  Donate
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="flex justify-center items-center gap-20 m-28 mb-40">
-          <div id="home-section4-imgContainer" class="max-w-[560px] h-auto">
-            <img
-              src="assets/placeholder-images/IMG_3078.webp"
-              aria-label="Man playing piano and smiling happily"
-              alt="Man playing piano and smiling happily"
-            />
+        <div class="flex justify-center w-full">
+          <div class="w-full flex justify-center">
+            <div
+              class="flex justify-center items-center max-w-[1200px] h-[600px] gap-20 p-[50px]"
+            >
+              <div
+                class="home-section4-heading-text-button flex flex-col gap-6 w-[500px]"
+              >
+                <h3
+                  id="home-section4-heading"
+                  class="text-[32px] font-semibold"
+                >
+                  Volunteer
+                </h3>
+                <p class="text-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                  commodo diam libero vitae erat.
+                </p>
+                <div class="flex gap-5">
+                  <button class="uppercase reg-button text-2xl">
+                    Read more
+                  </button>
+                  <button
+                    class="uppercase reg-button text-2xl bg-sunset-red text-white hover:bg-hover-red focus:text-white focus:bg-sunset-red focus:ring-black"
+                  >
+                    Donate
+                  </button>
+                </div>
+              </div>
+              <div
+                id="home-section4-imgContainer"
+                class="w-[500px] h-[500px] overflow-hidden"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="assets/placeholder-images/IMG_3078.webp"
+                  aria-label="Man playing piano and smiling happily"
+                  alt="Man playing piano and smiling happily"
+                />
+              </div>
+            </div>
           </div>
-          <div class="home-section4-heading-text-button">
-            <h3 id="home-section4-heading" class="text-6xl">Volunteer</h3>
-            <p class="text-lg my-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-            <button class="reg-button cursor-pointer uppercase my-5">
-              Apply
-            </button>
+        </div>
+        <div class="flex justify-center w-full bg-mint-green">
+          <div
+            class="flex justify-center items-center max-w-[1200px] h-[600px] gap-20 p-[50px]"
+          >
+            <div
+              id="home-section4-imgContainer"
+              class="w-[500px] h-[500px] overflow-hidden"
+            >
+              <img
+                class="h-full object-cover"
+                src="assets/placeholder-images/IMG_5351.webp"
+                aria-label="Small chairs with books and toys"
+                alt="Small chairs with books and toys"
+              />
+            </div>
+            <div
+              class="home-section4-heading-text-button flex flex-col gap-6 w-[500px]"
+            >
+              <h3 id="home-section4-heading" class="text-[32px] font-semibold">
+                Support us
+              </h3>
+              <p class="text-lg my-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat.
+              </p>
+              <div class="flex gap-5">
+                <button class="uppercase reg-button text-2xl">Read more</button>
+                <button
+                  class="uppercase reg-button text-2xl bg-white text-sunset-red hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red ;"
+                >
+                  Donate
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -616,9 +660,9 @@
       <!-- End Main Content Section 5 -->
       <!-- Section 6 -->
       <section
-        class="grid gap-y-12 grid-rows-2 grid-cols-6 relative mx-28 font-normal"
+        class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal"
       >
-        <!- Events -->
+        <!-- Events -->
         <div class="row-span-1 col-span-5">
           <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
           <ul class="grid gap-5 text-2xl">
@@ -652,211 +696,71 @@
 
         <!-- Calendar -->
 
-        <div
-          class="row-span-1 col-start-5 col-end-7 absolute top-0 right-0 w-[400px] h-[400px] border rounded-[30px] border-sunset-red p-10 text-lg bg-white font-inter"
-        >
-          <div class="font-inter flex items-center justify-around mb-6">
-            <div
-              class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded cursor-pointer"
-            >
-              <p><</p>
-            </div>
-            <p>April 2024</p>
-            <div
-              class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded text-center cursor-pointer"
-            >
-              <p>></p>
-            </div>
+        <div class="calendar-container bg-white absolute top-0 right-0 w-[400px] h-[400px] border border-sunset-red rounded-[30px] shadow-md font-inter">
+          <header class="calendar-header flex items-center pt-6 px-7 pb-2.5">
+            <div class="calendar-navigation flex items-center justify-between w-full px-10">
+              <span id="calendar-prev"
+              class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
+              chevron_left
+            </span>
+            <p class="calendar-current-date font-medium"></p>
+                  <span id="calendar-next"
+                        class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
+                        chevron_right
+                  </span>
+              </div>
+          </header>
+   
+          <div class="calendar-body p-5 [&_li]:w-[14%] [&_*]:cursor-default">
+              <ul class="calendar-weekdays list-none flex flex-wrap text-center w-full [&>*]:mb-5">
+                  <li>Sun</li>
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+              </ul>
+              <ul class="calendar-dates [&>li]:relative [&>*]:mb-5 flex flex-wrap text-center [&>li.inactive]:text-[#aaa] [&>li]:z-10 [&>li.active]:text-white [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-z-10 [&>li]:before:w-[40px] [&>li]:before:h-[40px] [&>li]:before:top-[50%] [&>li]:before:left-[50%] [&>li]:before:rounded-lg [&>li]:before:-translate-x-[50%] translate [&>li]:before:-translate-y-[50%] [&>li.active]:before:bg-sunset-red hover:[&>li:not(.active)]:before:bg-sunset-red hover:[&>li:not(.active)]:text-white [&>li.event]:before:border"></ul>
           </div>
-          <div class="grid grid-cols-7 gap-2 text-center">
-            <p>Mon</p>
-            <p>Tue</p>
-            <p>Wed</p>
-            <p>Thu</p>
-            <p>Fri</p>
-            <p>Sat</p>
-            <p>Sun</p>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>1</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>2</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>3</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>4</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>5</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>6</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>7</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>8</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>9</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>10</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>11</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>12</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>13</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>14</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>15</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>16</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>17</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>18</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>19</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>20</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>21</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>22</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>23</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>24</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>25</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>26</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>27</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>28</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>29</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>30</p>
-            </div>
-            <div
-              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
-            >
-              <p>31</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Newsletter -->
-
-        <div
-          class="flex flex-col items-center gap-6 row-span-2 col-start-3 col-end-5justify-center"
-        >
-          <h3 class="text-2xl font-medium">Subscribe to our newsletter</h3>
-          <div class="relative">
-            <input
-              placeholder="example@example.com"
-              name="email"
-              class="border border-sunset-red rounded-lg w-[457px] p-3"
-            />
-            <label for="email" class="hidden">Email</label>
-            <button
-              class="font-sans text-base lowercase font-normal w-[110px] h-[27px] alt-button hover:bg-hover-red absolute right-3 top-3 pt-0.5"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
+      </div>
       </section>
 
       <!-- Section 6 End -->
+
+      <!-- Section 7 starts here -->
+      <!-- Newsletter Subscription -->
+      <section>
+        <div class="w-full text-center my-28">
+          <h3 class="text-2xl font-semibold mb-6">
+            Subscribe to our newsletter
+          </h3>
+          <div
+            class="max-w-[452px] mx-auto border-[1px] border-[#EE6352] rounded-lg p-2"
+          >
+            <form
+              action="#"
+              method="POST"
+              class="flex justify-center items-center gap-4"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="example@example.com"
+                class="w-[300px] p-2 outline-none"
+              />
+              <button
+                type="submit"
+                class="alt-button text-2xl font-normal w-[148px] h-[33px] py-1"
+              >
+                SIGN UP
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7 ends here -->
+      
       <!-- Footer -->
       <footer class="bg-[#363732] text-white p-20 h-auto max-w-full">
         <img src="" alt="The logo for MFL" />
