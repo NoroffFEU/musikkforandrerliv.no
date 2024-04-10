@@ -45,7 +45,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # location of the coverage artifacts
+          # location of the artifacts
           path: .
 
   deploy:
