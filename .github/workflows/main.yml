@@ -43,7 +43,6 @@ jobs:
       - run: ls -l
 
       - name: Upload Artifact
-        # if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v1
         with:
           # location of the coverage artifacts
