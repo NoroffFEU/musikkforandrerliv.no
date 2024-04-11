@@ -18,6 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script type="module" src="../js/search.mjs"></script>
   </head>
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
@@ -48,7 +49,7 @@
         <!-- Search Bar Overlay, hidden initially. -->
         <div
           id="search-drawer-from-header"
-          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
           aria-label="search-bar"
         >
           <h2 id="search-label" class="sr-only">Search Bar</h2>
@@ -342,7 +343,7 @@
             </div>
           </div>
           <!-- Profile Content -->
-          <div class="text-center">
+          <div id="eline" class="text-center">
             <h3 class="font-justAnotherHand text-[70px] pt-[40px] pb-3">Eline Rodtvelt Hansen</h3>
             <p class="text-[18px] mr-[67px] pl-[87px]">Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres.</p><br>
             <p class="text-[18px] mr-[67px] pl-[87px]">Additionally, she is a dedicated violin teacher. With two violins, she went to Madagascar with a desire to start a music school to help children out of poverty.</p><br>

@@ -25,6 +25,7 @@
     <script type="module" src="js/displayPosts.js"></script>
     <script type="module" src="js/calendar.mjs"></script>
     <script type="module" src="js/events-list.mjs"></script>
+    <script type="module" src="js/search.mjs"></script>
     <link rel="stylesheet"
     href=
 "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -59,7 +60,8 @@
         <!-- Search Bar Overlay, hidden initially. -->
         <div
           id="search-drawer-from-header"
-          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+          aria-expanded="false"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-all duration-500 ease-out z-50"
           aria-label="search-bar"
         >
           <h2 id="search-label" class="sr-only">Search Bar</h2>
@@ -67,9 +69,10 @@
             <div
               class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
             >
-              <form class="flex flex-grow">
+              <form class="relative flex flex-grow">
                 <label for="Search-Drawer" class="sr-only">Search Site</label>
                 <input
+                  tabindex="-1"
                   type="search"
                   class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
                   id="Search-Drawer"
@@ -77,6 +80,7 @@
                   autocomplete="off"
                 />
                 <button
+                  tabindex="-1"
                   type="submit"
                   class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
                 >
@@ -87,10 +91,14 @@
                     alt="Search Now Button"
                   />
                 </button>
+                <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
+                <div hidden id="search-results" class="absolute w-96 top-10 bg-white border rounded-sm"></div>
+                <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
               </form>
             </div>
             <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
             <button
+              tabindex="-1"
               id="closeSearchBarDrawer"
               class="search-drawer_close text-sm pr-5"
             >
@@ -197,7 +205,7 @@
       </section>
       <!-- End Section 1-->
       <!--Main Content Section 2-->
-      <div class="flex justify-center my-[100px]">
+      <div id="history" class="flex justify-center my-[100px]">
         <div class="max-w-[960px] flex flex-col items-center">
           <h2 class="text-center text-6xl mb-6">History of MMF</h2>
           <div class="max-h-20 overflow-hidden">
@@ -661,6 +669,7 @@
       <!-- End Main Content Section 5 -->
       <!-- Section 6 -->
       <section
+        id="events"
         class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal"
       >
         <!-- Events -->
