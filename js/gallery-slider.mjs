@@ -1,7 +1,7 @@
-const carousel = document.querySelector(".carousel")
-const leftArrow = document.querySelector(".left-arrow")
-const rightArrow = document.querySelector(".right-arrow")
-const images = document.querySelectorAll(".carousel-image")
+const carousel = document.querySelector("div.js-carousel")
+const leftArrow = document.querySelector("button.js-left-arrow")
+const rightArrow = document.querySelector("button.js-right-arrow")
+const images = document.querySelectorAll("img.js-carousel-image")
 const totalImages = Object.keys(images).length
 
 let currentIndex = 0
