@@ -6,15 +6,16 @@
 
 @layer components {
   .reg-button {
-    @apply bg-white
-        rounded-md
-        text-black
-        px-2
-        py-1
+    @apply bg-black
+        rounded-[9px]
+        text-white
+        px-6
+        py-2
         text-xs
         font-semibold
         font-sans /* Default font AKA montserrat */
         hover:bg-[#333333]
+        focus:text-black
         focus:bg-white
         focus:outline-none
         focus:ring
@@ -22,7 +23,7 @@
   }
   .alt-button {
     @apply bg-[#EE6352] /*TODO: change to correct color later.*/
-        rounded-md
+        rounded-[9px]
         text-white
         px-2
         pb-1
@@ -90,6 +91,10 @@
 }
 
 /* Custom drop-shadow color for image frames */
+.red-shadow {
+  box-shadow: 10px 10px 4px 0px #ee6352;
+}
+
 .blue-shadow {
   box-shadow: 10px 10px 4px 0px #66c3ff;
 }
