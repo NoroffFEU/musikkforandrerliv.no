@@ -24,10 +24,9 @@
     />
   </head>
   <body>
-    <header class="bg-ourWorkHeroImage bg-cover bg-center">
-      <!-- Section 1 here - had to work in the header due to hero img -->
-      <div class="flex h-24 items-center justify-between px-10 pt-16">
-        <!-- Had to change mt-6 to pt-16 to remove top margin to fill the hero img, and to try to keep the vertical alignment of the header like it was -->
+
+    <header class="bg-ourWorkHeroImage bg-cover bg-center h-screen flex flex-col relative"> <!-- Section 1 here - had to work in the header due to hero img -->
+      <div class="flex h-24 items-center justify-between px-10 pt-16"> <!-- Had to change mt-6 to pt-16 to remove top margin to fill the hero img, and to try to keep the vertical alignment of the header like it was -->
         <div class="flex flex-row items-center gap-10 text-base">
           <a href="../index.html">
             <img
@@ -175,15 +174,9 @@
           </div>
         </nav>
       </div>
-      <h1
-        class="font-justAnotherHand text-[300px] tracking-widest text-white text-center pt-80"
-      >
-        Our work
-      </h1>
-      <div
-        id="hero-buttons"
-        class="flex items-center justify-center gap-16 pb-24"
-      >
+
+      <h1 class="font-justAnotherHand text-[200px] tracking-widest text-white text-center absolute w-full bottom-20">Our work</h1>
+      <div id="hero-buttons" class="flex items-center justify-center gap-16 absolute text-center w-full bottom-6">
         <button
           class="health our-work-hero-button flex flex-col items-center justify-center"
         >

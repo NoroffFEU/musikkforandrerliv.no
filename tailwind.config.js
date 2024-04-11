@@ -28,14 +28,13 @@ module.exports = {
     },
 
     extend: {
-      backgroundImage: {
-        tompe: "url('/assets/placeholder-images/IMG_4216.webp')",
-      },
-      backgroundImage: {
-        ourWorkHeroImage:
-          "url('../assets/placeholder-images/heroImg_testing.jpg')",
-      },
-      plugins: [],
+        backgroundImage: {
+          'tompe': "url('/assets/placeholder-images/IMG_4216.webp')",
+        },
+        backgroundImage: {
+          'ourWorkHeroImage': "url('../assets/placeholder-images/IMG_3779.webp')",
+        },
+    plugins: [],
     },
   },
 };
