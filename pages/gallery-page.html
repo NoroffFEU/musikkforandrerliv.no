@@ -22,6 +22,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script type="module" src="../js/gallery-slider.mjs"></script>
     <script type="module" src="../js/search.mjs"></script>
 
   </head>
@@ -179,48 +180,31 @@
       <!-- Section one starts here -->
       <section>
         <h1 class="text-center text-[150px] font-justAnotherHand">Gallery</h1>
-        <div class="relative">
-          <!-- Add JS - function to make slider move between images when clicking previous/next buttons, make active/current image larger than the others -->
-          <button
-            class="prev-btn absolute text-4xl top-[45%] left-52"
-            title="previous image"
-            aria-label="previous"
-          >
-            <i class="fa-solid fa-angle-left text-sunset-red"></i>
-          </button>
-          <button
-            class="next-btn absolute text-4xl top-[45%] right-52"
-            title="next image"
-            aria-label="next"
-          >
-            <i class="fa-solid fa-angle-right text-sunset-red"></i>
-          </button>
-          <div class="flex justify-center gap-2">
-            <img
-              class="h-[250px]"
-              src="../assets/placeholder-images/3baa531a04b524d4090032444534fad9.webp"
-              alt=""
-            />
-            <img
-              class="h-[250px]"
-              src="../assets/placeholder-images/IMG_7424.webp"
-              alt=""
-            />
-            <img
-              class="h-[250px]"
-              src="../assets/placeholder-images/IMG_4202.webp"
-              alt=""
-            />
-            <img
-              class="h-[250px]"
-              src="../assets/placeholder-images/IMG_6433.webp"
-              alt=""
-            />
-            <img
-              class="h-[250px]"
-              src="../assets/placeholder-images/IMG_6437.webp"
-              alt=""
-            />
+
+        <div class="flex items-center justify-center">
+          <div class="relative overflow-hidden flex justify-center w-[1500px]">
+            <!-- If number of images in carousel is changed, the nth-child selector has to be updated -->
+            <div
+              class="js-carousel flex items-center justify-center w-[1400px] h-[300px] gap-5 overflow-hidden [&>img]:object-center [&>img]:object-cover max-sm:[&>*:not(:nth-child(3))]:hidden [&>*:nth-child(3)]:!h-full [&>*:nth-child(3)]:!w-[400px]">
+              <img class="js-carousel-image h-[220px]" src="../assets/placeholder-images/3baa531a04b524d4090032444534fad9.webp"
+                alt="" />
+              <img class="js-carousel-image h-[220px]" src="../assets/placeholder-images/IMG_7424.webp" alt="" />
+              <img class="js-carousel-image h-[220px]" src="../assets/placeholder-images/IMG_4202.webp" alt="" />
+              <img class="js-carousel-image h-[220px]" src="../assets/placeholder-images/IMG_6433.webp" alt="" />
+              <img class="js-carousel-image h-[220px]" src="../assets/placeholder-images/IMG_6437.webp" alt="" />
+            </div>
+            <!-- <div class="absolute bg-gradient-to-r via-white from-white top-[50%] translate-y-[-50%] left-0 w-60 h-full"></div> -->
+            <!-- <div class="absolute bg-gradient-to-l via-white from-white top-[50%] translate-y-[-50%] right-0 w-60 h-full"></div> -->
+            <button
+              class="arrow-button bg-white/50 rounded-full w-[3rem] js-left-arrow absolute text-4xl top-[50%] translate-y-[-50%] left-0"
+              title="previous image" aria-label="previous">
+              <i class="fa-solid fa-angle-left text-sunset-red"></i>
+            </button>
+            <button
+              class="arrow-button bg-white/50 rounded-full w-[3rem] js-right-arrow absolute text-4xl top-[50%] translate-y-[-50%] right-0"
+              title="next image" aria-label="next">
+              <i class="fa-solid fa-angle-right text-sunset-red"></i>
+            </button>
           </div>
         </div>
         <p class="text-center text-3xl py-10 max-w-[1400px] m-auto">
