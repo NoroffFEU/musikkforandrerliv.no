@@ -22,6 +22,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script  type="module" src="/js/modals.mjs"></script>
   </head>
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
@@ -276,14 +277,14 @@
         </div>
         <!-- Volunteer modal -->
         <div
-          class="volunteer-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+          class="volunteer-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden" id="volunteer-modal"
         >
           <!-- Not displayed(hidden) initially until volunteer-form-btn is clicked -->
           <div
             class="modal-content w-[1346px] h-[864px] bg-white flex flex-col items-center relative"
           >
             <i
-              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4" id="close-icon"
             ></i>
             <!-- Add JS - close modal when clicking icon -->
             <div
