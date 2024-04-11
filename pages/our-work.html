@@ -22,6 +22,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script defer type="module" src="/js/ourWork.mjs"></script>
+    
   </head>
   <body>
 
@@ -373,7 +375,7 @@
 
     <!-- Section 2 -->
     <section class="mx-[120px] mb-20">
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8">
+      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container">
         <div class="max-w-[574px] max-h-[576px] overflow-hidden">
           <img
             src="/assets/placeholder-images/IMG_5348.webp"
@@ -384,9 +386,20 @@
         <div class="text-button-container flex-col">
           <h2 class="font-sans text-[54px] font-medium">Healthcare</h2>
           <div
-            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-health" 
           >
-            <p class="scroll-content font-sans text-lg">
+            <p class="scroll-content font-sans text-lg" id="scroll-content">
+              In Madagascar, child mortality is high and many die from diseases
+              that can be easily treated with modern medicine. Typical causes
+              are infectious diseases such as pneumonia, tuberculosis, diarrheal
+              diseases and malaria. The country also has one of the highest
+              incidences of plague in the world, as well as epidemics and
+              pandemics that have otherwise been fought in other countries. Many
+              have a long way to the nearest clinic and/or hospital, and the
+              costs are high. They therefore do not seek help until it is too
+              late. Many of the children we meet on the streets often have major
+              health challenges, and several suffer from severe malnutrition.
+
               In Madagascar, child mortality is high and many die from diseases
               that can be easily treated with modern medicine. Typical causes
               are infectious diseases such as pneumonia, tuberculosis, diarrheal
@@ -400,13 +413,13 @@
             </p>
           </div>
           <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white">READ MORE</button>
+            <button class="reg-button bg-black text-white" id="read-more-btn">READ MORE</button>
             <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
           </div>
         </div>
       </div>
       <div
-        class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
+        class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-edu"
       >
         <div class="max-w-[574px] max-h-[576px] overflow-hidden">
           <img
@@ -418,7 +431,7 @@
         <div class="text-button-container flex-col">
           <h2 class="font-sans text-[54px] font-medium">Education</h2>
           <div
-            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-edu"
           >
             <p class="scroll-content font-sans text-lg">
               Schooling gives children hope for the future. When children lack
@@ -462,12 +475,12 @@
             </p>
           </div>
           <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white">READ MORE</button>
+            <button class="reg-button bg-black text-white" id="read-more-btn-edu" >READ MORE</button>
             <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
           </div>
         </div>
       </div>
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8">
+      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-lisi">
         <div class="max-w-[574px] max-h-[576px] overflow-hidden">
           <img
             class="object-cover h-[576px]"
@@ -479,7 +492,7 @@
         <div class="text-button-container flex-col">
           <h2 class="font-sans text-[54px] font-medium">Living Situation</h2>
           <div
-            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-lisi"
           >
             <p class="scroll-content font-sans text-lg">
               Many of the children we enroll as students in MMF live on the
@@ -495,13 +508,13 @@
             </p>
           </div>
           <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white">READ MORE</button>
+            <button class="reg-button bg-black text-white" id="read-more-btn-lisi">READ MORE</button>
             <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
           </div>
         </div>
       </div>
       <div
-        class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
+        class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-food"
       >
         <div class="max-w-[574px] max-h-[576px] overflow-hidden">
           <img
@@ -514,7 +527,7 @@
         <div class="text-button-container flex-col">
           <h2 class="font-sans text-[54px] font-medium">Food Distribution</h2>
           <div
-            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-food"
           >
             <p class="scroll-content font-sans text-lg">
               Despite Madagascar being known for its lush climate, the country
@@ -529,12 +542,12 @@
             </p>
           </div>
           <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white">READ MORE</button>
+            <button class="reg-button bg-black text-white" id="read-more-btn-food">READ MORE</button>
             <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
           </div>
         </div>
       </div>
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8">
+      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-music">
         <div class="max-w-[574px] max-h-[576px] overflow-hidden">
           <img
             class="object-cover h-[576px]"
@@ -546,7 +559,7 @@
         <div class="text-button-container flex-col">
           <h2 class="font-sans text-[54px] font-medium">Music Lessons</h2>
           <div
-            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-music"
           >
             <p class="scroll-content font-sans text-lg">
               Meeting basic needs is crucial, but we also recognize that
@@ -580,13 +593,13 @@
             </p>
           </div>
           <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white">READ MORE</button>
+            <button class="reg-button bg-black text-white" id="read-more-btn-music">READ MORE</button>
             <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
           </div>
         </div>
       </div>
       <div
-        class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
+        class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-futuregoals"
       >
         <div class="max-w-[574px] max-h-[576px] overflow-hidden">
           <img
@@ -599,7 +612,7 @@
         <div class="text-button-container flex-col">
           <h2 class="font-sans text-[54px] font-medium">Future Goals</h2>
           <div
-            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-futuregoals"
           >
             <p class="scroll-content font-sans text-lg">
               One of our goals is to make MMF larger and more well-known so that
@@ -644,12 +657,12 @@
             </p>
           </div>
           <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white">READ MORE</button>
+            <button class="reg-button bg-black text-white" id="read-more-btn-futuregoals">READ MORE</button>
             <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
           </div>
         </div>
       </div>
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8">
+      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-activities">
         <div class="max-w-[574px] max-h-[576px] overflow-hidden">
           <img
             src="/assets/placeholder-images/IMG_3538.webp"
@@ -660,7 +673,7 @@
         <div class="text-button-container flex-col">
           <h2 class="font-sans text-[54px] font-medium">Activities</h2>
           <div
-            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+            class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-activities"
           >
             <p class="scroll-content font-sans text-lg">
               Children growing up in poverty in Antsirabe often have significant
@@ -699,7 +712,7 @@
             </p>
           </div>
           <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white">READ MORE</button>
+            <button class="reg-button bg-black text-white" id="read-more-btn-activities">READ MORE</button>
             <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
           </div>
         </div>
