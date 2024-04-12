@@ -105,9 +105,9 @@
         <div
           class="relative cursor-pointer hover:scale-105 transition-transform"
         >
-          <div onclick="dropdownNavMenu()" class="flex items-center dropdown">
-            <span class="text-2xl font-medium">More</span>
-            <img
+          <div class="flex items-center dropdown">
+            <span class="dropdown text-2xl font-medium">More</span>
+            <img class="dropdown ml-3"
               src="../assets/images/SVGs/chevron-down.svg"
               aria-label="Projects Dropdown Menu"
               alt="Projects Dropdown Menu"
@@ -115,7 +115,7 @@
             />
           </div>
           <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-          <div id="myDropdown" class="absolute hidden mt-2 bg-white dropdown-content">
+          <div id="navMenu" class="absolute hidden mt-2 bg-white dropdown-content">
             <a
               href="#"
               class="block p-2 border-t border-b border-black hover:bg-gray-100"
@@ -501,7 +501,7 @@
     </footer>
     <!--Footer end-->
     
-    <script src="../js/dropdown.js"></script>
+    <script type="module" src="../js/toggle-utils.mjs"></script>
   
   </body>
 </html>
