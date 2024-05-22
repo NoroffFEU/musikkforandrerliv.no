@@ -1,1 +1,0 @@
-import { posts } from "./displayPosts.mjs";
