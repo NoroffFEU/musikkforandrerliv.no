@@ -42,24 +42,22 @@ collections:
 
   - name: "about us"
     label: "About Us"
+    description:
     editor:
       preview: false
     folder: "cms/_about_us"
     files:
       - label: "About MMF"
         name: "about mmf"
+        description:
         file: "about_mmf.md"
         fields:
-          - {
-              label: "Title",
-              name: "title",
-              widget: "hidden",
-              default: "about",
-            }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "about",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Our History"
+        name: "our history"
+        description:
+        file: "our_history.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
