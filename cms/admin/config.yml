@@ -42,9 +42,6 @@ collections:
 
   - name: "about us"
     label: "About Us"
-    editor:
-      preview: false
-    folder: "cms/_about_us"
     files:
       - label: "About MMF"
         name: "about mmf"
