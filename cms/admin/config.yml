@@ -37,7 +37,7 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Event Date", name: "date", widget: "datetime" }
-      - { label: "Location", name: "location", widget: "map" }
+      - { label: "Location", name: "location", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "authors"
