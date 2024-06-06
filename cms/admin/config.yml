@@ -15,7 +15,6 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
           label: "Author",
           name: "author",
@@ -25,6 +24,20 @@ collections:
           search_fields: [display_name],
           value_field: "name",
         }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "events"
+    label: "Events"
+    folder: "cms/_events/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Event Date", name: "date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "map" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "authors"
@@ -122,4 +135,4 @@ collections:
         }
       - { label: "Name", name: "name", widget: "string", required: true }
       - { label: "Email", name: "email", widget: "string", required: true }
-      - { label: "Phone Number", name: "phone number", widget: "number" }
+      - { label: "Phone Number", name: "phone number", widget: "string" }
