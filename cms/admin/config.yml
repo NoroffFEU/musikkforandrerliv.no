@@ -48,13 +48,13 @@ collections:
     files:
       - label: "About MMF"
         name: "about mmf"
-        file: "about_mmf.md"
+        file: "cms/_about_us/about_mmf.md"
         fields:
           - { label: "Title", name: "title", widget: "string", required: true }
           - { label: "Body", name: "body", widget: "markdown", required: true }
       - label: "Our History"
         name: "our history"
-        file: "our_history.md"
+        file: "cms/_about_us/our_history.md"
         fields:
           - { label: "Title", name: "title", widget: "string", required: true }
           - { label: "Body", name: "body", widget: "markdown", required: true }
