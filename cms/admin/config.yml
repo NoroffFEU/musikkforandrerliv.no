@@ -13,7 +13,7 @@ collections:
     editor:
       preview: false
     description: >
-      Add posts about recent activities, news, and stories related to your mission. Add posts about recent activities, news, and stories related to your mission.
+      Add posts about recent activities, news, and stories related to your mission.
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
