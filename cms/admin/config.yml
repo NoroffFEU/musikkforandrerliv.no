@@ -4,11 +4,6 @@ backend:
 
 media_folder: "assets/uploads"
 
-# i18n:
-#   structure: single_file
-#   locales: [en, nb, mg]
-#   default_locale: en
-
 collections:
   - name: "blog"
     label: "Blog"
