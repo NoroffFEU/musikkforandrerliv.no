@@ -10,8 +10,6 @@ collections:
     folder: "cms/_posts/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    nested:
-      depth: 1
     editor:
       preview: false
     fields:
@@ -34,8 +32,6 @@ collections:
     folder: "cms/_events/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    nested:
-      depth: 1
     editor:
       preview: false
     fields:
@@ -50,8 +46,6 @@ collections:
   - name: "authors"
     label: "Authors"
     folder: "cms/_authors/"
-    nested:
-      depth: 1
     create: true
     editor:
       preview: false
@@ -64,9 +58,6 @@ collections:
 
   - name: "about us"
     label: "About Us"
-    folder: "cms/_about_us/"
-    nested:
-      depth: 1
     files:
       - label: "About MMF"
         name: "about mmf"
@@ -108,8 +99,6 @@ collections:
 
   - name: "support us"
     label: "Support Us"
-    nested:
-      depth: 1
     files:
       - label: "Where do we get funds from"
         name: "funds"
@@ -154,8 +143,6 @@ collections:
 
   - name: "our work"
     label: "Our Work"
-    nested:
-      depth: 1
     files:
       - label: "Health Care"
         name: "health care"
