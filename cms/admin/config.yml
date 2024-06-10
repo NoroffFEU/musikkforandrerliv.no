@@ -25,6 +25,7 @@ collections:
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "name",
+          required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
 
@@ -63,6 +64,7 @@ collections:
 
   - name: "about us"
     label: "About Us"
+    folder: "cms/_about_us/"
     nested:
       depth: 1
     files:
