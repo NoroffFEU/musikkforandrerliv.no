@@ -4,6 +4,11 @@ backend:
 
 media_folder: "assets/uploads"
 
+# i18n:
+#   structure: single_file
+#   locales: [en, nb, mg]
+#   default_locale: en
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -39,6 +44,8 @@ collections:
       - { label: "Event Date", name: "date", widget: "datetime" }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "File", name: "file", widget: "file" }
 
   - name: "authors"
     label: "Authors"
@@ -93,6 +100,7 @@ collections:
               widget: "image",
               required: true,
             }
+
   - name: "support us"
     label: "Support Us"
     files:
@@ -136,3 +144,87 @@ collections:
       - { label: "Name", name: "name", widget: "string", required: true }
       - { label: "Email", name: "email", widget: "string", required: true }
       - { label: "Phone Number", name: "phone number", widget: "string" }
+
+  - name: "our work"
+    label: "Our Work"
+    files:
+      - label: "Health Care"
+        name: "health care"
+        file: "cms/_our_work/health_care.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Schooling"
+        name: "schooling"
+        file: "cms/_our_work/schooling.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "The Housing Situation"
+        name: "the housing situation"
+        file: "cms/_our_work/housing_situation.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Nutrition"
+        name: "nutrition"
+        file: "cms/_our_work/nutrition.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Music Lessons"
+        name: "music lessons"
+        file: "cms/_our_work/music_lessons.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Cooperation with the Children"
+        name: "cooperation with the children"
+        file: "cms/_our_work/cooperation_children.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Activities"
+        name: "activities"
+        file: "cms/_our_work/activities.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Goals for the Future"
+        name: "goals for the future"
+        file: "cms/_our_work/future_goals.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "_gallery"
+    create: false
+    files:
+      - label: "Gallery"
+        name: "gallery"
+        fields:
+          - {
+              label: "Images",
+              name: "images",
+              widget: "image",
+              choose_url: true,
+              media_library: { config: { multiple: true, max_files: 999 } },
+            }
