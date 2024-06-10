@@ -12,6 +12,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
+    description: >
+      Add posts about recent activities, news, and stories related to your mission. Add posts about recent activities, news, and stories related to your mission.
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
@@ -34,6 +36,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
+    description: >
+      List upcoming events. Make sure to provide all necessary details for attendees.
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
@@ -49,6 +53,8 @@ collections:
     create: true
     editor:
       preview: false
+    description: >
+      Create profiles for team members who contribute content. Include their roles, backgrounds, and any relevant expertise.
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "author" }
       - { label: "Short Name", name: "name", widget: "string" }
@@ -58,6 +64,8 @@ collections:
 
   - name: "about us"
     label: "About Us"
+    description: >
+      Edit content of your organization's mission, values, and history. Help visitors understand our purpose and goals.
     files:
       - label: "About MMF"
         name: "about mmf"
@@ -99,6 +107,8 @@ collections:
 
   - name: "support us"
     label: "Support Us"
+    description: >
+      Edit how people can donate or support your organization. Include information on the impact of their contributions and ways to get involved.
     files:
       - label: "Where do we get funds from"
         name: "funds"
@@ -129,6 +139,8 @@ collections:
     label: "Contact Us"
     folder: "cms/_contact_us"
     create: true
+    description: >
+      Edit essential contact details and a form for inquiries. Ensure visitors know how to reach you for questions or support.
     fields:
       - {
           label: "Role",
@@ -143,6 +155,8 @@ collections:
 
   - name: "our work"
     label: "Our Work"
+    description: >
+      Edit the projects and initiatives you are currently working on.
     files:
       - label: "Health Care"
         name: "health care"
@@ -212,6 +226,8 @@ collections:
   - name: "gallery"
     label: "Gallery"
     create: false
+    description: >
+      Upload photos and videos from our events and projects. Use this space to visually share our story and impact.
     files:
       - label: "Gallery"
         name: "gallery"
