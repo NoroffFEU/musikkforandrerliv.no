@@ -227,7 +227,7 @@ collections:
     label: "Gallery"
     create: false
     description: >
-      Upload photos and videos from our events and projects. Use this space to visually share our story and impact.
+      Upload photos and videos from our events and projects. Use this space to visually share our story and impact. These images will be shown in the carousel.
     files:
       - label: "Gallery"
         name: "gallery"
