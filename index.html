@@ -22,7 +22,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-   
+
     <script type="module" src="js/calendar.mjs"></script>
     <script type="module" src="js/events-list.mjs"></script>
     <script type="module" src="js/search.mjs"></script>
@@ -93,7 +93,11 @@
                   />
                 </button>
                 <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
-                <div hidden id="search-results" class="absolute w-96 top-10 bg-white border rounded-sm"></div>
+                <div
+                  hidden
+                  id="search-results"
+                  class="absolute w-96 top-10 bg-white border rounded-sm"
+                ></div>
                 <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
               </form>
             </div>
@@ -544,7 +548,6 @@
         id="events"
         class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal my-10"
       >
-        <!-- Events -->
         <div class="row-span-1 col-span-5">
           <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
           <ol
