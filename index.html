@@ -49,10 +49,10 @@
         </div>
 
         <div
-          class="absolute bg-white min-h-[60vh] left-0 top-10 w-full flex items-center p-5"
+          class="sm:static absolute bg-white min-h-[10vh] left-0 top-[-100vh] sm:w-auto w-full flex items-center p-5"
         >
           <div
-            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+            class="flex flex-col sm:flex-row sm:items-center sm:gap-[4vw] gap-8"
           >
             <button
               id="openSearchBarDrawer"
@@ -123,16 +123,21 @@
                 <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
               </div>
             </div>
-            <a
-              href="./pages/news.html"
-              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-              >News</a
-            >
-            <a
-              href="./pages/about-page.html"
-              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-              >About Us</a
-            >
+            <div>
+              <a
+                href="./pages/news.html"
+                class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+                >News</a
+              >
+            </div>
+            <div>
+              <a
+                href="./pages/about-page.html"
+                class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+                >About Us</a
+              >
+            </div>
+
             <div
               class="relative cursor-pointer hover:scale-105 transition-transform"
             >
@@ -206,6 +211,7 @@
                 </a>
               </div>
             </div>
+            <i class="fa-solid fa-bars"></i>
           </div>
         </div>
       </nav>

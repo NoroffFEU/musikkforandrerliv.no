@@ -2,6 +2,12 @@
 module.exports = {
   content: ["*.html", "./pages/*.html"],
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
     colors: {
       "sunset-red": "#EE6352",
       "primary-green": "#5B8E7D",
@@ -28,13 +34,13 @@ module.exports = {
     },
 
     extend: {
-        backgroundImage: {
-          'tompe': "url('/assets/placeholder-images/IMG_4216.webp')",
-        },
-        backgroundImage: {
-          'ourWorkHeroImage': "url('../assets/placeholder-images/IMG_3779.webp')",
-        },
-    plugins: [],
+      backgroundImage: {
+        tompe: "url('/assets/placeholder-images/IMG_4216.webp')",
+      },
+      backgroundImage: {
+        ourWorkHeroImage: "url('../assets/placeholder-images/IMG_3779.webp')",
+      },
+      plugins: [],
     },
   },
 };
