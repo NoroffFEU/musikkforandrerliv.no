@@ -26,6 +26,15 @@
     <script type="module" src="js/calendar.mjs"></script>
     <script type="module" src="js/events-list.mjs"></script>
     <script type="module" src="js/search.mjs"></script>
+    <script type="module" src="js/toggleMenu.mjs"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -49,11 +58,9 @@
         </div>
 
         <div
-          class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[8%] w-full flex items-center p-5"
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center p-5"
         >
-          <div
-            class="flex flex-col md:flex-row md:items-center md:gap-[4vw] md:gap-3 gap-8"
-          >
+          <div class="flex flex-col md:flex-row md:items-center gap-8">
             <button
               id="openSearchBarDrawer"
               class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
@@ -208,6 +215,11 @@
             </div>
           </div>
         </div>
+        <ion-icon
+          name="menu"
+          class="text-3xl cursor-pointer md:hidden menu-icon"
+        >
+        </ion-icon>
       </nav>
     </header>
 
