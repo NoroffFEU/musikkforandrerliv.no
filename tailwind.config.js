@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: ["*.html", "./pages/*.html"],
   theme: {
     colors: {
@@ -28,13 +29,13 @@ module.exports = {
     },
 
     extend: {
-        backgroundImage: {
-          'tompe': "url('/assets/placeholder-images/IMG_4216.webp')",
-        },
-        backgroundImage: {
-          'ourWorkHeroImage': "url('../assets/placeholder-images/IMG_3779.webp')",
-        },
-    plugins: [],
+      backgroundImage: {
+        tompe: "url('/assets/placeholder-images/IMG_4216.webp')",
+      },
+      backgroundImage: {
+        ourWorkHeroImage: "url('../assets/placeholder-images/IMG_3779.webp')",
+      },
+      plugins: [],
     },
   },
 };
