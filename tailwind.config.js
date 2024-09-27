@@ -3,12 +3,6 @@ module.exports = {
   mode: "jit",
   content: ["*.html", "./pages/*.html"],
   theme: {
-    screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "976px",
-      xl: "1440px",
-    },
     colors: {
       "sunset-red": "#EE6352",
       "primary-green": "#5B8E7D",
