@@ -23,6 +23,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     <script type="module" src="js/calendar.mjs"></script>
     <script type="module" src="js/events-list.mjs"></script>
     <script type="module" src="js/search.mjs"></script>
@@ -32,6 +36,7 @@
 
 <body class="">
     <header class="flex h-24 items-center justify-between px-10 mt-6">
+<<<<<<< Updated upstream
         <div class="flex flex-row items-center gap-10 text-base">
             <a href="./index.html">
                 <img src="./assets/images/SVGs/headerLogo.svg" aria-label="Header Logo" alt="Header Logo"
@@ -45,6 +50,82 @@
                 <img src="./assets/images/SVGs/Search.svg" class="w-5 h-5 -mr-1" aria-label="Search Button"
                     alt="Search Button" />
                 <span class="text-2xl font-medium">Search</span>
+=======
+      <div class="flex flex-row items-center gap-10 text-base">
+        <a href="./index.html">
+          <img
+            src="./assets/images/SVGs/headerLogo.svg"
+            aria-label="Header Logo"
+            alt="Header Logo"
+            class="cursor-pointer w-20 h-20"
+          />
+        </a>
+      </div>
+      <nav class="flex flex-row items-center gap-10">
+        <button
+          id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+        >
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img
+            src="./assets/images/SVGs/Search.svg"
+            class="w-5 h-5 -mr-1"
+            aria-label="Search Button"
+            alt="Search Button"
+          />
+          <span class="text-2xl font-medium">Search</span>
+        </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div
+          id="search-drawer-from-header"
+          aria-expanded="false"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-all duration-500 ease-out z-50"
+          aria-label="search-bar"
+        >
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div
+              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+            >
+              <form class="relative flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input
+                  tabindex="-1"
+                  type="search"
+                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button
+                  tabindex="-1"
+                  type="submit"
+                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/images/SVGs/Search.svg"
+                    class="w-4 h-4"
+                    aria-label="Search Now Button"
+                    alt="Search Now Button"
+                  />
+                </button>
+                <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
+                <div
+                  hidden
+                  id="search-results"
+                  class="absolute w-96 top-10 bg-white border rounded-sm"
+                ></div>
+                <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              tabindex="-1"
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+>>>>>>> Stashed changes
             </button>
             <!-- Search Bar Overlay, hidden initially. -->
             <div id="search-drawer-from-header" aria-expanded="false"
