@@ -5,8 +5,8 @@
 /* make your tailwind components in this document */
 
 @layer components {
-  .reg-button {
-    @apply bg-black
+    .reg-button {
+        @apply bg-black
         rounded-[9px]
         text-white
         px-6
@@ -20,9 +20,9 @@
         focus:outline-none
         focus:ring
         focus:ring-black;
-  }
-  .alt-button {
-    @apply bg-[#EE6352] /*TODO: change to correct color later.*/
+    }
+    .alt-button {
+        @apply bg-[#EE6352] /*TODO: change to correct color later.*/
         rounded-[9px]
         text-white
         px-2
@@ -36,9 +36,9 @@
         focus:outline-none
         focus:ring
         focus:ring-black;
-  }
-  .our-work-hero-button {
-    @apply bg-[#5B8E7D]
+    }
+    .our-work-hero-button {
+        @apply bg-[#5B8E7D]
         rounded-md
         text-[#F8EED1]
         border
@@ -49,9 +49,9 @@
         text-[8px]
         font-medium
         text-center;
-  }
-  .meet-the-children-pageButton {
-    @apply bg-[#CCCCCC]
+    }
+    .meet-the-children-pageButton {
+        @apply bg-[#CCCCCC]
         rounded-md
         text-black
         font-inter
@@ -60,54 +60,56 @@
         text-lg
         px-4
         py-2;
-  }
+    }
 }
 
 /* Hide the default search input clear button */
 .search-drawer_input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 /* Language selection animation */
 
 #language-options {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.5s, max-height 0.5s ease;
-  position: absolute;
-  left: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        opacity 0.5s,
+        max-height 0.5s ease;
+    position: absolute;
+    left: 0;
 }
 
 .group:hover #language-options {
-  opacity: 1;
-  max-height: 200px;
+    opacity: 1;
+    max-height: 200px;
 }
 
 /* Border radius for input fields */
 .rounded-ib {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 /* Custom drop-shadow color for image frames */
 .red-shadow {
-  box-shadow: 10px 10px 4px 0px #ee6352;
+    box-shadow: 10px 10px 4px 0px #ee6352;
 }
 
 .blue-shadow {
-  box-shadow: 10px 10px 4px 0px #66c3ff;
+    box-shadow: 10px 10px 4px 0px #66c3ff;
 }
 
 .scroll-content::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .scroll-container {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .newsletter::placeholder {
-  color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
