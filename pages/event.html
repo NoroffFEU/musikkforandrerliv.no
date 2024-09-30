@@ -23,17 +23,27 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" src="../js/search.mjs"></script>
+    <script type="module" src="../js/toggleMenu.mjs"></script>
+     <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
   </head>
   <body>
-    <header class="bg-white">
+ 
+    <header class="bg-white"></header>
       <nav
         class="flex justify-between items-center gap-10 px-5 w-[92%] mx-auto"
       >
         <div>
-          <a href="./index.html">
+          <a href="../index.html">
             <img
-              src="./assets/images/SVGs/headerLogo.svg"
+              src="../assets/images/SVGs/headerLogo.svg"
               aria-label="Header Logo"
               alt="Header Logo"
               class="cursor-pointer w-16 py-2"
@@ -51,7 +61,7 @@
             >
               <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
               <img
-                src="./assets/images/SVGs/Search.svg"
+                src="../assets/images/SVGs/Search.svg"
                 class="w-5 h-5 -mr-1"
                 aria-label="Search Button"
                 alt="Search Button"
@@ -87,7 +97,7 @@
                       class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
                     >
                       <img
-                        src="./assets/images/SVGs/Search.svg"
+                        src="../assets/images/SVGs/Search.svg"
                         class="w-4 h-4"
                         aria-label="Search Now Button"
                         alt="Search Now Button"
@@ -132,7 +142,7 @@
                   >More</span
                 >
                 <img
-                  src="./assets/images/SVGs/chevron-down.svg"
+                  src="../assets/images/SVGs/chevron-down.svg"
                   aria-label="Projects Dropdown Menu"
                   alt="Projects Dropdown Menu"
                   class="ml-3"
@@ -162,7 +172,7 @@
               id="language-selector"
             >
               <img
-                src="./assets/images/SVGs/globe-solid.svg"
+                src="../assets/images/SVGs/globe-solid.svg"
                 aria-label="Globe Icon For Language Selection"
                 alt="Language Selection"
                 class="cursor-pointer object-contain h-5 w-5"
@@ -173,7 +183,7 @@
               >
                 <a href="#" class="block">
                   <img
-                    src="./assets/images/SVGs/norway.svg"
+                    src="../assets/images/SVGs/norway.svg"
                     aria-label="Norwegian Flag Language Selection"
                     alt="Norwegian Flag"
                     class="inline h-6 w-8"
@@ -181,7 +191,7 @@
                 </a>
                 <a href="#" class="block">
                   <img
-                    src="./assets/images/SVGs/unitedKingdom.svg"
+                    src="../assets/images/SVGs/unitedKingdom.svg"
                     aria-label="English Flag Language Selection"
                     alt="English Flag"
                     class="inline h-6 w-8"
@@ -189,7 +199,7 @@
                 </a>
                 <a href="#" class="block">
                   <img
-                    src="./assets/images/SVGs/madagascar.svg"
+                    src="../assets/images/SVGs/madagascar.svg"
                     aria-label="Malagasy Flag Language Selection"
                     alt="Malagasy Flag"
                     class="inline h-6 w-8"
@@ -206,7 +216,6 @@
         </ion-icon>
       </nav>
     </header>
-    
     <!-- Main Section 1 -->
     <main class="flex flex-col justify-center mx-auto pt-[80px] max-w-[1200px]">
       <section class="max-w-screen-xl mx-20 flex flex-col gap-10">
