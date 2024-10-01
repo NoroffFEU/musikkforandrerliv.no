@@ -13,25 +13,21 @@ This project aim to build a web application:
 
 # Built with:
 - Tailwind
-- Live Server
-- Node.js
+- Decap CMS
   
 # Getting started: 
 
-##Installation:
+## Installation:
 
-1. Clone repo: https://github.com/NoroffFEU/musikkforandrerliv.no
-2. Install Tailwind (see intallation guide below)
-3. Install Decap (CMS)
+1. Clone the repo: https://github.com/NoroffFEU/musikkforandrerliv.no
+2. Run `npm install`
 
 # Acknowledgments: 
 2022-2023 Noroff fulltime Frontend development students
 2023-2024 Noroff fulltime Frontend development students
 
-
-
 # Tailwind:
-Here you will find installation guide for Tailwind and how to use it.
+Tailwind is already configured for this project.
 
 ## Tailwind guide
 - Use Tailwind CSS utility classes in your HTML to style your components
@@ -42,34 +38,6 @@ Here you will find installation guide for Tailwind and how to use it.
 
 - plugins you can use to help with tailwind: **Tailwind CSS IntelliSense & Tailwind Docs**
 
-- If the tailwind code is not working, and you have tried the above, you can also look in the **Problems** tab and see if there are any issues there.
+- If the Tailwind code is not working, and you have tried the above, you can also look in the **Problems** tab and see if there are any issues there.
 
-## Tailwind installation guide
-Before you install Tailwind, make sure you have Node.js installed. You can download it from Node.js — Run JavaScript Everywhere (nodejs.org).
-For more detailed information and advanced configurations, refer to the official Tailwind CSS documentation. Installation - Tailwind CSS.
 
-1. Initialize Your Project
-    Create a new project directory and navigate into it.
-    Initialize a new npm project.
-   
-2. Install Tailwind CSS via npm
-    Install Tailwind CSS along with its peer dependencies.
-   
-3. Create Configuration Files
-    Generate the tailwind.config.js and postcss.config.js files.
-   
-4. Configure Tailwind to Remove Unused Styles in Production
-    Configure the purge option in tailwind.config.js to remove unused styles in production.
-   
-5. Create Your CSS File
-    Create a CSS file in your project and add the Tailwind directives.
-
-6. Include Tailwind in Your CSS
-    Update your postcss.config.js file to include Tailwind CSS.
-   
-7. Build Your CSS
-    Add a script to your package.json to build your CSS.
-    Run the build script.
-
-8. Include the Generated CSS File in Your HTML
-    Include the generated CSS file in the <head> of your HTML file.
