@@ -27,10 +27,11 @@ module.exports = {
       inter: ["Inter", "sans-serif"],
     },
 
-    extend: {},
-    backgroundImage: {
-      tompe: "url('/assets/placeholder-images/IMG_4216.webp')",
-      ourWorkHeroImage: "url('../assets/placeholder-images/IMG_3779.webp')",
+    extend: {
+      backgroundImage: {
+        tompe: "url('/assets/placeholder-images/IMG_4216.webp')",
+        ourWorkHeroImage: "url('../assets/placeholder-images/IMG_3779.webp')",
+      },
     },
     plugins: [],
   },
