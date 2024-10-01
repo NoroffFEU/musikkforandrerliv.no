@@ -36,8 +36,6 @@ Here you will find installation guide for Tailwind and how to use it.
 ## Tailwind guide
 - Use Tailwind CSS utility classes in your HTML to style your components
 
-- There should be a node modules file. if not run the following code in the terminal: **npm install**
-
 - If you are writing code and want it to update in the live server, remember to run the following code in terminal: **npm run dev**
 
 - If you are not gonna code, but just want to see how the project looks, run this code in the terminal: **npm run build** 
