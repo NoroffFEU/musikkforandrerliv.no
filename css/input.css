@@ -14,7 +14,7 @@
         text-xs
         font-semibold
         font-sans /* Default font AKA montserrat */
-        hover:bg-[#333333]
+        hover:bg-dark-charcoal
         focus:text-black
         focus:bg-white
         focus:outline-none
@@ -22,7 +22,7 @@
         focus:ring-black;
   }
   .alt-button {
-    @apply bg-[#EE6352] /*TODO: change to correct color later.*/
+    @apply bg-sunset-red
         rounded-[9px]
         text-white
         px-2
@@ -31,16 +31,16 @@
         text-xs
         font-semibold
         font-justAnotherHand
-        hover:bg-[#F18275]
-        active:bg-[#BE4F42]
+        hover:bg-hover-red
+        active:bg-alt-hover-red
         focus:outline-none
         focus:ring
         focus:ring-black;
   }
   .our-work-hero-button {
-    @apply bg-[#5B8E7D]
+    @apply bg-primary-green
         rounded-md
-        text-[#F8EED1]
+        text-ivory-beige
         border
         border-solid
         border-black
@@ -51,7 +51,7 @@
         text-center;
   }
   .meet-the-children-pageButton {
-    @apply bg-[#CCCCCC]
+    @apply bg-cerebral-grey
         rounded-md
         text-black
         font-inter
