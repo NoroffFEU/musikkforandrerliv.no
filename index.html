@@ -22,7 +22,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-   
+
     <script type="module" src="js/calendar.mjs"></script>
     <script type="module" src="js/events-list.mjs"></script>
     <script type="module" src="js/search.mjs"></script>
@@ -93,7 +93,11 @@
                   />
                 </button>
                 <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
-                <div hidden id="search-results" class="absolute w-96 top-10 bg-white border rounded-sm"></div>
+                <div
+                  hidden
+                  id="search-results"
+                  class="absolute w-96 top-10 bg-white border rounded-sm"
+                ></div>
                 <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
               </form>
             </div>
@@ -192,14 +196,21 @@
     <main>
       <!-- Section 1  -->
       <section
-        class="bg-[url('../assets/placeholder-images/IMG_3779.webp')] h-screen bg-cover bg-center flex flex-col justify-end items-center"
+        class="bg-[url('../assets/placeholder-images/IMG_3779.webp')] h-screen bg-cover bg-center xl:bg-[center_bottom_60%] flex flex-col justify-end items-center relative"
       >
-        <div class="flex flex-col text-center mb-16 gap-7">
-          <h1 class="font-justAnotherHand text-white text-8xl">
+        <!-- Overlay for dark effect -->
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+
+        <div class="flex flex-col text-center mb-12 gap-6 z-10">
+          <h1
+            class="font-justAnotherHand text-white text-7xl xl:text-9xl tracking-wide"
+          >
             MOZIKA MANOVA FIAINANA
           </h1>
 
-          <h2 class="font-sans text-white text-3xl">
+          <h2
+            class="font-justAnotherHand text-white text-4xl xl:text-6xl tracking-wide break-words"
+          >
             MUSIKK FORANDRER LIV - MUSIC CHANGES LIVES
           </h2>
         </div>
