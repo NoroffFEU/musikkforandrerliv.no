@@ -25,6 +25,7 @@
     <script type="module" src="js/calendar.mjs"></script>
     <script type="module" src="js/events-list.mjs"></script>
     <script type="module" src="js/search.mjs"></script>
+    <script type="module" src="js/general.mjs"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -624,11 +625,18 @@
                 placeholder="example@example.com"
                 class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md"
               />
+
               <button
+                id="signUpButton"
                 type="submit"
-                class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px]"
+                class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative"
               >
-                Sign Up
+                <span id="btnText">Sign Up</span>
+                <div id="loader" class="loader" style="display: none"></div>
+                <span id="checkmark" style="display: none; color: #000000"
+                  >&#10003;</span
+                >
+                <!-- Checkmark -->
               </button>
             </form>
           </div>
