@@ -1,0 +1,16 @@
+{% assign galleryData = collections.gallery[0].data %}
+<section class="flex flex-col justify-center items-center bg-mint-green gap-4 py-4 mb-20">
+  <div class="grid grid-cols-3 grid-rows-3 gap-4 px-4 max-w-[1200px] max-h-[1300px]">
+    {% for image in galleryData.images limit: 9 %}
+      <div class="w-[378px] h-[378px]">
+        <img
+          class="w-full h-full object-cover"
+          src="{{ image }}"
+          alt="Gallery image {{ forloop.index }}">
+      </div>
+    {% endfor %}
+  </div>
+  <div>
+    <button class="uppercase reg-button text-2xl">See the gallery</button>
+  </div>
+</section>

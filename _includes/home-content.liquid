@@ -1,0 +1,36 @@
+<section class="w-full flex flex-col items-center justify-center gap-20 mb-20">
+  {% assign en_content = collections.home_content | getContentByLang: "en" %}
+  {% for item in en_content %}
+    <div class="w-full flex justify-center {{ item.data.bgColor }} overflow-hidden">
+      <div class="flex justify-center items-center max-w-[1200px] h-[600px] p-[50px] gap-20 overflow-hidden">
+        {% if item.data.imagePosition == 'left' %}
+          <div class="w-[500px] h-[500px] overflow-hidden">
+            <img
+              class="w-full object-cover"
+              src="{{ item.data.image }}"
+              alt="{{ item.data.imageAlt }}">
+          </div>
+        {% endif %}
+        <div class="flex flex-col w-[500px] gap-6">
+          <h2 class="text-[32px] font-semibold">{{ item.data.heading }}</h2>
+          <p class="text-lg">{{ item.data.description }}</p>
+          <div class="flex gap-5">
+            {% for button in item.data.buttons %}
+              <button class="uppercase reg-button text-2xl {% if button.type == 'secondary' %}bg-white text-sunset-red hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red{% endif %}">
+                {{ button.text }}
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+        {% if item.data.imagePosition == 'right' %}
+          <div class="w-[500px] h-[500px] overflow-hidden">
+            <img
+              class="w-full object-cover"
+              src="{{ item.data.image }}"
+              alt="{{ item.data.imageAlt }}">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</section>

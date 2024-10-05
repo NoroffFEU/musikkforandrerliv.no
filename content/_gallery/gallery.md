@@ -1,0 +1,12 @@
+---
+images:
+  - /assets/uploads/img_4116.webp
+  - /assets/uploads/img_3836.webp
+  - /assets/uploads/img_3749.webp
+  - /assets/uploads/img_3634.webp
+  - /assets/uploads/img_3610.webp
+  - /assets/uploads/img_3605.webp
+  - /assets/uploads/img_4216.webp
+  - /assets/uploads/img_7359.webp
+  - /assets/uploads/img_3637.webp
+---

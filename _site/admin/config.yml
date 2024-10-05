@@ -1,0 +1,385 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+
+i18n:
+  structure: multiple_folders
+  locales: [en, no, mg]
+  default_locale: en
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - label: "Home"
+        name: "home"
+        file: "_data/home.json"
+        i18n:
+          structure: single_file
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - label: "History"
+            name: "history"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", i18n: true }
+              - {
+                  label: "Short Description",
+                  name: "short_description",
+                  widget: "text",
+                  i18n: true,
+                }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  i18n: duplicate,
+                }
+
+  - name: "home_content"
+    label: "Home Content"
+    folder: "content/_home_content"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Heading", name: "heading", widget: "string", i18n: true }
+      - {
+          label: "Background Color",
+          name: "bgColor",
+          widget: "select",
+          options: ["bg-mint-green", "bg-white"],
+          i18n: duplicate,
+        }
+      - { label: "Image", name: "image", widget: "image", i18n: duplicate }
+      - {
+          label: "Image Alt Text",
+          name: "imageAlt",
+          widget: "string",
+          i18n: true,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          i18n: true,
+        }
+      - label: "Buttons"
+        name: "buttons"
+        widget: "list"
+        i18n: true
+        fields:
+          - { label: "Text", name: "text", widget: "string", i18n: true }
+          - { label: "URL", name: "url", widget: "string", i18n: duplicate }
+          - {
+              label: "Type",
+              name: "type",
+              widget: "select",
+              options: ["primary", "secondary"],
+              i18n: duplicate,
+            }
+      - {
+          label: "Image Position",
+          name: "imagePosition",
+          widget: "select",
+          options: ["left", "right"],
+          i18n: duplicate,
+        }
+
+  - name: "news"
+    label: "News"
+    folder: "content/_news/"
+    i18n: true
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    description: >
+      Add posts about recent activities, news, and stories related to your mission.
+    fields:
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "news-item",
+        }
+      - {
+          label: "Permalink",
+          name: "permalink",
+          widget: "hidden",
+          default: "/news/{{ page.fileSlug }}/",
+        }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "relation",
+          collection: "authors",
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: "name",
+          required: false,
+          i18n: duplicate,
+        }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - { label: "Image", name: "image", widget: "image", i18n: duplicate }
+
+  - name: "staff"
+    label: "Staff Members"
+    folder: "content/_staff"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - {
+          label: "Order",
+          name: "order",
+          widget: "number",
+          default: 1,
+          value_type: "int",
+          min: 1,
+          step: 1,
+        }
+
+  - name: "events"
+    label: "Events"
+    folder: "content/_events/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    description: >
+      List upcoming events. Make sure to provide all necessary details for attendees.
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Event Date", name: "date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "File", name: "file", widget: "file", required: false }
+
+  - name: "authors"
+    label: "Authors"
+    folder: "content/_authors/"
+    create: true
+    editor:
+      preview: false
+    description: >
+      Create profiles for team members who contribute content. Include their roles, backgrounds, and any relevant expertise.
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "author" }
+      - { label: "Short Name", name: "name", widget: "string" }
+      - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "about_us"
+    label: "About Us"
+    description: >
+      Edit content of your organization's mission, values, and history. Help visitors understand our purpose and goals.
+    files:
+      - label: "About MMF"
+        name: "about_mmf"
+        file: "content/_about_us/about_mmf.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Our History"
+        name: "our_history"
+        file: "content/_about_us/our_history.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "The Employees"
+        name: "the_employees"
+        file: "content/_about_us/the_employees.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Name", name: "name", widget: "string", required: true }
+          - {
+              label: "Position",
+              name: "position",
+              widget: "string",
+              required: true,
+            }
+          - { label: "Bio", name: "bio", widget: "markdown", required: true }
+          - {
+              label: "Cover Image",
+              name: "image",
+              widget: "image",
+              required: true,
+            }
+
+  - name: "support_us"
+    label: "Support Us"
+    description: >
+      Edit how people can donate or support your organization. Include information on the impact of their contributions and ways to get involved.
+    files:
+      - label: "Where We Get Funds From"
+        name: "funds"
+        file: "content/_support_us/funds.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Ways to Support"
+        name: "ways_to_support"
+        file: "content/_support_us/ways_to_support.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Volunteer"
+        name: "volunteer"
+        file: "content/_support_us/volunteer.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - {
+              label: "Opportunities",
+              name: "opportunities",
+              widget: "list",
+              fields:
+                [
+                  { label: "Role", name: "role", widget: "string" },
+                  {
+                    label: "Description",
+                    name: "description",
+                    widget: "markdown",
+                  },
+                  {
+                    label: "Requirements",
+                    name: "requirements",
+                    widget: "text",
+                  },
+                ],
+            }
+          - {
+              label: "Application Link",
+              name: "application_link",
+              widget: "string",
+            }
+
+  - name: "contact_us"
+    label: "Contact Us"
+    folder: "content/_contact_us"
+    create: true
+    description: >
+      Edit essential contact details and a form for inquiries. Ensure visitors know how to reach you for questions or support.
+    fields:
+      - {
+          label: "Role",
+          name: "role",
+          widget: "string",
+          required: true,
+          hint: "Example: Leader Madagascar",
+        }
+      - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "Email", name: "email", widget: "string", required: true }
+      - { label: "Phone Number", name: "phone_number", widget: "string" }
+
+  - name: "our_work"
+    label: "Our Work"
+    description: >
+      Edit the projects and initiatives you are currently working on.
+    files:
+      - label: "Health Care"
+        name: "health_care"
+        file: "content/_our_work/health_care.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Schooling"
+        name: "schooling"
+        file: "content/_our_work/schooling.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "The Housing Situation"
+        name: "housing_situation"
+        file: "content/_our_work/housing_situation.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Nutrition"
+        name: "nutrition"
+        file: "content/_our_work/nutrition.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Music Lessons"
+        name: "music_lessons"
+        file: "content/_our_work/music_lessons.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Cooperation with the Children"
+        name: "cooperation_children"
+        file: "content/_our_work/cooperation_children.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Activities"
+        name: "activities"
+        file: "content/_our_work/activities.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+      - label: "Goals for the Future"
+        name: "future_goals"
+        file: "content/_our_work/future_goals.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+
+  - name: "gallery"
+    label: "Gallery"
+    create: false
+    description: >
+      Upload photos and videos from our events and projects. Use this space to visually share our story and impact. These images will be shown in the carousel.
+    files:
+      - label: "Gallery"
+        name: "gallery"
+        file: "content/_gallery/gallery.md"
+        fields:
+          - {
+              label: "Images",
+              name: "images",
+              widget: "image",
+              choose_url: true,
+              media_library: { config: { multiple: true, max_files: 999 } },
+            }

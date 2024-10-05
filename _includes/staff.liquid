@@ -1,0 +1,14 @@
+<section class="flex flex-col items-center justify-center my-[100px]">
+  <h2 class="font-justAnotherHand text-[110px] mb-7">Our staff</h2>
+  {% assign sorted_staff = collections.staff | sort: "data.order" %}
+  {% for member in sorted_staff %}
+    <div class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden {% if not forloop.first %}{% if forloop.last %}mt-20{% else %}my-20{% endif %}{% endif %}">
+      <div class="flex items-center justify-center w-[340px] h-[340px] bg-cover bg-bottom rounded-l-lg" style="background-image: url('{{ member.data.image }}');"></div>
+      <div class="w-[636px] p-6 flex flex-col justify-center gap-2">
+        <p class="font-sans text-base uppercase">{{ member.data.position }}</p>
+        <p class="font-sans text-[32px] font-semibold">{{ member.data.name }}</p>
+        <p class="font-sans text-lg">{{ member.data.bio }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</section>

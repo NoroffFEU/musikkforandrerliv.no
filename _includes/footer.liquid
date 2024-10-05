@@ -1,0 +1,76 @@
+<section class="bg-sunset-red py-16">
+  <div class="w-full text-center">
+    <h3 class="text-2xl font-semibold mb-6">
+      Subscribe to our newsletter!
+    </h3>
+    <p class="mb-6">
+      Join our newsletter today to, stay updated on our events and  
+      projects!
+    </p>
+    <div class="max-w-[452px] mx-auto">
+      <form
+        action="#"
+        method="POST"
+        class="flex justify-center items-center gap-5">
+        <input
+          type="email"
+          name="email"
+          placeholder="example@example.com"
+          class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md" />
+        <button type="submit" class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px]">
+          Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
+  <div class="flex justify-between">
+    <div class="flex flex-col justify-between gap-10 md:flex-row xl:ml-10">
+      <a href="/">
+        <img
+          src="/assets/images/SVGs/headerLogo.svg"
+          alt="The logo for MFL"
+          class="w-[170px] md:w-[200px] md:-mt-10 pt-20 xl:w-[350px]">
+      </a>
+
+      <div class="flex flex-col md:flex-row md:gap-10 md:text-sm md:ml-6 md:mt-14 lg:text-xl lg:mt-10 lg:gap-14 lg:ml-28 mt-4 xl:text-3xl xl:ml-40 xl:mt-28">
+        <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
+          <a href="/about">About Us</a>
+          <a href="/news">News</a>
+          <a href="/events">Events</a>
+        </div>
+        <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
+          <a href="/gallery">Gallery</a>
+          <a href="/our-work">Our work</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <!-- button for sm screen -->
+        <a class="alt-button uppercase font-sans text-2xl px-10 md:hidden" href="/support">donate</a>
+      <!-- button for sm screen -->
+      </div>
+    </div>
+    <div>
+      <!-- button for md screen -->
+      <a class="alt-button uppercase font-sans text-2xl px-10 hidden md:block md:mr-4 md:my-10 lg:mr-4 xl:mr-24 xl:text-3xl xl:mt-28" href="/support">donate</a>
+      <!-- button for md screen -->
+      <p class="uppercase font-bold mt-24 text-2xl md:ml-4 lg:mt-9 xl:ml-8 xl:mt-10">follow us</p>
+      <div class="flex gap-2 mt-4 w-14 justify-between lg:ml-4 lg:mt-0 lg:gap-0 lg:pl-4">
+        <a href="https://www.facebook.com/musicchangeslivesMadagascar" class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2 xl:ml-4">
+          <!-- Facebook SVG -->
+        </a>
+        <a href="https://www.instagram.com/musikkforandrerliv/" class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2">
+          <!-- Instagram SVG -->
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="flex font-semibold underline justify-center gap-x-12 mt-32">
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms-and-conditions">Terms and Conditions</a>
+  </div>
+  <div class="flex justify-center p-6">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}
+  </div>
+</footer>

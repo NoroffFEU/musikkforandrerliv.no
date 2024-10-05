@@ -1,0 +1,26 @@
+{% assign news_items = collections.news | getNewsByLang: "en" | sort: "data.date" | reverse %}
+{% for news in news_items %}
+  <section class="flex gap-10 justify-center pb-14">
+    <div>
+      <img
+        class="w-[550px] h-[600px] object-cover"
+        src="{{ news.data.image }}"
+        alt="{{ news.data.title }}" />
+    </div>
+    <div class="text-lg w-[600px]">
+      <h2 class="capitalize text-[70px] font-justAnotherHand py-4">
+        {{ news.data.title }}
+      </h2>
+      <h3 class="text-[25px] pt-10 pb-4">{{ news.data.date | date: "%B %d, %Y" }}</h3>
+      {% assign paragraphs = news.content | split: '</p>' %}
+      {% for paragraph in paragraphs limit: 3 %}
+        {{ paragraph | append: '</p>' }}
+      {% endfor %}
+      {% if news.data.author %}
+        <p class="text-[#CCCCCC] pt-2 pb-6">-written by {{ news.data.author }}-</p>
+      {% endif %}
+      <a class="uppercase text-xl font-semibold py-2 px-4 bg-[#F5F5F5] font-justAnotherHand rounded-xl" href="/news/{{ news.fileSlug }}/">Read      
+      more</a>
+    </div>
+  </section>
+{% endfor %}

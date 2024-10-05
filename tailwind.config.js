@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*.html", "./pages/*.html"],
+  content: [
+    "./_includes/**/*.{html,js,liquid}",
+    "./_layouts/**/*.{html,js,liquid}",
+    "./*.liquid",
+  ],
   theme: {
     colors: {
       "sunset-red": "#EE6352",

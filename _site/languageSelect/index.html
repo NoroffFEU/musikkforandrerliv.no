@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>Switching the language of web page using JavaScript</h2>
+   <div id = "text1"> This is a sample content </div>
+   <div id = "language"> English </div>
+   <div id = "languageSwitcher">
+      <button onclick = "swithcLang('en')"> English </button>
+      <button onclick = "swithcLang('fr')"> French </button>
+      <button onclick = "swithcLang('es')"> Spanish </button>
+   </div>
+   <script>
+      let languageContent = {
+         "en": {
+            "text1": "This is a sample content",
+            "language": "English",
+         },
+         "fr": {
+            "text1": "Ceci est un contenu d'exemple",
+            "language": "Français",
+         },
+         "es": {
+            "text1": "Este es un contenido de ejemplo",
+            "language": "Español",
+         }
+      }
+      function swithcLang(lang) {
+         for (let key in languageContent[lang]) {
+            document.getElementById(key).innerHTML = languageContent[lang][key];
+         }
+      }
+   </script>    
+</body>
+</html>

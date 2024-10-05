@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "dev": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
-    "build": "npx tailwindcss -o ./css/styles.css --minify"
+    "tw:dev": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "tw:build": "npx tailwindcss -o ./css/styles.css --minify",
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "tailwindcss": "^3.4.12"
   },
   "dependencies": {
+    "js-yaml": "^4.1.0",
     "netlify-cms-app": "^2.15.72"
   }
 }

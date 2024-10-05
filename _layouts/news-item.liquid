@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="flex flex-col items-center mx-auto mt-20">
+  <div class="mx-20 flex flex-col items-center max-w-[1200px] size-full gap-10">
+    <h1 class="w-[1000px] font-justAnotherHand text-[70px] -mb-5">
+      {{ title }}
+    </h1>
+    <p class="w-[1000px] font-inter text-xl">
+      {{ subtitle }}
+    </p>
+    <p class="w-[1000px] text-3xl">
+      <span class="font-semibold">{{ date | date: "%B %d, %Y" }},</span>
+      {{ excerpt }}
+    </p>
+    <div class="w-[1000px] h-[413px]">
+      <img
+        class="w-full h-full object-cover"
+        src="{{ image }}"
+        alt="{{ imageAlt }}" />
+    </div>
+    <div class="w-[1000px]">
+      {{ content }}
+    </div>
+  </div>
+</section>

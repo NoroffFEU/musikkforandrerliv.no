@@ -1,0 +1,63 @@
+<section id="events" class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal my-10">
+  <!-- Events -->
+  <div class="row-span-1 col-span-5">
+    <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
+    <ol class="js-event-list grid gap-5 text-2xl [&_li]:bg-light-red [&_a]:pl-4 [&_li]:py-[3.5px] [&_li]:w-full">
+      {% assign sorted_events = collections.events | sort: 'data.date' %}
+      {% for event in sorted_events %}
+        <li>
+          <a href="{{ event.url }}">
+            {{ event.data.date | date: "%B %d, %Y" }} - {{ event.data.title }} ({{ event.data.location }})
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <!-- Calendar -->
+  <div class="calendar-container bg-white absolute top-0 right-0 w-[400px] h-[400px] border border-sunset-red rounded-[30px] shadow-md font-inter">
+    <header class="calendar-header flex items-center pt-6 px-7 pb-2.5">
+      <div class="calendar-navigation flex items-center justify-between w-full px-10">
+        <span id="calendar-prev" class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
+          chevron_left
+        </span>
+        <p class="calendar-current-date font-medium"></p>
+        <span id="calendar-next" class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
+          chevron_right
+        </span>
+      </div>
+    </header>
+    <div class="calendar-body p-5 [&_li]:w-[14%] [&_*]:cursor-default">
+      <ul class="calendar-weekdays list-none flex flex-wrap text-center w-full [&>*]:mb-5">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="calendar-dates [&>li]:relative [&>*]:mb-5 flex flex-wrap text-center [&>li.inactive]:text-[#aaa] [&>li]:z-10 [&>li.active]:text-white [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-z-10 [&>li]:before:w-[40px] [&>li]:before:h-[40px] [&>li]:before:top-[50%] [&>li]:before:left-[50%] [&>li]:before:rounded-lg [&>li]:before:-translate-x-[50%] translate [&>li]:before:-translate-y-[50%] [&>li.active]:before:bg-sunset-red hover:[&>li:not(.active)]:before:bg-sunset-red hover:[&>li:not(.active)]:text-white [&>li.event]:before:border"></ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const eventDates = [
+      {% for event in collections.events %}
+        {
+          date: new Date("{{ event.data.date | date: '%Y-%m-%d' }}"),
+          title: "{{ event.data.title | escape }}",
+          location: "{{ event.data.location | escape }}",
+          url: "{{ event.url }}",
+          {% if event.data.image %}image: "{{ event.data.image }}",{% endif %}
+          {% if event.data.file %}file: "{{ event.data.file }}",{% endif %}
+        },
+      {% endfor %}
+    ];
+
+    // Your existing calendar JavaScript code here
+    // Make sure to modify it to use the eventDates array to highlight event dates
+  });
+</script>
