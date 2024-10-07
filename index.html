@@ -196,151 +196,175 @@
     <main>
       <!-- Section 1  -->
       <section
-        class="bg-[url('../assets/placeholder-images/IMG_3779.webp')] h-screen bg-cover bg-center flex flex-col justify-end items-center"
+        class="bg-[url('../assets/placeholder-images/IMG_3779.webp')] h-screen bg-cover bg-center xl:bg-[center_bottom_60%] flex flex-col justify-end items-center relative"
       >
-        <div class="flex flex-col text-center mb-16 gap-7">
-          <h1 class="font-justAnotherHand text-white text-8xl">
+        <!-- Overlay for dark effect -->
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+
+        <div class="flex flex-col text-center mb-12 gap-6 z-10">
+          <h1
+            class="font-justAnotherHand text-white text-7xl xl:text-9xl tracking-wide"
+          >
             MOZIKA MANOVA FIAINANA
           </h1>
 
-          <h2 class="font-sans text-white text-3xl">
+          <h2
+            class="font-justAnotherHand text-white text-4xl xl:text-6xl tracking-wide break-words"
+          >
             MUSIKK FORANDRER LIV - MUSIC CHANGES LIVES
           </h2>
         </div>
       </section>
       <!-- End Section 1-->
       <!--Main Content Section 2-->
-      <div id="history" class="flex justify-center my-[100px]">
+      <div id="history" class="flex justify-center px-3 my-10">
         <div class="max-w-[960px] flex flex-col items-center">
-          <h2 class="text-center text-6xl mb-6">History of MMF</h2>
-          <div class="max-h-20 overflow-hidden">
-            <p class="text-center text-lg">
-              The MMF's journey began in a modest community center, equipped
-              with little more than a handful of instruments and a burning
-              passion to make a difference. Early on, the Foundation focused on
-              providing free music lessons to children in the local community,
-              often reaching out to those in under served neighborhoods where
-              music education was considered a luxury far beyond reach. The
-              curriculum, crafted with care and expertise, was not merely about
-              teaching notes and rhythms; it was about instilling confidence,
-              fostering creativity, and building a sense of community among
-              young learners. written by Chat GPT -
+          <h2
+            class="text-center text-8xl my-8 font-justAnotherHand tracking-wide"
+          >
+            History of MMF
+          </h2>
+          <div class="px-3">
+            <p class="text-center text-base font-sans leading-relaxed">
+              MMF was officially founded in Antsirabe, Madagascar, in 2021 by
+              Eline Rodvelt Hansen and her husband Dina Rasalina Andriamanalina.
+              The history of MMF dates back to 2018 when Eline packed two
+              violins and traveled expectantly to Madagascar. While studying the
+              violin at the Grieg Academy in Bergen, she had a strong desire to
+              teach children who otherwise would not have the opportunity to
+              develop their talents. Her dream eventually became to start a
+              music school for the poorest children in Madagascar.
             </p>
           </div>
-          <button class="reg-button my-10 bg-primary-green text-white">
-            Read More
-          </button>
-          <div class="max-h-[576px] overflow-hidden">
+          <div class="max-h-[960px] overflow-hidden px-3 my-3">
             <img
               src="/assets/placeholder-images/IMG_4130.webp"
               alt="Images of three children"
             />
           </div>
+          <button class="reg-button my-10 text-lg">Read More</button>
         </div>
       </div>
       <!--End Main Content Section 2-->
       <!-- Main Content Section 3 -->
-      <section class="flex flex-col items-center justify-center my-[100px]">
-        <h2 class="font-justAnotherHand text-[110px] mb-7">Our staff</h2>
-        <!--Card 1-->
-        <div
-          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
+      <section
+        class="flex flex-col items-center justify-center my-[100px] px-4 md:px-10"
+      >
+        <h2
+          class="font-justAnotherHand text-[48px] md:text-[80px] xl:text-[110px] mb-7"
         >
+          Our staff
+        </h2>
+        <!-- Card 1 -->
+        <a href="#" class="w-full lg:w-[960px] mb-10">
           <div
-            class="flex items-center justify-center w-[340px] h-[340px] bg-cover bg-bottom rounded-l-lg"
-            style="
-              background-image: url('./assets/placeholder-images/IMG_7511.webp');
-            "
-          ></div>
-          <div class="w-[636px] p-6 flex flex-col justify-center gap-2">
-            <p class="font-sans text-base uppercase">Violin Teacher</p>
-            <p class="font-sans text-[32px] font-semibold">
-              Eline Rodvelt Hansen
-            </p>
-            <p class="font-sans text-lg">
-              Eline is a violinist and violin teacher, educated at the Grieg
-              Academy in Bergen. Originally from Sandnes in Rogaland, she has
-              traveled extensively around the world, playing with musicians on
-              several continents and in various genres.
-            </p>
+            class="flex flex-col md:flex-row w-full h-auto md:h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
+          >
+            <div
+              class="flex items-center justify-center w-full md:w-[340px] h-[240px] md:h-[340px] bg-cover bg-center rounded-l-lg"
+              style="
+                background-image: url('./assets/placeholder-images/IMG_7511.webp');
+              "
+            ></div>
+            <div
+              class="w-full md:w-[636px] p-6 flex flex-col justify-center gap-2"
+            >
+              <p class="font-sans text-sm md:text-base uppercase">
+                Violin Teacher
+              </p>
+              <p class="font-sans text-2xl md:text-[32px] font-semibold py-3">
+                Eline Rodvelt Hansen
+              </p>
+              <p class="font-sans text-sm md:text-lg">
+                Eline is a violinist and violin teacher, educated at the Grieg
+                Academy in Bergen. Originally from Sandnes in Rogaland, she...
+              </p>
+            </div>
           </div>
-        </div>
-        <!--Card 1 end-->
-        <!--Card 2-->
-        <div
-          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden my-20"
-        >
+        </a>
+        <!-- Card 2 -->
+        <a href="#" class="w-full lg:w-[960px] mb-10">
           <div
-            class="flex items-center pb-6 bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
-            style="
-              background-image: url('./assets/placeholder-images/IMG_3078.webp');
-            "
-          ></div>
-          <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
-            <p class="font-sans text-base uppercase">Piano Teacher</p>
-            <p class="font-sans text-[32px] font-semibold">
-              Dina Rasalina Andriamanalina
-            </p>
-            <p class="flex-1 h-[167px] font-sans text-lg">
-              Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021.
-              Originally from Antsirabe, Madagascar, Dina has rhythm and music
-              in his blood, having played many instruments since childhood.
-              However, it was eventually the piano that became his dominant
-              instrument.
-            </p>
+            class="flex flex-col md:flex-row w-full h-auto md:h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
+          >
+            <div
+              class="flex items-center justify-center w-full md:w-[340px] h-[240px] md:h-[340px] bg-cover bg-center rounded-l-lg"
+              style="
+                background-image: url('./assets/placeholder-images/IMG_3078.webp');
+              "
+            ></div>
+            <div
+              class="w-full md:w-[636px] p-6 flex flex-col justify-center gap-1"
+            >
+              <p class="font-sans text-sm md:text-base uppercase">
+                Piano Teacher
+              </p>
+              <p class="font-sans text-2xl md:text-[32px] font-semibold py-3">
+                Dina Rasalina Andriamanalina
+              </p>
+              <p class="font-sans text-sm md:text-lg">
+                Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in
+                2021. Originally from Antsirabe, Madagascar, Dina has rhythm
+                and...
+              </p>
+            </div>
           </div>
-        </div>
-        <!--Card 2 end-->
-        <!--Card 3-->
-        <div
-          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
-        >
+        </a>
+        <!-- Card 3 -->
+        <a href="#" class="w-full lg:w-[960px] mb-10">
           <div
-            class="flex items-center justify-center bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
-            style="
-              background-image: url('./assets/placeholder-images/IMG_7544.webp');
-            "
-          ></div>
-          <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
-            <p class="font-sans text-base uppercase">Nurse</p>
-            <p class="font-sans text-[32px] font-semibold">
-              Karoline Hartvigsen
-            </p>
-            <p class="h-[123px] flex-1 font-sans text-lg">
-              Karoline completed her nursing education in 2017 and now works
-              full-time at a cancer ward at Radiumhospitalet in Oslo. Before her
-              bachelor's studies, she completed a one-year study in
-              intercultural understanding at NLA University College Bergen.
-            </p>
+            class="flex flex-col md:flex-row w-full h-auto md:h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
+          >
+            <div
+              class="flex items-center justify-center w-full md:w-[340px] h-[240px] md:h-[340px] bg-cover bg-center rounded-l-lg"
+              style="
+                background-image: url('./assets/placeholder-images/IMG_7544.webp');
+              "
+            ></div>
+            <div
+              class="w-full md:w-[636px] p-6 flex flex-col justify-center gap-1"
+            >
+              <p class="font-sans text-sm md:text-base uppercase">Nurse</p>
+              <p class="font-sans text-2xl md:text-[32px] font-semibold py-3">
+                Karoline Hartvigsen
+              </p>
+              <p class="font-sans text-sm md:text-lg">
+                Karoline completed her nursing education in 2017 and now works
+                full-time at a cancer ward at Radiumhospitalet in...
+              </p>
+            </div>
           </div>
-        </div>
-        <!--Card 3 end-->
-        <!--Card 4-->
-        <div
-          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden mt-20"
-        >
+        </a>
+        <!-- Card 4 -->
+        <a href="#" class="w-full lg:w-[960px]">
           <div
-            class="flex items-center bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
-            style="
-              background-image: url('./assets/placeholder-images/IMG_3597.webp');
-            "
-          ></div>
-          <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
-            <p class="font-sans text-base uppercase">Nurse</p>
-            <p class="font-sans text-[32px] font-semibold">Thea Harbo</p>
-            <p class="flex-1 font-sans text-lg">
-              Thea completed her bachelor's degree in nursing in 2017 at
-              Diakonova University College in Oslo. She lived there for 9 years
-              before moving back to her hometown, Stavanger. She has work
-              experience from home nursing care, several years in a pediatric
-              ward at Rikshospitalet.
-            </p>
+            class="flex flex-col md:flex-row w-full h-auto md:h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
+          >
+            <div
+              class="flex items-center justify-center w-full md:w-[340px] h-[240px] md:h-[340px] bg-cover bg-center rounded-l-lg"
+              style="
+                background-image: url('./assets/placeholder-images/IMG_3597.webp');
+              "
+            ></div>
+            <div
+              class="w-full md:w-[636px] p-6 flex flex-col justify-center gap-1"
+            >
+              <p class="font-sans text-sm md:text-base uppercase">Nurse</p>
+              <p class="font-sans text-2xl md:text-[32px] font-semibold py-3">
+                Thea Harbo
+              </p>
+              <p class="font-sans text-sm md:text-lg">
+                Thea completed her bachelor's degree in nursing in 2017 at
+                Diakonova University College. in Oslo. She lived there for 9
+                years before...
+              </p>
+            </div>
           </div>
-        </div>
-        <!--Card 4 end-->
+        </a>
       </section>
       <!-- End Main Content Section 3-->
       <!-- Main Content Section 4 -->
+
       <section class="w-full flex flex-col items-center justify-center">
         <!-- Card 1 -->
         <div class="w-full flex justify-center bg-mint-green overflow-hidden">
@@ -376,10 +400,12 @@
                 <button class="uppercase reg-button text-lg hidden md:flex">
                   Read more
                 </button>
+
               </div>
             </div>
           </div>
         </div>
+
         <!-- Card 1 end -->
         <!-- Card 2 -->
         <div class="w-full flex justify-center overflow-hidden">
@@ -400,6 +426,7 @@
                   class="text-3xl tracking-wide font-sans font-semibold leading-relaxed"
                 >
                   Volunteer
+
                 </h3>
                 <i
                   class="fa-solid fa-angle-right fa-xl text-sunset-red flex md:invisible"
@@ -443,6 +470,7 @@
               <div class="flex justify-between items-center">
                 <h3
                   class="text-3xl tracking-wide font-sans font-semibold leading-relaxed"
+
                 >
                   Support Us
                 </h3>
