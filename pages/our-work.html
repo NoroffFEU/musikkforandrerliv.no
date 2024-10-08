@@ -1,761 +1,1145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn more about our work with healthcare, education, the living situation, food distribution, music lessons and our future goals."
+    />
+    <title>Our Work</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer type="module" src="/js/ourWork.mjs"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Learn more about our work with healthcare, education, the living situation, food distribution, music lessons and our future goals." />
-  <title>Our Work</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script defer type="module" src="/js/ourWork.mjs"></script>
+    <script type="module" src="../js/search.mjs"></script>
+  </head>
 
-  <script type="module" src="../js/search.mjs"></script>
-
-</head>
-
-<body>
-
-  <header class="bg-ourWorkHeroImage bg-cover bg-center h-screen flex flex-col relative">
-    <!-- Section 1 here - had to work in the header due to hero img -->
-    <div class="flex h-24 items-center justify-between px-10 pt-16">
-      <!-- Had to change mt-6 to pt-16 to remove top margin to fill the hero img, and to try to keep the vertical alignment of the header like it was -->
-      <div class="flex flex-row items-center gap-10 text-base">
-        <a href="../index.html">
-          <img src="../assets/images/SVGs/headerLogo.svg" aria-label="Header Logo" alt="Header Logo"
-            class="cursor-pointer w-20 h-20" />
-        </a>
-      </div>
-      <nav class="flex flex-row items-center gap-10">
-        <button id="openSearchBarDrawer"
-          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform">
-          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-          <img src="../assets/images/SVGs/Search.svg" class="w-5 h-5 -mr-1" aria-label="Search Button"
-            alt="Search Button" />
-          <span class="text-2xl font-medium">Search</span>
-        </button>
-        <!-- Search Bar Overlay, hidden initially. -->
-        <div id="search-drawer-from-header"
-          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
-          aria-label="search-bar">
-          <h2 id="search-label" class="sr-only">Search Bar</h2>
-          <div class="flex justify-center items-center pt-3">
-            <div class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center">
-              <form class="flex flex-grow">
-                <label for="Search-Drawer" class="sr-only">Search Site</label>
-                <input type="search" class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-                  id="Search-Drawer" placeholder="Search..." autocomplete="off" />
-                <button type="submit" class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center">
-                  <img src="../assets/images/SVGs/Search.svg" class="w-4 h-4" aria-label="Search Now Button"
-                    alt="Search Now Button" />
-                </button>
-              </form>
+  <body>
+    <header
+      class="bg-ourWorkHeroImage bg-cover bg-center h-screen flex flex-col relative"
+    >
+      <!-- Section 1 here - had to work in the header due to hero img -->
+      <div class="flex h-24 items-center justify-between px-10 pt-16">
+        <!-- Had to change mt-6 to pt-16 to remove top margin to fill the hero img, and to try to keep the vertical alignment of the header like it was -->
+        <div class="flex flex-row items-center gap-10 text-base">
+          <a href="../index.html">
+            <img
+              src="../assets/images/SVGs/headerLogo.svg"
+              aria-label="Header Logo"
+              alt="Header Logo"
+              class="cursor-pointer w-20 h-20"
+            />
+          </a>
+        </div>
+        <nav class="flex flex-row items-center gap-10">
+          <button
+            id="openSearchBarDrawer"
+            class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+          >
+            <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+            <img
+              src="../assets/images/SVGs/Search.svg"
+              class="w-5 h-5 -mr-1"
+              aria-label="Search Button"
+              alt="Search Button"
+            />
+            <span class="text-2xl font-medium">Search</span>
+          </button>
+          <!-- Search Bar Overlay, hidden initially. -->
+          <div
+            id="search-drawer-from-header"
+            class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
+            aria-label="search-bar"
+          >
+            <h2 id="search-label" class="sr-only">Search Bar</h2>
+            <div class="flex justify-center items-center pt-3">
+              <div
+                class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+              >
+                <form class="flex flex-grow">
+                  <label for="Search-Drawer" class="sr-only">Search Site</label>
+                  <input
+                    type="search"
+                    class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                    id="Search-Drawer"
+                    placeholder="Search..."
+                    autocomplete="off"
+                  />
+                  <button
+                    type="submit"
+                    class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                  >
+                    <img
+                      src="../assets/images/SVGs/Search.svg"
+                      class="w-4 h-4"
+                      aria-label="Search Now Button"
+                      alt="Search Now Button"
+                    />
+                  </button>
+                </form>
+              </div>
+              <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+              <button
+                id="closeSearchBarDrawer"
+                class="search-drawer_close text-sm pr-5"
+              >
+                Close
+              </button>
+              <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
             </div>
-            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-            <button id="closeSearchBarDrawer" class="search-drawer_close text-sm pr-5">
-              Close
-            </button>
-            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
           </div>
-        </div>
-        <a href="./news.html" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">News</a>
-        <a href="./about-page.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">About Us</a>
-        <div class="relative cursor-pointer hover:scale-105 transition-transform">
-          <div class="flex items-center">
-            <span class="text-2xl font-medium">More</span>
-            <img src="../assets/images/SVGs/chevron-down.svg" aria-label="Projects Dropdown Menu"
-              alt="Projects Dropdown Menu" class="ml-3" />
-          </div>
-          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-          <div class="absolute hidden mt-2 bg-white">
-            <a href="#" class="block p-2 border-t border-b border-black hover:bg-gray-100">Project 1</a>
-            <a href="#" class="block p-2 border-b border-black hover:bg-gray-100">Project 2</a>
-          </div>
-        </div>
-        <button
-          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal">
-          DONATE
-        </button>
-        <div class="relative flex w-5 h-5 items-center group" id="language-selector">
-          <img src="../assets/images/SVGs/globe-solid.svg" aria-label="Globe Icon For Language Selection"
-            alt="Language Selection" class="cursor-pointer object-contain h-5 w-5" />
-          <div class="absolute left-0 w-full" id="language-options">
-            <a href="#" class="block">
-              <img src="../assets/images/SVGs/norway.svg" aria-label="Norwegian Flag Language Selection"
-                alt="Norwegian Flag" class="inline h-6 w-8" />
-            </a>
-            <a href="#" class="block">
-              <img src="../assets/images/SVGs/unitedKingdom.svg" aria-label="English Flag Language Selection"
-                alt="English Flag" class="inline h-6 w-8" />
-            </a>
-            <a href="#" class="block">
-              <img src="../assets/images/SVGs/madagascar.svg" aria-label="Malagasy Flag Language Selection"
-                alt="Malagasy Flag" class="inline h-6 w-8" />
-            </a>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-    <h1 class="font-justAnotherHand text-[200px] tracking-widest text-white text-center absolute w-full bottom-20">Our
-      work</h1>
-    <div id="hero-buttons" class="flex items-center justify-center gap-16 absolute text-center w-full bottom-6">
-      <button class="health our-work-hero-button flex flex-col items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="38" viewBox="0 0 41 38" fill="none">
-          <g clip-path="url(#clip0_146_1604)">
-            <path
-              d="M21.6403 0.890234C20.9484 0.369922 20.0516 0.369922 19.3597 0.890234L10.6536 7.4375H3.075C1.37734 7.4375 0 8.99121 0 10.9062V34.0312C0 35.9463 1.37734 37.5 3.075 37.5H16.4V30.5625C16.4 28.0115 18.2386 25.9375 20.5 25.9375C22.7614 25.9375 24.6 28.0115 24.6 30.5625V37.5H37.925C39.6227 37.5 41 35.9463 41 34.0312V10.9062C41 8.99121 39.6227 7.4375 37.925 7.4375H30.3464L21.6403 0.890234ZM6.15 14.375H8.2C8.76375 14.375 9.225 14.8953 9.225 15.5312V20.1562C9.225 20.7922 8.76375 21.3125 8.2 21.3125H6.15C5.58625 21.3125 5.125 20.7922 5.125 20.1562V15.5312C5.125 14.8953 5.58625 14.375 6.15 14.375ZM31.775 15.5312C31.775 14.8953 32.2363 14.375 32.8 14.375H34.85C35.4137 14.375 35.875 14.8953 35.875 15.5312V20.1562C35.875 20.7922 35.4137 21.3125 34.85 21.3125H32.8C32.2363 21.3125 31.775 20.7922 31.775 20.1562V15.5312ZM6.15 23.625H8.2C8.76375 23.625 9.225 24.1453 9.225 24.7812V29.4062C9.225 30.0422 8.76375 30.5625 8.2 30.5625H6.15C5.58625 30.5625 5.125 30.0422 5.125 29.4062V24.7812C5.125 24.1453 5.58625 23.625 6.15 23.625ZM31.775 24.7812C31.775 24.1453 32.2363 23.625 32.8 23.625H34.85C35.4137 23.625 35.875 24.1453 35.875 24.7812V29.4062C35.875 30.0422 35.4137 30.5625 34.85 30.5625H32.8C32.2363 30.5625 31.775 30.0422 31.775 29.4062V24.7812ZM14.8625 13.2188C14.8625 11.5321 15.4564 9.91461 16.5137 8.72199C17.5709 7.52938 19.0048 6.85938 20.5 6.85938C21.9952 6.85938 23.4291 7.52938 24.4863 8.72199C25.5436 9.91461 26.1375 11.5321 26.1375 13.2188C26.1375 14.9054 25.5436 16.5229 24.4863 17.7155C23.4291 18.9081 21.9952 19.5781 20.5 19.5781C19.0048 19.5781 17.5709 18.9081 16.5137 17.7155C15.4564 16.5229 14.8625 14.9054 14.8625 13.2188ZM20.5 9.75C19.9363 9.75 19.475 10.2703 19.475 10.9062V13.2188C19.475 13.8547 19.9363 14.375 20.5 14.375H22.55C23.1138 14.375 23.575 13.8547 23.575 13.2188C23.575 12.5828 23.1138 12.0625 22.55 12.0625H21.525V10.9062C21.525 10.2703 21.0637 9.75 20.5 9.75Z"
-              fill="#F8EED1" />
-          </g>
-          <defs>
-            <clipPath id="clip0_146_1604">
-              <rect width="41" height="37" fill="white" transform="translate(0 0.5)" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="pt-1">Healthcare</p>
-      </button>
-      <button class="edu our-work-hero-button flex flex-col items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="39" viewBox="0 0 49 39" fill="none">
-          <g clip-path="url(#clip0_146_1610)">
-            <path
-              d="M24.5002 2.875C23.8927 2.875 23.2927 2.97891 22.7227 3.1793L1.68518 10.6977C0.972678 10.9574 0.500178 11.6254 0.500178 12.375C0.500178 13.1246 0.972678 13.7926 1.68518 14.0523L6.02768 15.6035C4.79768 17.5184 4.10018 19.782 4.10018 22.1645V24.25C4.10018 26.3578 3.29018 28.5324 2.42768 30.2469C1.94018 31.2117 1.38518 32.1617 0.740178 33.0375C0.500178 33.3566 0.432678 33.7723 0.567678 34.1508C0.702678 34.5293 1.01768 34.8113 1.40768 34.9078L6.20768 36.0953C6.52268 36.177 6.86018 36.1176 7.13768 35.9469C7.41518 35.7762 7.61018 35.4941 7.67018 35.175C8.31518 31.9984 7.99268 29.1484 7.51268 27.1074C7.27268 26.0535 6.95018 24.9773 6.50018 23.9902V22.1645C6.50018 19.923 7.26518 17.8078 8.59268 16.1156C9.56018 14.9652 10.8127 14.0375 12.2827 13.466L24.0577 8.88672C24.6727 8.64922 25.3702 8.94609 25.6102 9.55469C25.8502 10.1633 25.5502 10.8535 24.9352 11.091L13.1602 15.6703C12.2302 16.034 11.4127 16.5906 10.7452 17.2734L22.7152 21.5484C23.2852 21.7488 23.8852 21.8527 24.4927 21.8527C25.1002 21.8527 25.7002 21.7488 26.2702 21.5484L47.3152 14.0523C48.0277 13.8 48.5002 13.1246 48.5002 12.375C48.5002 11.6254 48.0277 10.9574 47.3152 10.6977L26.2777 3.1793C25.7077 2.97891 25.1077 2.875 24.5002 2.875ZM10.1002 30.7812C10.1002 33.4012 16.5502 36.125 24.5002 36.125C32.4502 36.125 38.9002 33.4012 38.9002 30.7812L37.7527 19.9898L27.0877 23.8047C26.2552 24.1016 25.3777 24.25 24.5002 24.25C23.6227 24.25 22.7377 24.1016 21.9127 23.8047L11.2477 19.9898L10.1002 30.7812Z"
-              fill="#F8EED1" />
-          </g>
-          <defs>
-            <clipPath id="clip0_146_1610">
-              <rect width="48" height="38" fill="white" transform="translate(0.5 0.5)" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="pt-1">Education</p>
-      </button>
-      <button class="living our-work-hero-button flex flex-col items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 35 36" fill="none">
-          <g clip-path="url(#clip0_146_1615)">
-            <path
-              d="M18.5869 0.787109C17.917 0.404297 17.0898 0.404297 16.4131 0.787109L1.10059 9.53711C0.423828 9.92676 0 10.6514 0 11.4375V33.3125C0 34.5225 0.977539 35.5 2.1875 35.5C3.39746 35.5 4.375 34.5225 4.375 33.3125V12.709L17.5 5.20996L30.625 12.709V33.3125C30.625 34.5225 31.6025 35.5 32.8125 35.5C34.0225 35.5 35 34.5225 35 33.3125V11.4375C35 10.6514 34.5762 9.92676 33.8994 9.53711L18.5869 0.787109ZM17.5 14.7188C18.2252 14.7188 18.9207 14.4307 19.4335 13.9179C19.9463 13.4051 20.2344 12.7096 20.2344 11.9844C20.2344 11.2592 19.9463 10.5637 19.4335 10.0509C18.9207 9.53808 18.2252 9.25 17.5 9.25C16.7748 9.25 16.0793 9.53808 15.5665 10.0509C15.0537 10.5637 14.7656 11.2592 14.7656 11.9844C14.7656 12.7096 15.0537 13.4051 15.5665 13.9179C16.0793 14.4307 16.7748 14.7188 17.5 14.7188ZM16.9531 33.8594V27.8438H18.0469V33.8594C18.0469 34.7686 18.7783 35.5 19.6875 35.5C20.5967 35.5 21.3281 34.7686 21.3281 33.8594V21.9307L23.167 25.3418C23.5977 26.1416 24.5889 26.4355 25.3887 26.0117C26.1885 25.5879 26.4824 24.5898 26.0586 23.79L23.4678 18.9844C22.4219 17.0361 20.3848 15.8193 18.1699 15.8193H16.8301C14.6152 15.8193 12.585 17.0361 11.5322 18.9844L8.94141 23.79C8.51074 24.5898 8.81152 25.5811 9.61133 26.0117C10.4111 26.4424 11.4023 26.1416 11.833 25.3418L13.6719 21.9307V33.8594C13.6719 34.7686 14.4033 35.5 15.3125 35.5C16.2217 35.5 16.9531 34.7686 16.9531 33.8594Z"
-              fill="#F8EED1" />
-          </g>
-          <defs>
-            <clipPath id="clip0_146_1615">
-              <rect width="35" height="35" fill="white" transform="translate(0 0.5)" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="pt-1">Living Situation</p>
-      </button>
-      <button class="food our-work-hero-button flex flex-col items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 32 36" fill="none">
-          <path
-            d="M31.5594 3.29682C32.1469 2.65423 32.1469 1.61514 31.5594 0.979385C30.9719 0.343628 30.022 0.336791 29.4408 0.979385L23.9348 6.98832C23.3473 7.63091 23.3473 8.67 23.9348 9.30576C24.5222 9.94152 25.4722 9.94835 26.0534 9.30576L31.5531 3.28999L31.5594 3.29682ZM19.0913 2.36028C18.7038 1.93644 18.0663 1.93644 17.6788 2.36028L16.9664 3.13276C14.6227 5.6963 14.6227 9.85265 16.9664 12.4162L17.6163 13.1271L15.7102 15.2122C15.4977 13.3459 14.7415 11.5343 13.429 10.0987L12.7228 9.32627C12.3353 8.90243 11.6979 8.90243 11.3104 9.32627L10.6042 10.0987C8.26054 12.6623 8.26054 16.8186 10.6042 19.3822L11.2541 20.0931L9.34798 22.1781C9.13549 20.3119 8.37928 18.5003 7.06684 17.0647L6.36063 16.2854C5.97315 15.8616 5.33568 15.8616 4.9482 16.2854L4.24198 17.0579C1.89834 19.6214 1.89834 23.7778 4.24198 26.3413L4.89195 27.0523L0.585909 31.7624C-0.195303 32.6169 -0.195303 34.0046 0.585909 34.8591C1.36712 35.7136 2.63581 35.7136 3.41702 34.8591L7.72306 30.149L8.48552 30.983C10.8292 33.5466 14.629 33.5466 16.9726 30.983L17.6788 30.2106C18.0663 29.7867 18.0663 29.0894 17.6788 28.6656L16.9726 27.8931C15.6102 26.4029 13.8728 25.562 12.0916 25.3706L14.0853 23.1899L14.8477 24.0239C17.1914 26.5874 20.9912 26.5874 23.3348 24.0239L24.041 23.2514C24.4285 22.8276 24.4285 22.1303 24.041 21.7064L23.3348 20.934C21.9724 19.4437 20.235 18.6029 18.4538 18.4114L20.4474 16.2307L21.2099 17.0647C23.5535 19.6283 27.3534 19.6283 29.697 17.0647L30.4032 16.2854C30.7907 15.8616 30.7907 15.1643 30.4032 14.7405L29.697 13.9611C29.372 13.6057 29.0345 13.2912 28.672 13.0109L31.5594 9.85948C32.1469 9.21689 32.1469 8.1778 31.5594 7.54204C30.9719 6.90629 30.022 6.89945 29.4408 7.54204L25.7284 11.6027C24.441 11.3019 23.1036 11.3498 21.8349 11.7462C22.2161 10.2902 22.2474 8.75204 21.9224 7.28227L25.5597 3.29682C26.1472 2.65423 26.1472 1.61514 25.5597 0.979385C24.9722 0.343628 24.0223 0.336791 23.441 0.979385L20.5662 4.11032C20.3349 3.76852 20.0787 3.44038 19.7912 3.13276L19.0913 2.36028Z"
-            fill="#F8EED1" />
-        </svg>
-        <p class="pt-1">Food Distribution</p>
-      </button>
-      <button class="music our-work-hero-button flex flex-col items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="37" height="38" viewBox="0 0 37 38" fill="none">
-          <g clip-path="url(#clip0_146_1623)">
-            <path
-              d="M36.0678 0.95527C36.6531 1.38886 37 2.08261 37 2.8125V8.01562V27.0937C37 30.2879 33.8926 32.875 30.0625 32.875C26.2324 32.875 23.125 30.2879 23.125 27.0937C23.125 23.8996 26.2324 21.3125 30.0625 21.3125C30.8719 21.3125 31.6523 21.4281 32.375 21.6449V11.123L13.875 16.673V31.7187C13.875 34.9129 10.7676 37.5 6.9375 37.5C3.10742 37.5 0 34.9129 0 31.7187C0 28.5246 3.10742 25.9375 6.9375 25.9375C7.74687 25.9375 8.52734 26.0531 9.25 26.2699V14.9531V9.75C9.25 8.73105 9.92207 7.82773 10.8977 7.53144L34.0227 0.593942C34.7236 0.384371 35.4824 0.51445 36.0678 0.95527Z"
-              fill="#F8EED1" />
-          </g>
-          <defs>
-            <clipPath id="clip0_146_1623">
-              <rect width="37" height="37" fill="white" transform="translate(0 0.5)" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="pt-1">Music Lesson</p>
-      </button>
-      <button class="future our-work-hero-button flex flex-col items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="40" viewBox="0 0 49 40" fill="none">
-          <g clip-path="url(#clip0_146_1629)">
-            <path
-              d="M27.0878 4.62086L25.2809 0.979848C24.9823 0.347621 24.0483 0.324769 23.7191 0.979848L21.9122 4.62086L17.908 5.19215C17.1959 5.29879 16.8897 6.17477 17.418 6.70036L20.3273 9.51872L19.6383 13.4873C19.5311 14.1957 20.2661 14.7441 20.9245 14.4166L24.5153 12.5275L28.0831 14.3861C28.7416 14.7136 29.4842 14.1652 29.3694 13.4568L28.6803 9.48825L31.5897 6.70036C32.1103 6.18239 31.8117 5.30641 31.0997 5.19215L27.0955 4.62086H27.0878ZM19.6 20C18.2448 20 17.15 21.0892 17.15 22.4375V37.0625C17.15 38.4107 18.2448 39.5 19.6 39.5H29.4C30.7552 39.5 31.85 38.4107 31.85 37.0625V22.4375C31.85 21.0892 30.7552 20 29.4 20H19.6ZM2.45 24.875C1.09484 24.875 0 25.9642 0 27.3125V37.0625C0 38.4107 1.09484 39.5 2.45 39.5H12.25C13.6052 39.5 14.7 38.4107 14.7 37.0625V27.3125C14.7 25.9642 13.6052 24.875 12.25 24.875H2.45ZM34.3 32.1875V37.0625C34.3 38.4107 35.3948 39.5 36.75 39.5H46.55C47.9052 39.5 49 38.4107 49 37.0625V32.1875C49 30.8392 47.9052 29.75 46.55 29.75H36.75C35.3948 29.75 34.3 30.8392 34.3 32.1875Z"
-              fill="#F8EED1" />
-          </g>
-          <defs>
-            <clipPath id="clip0_146_1629">
-              <rect width="49" height="39" fill="white" transform="translate(0 0.5)" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="pt-1">Future Goals</p>
-      </button>
-      <button class="activi our-work-hero-button flex flex-col items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="39" viewBox="0 0 38 39" fill="none">
-          <g clip-path="url(#clip0_146_1634)">
-            <path
-              d="M14.25 8.27813C14.25 7.59531 13.8195 6.99414 13.2703 6.58594C12.4094 5.94023 11.875 5.04961 11.875 4.0625C11.875 2.0957 14.0051 0.5 16.625 0.5C19.2449 0.5 21.375 2.0957 21.375 4.0625C21.375 5.04961 20.8406 5.94023 19.9797 6.58594C19.4305 6.99414 19 7.59531 19 8.27813C19 9.22813 19.7719 10 20.7219 10H24.9375C26.9043 10 28.5 11.5957 28.5 13.5625V17.7781C28.5 18.7281 29.2719 19.5 30.2219 19.5C30.9047 19.5 31.5059 19.0695 31.9141 18.5203C32.5598 17.6594 33.4504 17.125 34.4375 17.125C36.4043 17.125 38 19.2551 38 21.875C38 24.4949 36.4043 26.625 34.4375 26.625C33.4504 26.625 32.5598 26.0906 31.9141 25.2297C31.5059 24.6805 30.9047 24.25 30.2219 24.25C29.2719 24.25 28.5 25.0219 28.5 25.9719V34.9375C28.5 36.9043 26.9043 38.5 24.9375 38.5H20.7219C19.7719 38.5 19 37.7281 19 36.7781C19 36.0953 19.4305 35.4941 19.9797 35.0859C20.8406 34.4402 21.375 33.5496 21.375 32.5625C21.375 30.5957 19.2449 29 16.625 29C14.0051 29 11.875 30.5957 11.875 32.5625C11.875 33.5496 12.4094 34.4402 13.2703 35.0859C13.8195 35.4941 14.25 36.0953 14.25 36.7781C14.25 37.7281 13.4781 38.5 12.5281 38.5H3.5625C1.5957 38.5 0 36.9043 0 34.9375V25.9719C0 25.0219 0.771875 24.25 1.72188 24.25C2.40469 24.25 3.00586 24.6805 3.41406 25.2297C4.05977 26.0906 4.95039 26.625 5.9375 26.625C7.9043 26.625 9.5 24.4949 9.5 21.875C9.5 19.2551 7.9043 17.125 5.9375 17.125C4.95039 17.125 4.05977 17.6594 3.41406 18.5203C3.00586 19.0695 2.40469 19.5 1.72188 19.5C0.771875 19.5 0 18.7281 0 17.7781V13.5625C0 11.5957 1.5957 10 3.5625 10H12.5281C13.4781 10 14.25 9.22813 14.25 8.27813Z"
-              fill="#F8EED1" />
-          </g>
-          <defs>
-            <clipPath id="clip0_146_1634">
-              <rect width="38" height="38" fill="white" transform="translate(0 0.5)" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="pt-1">Activites</p>
-      </button>
-    </div>
-  </header>
-  <main>
-
-    <!-- Section 2 -->
-    <section class="mx-[120px] mb-20">
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container">
-        <div class="max-w-[574px] max-h-[576px] overflow-hidden">
-          <img src="/assets/placeholder-images/IMG_5348.webp" aria-label="" alt="" />
-        </div>
-        <div class="text-button-container flex-col">
-          <h2 class="font-sans text-[54px] font-medium">Healthcare</h2>
-          <div class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-health">
-            <p class="scroll-content font-sans text-lg" id="scroll-content">
-              In Madagascar, child mortality is high and many die from diseases
-              that can be easily treated with modern medicine. Typical causes
-              are infectious diseases such as pneumonia, tuberculosis, diarrheal
-              diseases and malaria. The country also has one of the highest
-              incidences of plague in the world, as well as epidemics and
-              pandemics that have otherwise been fought in other countries. Many
-              have a long way to the nearest clinic and/or hospital, and the
-              costs are high. They therefore do not seek help until it is too
-              late. Many of the children we meet on the streets often have major
-              health challenges, and several suffer from severe malnutrition.
-            </p>
-          </div>
-          <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white" id="read-more-btn">READ MORE</button>
-            <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
-        id="section-container-edu">
-        <div class="max-w-[574px] max-h-[576px] overflow-hidden">
-          <img src="/assets/placeholder-images/IMG_3568.webp" aria-label="" alt="" />
-        </div>
-        <div class="text-button-container flex-col">
-          <h2 class="font-sans text-[54px] font-medium">Education</h2>
-          <div class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-edu">
-            <p class="scroll-content font-sans text-lg">
-              Schooling gives children hope for the future. When children lack
-              basic knowledge and skills, they have limited opportunities.
-              Education helps break the cycle of poverty and is a vital tool in
-              combating poverty. The main goal of MMF is for children to become
-              independent adults with their own income in the future. Therefore,
-              it is important to facilitate the success and well-being of
-              children in school. Public schooling in Madagascar is free, but
-              the cost of uniforms, textbooks, stationery, and notebooks is
-              often too high for families. As a result, children are sent out to
-              beg or work to support their families. The children we encounter
-              on the streets have either dropped out of primary school or never
-              had the opportunity to attend school, and they cannot read or
-              write. To succeed in getting these children back to school, we
-              have found it important to prepare them well. We have established
-              a pre-school program where children practice reading and writing,
-              and learn mathematics, Malagasy, and French before starting
-              school. All children in MMF are now attending school or receiving
-              other forms of education. We have a future plan for each child
-              based on their interests. Together, we will help and support them
-              towards their goals. Public schooling in Madagascar is half a day
-              (about 4 hours), and the children come to MMF every day after
-              school to practice instruments and do homework. As many parents
-              cannot read or write themselves, we have introduced homework
-              assistance so that children have a chance to succeed in school. We
-              are experiencing good results with this, and several children have
-              excelled in school. In addition to schooling and education,
-              children also receive English lessons from us. We know that this
-              can potentially help children secure a job in the future. Few
-              Malagasy people speak English, so it is a great advantage for
-              children to learn English. They can then have job opportunities
-              such as being a guide, interpreter, or English teacher.
-              Additionally, it is easier for children to communicate with
-              visitors and volunteers at MMF. Some students need alternative
-              solutions for education for various reasons, and we have some
-              older students who attend vocational training instead of regular
-              school. We are proud that last year we had a student who obtained
-              a tailoring certificate. She now sews school uniforms for the
-              other students among other things.
-            </p>
-          </div>
-          <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white" id="read-more-btn-edu">READ MORE</button>
-            <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-lisi">
-        <div class="max-w-[574px] max-h-[576px] overflow-hidden">
-          <img class="object-cover h-[576px]" src="/assets/placeholder-images/IMG_7331_jpg.webp" aria-label="" alt="" />
-        </div>
-        <div class="text-button-container flex-col">
-          <h2 class="font-sans text-[54px] font-medium">Living Situation</h2>
-          <div class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-lisi">
-            <p class="scroll-content font-sans text-lg">
-              Many of the children we enroll as students in MMF live on the
-              streets when we first meet them. The reason they live on the
-              streets is poverty. These children are left to fend for
-              themselves, and older children often take on the responsibility of
-              caring for younger siblings. Life on the streets is extremely
-              tough, and every day is a struggle for survival. During the day,
-              children spend a lot of energy begging for money and searching for
-              food. As night falls, it's important to find a safe place to sleep
-              for the night. Nights can be cold and dangerous, and the children
-              huddle together to keep warm.
-            </p>
-          </div>
-          <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white" id="read-more-btn-lisi">READ MORE</button>
-            <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
-        id="section-container-food">
-        <div class="max-w-[574px] max-h-[576px] overflow-hidden">
-          <img class="object-cover h-[576px]" src="/assets/placeholder-images/IMG_6433.webp" aria-label="" alt="" />
-        </div>
-        <div class="text-button-container flex-col">
-          <h2 class="font-sans text-[54px] font-medium">Food Distribution</h2>
-          <div class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-food">
-            <p class="scroll-content font-sans text-lg">
-              Despite Madagascar being known for its lush climate, the country
-              has been affected by natural disasters and the worst drought in
-              decades, attributed to climate change. This has resulted in crop
-              failure, leading to food crises and famine. Parents struggle to
-              provide enough food and clean water for their children. When
-              families cannot feed their children, sending them out to beg
-              becomes the only option for survival. Children living on the
-              streets spend a lot of time and energy searching for food scraps
-              and often have to resort to scavenging through others' garbage.
-            </p>
-          </div>
-          <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white" id="read-more-btn-food">READ MORE</button>
-            <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-music">
-        <div class="max-w-[574px] max-h-[576px] overflow-hidden">
-          <img class="object-cover h-[576px]" src="/assets/placeholder-images/IMG_7544.webp" aria-label="" alt="" />
-        </div>
-        <div class="text-button-container flex-col">
-          <h2 class="font-sans text-[54px] font-medium">Music Lessons</h2>
-          <div class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-music">
-            <p class="scroll-content font-sans text-lg">
-              Meeting basic needs is crucial, but we also recognize that
-              children need more. They need motivation, inspiration, joy,
-              something to aspire to, new thoughts, and a belief that something
-              else is possible. This brings us to the essence of the project:
-              music. Studies show that when listening to and learning new music,
-              new brain cells and connections are created. Research also shows
-              that music enhances memory. Parents in MMF observe that their
-              children perform better in school after they start playing an
-              instrument. Collaboration is also particularly valuable, teaching
-              children to cooperate, listen to each other, and express
-              themselves. For us at MMF, quality and professionalism are
-              important. We collaborate with professional musicians who elevate
-              us and take us to a new level. For some children, the instrument
-              becomes the direction in life, bringing forth enthusiasm and joy.
-              Some aspire to become professional musicians and pursue music as a
-              career. Madagascar is a country with a rich musical culture.
-              Perhaps that's why music resonates so well here. Many children
-              have rhythm in their bodies and start dancing as soon as they can
-              stand. Harmonious singing is part of daily life, and we see that
-              children learn quickly. Even though not all children in MMF aim to
-              become professional musicians, music is beneficial for the
-              development of all children. Instruments MMF started with violins.
-              Over time, the music school has evolved to include more
-              instruments in addition to Malagasy folk music, dance, and
-              singing. Currently, students have the opportunity to learn the
-              following instruments at MMF: Violin, viola, cello, double bass,
-              recorder, guitar, piano, flute, and clarinet. Additionally, we
-              have dance groups, choirs, and percussion groups.
-            </p>
-          </div>
-          <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white" id="read-more-btn-music">READ MORE</button>
-            <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
-        id="section-container-futuregoals">
-        <div class="max-w-[574px] max-h-[576px] overflow-hidden">
-          <img class="object-cover h-[576px]" src="/assets/placeholder-images/IMG_7424.webp" aria-label="" alt="" />
-        </div>
-        <div class="text-button-container flex-col">
-          <h2 class="font-sans text-[54px] font-medium">Future Goals</h2>
-          <div class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-futuregoals">
-            <p class="scroll-content font-sans text-lg">
-              One of our goals is to make MMF larger and more well-known so that
-              we can include more children living tough lives on the streets.
-              The main goal is for all children in Antsirabe to have enough
-              food, clothing, experience care, have a safe and good home, attend
-              school, and have the opportunity to develop their talents. It is
-              important for us that the assistance we provide contributes to
-              independence. The goal is for children to attend school and
-              develop their talents so that one day they will become assets in
-              their own communities, find employment, and stand on their own
-              feet. Dream of our own building We are fortunate to have acquired
-              a large plot of land with great potential. Here, we dream of
-              building our own music school with excellent practice rooms, a
-              kitchen and dining hall, a small stage where we can hold concerts
-              for visitors, and a small sewing room with an associated shop.
-              Here, we will also be able to grow our own food used in lunch for
-              the children in the music school. We also want the outdoor areas
-              to be a good place for the children to play between rehearsals and
-              homework. Goals for music education The students practice
-              diligently, and our orchestra is starting to become sought after
-              locally. We already receive performance requests from both the
-              municipality and private individuals. Throughout 2024, we envision
-              focusing even more on performances, now also with smaller
-              ensembles and groups. Performing for others motivates the children
-              to practice, fosters cohesion within the group, and provides
-              valuable work experience for those children who want to pursue
-              music. It also spreads joy in the community. We hope to eventually
-              expand our string orchestra into a youth symphony orchestra. Some
-              students excel on their instruments, and we want to provide them
-              with the training they need to later become instrumental teachers
-              either at MMF or elsewhere. Our goal is for suitable students to
-              become future teachers. This will provide them with a secure
-              income and make them sought after in the job market. We aim to
-              perform concerts in several places in Madagascar and annually go
-              on a longer trip with the students. It is wonderful and important
-              for the students to get to know their own country and history,
-              while also sharing our joy of music with other communities.
-              Madagascar is an island, but most of our students have never seen
-              the sea! We also dream of bringing a group of students to Norway
-              for cultural exchange and further musical development.
-            </p>
-          </div>
-          <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white" id="read-more-btn-futuregoals">READ MORE</button>
-            <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center items-center w-full h-[576px] gap-8 my-8" id="section-container-activities">
-        <div class="max-w-[574px] max-h-[576px] overflow-hidden">
-          <img src="/assets/placeholder-images/IMG_3538.webp" aria-label="" alt="" />
-        </div>
-        <div class="text-button-container flex-col">
-          <h2 class="font-sans text-[54px] font-medium">Activities</h2>
-          <div class="scroll-container max-w-[574px] max-h-[210px] overflow-auto" id="scroll-container-activities">
-            <p class="scroll-content font-sans text-lg">
-              Children growing up in poverty in Antsirabe often have significant
-              responsibilities from a very young age. They take care of younger
-              siblings, cook meals, and are tasked with earning money for the
-              family through begging. Sometimes, children are also assigned
-              physically demanding tasks such as carrying sacks of rice or
-              pushing heavy water cans, receiving little to no pay for their
-              work. Entrusting adults with the responsibility of caring for
-              their own children is an important part of our work. Children
-              should get to be children! Therefore, play is an essential part of
-              everyday life at MMF. Many of the children have previously been
-              part of a gang of street children where begging was the norm, and
-              activities on the fringes of the law, such as petty theft, were
-              common. To prevent the students from "falling back" into their
-              former environments, it is crucial for them to make new good
-              friends and have a timetable filled with enjoyable and meaningful
-              activities. Birthday Celebrations At the end of each month, we
-              celebrate all children and staff who have birthdays in that month.
-              We have lunch together as a group, and a big birthday cake is
-              served for everyone to enjoy a slice. This is an important day for
-              the children who are not accustomed to celebrating their
-              birthdays. Sewing Classes and Cooking For some of the older
-              students, vocational training may be the right path. We have
-              students attending tailoring classes and baking courses. The
-              education is funded by MMF. The tailoring course lasts for two
-              years, and upon passing the final exam, students receive a
-              publicly recognized certificate as a tailor. This provides young
-              people with excellent opportunities in the job market in the
-              future. Picnics Occasionally, we go to a nearby park and have a
-              picnic with the students. There is also plenty of space for ball
-              games and play. These trips are essential for fostering group
-              cohesion and making the children a close-knit group. At the same
-              time, these outings provide a much-needed break from everyday
-              life.
-            </p>
-          </div>
-          <div class="button-container flex justify-between items-start mt-10">
-            <button class="reg-button bg-black text-white" id="read-more-btn-activities">READ MORE</button>
-            <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3 -->
-
-    <section class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal">
-      <!-- Events -->
-      <div class="row-span-1 col-span-5">
-        <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
-        <ul class="grid gap-5 text-2xl">
-          <li>
-            <p class="bg-light-red pl-4 py-[3.5px]">
-              May 20, 2024 - MMF Annual Charity Concert
-            </p>
-          </li>
-          <li>
-            <p class="bg-light-red pl-4 py-[3.5px]">
-              June 10, 2024 - Run for Music 5K Charity Race
-            </p>
-          </li>
-          <li>
-            <p class="bg-light-red pl-4 py-[3.5px]">
-              July 15, 2024 - MMF Culture and Arts Festival
-            </p>
-          </li>
-          <li>
-            <p class="bg-light-red pl-4 py-[3.5px]">
-              August 25, 2024 - Back-to-School Fundraiser Gala
-            </p>
-          </li>
-          <li>
-            <p class="bg-light-red pl-4 py-[3.5px]">
-              November 25, 2024 - Holiday Giving Campaign Kickoff
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Calendar -->
-
-      <div
-        class="row-span-1 col-start-5 col-end-7 absolute top-0 right-0 w-[400px] h-[400px] border rounded-[30px] border-sunset-red p-10 text-lg bg-white font-inter">
-        <div class="font-inter flex items-center justify-around mb-6">
+          <a
+            href="./news.html"
+            class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+            >News</a
+          >
+          <a
+            href="./about-page.html"
+            class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+            >About Us</a
+          >
           <div
-            class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded cursor-pointer">
-            <p>
-              << /p>
-          </div>
-          <p>April 2024</p>
-          <div
-            class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded text-center cursor-pointer">
-            <p>></p>
-          </div>
-        </div>
-        <div class="grid grid-cols-7 gap-2 text-center">
-          <p>Mon</p>
-          <p>Tue</p>
-          <p>Wed</p>
-          <p>Thu</p>
-          <p>Fri</p>
-          <p>Sat</p>
-          <p>Sun</p>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>1</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>2</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>3</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>4</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>5</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>6</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>7</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>8</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>9</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>10</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>11</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>12</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>13</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>14</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>15</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>16</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>17</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>18</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>19</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>20</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>21</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>22</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>23</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>24</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>25</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>26</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>27</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>28</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>29</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>30</p>
-          </div>
-          <div
-            class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer">
-            <p>31</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section 4 starts here -->
-    <section>
-      <!-- Newsletter Subscription -->
-      <div class="w-full text-center my-28">
-        <h3 class="text-2xl font-semibold mb-6">Subscribe to our newsletter</h3>
-        <div class="max-w-[452px] mx-auto border-[1px] border-[#EE6352] rounded-lg p-2">
-          <form action="#" method="POST" class="flex justify-center items-center gap-4">
-            <input type="email" name="email" placeholder="example@example.com" class="w-[300px] p-2 outline-none" />
-            <button type="submit" class="alt-button text-2xl font-normal w-[148px] h-[33px] py-1">
-              SIGN UP
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Section 4 ends here -->
-  <!-- Footer -->
-  <footer class="bg-[#363732] text-white p-20 h-auto max-w-full">
-    <a href="../index.html"><img src="/assets/images/SVGs/headerLogo.svg" alt="The logo for MFL" /></a>
-    <!--News and sign up-->
-    <div class="flex justify-between items-start">
-      <div class="flex flex-col items-baseline pt-20">
-        <div class="flex flex-col items-baseline">
-        </div>
-      </div>
-      <!-- Links and button-->
-      <div class="flex flex-col gap-16">
-        <a href="../pages/about-page.html">About Us</a>
-        <a href="../pages/news.html">News</a>
-        <a href="../pages/event.html">Events</a>
-      </div>
-      <div class="flex flex-col gap-16">
-        <a href="../pages/gallery-page.html">Gallery</a>
-        <a href="../pages/our-work.html">Our work</a>
-        <a href="../pages/contact-page.html">Contact Us</a>
-      </div>
-      <div class="flex flex-col">
-        <a class="alt-button uppercase font-sans text-2xl px-8" href="../pages/support-page.html">donate</a>
-
-        <div class="flex flex-col items-center p-2 mt-12">
-          <p class="uppercase">follow us</p>
-          <div class="flex justify-center mt-2">
-            <div class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-2 mr-2">
-              <a href="https://www.facebook.com/musicchangeslivesMadagascar
-                    "><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M21.2273 0C23.0348 0 24.5 1.46525 24.5 3.27273V20.7273C24.5 22.5348 23.0348 24 21.2273 24H3.77273C1.96525 24 0.5 22.5348 0.5 20.7273V3.27273C0.5 1.46525 1.96525 0 3.77273 0H21.2273ZM21.2273 2.18182C21.8298 2.18182 22.3182 2.67024 22.3182 3.27273V20.7273C22.3182 21.3298 21.8298 21.8182 21.2273 21.8182H15.7727V14.1817H18.0377C18.5072 14.1817 18.924 13.8813 19.0726 13.4357L19.5559 11.9859C19.7325 11.4561 19.3381 10.909 18.7797 10.909H15.7727V8.72719C15.7727 8.18173 16.3182 7.63628 16.8636 7.63628H19.0455C19.648 7.63628 20.1364 7.14785 20.1364 6.54537V5.79701C20.1364 5.44463 19.9113 5.12869 19.5705 5.03877C18.1405 4.6614 16.8636 4.6614 16.8636 4.6614C14.1364 4.6614 12.5 6.54537 12.5 8.18173V10.909H10.3182C9.71569 10.909 9.22727 11.3974 9.22727 11.9999V13.0908C9.22727 13.6933 9.71568 14.1817 10.3182 14.1817H12.5V21.8182H3.77273C3.17024 21.8182 2.68182 21.3298 2.68182 20.7273V3.27273C2.68182 2.67024 3.17024 2.18182 3.77273 2.18182H21.2273Z"
-                    fill="white" />
-                </svg></a>
+            class="relative cursor-pointer hover:scale-105 transition-transform"
+          >
+            <div class="flex items-center">
+              <span class="text-2xl font-medium">More</span>
+              <img
+                src="../assets/images/SVGs/chevron-down.svg"
+                aria-label="Projects Dropdown Menu"
+                alt="Projects Dropdown Menu"
+                class="ml-3"
+              />
             </div>
-            <div class="border-2 border-solid border-sunset-red rounded-full p-2 bg-sunset-red">
-              <a href="https://www.instagram.com/musikkforandrerliv/
-                  ">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M0.5 4.8C0.5 2.14903 2.64903 0 5.3 0H19.7C22.3509 0 24.5 2.14903 24.5 4.8V19.2C24.5 21.8509 22.3509 24 19.7 24H5.3C2.64903 24 0.5 21.8509 0.5 19.2V4.8ZM5.3 2.4C3.97452 2.4 2.9 3.47452 2.9 4.8V19.2C2.9 20.5255 3.97452 21.6 5.3 21.6H19.7C21.0255 21.6 22.1 20.5255 22.1 19.2V4.8C22.1 3.47452 21.0255 2.4 19.7 2.4H5.3ZM12.5 8.4C10.5117 8.4 8.9 10.0117 8.9 12C8.9 13.9883 10.5117 15.6 12.5 15.6C14.4883 15.6 16.1 13.9883 16.1 12C16.1 10.0117 14.4883 8.4 12.5 8.4ZM6.5 12C6.5 8.6863 9.1863 6 12.5 6C15.8137 6 18.5 8.6863 18.5 12C18.5 15.3137 15.8137 18 12.5 18C9.1863 18 6.5 15.3137 6.5 12ZM19.1 7.2C20.0941 7.2 20.9 6.39412 20.9 5.4C20.9 4.40588 20.0941 3.6 19.1 3.6C18.1059 3.6 17.3 4.40588 17.3 5.4C17.3 6.39412 18.1059 7.2 19.1 7.2Z"
-                    fill="white" />
-                </svg>
+            <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+            <div class="absolute hidden mt-2 bg-white">
+              <a
+                href="#"
+                class="block p-2 border-t border-b border-black hover:bg-gray-100"
+                >Project 1</a
+              >
+              <a
+                href="#"
+                class="block p-2 border-b border-black hover:bg-gray-100"
+                >Project 2</a
+              >
+            </div>
+          </div>
+          <button
+            class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+          >
+            DONATE
+          </button>
+          <div
+            class="relative flex w-5 h-5 items-center group"
+            id="language-selector"
+          >
+            <img
+              src="../assets/images/SVGs/globe-solid.svg"
+              aria-label="Globe Icon For Language Selection"
+              alt="Language Selection"
+              class="cursor-pointer object-contain h-5 w-5"
+            />
+            <div class="absolute left-0 w-full" id="language-options">
+              <a href="#" class="block">
+                <img
+                  src="../assets/images/SVGs/norway.svg"
+                  aria-label="Norwegian Flag Language Selection"
+                  alt="Norwegian Flag"
+                  class="inline h-6 w-8"
+                />
+              </a>
+              <a href="#" class="block">
+                <img
+                  src="../assets/images/SVGs/unitedKingdom.svg"
+                  aria-label="English Flag Language Selection"
+                  alt="English Flag"
+                  class="inline h-6 w-8"
+                />
+              </a>
+              <a href="#" class="block">
+                <img
+                  src="../assets/images/SVGs/madagascar.svg"
+                  aria-label="Malagasy Flag Language Selection"
+                  alt="Malagasy Flag"
+                  class="inline h-6 w-8"
+                />
               </a>
             </div>
           </div>
+        </nav>
+      </div>
+
+      <h1
+        class="font-justAnotherHand text-[200px] tracking-widest text-white text-center absolute w-full bottom-20"
+      >
+        Our work
+      </h1>
+      <div
+        id="hero-buttons"
+        class="flex items-center justify-center gap-16 absolute text-center w-full bottom-6"
+      >
+        <button
+          class="health our-work-hero-button flex flex-col items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="41"
+            height="38"
+            viewBox="0 0 41 38"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_146_1604)">
+              <path
+                d="M21.6403 0.890234C20.9484 0.369922 20.0516 0.369922 19.3597 0.890234L10.6536 7.4375H3.075C1.37734 7.4375 0 8.99121 0 10.9062V34.0312C0 35.9463 1.37734 37.5 3.075 37.5H16.4V30.5625C16.4 28.0115 18.2386 25.9375 20.5 25.9375C22.7614 25.9375 24.6 28.0115 24.6 30.5625V37.5H37.925C39.6227 37.5 41 35.9463 41 34.0312V10.9062C41 8.99121 39.6227 7.4375 37.925 7.4375H30.3464L21.6403 0.890234ZM6.15 14.375H8.2C8.76375 14.375 9.225 14.8953 9.225 15.5312V20.1562C9.225 20.7922 8.76375 21.3125 8.2 21.3125H6.15C5.58625 21.3125 5.125 20.7922 5.125 20.1562V15.5312C5.125 14.8953 5.58625 14.375 6.15 14.375ZM31.775 15.5312C31.775 14.8953 32.2363 14.375 32.8 14.375H34.85C35.4137 14.375 35.875 14.8953 35.875 15.5312V20.1562C35.875 20.7922 35.4137 21.3125 34.85 21.3125H32.8C32.2363 21.3125 31.775 20.7922 31.775 20.1562V15.5312ZM6.15 23.625H8.2C8.76375 23.625 9.225 24.1453 9.225 24.7812V29.4062C9.225 30.0422 8.76375 30.5625 8.2 30.5625H6.15C5.58625 30.5625 5.125 30.0422 5.125 29.4062V24.7812C5.125 24.1453 5.58625 23.625 6.15 23.625ZM31.775 24.7812C31.775 24.1453 32.2363 23.625 32.8 23.625H34.85C35.4137 23.625 35.875 24.1453 35.875 24.7812V29.4062C35.875 30.0422 35.4137 30.5625 34.85 30.5625H32.8C32.2363 30.5625 31.775 30.0422 31.775 29.4062V24.7812ZM14.8625 13.2188C14.8625 11.5321 15.4564 9.91461 16.5137 8.72199C17.5709 7.52938 19.0048 6.85938 20.5 6.85938C21.9952 6.85938 23.4291 7.52938 24.4863 8.72199C25.5436 9.91461 26.1375 11.5321 26.1375 13.2188C26.1375 14.9054 25.5436 16.5229 24.4863 17.7155C23.4291 18.9081 21.9952 19.5781 20.5 19.5781C19.0048 19.5781 17.5709 18.9081 16.5137 17.7155C15.4564 16.5229 14.8625 14.9054 14.8625 13.2188ZM20.5 9.75C19.9363 9.75 19.475 10.2703 19.475 10.9062V13.2188C19.475 13.8547 19.9363 14.375 20.5 14.375H22.55C23.1138 14.375 23.575 13.8547 23.575 13.2188C23.575 12.5828 23.1138 12.0625 22.55 12.0625H21.525V10.9062C21.525 10.2703 21.0637 9.75 20.5 9.75Z"
+                fill="#F8EED1"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_146_1604">
+                <rect
+                  width="41"
+                  height="37"
+                  fill="white"
+                  transform="translate(0 0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="pt-1">Healthcare</p>
+        </button>
+        <button
+          class="edu our-work-hero-button flex flex-col items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="49"
+            height="39"
+            viewBox="0 0 49 39"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_146_1610)">
+              <path
+                d="M24.5002 2.875C23.8927 2.875 23.2927 2.97891 22.7227 3.1793L1.68518 10.6977C0.972678 10.9574 0.500178 11.6254 0.500178 12.375C0.500178 13.1246 0.972678 13.7926 1.68518 14.0523L6.02768 15.6035C4.79768 17.5184 4.10018 19.782 4.10018 22.1645V24.25C4.10018 26.3578 3.29018 28.5324 2.42768 30.2469C1.94018 31.2117 1.38518 32.1617 0.740178 33.0375C0.500178 33.3566 0.432678 33.7723 0.567678 34.1508C0.702678 34.5293 1.01768 34.8113 1.40768 34.9078L6.20768 36.0953C6.52268 36.177 6.86018 36.1176 7.13768 35.9469C7.41518 35.7762 7.61018 35.4941 7.67018 35.175C8.31518 31.9984 7.99268 29.1484 7.51268 27.1074C7.27268 26.0535 6.95018 24.9773 6.50018 23.9902V22.1645C6.50018 19.923 7.26518 17.8078 8.59268 16.1156C9.56018 14.9652 10.8127 14.0375 12.2827 13.466L24.0577 8.88672C24.6727 8.64922 25.3702 8.94609 25.6102 9.55469C25.8502 10.1633 25.5502 10.8535 24.9352 11.091L13.1602 15.6703C12.2302 16.034 11.4127 16.5906 10.7452 17.2734L22.7152 21.5484C23.2852 21.7488 23.8852 21.8527 24.4927 21.8527C25.1002 21.8527 25.7002 21.7488 26.2702 21.5484L47.3152 14.0523C48.0277 13.8 48.5002 13.1246 48.5002 12.375C48.5002 11.6254 48.0277 10.9574 47.3152 10.6977L26.2777 3.1793C25.7077 2.97891 25.1077 2.875 24.5002 2.875ZM10.1002 30.7812C10.1002 33.4012 16.5502 36.125 24.5002 36.125C32.4502 36.125 38.9002 33.4012 38.9002 30.7812L37.7527 19.9898L27.0877 23.8047C26.2552 24.1016 25.3777 24.25 24.5002 24.25C23.6227 24.25 22.7377 24.1016 21.9127 23.8047L11.2477 19.9898L10.1002 30.7812Z"
+                fill="#F8EED1"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_146_1610">
+                <rect
+                  width="48"
+                  height="38"
+                  fill="white"
+                  transform="translate(0.5 0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="pt-1">Education</p>
+        </button>
+        <button
+          class="living our-work-hero-button flex flex-col items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="36"
+            viewBox="0 0 35 36"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_146_1615)">
+              <path
+                d="M18.5869 0.787109C17.917 0.404297 17.0898 0.404297 16.4131 0.787109L1.10059 9.53711C0.423828 9.92676 0 10.6514 0 11.4375V33.3125C0 34.5225 0.977539 35.5 2.1875 35.5C3.39746 35.5 4.375 34.5225 4.375 33.3125V12.709L17.5 5.20996L30.625 12.709V33.3125C30.625 34.5225 31.6025 35.5 32.8125 35.5C34.0225 35.5 35 34.5225 35 33.3125V11.4375C35 10.6514 34.5762 9.92676 33.8994 9.53711L18.5869 0.787109ZM17.5 14.7188C18.2252 14.7188 18.9207 14.4307 19.4335 13.9179C19.9463 13.4051 20.2344 12.7096 20.2344 11.9844C20.2344 11.2592 19.9463 10.5637 19.4335 10.0509C18.9207 9.53808 18.2252 9.25 17.5 9.25C16.7748 9.25 16.0793 9.53808 15.5665 10.0509C15.0537 10.5637 14.7656 11.2592 14.7656 11.9844C14.7656 12.7096 15.0537 13.4051 15.5665 13.9179C16.0793 14.4307 16.7748 14.7188 17.5 14.7188ZM16.9531 33.8594V27.8438H18.0469V33.8594C18.0469 34.7686 18.7783 35.5 19.6875 35.5C20.5967 35.5 21.3281 34.7686 21.3281 33.8594V21.9307L23.167 25.3418C23.5977 26.1416 24.5889 26.4355 25.3887 26.0117C26.1885 25.5879 26.4824 24.5898 26.0586 23.79L23.4678 18.9844C22.4219 17.0361 20.3848 15.8193 18.1699 15.8193H16.8301C14.6152 15.8193 12.585 17.0361 11.5322 18.9844L8.94141 23.79C8.51074 24.5898 8.81152 25.5811 9.61133 26.0117C10.4111 26.4424 11.4023 26.1416 11.833 25.3418L13.6719 21.9307V33.8594C13.6719 34.7686 14.4033 35.5 15.3125 35.5C16.2217 35.5 16.9531 34.7686 16.9531 33.8594Z"
+                fill="#F8EED1"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_146_1615">
+                <rect
+                  width="35"
+                  height="35"
+                  fill="white"
+                  transform="translate(0 0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="pt-1">Living Situation</p>
+        </button>
+        <button
+          class="food our-work-hero-button flex flex-col items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="36"
+            viewBox="0 0 32 36"
+            fill="none"
+          >
+            <path
+              d="M31.5594 3.29682C32.1469 2.65423 32.1469 1.61514 31.5594 0.979385C30.9719 0.343628 30.022 0.336791 29.4408 0.979385L23.9348 6.98832C23.3473 7.63091 23.3473 8.67 23.9348 9.30576C24.5222 9.94152 25.4722 9.94835 26.0534 9.30576L31.5531 3.28999L31.5594 3.29682ZM19.0913 2.36028C18.7038 1.93644 18.0663 1.93644 17.6788 2.36028L16.9664 3.13276C14.6227 5.6963 14.6227 9.85265 16.9664 12.4162L17.6163 13.1271L15.7102 15.2122C15.4977 13.3459 14.7415 11.5343 13.429 10.0987L12.7228 9.32627C12.3353 8.90243 11.6979 8.90243 11.3104 9.32627L10.6042 10.0987C8.26054 12.6623 8.26054 16.8186 10.6042 19.3822L11.2541 20.0931L9.34798 22.1781C9.13549 20.3119 8.37928 18.5003 7.06684 17.0647L6.36063 16.2854C5.97315 15.8616 5.33568 15.8616 4.9482 16.2854L4.24198 17.0579C1.89834 19.6214 1.89834 23.7778 4.24198 26.3413L4.89195 27.0523L0.585909 31.7624C-0.195303 32.6169 -0.195303 34.0046 0.585909 34.8591C1.36712 35.7136 2.63581 35.7136 3.41702 34.8591L7.72306 30.149L8.48552 30.983C10.8292 33.5466 14.629 33.5466 16.9726 30.983L17.6788 30.2106C18.0663 29.7867 18.0663 29.0894 17.6788 28.6656L16.9726 27.8931C15.6102 26.4029 13.8728 25.562 12.0916 25.3706L14.0853 23.1899L14.8477 24.0239C17.1914 26.5874 20.9912 26.5874 23.3348 24.0239L24.041 23.2514C24.4285 22.8276 24.4285 22.1303 24.041 21.7064L23.3348 20.934C21.9724 19.4437 20.235 18.6029 18.4538 18.4114L20.4474 16.2307L21.2099 17.0647C23.5535 19.6283 27.3534 19.6283 29.697 17.0647L30.4032 16.2854C30.7907 15.8616 30.7907 15.1643 30.4032 14.7405L29.697 13.9611C29.372 13.6057 29.0345 13.2912 28.672 13.0109L31.5594 9.85948C32.1469 9.21689 32.1469 8.1778 31.5594 7.54204C30.9719 6.90629 30.022 6.89945 29.4408 7.54204L25.7284 11.6027C24.441 11.3019 23.1036 11.3498 21.8349 11.7462C22.2161 10.2902 22.2474 8.75204 21.9224 7.28227L25.5597 3.29682C26.1472 2.65423 26.1472 1.61514 25.5597 0.979385C24.9722 0.343628 24.0223 0.336791 23.441 0.979385L20.5662 4.11032C20.3349 3.76852 20.0787 3.44038 19.7912 3.13276L19.0913 2.36028Z"
+              fill="#F8EED1"
+            />
+          </svg>
+          <p class="pt-1">Food Distribution</p>
+        </button>
+        <button
+          class="music our-work-hero-button flex flex-col items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="37"
+            height="38"
+            viewBox="0 0 37 38"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_146_1623)">
+              <path
+                d="M36.0678 0.95527C36.6531 1.38886 37 2.08261 37 2.8125V8.01562V27.0937C37 30.2879 33.8926 32.875 30.0625 32.875C26.2324 32.875 23.125 30.2879 23.125 27.0937C23.125 23.8996 26.2324 21.3125 30.0625 21.3125C30.8719 21.3125 31.6523 21.4281 32.375 21.6449V11.123L13.875 16.673V31.7187C13.875 34.9129 10.7676 37.5 6.9375 37.5C3.10742 37.5 0 34.9129 0 31.7187C0 28.5246 3.10742 25.9375 6.9375 25.9375C7.74687 25.9375 8.52734 26.0531 9.25 26.2699V14.9531V9.75C9.25 8.73105 9.92207 7.82773 10.8977 7.53144L34.0227 0.593942C34.7236 0.384371 35.4824 0.51445 36.0678 0.95527Z"
+                fill="#F8EED1"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_146_1623">
+                <rect
+                  width="37"
+                  height="37"
+                  fill="white"
+                  transform="translate(0 0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="pt-1">Music Lesson</p>
+        </button>
+        <button
+          class="future our-work-hero-button flex flex-col items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="49"
+            height="40"
+            viewBox="0 0 49 40"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_146_1629)">
+              <path
+                d="M27.0878 4.62086L25.2809 0.979848C24.9823 0.347621 24.0483 0.324769 23.7191 0.979848L21.9122 4.62086L17.908 5.19215C17.1959 5.29879 16.8897 6.17477 17.418 6.70036L20.3273 9.51872L19.6383 13.4873C19.5311 14.1957 20.2661 14.7441 20.9245 14.4166L24.5153 12.5275L28.0831 14.3861C28.7416 14.7136 29.4842 14.1652 29.3694 13.4568L28.6803 9.48825L31.5897 6.70036C32.1103 6.18239 31.8117 5.30641 31.0997 5.19215L27.0955 4.62086H27.0878ZM19.6 20C18.2448 20 17.15 21.0892 17.15 22.4375V37.0625C17.15 38.4107 18.2448 39.5 19.6 39.5H29.4C30.7552 39.5 31.85 38.4107 31.85 37.0625V22.4375C31.85 21.0892 30.7552 20 29.4 20H19.6ZM2.45 24.875C1.09484 24.875 0 25.9642 0 27.3125V37.0625C0 38.4107 1.09484 39.5 2.45 39.5H12.25C13.6052 39.5 14.7 38.4107 14.7 37.0625V27.3125C14.7 25.9642 13.6052 24.875 12.25 24.875H2.45ZM34.3 32.1875V37.0625C34.3 38.4107 35.3948 39.5 36.75 39.5H46.55C47.9052 39.5 49 38.4107 49 37.0625V32.1875C49 30.8392 47.9052 29.75 46.55 29.75H36.75C35.3948 29.75 34.3 30.8392 34.3 32.1875Z"
+                fill="#F8EED1"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_146_1629">
+                <rect
+                  width="49"
+                  height="39"
+                  fill="white"
+                  transform="translate(0 0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="pt-1">Future Goals</p>
+        </button>
+        <button
+          class="activi our-work-hero-button flex flex-col items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="39"
+            viewBox="0 0 38 39"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_146_1634)">
+              <path
+                d="M14.25 8.27813C14.25 7.59531 13.8195 6.99414 13.2703 6.58594C12.4094 5.94023 11.875 5.04961 11.875 4.0625C11.875 2.0957 14.0051 0.5 16.625 0.5C19.2449 0.5 21.375 2.0957 21.375 4.0625C21.375 5.04961 20.8406 5.94023 19.9797 6.58594C19.4305 6.99414 19 7.59531 19 8.27813C19 9.22813 19.7719 10 20.7219 10H24.9375C26.9043 10 28.5 11.5957 28.5 13.5625V17.7781C28.5 18.7281 29.2719 19.5 30.2219 19.5C30.9047 19.5 31.5059 19.0695 31.9141 18.5203C32.5598 17.6594 33.4504 17.125 34.4375 17.125C36.4043 17.125 38 19.2551 38 21.875C38 24.4949 36.4043 26.625 34.4375 26.625C33.4504 26.625 32.5598 26.0906 31.9141 25.2297C31.5059 24.6805 30.9047 24.25 30.2219 24.25C29.2719 24.25 28.5 25.0219 28.5 25.9719V34.9375C28.5 36.9043 26.9043 38.5 24.9375 38.5H20.7219C19.7719 38.5 19 37.7281 19 36.7781C19 36.0953 19.4305 35.4941 19.9797 35.0859C20.8406 34.4402 21.375 33.5496 21.375 32.5625C21.375 30.5957 19.2449 29 16.625 29C14.0051 29 11.875 30.5957 11.875 32.5625C11.875 33.5496 12.4094 34.4402 13.2703 35.0859C13.8195 35.4941 14.25 36.0953 14.25 36.7781C14.25 37.7281 13.4781 38.5 12.5281 38.5H3.5625C1.5957 38.5 0 36.9043 0 34.9375V25.9719C0 25.0219 0.771875 24.25 1.72188 24.25C2.40469 24.25 3.00586 24.6805 3.41406 25.2297C4.05977 26.0906 4.95039 26.625 5.9375 26.625C7.9043 26.625 9.5 24.4949 9.5 21.875C9.5 19.2551 7.9043 17.125 5.9375 17.125C4.95039 17.125 4.05977 17.6594 3.41406 18.5203C3.00586 19.0695 2.40469 19.5 1.72188 19.5C0.771875 19.5 0 18.7281 0 17.7781V13.5625C0 11.5957 1.5957 10 3.5625 10H12.5281C13.4781 10 14.25 9.22813 14.25 8.27813Z"
+                fill="#F8EED1"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_146_1634">
+                <rect
+                  width="38"
+                  height="38"
+                  fill="white"
+                  transform="translate(0 0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="pt-1">Activites</p>
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Section 2 -->
+      <section class="mx-[120px] mb-20">
+        <div
+          class="flex justify-center items-center w-full h-[576px] gap-8 my-8"
+          id="section-container"
+        >
+          <div class="max-w-[574px] max-h-[576px] overflow-hidden">
+            <img
+              src="/assets/placeholder-images/IMG_5348.webp"
+              aria-label=""
+              alt=""
+            />
+          </div>
+          <div class="text-button-container flex-col">
+            <h2 class="font-sans text-[54px] font-medium">Healthcare</h2>
+            <div
+              class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+              id="scroll-container-health"
+            >
+              <p class="scroll-content font-sans text-lg" id="scroll-content">
+                In Madagascar, child mortality is high and many die from
+                diseases that can be easily treated with modern medicine.
+                Typical causes are infectious diseases such as pneumonia,
+                tuberculosis, diarrheal diseases and malaria. The country also
+                has one of the highest incidences of plague in the world, as
+                well as epidemics and pandemics that have otherwise been fought
+                in other countries. Many have a long way to the nearest clinic
+                and/or hospital, and the costs are high. They therefore do not
+                seek help until it is too late. Many of the children we meet on
+                the streets often have major health challenges, and several
+                suffer from severe malnutrition.
+              </p>
+            </div>
+            <div
+              class="button-container flex justify-between items-start mt-10"
+            >
+              <button class="reg-button bg-black text-white" id="read-more-btn">
+                READ MORE
+              </button>
+              <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
+          id="section-container-edu"
+        >
+          <div class="max-w-[574px] max-h-[576px] overflow-hidden">
+            <img
+              src="/assets/placeholder-images/IMG_3568.webp"
+              aria-label=""
+              alt=""
+            />
+          </div>
+          <div class="text-button-container flex-col">
+            <h2 class="font-sans text-[54px] font-medium">Education</h2>
+            <div
+              class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+              id="scroll-container-edu"
+            >
+              <p class="scroll-content font-sans text-lg">
+                Schooling gives children hope for the future. When children lack
+                basic knowledge and skills, they have limited opportunities.
+                Education helps break the cycle of poverty and is a vital tool
+                in combating poverty. The main goal of MMF is for children to
+                become independent adults with their own income in the future.
+                Therefore, it is important to facilitate the success and
+                well-being of children in school. Public schooling in Madagascar
+                is free, but the cost of uniforms, textbooks, stationery, and
+                notebooks is often too high for families. As a result, children
+                are sent out to beg or work to support their families. The
+                children we encounter on the streets have either dropped out of
+                primary school or never had the opportunity to attend school,
+                and they cannot read or write. To succeed in getting these
+                children back to school, we have found it important to prepare
+                them well. We have established a pre-school program where
+                children practice reading and writing, and learn mathematics,
+                Malagasy, and French before starting school. All children in MMF
+                are now attending school or receiving other forms of education.
+                We have a future plan for each child based on their interests.
+                Together, we will help and support them towards their goals.
+                Public schooling in Madagascar is half a day (about 4 hours),
+                and the children come to MMF every day after school to practice
+                instruments and do homework. As many parents cannot read or
+                write themselves, we have introduced homework assistance so that
+                children have a chance to succeed in school. We are experiencing
+                good results with this, and several children have excelled in
+                school. In addition to schooling and education, children also
+                receive English lessons from us. We know that this can
+                potentially help children secure a job in the future. Few
+                Malagasy people speak English, so it is a great advantage for
+                children to learn English. They can then have job opportunities
+                such as being a guide, interpreter, or English teacher.
+                Additionally, it is easier for children to communicate with
+                visitors and volunteers at MMF. Some students need alternative
+                solutions for education for various reasons, and we have some
+                older students who attend vocational training instead of regular
+                school. We are proud that last year we had a student who
+                obtained a tailoring certificate. She now sews school uniforms
+                for the other students among other things.
+              </p>
+            </div>
+            <div
+              class="button-container flex justify-between items-start mt-10"
+            >
+              <button
+                class="reg-button bg-black text-white"
+                id="read-more-btn-edu"
+              >
+                READ MORE
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center items-center w-full h-[576px] gap-8 my-8"
+          id="section-container-lisi"
+        >
+          <div class="max-w-[574px] max-h-[576px] overflow-hidden">
+            <img
+              class="object-cover h-[576px]"
+              src="/assets/placeholder-images/IMG_7331_jpg.webp"
+              aria-label=""
+              alt=""
+            />
+          </div>
+          <div class="text-button-container flex-col">
+            <h2 class="font-sans text-[54px] font-medium">Living Situation</h2>
+            <div
+              class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+              id="scroll-container-lisi"
+            >
+              <p class="scroll-content font-sans text-lg">
+                Many of the children we enroll as students in MMF live on the
+                streets when we first meet them. The reason they live on the
+                streets is poverty. These children are left to fend for
+                themselves, and older children often take on the responsibility
+                of caring for younger siblings. Life on the streets is extremely
+                tough, and every day is a struggle for survival. During the day,
+                children spend a lot of energy begging for money and searching
+                for food. As night falls, it's important to find a safe place to
+                sleep for the night. Nights can be cold and dangerous, and the
+                children huddle together to keep warm.
+              </p>
+            </div>
+            <div
+              class="button-container flex justify-between items-start mt-10"
+            >
+              <button
+                class="reg-button bg-black text-white"
+                id="read-more-btn-lisi"
+              >
+                READ MORE
+              </button>
+              <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
+          id="section-container-food"
+        >
+          <div class="max-w-[574px] max-h-[576px] overflow-hidden">
+            <img
+              class="object-cover h-[576px]"
+              src="/assets/placeholder-images/IMG_6433.webp"
+              aria-label=""
+              alt=""
+            />
+          </div>
+          <div class="text-button-container flex-col">
+            <h2 class="font-sans text-[54px] font-medium">Food Distribution</h2>
+            <div
+              class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+              id="scroll-container-food"
+            >
+              <p class="scroll-content font-sans text-lg">
+                Despite Madagascar being known for its lush climate, the country
+                has been affected by natural disasters and the worst drought in
+                decades, attributed to climate change. This has resulted in crop
+                failure, leading to food crises and famine. Parents struggle to
+                provide enough food and clean water for their children. When
+                families cannot feed their children, sending them out to beg
+                becomes the only option for survival. Children living on the
+                streets spend a lot of time and energy searching for food scraps
+                and often have to resort to scavenging through others' garbage.
+              </p>
+            </div>
+            <div
+              class="button-container flex justify-between items-start mt-10"
+            >
+              <button
+                class="reg-button bg-black text-white"
+                id="read-more-btn-food"
+              >
+                READ MORE
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center items-center w-full h-[576px] gap-8 my-8"
+          id="section-container-music"
+        >
+          <div class="max-w-[574px] max-h-[576px] overflow-hidden">
+            <img
+              class="object-cover h-[576px]"
+              src="/assets/placeholder-images/IMG_7544.webp"
+              aria-label=""
+              alt=""
+            />
+          </div>
+          <div class="text-button-container flex-col">
+            <h2 class="font-sans text-[54px] font-medium">Music Lessons</h2>
+            <div
+              class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+              id="scroll-container-music"
+            >
+              <p class="scroll-content font-sans text-lg">
+                Meeting basic needs is crucial, but we also recognize that
+                children need more. They need motivation, inspiration, joy,
+                something to aspire to, new thoughts, and a belief that
+                something else is possible. This brings us to the essence of the
+                project: music. Studies show that when listening to and learning
+                new music, new brain cells and connections are created. Research
+                also shows that music enhances memory. Parents in MMF observe
+                that their children perform better in school after they start
+                playing an instrument. Collaboration is also particularly
+                valuable, teaching children to cooperate, listen to each other,
+                and express themselves. For us at MMF, quality and
+                professionalism are important. We collaborate with professional
+                musicians who elevate us and take us to a new level. For some
+                children, the instrument becomes the direction in life, bringing
+                forth enthusiasm and joy. Some aspire to become professional
+                musicians and pursue music as a career. Madagascar is a country
+                with a rich musical culture. Perhaps that's why music resonates
+                so well here. Many children have rhythm in their bodies and
+                start dancing as soon as they can stand. Harmonious singing is
+                part of daily life, and we see that children learn quickly. Even
+                though not all children in MMF aim to become professional
+                musicians, music is beneficial for the development of all
+                children. Instruments MMF started with violins. Over time, the
+                music school has evolved to include more instruments in addition
+                to Malagasy folk music, dance, and singing. Currently, students
+                have the opportunity to learn the following instruments at MMF:
+                Violin, viola, cello, double bass, recorder, guitar, piano,
+                flute, and clarinet. Additionally, we have dance groups, choirs,
+                and percussion groups.
+              </p>
+            </div>
+            <div
+              class="button-container flex justify-between items-start mt-10"
+            >
+              <button
+                class="reg-button bg-black text-white"
+                id="read-more-btn-music"
+              >
+                READ MORE
+              </button>
+              <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row-reverse justify-center items-center w-full h-[576px] gap-8 my-8"
+          id="section-container-futuregoals"
+        >
+          <div class="max-w-[574px] max-h-[576px] overflow-hidden">
+            <img
+              class="object-cover h-[576px]"
+              src="/assets/placeholder-images/IMG_7424.webp"
+              aria-label=""
+              alt=""
+            />
+          </div>
+          <div class="text-button-container flex-col">
+            <h2 class="font-sans text-[54px] font-medium">Future Goals</h2>
+            <div
+              class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+              id="scroll-container-futuregoals"
+            >
+              <p class="scroll-content font-sans text-lg">
+                One of our goals is to make MMF larger and more well-known so
+                that we can include more children living tough lives on the
+                streets. The main goal is for all children in Antsirabe to have
+                enough food, clothing, experience care, have a safe and good
+                home, attend school, and have the opportunity to develop their
+                talents. It is important for us that the assistance we provide
+                contributes to independence. The goal is for children to attend
+                school and develop their talents so that one day they will
+                become assets in their own communities, find employment, and
+                stand on their own feet. Dream of our own building We are
+                fortunate to have acquired a large plot of land with great
+                potential. Here, we dream of building our own music school with
+                excellent practice rooms, a kitchen and dining hall, a small
+                stage where we can hold concerts for visitors, and a small
+                sewing room with an associated shop. Here, we will also be able
+                to grow our own food used in lunch for the children in the music
+                school. We also want the outdoor areas to be a good place for
+                the children to play between rehearsals and homework. Goals for
+                music education The students practice diligently, and our
+                orchestra is starting to become sought after locally. We already
+                receive performance requests from both the municipality and
+                private individuals. Throughout 2024, we envision focusing even
+                more on performances, now also with smaller ensembles and
+                groups. Performing for others motivates the children to
+                practice, fosters cohesion within the group, and provides
+                valuable work experience for those children who want to pursue
+                music. It also spreads joy in the community. We hope to
+                eventually expand our string orchestra into a youth symphony
+                orchestra. Some students excel on their instruments, and we want
+                to provide them with the training they need to later become
+                instrumental teachers either at MMF or elsewhere. Our goal is
+                for suitable students to become future teachers. This will
+                provide them with a secure income and make them sought after in
+                the job market. We aim to perform concerts in several places in
+                Madagascar and annually go on a longer trip with the students.
+                It is wonderful and important for the students to get to know
+                their own country and history, while also sharing our joy of
+                music with other communities. Madagascar is an island, but most
+                of our students have never seen the sea! We also dream of
+                bringing a group of students to Norway for cultural exchange and
+                further musical development.
+              </p>
+            </div>
+            <div
+              class="button-container flex justify-between items-start mt-10"
+            >
+              <button
+                class="reg-button bg-black text-white"
+                id="read-more-btn-futuregoals"
+              >
+                READ MORE
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center items-center w-full h-[576px] gap-8 my-8"
+          id="section-container-activities"
+        >
+          <div class="max-w-[574px] max-h-[576px] overflow-hidden">
+            <img
+              src="/assets/placeholder-images/IMG_3538.webp"
+              aria-label=""
+              alt=""
+            />
+          </div>
+          <div class="text-button-container flex-col">
+            <h2 class="font-sans text-[54px] font-medium">Activities</h2>
+            <div
+              class="scroll-container max-w-[574px] max-h-[210px] overflow-auto"
+              id="scroll-container-activities"
+            >
+              <p class="scroll-content font-sans text-lg">
+                Children growing up in poverty in Antsirabe often have
+                significant responsibilities from a very young age. They take
+                care of younger siblings, cook meals, and are tasked with
+                earning money for the family through begging. Sometimes,
+                children are also assigned physically demanding tasks such as
+                carrying sacks of rice or pushing heavy water cans, receiving
+                little to no pay for their work. Entrusting adults with the
+                responsibility of caring for their own children is an important
+                part of our work. Children should get to be children! Therefore,
+                play is an essential part of everyday life at MMF. Many of the
+                children have previously been part of a gang of street children
+                where begging was the norm, and activities on the fringes of the
+                law, such as petty theft, were common. To prevent the students
+                from "falling back" into their former environments, it is
+                crucial for them to make new good friends and have a timetable
+                filled with enjoyable and meaningful activities. Birthday
+                Celebrations At the end of each month, we celebrate all children
+                and staff who have birthdays in that month. We have lunch
+                together as a group, and a big birthday cake is served for
+                everyone to enjoy a slice. This is an important day for the
+                children who are not accustomed to celebrating their birthdays.
+                Sewing Classes and Cooking For some of the older students,
+                vocational training may be the right path. We have students
+                attending tailoring classes and baking courses. The education is
+                funded by MMF. The tailoring course lasts for two years, and
+                upon passing the final exam, students receive a publicly
+                recognized certificate as a tailor. This provides young people
+                with excellent opportunities in the job market in the future.
+                Picnics Occasionally, we go to a nearby park and have a picnic
+                with the students. There is also plenty of space for ball games
+                and play. These trips are essential for fostering group cohesion
+                and making the children a close-knit group. At the same time,
+                these outings provide a much-needed break from everyday life.
+              </p>
+            </div>
+            <div
+              class="button-container flex justify-between items-start mt-10"
+            >
+              <button
+                class="reg-button bg-black text-white"
+                id="read-more-btn-activities"
+              >
+                READ MORE
+              </button>
+              <button class="reg-button bg-[#EE6352] text-white">DONATE</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+
+      <section
+        class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal"
+      >
+        <!-- Events -->
+        <div class="row-span-1 col-span-5">
+          <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
+          <ul class="grid gap-5 text-2xl">
+            <li>
+              <p class="bg-light-red pl-4 py-[3.5px]">
+                May 20, 2024 - MMF Annual Charity Concert
+              </p>
+            </li>
+            <li>
+              <p class="bg-light-red pl-4 py-[3.5px]">
+                June 10, 2024 - Run for Music 5K Charity Race
+              </p>
+            </li>
+            <li>
+              <p class="bg-light-red pl-4 py-[3.5px]">
+                July 15, 2024 - MMF Culture and Arts Festival
+              </p>
+            </li>
+            <li>
+              <p class="bg-light-red pl-4 py-[3.5px]">
+                August 25, 2024 - Back-to-School Fundraiser Gala
+              </p>
+            </li>
+            <li>
+              <p class="bg-light-red pl-4 py-[3.5px]">
+                November 25, 2024 - Holiday Giving Campaign Kickoff
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Calendar -->
+
+        <div
+          class="row-span-1 col-start-5 col-end-7 absolute top-0 right-0 w-[400px] h-[400px] border rounded-[30px] border-sunset-red p-10 text-lg bg-white font-inter"
+        >
+          <div class="font-inter flex items-center justify-around mb-6">
+            <div
+              class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded cursor-pointer"
+            >
+              <p></p>
+            </div>
+            <p>April 2024</p>
+            <div
+              class="flex justify-center items-center w-10 h-10 hover:bg-sunset-red hover:bg-opacity-50 text-sunset-red border-white rounded text-center cursor-pointer"
+            >
+              <p>></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-7 gap-2 text-center">
+            <p>Mon</p>
+            <p>Tue</p>
+            <p>Wed</p>
+            <p>Thu</p>
+            <p>Fri</p>
+            <p>Sat</p>
+            <p>Sun</p>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>1</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>2</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>3</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>4</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>5</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>6</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>7</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>8</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>9</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>10</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>11</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>12</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>13</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>14</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>15</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>16</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>17</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>18</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>19</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>20</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>21</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>22</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>23</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>24</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>25</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>26</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>27</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>28</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>29</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>30</p>
+            </div>
+            <div
+              class="flex justify-center items-center w-10 h-10 border-white rounded hover:bg-sunset-red hover:bg-opacity-50 cursor-pointer"
+            >
+              <p>31</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 4 starts here -->
+      <section>
+        <!-- Newsletter Subscription -->
+        <div class="w-full text-center my-28">
+          <h3 class="text-2xl font-semibold mb-6">
+            Subscribe to our newsletter
+          </h3>
+          <div
+            class="max-w-[452px] mx-auto border-[1px] border-[#EE6352] rounded-lg p-2"
+          >
+            <form
+              action="#"
+              method="POST"
+              class="flex justify-center items-center gap-4"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="example@example.com"
+                class="w-[300px] p-2 outline-none"
+              />
+              <button
+                type="submit"
+                class="alt-button text-2xl font-normal w-[148px] h-[33px] py-1"
+              >
+                SIGN UP
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Section 4 ends here -->
+    <!-- Footer -->
+    <footer class="bg-[#363732] text-white p-20 h-auto max-w-full">
+      <a href="../index.html"
+        ><img src="/assets/images/SVGs/headerLogo.svg" alt="The logo for MFL"
+      /></a>
+      <!--News and sign up-->
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col items-baseline pt-20">
+          <div class="flex flex-col items-baseline"></div>
+        </div>
+        <!-- Links and button-->
+        <div class="flex flex-col gap-16">
+          <a href="../pages/about-page.html">About Us</a>
+          <a href="../pages/news.html">News</a>
+          <a href="../pages/event.html">Events</a>
+        </div>
+        <div class="flex flex-col gap-16">
+          <a href="../pages/gallery-page.html">Gallery</a>
+          <a href="../pages/our-work.html">Our work</a>
+          <a href="../pages/contact-page.html">Contact Us</a>
+        </div>
+        <div class="flex flex-col">
+          <a
+            class="alt-button uppercase font-sans text-2xl px-8"
+            href="../pages/support-page.html"
+            >donate</a
+          >
+
+          <div class="flex flex-col items-center p-2 mt-12">
+            <p class="uppercase">follow us</p>
+            <div class="flex justify-center mt-2">
+              <div
+                class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-2 mr-2"
+              >
+                <a
+                  href="https://www.facebook.com/musicchangeslivesMadagascar
+                    "
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M21.2273 0C23.0348 0 24.5 1.46525 24.5 3.27273V20.7273C24.5 22.5348 23.0348 24 21.2273 24H3.77273C1.96525 24 0.5 22.5348 0.5 20.7273V3.27273C0.5 1.46525 1.96525 0 3.77273 0H21.2273ZM21.2273 2.18182C21.8298 2.18182 22.3182 2.67024 22.3182 3.27273V20.7273C22.3182 21.3298 21.8298 21.8182 21.2273 21.8182H15.7727V14.1817H18.0377C18.5072 14.1817 18.924 13.8813 19.0726 13.4357L19.5559 11.9859C19.7325 11.4561 19.3381 10.909 18.7797 10.909H15.7727V8.72719C15.7727 8.18173 16.3182 7.63628 16.8636 7.63628H19.0455C19.648 7.63628 20.1364 7.14785 20.1364 6.54537V5.79701C20.1364 5.44463 19.9113 5.12869 19.5705 5.03877C18.1405 4.6614 16.8636 4.6614 16.8636 4.6614C14.1364 4.6614 12.5 6.54537 12.5 8.18173V10.909H10.3182C9.71569 10.909 9.22727 11.3974 9.22727 11.9999V13.0908C9.22727 13.6933 9.71568 14.1817 10.3182 14.1817H12.5V21.8182H3.77273C3.17024 21.8182 2.68182 21.3298 2.68182 20.7273V3.27273C2.68182 2.67024 3.17024 2.18182 3.77273 2.18182H21.2273Z"
+                      fill="white"
+                    /></svg
+                ></a>
+              </div>
+              <div
+                class="border-2 border-solid border-sunset-red rounded-full p-2 bg-sunset-red"
+              >
+                <a
+                  href="https://www.instagram.com/musikkforandrerliv/
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.5 4.8C0.5 2.14903 2.64903 0 5.3 0H19.7C22.3509 0 24.5 2.14903 24.5 4.8V19.2C24.5 21.8509 22.3509 24 19.7 24H5.3C2.64903 24 0.5 21.8509 0.5 19.2V4.8ZM5.3 2.4C3.97452 2.4 2.9 3.47452 2.9 4.8V19.2C2.9 20.5255 3.97452 21.6 5.3 21.6H19.7C21.0255 21.6 22.1 20.5255 22.1 19.2V4.8C22.1 3.47452 21.0255 2.4 19.7 2.4H5.3ZM12.5 8.4C10.5117 8.4 8.9 10.0117 8.9 12C8.9 13.9883 10.5117 15.6 12.5 15.6C14.4883 15.6 16.1 13.9883 16.1 12C16.1 10.0117 14.4883 8.4 12.5 8.4ZM6.5 12C6.5 8.6863 9.1863 6 12.5 6C15.8137 6 18.5 8.6863 18.5 12C18.5 15.3137 15.8137 18 12.5 18C9.1863 18 6.5 15.3137 6.5 12ZM19.1 7.2C20.0941 7.2 20.9 6.39412 20.9 5.4C20.9 4.40588 20.0941 3.6 19.1 3.6C18.1059 3.6 17.3 4.40588 17.3 5.4C17.3 6.39412 18.1059 7.2 19.1 7.2Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!--PP, TC and ©-->
-    <div class="flex justify-center mt-32">
-      <a class="underline pr-6 font-semibold" href="../pages/privacy-policy.html">Privacy Policy</a>
-      <a class="underline pl-6 font-semibold" href="../pages/terms-and-conditions.html">Terms and Conditions</a>
-    </div>
-    <div class="flex justify-center p-6 font-se">&copy;Musikkforandrerliv</div>
-  </footer>
-  <!--Footer end-->
-</body>
-
+      <!--PP, TC and ©-->
+      <div class="flex justify-center mt-32">
+        <a
+          class="underline pr-6 font-semibold"
+          href="../pages/privacy-policy.html"
+          >Privacy Policy</a
+        >
+        <a
+          class="underline pl-6 font-semibold"
+          href="../pages/terms-and-conditions.html"
+          >Terms and Conditions</a
+        >
+      </div>
+      <div class="flex justify-center p-6 font-se">
+        &copy;Musikkforandrerliv
+      </div>
+    </footer>
+    <!--Footer end-->
+  </body>
 </html>
