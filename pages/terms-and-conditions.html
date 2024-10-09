@@ -225,9 +225,49 @@
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur </p>
           </div>
         </div>
-        <div class="mb-10">
-          <p class="flex flex-col max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between">
+        <div class="mb-20">
+          <p class="flex flex-col max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between mb-20">
             Updated: 00 / 00 / 00
+            <!-- Newsletter Subscription -->
+      <section class="bg-sunset-red py-16">
+        <div class="w-full text-center">
+          <h3 class="text-2xl font-semibold mb-6">
+            Subscribe to our newsletter!
+          </h3>
+          <p class="mb-6">
+            Join our newsletter today to, stay updated on our events and
+            projects!
+          </p>
+          <div class="max-w-[452px] mx-auto">
+            <form
+              action="#"
+              method="POST"
+              class="flex justify-center items-center gap-5"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="example@example.com"
+                class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md"
+              />
+
+              <button
+                id="signUpButton"
+                type="submit"
+                class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative border-2 border-white hover:bg-sunset-red hover:text-white transition-all duration-300"
+              >
+                <span id="btnText">Sign Up</span>
+                <div id="loader" class="loader" style="display: none"></div>
+                <span id="checkmark" style="display: none; color: #000000"
+                  >&#10003;</span
+                >
+                <!-- Checkmark -->
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7 ends here -->
       
       <!-- Footer -->
       <footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
