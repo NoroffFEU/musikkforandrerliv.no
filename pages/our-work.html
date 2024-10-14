@@ -26,44 +26,59 @@
 
     <script type="module" src="../js/search.mjs"></script>
 
-    <!-- favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/images/SVGs/favicon.ico"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      sizes="32x32"
-      href="/assets/images/SVGs/favicon.ico"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      sizes="16x16"
-      href="/assets/images/SVGs/favicon.ico"
-    />
-    <link rel="shortcut icon" href="/assets/images/SVGs/favicon.ico" />
-    <!-- favicons -->
-  </head>
 
-  <body>
-    <header
-      class="bg-ourWorkHeroImage bg-cover bg-center h-screen flex flex-col relative"
-    >
-      <!-- Section 1 here - had to work in the header due to hero img -->
-      <div class="flex h-24 items-center justify-between px-10 pt-16">
-        <!-- Had to change mt-6 to pt-16 to remove top margin to fill the hero img, and to try to keep the vertical alignment of the header like it was -->
-        <div class="flex items-center px-4 sm:px-2 md:px-4">
-          <a href="../index.html">
-            <img
-              src="../assets/placeholder-images/logo.png"
-              aria-label="Header Logo"
-              alt="Header Logo"
-              class="w-36 h-36 rounded-full sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mt-3"
-            />
-          </a>
+  <script type="module" src="../js/search.mjs"></script>
+      <!-- favicons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/SVGs/favicon.ico">
+      <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images/SVGs/favicon.ico">
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/SVGs/favicon.ico">
+      <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico">
+      <!-- favicons -->
+</head>
+
+<body>
+
+  <header class="bg-ourWorkHeroImage bg-cover bg-center h-screen flex flex-col relative">
+    <!-- Section 1 here - had to work in the header due to hero img -->
+    <div class="flex h-24 items-center justify-between px-10 pt-16">
+      <!-- Had to change mt-6 to pt-16 to remove top margin to fill the hero img, and to try to keep the vertical alignment of the header like it was -->
+      <div class="flex flex-row items-center gap-10 text-base">
+        <a href="../index.html">
+          <img src="../assets/images/SVGs/headerLogo.svg" aria-label="Header Logo" alt="Header Logo"
+            class="cursor-pointer w-20 h-20" />
+        </a>
+      </div>
+      <nav class="flex flex-row items-center gap-10">
+        <button id="openSearchBarDrawer"
+          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform">
+          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+          <img src="../assets/images/SVGs/Search.svg" class="w-5 h-5 -mr-1" aria-label="Search Button"
+            alt="Search Button" />
+          <span class="text-2xl font-medium">Search</span>
+        </button>
+        <!-- Search Bar Overlay, hidden initially. -->
+        <div id="search-drawer-from-header"
+          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
+          aria-label="search-bar">
+          <h2 id="search-label" class="sr-only">Search Bar</h2>
+          <div class="flex justify-center items-center pt-3">
+            <div class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center">
+              <form class="flex flex-grow">
+                <label for="Search-Drawer" class="sr-only">Search Site</label>
+                <input type="search" class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                  id="Search-Drawer" placeholder="Search..." autocomplete="off" />
+                <button type="submit" class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center">
+                  <img src="../assets/images/SVGs/Search.svg" class="w-4 h-4" aria-label="Search Now Button"
+                    alt="Search Now Button" />
+                </button>
+              </form>
+            </div>
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button id="closeSearchBarDrawer" class="search-drawer_close text-sm pr-5">
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
         </div>
         <nav class="flex flex-row items-center gap-10">
           <button
