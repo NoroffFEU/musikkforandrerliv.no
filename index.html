@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="MMF - Non-profit educational organisation that provide musical education upliftment to children in Madagascar. Learn more and support our work!" />
+    <meta
+      name="description"
+      content="MMF - Non-profit educational organisation that provide musical education upliftment to children in Madagascar. Learn more and support our work!"
+    />
     <title>MMF</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,11 +25,33 @@
     <script type="module" src="js/calendar.mjs"></script>
     <script type="module" src="js/events-list.mjs"></script>
     <script type="module" src="js/search.mjs"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-
-<body class="">
+    <script type="module" src="js/general.mjs"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico" />
+    <!-- favicons -->
+  </head>
+  <body class="">
     <header class="flex h-24 items-center justify-between px-10 mt-6">
       <div class="flex flex-row items-center gap-10 text-base">
         <a href="./index.html">
@@ -107,319 +128,419 @@
             >
               Close
             </button>
-            <!-- Search Bar Overlay, hidden initially. -->
-            <div id="search-drawer-from-header" aria-expanded="false"
-                class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-all duration-500 ease-out z-50"
-                aria-label="search-bar">
-                <h2 id="search-label" class="sr-only">Search Bar</h2>
-                <div class="flex justify-center items-center pt-3">
-                    <div class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center">
-                        <form class="relative flex flex-grow">
-                            <label for="Search-Drawer" class="sr-only">Search Site</label>
-                            <input tabindex="-1" type="search"
-                                class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-                                id="Search-Drawer" placeholder="Search..." autocomplete="off" />
-                            <button tabindex="-1" type="submit"
-                                class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center">
-                                <img src="./assets/images/SVGs/Search.svg" class="w-4 h-4"
-                                    aria-label="Search Now Button" alt="Search Now Button" />
-                            </button>
-                            <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
-                            <div hidden id="search-results" class="absolute w-96 top-10 bg-white border rounded-sm">
-                            </div>
-                            <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
-                        </form>
-                    </div>
-                    <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-                    <button tabindex="-1" id="closeSearchBarDrawer" class="search-drawer_close text-sm pr-5">
-                        Close
-                    </button>
-                    <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-                </div>
-            </div>
-            <a href="./pages/news.html"
-                class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">News</a>
-            <a href="./pages/about-page.html"
-                class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">About Us</a>
-            <div class="relative cursor-pointer hover:scale-105 transition-transform">
-                <div class="flex items-center">
-                    <span class="text-2xl font-medium">More</span>
-                    <img src="./assets/images/SVGs/chevron-down.svg" aria-label="Projects Dropdown Menu"
-                        alt="Projects Dropdown Menu" class="ml-3" />
-                </div>
-                <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-                <div class="absolute hidden mt-2 bg-white">
-                    <a href="#" class="block p-2 border-t border-b border-black hover:bg-gray-100">Project 1</a>
-                    <a href="#" class="block p-2 border-b border-black hover:bg-gray-100">Project 2</a>
-                </div>
-            </div>
-            <button
-                class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal">
-                DONATE
-            </button>
-            <div class="relative flex w-5 h-5 items-center group" id="language-selector">
-                <img src="./assets/images/SVGs/globe-solid.svg" aria-label="Globe Icon For Language Selection"
-                    alt="Language Selection" class="cursor-pointer object-contain h-5 w-5" />
-                <div class="absolute left-0 w-full bg-white" id="language-options">
-                    <a href="#" class="block">
-                        <img src="./assets/images/SVGs/norway.svg" aria-label="Norwegian Flag Language Selection"
-                            alt="Norwegian Flag" class="inline h-6 w-8" />
-                    </a>
-                    <a href="#" class="block">
-                        <img src="./assets/images/SVGs/unitedKingdom.svg" aria-label="English Flag Language Selection"
-                            alt="English Flag" class="inline h-6 w-8" />
-                    </a>
-                    <a href="#" class="block">
-                        <img src="./assets/images/SVGs/madagascar.svg" aria-label="Malagasy Flag Language Selection"
-                            alt="Malagasy Flag" class="inline h-6 w-8" />
-                    </a>
-                </div>
-            </div>
-        </nav>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
+        <a
+          href="./pages/news.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="./pages/about-page.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center">
+            <span class="text-2xl font-medium">More</span>
+            <img
+              src="./assets/images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
+          </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div class="absolute hidden mt-2 bg-white">
+            <a
+              href="#"
+              class="block p-2 border-t border-b border-black hover:bg-gray-100"
+              >Project 1</a
+            >
+            <a
+              href="#"
+              class="block p-2 border-b border-black hover:bg-gray-100"
+              >Project 2</a
+            >
+          </div>
+        </div>
+        <button
+          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
+        >
+          DONATE
+        </button>
+        <div
+          class="relative flex w-5 h-5 items-center group"
+          id="language-selector"
+        >
+          <img
+            src="./assets/images/SVGs/globe-solid.svg"
+            aria-label="Globe Icon For Language Selection"
+            alt="Language Selection"
+            class="cursor-pointer object-contain h-5 w-5 block hover:hidden"
+          />
+          <!-- Testing to see if hover works on live. Remove if this works. -->
+          <div class="relative left-0 w-full bg-white" id="language-options">
+            <a href="#" class="">
+              <img
+                src="./assets/images/SVGs/norway.svg"
+                aria-label="Norwegian Flag Language Selection"
+                alt="Norwegian Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="">
+              <img
+                src="./assets/images/SVGs/unitedKingdom.svg"
+                aria-label="English Flag Language Selection"
+                alt="English Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+            <a href="#" class="block">
+              <img
+                src="./assets/images/SVGs/madagascar.svg"
+                aria-label="Malagasy Flag Language Selection"
+                alt="Malagasy Flag"
+                class="inline h-6 w-8"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <!-- Section 1  -->
-        <section
-            class="bg-[url('../assets/placeholder-images/IMG_3779.webp')] h-screen bg-cover bg-center flex flex-col justify-end items-center">
-            <div class="flex flex-col text-center mb-16 gap-7">
-                <h1 class="font-justAnotherHand text-white text-8xl">
-                    MOZIKA MANOVA FIAINANA
-                </h1>
+      <!-- Section 1  -->
+      <section
+        class="bg-[url('../assets/placeholder-images/IMG_3779.webp')] h-screen bg-cover bg-center flex flex-col justify-end items-center"
+      >
+        <div class="flex flex-col text-center mb-16 gap-7">
+          <h1 class="font-justAnotherHand text-white text-8xl">
+            MOZIKA MANOVA FIAINANA
+          </h1>
 
-                <h2 class="font-sans text-white text-3xl">
-                    MUSIKK FORANDRER LIV - MUSIC CHANGES LIVES
-                </h2>
-            </div>
-        </section>
-        <!-- End Section 1-->
-        <!--Main Content Section 2-->
-        <div id="history" class="flex justify-center my-[100px]">
-            <div class="max-w-[960px] flex flex-col items-center">
-                <h2 class="text-center text-6xl mb-6">History of MMF</h2>
-                <div class="max-h-20 overflow-hidden">
-                    <p class="text-center text-lg">
-                        The MMF's journey began in a modest community center, equipped
-                        with little more than a handful of instruments and a burning
-                        passion to make a difference. Early on, the Foundation focused on
-                        providing free music lessons to children in the local community,
-                        often reaching out to those in under served neighborhoods where
-                        music education was considered a luxury far beyond reach. The
-                        curriculum, crafted with care and expertise, was not merely about
-                        teaching notes and rhythms; it was about instilling confidence,
-                        fostering creativity, and building a sense of community among
-                        young learners. written by Chat GPT -
-                    </p>
-                </div>
-                <button class="reg-button my-10 bg-primary-green text-white">
-                    Read More
-                </button>
-                <div class="max-h-[576px] overflow-hidden">
-                    <img src="/assets/placeholder-images/IMG_4130.webp" alt="Images of three children" />
-                </div>
-            </div>
+          <h2 class="font-sans text-white text-3xl">
+            MUSIKK FORANDRER LIV - MUSIC CHANGES LIVES
+          </h2>
         </div>
-        <!--End Main Content Section 2-->
-        <!-- Main Content Section 3 -->
-        <section class="flex flex-col items-center justify-center my-[100px]">
-            <h2 class="font-justAnotherHand text-[110px] mb-7">Our staff</h2>
-            <!--Card 1-->
-            <div class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden">
-                <div class="flex items-center justify-center w-[340px] h-[340px] bg-cover bg-bottom rounded-l-lg" style="
+      </section>
+      <!-- End Section 1-->
+      <!--Main Content Section 2-->
+      <div id="history" class="flex justify-center my-[100px]">
+        <div class="max-w-[960px] flex flex-col items-center">
+          <h2 class="text-center text-6xl mb-6">History of MMF</h2>
+          <div class="max-h-20 overflow-hidden">
+            <p class="text-center text-lg">
+              The MMF's journey began in a modest community center, equipped
+              with little more than a handful of instruments and a burning
+              passion to make a difference. Early on, the Foundation focused on
+              providing free music lessons to children in the local community,
+              often reaching out to those in under served neighborhoods where
+              music education was considered a luxury far beyond reach. The
+              curriculum, crafted with care and expertise, was not merely about
+              teaching notes and rhythms; it was about instilling confidence,
+              fostering creativity, and building a sense of community among
+              young learners. written by Chat GPT -
+            </p>
+          </div>
+          <button class="reg-button my-10 bg-primary-green text-white">
+            Read More
+          </button>
+          <div class="max-h-[576px] overflow-hidden">
+            <img
+              src="./assets/placeholder-images/IMG_4130.webp"
+              alt="Images of three children"
+            />
+          </div>
+        </div>
+      </div>
+      <!--End Main Content Section 2-->
+      <!-- Main Content Section 3 -->
+      <section class="flex flex-col items-center justify-center my-[100px]">
+        <h2 class="font-justAnotherHand text-[110px] mb-7">Our staff</h2>
+        <!--Card 1-->
+        <div
+          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
+        >
+          <div
+            class="flex items-center justify-center w-[340px] h-[340px] bg-cover bg-bottom rounded-l-lg"
+            style="
               background-image: url('./assets/placeholder-images/IMG_7511.webp');
-            "></div>
-                <div class="w-[636px] p-6 flex flex-col justify-center gap-2">
-                    <p class="font-sans text-base uppercase">Violin Teacher</p>
-                    <p class="font-sans text-[32px] font-semibold">
-                        Eline Rodvelt Hansen
-                    </p>
-                    <p class="font-sans text-lg">
-                        Eline is a violinist and violin teacher, educated at the Grieg
-                        Academy in Bergen. Originally from Sandnes in Rogaland, she has
-                        traveled extensively around the world, playing with musicians on
-                        several continents and in various genres.
-                    </p>
-                </div>
-            </div>
-            <!--Card 1 end-->
-            <!--Card 2-->
-            <div
-                class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden my-20">
-                <div class="flex items-center pb-6 bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
-                    style="
+            "
+          ></div>
+          <div class="w-[636px] p-6 flex flex-col justify-center gap-2">
+            <p class="font-sans text-base uppercase">Violin Teacher</p>
+            <p class="font-sans text-[32px] font-semibold">
+              Eline Rodvelt Hansen
+            </p>
+            <p class="font-sans text-lg">
+              Eline is a violinist and violin teacher, educated at the Grieg
+              Academy in Bergen. Originally from Sandnes in Rogaland, she has
+              traveled extensively around the world, playing with musicians on
+              several continents and in various genres.
+            </p>
+          </div>
+        </div>
+        <!--Card 1 end-->
+        <!--Card 2-->
+        <div
+          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden my-20"
+        >
+          <div
+            class="flex items-center pb-6 bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
+            style="
               background-image: url('./assets/placeholder-images/IMG_3078.webp');
-            "></div>
-                <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
-                    <p class="font-sans text-base uppercase">Piano Teacher</p>
-                    <p class="font-sans text-[32px] font-semibold">
-                        Dina Rasalina Andriamanalina
-                    </p>
-                    <p class="flex-1 h-[167px] font-sans text-lg">
-                        Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021.
-                        Originally from Antsirabe, Madagascar, Dina has rhythm and music
-                        in his blood, having played many instruments since childhood.
-                        However, it was eventually the piano that became his dominant
-                        instrument.
-                    </p>
-                </div>
-            </div>
-            <!--Card 2 end-->
-            <!--Card 3-->
-            <div class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden">
-                <div class="flex items-center justify-center bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
-                    style="
+            "
+          ></div>
+          <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
+            <p class="font-sans text-base uppercase">Piano Teacher</p>
+            <p class="font-sans text-[32px] font-semibold">
+              Dina Rasalina Andriamanalina
+            </p>
+            <p class="flex-1 h-[167px] font-sans text-lg">
+              Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021.
+              Originally from Antsirabe, Madagascar, Dina has rhythm and music
+              in his blood, having played many instruments since childhood.
+              However, it was eventually the piano that became his dominant
+              instrument.
+            </p>
+          </div>
+        </div>
+        <!--Card 2 end-->
+        <!--Card 3-->
+        <div
+          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden"
+        >
+          <div
+            class="flex items-center justify-center bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
+            style="
               background-image: url('./assets/placeholder-images/IMG_7544.webp');
-            "></div>
-                <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
-                    <p class="font-sans text-base uppercase">Nurse</p>
-                    <p class="font-sans text-[32px] font-semibold">
-                        Karoline Hartvigsen
-                    </p>
-                    <p class="h-[123px] flex-1 font-sans text-lg">
-                        Karoline completed her nursing education in 2017 and now works
-                        full-time at a cancer ward at Radiumhospitalet in Oslo. Before her
-                        bachelor's studies, she completed a one-year study in
-                        intercultural understanding at NLA University College Bergen.
-                    </p>
-                </div>
-            </div>
-            <!--Card 3 end-->
-            <!--Card 4-->
-            <div
-                class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden mt-20">
-                <div class="flex items-center bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg" style="
+            "
+          ></div>
+          <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
+            <p class="font-sans text-base uppercase">Nurse</p>
+            <p class="font-sans text-[32px] font-semibold">
+              Karoline Hartvigsen
+            </p>
+            <p class="h-[123px] flex-1 font-sans text-lg">
+              Karoline completed her nursing education in 2017 and now works
+              full-time at a cancer ward at Radiumhospitalet in Oslo. Before her
+              bachelor's studies, she completed a one-year study in
+              intercultural understanding at NLA University College Bergen.
+            </p>
+          </div>
+        </div>
+        <!--Card 3 end-->
+        <!--Card 4-->
+        <div
+          class="flex w-[960px] h-60 items-start gap-2 flex-shrink-0 bg-[#F8EED1] rounded-lg overflow-hidden mt-20"
+        >
+          <div
+            class="flex items-center bg-bottom bg-cover bg-no-repeat w-[340px] h-[340px] rounded-l-lg"
+            style="
               background-image: url('./assets/placeholder-images/IMG_3597.webp');
-            "></div>
-                <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
-                    <p class="font-sans text-base uppercase">Nurse</p>
-                    <p class="font-sans text-[32px] font-semibold">Thea Harbo</p>
-                    <p class="flex-1 font-sans text-lg">
-                        Thea completed her bachelor's degree in nursing in 2017 at
-                        Diakonova University College in Oslo. She lived there for 9 years
-                        before moving back to her hometown, Stavanger. She has work
-                        experience from home nursing care, several years in a pediatric
-                        ward at Rikshospitalet.
-                    </p>
-                </div>
+            "
+          ></div>
+          <div class="w-[636px] p-6 flex flex-col justify-center gap-1">
+            <p class="font-sans text-base uppercase">Nurse</p>
+            <p class="font-sans text-[32px] font-semibold">Thea Harbo</p>
+            <p class="flex-1 font-sans text-lg">
+              Thea completed her bachelor's degree in nursing in 2017 at
+              Diakonova University College in Oslo. She lived there for 9 years
+              before moving back to her hometown, Stavanger. She has work
+              experience from home nursing care, several years in a pediatric
+              ward at Rikshospitalet.
+            </p>
+          </div>
+        </div>
+        <!--Card 4 end-->
+      </section>
+      <!-- End Main Content Section 3-->
+      <!-- Main Content Section 4 -->
+      <section
+        class="home-section4 w-full flex flex-col items-center justify-center gap-20 mb-20"
+      >
+        <div class="w-full flex justify-center bg-mint-green overflow-hidden">
+          <div
+            class="flex justify-center items-center max-w-[1200px] h-[600px] p-[50px] gap-20 overflow-hidden"
+          >
+            <div class="w-[500px] h-[500px] overflow-hidden">
+              <img
+                class="w-full object-cover"
+                src="/assets/placeholder-images/IMG_7419.webp"
+                alt=""
+              />
             </div>
-            <!--Card 4 end-->
-        </section>
-        <!-- End Main Content Section 3-->
-        <!-- Main Content Section 4 -->
-        <section class="home-section4 w-full flex flex-col items-center justify-center gap-20 mb-20">
-            <div class="w-full flex justify-center bg-mint-green overflow-hidden">
-                <div class="flex justify-center items-center max-w-[1200px] h-[600px] p-[50px] gap-20 overflow-hidden">
-                    <div class="w-[500px] h-[500px] overflow-hidden">
-                        <img class="w-full object-cover" src="/assets/placeholder-images/IMG_7419.webp" alt="" />
-                    </div>
-                    <div class="flex flex-col w-[500px] gap-6">
-                        <h2 class="text-[32px] font-semibold">Our work</h2>
-                        <p class="text-lg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse varius enim in eros elementum tristique. Duis
-                            cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                            commodo diam libero vitae erat.
-                        </p>
-                        <div class="flex gap-5">
-                            <button class="uppercase reg-button text-2xl">Read more</button>
-                            <button
-                                class="uppercase reg-button text-2xl bg-white text-sunset-red hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red ;">
-                                Donate
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-col w-[500px] gap-6">
+              <h2 class="text-[32px] font-semibold">Our work</h2>
+              <p class="text-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat.
+              </p>
+              <div class="flex gap-5">
+                <button class="uppercase reg-button text-2xl">Read more</button>
+                <button
+                  class="uppercase reg-button text-2xl bg-white text-sunset-red hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red ;"
+                >
+                  Donate
+                </button>
+              </div>
             </div>
-            <div class="flex justify-center w-full">
-                <div class="w-full flex justify-center">
-                    <div class="flex justify-center items-center max-w-[1200px] h-[600px] gap-20 p-[50px]">
-                        <div class="home-section4-heading-text-button flex flex-col gap-6 w-[500px]">
-                            <h3 id="home-section4-heading" class="text-[32px] font-semibold">
-                                Volunteer
-                            </h3>
-                            <p class="text-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Suspendisse varius enim in eros elementum tristique. Duis
-                                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                                commodo diam libero vitae erat.
-                            </p>
-                            <div class="flex gap-5">
-                                <button class="uppercase reg-button text-2xl">
-                                    Read more
-                                </button>
-                                <button
-                                    class="uppercase reg-button text-2xl bg-sunset-red text-white hover:bg-hover-red focus:text-white focus:bg-sunset-red focus:ring-black">
-                                    Donate
-                                </button>
-                            </div>
-                        </div>
-                        <div id="home-section4-imgContainer" class="w-[500px] h-[500px] overflow-hidden">
-                            <img class="w-full object-cover" src="assets/placeholder-images/IMG_3078.webp"
-                                aria-label="Man playing piano and smiling happily"
-                                alt="Man playing piano and smiling happily" />
-                        </div>
-                    </div>
+          </div>
+        </div>
+        <div class="flex justify-center w-full">
+          <div class="w-full flex justify-center">
+            <div
+              class="flex justify-center items-center max-w-[1200px] h-[600px] gap-20 p-[50px]"
+            >
+              <div
+                class="home-section4-heading-text-button flex flex-col gap-6 w-[500px]"
+              >
+                <h3
+                  id="home-section4-heading"
+                  class="text-[32px] font-semibold"
+                >
+                  Volunteer
+                </h3>
+                <p class="text-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                  commodo diam libero vitae erat.
+                </p>
+                <div class="flex gap-5">
+                  <button class="uppercase reg-button text-2xl">
+                    Read more
+                  </button>
+                  <button
+                    class="uppercase reg-button text-2xl bg-sunset-red text-white hover:bg-hover-red focus:text-white focus:bg-sunset-red focus:ring-black"
+                  >
+                    Donate
+                  </button>
                 </div>
+              </div>
+              <div
+                id="home-section4-imgContainer"
+                class="w-[500px] h-[500px] overflow-hidden"
+              >
+                <img
+                  class="w-full object-cover"
+                  src="assets/placeholder-images/IMG_3078.webp"
+                  aria-label="Man playing piano and smiling happily"
+                  alt="Man playing piano and smiling happily"
+                />
+              </div>
             </div>
-            <div class="flex justify-center w-full bg-mint-green">
-                <div class="flex justify-center items-center max-w-[1200px] h-[600px] gap-20 p-[50px]">
-                    <div id="home-section4-imgContainer" class="w-[500px] h-[500px] overflow-hidden">
-                        <img class="h-full object-cover" src="assets/placeholder-images/IMG_5351.webp"
-                            aria-label="Small chairs with books and toys" alt="Small chairs with books and toys" />
-                    </div>
-                    <div class="home-section4-heading-text-button flex flex-col gap-6 w-[500px]">
-                        <h3 id="home-section4-heading" class="text-[32px] font-semibold">
-                            Support us
-                        </h3>
-                        <p class="text-lg my-6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse varius enim in eros elementum tristique. Duis
-                            cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                            commodo diam libero vitae erat.
-                        </p>
-                        <div class="flex gap-5">
-                            <button class="uppercase reg-button text-2xl">Read more</button>
-                            <button
-                                class="uppercase reg-button text-2xl bg-white text-sunset-red hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red ;">
-                                Donate
-                            </button>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="flex justify-center w-full bg-mint-green">
+          <div
+            class="flex justify-center items-center max-w-[1200px] h-[600px] gap-20 p-[50px]"
+          >
+            <div
+              id="home-section4-imgContainer"
+              class="w-[500px] h-[500px] overflow-hidden"
+            >
+              <img
+                class="h-full object-cover"
+                src="assets/placeholder-images/IMG_5351.webp"
+                aria-label="Small chairs with books and toys"
+                alt="Small chairs with books and toys"
+              />
             </div>
-        </section>
-        <!-- End Main Content Section 4-->
-        <!-- Main Content Section 5 -->
-        <section class="flex flex-col justify-center items-center bg-mint-green gap-4 py-4 mb-20">
-            <div class="grid grid-cols-3 grid-rows-3 gap-4 px-4 max-w-[1200px] max-h-[1300px]">
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_4202.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3597.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_4109.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_4121.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3610.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3568.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3205.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_6437.webp" />
-                </div>
-                <div class="w-[378px] h-[378px]">
-                    <img class="w-full h-full object-cover" src="./assets/placeholder-images/IMG_3628.webp" />
-                </div>
-                <!-- <div class="relative">
+            <div
+              class="home-section4-heading-text-button flex flex-col gap-6 w-[500px]"
+            >
+              <h3 id="home-section4-heading" class="text-[32px] font-semibold">
+                Support us
+              </h3>
+              <p class="text-lg my-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat.
+              </p>
+              <div class="flex gap-5">
+                <button class="uppercase reg-button text-2xl">Read more</button>
+                <button
+                  class="uppercase reg-button text-2xl bg-white text-sunset-red hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red ;"
+                >
+                  Donate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Main Content Section 4-->
+      <!-- Main Content Section 5 -->
+      <section
+        class="flex flex-col justify-center items-center bg-white gap-4 py-4 mb-20"
+      >
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 max-w-[1600px] w-full mx-auto px-3"
+        >
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_4202.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_3597.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_4109.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_4121.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_3610.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_3568.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_3205.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_6437.webp"
+            />
+          </div>
+          <div class="w-full h-[300px] sm:h-[350px] md:h-[380px] lg:h-[420px]">
+            <img
+              class="w-full h-full object-cover"
+              src="./assets/placeholder-images/IMG_3628.webp"
+            />
+          </div>
+          <!-- <div class="relative">
             <img
               class="w-full h-full object-cover"
               src="./assets/placeholder-images/IMG_8979.webp"
@@ -436,142 +557,213 @@
               >
             </div>
           </div> -->
-            </div>
-            <div>
-                <button class="uppercase reg-button text-2xl">See the gallery</button>
-            </div>
-        </section>
-        <!-- End Main Content Section 5 -->
-        <!-- Section 6 -->
-        <section id="events" class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal my-10">
-            <!-- Events -->
-            <div class="row-span-1 col-span-5">
-                <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
-                <ol
-                    class="js-event-list grid gap-5 text-2xl [&_li]:bg-light-red [&_a]:pl-4 [&_li]:py-[3.5px] [&_li]:w-full">
-                </ol>
-            </div>
+        </div>
+        <div>
+          <button class="uppercase reg-button text-2xl">See the gallery</button>
+        </div>
+      </section>
+      <!-- End Main Content Section 5 -->
+      <!-- Section 6 -->
+      <section
+        id="events"
+        class="grid gap-y-12 grid-rows-1 grid-cols-6 relative mx-28 font-normal my-10"
+      >
+        <!-- Events -->
+        <div class="row-span-1 col-span-5">
+          <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
+          <ol
+            class="js-event-list grid gap-5 text-2xl [&_li]:bg-light-red [&_a]:pl-4 [&_li]:py-[3.5px] [&_li]:w-full"
+          ></ol>
+        </div>
 
-            <!-- Calendar -->
+        <!-- Calendar -->
 
+        <div
+          class="calendar-container bg-white absolute top-0 right-0 w-[400px] h-[400px] border border-sunset-red rounded-[30px] shadow-md font-inter"
+        >
+          <header class="calendar-header flex items-center pt-6 px-7 pb-2.5">
             <div
-                class="calendar-container bg-white absolute top-0 right-0 w-[400px] h-[400px] border border-sunset-red rounded-[30px] shadow-md font-inter">
-                <header class="calendar-header flex items-center pt-6 px-7 pb-2.5">
-                    <div class="calendar-navigation flex items-center justify-between w-full px-10">
-                        <span id="calendar-prev"
-                            class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
-                            chevron_left
-                        </span>
-                        <p class="calendar-current-date font-medium"></p>
-                        <span id="calendar-next"
-                            class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red">
-                            chevron_right
-                        </span>
-                    </div>
-                </header>
-
-                <div class="calendar-body p-5 [&_li]:w-[14%] [&_*]:cursor-default">
-                    <ul class="calendar-weekdays list-none flex flex-wrap text-center w-full [&>*]:mb-5">
-                        <li>Sun</li>
-                        <li>Mon</li>
-                        <li>Tue</li>
-                        <li>Wed</li>
-                        <li>Thu</li>
-                        <li>Fri</li>
-                        <li>Sat</li>
-                    </ul>
-                    <ul
-                        class="calendar-dates [&>li]:relative [&>*]:mb-5 flex flex-wrap text-center [&>li.inactive]:text-[#aaa] [&>li]:z-10 [&>li.active]:text-white [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-z-10 [&>li]:before:w-[40px] [&>li]:before:h-[40px] [&>li]:before:top-[50%] [&>li]:before:left-[50%] [&>li]:before:rounded-lg [&>li]:before:-translate-x-[50%] translate [&>li]:before:-translate-y-[50%] [&>li.active]:before:bg-sunset-red hover:[&>li:not(.active)]:before:bg-sunset-red hover:[&>li:not(.active)]:text-white [&>li.event]:before:border">
-                    </ul>
-                </div>
+              class="calendar-navigation flex items-center justify-between w-full px-10"
+            >
+              <span
+                id="calendar-prev"
+                class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red"
+              >
+                chevron_left
+              </span>
+              <p class="calendar-current-date font-medium"></p>
+              <span
+                id="calendar-next"
+                class="material-symbols-rounded hover:text-white cursor-pointer flex items-center justify-center rounded-lg select-none text-sunset-red hover:bg-sunset-red"
+              >
+                chevron_right
+              </span>
             </div>
-        </section>
+          </header>
+          <div class="calendar-body p-5 [&_li]:w-[14%] [&_*]:cursor-default">
+            <ul
+              class="calendar-weekdays list-none flex flex-wrap text-center w-full [&>*]:mb-5"
+            >
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thu</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
+            <ul
+              class="calendar-dates [&>li]:relative [&>*]:mb-5 flex flex-wrap text-center [&>li.inactive]:text-[#aaa] [&>li]:z-10 [&>li.active]:text-white [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-z-10 [&>li]:before:w-[40px] [&>li]:before:h-[40px] [&>li]:before:top-[50%] [&>li]:before:left-[50%] [&>li]:before:rounded-lg [&>li]:before:-translate-x-[50%] translate [&>li]:before:-translate-y-[50%] [&>li.active]:before:bg-sunset-red hover:[&>li:not(.active)]:before:bg-sunset-red hover:[&>li:not(.active)]:text-white [&>li.event]:before:border"
+            ></ul>
+          </div>
+        </div>
+      </section>
 
-        <!-- Section 6 End -->
+      <!-- Section 6 End -->
 
-        <!-- Section 7 starts here -->
-        <!-- Newsletter Subscription -->
-        <section class="bg-sunset-red py-16">
-            <div class="w-full text-center">
-                <h3 class="text-2xl font-semibold mb-6">
-                    Subscribe to our newsletter!
-                </h3>
-                <p class="mb-6">
-                    Join our newsletter today to, stay updated on our events and
-                    projects!
-                </p>
-                <div class="max-w-[452px] mx-auto">
-                    <form action="#" method="POST" class="flex justify-center items-center gap-5">
-                        <input type="email" name="email" placeholder="example@example.com"
-                            class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md" />
-                        <button type="submit"
-                            class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px]">
-                            Sign Up
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- Section 7 ends here -->
+      <!-- Section 7 starts here -->
+      <!-- Newsletter Subscription -->
+      <section class="bg-sunset-red py-16">
+        <div class="w-full text-center">
+          <h3 class="text-2xl font-semibold mb-6">
+            Subscribe to our newsletter!
+          </h3>
+          <p class="mb-6">
+            Join our newsletter today to, stay updated on our events and
+            projects!
+          </p>
+          <div class="max-w-[452px] mx-auto">
+            <form
+              action="#"
+              method="POST"
+              class="flex justify-center items-center gap-5"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="example@example.com"
+                class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md"
+              />
+
+              <button
+                id="signUpButton"
+                type="submit"
+                class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative border-2 border-white hover:bg-sunset-red hover:text-white transition-all duration-300"
+              >
+                <span id="btnText">Sign Up</span>
+                <div id="loader" class="loader" style="display: none"></div>
+                <span id="checkmark" style="display: none; color: #000000"
+                  >&#10003;</span
+                >
+                <!-- Checkmark -->
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7 ends here -->
     </main>
     <!-- Footer -->
-    <footer class="bg-[#363732] text-white p-20 h-auto max-w-full">
-        <a href="./index.html"><img src="/assets/images/SVGs/headerLogo.svg" alt="The logo for MFL" /></a>
-        <!--News and sign up-->
-        <div class="flex justify-between items-start">
-            <div class="flex flex-col items-baseline pt-20">
-                <div class="flex flex-col items-baseline"></div>
+    <footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
+      <div class="flex justify-between">
+        <div class="flex flex-col justify-between gap-10 md:flex-row xl:ml-10">
+          <a href="./index.html">
+            <img
+              src="/assets/images/SVGs/headerLogo.svg"
+              alt="The logo for MFL"
+              class="w-[170px] md:w-[200px] md:-mt-10 pt-20 xl:w-[350px]"
+            />
+          </a>
+          <!--News and sign up-->
+          <!-- Links and button-->
+          <div
+            class="flex flex-col md:flex-row md:gap-10 md:text-sm md:ml-6 md:mt-14 lg:text-xl lg:mt-10 lg:gap-14 lg:ml-28 mt-4 xl:text-3xl xl:ml-40 xl:mt-28"
+          >
+            <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
+              <a href="./pages/about-page.html">About Us</a>
+              <a href="./pages/news.html">News</a>
+              <a href="./pages/event.html">Events</a>
             </div>
-            <!-- Links and button-->
-            <div class="flex flex-col gap-16">
-                <a href="./pages/about-page.html">About Us</a>
-                <a href="./pages/news.html">News</a>
-                <a href="./pages/event.html">Events</a>
+            <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
+              <a href="./pages/gallery-page.html">Gallery</a>
+              <a href="./pages/our-work.html">Our work</a>
+              <a href="./pages/contact-page.html">Contact Us</a>
             </div>
-            <div class="flex flex-col gap-16">
-                <a href="./pages/gallery-page.html">Gallery</a>
-                <a href="./pages/our-work.html">Our work</a>
-                <a href="./pages/contact-page.html">Contact Us</a>
-            </div>
-            <div class="flex flex-col">
-                <a class="alt-button uppercase font-sans text-2xl px-8" href="./pages/support-page.html">donate</a>
-
-                <div class="flex flex-col items-center p-2 mt-12">
-                    <p class="uppercase">follow us</p>
-                    <div class="flex justify-center mt-2">
-                        <div class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-2 mr-2">
-                            <a href="https://www.facebook.com/musicchangeslivesMadagascar
-                    "><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M21.2273 0C23.0348 0 24.5 1.46525 24.5 3.27273V20.7273C24.5 22.5348 23.0348 24 21.2273 24H3.77273C1.96525 24 0.5 22.5348 0.5 20.7273V3.27273C0.5 1.46525 1.96525 0 3.77273 0H21.2273ZM21.2273 2.18182C21.8298 2.18182 22.3182 2.67024 22.3182 3.27273V20.7273C22.3182 21.3298 21.8298 21.8182 21.2273 21.8182H15.7727V14.1817H18.0377C18.5072 14.1817 18.924 13.8813 19.0726 13.4357L19.5559 11.9859C19.7325 11.4561 19.3381 10.909 18.7797 10.909H15.7727V8.72719C15.7727 8.18173 16.3182 7.63628 16.8636 7.63628H19.0455C19.648 7.63628 20.1364 7.14785 20.1364 6.54537V5.79701C20.1364 5.44463 19.9113 5.12869 19.5705 5.03877C18.1405 4.6614 16.8636 4.6614 16.8636 4.6614C14.1364 4.6614 12.5 6.54537 12.5 8.18173V10.909H10.3182C9.71569 10.909 9.22727 11.3974 9.22727 11.9999V13.0908C9.22727 13.6933 9.71568 14.1817 10.3182 14.1817H12.5V21.8182H3.77273C3.17024 21.8182 2.68182 21.3298 2.68182 20.7273V3.27273C2.68182 2.67024 3.17024 2.18182 3.77273 2.18182H21.2273Z"
-                                        fill="white" />
-                                </svg></a>
-                        </div>
-                        <div class="border-2 border-solid border-sunset-red rounded-full p-2 bg-sunset-red">
-                            <a href="https://www.instagram.com/musikkforandrerliv/
-                  ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M0.5 4.8C0.5 2.14903 2.64903 0 5.3 0H19.7C22.3509 0 24.5 2.14903 24.5 4.8V19.2C24.5 21.8509 22.3509 24 19.7 24H5.3C2.64903 24 0.5 21.8509 0.5 19.2V4.8ZM5.3 2.4C3.97452 2.4 2.9 3.47452 2.9 4.8V19.2C2.9 20.5255 3.97452 21.6 5.3 21.6H19.7C21.0255 21.6 22.1 20.5255 22.1 19.2V4.8C22.1 3.47452 21.0255 2.4 19.7 2.4H5.3ZM12.5 8.4C10.5117 8.4 8.9 10.0117 8.9 12C8.9 13.9883 10.5117 15.6 12.5 15.6C14.4883 15.6 16.1 13.9883 16.1 12C16.1 10.0117 14.4883 8.4 12.5 8.4ZM6.5 12C6.5 8.6863 9.1863 6 12.5 6C15.8137 6 18.5 8.6863 18.5 12C18.5 15.3137 15.8137 18 12.5 18C9.1863 18 6.5 15.3137 6.5 12ZM19.1 7.2C20.0941 7.2 20.9 6.39412 20.9 5.4C20.9 4.40588 20.0941 3.6 19.1 3.6C18.1059 3.6 17.3 4.40588 17.3 5.4C17.3 6.39412 18.1059 7.2 19.1 7.2Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div>
+            <!-- button for sm screen-->
+            <a
+              class="alt-button uppercase font-sans text-2xl px-10 md:hidden"
+              href="./pages/support-page.html"
+              >donate</a
+            >
+            <!-- button for sm screen-->
+          </div>
         </div>
-        <!--PP, TC and ©-->
-        <div class="flex justify-center mt-32">
-            <a class="underline pr-6 font-semibold" href="./pages/privacy-policy.html">Privacy Policy</a>
-            <a class="underline pl-6 font-semibold" href="./pages/terms-and-conditions.html">Terms and Conditions</a>
+        <div>
+          <!-- button for md screen-->
+          <a
+            class="alt-button uppercase font-sans text-2xl px-10 hidden md:block md:mr-4 md:my-10 lg:mr-4 xl:mr-24 xl:text-3xl xl:mt-28"
+            href="./pages/support-page.html"
+            >donate</a
+          >
+          <!-- button for md screen-->
+          <p
+            class="uppercase font-bold mt-24 text-2xl md:ml-4 lg:mt-9 xl:ml-8 xl:mt-10"
+          >
+            follow us
+          </p>
+          <div
+            class="flex gap-2 mt-4 w-14 justify-between lg:ml-4 lg:mt-0 lg:gap-0 lg:pl-4"
+          >
+            <a
+              href="https://www.facebook.com/musicchangeslivesMadagascar"
+              class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2 xl:ml-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M21.2273 0C23.0348 0 24.5 1.46525 24.5 3.27273V20.7273C24.5 22.5348 23.0348 24 21.2273 24H3.77273C1.96525 24 0.5 22.5348 0.5 20.7273V3.27273C0.5 1.46525 1.96525 0 3.77273 0H21.2273ZM21.2273 2.18182C21.8298 2.18182 22.3182 2.67024 22.3182 3.27273V20.7273C22.3182 21.3298 21.8298 21.8182 21.2273 21.8182H15.7727V14.1817H18.0377C18.5072 14.1817 18.924 13.8813 19.0726 13.4357L19.5559 11.9859C19.7325 11.4561 19.3381 10.909 18.7797 10.909H15.7727V8.72719C15.7727 8.18173 16.3182 7.63628 16.8636 7.63628H19.0455C19.648 7.63628 20.1364 7.14785 20.1364 6.54537V5.79701C20.1364 5.44463 19.9113 5.12869 19.5705 5.03877C18.1405 4.6614 16.8636 4.6614 16.8636 4.6614C14.1364 4.6614 12.5 6.54537 12.5 8.18173V10.909H10.3182C9.71569 10.909 9.22727 11.3974 9.22727 11.9999V13.0908C9.22727 13.6933 9.71568 14.1817 10.3182 14.1817H12.5V21.8182H3.77273C3.17024 21.8182 2.68182 21.3298 2.68182 20.7273V3.27273C2.68182 2.67024 3.17024 2.18182 3.77273 2.18182H21.2273Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/musikkforandrerliv/"
+              class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.5 4.8C0.5 2.14903 2.64903 0 5.3 0H19.7C22.3509 0 24.5 2.14903 24.5 4.8V19.2C24.5 21.8509 22.3509 24 19.7 24H5.3C2.64903 24 0.5 21.8509 0.5 19.2V4.8ZM5.3 2.4C3.97452 2.4 2.9 3.47452 2.9 4.8V19.2C2.9 20.5255 3.97452 21.6 5.3 21.6H19.7C21.0255 21.6 22.1 20.5255 22.1 19.2V4.8C22.1 3.47452 21.0255 2.4 19.7 2.4H5.3ZM12.5 8.4C10.5117 8.4 8.9 10.0117 8.9 12C8.9 13.9883 10.5117 15.6 12.5 15.6C14.4883 15.6 16.1 13.9883 16.1 12C16.1 10.0117 14.4883 8.4 12.5 8.4ZM6.5 12C6.5 8.6863 9.1863 6 12.5 6C15.8137 6 18.5 8.6863 18.5 12C18.5 15.3137 15.8137 18 12.5 18C9.1863 18 6.5 15.3137 6.5 12ZM19.1 7.2C20.0941 7.2 20.9 6.39412 20.9 5.4C20.9 4.40588 20.0941 3.6 19.1 3.6C18.1059 3.6 17.3 4.40588 17.3 5.4C17.3 6.39412 18.1059 7.2 19.1 7.2Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="flex justify-center p-6 font-se">
-            &copy;Musikkforandrerliv
-        </div>
+      </div>
+      <!--PP, TC and ©-->
+      <div class="flex font-semibold underline justify-center gap-x-12 mt-32">
+        <a href="./pages/privacy-policy.html">Privacy Policy</a>
+        <a href="./pages/terms-and-conditions.html">Terms and Conditions</a>
+      </div>
+      <div class="flex justify-center p-6">&copy;Musikkforandrerliv</div>
     </footer>
     <!--Footer end-->
-</body>
-
+  </body>
 </html>
