@@ -36,13 +36,13 @@
   </head>
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
-      <div class="flex flex-row items-center gap-10 text-base">
+      <div class="flex items-center px-4 sm:px-2 md:px-4">
         <a href="../index.html">
           <img
-            src="../assets/images/SVGs/headerLogo.svg"
+            src="../assets/placeholder-images/logo.png"
             aria-label="Header Logo"
             alt="Header Logo"
-            class="cursor-pointer w-20 h-20"
+            class="w-36 h-36 rounded-full sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mt-3"
           />
         </a>
       </div>
@@ -186,7 +186,7 @@
     <main>
       <!-- Section one starts here -->
       <h1
-        class="text-[200px] font-justAnotherHand text-center py-10 tracking-wider"
+        class="text-[147px] font-justAnotherHand text-center py-10 tracking-wider"
       >
         Latest news
       </h1>
@@ -199,10 +199,13 @@
           />
         </div>
         <div class="text-lg w-[600px]">
-          <h2 class="capitalize text-[70px] font-justAnotherHand py-4">
+          <h2 class="capitalize text-[40px] leading-10 font-sans font-bold py-4">
             MMF annual charity concert
           </h2>
-          <h3 class="text-[25px] pt-10 pb-4">May 20, 2024</h3>
+          <div class="flex justify-between items-center text-center w-full">
+            <p class="text-[18px] pt-6 pb-4">-written by Chat GPT-</p>
+            <h3 class="text-[18px] font-sans pt-6 pb-4 pe-6">May 20, 2024</h3>
+          </div>
           <p class="py-2">
             MMF celebrated its remarkable impact through the universal language
             of music at its Annual Charity Concert, held at the enchanting Le
@@ -218,13 +221,16 @@
             MMF's mission to empower and educate children in Madagascar,
             ensuring the melody of change resonates throughout the community.
           </p>
-          <p class="text-[#CCCCCC] pt-2 pb-6">-written by Chat GPT-</p>
-          <!-- Remove class styles and add style components once component is updated -->
-          <a
-            class="uppercase text-xl font-semibold py-2 px-4 bg-[#F5F5F5] font-justAnotherHand rounded-xl"
-            href="#"
-            >Read more</a
-          >
+         
+          <div class="mt-6">
+            <a
+              class="uppercase font-semibold font-sans w-[215px] h-[57px] border border-black rounded-[9px] text-black bg-transparent px-[22px] py-[13px] hover:bg-black hover:text-white text-[24px] mt-6"
+              href="#"
+              >Read more</a
+            >
+          </div>
+      
+
         </div>
       </section>
       <!-- Section one ends here -->
