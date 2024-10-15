@@ -23,15 +23,37 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" src="../js/search.mjs"></script>
-    <script  type="module" src="/js/modals.mjs"></script>
+    <script type="module" src="/js/modals.mjs"></script>
+    <script type="module" src="js/toggleMenu.mjs"></script>
 
-
-      <!-- favicons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/SVGs/favicon.ico">
-      <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico">
-      <!-- favicons -->
+    <!-- favicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico" />
+    <!-- favicons -->
   </head>
   <body>
     <header class="flex h-24 items-center justify-between px-10 mt-6">
@@ -286,14 +308,16 @@
         </div>
         <!-- Volunteer modal -->
         <div
-          class="volunteer-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden" id="volunteer-modal"
+          class="volunteer-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+          id="volunteer-modal"
         >
           <!-- Not displayed(hidden) initially until volunteer-form-btn is clicked -->
           <div
             class="modal-content w-[1346px] h-[864px] bg-white flex flex-col items-center relative"
           >
             <i
-              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4" id="volunteer-close-icon"
+              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+              id="volunteer-close-icon"
             ></i>
             <!-- Add JS - close modal when clicking icon -->
             <div
@@ -410,7 +434,8 @@
           <hr class="text-[#00000030] mb-10 mt-5" />
           <!-- Remove class style and add style component once component is updated -->
           <button
-            class="block py-1 px-3 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px]" id="donation-form-btn"
+            class="block py-1 px-3 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px]"
+            id="donation-form-btn"
           >
             Go to form
           </button>
@@ -418,14 +443,16 @@
         </div>
         <!-- Donation modal -->
         <div
-          class="donation-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden" id="donation-modal"
+          class="donation-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+          id="donation-modal"
         >
           <!-- Not displayed(hidden) initially until volunteer-form-btn is clicked -->
           <div
             class="modal-content w-[1346px] h-[1287px] bg-white flex flex-col items-center relative"
           >
             <i
-              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4" id="donation-close-icon"
+              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+              id="donation-close-icon"
             ></i>
             <!-- Add JS - close modal when clicking icon -->
             <div
@@ -613,21 +640,24 @@
           <hr class="text-[#00000030] mb-10 mt-5" />
           <!-- Remove class style and add style component once component is updated -->
           <button
-            class="block py-1 px-3 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px]" id="fundraising-form-btn"
+            class="block py-1 px-3 bg-sunset-red text-white uppercase font-justAnotherHand text-xl rounded-[9px]"
+            id="fundraising-form-btn"
           >
             Go to form
           </button>
         </div>
         <!-- Fundraiser modal -->
         <div
-          class="fundraiser-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden" id="fundraiser-modal"
+          class="fundraiser-modal flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.7)] absolute top-0 right-0 hidden"
+          id="fundraiser-modal"
         >
           <!-- Not displayed(hidden) initially until volunteer-form-btn is clicked -->
           <div
             class="modal-content w-[1346px] h-[864px] bg-white flex flex-col items-center relative"
           >
             <i
-              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4" id="fundraising-close-icon"
+              class="fa-solid fa-x text-dark-green text-3xl ml-auto pt-8 pr-8 cursor-pointer absolute top-4 right-4"
+              id="fundraising-close-icon"
             ></i>
             <!-- Add JS - close modal when clicking icon -->
             <div
@@ -749,107 +779,107 @@
       </section>
     </main>
     <!-- Main section ends here -->
-        <!-- Footer -->
-      <footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
-        <div class="flex justify-between">
-          <div class="flex flex-col justify-between gap-10 md:flex-row xl:ml-10">
-            <a href="../index.html">
-              <img
-                src="/assets/images/SVGs/headerLogo.svg"
-                alt="The logo for MFL"
-                class="w-[170px] md:w-[200px] md:-mt-10 pt-20 xl:w-[350px]"
-              />
-            </a>
-            <!--News and sign up-->
-            <!-- Links and button-->
-            <div
-              class="flex flex-col md:flex-row md:gap-10 md:text-sm md:ml-6 md:mt-14 lg:text-xl lg:mt-10 lg:gap-14 lg:ml-28 mt-4 xl:text-3xl xl:ml-40 xl:mt-28"
-            >
-              <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
-                <a href="../pages/about-page.html">About Us</a>
-                <a href="../pages/news.html">News</a>
-                <a href="../pages/event.html">Events</a>
-              </div>
-              <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
-                <a href="../pages/gallery-page.html">Gallery</a>
-                <a href="../pages/our-work.html">Our work</a>
-                <a href="../pages/contact-page.html">Contact Us</a>
-              </div>
+    <!-- Footer -->
+    <footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
+      <div class="flex justify-between">
+        <div class="flex flex-col justify-between gap-10 md:flex-row xl:ml-10">
+          <a href="../index.html">
+            <img
+              src="/assets/images/SVGs/headerLogo.svg"
+              alt="The logo for MFL"
+              class="w-[170px] md:w-[200px] md:-mt-10 pt-20 xl:w-[350px]"
+            />
+          </a>
+          <!--News and sign up-->
+          <!-- Links and button-->
+          <div
+            class="flex flex-col md:flex-row md:gap-10 md:text-sm md:ml-6 md:mt-14 lg:text-xl lg:mt-10 lg:gap-14 lg:ml-28 mt-4 xl:text-3xl xl:ml-40 xl:mt-28"
+          >
+            <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
+              <a href="../pages/about-page.html">About Us</a>
+              <a href="../pages/news.html">News</a>
+              <a href="../pages/event.html">Events</a>
             </div>
-            <div>
-              <!-- button for sm screen-->
-              <a
-                class="alt-button uppercase font-sans text-2xl px-10 md:hidden"
-                href="../pages/support-page.html"
-                >donate</a
-              >
-              <!-- button for sm screen-->
+            <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
+              <a href="../pages/gallery-page.html">Gallery</a>
+              <a href="../pages/our-work.html">Our work</a>
+              <a href="../pages/contact-page.html">Contact Us</a>
             </div>
           </div>
           <div>
-            <!-- button for md screen-->
+            <!-- button for sm screen-->
             <a
-              class="alt-button uppercase font-sans text-2xl px-10 hidden md:block md:mr-4 md:my-10 lg:mr-4 xl:mr-24 xl:text-3xl xl:mt-28"
+              class="alt-button uppercase font-sans text-2xl px-10 md:hidden"
               href="../pages/support-page.html"
               >donate</a
             >
-            <!-- button for md screen-->
-            <p
-              class="uppercase font-bold mt-24 text-2xl md:ml-4 lg:mt-9 xl:ml-8 xl:mt-10"
-            >
-              follow us
-            </p>
-            <div
-              class="flex gap-2 mt-4 w-14 justify-between lg:ml-4 lg:mt-0 lg:gap-0 lg:pl-4"
-            >
-              <a
-                href="https://www.facebook.com/musicchangeslivesMadagascar"
-                class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2 xl:ml-4"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M21.2273 0C23.0348 0 24.5 1.46525 24.5 3.27273V20.7273C24.5 22.5348 23.0348 24 21.2273 24H3.77273C1.96525 24 0.5 22.5348 0.5 20.7273V3.27273C0.5 1.46525 1.96525 0 3.77273 0H21.2273ZM21.2273 2.18182C21.8298 2.18182 22.3182 2.67024 22.3182 3.27273V20.7273C22.3182 21.3298 21.8298 21.8182 21.2273 21.8182H15.7727V14.1817H18.0377C18.5072 14.1817 18.924 13.8813 19.0726 13.4357L19.5559 11.9859C19.7325 11.4561 19.3381 10.909 18.7797 10.909H15.7727V8.72719C15.7727 8.18173 16.3182 7.63628 16.8636 7.63628H19.0455C19.648 7.63628 20.1364 7.14785 20.1364 6.54537V5.79701C20.1364 5.44463 19.9113 5.12869 19.5705 5.03877C18.1405 4.6614 16.8636 4.6614 16.8636 4.6614C14.1364 4.6614 12.5 6.54537 12.5 8.18173V10.909H10.3182C9.71569 10.909 9.22727 11.3974 9.22727 11.9999V13.0908C9.22727 13.6933 9.71568 14.1817 10.3182 14.1817H12.5V21.8182H3.77273C3.17024 21.8182 2.68182 21.3298 2.68182 20.7273V3.27273C2.68182 2.67024 3.17024 2.18182 3.77273 2.18182H21.2273Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/musikkforandrerliv/"
-                class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.5 4.8C0.5 2.14903 2.64903 0 5.3 0H19.7C22.3509 0 24.5 2.14903 24.5 4.8V19.2C24.5 21.8509 22.3509 24 19.7 24H5.3C2.64903 24 0.5 21.8509 0.5 19.2V4.8ZM5.3 2.4C3.97452 2.4 2.9 3.47452 2.9 4.8V19.2C2.9 20.5255 3.97452 21.6 5.3 21.6H19.7C21.0255 21.6 22.1 20.5255 22.1 19.2V4.8C22.1 3.47452 21.0255 2.4 19.7 2.4H5.3ZM12.5 8.4C10.5117 8.4 8.9 10.0117 8.9 12C8.9 13.9883 10.5117 15.6 12.5 15.6C14.4883 15.6 16.1 13.9883 16.1 12C16.1 10.0117 14.4883 8.4 12.5 8.4ZM6.5 12C6.5 8.6863 9.1863 6 12.5 6C15.8137 6 18.5 8.6863 18.5 12C18.5 15.3137 15.8137 18 12.5 18C9.1863 18 6.5 15.3137 6.5 12ZM19.1 7.2C20.0941 7.2 20.9 6.39412 20.9 5.4C20.9 4.40588 20.0941 3.6 19.1 3.6C18.1059 3.6 17.3 4.40588 17.3 5.4C17.3 6.39412 18.1059 7.2 19.1 7.2Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-            </div>
+            <!-- button for sm screen-->
           </div>
         </div>
-        <!--PP, TC and ©-->
-        <div class="flex font-semibold underline justify-center gap-x-12 mt-32">
-          <a href="../pages/privacy-policy.html">Privacy Policy</a>
-          <a href="../pages/terms-and-conditions.html">Terms and Conditions</a>
+        <div>
+          <!-- button for md screen-->
+          <a
+            class="alt-button uppercase font-sans text-2xl px-10 hidden md:block md:mr-4 md:my-10 lg:mr-4 xl:mr-24 xl:text-3xl xl:mt-28"
+            href="../pages/support-page.html"
+            >donate</a
+          >
+          <!-- button for md screen-->
+          <p
+            class="uppercase font-bold mt-24 text-2xl md:ml-4 lg:mt-9 xl:ml-8 xl:mt-10"
+          >
+            follow us
+          </p>
+          <div
+            class="flex gap-2 mt-4 w-14 justify-between lg:ml-4 lg:mt-0 lg:gap-0 lg:pl-4"
+          >
+            <a
+              href="https://www.facebook.com/musicchangeslivesMadagascar"
+              class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2 xl:ml-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M21.2273 0C23.0348 0 24.5 1.46525 24.5 3.27273V20.7273C24.5 22.5348 23.0348 24 21.2273 24H3.77273C1.96525 24 0.5 22.5348 0.5 20.7273V3.27273C0.5 1.46525 1.96525 0 3.77273 0H21.2273ZM21.2273 2.18182C21.8298 2.18182 22.3182 2.67024 22.3182 3.27273V20.7273C22.3182 21.3298 21.8298 21.8182 21.2273 21.8182H15.7727V14.1817H18.0377C18.5072 14.1817 18.924 13.8813 19.0726 13.4357L19.5559 11.9859C19.7325 11.4561 19.3381 10.909 18.7797 10.909H15.7727V8.72719C15.7727 8.18173 16.3182 7.63628 16.8636 7.63628H19.0455C19.648 7.63628 20.1364 7.14785 20.1364 6.54537V5.79701C20.1364 5.44463 19.9113 5.12869 19.5705 5.03877C18.1405 4.6614 16.8636 4.6614 16.8636 4.6614C14.1364 4.6614 12.5 6.54537 12.5 8.18173V10.909H10.3182C9.71569 10.909 9.22727 11.3974 9.22727 11.9999V13.0908C9.22727 13.6933 9.71568 14.1817 10.3182 14.1817H12.5V21.8182H3.77273C3.17024 21.8182 2.68182 21.3298 2.68182 20.7273V3.27273C2.68182 2.67024 3.17024 2.18182 3.77273 2.18182H21.2273Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/musikkforandrerliv/"
+              class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.5 4.8C0.5 2.14903 2.64903 0 5.3 0H19.7C22.3509 0 24.5 2.14903 24.5 4.8V19.2C24.5 21.8509 22.3509 24 19.7 24H5.3C2.64903 24 0.5 21.8509 0.5 19.2V4.8ZM5.3 2.4C3.97452 2.4 2.9 3.47452 2.9 4.8V19.2C2.9 20.5255 3.97452 21.6 5.3 21.6H19.7C21.0255 21.6 22.1 20.5255 22.1 19.2V4.8C22.1 3.47452 21.0255 2.4 19.7 2.4H5.3ZM12.5 8.4C10.5117 8.4 8.9 10.0117 8.9 12C8.9 13.9883 10.5117 15.6 12.5 15.6C14.4883 15.6 16.1 13.9883 16.1 12C16.1 10.0117 14.4883 8.4 12.5 8.4ZM6.5 12C6.5 8.6863 9.1863 6 12.5 6C15.8137 6 18.5 8.6863 18.5 12C18.5 15.3137 15.8137 18 12.5 18C9.1863 18 6.5 15.3137 6.5 12ZM19.1 7.2C20.0941 7.2 20.9 6.39412 20.9 5.4C20.9 4.40588 20.0941 3.6 19.1 3.6C18.1059 3.6 17.3 4.40588 17.3 5.4C17.3 6.39412 18.1059 7.2 19.1 7.2Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="flex justify-center p-6">&copy;Musikkforandrerliv</div>
-      </footer>
-      <!--Footer end-->
-    </body>
-  </html>
+      </div>
+      <!--PP, TC and ©-->
+      <div class="flex font-semibold underline justify-center gap-x-12 mt-32">
+        <a href="../pages/privacy-policy.html">Privacy Policy</a>
+        <a href="../pages/terms-and-conditions.html">Terms and Conditions</a>
+      </div>
+      <div class="flex justify-center p-6">&copy;Musikkforandrerliv</div>
+    </footer>
+    <!--Footer end-->
+  </body>
+</html>
