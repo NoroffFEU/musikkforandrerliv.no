@@ -24,161 +24,211 @@
     />
     <script type="module" src="../js/search.mjs"></script>
     <script type="module" src="../js/general.mjs"></script>
-  </head>
+<script type="module" src="../js/toggleMenu.mjs"></script>
+    
 
+
+      <!-- favicons -->
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+      <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/SVGs/favicon.ico">
+      <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images/SVGs/favicon.ico">
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/SVGs/favicon.ico">
+      <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico">
+      <!-- favicons -->
+
+  </head>
   <body>
-    <header class="flex h-24 items-center justify-between px-10 mt-6">
-      <div class="flex flex-row items-center gap-10 text-base">
-        <a href="../index.html">
-          <img
-            src="../assets/images/SVGs/headerLogo.svg"
-            aria-label="Header Logo"
-            alt="Header Logo"
-            class="cursor-pointer w-20 h-20"
-          />
-        </a>
-      </div>
-      <nav class="flex flex-row items-center gap-10">
-        <button
-          id="openSearchBarDrawer"
-          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
-        >
-          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-          <img
-            src="../assets/images/SVGs/Search.svg"
-            class="w-5 h-5 -mr-1"
-            aria-label="Search Button"
-            alt="Search Button"
-          />
-          <span class="text-2xl font-medium">Search</span>
-        </button>
-        <!-- Search Bar Overlay, hidden initially. -->
-        <div
-          id="search-drawer-from-header"
-          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
-          aria-label="search-bar"
-        >
-          <h2 id="search-label" class="sr-only">Search Bar</h2>
-          <div class="flex justify-center items-center pt-3">
-            <div
-              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-            >
-              <form class="flex flex-grow">
-                <label for="Search-Drawer" class="sr-only">Search Site</label>
-                <input
-                  type="search"
-                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-                  id="Search-Drawer"
-                  placeholder="Search..."
-                  autocomplete="off"
-                />
-                <button
-                  type="submit"
-                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/images/SVGs/Search.svg"
-                    class="w-4 h-4"
-                    aria-label="Search Now Button"
-                    alt="Search Now Button"
-                  />
-                </button>
-              </form>
-            </div>
-            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-            <button
-              id="closeSearchBarDrawer"
-              class="search-drawer_close text-sm pr-5"
-            >
-              Close
-            </button>
-            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-          </div>
-        </div>
-        <a
-          href="./news.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >News</a
-        >
-        <a
-          href="./about-page.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >About Us</a
-        >
-        <div
-          class="relative cursor-pointer hover:scale-105 transition-transform"
-        >
-          <div class="flex items-center">
-            <span class="text-2xl font-medium">More</span>
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center gap-10 px-5 w-[92%] mx-auto"
+      >
+        <div>
+          <a href="../index.html">
             <img
-              src="../assets/images/SVGs/chevron-down.svg"
-              aria-label="Projects Dropdown Menu"
-              alt="Projects Dropdown Menu"
-              class="ml-3"
+              src="../assets/images/SVGs/headerLogo.svg"
+              aria-label="Header Logo"
+              alt="Header Logo"
+              class="cursor-pointer w-16 py-2"
             />
-          </div>
-          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-          <div class="absolute hidden mt-2 bg-white">
-            <a
-              href="#"
-              class="block p-2 border-t border-b border-black hover:bg-gray-100"
-              >Project 1</a
-            >
-            <a
-              href="#"
-              class="block p-2 border-b border-black hover:bg-gray-100"
-              >Project 2</a
-            >
-          </div>
+          </a>
         </div>
-        <button
-          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
-        >
-          DONATE
-        </button>
+
         <div
-          class="relative flex w-5 h-5 items-center group"
-          id="language-selector"
+          class="nav-links duration-500 lg:static absolute bg-white lg:min-h-fit min-h-[60vh] left-0 top-[-100%] lg:w-auto w-full flex items-center justify-center p-5"
         >
-          <img
-            src="../assets/images/SVGs/globe-solid.svg"
-            aria-label="Globe Icon For Language Selection"
-            alt="Language Selection"
-            class="cursor-pointer object-contain h-5 w-5"
-          />
-          <div class="absolute left-0 w-full bg-white" id="language-options">
-            <a href="#" class="block">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <button
+              id="openSearchBarDrawer"
+              class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+            >
+              <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
               <img
-                src="../assets/images/SVGs/norway.svg"
-                aria-label="Norwegian Flag Language Selection"
-                alt="Norwegian Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/Search.svg"
+                class="w-5 h-5 -mr-1"
+                aria-label="Search Button"
+                alt="Search Button"
               />
-            </a>
-            <a href="#" class="block">
+              <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                >Search</span
+              >
+            </button>
+            <!-- Search Bar Overlay, hidden initially. -->
+            <div
+              id="search-drawer-from-header"
+              class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+              aria-label="search-bar"
+            >
+              <h2 id="search-label" class="sr-only">Search Bar</h2>
+              <div class="flex justify-center items-center pt-3">
+                <div
+                  class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+                >
+                  <form class="flex flex-grow">
+                    <label for="Search-Drawer" class="sr-only"
+                      >Search Site</label
+                    >
+                    <input
+                      type="search"
+                      class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                      id="Search-Drawer"
+                      placeholder="Search..."
+                      autocomplete="off"
+                    />
+                    <button
+                      type="submit"
+                      class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                    >
+                      <img
+                        src="../assets/images/SVGs/Search.svg"
+                        class="w-4 h-4"
+                        aria-label="Search Now Button"
+                        alt="Search Now Button"
+                      />
+                    </button>
+                    <<<<<<< Updated upstream =======
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
+                    <div
+                      hidden
+                      id="search-results"
+                      class="absolute w-96 top-10 bg-white border rounded-sm"
+                    ></div>
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
+                    >>>>>>> Stashed changes
+                  </form>
+                </div>
+                <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+                <button
+                  id="closeSearchBarDrawer"
+                  class="search-drawer_close text-sm pr-5"
+                >
+                  Close
+                </button>
+                <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+              </div>
+            </div>
+            <a
+              href="./pages/news.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >News</a
+            >
+            <a
+              href="./pages/about-page.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >About Us</a
+            >
+            <div
+              class="relative cursor-pointer hover:scale-105 transition-transform"
+            >
+              <div class="flex items-center">
+                <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                  >More</span
+                >
+                <img
+                  src="../assets/images/SVGs/chevron-down.svg"
+                  aria-label="Projects Dropdown Menu"
+                  alt="Projects Dropdown Menu"
+                  class="ml-3"
+                />
+              </div>
+              <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+              <div class="absolute hidden mt-2 bg-white">
+                <a
+                  href="#"
+                  class="block p-2 border-t border-b border-black hover:bg-gray-100"
+                  >Project 1</a
+                >
+                <a
+                  href="#"
+                  class="block p-2 border-b border-black hover:bg-gray-100"
+                  >Project 2</a
+                >
+              </div>
+            </div>
+            <button
+              class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-lg sm:text-xl md:text-2xl font-normal"
+            >
+              DONATE
+            </button>
+            <div
+              class="relative flex w-5 h-5 items-center group"
+              id="language-selector"
+            >
               <img
-                src="../assets/images/SVGs/unitedKingdom.svg"
-                aria-label="English Flag Language Selection"
-                alt="English Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/globe-solid.svg"
+                aria-label="Globe Icon For Language Selection"
+                alt="Language Selection"
+                class="cursor-pointer object-contain h-5 w-5"
               />
-            </a>
-            <a href="#" class="block">
-              <img
-                src="../assets/images/SVGs/madagascar.svg"
-                aria-label="Malagasy Flag Language Selection"
-                alt="Malagasy Flag"
-                class="inline h-6 w-8"
-              />
-            </a>
+              <div
+                class="absolute left-0 w-full bg-white"
+                id="language-options"
+              >
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/norway.svg"
+                    aria-label="Norwegian Flag Language Selection"
+                    alt="Norwegian Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/unitedKingdom.svg"
+                    aria-label="English Flag Language Selection"
+                    alt="English Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/madagascar.svg"
+                    aria-label="Malagasy Flag Language Selection"
+                    alt="Malagasy Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <ion-icon
+          name="menu"
+          class="text-3xl cursor-pointer lg:hidden menu-icon"
+        >
+        </ion-icon>
       </nav>
     </header>
     <main>
       <!-- Section one starts here -->
       <h1
-        class="text-[200px] font-justAnotherHand text-center py-10 tracking-wider"
+        class="text-[147px] font-justAnotherHand text-center py-10 tracking-wider"
       >
         Latest news
       </h1>
@@ -191,10 +241,13 @@
           />
         </div>
         <div class="text-lg w-[600px]">
-          <h2 class="capitalize text-[70px] font-justAnotherHand py-4">
+          <h2 class="capitalize text-[40px] leading-10 font-sans font-bold py-4">
             MMF annual charity concert
           </h2>
-          <h3 class="text-[25px] pt-10 pb-4">May 20, 2024</h3>
+          <div class="flex justify-between items-center text-center w-full">
+            <p class="text-[18px] pt-6 pb-4">-written by Chat GPT-</p>
+            <h3 class="text-[18px] font-sans pt-6 pb-4 pe-6">May 20, 2024</h3>
+          </div>
           <p class="py-2">
             MMF celebrated its remarkable impact through the universal language
             of music at its Annual Charity Concert, held at the enchanting Le
@@ -210,6 +263,7 @@
             MMF's mission to empower and educate children in Madagascar,
             ensuring the melody of change resonates throughout the community.
           </p>
+
           <p class="text-[#CCCCCC] pt-2 pb-6">-written by Chat GPT-</p>
           <!-- Remove class styles and add style components once component is updated -->
            <div class="mt-6">
@@ -256,24 +310,24 @@
           <div class="h-[564px] w-[324px] overflow-hidden rounded bg-white">
             <img
               class="w-[341px] h-[333px] -top-9 -left-10 gap-0"
-              src="/assets/placeholder-images/IMG_6438.webp"
+              src="../assets/placeholder-images/IMG_6438.webp"
               alt="To children smiling, one with a violin"
             />
             <div class="px-6 py-4 flex items-center">
               <div class="font-sans">
-                <p class="text-base font-normal leading-6 uppercase">events</p>
+                <p class="text-sm font-normal leading-6 uppercase">June 10, 2024</p>
                 <div class="flex">
-                  <p class="text-3xl font-medium leading-8 tracking-wider">
+                  <p class="text-3xl font-freeMan font-bold leading-8 tracking-wider">
                     Run for Music 5k Charity Race
                   </p>
                   <a href="#"
                     ><img
                       class="ml-10 mt-2 w-4 h-5"
-                      src="/assets/placeholder-images/Arrow-forward-circle.png"
+                      src="../assets/placeholder-images/Arrow-forward-circle.png"
                       alt="clickable arrow pointing to the right"
                   /></a>
                 </div>
-                <p class="mt-10 text-xl leading-8">June 10, 2024</p>
+                <p class="mt-10 text-xl leading-4">A fun and energetic 5K run where participants are encouraged to dress as their favorite musicians or music icons. Live bands along the route will keep the energy high.</p>
               </div>
             </div>
           </div>
@@ -281,24 +335,24 @@
           <div class="w-[320px] h-[564px] overflow-hidden rounded bg-white">
             <img
               class="w-[340px] h-[340px] -top-9 -left-10 gap-0"
-              src="/assets/placeholder-images/IMG_3078.webp"
+              src="../assets/placeholder-images/IMG_3078.webp"
               alt="Teacher playing keyboard"
             />
             <div class="px-6 py-4">
               <div class="font-sans">
-                <p class="text-base font-normal leading-6 uppercase">events</p>
+                <p class="text-sm font-normal leading-6 uppercase">August 25, 2024</p>
                 <div class="flex">
-                  <p class="text-3xl font-medium leading-8 tracking-wider">
+                  <p class="text-3xl font-freeMan font-bold leading-8 tracking-wider">
                     Back-to-School Fundraiser Gala
                   </p>
                   <a href="#"
                     ><img
                       class="ml-10 mt-0 w-4 h-5"
-                      src="/assets/placeholder-images/Arrow-forward-circle.png"
+                      src="../assets/placeholder-images/Arrow-forward-circle.png"
                       alt="clickable arrow pointing to the right"
                   /></a>
                 </div>
-                <p class="mt-1 text-xl leading-8">August 25, 2024</p>
+                <p class="mt-10 text-xl leading-4">A sophisticated gala event to celebrate the beginning of the new school year, featuring student performances, a keynote speaker on the importance of music education, and a fundraising auction. </p>
               </div>
             </div>
           </div>
@@ -308,24 +362,24 @@
           >
             <img
               class="w-[340px] h-[340px] -top-9 -left-10 gap-0"
-              src="/assets/placeholder-images/IMG_7542.webp"
+              src="../assets/placeholder-images/IMG_7542.webp"
               alt="Teacher teaching three children violin"
             />
             <div class="px-6 py-4">
               <div class="font-sans">
-                <p class="text-base font-normal leading-6 uppercase">events</p>
+                <p class="text-sm font-normal leading-6 uppercase">November 25, 2024</p>
                 <div class="flex">
-                  <p class="text-3xl font-medium leading-8 tracking-wider">
+                  <p class="text-3xl font-freeMan font-bold leading-8 tracking-wider">
                     Holiday Giving Campaign Kickoff
                   </p>
                   <a href="#"
                     ><img
                       class="ml-10 mt-0 w-4 h-5"
-                      src="/assets/placeholder-images/Arrow-forward-circle.png"
+                      src="../assets/placeholder-images/Arrow-forward-circle.png"
                       alt="clickable arrow pointing to the right"
                   /></a>
                 </div>
-                <p class="text-xl leading-8">November 25, 2024</p>
+                <p class="mt-10 text-xl leading-4">Launch a season of giving with a concert and community gathering. This event will feature holiday music from around the world and launch a campaign for donations of instruments and funds.</p>
               </div>
             </div>
           </div>
@@ -382,60 +436,59 @@
             <div class="flex gap-[70px] w-max">
               <img
                 class="absolute self-center cursor-pointer hidden"
-                src="/assets/placeholder-images/Arrow-forward-circle (1).png"
+                src="../assets/placeholder-images/Arrow-forward-circle (1).png"
                 alt=""
               />
               <img
                 class="absolute self-center right-16 cursor-pointer"
-                src="/assets/placeholder-images/Arrow-forward-circle.png"
+                src="../assets/placeholder-images/Arrow-forward-circle.png"
                 alt=""
               />
               <div class="w-[478px] h-[533px]">
                 <img
                   class="w-full h-full object-cover"
-                  src="/assets/placeholder-images/IMG_8979.webp"
+                  src="../assets/placeholder-images/IMG_8979.webp"
                   alt=""
                 />
               </div>
               <div class="w-[478px] h-[533px]">
                 <img
                   class="w-full h-full object-cover"
-                  src="/assets/placeholder-images/IMG_3568.webp"
+                  src="../assets/placeholder-images/IMG_3568.webp"
                   alt=""
                 />
               </div>
               <div class="w-[478px] h-[533px]">
                 <img
                   class="w-full h-full object-cover"
-                  src="/assets/placeholder-images/IMG_3078.webp"
+                  src="../assets/placeholder-images/IMG_3078.webp"
                   alt=""
                 />
               </div>
               <div class="w-[478px] h-[533px]">
                 <img
                   class="w-full h-full object-cover"
-                  src="/assets/placeholder-images/IMG_4202.webp"
+                  src="../assets/placeholder-images/IMG_4202.webp"
                   alt=""
                 />
               </div>
               <div class="w-[478px] h-[533px]">
                 <img
                   class="w-full h-full object-cover"
-                  src="/assets/placeholder-images/IMG_7425.webp"
+                  src="../assets/placeholder-images/IMG_7425.webp"
                   alt=""
                 />
               </div>
               <div class="w-[478px] h-[533px]">
                 <img
                   class="w-full h-full object-cover"
-                  src="/assets/placeholder-images/IMG_1457.webp"
+                  src="../assets/placeholder-images/IMG_1457.webp"
                   alt=""
                 />
               </div>
             </div>
           </div>
         </div>
-
 
         <!-- Newsletter Subscription -->
       <section class="bg-sunset-red py-16">
@@ -478,15 +531,13 @@
       </section>
     </main>
     <!-- Section 4 End -->
-
-
     <!-- Footer -->
     <footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
       <div class="flex justify-between">
         <div class="flex flex-col justify-between gap-10 md:flex-row xl:ml-10">
           <a href="../index.html">
             <img
-              src="/assets/images/SVGs/headerLogo.svg"
+              src="../assets/images/SVGs/headerLogo.svg"
               alt="The logo for MFL"
               class="w-[170px] md:w-[200px] md:-mt-10 pt-20 xl:w-[350px]"
             />
