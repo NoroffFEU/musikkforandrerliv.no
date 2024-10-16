@@ -24,9 +24,19 @@
     />
     <script type="module" src="../js/search.mjs"></script>
     <script type="module" src="../js/general.mjs"></script>
+<script type="module" src="../js/toggleMenu.mjs"></script>
+    
 
 
       <!-- favicons -->
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
       <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/SVGs/favicon.ico">
       <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images/SVGs/favicon.ico">
       <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/SVGs/favicon.ico">
@@ -35,152 +45,184 @@
 
   </head>
   <body>
-    <header class="flex h-24 items-center justify-between px-10 mt-6">
-      <div class="flex items-center px-4 sm:px-2 md:px-4">
-        <a href="../index.html">
-          <img
-            src="../assets/placeholder-images/logo.png"
-            aria-label="Header Logo"
-            alt="Header Logo"
-            class="w-36 h-36 rounded-full sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mt-3"
-          />
-        </a>
-      </div>
-      <nav class="flex flex-row items-center gap-10">
-        <button
-          id="openSearchBarDrawer"
-          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
-        >
-          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-          <img
-            src="../assets/images/SVGs/Search.svg"
-            class="w-5 h-5 -mr-1"
-            aria-label="Search Button"
-            alt="Search Button"
-          />
-          <span class="text-2xl font-medium">Search</span>
-        </button>
-        <!-- Search Bar Overlay, hidden initially. -->
-        <div
-          id="search-drawer-from-header"
-          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
-          aria-label="search-bar"
-        >
-          <h2 id="search-label" class="sr-only">Search Bar</h2>
-          <div class="flex justify-center items-center pt-3">
-            <div
-              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-            >
-              <form class="flex flex-grow">
-                <label for="Search-Drawer" class="sr-only">Search Site</label>
-                <input
-                  type="search"
-                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-                  id="Search-Drawer"
-                  placeholder="Search..."
-                  autocomplete="off"
-                />
-                <button
-                  type="submit"
-                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/images/SVGs/Search.svg"
-                    class="w-4 h-4"
-                    aria-label="Search Now Button"
-                    alt="Search Now Button"
-                  />
-                </button>
-              </form>
-            </div>
-            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-            <button
-              id="closeSearchBarDrawer"
-              class="search-drawer_close text-sm pr-5"
-            >
-              Close
-            </button>
-            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-          </div>
-        </div>
-        <a
-          href="./news.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >News</a
-        >
-        <a
-          href="./about-page.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >About Us</a
-        >
-        <div
-          class="relative cursor-pointer hover:scale-105 transition-transform"
-        >
-          <div class="flex items-center">
-            <span class="text-2xl font-medium">More</span>
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center gap-10 px-5 w-[92%] mx-auto"
+      >
+        <div>
+          <a href="../index.html">
             <img
-              src="../assets/images/SVGs/chevron-down.svg"
-              aria-label="Projects Dropdown Menu"
-              alt="Projects Dropdown Menu"
-              class="ml-3"
+              src="../assets/images/SVGs/headerLogo.svg"
+              aria-label="Header Logo"
+              alt="Header Logo"
+              class="cursor-pointer w-16 py-2"
             />
-          </div>
-          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-          <div class="absolute hidden mt-2 bg-white">
-            <a
-              href="#"
-              class="block p-2 border-t border-b border-black hover:bg-gray-100"
-              >Project 1</a
-            >
-            <a
-              href="#"
-              class="block p-2 border-b border-black hover:bg-gray-100"
-              >Project 2</a
-            >
-          </div>
+          </a>
         </div>
-        <button
-          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
-        >
-          DONATE
-        </button>
+
         <div
-          class="relative flex w-5 h-5 items-center group"
-          id="language-selector"
+          class="nav-links duration-500 lg:static absolute bg-white lg:min-h-fit min-h-[60vh] left-0 top-[-100%] lg:w-auto w-full flex items-center justify-center p-5"
         >
-          <img
-            src="../assets/images/SVGs/globe-solid.svg"
-            aria-label="Globe Icon For Language Selection"
-            alt="Language Selection"
-            class="cursor-pointer object-contain h-5 w-5"
-          />
-          <div class="absolute left-0 w-full bg-white" id="language-options">
-            <a href="#" class="block">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <button
+              id="openSearchBarDrawer"
+              class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+            >
+              <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
               <img
-                src="../assets/images/SVGs/norway.svg"
-                aria-label="Norwegian Flag Language Selection"
-                alt="Norwegian Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/Search.svg"
+                class="w-5 h-5 -mr-1"
+                aria-label="Search Button"
+                alt="Search Button"
               />
-            </a>
-            <a href="#" class="block">
+              <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                >Search</span
+              >
+            </button>
+            <!-- Search Bar Overlay, hidden initially. -->
+            <div
+              id="search-drawer-from-header"
+              class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+              aria-label="search-bar"
+            >
+              <h2 id="search-label" class="sr-only">Search Bar</h2>
+              <div class="flex justify-center items-center pt-3">
+                <div
+                  class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+                >
+                  <form class="flex flex-grow">
+                    <label for="Search-Drawer" class="sr-only"
+                      >Search Site</label
+                    >
+                    <input
+                      type="search"
+                      class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                      id="Search-Drawer"
+                      placeholder="Search..."
+                      autocomplete="off"
+                    />
+                    <button
+                      type="submit"
+                      class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                    >
+                      <img
+                        src="../assets/images/SVGs/Search.svg"
+                        class="w-4 h-4"
+                        aria-label="Search Now Button"
+                        alt="Search Now Button"
+                      />
+                    </button>
+                    <<<<<<< Updated upstream =======
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
+                    <div
+                      hidden
+                      id="search-results"
+                      class="absolute w-96 top-10 bg-white border rounded-sm"
+                    ></div>
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
+                    >>>>>>> Stashed changes
+                  </form>
+                </div>
+                <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+                <button
+                  id="closeSearchBarDrawer"
+                  class="search-drawer_close text-sm pr-5"
+                >
+                  Close
+                </button>
+                <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+              </div>
+            </div>
+            <a
+              href="./pages/news.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >News</a
+            >
+            <a
+              href="./pages/about-page.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >About Us</a
+            >
+            <div
+              class="relative cursor-pointer hover:scale-105 transition-transform"
+            >
+              <div class="flex items-center">
+                <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                  >More</span
+                >
+                <img
+                  src="../assets/images/SVGs/chevron-down.svg"
+                  aria-label="Projects Dropdown Menu"
+                  alt="Projects Dropdown Menu"
+                  class="ml-3"
+                />
+              </div>
+              <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+              <div class="absolute hidden mt-2 bg-white">
+                <a
+                  href="#"
+                  class="block p-2 border-t border-b border-black hover:bg-gray-100"
+                  >Project 1</a
+                >
+                <a
+                  href="#"
+                  class="block p-2 border-b border-black hover:bg-gray-100"
+                  >Project 2</a
+                >
+              </div>
+            </div>
+            <button
+              class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-lg sm:text-xl md:text-2xl font-normal"
+            >
+              DONATE
+            </button>
+            <div
+              class="relative flex w-5 h-5 items-center group"
+              id="language-selector"
+            >
               <img
-                src="../assets/images/SVGs/unitedKingdom.svg"
-                aria-label="English Flag Language Selection"
-                alt="English Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/globe-solid.svg"
+                aria-label="Globe Icon For Language Selection"
+                alt="Language Selection"
+                class="cursor-pointer object-contain h-5 w-5"
               />
-            </a>
-            <a href="#" class="block">
-              <img
-                src="../assets/images/SVGs/madagascar.svg"
-                aria-label="Malagasy Flag Language Selection"
-                alt="Malagasy Flag"
-                class="inline h-6 w-8"
-              />
-            </a>
+              <div
+                class="absolute left-0 w-full bg-white"
+                id="language-options"
+              >
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/norway.svg"
+                    aria-label="Norwegian Flag Language Selection"
+                    alt="Norwegian Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/unitedKingdom.svg"
+                    aria-label="English Flag Language Selection"
+                    alt="English Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/madagascar.svg"
+                    aria-label="Malagasy Flag Language Selection"
+                    alt="Malagasy Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <ion-icon
+          name="menu"
+          class="text-3xl cursor-pointer lg:hidden menu-icon"
+        >
+        </ion-icon>
       </nav>
     </header>
     <main>
