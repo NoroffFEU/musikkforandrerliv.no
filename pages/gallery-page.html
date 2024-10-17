@@ -50,6 +50,7 @@
       rel="icon"
       type="image/x-icon"
       sizes="16x16"
+
       href="../assets/images/SVGs/favicon.ico"
     />
     <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico" />
@@ -144,6 +145,46 @@
                 <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
               </div>
             </div>
+
+            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+            <button
+              id="closeSearchBarDrawer"
+              class="search-drawer_close text-sm pr-5"
+            >
+              Close
+            </button>
+            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+          </div>
+        </div>
+        <a
+          href="./news.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >News</a
+        >
+        <a
+          href="./about-page.html"
+          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+          >About Us</a
+        >
+        <div
+          class="relative cursor-pointer hover:scale-105 transition-transform"
+        >
+          <div class="flex items-center dropdown">
+            <span class="dropdown text-2xl font-medium">More</span>
+            <img
+              class="dropdown ml-3"
+              src="../assets/images/SVGs/chevron-down.svg"
+              aria-label="Projects Dropdown Menu"
+              alt="Projects Dropdown Menu"
+              class="ml-3"
+            />
+          </div>
+          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+          <div
+            id="navMenu"
+            class="absolute hidden mt-2 bg-white dropdown-content"
+          >
+
             <a
               href="./pages/news.html"
               class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
@@ -300,107 +341,109 @@
         </p>
       </section>
       <!-- Section one ends here -->
-
       <!-- Section two starts here -->
-      <section class="w-[1400px] m-auto py-10 px-6">
-        <div class="flex justify-center gap-28 py-10">
-          <div class="text-center font-inter text-xl">
+      <section class="max-w-[1400px] mx-auto py-10 px-6">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Group 1: 4 small images -->
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_5348.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_7424.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_3605.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-        </div>
-        <div class="flex justify-center gap-28 pb-10">
-          <div class="text-center font-inter text-xl">
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_3205.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <!-- Group 1: 1 big image -->
+          <div
+            class="text-center font-montserrat text-xl col-span-2 sm:col-span-1"
+          >
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_4202.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <!-- Group 2: 4 small images -->
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_1457.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-        </div>
-        <div class="flex justify-center gap-28 pb-10">
-          <div class="text-center font-inter text-xl">
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_6391.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_7542.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_7544.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-        </div>
-        <div class="flex justify-center gap-28 pb-10">
-          <div class="text-center font-inter text-xl">
+          <!-- Group 2: 1 big image -->
+          <div
+            class="text-center font-montserrat text-xl col-span-2 sm:col-span-1"
+          >
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_3637.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <!-- Group 3: 4 small images -->
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_3634.webp"
               alt=""
             />
             <p class="pt-2">Lorem ipsum dolor sit amet</p>
           </div>
-          <div class="text-center font-inter text-xl">
+          <div class="text-center font-montserrat text-xl">
             <img
-              class="h-[350px]"
+              class="h-[250px] w-full object-cover object-center"
               src="../assets/placeholder-images/IMG_7511.webp"
               alt=""
             />
