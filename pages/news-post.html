@@ -23,186 +23,250 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" src="../js/search.mjs"></script>
+    <script type="module" src="../js/toggleMenu.mjs"></script>
 
-      <!-- favicons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="32x32" href="/assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/images/SVGs/favicon.ico">
-      <link rel="shortcut icon" href="/assets/images/SVGs/favicon.ico">
-      <!-- favicons -->
-
+    <!-- favicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico" />
+    <!-- favicons -->
   </head>
-
   <body>
-    <header class="flex h-24 items-center justify-between px-10 mt-6">
-      <div class="flex flex-row items-center gap-10 text-base">
-        <a href="../index.html">
-          <img
-            src="../assets/images/SVGs/headerLogo.svg"
-            aria-label="Header Logo"
-            alt="Header Logo"
-            class="cursor-pointer w-20 h-20"
-          />
-        </a>
-      </div>
-      <nav class="flex flex-row items-center gap-10">
-        <button
-          id="openSearchBarDrawer"
-          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
-        >
-          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-          <img
-            src="../assets/images/SVGs/Search.svg"
-            class="w-5 h-5 -mr-1"
-            aria-label="Search Button"
-            alt="Search Button"
-          />
-          <span class="text-2xl font-medium">Search</span>
-        </button>
-        <!-- Search Bar Overlay, hidden initially. -->
-        <div
-          id="search-drawer-from-header"
-          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
-          aria-label="search-bar"
-        >
-          <h2 id="search-label" class="sr-only">Search Bar</h2>
-          <div class="flex justify-center items-center pt-3">
-            <div
-              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-            >
-              <form class="flex flex-grow">
-                <label for="Search-Drawer" class="sr-only">Search Site</label>
-                <input
-                  type="search"
-                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-                  id="Search-Drawer"
-                  placeholder="Search..."
-                  autocomplete="off"
-                />
-                <button
-                  type="submit"
-                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/images/SVGs/Search.svg"
-                    class="w-4 h-4"
-                    aria-label="Search Now Button"
-                    alt="Search Now Button"
-                  />
-                </button>
-              </form>
-            </div>
-            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-            <button
-              id="closeSearchBarDrawer"
-              class="search-drawer_close text-sm pr-5"
-            >
-              Close
-            </button>
-            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-          </div>
-        </div>
-        <a
-          href="./news.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >News</a
-        >
-        <a
-          href="./about-page.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >About Us</a
-        >
-        <div
-          class="relative cursor-pointer hover:scale-105 transition-transform"
-        >
-          <div class="flex items-center">
-            <span class="text-2xl font-medium">More</span>
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center gap-10 px-5 w-[92%] mx-auto"
+      >
+        <div>
+          <a href="../index.html">
             <img
-              src="../assets/images/SVGs/chevron-down.svg"
-              aria-label="Projects Dropdown Menu"
-              alt="Projects Dropdown Menu"
-              class="ml-3"
+              src="../assets/images/SVGs/headerLogo.svg"
+              aria-label="Header Logo"
+              alt="Header Logo"
+              class="cursor-pointer w-16 py-2"
             />
-          </div>
-          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-          <div class="absolute hidden mt-2 bg-white">
-            <a
-              href="#"
-              class="block p-2 border-t border-b border-black hover:bg-gray-100"
-              >Project 1</a
-            >
-            <a
-              href="#"
-              class="block p-2 border-b border-black hover:bg-gray-100"
-              >Project 2</a
-            >
-          </div>
+          </a>
         </div>
-        <button
-          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
-        >
-          DONATE
-        </button>
+
         <div
-          class="relative flex w-5 h-5 items-center group"
-          id="language-selector"
+          class="nav-links duration-500 lg:static absolute bg-white lg:min-h-fit min-h-[60vh] left-0 top-[-100%] lg:w-auto w-full flex items-center justify-center p-5"
         >
-          <img
-            src="../assets/images/SVGs/globe-solid.svg"
-            aria-label="Globe Icon For Language Selection"
-            alt="Language Selection"
-            class="cursor-pointer object-contain h-5 w-5"
-          />
-          <div class="absolute left-0 w-full bg-white" id="language-options">
-            <a href="#" class="block">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <button
+              id="openSearchBarDrawer"
+              class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+            >
+              <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
               <img
-                src="../assets/images/SVGs/norway.svg"
-                aria-label="Norwegian Flag Language Selection"
-                alt="Norwegian Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/Search.svg"
+                class="w-5 h-5 -mr-1"
+                aria-label="Search Button"
+                alt="Search Button"
               />
-            </a>
-            <a href="#" class="block">
+              <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                >Search</span
+              >
+            </button>
+            <!-- Search Bar Overlay, hidden initially. -->
+            <div
+              id="search-drawer-from-header"
+              class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+              aria-label="search-bar"
+            >
+              <h2 id="search-label" class="sr-only">Search Bar</h2>
+              <div class="flex justify-center items-center pt-3">
+                <div
+                  class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+                >
+                  <form class="flex flex-grow">
+                    <label for="Search-Drawer" class="sr-only"
+                      >Search Site</label
+                    >
+                    <input
+                      type="search"
+                      class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                      id="Search-Drawer"
+                      placeholder="Search..."
+                      autocomplete="off"
+                    />
+                    <button
+                      type="submit"
+                      class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                    >
+                      <img
+                        src="../assets/images/SVGs/Search.svg"
+                        class="w-4 h-4"
+                        aria-label="Search Now Button"
+                        alt="Search Now Button"
+                      />
+                    </button>
+                    <<<<<<< Updated upstream =======
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
+                    <div
+                      hidden
+                      id="search-results"
+                      class="absolute w-96 top-10 bg-white border rounded-sm"
+                    ></div>
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
+                    >>>>>>> Stashed changes
+                  </form>
+                </div>
+                <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+                <button
+                  id="closeSearchBarDrawer"
+                  class="search-drawer_close text-sm pr-5"
+                >
+                  Close
+                </button>
+                <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+              </div>
+            </div>
+            <a
+              href="./pages/news.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >News</a
+            >
+            <a
+              href="./pages/about-page.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >About Us</a
+            >
+            <div
+              class="relative cursor-pointer hover:scale-105 transition-transform"
+            >
+              <div class="flex items-center">
+                <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                  >More</span
+                >
+                <img
+                  src="../assets/images/SVGs/chevron-down.svg"
+                  aria-label="Projects Dropdown Menu"
+                  alt="Projects Dropdown Menu"
+                  class="ml-3"
+                />
+              </div>
+              <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+              <div class="absolute hidden mt-2 bg-white">
+                <a
+                  href="#"
+                  class="block p-2 border-t border-b border-black hover:bg-gray-100"
+                  >Project 1</a
+                >
+                <a
+                  href="#"
+                  class="block p-2 border-b border-black hover:bg-gray-100"
+                  >Project 2</a
+                >
+              </div>
+            </div>
+            <button
+              class="bg-sunset-red cursor-pointer text-white uppercase transition-transform hover:scale-110 w-[390px] lg:w-[170px] h-[49px] rounded-[9px] text-base lg:text-2xl font-sans font-semibold"
+            >
+              Donate
+            </button>
+            <div
+              class="relative flex w-5 h-5 items-center group"
+              id="language-selector"
+            >
               <img
-                src="../assets/images/SVGs/unitedKingdom.svg"
-                aria-label="English Flag Language Selection"
-                alt="English Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/globe-solid.svg"
+                aria-label="Globe Icon For Language Selection"
+                alt="Language Selection"
+                class="cursor-pointer object-contain h-5 w-5"
               />
-            </a>
-            <a href="#" class="block">
-              <img
-                src="../assets/images/SVGs/madagascar.svg"
-                aria-label="Malagasy Flag Language Selection"
-                alt="Malagasy Flag"
-                class="inline h-6 w-8"
-              />
-            </a>
+              <div
+                class="absolute left-0 w-full bg-white"
+                id="language-options"
+              >
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/norway.svg"
+                    aria-label="Norwegian Flag Language Selection"
+                    alt="Norwegian Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/unitedKingdom.svg"
+                    aria-label="English Flag Language Selection"
+                    alt="English Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/madagascar.svg"
+                    aria-label="Malagasy Flag Language Selection"
+                    alt="Malagasy Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <ion-icon
+          name="menu"
+          class="text-3xl cursor-pointer lg:hidden menu-icon"
+        >
+        </ion-icon>
       </nav>
     </header>
     <main>
+      <!-- Heading -->
+      <div
+        class="mx-20 mt-20 flex flex-col items-center mx-auto gap-10 max-w-[1200px]"
+      >
+        <div class="flex justify-between w-[1000px]">
+          <p class="font-sans text-xl uppercase">News Post</p>
+          <p class="font-sans text-xl">July 15, 2023</p>
+        </div>
+        <h1 class="w-[1000px] text-[56px] font-semibold mt-6 font-sans">
+          MMF Culture and Arts Festival
+        </h1>
+        <p class="w-[1000px] font-sans text-xl">Written by Chat GPT</p>
+      </div>
+      <!-- Heading ends -->
       <!-- Section 1 -->
       <section class="flex flex-col items-center mx-auto mt-20">
         <div
           class="mx-20 flex flex-col items-center max-w-[1200px] size-full gap-10"
         >
-          <h1 class="w-[1000px] font-justAnotherHand text-[70px] -mb-5">
+          <h2 class="w-[1000px] text-[40px] font-[550]">
             Celebrating the Heartbeat of Madagascar
-          </h1>
-          <p class="w-[1000px] font-inter text-xl">
-            MMF Culture and Arts Festival 2024
+          </h2>
+          <p class="w-[1000px] text-xl">
+            July 15, 2024, marked a day of vibrant celebration, unity, and the
+            transformative power of music and art at the MMF Culture and Arts
+            Festival. Held in the picturesque surroundings of Antsirabe,
+            Madagascar, the festival was more than just an event; it was a
+            testament to the resilience, joy, and creative spirit of the
+            children and communities we serve.
           </p>
-          <p class="w-[1000px] text-3xl">
-            <span class="font-semibold">July 15, 2024,</span> marked a day of
-            vibrant celebration, unity, and the transformative power of music
-            and art at the MMF Culture and Arts Festival. Held in the
-            picturesque surroundings of Antsirabe, Madagascar, the festival was
-            more than just an event; it was a testament to the resilience, joy,
-            and creative spirit of the children and communities we serve.
-          </p>
-          <div class="w-[1000px] h-[413px]">
+          <div class="w-[1000px] h-[220px]">
             <img
               class="w-full h-full object-cover"
               src="../assets/placeholder-images/IMG_7424.webp"
@@ -213,87 +277,80 @@
       </section>
       <!-- Section 1 End -->
       <!-- Section 2 -->
-      <section class="flex justify-center mt-[155px]">
-        <div class="max-w-[1200px] size-full">
-          <div class="flex flex-wrap mb-0">
-            <!-- Text and Image content container -->
-            <div class="w-2/3 pl-4 pr-[32px] mb-6 leading-10">
-              <h2 class="text-[40px] font-[550] mb-4">A Day to Remember</h2>
-              <p class="text-[25px] mb-10">
-                From the early hours, the air buzzed with anticipation as
-                visitors from near and far gathered, eager to immerse themselves
-                in the rich tapestry of Malagasy culture. The festival kicked
-                off with a traditional welcome dance, performed by the children
-                of MMF, setting the tone for a day filled with laughter, music,
-                and collective joy.
-              </p>
-              <h3 class="text-[40px] font-[550] mb-4">
-                A Symphony of Sights and Sounds
-              </h3>
-              <p class="text-[25px] mb-4">
-                The festival grounds came alive with a plethora of activities
-                and performances. Stages showcased the talents of MMF students
-                alongside local artists, each performance a story told through
-                rhythm and melody. Workshops on traditional dance, crafts, and
-                musical instruments offered hands-on experiences, bridging
-                generations and cultures.
-              </p>
-              <p class="text-[25px] mb-4">
-                A highlight was the art exhibit, featuring works created by MMF
-                students and local artists, illustrating their hopes, dreams,
-                and the shared journey of growth and empowerment. The vibrant
-                colors and intricate patterns spoke volumes of the talent and
-                potential that thrives within the hearts of these young artists.
-              </p>
-            </div>
-            <!-- Images container -->
-            <div class="w-1/3 pr-4 flex flex-col">
-              <div class="mb-20">
-                <img
-                  src="../assets/placeholder-images/3baa531a04b524d4090032444534fad9.webp"
-                  alt="Children at the festival"
-                />
-              </div>
-              <div class="mr-[10px] mb-0">
-                <img
-                  src="../assets/placeholder-images/e0ccdb9690fda944db924af17374101c.webp"
-                  alt="More children at the festival"
-                />
-              </div>
-            </div>
-            <!-- Social media like, share buttons and 'Read Next Blog Post' container -->
-            <div
-              class="w-full px-4 flex flex-row justify-between items-center mt-[75px] mb-[75px]"
-            >
-              <div class="flex gap-4">
-                <button
-                  class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red"
-                >
-                  <img
-                    src="../assets/images/SVGs/heart.svg"
-                    alt="Like"
-                    class="w-6 h-6 mr-2"
-                  />
-                  Like
-                </button>
-                <button
-                  class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red"
-                >
-                  <img
-                    src="../assets/images/SVGs/facebook.svg"
-                    alt="Share"
-                    class="w-6 h-6 mr-2"
-                  />
-                  Share
-                </button>
-              </div>
-              <!-- Read Next Blog Post button -->
+      <section class="flex flex-col items-center mx-auto mt-10">
+        <div
+          class="mx-20 flex flex-col items-center max-w-[1200px] size-full gap-8"
+        >
+          <h2 class="w-[1000px] text-[40px] font-[550]">A Day to Remember</h2>
+          <p class="w-[1000px] text-xl">
+            From the early hours, the air buzzed with anticipation as visitors
+            from near and far gathered, eager to immerse themselves in the rich
+            tapestry of Malagasy culture. The festival kicked off with a
+            traditional welcome dance, performed by the children of MMF, setting
+            the tone for a day filled with laughter, music, and collective joy.
+          </p>
+          <div class="w-[1000px] h-[478px]">
+            <img
+              class="w-full h-full object-cover object-top"
+              src="../assets/placeholder-images/3baa531a04b524d4090032444534fad9.webp"
+              alt="Children at the festival"
+            />
+          </div>
+          <h2 class="w-[1000px] text-[40px] font-[550]">
+            A Symphony of Sights and Sounds
+          </h2>
+          <p class="w-[1000px] text-xl">
+            The festival grounds came alive with a plethora of activities and
+            performances. Stages showcased the talents of MMF students alongside
+            local artists, each performance a story told through rhythm and
+            melody. Workshops on traditional dance, crafts, and musical
+            instruments offered hands-on experiences, bridging generations and
+            cultures.
+            <br /><br />
+            A highlight was the art exhibit, featuring works created by MMF
+            students and local artists, illustrating their hopes, dreams, and
+            the shared journey of growth and empowerment. The vibrant colors and
+            intricate patterns spoke volumes of the talent and potential that
+            thrives within the hearts of these young artists.
+          </p>
+          <div class="w-[1000px] h-[220px]">
+            <img
+              class="w-full h-full object-cover object-top"
+              src="../assets/placeholder-images/e0ccdb9690fda944db924af17374101c.webp"
+              alt="More children at the festival"
+            />
+          </div>
+          <div
+            class="w-full px-4 flex flex-row justify-between items-center mt-[75px] mb-[75px]"
+          >
+            <div class="flex gap-4">
               <button
-                class="alt-button bg-black font-normal text-[20px] w-[164px] mr-0"
+                class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red"
               >
-                READ NEXT BLOG POST
+                <img
+                  src="../assets/images/SVGs/heart.svg"
+                  alt="Like"
+                  class="w-6 h-6 mr-2"
+                />
+                Like
+              </button>
+              <button
+                class="flex items-center text-gray-600 hover:text-gray-800 text-sunset-red"
+              >
+                <img
+                  src="../assets/images/SVGs/facebook.svg"
+                  alt="Share"
+                  class="w-6 h-6 mr-2"
+                />
+                Share
               </button>
             </div>
+            <!-- Read Next Blog Post button -->
+            <button
+              class="font-sans text-2xl font-semibold rounded-lg relative border-2 px-5 py-1 border-black"
+            >
+              NEXT POST
+            </button>
           </div>
         </div>
       </section>
@@ -306,7 +363,7 @@
           <button
             class="rounded-lg alt-button text-center px-5 py-4 mx-10 text-6xl font-normal tracking-wider mb-8"
           >
-            <h3>Support us</h3>
+            <h3 class="font-justAnotherHand font-semibold">Support Us</h3>
           </button>
           <p class="text-lg my-2">
             The funds that come in go towards covering everything from food,

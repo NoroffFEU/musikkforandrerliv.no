@@ -23,298 +23,414 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" src="../js/search.mjs"></script>
-    <script type="module" src="js/general.mjs"></script>
+    <script type="module" src="../js/general.mjs"></script>
+    <script type="module" src="../js/toggleMenu.mjs"></script>
 
-      <!-- favicons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="32x32" href="/assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/images/SVGs/favicon.ico">
-      <link rel="shortcut icon" href="/assets/images/SVGs/favicon.ico">
-      <!-- favicons -->
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico" />
+    <!-- favicons -->
   </head>
 
   <body>
-    <header class="flex h-24 items-center justify-between px-10 mt-6">
-      <div class="flex flex-row items-center gap-10 text-base">
-        <a href="../index.html">
-          <img
-            src="../assets/images/SVGs/headerLogo.svg"
-            aria-label="Header Logo"
-            alt="Header Logo"
-            class="cursor-pointer w-20 h-20"
-          />
-        </a>
-      </div>
-      <nav class="flex flex-row items-center gap-10">
-        <button
-          id="openSearchBarDrawer"
-          class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
-        >
-          <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-          <img
-            src="../assets/images/SVGs/Search.svg"
-            class="w-5 h-5 -mr-1"
-            aria-label="Search Button"
-            alt="Search Button"
-          />
-          <span class="text-2xl font-medium">Search</span>
-        </button>
-        <!-- Search Bar Overlay, hidden initially. -->
-        <div
-          id="search-drawer-from-header"
-          class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
-          aria-label="search-bar"
-        >
-          <h2 id="search-label" class="sr-only">Search Bar</h2>
-          <div class="flex justify-center items-center pt-3">
-            <div
-              class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
-            >
-              <form class="flex flex-grow">
-                <label for="Search-Drawer" class="sr-only">Search Site</label>
-                <input
-                  type="search"
-                  class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-                  id="Search-Drawer"
-                  placeholder="Search..."
-                  autocomplete="off"
-                />
-                <button
-                  type="submit"
-                  class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/images/SVGs/Search.svg"
-                    class="w-4 h-4"
-                    aria-label="Search Now Button"
-                    alt="Search Now Button"
-                  />
-                </button>
-              </form>
-            </div>
-            <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-            <button
-              id="closeSearchBarDrawer"
-              class="search-drawer_close text-sm pr-5"
-            >
-              Close
-            </button>
-            <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
-          </div>
-        </div>
-        <a
-          href="./news.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >News</a
-        >
-        <a
-          href="./about-page.html"
-          class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
-          >About Us</a
-        >
-        <div
-          class="relative cursor-pointer hover:scale-105 transition-transform"
-        >
-          <div class="flex items-center">
-            <span class="text-2xl font-medium">More</span>
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center gap-10 px-5 w-[92%] mx-auto"
+      >
+        <div>
+          <a href="../index.html">
             <img
-              src="../assets/images/SVGs/chevron-down.svg"
-              aria-label="Projects Dropdown Menu"
-              alt="Projects Dropdown Menu"
-              class="ml-3"
+              src="../assets/images/SVGs/headerLogo.svg"
+              aria-label="Header Logo"
+              alt="Header Logo"
+              class="cursor-pointer w-16 py-2"
             />
-          </div>
-          <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-          <div class="absolute hidden mt-2 bg-white">
-            <a
-              href="#"
-              class="block p-2 border-t border-b border-black hover:bg-gray-100"
-              >Project 1</a
-            >
-            <a
-              href="#"
-              class="block p-2 border-b border-black hover:bg-gray-100"
-              >Project 2</a
-            >
-          </div>
+          </a>
         </div>
-        <button
-          class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal"
-        >
-          DONATE
-        </button>
+
         <div
-          class="relative flex w-5 h-5 items-center group"
-          id="language-selector"
+          class="nav-links duration-500 lg:static absolute bg-white lg:min-h-fit min-h-[60vh] left-0 top-[-100%] lg:w-auto w-full flex items-center justify-center p-5"
         >
-          <img
-            src="../assets/images/SVGs/globe-solid.svg"
-            aria-label="Globe Icon For Language Selection"
-            alt="Language Selection"
-            class="cursor-pointer object-contain h-5 w-5"
-          />
-          <div class="absolute left-0 w-full bg-white" id="language-options">
-            <a href="#" class="block">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <button
+              id="openSearchBarDrawer"
+              class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+            >
+              <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
               <img
-                src="../assets/images/SVGs/norway.svg"
-                aria-label="Norwegian Flag Language Selection"
-                alt="Norwegian Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/Search.svg"
+                class="w-5 h-5 -mr-1"
+                aria-label="Search Button"
+                alt="Search Button"
               />
-            </a>
-            <a href="#" class="block">
+              <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                >Search</span
+              >
+            </button>
+            <!-- Search Bar Overlay, hidden initially. -->
+            <div
+              id="search-drawer-from-header"
+              class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+              aria-label="search-bar"
+            >
+              <h2 id="search-label" class="sr-only">Search Bar</h2>
+              <div class="flex justify-center items-center pt-3">
+                <div
+                  class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+                >
+                  <form class="flex flex-grow">
+                    <label for="Search-Drawer" class="sr-only"
+                      >Search Site</label
+                    >
+                    <input
+                      type="search"
+                      class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                      id="Search-Drawer"
+                      placeholder="Search..."
+                      autocomplete="off"
+                    />
+                    <button
+                      type="submit"
+                      class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                    >
+                      <img
+                        src="../assets/images/SVGs/Search.svg"
+                        class="w-4 h-4"
+                        aria-label="Search Now Button"
+                        alt="Search Now Button"
+                      />
+                    </button>
+                    <<<<<<< Updated upstream =======
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
+                    <div
+                      hidden
+                      id="search-results"
+                      class="absolute w-96 top-10 bg-white border rounded-sm"
+                    ></div>
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
+                    >>>>>>> Stashed changes
+                  </form>
+                </div>
+                <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+                <button
+                  id="closeSearchBarDrawer"
+                  class="search-drawer_close text-sm pr-5"
+                >
+                  Close
+                </button>
+                <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+              </div>
+            </div>
+            <a
+              href="./pages/news.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >News</a
+            >
+            <a
+              href="./pages/about-page.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >About Us</a
+            >
+            <div
+              class="relative cursor-pointer hover:scale-105 transition-transform"
+            >
+              <div class="flex items-center">
+                <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                  >More</span
+                >
+                <img
+                  src="../assets/images/SVGs/chevron-down.svg"
+                  aria-label="Projects Dropdown Menu"
+                  alt="Projects Dropdown Menu"
+                  class="ml-3"
+                />
+              </div>
+              <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+              <div class="absolute hidden mt-2 bg-white">
+                <a
+                  href="#"
+                  class="block p-2 border-t border-b border-black hover:bg-gray-100"
+                  >Project 1</a
+                >
+                <a
+                  href="#"
+                  class="block p-2 border-b border-black hover:bg-gray-100"
+                  >Project 2</a
+                >
+              </div>
+            </div>
+            <button
+              class="bg-sunset-red cursor-pointer text-white uppercase transition-transform hover:scale-110 w-[390px] lg:w-[170px] h-[49px] rounded-[9px] text-base lg:text-2xl font-sans font-semibold"
+            >
+              Donate
+            </button>
+            <div
+              class="relative flex w-5 h-5 items-center group"
+              id="language-selector"
+            >
               <img
-                src="../assets/images/SVGs/unitedKingdom.svg"
-                aria-label="English Flag Language Selection"
-                alt="English Flag"
-                class="inline h-6 w-8"
+                src="../assets/images/SVGs/globe-solid.svg"
+                aria-label="Globe Icon For Language Selection"
+                alt="Language Selection"
+                class="cursor-pointer object-contain h-5 w-5"
               />
-            </a>
-            <a href="#" class="block">
-              <img
-                src="../assets/images/SVGs/madagascar.svg"
-                aria-label="Malagasy Flag Language Selection"
-                alt="Malagasy Flag"
-                class="inline h-6 w-8"
-              />
-            </a>
+              <div
+                class="absolute left-0 w-full bg-white"
+                id="language-options"
+              >
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/norway.svg"
+                    aria-label="Norwegian Flag Language Selection"
+                    alt="Norwegian Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/unitedKingdom.svg"
+                    aria-label="English Flag Language Selection"
+                    alt="English Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/madagascar.svg"
+                    aria-label="Malagasy Flag Language Selection"
+                    alt="Malagasy Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <ion-icon
+          name="menu"
+          class="text-3xl cursor-pointer lg:hidden menu-icon"
+        >
+        </ion-icon>
       </nav>
     </header>
     <main>
-      <!-- Section 1 -->
-      <!-- Todo: Improve responsiveness, (padding & breakpoints) -->
-      <section
-        class="font-montserrat text-xl mx-auto w-full bg-frost-blue grid md:grid-cols-2 border-2 border-dark-green mt-14"
-        style="width: min(70rem, 90%)"
+      <h1
+        class="text-8xl md:text-9xl font-justAnotherHand text-center py-10 tracking-wider"
       >
-        <div class="grid py-4 px-4 gap-5 md:border-r max-md:border-b">
-          <p class="underline font-semibold">Contact details</p>
-          <p>Phone number: +47 123 45 678</p>
-          <p>Email: mmf.madagascar@gmail.com</p>
-          <p>You can always reach out us on our social:</p>
-          <div class="flex justify-center gap-16 py-4">
-            <div class="grid">
-              <i class="fa-brands fa-facebook text-dark-green text-6xl grid">
-              </i>
-              <span class="text-xs">Facebook</span>
-            </div>
-            <div class="grid">
-              <i
-                class="fa-brands fa-square-instagram text-dark-green text-6xl"
-              ></i>
-              <span class="text-xs">Instagram</span>
+        Contact Us
+      </h1>
+      <!-- Section 1 -->
+      <section class="font-montserrat py-12 bg-mint-green">
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto gap-20 p-6"
+        >
+          <img
+            src="../assets/placeholder-images/IMG_6438.webp"
+            alt="Children with a violin"
+            class="w-full md:w-2/3 lg:w-1/2 max-w-md rounded-lg"
+          />
+          <div class="w-full md:w-1/2 max-w-md space-y-4 md:mt-6">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold">
+              Our mission
+            </h2>
+            <p class="text-base md:text-lg lg:text-xl">
+              The funds that come in go towards covering everything from food,
+              clothing, education, equipment, healthcare, medicines, and dental
+              care for the children, as well as the operation of the music
+              school and salaries for our staff. The families of the children
+              are also included in the food program and receive monthly
+              distributions of food and hygiene products. We are constantly
+              working to improve the living conditions of the children, and we
+              use much of the surplus we have to repair houses and homes.
+            </p>
+            <div class="flex gap-5">
+              <button
+                class="uppercase reg-button text-lg md:text-2xl bg-mint-green text-black hover:text-white focus:text-mint-green focus:ring-mint-green border border-black"
+              >
+                Read more
+              </button>
+              <button
+                class="uppercase reg-button text-lg md:text-2xl bg-sunset-red text-white hover:bg-alt-hover-red hover:text-white focus:text-sunset-red focus:bg-white focus:ring-sunset-red"
+              >
+                Donate
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="grid py-4 px-4">
-          <p class="underline mb-5 font-semibold">Address</p>
-          <p class="font-semibold">Address in Norway:</p>
-          <address class="not-italic grid md:grid-cols-2 gap-10 py-5">
-            Tårn gt.1 <br />
-            4005 Stavanger <br />
-            Norway
-            <div class="w-full h-28 rounded-md bg-dark-green text-frost-blue">
-              GOOGLE MAPS PLACEHOLDER
+      </section>
+      <!-- Section 2 -->
+      <section class="font-montserrat gap-6 text-center md:text-start">
+        <div class="p-8">
+          <div
+            class="bg-mint-green max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 lg:p-12 rounded-lg"
+          >
+            <!-- Contact Form -->
+            <div class="order-1 lg:order-2">
+              <h2 class="text-2xl font-bold">Contact form</h2>
+              <form class="mt-6 space-y-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-base md:text-lg lg:text-xl"
+                    >Your name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full border border-gray-300 rounded-lg p-2"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-base md:text-lg lg:text-xl"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full border border-gray-300 rounded-lg p-2"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-base md:text-lg lg:text-xl"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    class="w-full border border-gray-300 rounded-lg p-2"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-base md:text-lg lg:text-xl"
+                    >Your message</label
+                  >
+                  <textarea
+                    id="message"
+                    class="w-full border border-gray-300 rounded-lg p-2 h-32"
+                  ></textarea>
+                </div>
+                <button
+                  id="signUpButton"
+                  type="submit"
+                  class="uppercase reg-button text-lg md:text-2xl bg-mint-green text-black hover:text-white focus:text-mint-green focus:ring-mint-green border border-black"
+                >
+                  <span id="btnText">Send</span>
+                  <div id="loader" class="loader" style="display: none"></div>
+                  <span id="checkmark" style="display: none; color: #000000"
+                    >&#10003;</span
+                  >
+                  <!-- Checkmark -->
+                </button>
+              </form>
             </div>
-            <!-- ADD GOOGLE MAPS FUNCTIONALITY  -->
-          </address>
-          <p class="font-semibold">Address of music school on Madagascar:</p>
-          <address class="not-italic grid md:grid-cols-2 gap-10 py-6">
-            Lot II F 5 Ambondrona 4 <br />
-            rue Antananarivo 101 <br />
-            101 Madagaskar
-            <div class="w-full h-28 rounded-md bg-dark-green text-frost-blue">
-              GOOGLE MAPS PLACEHOLDER
+            <!-- Contact Details -->
+            <div
+              class="order-2 lg:order-1 space-y-6 lg:border-r lg:border-gray-400 lg:pr-8"
+            >
+              <h2 class="text-2xl font-bold">Contact details</h2>
+              <div class="space-y-2 text-base md:text-lg lg:text-xl">
+                <p class="font-semibold">Leader Madagascar</p>
+                <p>Dina Andriamanalina</p>
+                <p>Email: dina7dina@yahoo.co.uk</p>
+                <p>Phone number/WhatsApp: +261 347889977</p>
+              </div>
+              <div class="space-y-2 text-base md:text-lg lg:text-xl">
+                <p class="font-semibold">Leader Norway</p>
+                <p>Eline Rodvelt Hansen</p>
+                <p>Email: elinerodvelt@gmail.com</p>
+              </div>
+              <div class="space-y-2 text-base md:text-lg lg:text-xl">
+                <p class="font-semibold">Next-leader</p>
+                <p>Karoline Hartvigsen</p>
+                <p>Email: mmf.karoline@gmail.com</p>
+              </div>
+              <div class="space-y-2 text-base md:text-lg lg:text-xl">
+                <p class="font-semibold">Board member</p>
+                <p>Thea Harbo</p>
+                <p>Email: mmf.thea@gmail.com</p>
+              </div>
+              <div class="text-base md:text-lg lg:text-xl">
+                <p>You can always reach out to us on our social:</p>
+                <div class="flex justify-center md:justify-start gap-16 py-4">
+                  <div class="grid">
+                    <i
+                      class="fa-brands fa-facebook text-dark-green text-6xl"
+                    ></i>
+                    <span class="text-xs">Facebook</span>
+                  </div>
+                  <div class="grid">
+                    <i
+                      class="fa-brands fa-square-instagram text-dark-green text-6xl"
+                    ></i>
+                    <span class="text-xs">Instagram</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- ADD GOOGLE MAPS FUNCTIONALITY  -->
-          </address>
+          </div>
         </div>
       </section>
 
-      <!-- Section 2 -->
-      <section
-        class="flex flex-col align-middle bg-ivory-beige px-72 py-9 mx-52 my-24"
-      >
-        <p class="text-base text-center font-medium mb-10">Contact form</p>
-        <form class="grid items-center gap-5 text-sm">
-          <fieldset class="flex flex-col">
-            <label class="mb-1.5" for="name">Your name</label>
-            <input
-              class="border rounded-ib h-11 p-3"
-              type="text"
-              name="name"
-              required
-            />
-          </fieldset>
-          <fieldset class="flex flex-col">
-            <label class="mb-1.5" for="email">Email</label>
-            <input
-              class="border rounded-ib h-11 p-3"
-              type="email"
-              name="email"
-              required
-            />
-          </fieldset>
-          <fieldset class="flex flex-col">
-            <label class="mb-1.5" for="subject">Subject</label>
-            <input
-              class="border rounded-ib h-11 p-3"
-              type="text"
-              name="subject"
-              required
-            />
-          </fieldset>
-          <fieldset class="flex flex-col">
-            <label class="mb-1.5" for="message">Your message</label>
-            <textarea
-              class="border rounded-ib resize-none h-44 p-3"
-              name="message"
-            ></textarea>
-          </fieldset>
-          <button
-            id="signUpButton"
-            type="submit"
-            class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative place-self-center"
-          >
-            <span id="btnText">Submit</span>
-            <div id="loader" class="loader" style="display: none"></div>
-            <span id="checkmark" style="display: none; color: #000000"
-              >&#10003;</span
-            >
-            <!-- Checkmark -->
-          </button>
-        </form>
-      </section>
       <!-- Section 2 End -->
       <!-- Section 3 starts here -->
       <!-- Newsletter Subscription -->
-      <section>
-        <div class="w-full text-center my-28">
+      <section class="bg-sunset-red py-16">
+        <div class="w-full text-center">
           <h3 class="text-2xl font-semibold mb-6">
-            Subscribe to our newsletter
+            Subscribe to our newsletter!
           </h3>
-          <div
-            class="max-w-[452px] mx-auto border-[1px] border-[#EE6352] rounded-lg p-2"
-          >
+          <p class="mb-6">
+            Join our newsletter today to, stay updated on our events and
+            projects!
+          </p>
+          <div class="max-w-[452px] mx-auto">
             <form
               action="#"
               method="POST"
-              class="flex justify-center items-center gap-4"
+              class="flex justify-center items-center gap-5"
             >
               <input
                 type="email"
                 name="email"
                 placeholder="example@example.com"
-                class="w-[300px] p-2 outline-none"
+                class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md"
               />
+
               <button
                 id="signUpButton"
                 type="submit"
-                class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative place-self-center"
+                class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative border-2 border-white hover:bg-sunset-red hover:text-white transition-all duration-300"
               >
                 <span id="btnText">Sign Up</span>
                 <div id="loader" class="loader" style="display: none"></div>
