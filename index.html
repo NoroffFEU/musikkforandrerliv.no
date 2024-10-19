@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+     href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+     rel="stylesheet" />  
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -556,11 +561,10 @@
       >
         <!-- Events -->
         <div class="row-span-1 col-span-5">
-          <h2 class="font-justAnotherHand text-8xl mb-7">Upcoming Events</h2>
+          <h2 class="font-poetsenOne text-6xl mb-7">Upcoming Events</h2>
           <ol
-            class="js-event-list grid gap-5 text-2xl [&_li]:bg-light-red [&_a]:pl-4 [&_li]:py-[3.5px] [&_li]:w-full"
-          ></ol>
-        </div>
+           class="js-event-list grid gap-5 text-2xl font-sans [&_li]:bg-light-red [&_a]:pl-4 [&_li]:py-[3.5px] [&_li]:w-full"></ol>
+         </div>
 
         <!-- Calendar -->
 
@@ -587,23 +591,20 @@
             </div>
           </header>
           <div class="calendar-body p-5 [&_li]:w-[14%] [&_*]:cursor-default">
-            <ul
-              class="calendar-weekdays list-none flex flex-wrap text-center w-full [&>*]:mb-5"
-            >
-              <li>Sun</li>
+            <ul class="calendar-weekdays list-none flex flex-wrap text-center w-full [&>*]:mb-5">
               <li>Mon</li>
               <li>Tue</li>
               <li>Wed</li>
               <li>Thu</li>
               <li>Fri</li>
               <li>Sat</li>
+              <li>Sun</li>
             </ul>
             <ul
-              class="calendar-dates [&>li]:relative [&>*]:mb-5 flex flex-wrap text-center [&>li.inactive]:text-[#aaa] [&>li]:z-10 [&>li.active]:text-white [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-z-10 [&>li]:before:w-[40px] [&>li]:before:h-[40px] [&>li]:before:top-[50%] [&>li]:before:left-[50%] [&>li]:before:rounded-lg [&>li]:before:-translate-x-[50%] translate [&>li]:before:-translate-y-[50%] [&>li.active]:before:bg-sunset-red hover:[&>li:not(.active)]:before:bg-sunset-red hover:[&>li:not(.active)]:text-white [&>li.event]:before:border"
-            ></ul>
+              class="calendar-dates [&>li]:relative [&>*]:mb-5 flex flex-wrap text-center [&>li.inactive]:hidden [&>li]:z-10 [&>li.active]:text-white [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-z-10 [&>li]:before:w-[40px] [&>li]:before:h-[40px] [&>li]:before:top-[50%] [&>li]:before:left-[50%] [&>li]:before:rounded-lg [&>li]:before:-translate-x-[50%] translate [&>li]:before:-translate-y-[50%] [&>li.active]:before:bg-sunset-red hover:[&>li:not(.active)]:before:bg-sunset-red hover:[&>li:not(.active)]:text-white [&>li.event]:before:border"></ul>
           </div>
-        </div>
-      </section>
+          </div>
+         </section>
 
       <!-- Section 6 End -->
 
