@@ -1,109 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Read the privacy policy to learn how we collect and handle user data."
+    />
+    <title>Privacy policy</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="../js/search.mjs"></script>
+    <script type="module" src="../js/toggleMenu.mjs"></script>
+    
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Read the privacy policy to learn how we collect and handle user data." />
-  <title>Privacy policy</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script type="module" src="../js/search.mjs"></script>
 
-      <!-- favicons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images/SVGs/favicon.ico">
-      <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/SVGs/favicon.ico">
-      <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico">
-      <!-- favicons -->
-</head>
+    <!-- favicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="32x32"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16"
+      href="../assets/images/SVGs/favicon.ico"
+    />
+    <link rel="shortcut icon" href="../assets/images/SVGs/favicon.ico" />
+    <!-- favicons -->
+  </head>
 
-<body>
-  <header class="flex h-24 items-center justify-between px-10 mt-6">
-    <div class="flex flex-row items-center gap-10 text-base">
-      <a href="../index.html">
-        <img src="../assets/images/SVGs/headerLogo.svg" aria-label="Header Logo" alt="Header Logo"
-          class="cursor-pointer w-20 h-20" />
-      </a>
-    </div>
-    <nav class="flex flex-row items-center gap-10">
-      <button id="openSearchBarDrawer"
-        class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform">
-        <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
-        <img src="../assets/images/SVGs/Search.svg" class="w-5 h-5 -mr-1" aria-label="Search Button"
-          alt="Search Button" />
-        <span class="text-2xl font-medium">Search</span>
-      </button>
-      <!-- Search Bar Overlay, hidden initially. -->
-      <div id="search-drawer-from-header"
-        class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50"
-        aria-label="search-bar">
-        <h2 id="search-label" class="sr-only">Search Bar</h2>
-        <div class="flex justify-center items-center pt-3">
-          <div class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center">
-            <form class="flex flex-grow">
-              <label for="Search-Drawer" class="sr-only">Search Site</label>
-              <input type="search" class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
-                id="Search-Drawer" placeholder="Search..." autocomplete="off" />
-              <button type="submit" class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center">
-                <img src="../assets/images/SVGs/Search.svg" class="w-4 h-4" aria-label="Search Now Button"
-                  alt="Search Now Button" />
-              </button>
-            </form>
+  <body>
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center gap-10 px-5 w-[92%] mx-auto"
+      >
+        <div>
+          <a href="../index.html">
+            <img
+              src="../assets/images/SVGs/headerLogo.svg"
+              aria-label="Header Logo"
+              alt="Header Logo"
+              class="cursor-pointer w-16 py-2"
+            />
+          </a>
+        </div>
+
+        <div
+          class="nav-links duration-500 lg:static absolute bg-white lg:min-h-fit min-h-[60vh] left-0 top-[-100%] lg:w-auto w-full flex items-center justify-center p-5"
+        >
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <button
+              id="openSearchBarDrawer"
+              class="flex gap-4 items-center cursor-pointer hover:scale-105 transition-transform"
+            >
+              <!-- JS intention: On click, remove -translate-y-full from section id="search-drawer-from-header", and add translate-y-0 -->
+              <img
+                src="../assets/images/SVGs/Search.svg"
+                class="w-5 h-5 -mr-1"
+                aria-label="Search Button"
+                alt="Search Button"
+              />
+              <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                >Search</span
+              >
+            </button>
+            <!-- Search Bar Overlay, hidden initially. -->
+            <div
+              id="search-drawer-from-header"
+              class="fixed border border-black top-0 right-0 w-full h-16 bg-white transform -translate-y-full transition-transform duration-500 ease-out z-50 hidden"
+              aria-label="search-bar"
+            >
+              <h2 id="search-label" class="sr-only">Search Bar</h2>
+              <div class="flex justify-center items-center pt-3">
+                <div
+                  class="w-full max-w-lg mx-auto border border-black bg-gray-100 flex items-center"
+                >
+                  <form class="flex flex-grow">
+                    <label for="Search-Drawer" class="sr-only"
+                      >Search Site</label
+                    >
+                    <input
+                      type="search"
+                      class="search-drawer_input flex-grow bg-transparent focus:outline-none p-2 text-sm"
+                      id="Search-Drawer"
+                      placeholder="Search..."
+                      autocomplete="off"
+                    />
+                    <button
+                      type="submit"
+                      class="search-drawer_submit p-2 text-gray-500 flex items-center justify-center"
+                    >
+                      <img
+                        src="../assets/images/SVGs/Search.svg"
+                        class="w-4 h-4"
+                        aria-label="Search Now Button"
+                        alt="Search Now Button"
+                      />
+                    </button>
+                    <<<<<<< Updated upstream =======
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME -->
+                    <div
+                      hidden
+                      id="search-results"
+                      class="absolute w-96 top-10 bg-white border rounded-sm"
+                    ></div>
+                    <!--! PLACEHOLDER TO DISPLAY SEARCH RESULTS - "SEARCH.MJS" - DELETE/REPLACE ME  -->
+                    >>>>>>> Stashed changes
+                  </form>
+                </div>
+                <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
+                <button
+                  id="closeSearchBarDrawer"
+                  class="search-drawer_close text-sm pr-5"
+                >
+                  Close
+                </button>
+                <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
+              </div>
+            </div>
+            <a
+              href="./pages/news.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >News</a
+            >
+            <a
+              href="./pages/about-page.html"
+              class="text-lg sm:text-xl md:text-2xl font-medium cursor-pointer hover:scale-105 transition-transform"
+              >About Us</a
+            >
+            <div
+              class="relative cursor-pointer hover:scale-105 transition-transform"
+            >
+              <div class="flex items-center">
+                <span class="text-lg sm:text-xl md:text-2xl font-medium"
+                  >More</span
+                >
+                <img
+                  src="../assets/images/SVGs/chevron-down.svg"
+                  aria-label="Projects Dropdown Menu"
+                  alt="Projects Dropdown Menu"
+                  class="ml-3"
+                />
+              </div>
+              <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
+              <div class="absolute hidden mt-2 bg-white">
+                <a
+                  href="#"
+                  class="block p-2 border-t border-b border-black hover:bg-gray-100"
+                  >Project 1</a
+                >
+                <a
+                  href="#"
+                  class="block p-2 border-b border-black hover:bg-gray-100"
+                  >Project 2</a
+                >
+              </div>
+            </div>
+            <button
+              class="bg-sunset-red cursor-pointer text-white uppercase transition-transform hover:scale-110 w-[390px] lg:w-[170px] h-[49px] rounded-[9px] text-base lg:text-2xl font-sans font-semibold"
+            >
+              Donate
+            </button>
+            <div
+              class="relative flex w-5 h-5 items-center group"
+              id="language-selector"
+            >
+              <img
+                src="../assets/images/SVGs/globe-solid.svg"
+                aria-label="Globe Icon For Language Selection"
+                alt="Language Selection"
+                class="cursor-pointer object-contain h-5 w-5"
+              />
+              <div
+                class="absolute left-0 w-full bg-white"
+                id="language-options"
+              >
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/norway.svg"
+                    aria-label="Norwegian Flag Language Selection"
+                    alt="Norwegian Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/unitedKingdom.svg"
+                    aria-label="English Flag Language Selection"
+                    alt="English Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+                <a href="#" class="block">
+                  <img
+                    src="../assets/images/SVGs/madagascar.svg"
+                    aria-label="Malagasy Flag Language Selection"
+                    alt="Malagasy Flag"
+                    class="inline h-6 w-8"
+                  />
+                </a>
+              </div>
+            </div>
+
           </div>
-          <!-- Close button ready for JS. Should also close on outside-click, not just by close button itself -->
-          <button id="closeSearchBarDrawer" class="search-drawer_close text-sm pr-5">
-            Close
-          </button>
-          <!-- JS intention: On click, add -translate-y-full to section id="search-drawer-from-header" and remove translate-y-0 -->
         </div>
-      </div>
-      <a href="./news.html" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">News</a>
-      <a href="./about-page.html" class="text-2xl font-medium cursor-pointer hover:scale-105 transition-transform">About
-        Us</a>
-      <div class="relative cursor-pointer hover:scale-105 transition-transform">
-        <div class="flex items-center">
-          <span class="text-2xl font-medium">More</span>
-          <img src="../assets/images/SVGs/chevron-down.svg" aria-label="Projects Dropdown Menu"
-            alt="Projects Dropdown Menu" class="ml-3" />
-        </div>
-        <!-- Dropdown projects menu, hidden, toggle visibility with JS -->
-        <div class="absolute hidden mt-2 bg-white">
-          <a href="#" class="block p-2 border-t border-b border-black hover:bg-gray-100">Project 1</a>
-          <a href="#" class="block p-2 border-b border-black hover:bg-gray-100">Project 2</a>
-        </div>
-      </div>
-      <button
-        class="alt-button cursor-pointer text-white transition-transform hover:scale-110 w-[148px] h-[49px] text-2xl font-normal">
-        DONATE
-      </button>
-      <div class="relative flex w-5 h-5 items-center group" id="language-selector">
-        <img src="../assets/images/SVGs/globe-solid.svg" aria-label="Globe Icon For Language Selection"
-          alt="Language Selection" class="cursor-pointer object-contain h-5 w-5" />
-        <div class="absolute left-0 w-full bg-white" id="language-options">
-          <a href="#" class="block">
-            <img src="../assets/images/SVGs/norway.svg" aria-label="Norwegian Flag Language Selection"
-              alt="Norwegian Flag" class="inline h-6 w-8" />
-          </a>
-          <a href="#" class="block">
-            <img src="../assets/images/SVGs/unitedKingdom.svg" aria-label="English Flag Language Selection"
-              alt="English Flag" class="inline h-6 w-8" />
-          </a>
-          <a href="#" class="block">
-            <img src="../assets/images/SVGs/madagascar.svg" aria-label="Malagasy Flag Language Selection"
-              alt="Malagasy Flag" class="inline h-6 w-8" />
-          </a>
-        </div>
-      </div>
-    </nav>
-  </header>
+        <ion-icon
+          name="menu"
+          class="text-3xl cursor-pointer lg:hidden menu-icon"
+        >
+        </ion-icon>
+      </nav>
+    </header>
+     
   <main>
     <section>
       <div class="flex flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" >
@@ -122,15 +259,19 @@
           v
         </button>
       </div>
+
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, 
-            mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Lorem ipsum dolor sit amet, consectetur
+          </p>
         </div>
-        <div class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10">
-          <h2 class="text-4xl font-semibold text-left">
-            DATA WE COLLECT
-          </h2>
+        <div
+          class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10"
+        >
+          <h2 class="text-4xl font-semibold text-left">DATA WE COLLECT</h2>
           <button class="text-2xl font-semibold text-alt-red p-4 rounded-full">
             v
           </button>
@@ -138,13 +279,17 @@
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
             What Information We Collect We may collect the following types of
-           personal data: Contact Information: such as name, email address, phone
-           number. Usage Information: including data about your use of our
-           website, such as IP address, browser type, visit times, and pages
-           visited. Purchase Information: such as payment details, delivery
-           address, and order history if you make purchases through the website. </p>
+            personal data: Contact Information: such as name, email address,
+            phone number. Usage Information: including data about your use of
+            our website, such as IP address, browser type, visit times, and
+            pages visited. Purchase Information: such as payment details,
+            delivery address, and order history if you make purchases through
+            the website.
+          </p>
         </div>
-        <div class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10">
+        <div
+          class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10"
+        >
           <h2 class="text-4xl font-semibold text-left">
             DATA WE DON`T COLLECT
           </h2>
@@ -154,27 +299,34 @@
         </div>
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, 
-            mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Lorem ipsum dolor sit amet, consectetur
+          </p>
         </div>
-        <div class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10">
-          <h2 class="text-4xl font-semibold text-left">
-            USE OF INFORMATION
-          </h2>
+        <div
+          class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10"
+        >
+          <h2 class="text-4xl font-semibold text-left">USE OF INFORMATION</h2>
           <button class="text-2xl font-semibold text-alt-red p-4 rounded-full">
             v
           </button>
         </div>
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
-            How We Use the Information Your data is used for the following purposes: Service Improvement: We use data to understand how our
-            website is used so we can improve the user experience. Order Processing: To process orders and deliver products or services you
-            have purchased. Marketing: With your consent, we may send you newsletters and information about our services and events </p>
+            How We Use the Information Your data is used for the following
+            purposes: Service Improvement: We use data to understand how our
+            website is used so we can improve the user experience. Order
+            Processing: To process orders and deliver products or services you
+            have purchased. Marketing: With your consent, we may send you
+            newsletters and information about our services and events
+          </p>
         </div>
-        <div class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10">
-          <h2 class="text-4xl font-semibold text-left">
-            DATA SECURITY
-          </h2>
+        <div
+          class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10"
+        >
+          <h2 class="text-4xl font-semibold text-left">DATA SECURITY</h2>
           <button class="text-2xl font-semibold text-alt-red p-4 rounded-full">
             v
           </button>
@@ -182,39 +334,48 @@
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
             Sharing Your Information We only share your personal data in the
-           following cases: Third-Party Providers: We may share your data with
-           providers who assist us in delivering our services, such as payment
-           processors and technical solution providers. Legal Obligations: We may
-           be required to share your data with public authorities in compliance
-           with legal requirements</p>
+            following cases: Third-Party Providers: We may share your data with
+            providers who assist us in delivering our services, such as payment
+            processors and technical solution providers. Legal Obligations: We
+            may be required to share your data with public authorities in
+            compliance with legal requirements
+          </p>
         </div>
-        <div class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10">
-          <h2 class="text-4xl font-semibold text-left">
-            THIRD PARTY LINKS
-          </h2>
+        <div
+          class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10"
+        >
+          <h2 class="text-4xl font-semibold text-left">THIRD PARTY LINKS</h2>
           <button class="text-2xl font-semibold text-alt-red p-4 rounded-full">
             v
           </button>
         </div>
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, 
-            mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Lorem ipsum dolor sit amet, consectetur
+          </p>
         </div>
-        <div class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10">
-          <h2 class="text-4xl font-semibold text-left">
-            CHILDREN`S PRIVACY
-          </h2>
+        <div
+          class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10"
+        >
+          <h2 class="text-4xl font-semibold text-left">CHILDREN`S PRIVACY</h2>
           <button class="text-2xl font-semibold text-alt-red p-4 rounded-full">
             v
           </button>
         </div>
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, 
-            mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Lorem ipsum dolor sit amet, consectetur
+          </p>
         </div>
-        <div class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10">
+        <div
+          class="flex flex-row max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center mb-10"
+        >
           <h2 class="text-4xl font-semibold text-left">
             CHANGES TO OUR PRIVACY
           </h2>
@@ -225,98 +386,105 @@
         <div>
           <p class="text-2xl max-w-5xl mx-auto mb-16 pl-10 hidden">
             Your Rights As a user, you have the right to: Request access to the
-            personal data we have stored about you. Request correction or deletion
-            of inaccurate or incomplete data. Withdraw your consent to data
-            processing where consent is the basis for processing. File a complaint
-            with the Data Protection Authority if you believe we have not upheld
-            your rights. </p>
+            personal data we have stored about you. Request correction or
+            deletion of inaccurate or incomplete data. Withdraw your consent to
+            data processing where consent is the basis for processing. File a
+            complaint with the Data Protection Authority if you believe we have
+            not upheld your rights.
+          </p>
         </div>
-        <div class="flex flex-col max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between mb-10">
+        <div
+          class="flex flex-col max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between mb-10"
+        >
           <h2 class="text-4xl font-semibold text-left mt-16">GOVERNING LAW</h2>
           <div>
             <p class="max-w-2xl mx-auto mb-2 mt-10 text-lg">
-              Contact Information If you have any questions about this
-              privacy policy or wish to exercise your rights, you can contact us at:</p>
-              <br>Email: [your-email@musikkforandrerliv.no] <br/>
+              Contact Information If you have any questions about this privacy
+              policy or wish to exercise your rights, you can contact us at:
+            </p>
+            <br />Email: [your-email@musikkforandrerliv.no] <br />
           </div>
         </div>
         <div class="mb-10">
-          <p class="flex flex-col max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between">
-            Updated: 00 / 00 / 00
-        </div>
-    </section>
-    <section class="bg-sunset-red py-16">
-      <div class="w-full text-center">
-        <h3 class="text-2xl font-semibold mb-6">
-          Subscribe to our newsletter!
-        </h3>
-        <p class="mb-6">
-          Join our newsletter today to, stay updated on our events and
-          projects!
-        </p>
-        <div class="max-w-[452px] mx-auto">
-          <form
-            action="#"
-            method="POST"
-            class="flex justify-center items-center gap-5"
+          <p
+            class="flex flex-col max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 justify-between"
           >
-            <input
-              type="email"
-              name="email"
-              placeholder="example@example.com"
-              class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md"
-            />
-
-            <button
-              id="signUpButton"
-              type="submit"
-              class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative border-2 border-white hover:bg-sunset-red hover:text-white transition-all duration-300"
-            >
-              <span id="btnText">Sign Up</span>
-              <div id="loader" class="loader" style="display: none"></div>
-              <span id="checkmark" style="display: none; color: #000000"
-                >&#10003;</span
-              >
-              <!-- Checkmark -->
-            </button>
-          </form>
+            Updated: 00 / 00 / 00
+          </p>
         </div>
-      </div>
-    </section>
-    <!-- Section 7 ends here -->
-  </main>
-     <!-- Footer -->
-     <footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
+      </section>
+      <section class="bg-sunset-red py-16">
+        <div class="w-full text-center">
+          <h3 class="text-2xl font-semibold mb-6">
+            Subscribe to our newsletter!
+          </h3>
+          <p class="mb-6">
+            Join our newsletter today to, stay updated on our events and
+            projects!
+          </p>
+          <div class="max-w-[452px] mx-auto">
+            <form
+              action="#"
+              method="POST"
+              class="flex justify-center items-center gap-5"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="example@example.com"
+                class="w-[300px] h-[42.5px] p-2 outline-none border-2 rounded-md"
+              />
+
+              <button
+                id="signUpButton"
+                type="submit"
+                class="bg-white text-sunset-red font-sans text-2xl font-semibold rounded-md w-[148px] h-[42px] relative border-2 border-white hover:bg-sunset-red hover:text-white transition-all duration-300"
+              >
+                <span id="btnText">Sign Up</span>
+                <div id="loader" class="loader" style="display: none"></div>
+                <span id="checkmark" style="display: none; color: #000000"
+                  >&#10003;</span
+                >
+                <!-- Checkmark -->
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7 ends here -->
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#363732] text-white p-2 h-auto max-w-full pt-6 px-4">
       <div class="flex justify-between">
         <div class="flex flex-col justify-between gap-10 md:flex-row xl:ml-10">
-          <a href="../index.html">
+          <a href="./index.html">
             <img
               src="/assets/images/SVGs/headerLogo.svg"
               alt="The logo for MFL"
-              class="w-[170px] md:w-[200px] md:-mt-10 pt-20 xl:w-[350px]"
+              class="w-[170px] md:w-[200px] ml-10 md:-mt-10 pt-20 xl:w-[350px]"
             />
           </a>
           <!--News and sign up-->
           <!-- Links and button-->
           <div
-            class="flex flex-col md:flex-row md:gap-10 md:text-sm md:ml-6 md:mt-14 lg:text-xl lg:mt-10 lg:gap-14 lg:ml-28 mt-4 xl:text-3xl xl:ml-40 xl:mt-28"
+            class="flex flex-col ml-10 text-2xl md:flex-row md:justify-center md:gap-10 md:text-sm md:ml-16 md:mt-14 lg:text-xl lg:mt-10 lg:gap-14 lg:ml-28 mt-4 xl:text-3xl xl:mt-28 xl:pl-10"
           >
-            <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
-              <a href="../pages/about-page.html">About Us</a>
-              <a href="../pages/news.html">News</a>
-              <a href="../pages/event.html">Events</a>
+            <div class="flex flex-col pl-4 gap-6 mb-16 md:gap-5 lg:gap-10 ">
+              <a href="./pages/about-page.html">About Us</a>
+              <a href="./pages/news.html">News</a>
+              <a href="./pages/event.html" class="">Events</a>
             </div>
-            <div class="flex flex-col pl-4 gap-3 md:gap-5 lg:gap-10">
-              <a href="../pages/gallery-page.html">Gallery</a>
-              <a href="../pages/our-work.html">Our work</a>
-              <a href="../pages/contact-page.html">Contact Us</a>
+            <div class="flex flex-col pl-4 gap-6 md:gap-5 lg:gap-10">
+              <a href="./pages/gallery-page.html">Gallery</a>
+              <a href="./pages/our-work.html">Our work</a>
+              <a href="./pages/contact-page.html">Contact Us</a>
             </div>
           </div>
           <div>
             <!-- button for sm screen-->
             <a
-              class="alt-button uppercase font-sans text-2xl px-10 md:hidden"
-              href="../pages/support-page.html"
+              class="ml-10 alt-button uppercase font-sans text-2xl px-10 md:hidden"
+              href="./pages/support-page.html"
               >donate</a
             >
             <!-- button for sm screen-->
@@ -326,21 +494,21 @@
           <!-- button for md screen-->
           <a
             class="alt-button uppercase font-sans text-2xl px-10 hidden md:block md:mr-4 md:my-10 lg:mr-4 xl:mr-24 xl:text-3xl xl:mt-28"
-            href="../pages/support-page.html"
+            href="./pages/support-page.html"
             >donate</a
           >
           <!-- button for md screen-->
           <p
-            class="uppercase font-bold mt-24 text-2xl md:ml-4 lg:mt-9 xl:ml-8 xl:mt-10"
+            class="uppercase font-bold mt-24 mb-6 text-2xl mr-20 md:ml-4 md:mb-10 lg:mt-9 xl:ml-8 xl:mt-10"
           >
             follow us
           </p>
           <div
-            class="flex gap-2 mt-4 w-14 justify-between lg:ml-4 lg:mt-0 lg:gap-0 lg:pl-4"
+            class="flex mt-6 w-14 justify-between lg:ml-4 lg:mt-0 md:mt-4 gap-6"
           >
             <a
               href="https://www.facebook.com/musicchangeslivesMadagascar"
-              class="border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2 xl:ml-4"
+              class=" border-2 border-solid border-sunset-red bg-sunset-red rounded-full p-4 mr-2 xl:ml-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -381,8 +549,8 @@
       </div>
       <!--PP, TC and ©-->
       <div class="flex font-semibold underline justify-center gap-x-12 mt-32">
-        <a href="../pages/privacy-policy.html">Privacy Policy</a>
-        <a href="../pages/terms-and-conditions.html">Terms and Conditions</a>
+        <a href="./pages/privacy-policy.html">Privacy Policy</a>
+        <a href="./pages/terms-and-conditions.html">Terms and Conditions</a>
       </div>
       <div class="flex justify-center p-6">&copy;Musikkforandrerliv</div>
     </footer>
