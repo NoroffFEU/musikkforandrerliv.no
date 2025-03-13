@@ -1,1 +1,0 @@
-This functionality can be applied for any text on the page, but would require readily available translated texts, saved in 'languageContent' with the relevant keys. Those keys must be used as id in html layout to access them.

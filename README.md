@@ -12,15 +12,24 @@ This project aim to build a web application:
 - that allows people visiting the page to sign up for newsletter
 
 # Built with:
+- React
 - Tailwind
 - Decap CMS
-  
+
+# Requirements
+
+- Node version `>=18.19.1`
+- NPM verion `>=10.2.4`
+
 # Getting started: 
 
 ## Installation:
 
-1. Clone the repo: https://github.com/NoroffFEU/musikkforandrerliv.no
-2. Run `npm install`
+1. Ensure you have at least node version 18.19.1 and above and npm version 10.2.4 and above
+2. Run `git clone https://github.com/NoroffFEU/musikkforandrerliv.no`
+3. Run `npm install`
+4. Run `npm run build`
+5. Run `npm run dev`
 
 # Acknowledgments: 
 2022-2023 Noroff fulltime Frontend development students
@@ -39,5 +48,3 @@ Tailwind is already configured for this project.
 - plugins you can use to help with tailwind: **Tailwind CSS IntelliSense & Tailwind Docs**
 
 - If the Tailwind code is not working, and you have tried the above, you can also look in the **Problems** tab and see if there are any issues there.
-
-
