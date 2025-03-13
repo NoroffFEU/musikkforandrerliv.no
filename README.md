@@ -11,6 +11,13 @@ This project aim to build a web application:
 - that allows the client, MMF, to update and post content on their page via CMS
 - that allows people visiting the page to sign up for newsletter
 
+## Design
+- [Figma Design](Deshttps://www.figma.com/design/p3IKXs5ICTeFKQQ5hZ4ZAG/Design-File---MMF?node-id=0-1&p=f&t=OTHKwV3Alm2JN8Zz-0)
+
+## Docs
+
+- [Musikk Forandre Liv](https://noroff-my.sharepoint.com/:o:/r/personal/tarbjo01657_stud_noroff_no/_layouts/15/Doc.aspx?sourcedoc=%7B86d2d933-f42c-42a3-ab7b-27d37688f881%7D&action=edit&wd=target(Questions%20for%20client.one%7Cc2d95cef-84b0-4461-994c-2cce927a47e6%2FQuestion%20we%20need%20to%20get%20answers%20from%20Client%7C6f534107-382f-4256-a68d-311a0d35fb29%2F)&wdorigin=NavigationUrl)
+
 # Built with:
 - Tailwind
 - Decap CMS
