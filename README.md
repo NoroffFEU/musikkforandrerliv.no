@@ -19,15 +19,24 @@ This project aim to build a web application:
 - [Musikk Forandre Liv](https://noroff-my.sharepoint.com/:o:/r/personal/tarbjo01657_stud_noroff_no/_layouts/15/Doc.aspx?sourcedoc=%7B86d2d933-f42c-42a3-ab7b-27d37688f881%7D&action=edit&wd=target(Questions%20for%20client.one%7Cc2d95cef-84b0-4461-994c-2cce927a47e6%2FQuestion%20we%20need%20to%20get%20answers%20from%20Client%7C6f534107-382f-4256-a68d-311a0d35fb29%2F)&wdorigin=NavigationUrl)
 
 # Built with:
+- React
 - Tailwind
 - Decap CMS
-  
+
+# Requirements
+
+- Node version `>=18.19.1`
+- NPM verion `>=10.2.4`
+
 # Getting started: 
 
 ## Installation:
 
-1. Clone the repo: https://github.com/NoroffFEU/musikkforandrerliv.no
-2. Run `npm install`
+1. Ensure you have at least node version 18.19.1 and above and npm version 10.2.4 and above
+2. Run `git clone https://github.com/NoroffFEU/musikkforandrerliv.no`
+3. Run `npm install`
+4. Run `npm run build`
+5. Run `npm run dev`
 
 # Acknowledgments: 
 2022-2023 Noroff fulltime Frontend development students
@@ -46,5 +55,3 @@ Tailwind is already configured for this project.
 - plugins you can use to help with tailwind: **Tailwind CSS IntelliSense & Tailwind Docs**
 
 - If the Tailwind code is not working, and you have tried the above, you can also look in the **Problems** tab and see if there are any issues there.
-
-
