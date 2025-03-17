@@ -5,8 +5,8 @@
 # Description:
 Noroff Frontend Developer students are building a web application for the non profit organization Musikk Forandrer Liv (MMF).
 
-This project aim to build a web application:
-- with multipple language support (English, Norwegian and Malagasy)
+This project aims to build a web application:
+- with multiple language support (English, Norwegian and Malagasy)
 - that allows people to support MMF via donations
 - that allows the client, MMF, to update and post content on their page via CMS
 - that allows people visiting the page to sign up for newsletter
