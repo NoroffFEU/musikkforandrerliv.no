@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: username/musikkforandrerliv.no # replace with your actual GitHub username/repo
+  branch: main
+
+media_folder: 'public/images/uploads'
+public_folder: '/images/uploads'
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/data/home.json'
+        name: 'home'
+        label: 'Home Page'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+
+  # Add more collections as needed based on your content structure
