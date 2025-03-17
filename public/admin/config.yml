@@ -1,10 +1,9 @@
 backend:
   name: github
-  repo: username/musikkforandrerliv.no # replace with your actual GitHub username/repo
-  branch: main
+  repo: NoroffFEU/musikkforandrerliv.no
+  branch: 719-Decap-CMS # Change to main ???
 
-media_folder: 'public/images/uploads'
-public_folder: '/images/uploads'
+media_folder: 'public/assets/images'
 
 collections:
   - name: 'pages'
