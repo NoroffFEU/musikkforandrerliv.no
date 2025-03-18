@@ -1,7 +1,6 @@
 {
-  "_comment": "Section 2 - comment will be deleted later",
-
   "common": {
+    "_comment": "Buttons section - comment will be deleted later",
     "buttons": {
       "readMore": "Hamaky bebe kokoa",
       "signUp": "Hisoratra anarana",
@@ -11,6 +10,7 @@
     },
 
     "newsletter": {
+      "_comment": "Newsletter section - comment will be deleted later",
       "title": "Misorata anarana amin'ny gazetinay!",
       "description": "Mandraisa anjara amin'ny gazetinay anio mba hahazoana vaovao farany momba ny hetsika sy tetikasantsika!"
     }
@@ -18,6 +18,7 @@
 
   "screens": {
     "history": {
+      "_comment": "History section - comment will be deleted later",
       "title": "Tantaran'ny MMF",
       "description": "Ny MMF dia naorina tamin'ny fomba ofisialy tao Antsirabe, Madagasikara, tamin'ny taona 2021, nataon'i Eline Rodvelt Hansen sy ny vadiny Dina Rasalina Andriamanalina. Ny tantaran'ny MMF dia niantomboka tamin'ny taona 2018, raha nitondra fiddle roa i Eline ary nankany Madagasikara tamin-kafanam-po. Raha mbola nianatra fiddle tao amin'ny Akademia Grieg tao Bergen izy, dia nanana faniriana mafy hampianatra ankizy izay tsy manana fahafahana hampivelatra ny talentany. Nanjary nofinofiny ny hanokatra sekoly mozika ho an'ireo ankizy mahantra indrindra any Madagasikara.",
       "introduction": [
@@ -49,6 +50,7 @@
     },
 
     "ourWork": {
+      "_comment": "Our Work section - comment will be deleted later",
       "title": "Ny Asa Ataonay",
       "description": "Ao Madagasikara, avo ny fatin'ny zaza ary maro no maty noho ny aretina izay azo tsaboina mora amin'ny fitsaboana maoderina. Ny antony mahazatra dia aretina mifindra toy ny aretin'andoha, tazo, aretina mifandray amin'ny kibo, ary tazomoka. I Madagasikara koa dia manana iray amin'ireo taha ambony indrindra amin'ny tazo eran-tany, ary misy areti-mifindra sy areti-pandemika izay efa voafitaka any amin'ny firenena hafa. Maro no mandalo lavitra any amin'ny klinika sy/na hopitaly akaiky, ary lafo ny saran'ny fitsaboana. Noho izany, tsy mitady fanampiana izy ireo raha tsy efa tara loatra. Maro amin'ireo ankizy izay hitanay eny an-dalambe no matetika manana olana ara-pahasalamana goavana, ary maro amin'izy ireo no miaina amin'ny tsy fahampian-tsakafo mafy.",
 
@@ -86,6 +88,7 @@
 
     "forms": {
       "contact": {
+        "_comment": "Contact section - comment will be deleted later",
         "title": "Antontan'isa fifandraisana",
         "fields": {
           "name": {
@@ -108,6 +111,7 @@
       },
 
       "support": {
+        "_comment": "Support section - comment will be deleted later",
         "title": "Fifandraisana",
         "contactInfo": {
           "fields": {
@@ -148,6 +152,7 @@
       },
 
       "paymentPlan": {
+        "_comment": "Payment plan section - comment will be deleted later",
         "title": "Safidio ny drafitra",
         "fields": {
           "oneTimePay": {
@@ -162,6 +167,7 @@
       },
 
       "paymentMethod": {
+        "_comment": "Payment method section - comment will be deleted later",
         "title": "Safidio ny fomba fandoavana",
         "fields": {
           "creditCard": {
