@@ -6,6 +6,33 @@
         "aboutUs": "About Us",
         "more": "More",
         "donate": "Donate"
+    },
+
+    "staff": {
+        "_comment": "Section Our Staff Overview: This comment will be deleted later",
+        "title": "Our Staff",
+        "members": [
+            {
+                "name": "Eline Rodvelt Hansen",
+                "occupation": "Violin Teacher",
+                "description": "Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres."
+            },
+            {
+                "name": "Dina Rasalina Andriamanalina",
+                "occupation": "Piano Teacher",
+                "description": "Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood. However, it was eventually the piano that became his dominant instrument."
+            },
+            {
+                "name": "Karoline Hartvigsen",
+                "occupation": "Nurse",
+                "description": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo. Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen."
+            },
+            {
+                "name": "Thea Harbo",
+                "occupation": "Nurse",
+                "description": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger. She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet."
+            }
+        ]
     }
 }
 
