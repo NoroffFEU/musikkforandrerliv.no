@@ -19,4 +19,18 @@ const useModalStore = create((set) => ({
   closeModal: () => set({ isModalOpen: false }),
 }));
 
-export default useModalStore;
+/**
+ * @property {boolean} isSidebarOpen - Represents whether the sidebar is open or closed.
+ * @property {() => void} toggleSidebar - Toggles the sidebar between open and closed states.
+ * @property {() => void} openSidebar - Opens the sidebar.
+ * @property {() => void} closeSidebar - Closes the sidebar.
+ */
+
+const useUIStore = create((set) => ({
+  isSidebarOpen: false,
+  toggleSidebar: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
+  openSidebar: () => set({ isSidebarOpen: true }),
+  closeSidebar: () => set({ isSidebarOpen: false }),
+}));
+
+export { useModalStore, useUIStore };
