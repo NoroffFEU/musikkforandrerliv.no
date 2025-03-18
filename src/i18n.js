@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector) // Detects user language
   .use(initReactI18next) // Initializes react-i18next
   .init({
-    supportedLngs: ["en", "fr", "es"], // Supported languages
+    supportedLngs: ["no", "mg", "en"], // Supported languages
     fallbackLng: "en", // Default language
     debug: true,
     interpolation: {
