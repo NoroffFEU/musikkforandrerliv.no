@@ -5,10 +5,10 @@ export default function WorkSection() {
   const { image, title, content } = data.work;
   console.log(data.work); // delete this line
   return (
-    <section id="WorkSection" className="py-16 px-8 bg-emerald-100">
+    <section id="WorkSection" className="w-full py-16 px-8 bg-emerald-100">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-20">
        
-          <div className="w-full md:w-1/2 flex items-center justify-center">
+          <div className="w-full mr-10 md:w-1/2 flex items-center justify-center">
             <img src={image} alt={title} className="w-full aspect-[3/3] object-cover  " />
           </div>
 
