@@ -84,111 +84,111 @@
           "description": "Ny ankizy izay mitombo ao amin'ny fahantrana ao Antsirabe dia matetika manana andraikitra lehibe hatramin'ny fahazazany. Mikarakara ny rahalahy sy anabaviny izy ireo, mandray andraikitra amin'ny fanomanana sakafo, ary manao ny asa hahazoana vola ho an'ny fianakaviana amin'ny alalan'ny fanangonan-tsoa. Indraindray, omena asa mavesatra koa izy ireo, toy ny mitondra kitapo vary na manpusha tavoahangy rano mavesatra, ka mahazo karama kely na tsy mahazo karama mihitsy amin'ny asany. Ny fanomezana andraikitra amin'ny olon-dehibe amin'ny fikarakarana ny ankizy dia ampahany lehibe amin'ny asanay. Tokony hahazo fahafahana ho ankizy ny ankizy! Noho izany, zava-dehibe ho an'ny fiainana andavanandro ao amin'ny MMF ny filalaovana."
         }
       ]
+    }
+  },
+
+  "forms": {
+    "contact": {
+      "_comment": "Contact section - comment will be deleted later",
+      "title": "Antontan'isa fifandraisana",
+      "fields": {
+        "name": {
+          "label": "Ny Anaranao",
+          "error": "(error message here)"
+        },
+        "email": {
+          "label": "E-mail",
+          "error": "(error message here)"
+        },
+        "subject": {
+          "label": "Lohahevitra",
+          "error": "(error message here)"
+        },
+        "message": {
+          "label": "Ny Hafatrao",
+          "error": "(error message here)"
+        }
+      }
     },
 
-    "forms": {
-      "contact": {
-        "_comment": "Contact section - comment will be deleted later",
-        "title": "Antontan'isa fifandraisana",
+    "support": {
+      "_comment": "Support section - comment will be deleted later",
+      "title": "Fifandraisana",
+      "contactInfo": {
         "fields": {
           "name": {
-            "label": "Ny Anaranao",
+            "label": "Anarana voalohany",
+            "error": "(error message here)"
+          },
+          "lastName": {
+            "label": "Anarana farany",
             "error": "(error message here)"
           },
           "email": {
             "label": "E-mail",
             "error": "(error message here)"
           },
-          "subject": {
-            "label": "Lohahevitra",
+          "phone": {
+            "label": "Nomeraon-telefaona",
             "error": "(error message here)"
           },
-          "message": {
-            "label": "Ny Hafatrao",
+          "address": {
+            "label": "Adiresy",
+            "error": "(error message here)"
+          },
+          "postalCode": {
+            "label": "Kaody paositra",
+            "error": "(error message here)"
+          },
+          "city": {
+            "label": "Tanàna",
+            "error": "(error message here)"
+          },
+          "country": {
+            "label": "Firenena",
             "error": "(error message here)"
           }
         }
-      },
-
-      "support": {
-        "_comment": "Support section - comment will be deleted later",
-        "title": "Fifandraisana",
-        "contactInfo": {
-          "fields": {
-            "name": {
-              "label": "Anarana voalohany",
-              "error": "(error message here)"
-            },
-            "lastName": {
-              "label": "Anarana farany",
-              "error": "(error message here)"
-            },
-            "email": {
-              "label": "E-mail",
-              "error": "(error message here)"
-            },
-            "phone": {
-              "label": "Nomeraon-telefaona",
-              "error": "(error message here)"
-            },
-            "address": {
-              "label": "Adiresy",
-              "error": "(error message here)"
-            },
-            "postalCode": {
-              "label": "Kaody paositra",
-              "error": "(error message here)"
-            },
-            "city": {
-              "label": "Tanàna",
-              "error": "(error message here)"
-            },
-            "country": {
-              "label": "Firenena",
-              "error": "(error message here)"
-            }
-          }
-        }
-      },
-
-      "paymentPlan": {
-        "_comment": "Payment plan section - comment will be deleted later",
-        "title": "Safidio ny drafitra",
-        "fields": {
-          "oneTimePay": {
-            "label": "Fandoavana indray mandeha",
-            "error": "(error message here)"
-          },
-          "monthlyPay": {
-            "label": "Fanomezana isam-bolana",
-            "error": "(error message here)"
-          }
-        }
-      },
-
-      "paymentMethod": {
-        "_comment": "Payment method section - comment will be deleted later",
-        "title": "Safidio ny fomba fandoavana",
-        "fields": {
-          "creditCard": {
-            "label": "Karatra kredita",
-            "error": "(error message here)"
-          },
-          "debitCard": {
-            "label": "Karatra debit",
-            "error": "(error message here)"
-          },
-          "vipps": {
-            "label": "Vipps",
-            "error": "(error message here)"
-          }
-        }
-      },
-
-      "termsAndPrivacy": {
-        "_comment": "Terms and Privacy section - comment will be deleted later",
-        "label": "Amin'ny fanindriana Manatitra, manaiky ny Fepetra sy Fomba fiasa ianao, ary efa namaky ny Politikan'ny Fiarovana ny angon-drakitra."
       }
+    },
+
+    "paymentPlan": {
+      "_comment": "Payment plan section - comment will be deleted later",
+      "title": "Safidio ny drafitra",
+      "fields": {
+        "oneTimePay": {
+          "label": "Fandoavana indray mandeha",
+          "error": "(error message here)"
+        },
+        "monthlyPay": {
+          "label": "Fanomezana isam-bolana",
+          "error": "(error message here)"
+        }
+      }
+    },
+
+    "paymentMethod": {
+      "_comment": "Payment method section - comment will be deleted later",
+      "title": "Safidio ny fomba fandoavana",
+      "fields": {
+        "creditCard": {
+          "label": "Karatra kredita",
+          "error": "(error message here)"
+        },
+        "debitCard": {
+          "label": "Karatra debit",
+          "error": "(error message here)"
+        },
+        "vipps": {
+          "label": "Vipps",
+          "error": "(error message here)"
+        }
+      }
+    },
+
+    "termsAndPrivacy": {
+      "_comment": "Terms and Privacy section - comment will be deleted later",
+      "label": "Amin'ny fanindriana Manatitra, manaiky ny Fepetra sy Fomba fiasa ianao, ary efa namaky ny Politikan'ny Fiarovana ny angon-drakitra."
     }
   }
 }
