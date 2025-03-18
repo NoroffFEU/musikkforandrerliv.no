@@ -1,4 +1,13 @@
 {
+
+    "common": {
+        "_comment": "Buttons section: Comment will be deleted later",
+        "buttons": {
+            "readMore": "Read More",
+            "donate": "Donate"
+        }
+    },
+
     "header": {
         "_comment": "Section Header: This comment will be deleted later",
         "search": "Search",
@@ -7,7 +16,6 @@
         "more": "More",
         "donate": "Donate"
     },
-
 
     "staff": {
         "_comment": "Section Our Staff Overview: This comment will be deleted later",
