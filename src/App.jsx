@@ -13,7 +13,7 @@ const App = () => {
           {t("Welcome to MMF project")}{" "}
           <img className="inline bg-red-600" src={heart} alt="" />
         </h1>
-        <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+        <button onClick={() => i18n.changeLanguage("no")}>NO</button>
       </div>
     </I18nextProvider>
   );
