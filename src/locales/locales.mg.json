@@ -1,0 +1,13 @@
+{
+  "_comment": "Section 2 - comment will be deleted later",
+
+  "common": {
+    "buttons": {
+      "readMore": "Hamaky bebe kokoa",
+      "signUp": "Hisoratra anarana",
+      "donate": "Manome",
+      "send": "Mandefa",
+      "submit": "Manatitra"
+    }
+  }
+}
