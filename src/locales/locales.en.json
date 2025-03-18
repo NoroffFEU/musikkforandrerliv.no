@@ -17,17 +17,17 @@
         "newsLetter": {
             "title": "Subscribe to our newsletter!",
             "description": "Join our newsletter today, to stay updated on our events and projects!"
+        },
+        "header": {
+            "_comment": "Section Header: This comment will be deleted later",
+            "search": "Search",
+            "news": "News",
+            "aboutUs": "About Us",
+            "more": "More",
+            "donate": "Donate"
         }
     },
 
-    "header": {
-        "_comment": "Section Header: This comment will be deleted later",
-        "search": "Search",
-        "news": "News",
-        "aboutUs": "About Us",
-        "more": "More",
-        "donate": "Donate"
-    },
 
     "staff": {
         "_comment": "Section Our Staff Overview: This comment will be deleted later",
