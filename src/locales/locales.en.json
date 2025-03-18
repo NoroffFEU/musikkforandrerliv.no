@@ -5,7 +5,13 @@
         "buttons": {
             "readMore": "Read More",
             "donate": "Donate"
-        }
+        },
+        "months": [
+             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ],
+        "days": [
+             "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ]
     },
 
     "header": {
@@ -106,6 +112,33 @@
     "galleryPreview": {
         "_comment": "Section Gallery Preview: This comment will be deleted later",
         "button": "See the Gallery"
+    },
+
+    "upcomingEventsPreview": {
+        "-comment": "Section Upcoming Events Preview: This comment will be deleted later",
+        "title": "Upcoming Events",
+        "events": [
+            {
+                "date": "May 20, 2024",
+                "eventTitle": "MMF  Annual  Charity  Concert"
+            },
+            {
+                "date": "June 10, 2024",
+                "eventTitle": "Run for Music 5K Charity Race"
+            },
+            {
+                "date": "July 15, 2024",
+                "eventTitle": "MMF Culture and Arts Festival"
+            },
+            {
+                "date": "August 25, 2024",
+                "eventTitle": "Back-to-School Fundraiser Gala"
+            },
+            {
+                "date": "November 25, 2024",
+                "eventTitle": "Holiday Giving Campaign Kickoff"
+            }
+        ]
     }
 
 }
