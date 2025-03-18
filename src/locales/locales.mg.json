@@ -177,6 +177,11 @@
             "error": "(error message here)"
           }
         }
+      },
+
+      "termsAndPrivacy": {
+        "_comment": "Terms and Privacy section - comment will be deleted later",
+        "label": "Amin'ny fanindriana Manatitra, manaiky ny Fepetra sy Fomba fiasa ianao, ary efa namaky ny Politikan'ny Fiarovana ny angon-drakitra."
       }
     }
   }
