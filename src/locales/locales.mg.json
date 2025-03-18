@@ -145,6 +145,20 @@
             }
           }
         }
+      },
+
+      "paymentPlan": {
+        "title": "Safidio ny drafitra",
+        "fields": {
+          "oneTimePay": {
+            "label": "Fandoavana indray mandeha",
+            "error": "(error message here)"
+          },
+          "monthlyPay": {
+            "label": "Fanomezana isam-bolana",
+            "error": "(error message here)"
+          }
+        }
       }
     }
   }
