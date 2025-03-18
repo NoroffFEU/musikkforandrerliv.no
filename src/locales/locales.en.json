@@ -95,6 +95,12 @@
         "_comment": "Section Volunteer: This comment will be deleted later",
         "title": "Volunteer",
         "description": "Would you like to make a difference for street children in one of the world's poorest countries? We are looking for individuals who want to volunteer with us in Madagascar. Primarily, we are seeking those with an interest in or education related to music. We find that students greatly benefit from instruction by professional musicians."
+    },
+
+    "supportUs": {
+        "_comment": "Section Support Us: This comment will be deleted later",
+        "title": "Support Us",
+        "description": "The funds that come in go towards covering everything from food, clothing, education, equipment, healthcare, medicines, and dental care for the children, as well as the operation of the music school and salaries for our staff. The families of the children are also included in the food program and receive monthly distributions of food."
     }
 
 }
