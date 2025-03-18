@@ -17,6 +17,41 @@
   },
 
   "screens": {
+    "contact": {
+      "_comment": "Contact us page - delete later",
+      "title": "Mifandraisa aminay",
+      "section": {
+        "ourMission": {
+          "title": "Ny iraka ataonay",
+          "description": "Ny vola miditra dia ampiasaina handrakofana ny zava-drehetra, manomboka amin’ny sakafo, fitafiana, fanabeazana, fitaovana, fahasalamana, fanafody, ary fikarakarana nify ho an’ny ankizy, ary koa amin’ny fampandehanana ny sekoly mozika sy ny karaman’ny mpiasanay. Tafiditra ao amin’ny fandaharan’asa sakafo ihany koa ny fianakavian’ny ankizy, ka mahazo fizarana sakafo sy vokatra fidiovana isam-bolana. Miezaka hatrany izahay hanatsara ny fari-piainan’ny ankizy, ary ampiasainay amin’ny fanamboarana trano fonenana ny ankamaroan’ny fanampiana sisa tavela."
+        }
+      }
+    },
+    "support": {
+      "_comment": "Support page - delete later",
+      "title": "Fanohanana",
+      "section": {
+        "funding": {
+          "title": "Avy aiza ny famatsiam-bola azontsika?",
+          "description": "Ny MMF dia fikambanana madinika miorim-paka amin’ny fiarahamonina, izay mahazo fanohanana indrindra avy amin’ireo mpanome tsy miankina any Norvezy. Ny mpanome tsy tapaka (mpanohana MMF) dia manome fahamarinan-toerana sy fahatokisana ara-bola ho anay. Ankoatr’izay, manam-bintana izahay manana olona maro be feno fahavitrihana izay manangom-bola amin’ny fotoana manokana, toy ny fitsingerenan’ny andro nahaterahana sy hetsika manokana. Ankoatra ireo mpanome tsy miankina, ny mpanohana lehibe indrindra anay dia ny Musikk Gir Liv (mpitendry mozika avy amin’ny Orkesitran’i Kristiansand), izay manome famatsiam-bola ho an’ny fandehanan’ny sekoly mozika sy ny fanamafisam-peo. Ankoatra izany, tato anatin’ny roa taona farany, dia tonga nitsidika an’i Antsirabe ry zareo Musikk Gir Liv niaraka amin’ny vondronà mpitendry mozika avy amin’ny orkesitra, ka nampianatra mozika ho an’ny ankizy ao amin’ny MMF sy nandray anjara tamin’ny fampisehoana niaraka tamin’ny mpianatra."
+        },
+        "navigation": [
+          {
+            "label": "Mpilatsaka an-tsitrapo"
+          },
+          {
+            "label": "Fanomezana"
+          },
+          {
+            "label": "Fanangonam-bola"
+          }
+        ],
+        "support": {
+          "title": "Misaotra anao tamin’ny fanohananao!",
+          "description": "Ny vola miditra dia ampiasaina hanampiana amin’ny zavatra rehetra, manomboka amin’ny sakafo, fitafiana, fanabeazana, fitaovana, fahasalamana, fanafody, ary fikarakarana nify ho an’ny ankizy, ary koa amin’ny fandehanan’ny sekoly mozika sy ny karaman’ny mpiasanay. Tafiditra ao amin’ny fandaharan’asa sakafo ihany koa ny fianakavian’ny ankizy, ka mahazo fizarana sakafo sy vokatra fidiovana isam-bolana. Miezaka hatrany izahay hanatsara ny fari-piainan’ny ankizy, ary ampiasainay amin’ny fanamboarana trano fonenana ny ankamaroan’ny fanampiana sisa tavela."
+        }
+      }
+    },
     "history": {
       "_comment": "History section - comment will be deleted later",
       "title": "Tantaran'ny MMF",
