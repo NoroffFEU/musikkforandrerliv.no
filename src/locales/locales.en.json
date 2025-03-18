@@ -1,8 +1,10 @@
 {
 
     "common": {
-        "_comment": "Buttons section: Comment will be deleted later",
+        "_comment": "Main common section for shared text across the site: Comment will be deleted later",
+
         "buttons": {
+            "_comment": "Button section: Comment will be deleted later",
             "readMore": "Read More",
             "donate": "Donate",
             "signUp": "Sign Up"
@@ -18,6 +20,7 @@
             "title": "Subscribe to our newsletter!",
             "description": "Join our newsletter today, to stay updated on our events and projects!"
         },
+
         "header": {
             "_comment": "Section Header: This comment will be deleted later",
             "search": "Search",
@@ -25,6 +28,19 @@
             "aboutUs": "About Us",
             "more": "More",
             "donate": "Donate"
+        },
+
+        "footer": {
+            "_comment": "Section Footer: This comment will be deleted later",
+            "aboutUs": "About Us",
+            "news": "News",
+            "events": "Events",
+            "gallery": "Gallery",
+            "ourWork": "Our Work",
+            "contactUs": "Contact Us",
+            "followUs": "Follow Us",
+            "privacyPolicy": "Privacy Policy",
+            "termsAndConditions": "Terms and Conditions"
         }
     },
 
@@ -121,7 +137,7 @@
     },
 
     "upcomingEventsPreview": {
-        "-comment": "Section Upcoming Events Preview: This comment will be deleted later",
+        "_comment": "Section Upcoming Events Preview: This comment will be deleted later",
         "title": "Upcoming Events",
         "events": [
             {
