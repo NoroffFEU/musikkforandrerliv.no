@@ -105,6 +105,46 @@
             "error": "(error message here)"
           }
         }
+      },
+
+      "support": {
+        "title": "Fifandraisana",
+        "contactInfo": {
+          "fields": {
+            "name": {
+              "label": "Anarana voalohany",
+              "error": "(error message here)"
+            },
+            "lastName": {
+              "label": "Anarana farany",
+              "error": "(error message here)"
+            },
+            "email": {
+              "label": "E-mail",
+              "error": "(error message here)"
+            },
+            "phone": {
+              "label": "Nomeraon-telefaona",
+              "error": "(error message here)"
+            },
+            "address": {
+              "label": "Adiresy",
+              "error": "(error message here)"
+            },
+            "postalCode": {
+              "label": "Kaody paositra",
+              "error": "(error message here)"
+            },
+            "city": {
+              "label": "Tanàna",
+              "error": "(error message here)"
+            },
+            "country": {
+              "label": "Firenena",
+              "error": "(error message here)"
+            }
+          }
+        }
       }
     }
   }
