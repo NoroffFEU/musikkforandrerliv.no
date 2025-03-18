@@ -4,14 +4,20 @@
         "_comment": "Buttons section: Comment will be deleted later",
         "buttons": {
             "readMore": "Read More",
-            "donate": "Donate"
+            "donate": "Donate",
+            "signUp": "Sign Up"
         },
         "months": [
              "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
         ],
         "days": [
              "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-        ]
+        ],
+
+        "newsLetter": {
+            "title": "Subscribe to our newsletter!",
+            "description": "Join our newsletter today, to stay updated on our events and projects!"
+        }
     },
 
     "header": {
