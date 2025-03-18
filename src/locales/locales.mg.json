@@ -159,6 +159,24 @@
             "error": "(error message here)"
           }
         }
+      },
+
+      "paymentMethod": {
+        "title": "Safidio ny fomba fandoavana",
+        "fields": {
+          "creditCard": {
+            "label": "Karatra kredita",
+            "error": "(error message here)"
+          },
+          "debitCard": {
+            "label": "Karatra debit",
+            "error": "(error message here)"
+          },
+          "vipps": {
+            "label": "Vipps",
+            "error": "(error message here)"
+          }
+        }
       }
     }
   }
