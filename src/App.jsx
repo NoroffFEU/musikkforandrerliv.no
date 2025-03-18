@@ -1,4 +1,6 @@
 import heart from '/assets/images/svgs/heart.svg';
+import './index.css';
+
 
 function App() {
 
