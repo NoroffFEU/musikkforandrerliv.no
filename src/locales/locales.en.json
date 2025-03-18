@@ -101,6 +101,11 @@
         "_comment": "Section Support Us: This comment will be deleted later",
         "title": "Support Us",
         "description": "The funds that come in go towards covering everything from food, clothing, education, equipment, healthcare, medicines, and dental care for the children, as well as the operation of the music school and salaries for our staff. The families of the children are also included in the food program and receive monthly distributions of food."
+    },
+
+    "galleryPreview": {
+        "_comment": "Section Gallery Preview: This comment will be deleted later",
+        "button": "See the Gallery"
     }
 
 }
