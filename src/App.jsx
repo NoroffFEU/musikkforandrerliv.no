@@ -1,6 +1,6 @@
 import React from "react";
-import { HomePage } from "./pages/home";
 import heart from "/assets/images/svgs/heart.svg";
+import VolunteerSection from "./components/homePage/volunteerSection";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           </h1>
         </header>
         <main>
-          <HomePage />
+          <VolunteerSection />
         </main>
       </div>
     </>
