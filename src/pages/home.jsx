@@ -1,3 +1,6 @@
+import React from "react";
+import VolunteerSection from "../components/homePage/volunteerSection";
+
 export function HomePage() {
   return (
     <div>
@@ -5,7 +8,7 @@ export function HomePage() {
       <section id="HistorySection"></section>
       <section id="StaffSection"></section>
       <section id="WorkSection"></section>
-      <section id="VolunteerSection"></section>
+      <VolunteerSection />
       <section id="SupportSection"></section>
       <section id="GallerySection"></section>
       <section id="CalenderSection"></section>
