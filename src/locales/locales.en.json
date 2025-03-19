@@ -353,6 +353,43 @@
 
     "thankYouMessage": {
         "title": "Thank you for your support!"
+    },
+    
+    "privacyPolicy": {
+        "title": "Our Privacy Policy",
+        "description": "",
+        "sections": [
+            {
+                "title": "Scope"
+            },
+            {
+                "title": "Data We Collect"
+            },
+            {
+                "title": "Data We Don't Collect"
+            },
+            {
+                "title": "Use of Information"
+            },
+            {
+                "title": "Data Security"
+            },
+            {
+                "title": "Third Party Links"
+            },
+            {
+                "title": "Children's Privacy"
+            },
+            {
+                "title": "Changes to Our Privacy"
+            },
+            {
+                "title": "Governing Law",
+                "description": ""
+            }
+        ],
+        "updated": "Updated: 00 / 00 / 00"
     }
+    
 
 }
