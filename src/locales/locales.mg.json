@@ -6,17 +6,73 @@
       "signUp": "Hisoratra anarana",
       "donate": "Manome",
       "send": "Mandefa",
-      "submit": "Manatitra"
+      "submit": "Manatitra",
+      "support": "Fanohanana"
     },
 
     "newsletter": {
       "_comment": "Newsletter section - comment will be deleted later",
       "title": "Misorata anarana amin'ny gazetinay!",
       "description": "Mandraisa anjara amin'ny gazetinay anio mba hahazoana vaovao farany momba ny hetsika sy tetikasantsika!"
+    },
+    "card": {
+      "supportUs": {
+        "title": "Manohana anay",
+        "description": "Ny vola miditra dia ampiasaina hanampiana amin’ny zavatra rehetra, manomboka amin’ny sakafo, fitafiana, fanabeazana, fitaovana, fahasalamana, fanafody, ary fikarakarana nify ho an’ny ankizy, ary koa amin’ny fandehanan’ny sekoly mozika sy ny karaman’ny mpiasanay. Tafiditra ao amin’ny fandaharan’asa sakafo ihany koa ny fianakavian’ny ankizy, ka mahazo fizarana sakafo sy vokatra fidiovana isam-bolana. Miezaka hatrany izahay hanatsara ny fari-piainan’ny ankizy, ary ampiasainay amin’ny fanamboarana trano fonenana ny ankamaroan’ny fanampiana sisa tavela."
+      }
     }
   },
 
   "screens": {
+    "404": {
+      "title": "404",
+      "description": "Pejy tsy hita"
+    },
+    "ourTermsAndConditions": {
+      "title": "Ny fepetra sy fitsipikay",
+      "description": "",
+      "accordion": [
+        {
+          "title": "Fanekena ny fepetra",
+          "content": ""
+        },
+        {
+          "title": "Fampiasana ny tranonkala",
+          "content": ""
+        },
+        {
+          "title": "Rohy mankany amin’ny tranonkala hafa",
+          "content": ""
+        },
+        {
+          "title": "Fanaraha-maso ny fiantohana",
+          "content": ""
+        },
+        {
+          "title": "Fetra amin’ny andraikitra",
+          "content": ""
+        },
+        {
+          "title": "Fampihorohoroana",
+          "content": ""
+        },
+        {
+          "title": "Lalàna mihatra",
+          "content": ""
+        },
+        {
+          "title": "Fiovana",
+          "content": ""
+        }
+      ],
+      "section": {
+        "lawSection": {
+          "title": "Lalàna mifehy",
+          "description": "",
+          "updated:": "Nohavaozina {{date}}"
+        }
+      }
+    },
     "contact": {
       "_comment": "Contact us page - delete later",
       "title": "Mifandraisa aminay",
