@@ -21,8 +21,8 @@ const App = () => {
         <div className="flex items-center justify-center h-96 px-4 w-full">
           <SelectLanguageButton />
         </div>
-        <WorkSection />
       </div>
+      <WorkSection />
     </I18nextProvider>
   );
 };
