@@ -144,23 +144,23 @@
         "events": [
             {
                 "date": "May 20, 2024",
-                "eventTitle": "MMF  Annual  Charity  Concert"
+                "title": "MMF  Annual  Charity  Concert"
             },
             {
                 "date": "June 10, 2024",
-                "eventTitle": "Run for Music 5K Charity Race"
+                "title": "Run for Music 5K Charity Race"
             },
             {
                 "date": "July 15, 2024",
-                "eventTitle": "MMF Culture and Arts Festival"
+                "title": "MMF Culture and Arts Festival"
             },
             {
                 "date": "August 25, 2024",
-                "eventTitle": "Back-to-School Fundraiser Gala"
+                "title": "Back-to-School Fundraiser Gala"
             },
             {
                 "date": "November 25, 2024",
-                "eventTitle": "Holiday Giving Campaign Kickoff"
+                "title": "Holiday Giving Campaign Kickoff"
             }
         ]
     },
@@ -171,7 +171,7 @@
         "posts": [
             {
                 "newsPost": "News Post",
-                "postTitle": "MMF Culture and Arts Festival",
+                "title": "MMF Culture and Arts Festival",
                 "writtenBy": "Written by ChatGPT",
                 "location": "Antsirabe,",
                 "date": "July 15, 2023",
@@ -179,7 +179,7 @@
             },
             {
                 "newsPost": "News Post",
-                "postTitle": "Stars Align for Madagascar at Paris Benefit Concert",
+                "title": "Stars Align for Madagascar at Paris Benefit Concert",
                 "writtenBy": "written by ChatGPT",
                 "location": "Paris, France,",
                 "date": "June 22, 2023",
@@ -187,7 +187,7 @@
             },
             {
                 "newsPost": "News Post",
-                "postTitle": "Malagasy Students Win Big at Youth Music Festival",
+                "title": "Malagasy Students Win Big at Youth Music Festival",
                 "writtenBy": "written by ChatGPT",
                 "location": "Barcelona, Spain,",
                 "date": "August 8, 2023",
@@ -195,7 +195,7 @@
             },
             {
                 "newsPost": "News Post",
-                "postTitle": "Music School Launches 'Melody Masters' App",
+                "title": "Music School Launches 'Melody Masters' App",
                 "writtenBy": "written by Chat GPT",
                 "location": "Antananarivo,",
                 "date": "November 30, 2023",
@@ -210,62 +210,62 @@
         "events": [
             {
                 "date": "September 1, 2024",
-                "eventTitle": "Back-to-School Fundraiser Gala",
+                "title": "Back-to-School Fundraiser Gala",
                 "description": "A sophisticated gala event to celebrate the beginning of the new school year, featuring student performances, a keynote speaker on the importance of music education, and a fundraising auction."
             },
             {
                 "date": "May 10, 2024",
-                "eventTitle": "Run for Music 5k Charity Race",
+                "title": "Run for Music 5k Charity Race",
                 "description": "A fun and energetic 5K run where participants are encouraged to dress as their favorite musicians or music icons. Live bands along the route will keep the energy high."
             },
             {
                 "date": "July 20, 2024",
-                "eventTitle": "Harmony Under the Stars",
+                "title": "Harmony Under the Stars",
                 "description": "An enchanting outdoor concert featuring local and international artists, blending traditional Malagasy music with other world genres. Attendees will enjoy a night of musical diversity under the open sky."
             },
             {
                 "date": "August 15, 2024",
-                "eventTitle": "Tunes and Taste Festival",
+                "title": "Tunes and Taste Festival",
                 "description": "A day-long festival celebrating the rich culture of Madagascar through its music, food, and arts. Includes live performances, food stalls, and workshops."
             },
             {
                 "date": "September 10, 2024",
-                "eventTitle": "Voices for Education",
+                "title": "Voices for Education",
                 "description": "A virtual concert live-streamed globally, featuring performances by renowned musicians and speeches by advocates for music education."
             },
             {
                 "date": "October 5, 2024",
-                "eventTitle": "Rhythms of Hope Gala",
+                "title": "Rhythms of Hope Gala",
                 "description": "An elegant evening event with a dinner, live music, and a silent auction of art and memorabilia, aimed at raising funds for scholarships and school improvements."
             },
             {
                 "date": "November 25, 2024",
-                "eventTitle": "Holiday Giving Campaign ",
+                "title": "Holiday Giving Campaign ",
                 "description": "Launch a season of giving with a concert and community gathering. This event will feature holiday music from around the world and launch a campaign for donations of instruments and funds."
             },
             {
                 "date": "November 1, 2024",
-                "eventTitle": "Music Marathon",
+                "title": "Music Marathon",
                 "description": "A 12-hour music marathon where bands and solo artists perform non-stop. Audiences can come and go, with tickets sold at the door and proceeds going to the school."
             },
             {
                 "date": "November 1, 2024",
-                "eventTitle": "Jam for Education",
+                "title": "Jam for Education",
                 "description": "An interactive event where attendees participate in music workshops, jam sessions, and a large communal performance, showcasing the power of music to unite and educate."
             },
             {
                 "date": "January 22, 2025",
-                "eventTitle": "Classic for a Cause",
+                "title": "Classic for a Cause",
                 "description": "A classical music concert featuring local orchestras and choirs, with performances of both Western classical pieces and arrangements of traditional Malagasy songs."
             },
             {
                 "date": "February 18, 2025",
-                "eventTitle": "Rock the School",
+                "title": "Rock the School",
                 "description": "A rock and pop concert aimed at a younger audience, with all proceeds going towards modernizing the school's music technology and equipment."
             },
             {
                 "date": "March 15 - 20, 2025",
-                "eventTitle": "Jazz Nights",
+                "title": "Jazz Nights",
                 "description": "A series of jazz evenings held at various venues around the city, with local and international jazz musicians. Each night dedicated to a different jazz genre, supporting music education with style."
             }
         ]
@@ -280,19 +280,19 @@
             "writtenBy": "written by Chat GPT",
             "topics": [
                 {
-                    "topicTitle": "Celebrating the Heartbeat of Madagascar",
+                    "title": "Celebrating the Heartbeat of Madagascar",
                     "description": "July 15, 2023, marked a day of vibrant celebration, unity, and the transformative power of music and art at the MMF Culture and Arts Festival. Held in the picturesque surroundings of Antsirabe, Madagascar, the festival was more than just an event; it was a testament to the resilience, joy, and creative spirit of the children and communities we serve."
                 },
                 {
-                    "topicTitle": "A Day to Remember",
+                    "title": "A Day to Remember",
                     "description": "From the early hours, the air buzzed with anticipation as visitors from near and far gathered, eager to immerse themselves in the rich tapestry of Malagasy culture. The festival kicked off with a traditional welcome dance, performed by the children of MMF, setting the tone for a day filled with laughter, music, and collective joy."
                 },
                 {
-                    "topicTitle": "A Symphony of Sights and Sounds",
+                    "title": "A Symphony of Sights and Sounds",
                     "description": "The festival grounds came alive with a plethora of activities and performances. Stages showcased the talents of MMF students alongside local artists, each performance a story told through rhythm and melody. Workshops on traditional dance, crafts, and musical instruments offered hands-on experiences, bridging generations and cultures."
                 },
                 {
-                    "topicTitle": "Featuring local artists",
+                    "title": "Featuring local artists",
                     "description": "A highlight was the art exhibit, featuring works created by MMF students and local artists, illustrating their hopes, dreams, and the shared journey of growth and empowerment. The vibrant colors and intricate patterns spoke volumes of the talent and potential that thrives within the hearts of these young artists."
                 }
             ],
@@ -321,19 +321,19 @@
             "description": "As summer winds down and the anticipation of a new school year begins, Music Makes Futures (MMF) invites you to an evening filled with elegance, inspiration, and purpose. Mark your calendars for August 25, 2024, as we host our annual Back-to-School Fundraiser Gala at the prestigious Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar. This gala isn't just an event; it's a celebration of hope, a testament to the power of education, and a night that promises to make a significant difference in the lives of children in Madagascar.",
             "topics": [
                 {
-                    "topicTitle": "Why Attend?",
+                    "title": "Why Attend?",
                     "description": "The Back-to-School Fundraiser Gala is more than a gathering; it's a pivotal moment where you can directly impact the educational journey of countless children. Every ticket purchased, every auction item bid on, and every donation made during the gala will go directly towards supporting MMF's comprehensive education programs. From school supplies and tuition fees to teacher salaries and educational materials, your support will lay the foundation for a brighter, more promising future for the children we serve."
                 },
                 {
-                    "topicTitle": "What to Expect?",
+                    "title": "What to Expect?",
                     "description": "Elegant Dining Experience: Enjoy a gourmet dinner prepared by some of the finest chefs in Madagascar, accompanied by a selection of exquisite wines and beverages. Silent Auction: Bid on an array of unique items and experiences, with all proceeds going directly towards our educational initiatives. Inspiring Speeches: Hear firsthand from the founders of MMF, educators, and the children whose lives you've touched, sharing stories of hope and triumph. Live Entertainment: The evening will feature breathtaking performances by MMF students, showcasing the talents nurtured through your support. Networking: Mingle with like-minded individuals, philanthropists, and community leaders who share your passion for making a difference."
                 },
                 {
-                    "topicTitle": "How Can You Support?",
+                    "title": "How Can You Support?",
                      "description": "Purchase a Ticket: Secure your spot at this unforgettable evening and be part of the change. Sponsor a Table: Gather friends, family, or colleagues for a special night out and amplify your impact. Donate: If you're unable to attend, consider making a donation to support MMF's mission. Every contribution, big or small, makes a difference. Volunteer: Lend your time and skills to make the gala a resounding success."
                 },
                 {
-                    "topicTitle": "Details at a Glance:",
+                    "title": "Details at a Glance:",
                      "description": "Date: August 25, 2024, Time: 6:00 PM - 11:00 PM, Dress Code: Formal Attire, Tickets: [Link to purchase tickets or reservation details]"
                 }
             ],
