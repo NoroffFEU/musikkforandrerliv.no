@@ -203,6 +203,73 @@
                 "description": "In a move to harness technology for education, the Music Changes Lives School has launched an innovative new app, 'Melody Masters,' designed to bring music education to students across Madagascar and beyond. The app combines interactive lessons, games, and virtual performances to make learning music accessible and fun for children everywhere, especially in remote areas with limited access to traditional music education. Developed in partnership with leading tech companies, 'Melody Masters' represents a significant step forward in the school's mission to make music education universally accessible, empowering students to explore their musical potential regardless of their circumstances."
             }
         ]
+    },
+
+    "upcomingEvents": {
+        "_comment": "Section Upcoming Events: This comment will be deleted later",
+        "title": "Upcoming Events",
+        "events": [
+            {
+                "date": "September 1, 2024",
+                "eventTitle": "Back-to-School Fundraiser Gala",
+                "description": "A sophisticated gala event to celebrate the beginning of the new school year, featuring student performances, a keynote speaker on the importance of music education, and a fundraising auction."
+            },
+            {
+                "date": "May 10, 2024",
+                "eventTitle": "Run for Music 5k Charity Race",
+                "description": "A fun and energetic 5K run where participants are encouraged to dress as their favorite musicians or music icons. Live bands along the route will keep the energy high."
+            },
+            {
+                "date": "July 20, 2024",
+                "eventTitle": "Harmony Under the Stars",
+                "description": "An enchanting outdoor concert featuring local and international artists, blending traditional Malagasy music with other world genres. Attendees will enjoy a night of musical diversity under the open sky."
+            },
+            {
+                "date": "August 15, 2024",
+                "eventTitle": "Tunes and Taste Festival",
+                "description": "A day-long festival celebrating the rich culture of Madagascar through its music, food, and arts. Includes live performances, food stalls, and workshops."
+            },
+            {
+                "date": "September 10, 2024",
+                "eventTitle": "Voices for Education",
+                "description": "A virtual concert live-streamed globally, featuring performances by renowned musicians and speeches by advocates for music education."
+            },
+            {
+                "date": "October 5, 2024",
+                "eventTitle": "Rhythms of Hope Gala",
+                "description": "An elegant evening event with a dinner, live music, and a silent auction of art and memorabilia, aimed at raising funds for scholarships and school improvements."
+            },
+            {
+                "date": "November 25, 2024",
+                "eventTitle": "Holiday Giving Campaign ",
+                "description": "Launch a season of giving with a concert and community gathering. This event will feature holiday music from around the world and launch a campaign for donations of instruments and funds."
+            },
+            {
+                "date": "November 1, 2024",
+                "eventTitle": "Music Marathon",
+                "description": "A 12-hour music marathon where bands and solo artists perform non-stop. Audiences can come and go, with tickets sold at the door and proceeds going to the school."
+            },
+            {
+                "date": "November 1, 2024",
+                "eventTitle": "Jam for Education",
+                "description": "An interactive event where attendees participate in music workshops, jam sessions, and a large communal performance, showcasing the power of music to unite and educate."
+            },
+            {
+                "date": "January 22, 2025",
+                "eventTitle": "Classic for a Cause",
+                "description": "A classical music concert featuring local orchestras and choirs, with performances of both Western classical pieces and arrangements of traditional Malagasy songs."
+            },
+            {
+                "date": "February 18, 2025",
+                "eventTitle": "Rock the School",
+                "description": "A rock and pop concert aimed at a younger audience, with all proceeds going towards modernizing the school's music technology and equipment."
+            },
+            {
+                "date": "March 15 - 20, 2025",
+                "eventTitle": "Jazz Nights",
+                "description": "A series of jazz evenings held at various venues around the city, with local and international jazz musicians. Each night dedicated to a different jazz genre, supporting music education with style."
+            }
+        ]
     }
 
 }
