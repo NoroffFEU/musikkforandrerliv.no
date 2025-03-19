@@ -19,7 +19,10 @@ const VolunteerSection = () => {
             </p>
           ))}
 
-          <button className="hidden md:block px-6 py-2 border border-black text-black font-semibold rounded-lg hover:bg-black hover:text-white transition">
+          <button
+            onClick={() => {}}
+            className="hidden md:block px-6 py-2 border border-black text-black font-semibold rounded-lg"
+          >
             READ MORE
           </button>
         </div>
