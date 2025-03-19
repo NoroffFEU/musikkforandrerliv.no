@@ -19,10 +19,11 @@ export default function CalenderSection() {
 
     return (
         <section className="w-full max-w-6xl mx-auto p-8">
-        <h2 className="text-3xl font-bold mb-6">{data.calender.title}</h2>
+        <h2 className="text-4xl mb-6 [font-family:var(--font-justAnotherHand)]">{data.calender.title}</h2>
   
         {/* Event List */}
-        <div className="flex flex-col gap-3">
+        <div className="flex max-md:flex-col items-center ">
+        <div className="flex flex-col gap-3 max-md:hidden">
           {events.map((event, index) => (
             <div
               key={index}
@@ -39,7 +40,7 @@ export default function CalenderSection() {
         </div>
   
         {/* Calendar */}
-        <div className="mt-8 flex justify-center">
+        <div className="flex justify-center ">
           <Calendar
             onChange={setSelectedDate}
             value={selectedDate}
@@ -48,8 +49,9 @@ export default function CalenderSection() {
                 ? "bg-red-200 text-red-900 rounded-md"
                 : ""
             }
-            className="border-2 border-red-300 p-4 rounded-lg shadow-lg"
+            className="[border-color:var(--color-sunset-red)] p-4 rounded-3xl"
           />
+        </div>
         </div>
       </section>
     );
