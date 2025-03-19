@@ -4,7 +4,6 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function WorkSection() {
   const { image, title, content } = data.work;
-  console.log(data.work); // delete this line
   return (
     <section id="WorkSection" className="w-full px-8 [background-color:var(--color-mint-green)] flex items-center justify-center ">
       <div className="max-w-6xl w-full py-24 md:py-16 max-md:py-10 mx-auto lg:flex-row flex flex-col items-center justify-center gap-10 md:gap-16 lg:gap-20">
