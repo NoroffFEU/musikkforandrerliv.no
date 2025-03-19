@@ -8,7 +8,7 @@ i18n
   .use(HttpApi) // Load translations from backend (HTTP)
   .use(LanguageDetector) // Detect language automatically
   .init({
-    supportedLngs: ['en', 'no'], // Supported languages
+    supportedLngs: ['en', 'no', 'mg'], // Supported languages
     fallbackLng: 'en', // Default language
     debug: false, // ❌ Disable debug logs
     interpolation: {
