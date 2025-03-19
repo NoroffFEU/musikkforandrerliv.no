@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"; // You already get 'i18n' from t
 import heart from "/assets/images/svgs/heart.svg";
 import SelectLanguageButton from "./components/lang/select-language-button";
 import "./index.css";
+import CalenderSection from "./components/homePage/calenderSection";
 
 const App = () => {
   const { t, i18n } = useTranslation(); // i18n from the hook
@@ -20,6 +21,7 @@ const App = () => {
           <SelectLanguageButton />
         </div>
       </div>
+      <CalenderSection />
     </I18nextProvider>
   );
 };
