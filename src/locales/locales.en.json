@@ -271,40 +271,83 @@
         ]
     },
 
-    "mmfCultureAndArtsFestivalPost": {
-        "_comment": "Section MMF Culture and Arts Festival Post: This comment will be deleted later",
-        "title": "MMF Culture and Arts Festival",
-        "newsPost": "News Post",
-        "date": "July 15, 2023",
-        "writtenBy": "written by Chat GPT",
-        "topics": [
-            {
-                "topicTitle": "Celebrating the Heartbeat of Madagascar",
-                "description": "July 15, 2023, marked a day of vibrant celebration, unity, and the transformative power of music and art at the MMF Culture and Arts Festival. Held in the picturesque surroundings of Antsirabe, Madagascar, the festival was more than just an event; it was a testament to the resilience, joy, and creative spirit of the children and communities we serve."
+    "posts": {
+        "_comment": "Section posts for MMF Culture and Arts Festival Post: This comment will be deleted later",
+        "post_mmfCultureAndArtsFestival": {
+            "title": "MMF Culture and Arts Festival",
+            "newsPost": "News Post",
+            "date": "July 15, 2023",
+            "writtenBy": "written by Chat GPT",
+            "topics": [
+                {
+                    "topicTitle": "Celebrating the Heartbeat of Madagascar",
+                    "description": "July 15, 2023, marked a day of vibrant celebration, unity, and the transformative power of music and art at the MMF Culture and Arts Festival. Held in the picturesque surroundings of Antsirabe, Madagascar, the festival was more than just an event; it was a testament to the resilience, joy, and creative spirit of the children and communities we serve."
+                },
+                {
+                    "topicTitle": "A Day to Remember",
+                    "description": "From the early hours, the air buzzed with anticipation as visitors from near and far gathered, eager to immerse themselves in the rich tapestry of Malagasy culture. The festival kicked off with a traditional welcome dance, performed by the children of MMF, setting the tone for a day filled with laughter, music, and collective joy."
+                },
+                {
+                    "topicTitle": "A Symphony of Sights and Sounds",
+                    "description": "The festival grounds came alive with a plethora of activities and performances. Stages showcased the talents of MMF students alongside local artists, each performance a story told through rhythm and melody. Workshops on traditional dance, crafts, and musical instruments offered hands-on experiences, bridging generations and cultures."
+                },
+                {
+                    "topicTitle": "Featuring local artists",
+                    "description": "A highlight was the art exhibit, featuring works created by MMF students and local artists, illustrating their hopes, dreams, and the shared journey of growth and empowerment. The vibrant colors and intricate patterns spoke volumes of the talent and potential that thrives within the hearts of these young artists."
+                }
+            ],
+    
+            "published": {
+                "label": "Published:",  
+                "date": "July 15, 2023"  
             },
-            {
-                "topicTitle": "A Day to Remember",
-                "description": "From the early hours, the air buzzed with anticipation as visitors from near and far gathered, eager to immerse themselves in the rich tapestry of Malagasy culture. The festival kicked off with a traditional welcome dance, performed by the children of MMF, setting the tone for a day filled with laughter, music, and collective joy."
-            },
-            {
-                "topicTitle": "A Symphony of Sights and Sounds",
-                "description": "The festival grounds came alive with a plethora of activities and performances. Stages showcased the talents of MMF students alongside local artists, each performance a story told through rhythm and melody. Workshops on traditional dance, crafts, and musical instruments offered hands-on experiences, bridging generations and cultures."
-            },
-            {
-                "topicTitle": "Featuring local artists",
-                "description": "A highlight was the art exhibit, featuring works created by MMF students and local artists, illustrating their hopes, dreams, and the shared journey of growth and empowerment. The vibrant colors and intricate patterns spoke volumes of the talent and potential that thrives within the hearts of these young artists."
+    
+            "buttons": {
+                "like": "Like",
+                "share": "Share",
+                "nextPost": "Next Post"
             }
-        ],
+        }
 
-        "published": {
-            "label": "Published:",  
-            "date": "July 15, 2023"  
-        },
+    },
 
-        "buttons": {
-            "like": "Like",
-            "share": "Share",
-            "nextPost": "Next Post"
+    "events": {
+        "_comment": "Section events for the Back-to-School Fundraiser Gala Event: This comment will be deleted later",
+        "event_backToSchoolGala": {
+            "title": "Join Us for the Back-to-School Fundraiser Gala",
+            "event": "Event",
+            "date": "Date: August 25, 2024",
+            "location": "Location: Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar",
+            "description": "As summer winds down and the anticipation of a new school year begins, Music Makes Futures (MMF) invites you to an evening filled with elegance, inspiration, and purpose. Mark your calendars for August 25, 2024, as we host our annual Back-to-School Fundraiser Gala at the prestigious Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar. This gala isn't just an event; it's a celebration of hope, a testament to the power of education, and a night that promises to make a significant difference in the lives of children in Madagascar.",
+            "topics": [
+                {
+                    "topicTitle": "Why Attend?",
+                    "description": "The Back-to-School Fundraiser Gala is more than a gathering; it's a pivotal moment where you can directly impact the educational journey of countless children. Every ticket purchased, every auction item bid on, and every donation made during the gala will go directly towards supporting MMF's comprehensive education programs. From school supplies and tuition fees to teacher salaries and educational materials, your support will lay the foundation for a brighter, more promising future for the children we serve."
+                },
+                {
+                    "topicTitle": "What to Expect?",
+                    "description": "Elegant Dining Experience: Enjoy a gourmet dinner prepared by some of the finest chefs in Madagascar, accompanied by a selection of exquisite wines and beverages. Silent Auction: Bid on an array of unique items and experiences, with all proceeds going directly towards our educational initiatives. Inspiring Speeches: Hear firsthand from the founders of MMF, educators, and the children whose lives you've touched, sharing stories of hope and triumph. Live Entertainment: The evening will feature breathtaking performances by MMF students, showcasing the talents nurtured through your support. Networking: Mingle with like-minded individuals, philanthropists, and community leaders who share your passion for making a difference."
+                },
+                {
+                    "topicTitle": "How Can You Support?",
+                     "description": "Purchase a Ticket: Secure your spot at this unforgettable evening and be part of the change. Sponsor a Table: Gather friends, family, or colleagues for a special night out and amplify your impact. Donate: If you're unable to attend, consider making a donation to support MMF's mission. Every contribution, big or small, makes a difference. Volunteer: Lend your time and skills to make the gala a resounding success."
+                },
+                {
+                    "topicTitle": "Details at a Glance:",
+                     "description": "Date: August 25, 2024, Time: 6:00 PM - 11:00 PM, Dress Code: Formal Attire, Tickets: [Link to purchase tickets or reservation details]"
+                }
+            ],
+    
+            "additionalInfo": {
+                "paragraph": "Your presence and support at the Back-to-School Fundraiser Gala will echo in the classrooms and futures of the children we serve. Together, we can ensure that education, the most powerful tool for change, is within their reach. For more information, to purchase tickets, or to make a donation, please visit MMF's website or contact us. We look forward to welcoming you to an evening of celebration, hope, and impact. Let's make this back-to-school season a turning point for children who dream of a brighter tomorrow. Music Makes Futures (MMF) - Transforming lives through the power of education and music. Join us, because every child deserves a chance to succeed."
+            },
+    
+            "buttons": {
+                "like": "Like",
+                "share": "Share",
+                "previousEvent": "Previous Event",
+                "nextEvent": "Next Event"
+            }
         }
     }
 
