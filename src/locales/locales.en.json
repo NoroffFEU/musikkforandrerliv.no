@@ -7,11 +7,14 @@
             "_comment": "Button section: Comment will be deleted later",
             "readMore": "Read More",
             "donate": "Donate",
-            "signUp": "Sign Up"
+            "signUp": "Sign Up",
+            "backToTop": "Back to Top"
         },
+
         "months": [
              "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
         ],
+        
         "days": [
              "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
         ],
