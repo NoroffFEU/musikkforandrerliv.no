@@ -91,4 +91,4 @@ const useDarkModeStore = create((set) => {
   };
 });
 
-export { useModalStore, useUIStore, useDarkModeStore };
+export { useModalStore, useSidebarStore, useDarkModeStore };
