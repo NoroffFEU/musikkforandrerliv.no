@@ -17,6 +17,11 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}.json', // Path to your translation files
     },
+    resources: {
+      en: { translation: { greeting: "Hello!" } }, // Temporary translations
+      no: { translation: { greeting: "Hei!" } },
+      mg: { translation: { greeting: "Miarahaba!" } },
+    },
   });
 
 export default i18n;

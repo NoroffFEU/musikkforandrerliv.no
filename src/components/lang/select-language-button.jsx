@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Option from './language-option'
 import { createPortal } from 'react-dom'
 import { memo } from 'react'
+import useLanguageSwitcher from '../../hooks/useLanguageSwitcher'
 
 function translateLangCode(value) {
   return value === 'En' ? 'English' : value === 'Mg' ? 'Melayu' : 'Norsk'
@@ -16,9 +17,8 @@ function translateLangCode(value) {
  */
 
 const SelectLanguageButton = ({className}) => {
-  // const { t, i18n } = useTranslation() // example of the language hook we will use
+  const { language, handleLanguageChange } = useLanguageSwitcher(); 
   const [open, setOpen] = useState(false)
-  const [value, setValue] = useState('En') // Placeholder for hook state
 
   function handleKeyDown({ key }) {
     if (key === 'Escape') setOpen(false)
@@ -28,17 +28,16 @@ const SelectLanguageButton = ({className}) => {
     setOpen(!open)
   }
 
-  function handleSelect({ currentTarget: { value } }) {
-    console.log(value) //! remove this after implementing hook
-    setValue(value)
-    setOpen(false)
+  function handleSelect(event) {
+    handleLanguageChange(event.currentTarget.value);
+    setOpen(false);
   }
 
   /**
-   * @example if value === 'En' then FlagIcon === Icon.['En'] (UK flag) => FlagIcon can now be used as a JSXElement <FlagIcon/>
+   * @example if language === 'En' then FlagIcon === Icon.['En'] (UK flag) => FlagIcon can now be used as a JSXElement <FlagIcon/>
    * ! STATE OF LANG HOOK AND ICON NAMES MUST BE EQUAL. (or translated)
    */
-  const FlagIcon = Icon[value] ?? Icon.Globe
+  const FlagIcon = Icon[language.charAt(0).toUpperCase() + language.slice(1)] ?? Icon.Globe;
 
   return (
     <>
@@ -52,7 +51,7 @@ const SelectLanguageButton = ({className}) => {
           aria-controls="popover">
           <div className="max-md:space-x-2">
             <FlagIcon className="inline-block" />
-            <span className="sm:hidden">{translateLangCode(value)}</span>
+            <span className="sm:hidden">{translateLangCode(language)}</span>
           </div>
           <Icon.ChevronDown
             className={`${
