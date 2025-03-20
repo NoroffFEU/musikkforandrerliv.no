@@ -2,6 +2,7 @@
 @import "./fonts/font.css";
 
 
+
 @layer base {
 :root {
     --color-sunset-red: #EE6352;

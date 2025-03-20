@@ -1,4 +1,11 @@
 import React from "react";
+import { I18nextProvider } from "react-i18next";
+import { useTranslation } from "react-i18next"; // You already get 'i18n' from this hook
+import heart from "/assets/images/svgs/heart.svg";
+import SelectLanguageButton from "./components/lang/select-language-button";
+import "./index.css";
+import WorkSection from './components/homePage/workSection';
+
 
 import { useTranslation } from "react-i18next"; // You already get 'i18n' from this hook
 import "./i18n";
@@ -24,35 +31,10 @@ const Home = () => {
           <SelectLanguageButton />
         </div>
       </div>
-
-    
-
-      <Link to="/test-translations" className="px-4 py-2 bg-blue-500 text-white rounded">
-        {t("goToTestTranslations")}
-      </Link>
-
-      <div className="space-x-4">
-        <button className="px-4 py-2 bg-blue-500 text-white rounded" onClick={() => i18n.changeLanguage("en")}>
-          {t("english")}
-        </button>
-        <button className="px-4 py-2 bg-green-500 text-white rounded" onClick={() => i18n.changeLanguage("no")}>
-          {t("norwegian")}
-        </button>
-      </div>
-    </div>
+      <WorkSection />
+    </I18nextProvider>
   );
 };
 
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/test-translations" element={<TestTranslations />} />
-      </Routes>
-    </Router>
 
-  );
-};
-
-export default App; 
+export default App;
