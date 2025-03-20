@@ -447,40 +447,40 @@
     },
 
     "posts": {
-      "_comment": "Section posts for MMF Culture and Arts Festival Post: This comment will be deleted later ( needs translation to malagasy )",
+      "_comment": "Section posts for MMF Culture and Arts Festival Post: This comment will be deleted later",
       "post_mmfCultureAndArtsFestival": {
-        "title": "MMF Culture and Arts Festival",
-        "newsPost": "News Post",
-        "date": "July 15, 2023",
-        "writtenBy": "written by Chat GPT",
+        "title": "Fetin'ny Kolontsaina sy Zavakanto MMF",
+        "newsPost": "Lahatsoratra Vaovao",
+        "date": "15 Jolay 2023",
+        "writtenBy": "nosoratan'i Chat GPT",
         "topics": [
           {
-            "title": "Celebrating the Heartbeat of Madagascar",
-            "description": "July 15, 2023, marked a day of vibrant celebration, unity, and the transformative power of music and art at the MMF Culture and Arts Festival. Held in the picturesque surroundings of Antsirabe, Madagascar, the festival was more than just an event; it was a testament to the resilience, joy, and creative spirit of the children and communities we serve."
+            "title": "Fankalazana ny Fony sy Fo Malagasy",
+            "description": "Ny 15 Jolay 2023 dia nanamarika andro feno fankalazana, firaisan-kina, ary ny herin'ny mozika sy zavakanto tamin'ny Fetin'ny Kolontsaina sy Zavakanto MMF. Natao tao Antsirabe, Madagasikara, izay manan-karazany amin'ny hatsaran-tarehy, ny fetibe dia tsy vitan'ny fety fotsiny; fa porofo ny faharetana, ny hafaliana, ary ny herin'ny famoronana an'ny ankizy sy ny fiaraha-monina tianay ho tohanana."
           },
           {
-            "title": "A Day to Remember",
-            "description": "From the early hours, the air buzzed with anticipation as visitors from near and far gathered, eager to immerse themselves in the rich tapestry of Malagasy culture. The festival kicked off with a traditional welcome dance, performed by the children of MMF, setting the tone for a day filled with laughter, music, and collective joy."
+            "title": "Andro Tsaraina ho Tantara",
+            "description": "Nanomboka hatramin'ny maraina, ny rivotra dia feno fahavitrihana noho ny fahavononana rehefa tonga ireo mpitsidika avy amin'ny faritra lavitra sy akaiky, vonona hiharo ny kolontsaina Malagasy manankarena. Ny fety dia nanomboka tamin'ny dihy nentim-paharazana natolotry ny ankizy MMF, izay nanangana ny toe-tsaina ho an'ny andro feno hehy, mozika, ary hafaliana iombonana."
           },
           {
-            "title": "A Symphony of Sights and Sounds",
-            "description": "The festival grounds came alive with a plethora of activities and performances. Stages showcased the talents of MMF students alongside local artists, each performance a story told through rhythm and melody. Workshops on traditional dance, crafts, and musical instruments offered hands-on experiences, bridging generations and cultures."
+            "title": "Symphony amin'ny Fijery sy Feo",
+            "description": "Ny toerana fetibe dia niaina tamin'ny hetsika sy fampisehoana isan-karazany. Ny sehatra dia naneho ny talenta an'ny mpianatra MMF niaraka tamin'ny mpanakanto eo an-toerana, izay nanampy amin'ny fanolorana tantara amin'ny alalan'ny gadona sy melodia. Nisy atrikasa momba ny dihy nentim-paharazana, asa-tanana, sy fitaovam-pianarana mozika, izay nanolotra traikefa tanteraka, mampifandray taranaka sy kolontsaina."
           },
           {
-            "title": "Featuring local artists",
-            "description": "A highlight was the art exhibit, featuring works created by MMF students and local artists, illustrating their hopes, dreams, and the shared journey of growth and empowerment. The vibrant colors and intricate patterns spoke volumes of the talent and potential that thrives within the hearts of these young artists."
+            "title": "Mampiseho mpanakanto eo an-toerana",
+            "description": "Ny fanamarihana dia ny fampirantiana zavakanto, izay naneho ny asa vita tamin'ny mpianatra MMF sy ny mpanakanto eo an-toerana, manasongadina ny nofinofy sy ny fahavononana, ary ny dia iombonana amin'ny fandrosoana sy fanamafisana. Ny loko mamirapiratra sy ny lamina sarotra dia maneho ny talenta sy ny fahafaha-manao izay mivelatra ao amin'ny fo sy saina amin'ireo tanora mpanakanto ireo."
           }
         ],
 
         "published": {
-          "label": "Published:",
-          "date": "July 15, 2023"
+          "label": "Navoaka:",
+          "date": "15 Jolay 2023"
         },
 
         "buttons": {
-          "like": "Like",
-          "share": "Share",
-          "nextPost": "Next Post"
+          "like": "Tena Tiako",
+          "share": "Zarao",
+          "nextPost": "Lahatsoratra Manaraka"
         }
       }
     },
