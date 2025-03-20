@@ -13,7 +13,7 @@
     "card": {
       "supportUs": {
         "title": "Støtt oss",
-        "description": "Inntektene brukes til å dekke alt fra mat, klær, utdanning, utstyr, helse, medisiner og tannpleie for barna, samt til driften av musikkskolen og lønningene til våre ansatte. Matprogrammet inkluderer også barnas familier, som får månedlige rasjoner med mat og hygieneprodukter. Vi jobber kontinuerlig for å forbedre barnas levekår, og det meste av den gjenværende støtten brukes til boligforbedringer."
+        "description": "Inntektene brukes til å dekke alt fra mat, klær, utdanning, utstyr, helse, medisiner og tannpleie for barna, samt til driften av musikkskolen og lønningene til våre ansatte.\nMatprogrammet inkluderer også barnas familier, som får månedlige rasjoner med mat og hygieneprodukter.\nVi jobber kontinuerlig for å forbedre barnas levekår, og det meste av den gjenværende støtten brukes til boligforbedringer."
       }
     },
 
@@ -164,19 +164,19 @@
       "introduction": [
         {
           "title": "La oss bli bedre kjent",
-          "description": "Musikk Forandrer Liv er en musikkskole for sårbare ungdommer i Antsirabe, Madagaskar, grunnlagt i januar 2021 av den norske fiolinisten Eline Rodvelt Hansen og den malagassiske artisten Dina Rasalina. Skolen er et levende og støttende fellesskap som ikke bare tilbyr musikk- og kunstundervisning, men også hjelper barna fra de fattigste familiene i Antsirabe med mat, medisinsk hjelp, skoleutstyr, klær og bolig."
+          "description": "Musikk Forandrer Liv er en musikkskole for sårbare ungdommer i Antsirabe, Madagaskar, grunnlagt i januar 2021 av den norske fiolinisten Eline Rodvelt Hansen og den malagassiske artisten Dina Rasalina.\nSkolen er et levende og støttende fellesskap som ikke bare tilbyr musikk- og kunstundervisning, men også hjelper barna fra de fattigste familiene i Antsirabe med mat, medisinsk hjelp, skoleutstyr, klær og bolig."
         },
         {
           "title": "Læring og støtte på flere nivåer",
-          "description": "Musikktimene handler ikke bare om å lære å spille et instrument. For våre elever har musikkskolen blitt et fristed, et sted hvor de føler seg trygge og verdsatt, med omsorg fra lærere og medelever. Utdanningens kraft og fellesskapsfølelsen har hjulpet mange gatebarn, som tidligere har opplevd omsorgssvikt og vold, med å finne trygghet i et inspirerende læringsmiljø. Dette gir dem en følelse av mening og muligheten til å skape en bedre fremtid gjennom læring."
+          "description": "Musikktimene handler ikke bare om å lære å spille et instrument. For våre elever har musikkskolen blitt et fristed, et sted hvor de føler seg trygge og verdsatt, med omsorg fra lærere og medelever.\nUtdanningens kraft og fellesskapsfølelsen har hjulpet mange gatebarn, som tidligere har opplevd omsorgssvikt og vold, med å finne trygghet i et inspirerende læringsmiljø. Dette gir dem en følelse av mening og muligheten til å skape en bedre fremtid gjennom læring."
         },
         {
           "title": "Utdanning som styrker",
-          "description": "Mange av våre elever har aldri hatt muligheten til å gå på skole før. Derfor har MMFs lærere utviklet ekstra akademisk støtte for barn som sliter med skolearbeidet. Denne innsatsen har vist seg å ha stor effekt på deres utvikling, læringsevne og beskyttelse. Gjennom leksehjelp og støtte har barn som tidligere ikke kunne lese eller skrive, begynt å gjøre akademiske og sosiale fremskritt. Vi legger spesiell vekt på utdanning for jenter og likestilling, og vi jobber for å gi jenter muligheten til å få større kontroll over sitt liv gjennom utdanning og musikk."
+          "description": "Mange av våre elever har aldri hatt muligheten til å gå på skole før. Derfor har MMFs lærere utviklet ekstra akademisk støtte for barn som sliter med skolearbeidet. Denne innsatsen har vist seg å ha stor effekt på deres utvikling, læringsevne og beskyttelse.\nGjennom leksehjelp og støtte har barn som tidligere ikke kunne lese eller skrive, begynt å gjøre akademiske og sosiale fremskritt.\nVi legger spesiell vekt på utdanning for jenter og likestilling, og vi jobber for å gi jenter muligheten til å få større kontroll over sitt liv gjennom utdanning og musikk."
         },
         {
           "title": "Bærekraftig utvikling og sosial påvirkning",
-          "description": "Ved å tilby et trygt og støttende miljø ser vi hvordan unge jenter og kvinner inspirerer sine familier til å leve på en sunnere og mer bærekraftig måte. Dette skaper en generasjonsendring som beviser at utdanning kan være en drivkraft for forandring. Dette motiverer oss til å fortsette vårt arbeid med engasjement, kjærlighet og dedikasjon. Siden 2021 har Musikk Forandrer Liv blitt registrert som en NGO og har en uavhengig styregruppe. Organisasjonen støtter nå over 60 barn, og i takt med vår pedagogiske utvikling samarbeider vi med lokale musikklærere og skaper nye jobbmuligheter for lokalsamfunnet."
+          "description": "Ved å tilby et trygt og støttende miljø ser vi hvordan unge jenter og kvinner inspirerer sine familier til å leve på en sunnere og mer bærekraftig måte. Dette skaper en generasjonsendring som beviser at utdanning kan være en drivkraft for forandring. Dette motiverer oss til å fortsette vårt arbeid med engasjement, kjærlighet og dedikasjon.\nSiden 2021 har Musikk Forandrer Liv blitt registrert som en NGO og har en uavhengig styregruppe. Organisasjonen støtter nå over 60 barn, og i takt med vår pedagogiske utvikling samarbeider vi med lokale musikklærere og skaper nye jobbmuligheter for lokalsamfunnet."
         },
         {
           "supportedBy": {
@@ -264,28 +264,28 @@
         {
           "name": "Eline Rodvelt Hansen",
           "occupation": "Fiolinlærer",
-          "description": "Eline er en fiolinist og fiolinlærer, utdannet ved Griegakademiet i Bergen. Opprinnelig fra Sandnes i Rogaland, har hun reist mye rundt i verden, og spilt med musikere på flere kontinenter og i ulike sjangre. I tillegg er hun en dedikert fiolinlærer. Med to fioliner dro hun til Madagaskar med et ønske om å starte en musikkskole for å hjelpe barn ut av fattigdom. I Antsirabe møtte hun sin ektemann, Dina, som også var musiker og hadde en lignende drøm. Sammen grunnla de MMF i 2021 og leder nå arbeidet sammen. I tillegg jobber Eline som fiolinlærer ved musikkskolen, og hun følger opp ensembler og elever på flere instrumenter. Eline er også leder for det norske styret i MMF.",
+          "description": "Eline er en fiolinist og fiolinlærer, utdannet ved Griegakademiet i Bergen. Opprinnelig fra Sandnes i Rogaland, har hun reist mye rundt i verden, og spilt med musikere på flere kontinenter og i ulike sjangre.\nI tillegg er hun en dedikert fiolinlærer. Med to fioliner dro hun til Madagaskar med et ønske om å starte en musikkskole for å hjelpe barn ut av fattigdom.\nI Antsirabe møtte hun sin ektemann, Dina, som også var musiker og hadde en lignende drøm. Sammen grunnla de MMF i 2021 og leder nå arbeidet sammen.\nI tillegg jobber Eline som fiolinlærer ved musikkskolen, og hun følger opp ensembler og elever på flere instrumenter. Eline er også leder for det norske styret i MMF.",
           "roles": ["MMF Medgründer, Madagaskar", "MMF Styreleder, Norge"],
           "email": "e-mail@mmf.no"
         },
         {
           "name": "Dina Rasalina Andriamanalina",
           "occupation": "Pianolærer",
-          "description": "Dina co-grunnla MMF med sin kone, Eline Rodvelt Hansen, i 2021. Opprinnelig fra Antsirabe, Madagaskar, har Dina rytme og musikk i blodet, og har spilt mange instrumenter siden barndommen. Det var imidlertid pianoet som til slutt ble hans dominerende instrument. I London studerte han musikkteknologi og jobbet etter hvert i et musikkstudio. Med entusiasme for barn og utviklingsarbeid, vendte han tilbake til Madagaskar, hvor han blant annet har vært prosjektleder for internasjonale bistandsprosjekter. Han leder nå arbeidet i MMF sammen med Eline, i tillegg til å undervise i piano og tradisjonell malagassisk musikk og dans i prosjektet.",
+          "description": "Dina co-grunnla MMF med sin kone, Eline Rodvelt Hansen, i 2021. Opprinnelig fra Antsirabe, Madagaskar, har Dina rytme og musikk i blodet, og har spilt mange instrumenter siden barndommen.\nDet var imidlertid pianoet som til slutt ble hans dominerende instrument. I London studerte han musikkteknologi og jobbet etter hvert i et musikkstudio.\nMed entusiasme for barn og utviklingsarbeid, vendte han tilbake til Madagaskar, hvor han blant annet har vært prosjektleder for internasjonale bistandsprosjekter.\nHan leder nå arbeidet i MMF sammen med Eline, i tillegg til å undervise i piano og tradisjonell malagassisk musikk og dans i prosjektet.",
           "roles": ["MMF Medgründer, Madagaskar"],
           "email": "e-mail@mmf.no"
         },
         {
           "name": "Karoline Hartvigsen",
           "occupation": "Sykepleier (B.A., 2017)",
-          "description": "Karoline fullførte sin sykepleierutdanning i 2017 og jobber nå heltid på en kreftavdeling ved Radiumhospitalet i Oslo. Før sine bachelorstudier fullførte hun et ettårig studium i interkulturell forståelse ved NLA University College Bergen. I forbindelse med dette, reiste hun til Bolivia for å gjennomføre feltarbeid på et barnehjem som fokuserte på barnas livskvalitet. Karoline har alltid hatt en stor interesse og engasjement for humanitært arbeid og har frivillig jobbet som sykepleier ved et offentlig sykehus i Madagaskar sammen med Thea. Hun er nå nestleder i det norske styret for MMF og hjelper til med å koordinere arbeidet som utføres fra Norge.",
+          "description": "Karoline fullførte sin sykepleierutdanning i 2017 og jobber nå heltid på en kreftavdeling ved Radiumhospitalet i Oslo.\nFør sine bachelorstudier fullførte hun et ettårig studium i interkulturell forståelse ved NLA University College Bergen.\nI forbindelse med dette, reiste hun til Bolivia for å gjennomføre feltarbeid på et barnehjem som fokuserte på barnas livskvalitet.\nKaroline har alltid hatt en stor interesse og engasjement for humanitært arbeid og har frivillig jobbet som sykepleier ved et offentlig sykehus i Madagaskar sammen med Thea.\nHun er nå nestleder i det norske styret for MMF og hjelper til med å koordinere arbeidet som utføres fra Norge.",
           "roles": ["Nestleder MMF Styre", "Prosjektkoordinator, Norge"],
           "email": "e-mail@mmf.no"
         },
         {
           "name": "Thea Harbo",
           "occupation": "Sykepleier (B.A., 2017)",
-          "description": "Thea fullførte sin bachelorgrad i sykepleie i 2017 ved Diakonhjemmet Høyskole i Oslo. Hun bodde der i 9 år før hun flyttet tilbake til hjembyen, Stavanger. Hun har arbeidserfaring fra hjemmebehandling, flere år på en barneavdeling ved Rikshospitalet, og jobber for tiden heltid i en spesialtilpasset avdeling i en barnehage. Hun har omfattende erfaring med å jobbe med barn og trives godt med det. Thea er styremedlem i MMF og er ansvarlig for prosjektets økonomi. Hun jobber frivillig for prosjektet og er ansvarlig for arbeidet som utføres i Norge.",
+          "description": "Thea fullførte sin bachelorgrad i sykepleie i 2017 ved Diakonhjemmet Høyskole i Oslo. Hun bodde der i 9 år før hun flyttet tilbake til hjembyen, Stavanger.\nHun har arbeidserfaring fra hjemmebehandling, flere år på en barneavdeling ved Rikshospitalet, og jobber for tiden heltid i en spesialtilpasset avdeling i en barnehage.\nHun har omfattende erfaring med å jobbe med barn og trives godt med det.\nThea er styremedlem i MMF og er ansvarlig for prosjektets økonomi. Hun jobber frivillig for prosjektet og er ansvarlig for arbeidet som utføres i Norge.",
           "roles": ["Styremedlem MMF", "Prosjektleder, Norge"],
           "email": "e-mail@mmf.no"
         }
@@ -295,7 +295,7 @@
     "volunteer": {
       "_comment": "Section Volunteer: This comment will be deleted later ( needs translation to malagasy )",
       "title": "Bli frivillig",
-      "description": "Ønsker du å gjøre en forskjell for gatebarn i et av verdens fattigste land? Vi er på utkikk etter personer som ønsker å være frivillige med oss i Madagaskar. Primært søker vi de som har interesse for eller utdanning relatert til musikk. Vi ser at elever har stor nytte av undervisning fra profesjonelle musikere."
+      "description": "Ønsker du å gjøre en forskjell for gatebarn i et av verdens fattigste land? Vi er på utkikk etter personer som ønsker å være frivillige med oss i Madagaskar.\nPrimært søker vi de som har interesse for eller utdanning relatert til musikk. Vi ser at elever har stor nytte av undervisning fra profesjonelle musikere."
     },
 
     "supportUs": {
@@ -496,15 +496,15 @@
           },
           {
             "title": "Hva kan du forvente?",
-            "description": "Elegant middagsopplevelse: Nyt en gourmetmiddag tilberedt av noen av de beste kokkene i Madagascar, akkompagnert av et utvalg av utsøkte viner og drikkevarer. Stille auksjon: By på et utvalg av unike gjenstander og opplevelser, med all inntekt som går direkte til våre utdanningsinitiativer. Inspirerende taler: Hør direkte fra MMFs grunnleggere, lærere og barna hvis liv du har berørt, og hør deres historier om håp og seier. Live underholdning: Kvelden vil by på imponerende opptredener fra MMF-studenter, som viser frem talentene som er dyrket gjennom din støtte. Nettverking: Møt likesinnede, filantroper og samfunnsledere som deler din lidenskap for å gjøre en forskjell."
+            "description": "Elegant middagsopplevelse: Nyt en gourmetmiddag tilberedt av noen av de beste kokkene i Madagascar, akkompagnert av et utvalg av utsøkte viner og drikkevarer.\nStille auksjon: By på et utvalg av unike gjenstander og opplevelser, med all inntekt som går direkte til våre utdanningsinitiativer.\nInspirerende taler: Hør direkte fra MMFs grunnleggere, lærere og barna hvis liv du har berørt, og hør deres historier om håp og seier.\nLive underholdning: Kvelden vil by på imponerende opptredener fra MMF-studenter, som viser frem talentene som er dyrket gjennom din støtte.\nNettverking: Møt likesinnede, filantroper og samfunnsledere som deler din lidenskap for å gjøre en forskjell."
           },
           {
             "title": "Hvordan kan du støtte?",
-            "description": "Kjøp en billett: Sikre deg plass til denne uforglemmelige kvelden og vær en del av endringen. Sponsor et bord: Samle venner, familie eller kolleger for en spesiell kveld og øk din innvirkning. Doner: Hvis du ikke kan delta, kan du vurdere å donere for å støtte MMFs oppdrag. Hver bidrag, stor eller liten, gjør en forskjell. Vær frivillig: Bidra med din tid og ferdigheter for å gjøre galakvelden til en stor suksess."
+            "description": "Kjøp en billett: Sikre deg plass til denne uforglemmelige kvelden og vær en del av endringen.\nSponsor et bord: Samle venner, familie eller kolleger for en spesiell kveld og øk din innvirkning.\nDoner: Hvis du ikke kan delta, kan du vurdere å donere for å støtte MMFs oppdrag. Hver bidrag, stor eller liten, gjør en forskjell.\nVær frivillig: Bidra med din tid og ferdigheter for å gjøre galakvelden til en stor suksess."
           },
           {
             "title": "Detaljer på et blikk:",
-            "description": "Dato: 25. august 2024, Tid: 18:00 - 23:00, Kleskode: Formell antrekk, Billetter: [Link til å kjøpe billetter eller reservasjonsdetaljer]"
+            "description": "Dato: 25. august 2024\nTid: 18:00 - 23:00\nKleskode: Formell antrekk\nBilletter: [Link til å kjøpe billetter eller reservasjonsdetaljer]"
           }
         ],
 
