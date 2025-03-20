@@ -380,68 +380,68 @@
     },
 
     "upcomingEvents": {
-      "_comment": "Section Upcoming Events: This comment will be deleted later ( needs translation to malagasy )",
-      "title": "Upcoming Events",
+      "_comment": "Section Upcoming Events: This comment will be deleted later",
+      "title": "Hetsika Ho Avy",
       "events": [
         {
-          "date": "September 1, 2024",
-          "title": "Back-to-School Fundraiser Gala",
-          "description": "A sophisticated gala event to celebrate the beginning of the new school year, featuring student performances, a keynote speaker on the importance of music education, and a fundraising auction."
+          "date": "1 Septambra 2024",
+          "title": "Gala Fanaovana Asa Soa ho an'ny Fiverenana an-tsekoly",
+          "description": "Hetsika gala manara-penitra iray hanamarihana ny fiandohan'ny taom-pianarana vaovao, miaraka amin'ny fampisehoan'ny mpianatra, mpandahateny manokana momba ny maha-zava-dehibe ny fanabeazana ara-mozika, ary auktora amin'ny fanangonana vola."
         },
         {
-          "date": "May 10, 2024",
-          "title": "Run for Music 5k Charity Race",
-          "description": "A fun and energetic 5K run where participants are encouraged to dress as their favorite musicians or music icons. Live bands along the route will keep the energy high."
+          "date": "10 Mey 2024",
+          "title": "Lalàna ho an'ny Mozika - Hazakazaka Asa Soa 5K",
+          "description": "Hazakazaka 5K feno fahafinaretana sy angovo izay asaina manao fitafiana tahaka ireo mpanakanto na ireo sary an'ohatra ao amin'ny mozika ireo mpandray anjara. Misy tarika mozika mivantana mandritra ny làlana hanampy ny angovo."
         },
         {
-          "date": "July 20, 2024",
-          "title": "Harmony Under the Stars",
-          "description": "An enchanting outdoor concert featuring local and international artists, blending traditional Malagasy music with other world genres. Attendees will enjoy a night of musical diversity under the open sky."
+          "date": "20 Jolay 2024",
+          "title": "Harmonia Ambanin'ny Kintana",
+          "description": "Kaonseritra any ivelany manaitra miaraka amin'ny mpanakanto eo an-toerana sy iraisam-pirenena, mampifangaro ny mozika nentim-paharazana Malagasy sy ireo karazana mozika avy amin'ny firenena hafa. Ny mpandray anjara dia hanana alina feno hakantony amin'ny mozika isan-karazany ao ambanin'ny lanitra misokatra."
         },
         {
-          "date": "August 15, 2024",
-          "title": "Tunes and Taste Festival",
-          "description": "A day-long festival celebrating the rich culture of Madagascar through its music, food, and arts. Includes live performances, food stalls, and workshops."
+          "date": "15 Aogositra 2024",
+          "title": "Fetin'ny Feo sy Tsiro",
+          "description": "Fetin'ny andro iray mankalaza ny kolontsaina manankarena Malagasy amin'ny alalan'ny mozika, sakafo, ary zavakanto. Misy fampisehoana mivantana, fivarotana sakafo, ary atrikasa."
         },
         {
-          "date": "September 10, 2024",
-          "title": "Voices for Education",
-          "description": "A virtual concert live-streamed globally, featuring performances by renowned musicians and speeches by advocates for music education."
+          "date": "10 Septambra 2024",
+          "title": "Feo ho an'ny Fanabeazana",
+          "description": "Kaonseritra virtoaly ho an'ny rehetra, miaraka amin'ny fampisehoana avy amin'ny mpanakanto malaza sy lahateny avy amin'ireo mpiaro ny fanabeazana ara-mozika."
         },
         {
-          "date": "October 5, 2024",
-          "title": "Rhythms of Hope Gala",
-          "description": "An elegant evening event with a dinner, live music, and a silent auction of art and memorabilia, aimed at raising funds for scholarships and school improvements."
+          "date": "5 Oktobra 2024",
+          "title": "Gala Rhythms of Hope",
+          "description": "Hetsika manara-penitra miaraka amin'ny sakafo hariva, mozika mivantana, ary auktora mangina momba ny zavakanto sy fanomezana fanaka, izay mikendry ny hanangona vola ho an'ny vatsim-pianarana sy fanatsarana ny sekoly."
         },
         {
-          "date": "November 25, 2024",
-          "title": "Holiday Giving Campaign ",
-          "description": "Launch a season of giving with a concert and community gathering. This event will feature holiday music from around the world and launch a campaign for donations of instruments and funds."
+          "date": "25 Novambra 2024",
+          "title": "Fanentanana Asa Soa amin'ny Fety",
+          "description": "Hetsika hanombohana ny vanim-potoanan'ny fanomezana amin'ny alalan'ny kaonseritra sy fihaonam-be miaraka amin'ny fiarahamonina. Hanao mozika fety avy amin'ny lafivalon'ny tontolo izao ary hanomboka ny fanentanana amin'ny fanomezana fitaovam-pianarana sy vola."
         },
         {
-          "date": "November 1, 2024",
-          "title": "Music Marathon",
-          "description": "A 12-hour music marathon where bands and solo artists perform non-stop. Audiences can come and go, with tickets sold at the door and proceeds going to the school."
+          "date": "1 Novambra 2024",
+          "title": "Marathona Mozika",
+          "description": "Marathona mozika 12 ora izay hanatanterahan'ny tarika sy mpanakanto iray manokana tsy mitsahatra amin'ny seho. Azon'ny mpijery atao ny miala sy miverina, miaraka amin'ny tapakila amidy amin'ny varavarana ary ny vola rehetra azo dia ho an'ny sekoly."
         },
         {
-          "date": "November 1, 2024",
-          "title": "Jam for Education",
-          "description": "An interactive event where attendees participate in music workshops, jam sessions, and a large communal performance, showcasing the power of music to unite and educate."
+          "date": "1 Novambra 2024",
+          "title": "Jam ho an'ny Fanabeazana",
+          "description": "Hetsika ifampiresahana izay hanampy ireo mpandray anjara amin'ny atrikasa mozika, fivoriam-pihira, ary fampisehoana lehibe amin'ny fiaraha-mientana, mampiseho ny herin'ny mozika amin'ny fanamafisana sy fanabeazana."
         },
         {
-          "date": "January 22, 2025",
-          "title": "Classic for a Cause",
-          "description": "A classical music concert featuring local orchestras and choirs, with performances of both Western classical pieces and arrangements of traditional Malagasy songs."
+          "date": "22 Janoary 2025",
+          "title": "Classique ho an'ny Tanjon'ny Asa Soa",
+          "description": "Kaonseritra mozika klasika miaraka amin'ny orkestra sy kôria eo an-toerana, miaraka amin'ny fampisehoana ny asa mozika klasika tandrefana sy ny fanamboaran-kira nentim-paharazana Malagasy."
         },
         {
-          "date": "February 18, 2025",
-          "title": "Rock the School",
-          "description": "A rock and pop concert aimed at a younger audience, with all proceeds going towards modernizing the school's music technology and equipment."
+          "date": "18 Febroary 2025",
+          "title": "Rock ho an'ny Sekoly",
+          "description": "Kaonseritra rock sy pop ho an'ny tanora, miaraka amin'ny vola rehetra mankany amin'ny fanavaozana ny teknolojia sy fitaovana mozika ao amin'ny sekoly."
         },
         {
-          "date": "March 15 - 20, 2025",
+          "date": "15-20 Martsa 2025",
           "title": "Jazz Nights",
-          "description": "A series of jazz evenings held at various venues around the city, with local and international jazz musicians. Each night dedicated to a different jazz genre, supporting music education with style."
+          "description": "Andiana alina jazz hotanterahina amin'ny toerana isan-karazany ao an-tanàna, miaraka amin'ny mpanakanto jazz eo an-toerana sy iraisam-pirenena. Isaky ny alina dia ho amin'ny karazana jazz hafa, manampy amin'ny fanabeazana mozika amin'ny fomba fanao."
         }
       ]
     },
