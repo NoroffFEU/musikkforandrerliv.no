@@ -4,3 +4,4 @@
 export { useModalStore } from "./UIStore/useModalStore.js";
 export { useSidebarStore } from "./UIStore/useSidebarStore.js";
 export { useDarkModeStore } from "./UIStore/useDarkmodeStore.js";
+export { useRequestStore } from "./APIStore/useRequestStore.js";
