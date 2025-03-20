@@ -530,40 +530,40 @@
     },
 
     "privacyPolicy": {
-      "_comment": " ( needs translation to malagasy ) ",
-      "title": "Our Privacy Policy",
+      "_comment": "Privacy policy section - comment will be deleted later ",
+      "title": "Politikan'ny fiainana manokana",
       "description": "",
       "sections": [
         {
-          "title": "Scope"
+          "title": "Fanaraha-maso"
         },
         {
-          "title": "Data We Collect"
+          "title": "Angona angonina"
         },
         {
-          "title": "Data We Don't Collect"
+          "title": "Angona tsy angonina"
         },
         {
-          "title": "Use of Information"
+          "title": "Fampiasana ny vaovao"
         },
         {
-          "title": "Data Security"
+          "title": "Fiambenana ny angona"
         },
         {
-          "title": "Third Party Links"
+          "title": "Rohy avy amin'ny antoko fahatelo"
         },
         {
-          "title": "Children's Privacy"
+          "title": "Fiainam-bahoaka ny ankizy"
         },
         {
-          "title": "Changes to Our Privacy"
+          "title": "Fanovàna ny fiainana manokana"
         },
         {
-          "title": "Governing Law",
+          "title": "Lalàna manan-kery",
           "description": ""
         }
       ],
-      "updated": "Updated: 00 / 00 / 00"
+      "updated": "Nohavaozina: 00 / 00 / 00"
     }
   },
 
