@@ -314,28 +314,28 @@
     },
 
     "upcomingEventsPreview": {
-      "_comment": "Section Upcoming Events Preview: This comment will be deleted later ( needs translation to malagasy )",
-      "title": "Upcoming Events",
+      "_comment": "Section Upcoming Events Preview: This comment will be deleted later",
+      "title": "Hetsika Hoavy",
       "events": [
         {
-          "date": "May 20, 2024",
-          "title": "MMF  Annual  Charity  Concert"
+          "date": "20 Mey 2024",
+          "title": "Kaonseritra Fanaovana Asa Soa MMF Isan-taona"
         },
         {
-          "date": "June 10, 2024",
-          "title": "Run for Music 5K Charity Race"
+          "date": "10 Jona 2024",
+          "title": "Hazakazaka 5K Fanangonam-bola ho an'ny Mozika"
         },
         {
-          "date": "July 15, 2024",
-          "title": "MMF Culture and Arts Festival"
+          "date": "15 Jolay 2024",
+          "title": "Fetin'ny Kolontsaina sy Kanto MMF"
         },
         {
-          "date": "August 25, 2024",
-          "title": "Back-to-School Fundraiser Gala"
+          "date": "25 Aogositra 2024",
+          "title": "Gala Fanangonam-bola ho an'ny Fiverenana any an-tsekoly"
         },
         {
-          "date": "November 25, 2024",
-          "title": "Holiday Giving Campaign Kickoff"
+          "date": "25 Novambra 2024",
+          "title": "Fanombohan'ny Fanentanana Fanomezana Noely"
         }
       ]
     },
