@@ -59,15 +59,15 @@
 
     "footer": {
       "_comment": "Section Footer: This comment will be deleted later",
-      "aboutUs": "About Us",
-      "news": "News",
-      "events": "Events",
-      "gallery": "Gallery",
-      "ourWork": "Our Work",
-      "contactUs": "Contact Us",
-      "followUs": "Follow Us",
-      "privacyPolicy": "Privacy Policy",
-      "termsAndConditions": "Terms and Conditions"
+      "aboutUs": "Momba anay",
+      "news": "Vaovao",
+      "events": "Hetsika",
+      "gallery": "Galeria",
+      "ourWork": "Ny asanay",
+      "contactUs": "Mifandraisa aminay",
+      "followUs": "Araho izahay",
+      "privacyPolicy": "Politikan'ny fiainana manokana",
+      "termsAndConditions": "Fepetra sy fombafomba"
     }
   },
 
