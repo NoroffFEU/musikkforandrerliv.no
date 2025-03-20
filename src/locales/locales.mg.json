@@ -341,40 +341,40 @@
     },
 
     "latestNews": {
-      "_comment": "Section Latest News: This comment will be deleted later ( needs translation to malagasy )",
-      "title": "Latest News",
+      "_comment": "Section Latest News: This comment will be deleted later",
+      "title": "Vaovao Farany",
       "posts": [
         {
-          "newsPost": "News Post",
-          "title": "MMF Culture and Arts Festival",
-          "writtenBy": "Written by ChatGPT",
+          "newsPost": "Lahatsoratra Vaovao",
+          "title": "Fetin'ny Kolontsaina sy Kanto MMF",
+          "writtenBy": "Nosoratana tamin'ny ChatGPT",
           "location": "Antsirabe,",
-          "date": "July 15, 2023",
-          "description": "The MMF Culture and Arts Festival was a vibrant celebration of unity, showcasing the profound impact of music and art. Nestled in the picturesque city of Antsirabe, Madagascar, the event went beyond being just a festival; it was a heartfelt homage to the resilience, joy, and creativity of the children and communities we champion. The lively performances and art exhibitions ignited a sense of belonging, highlighting the blossoming talents within these communities. Through engaging workshops and collective projects, the festival offered a platform for attendees, particularly the youth, to unlock their creative capabilities."
+          "date": "15 Jolay 2023",
+          "description": "Ny Fetin'ny Kolontsaina sy Kanto MMF dia fankalazana miavaka ny firaisankina, nampiseho ny fiantraikany lalina amin'ny mozika sy ny zavakanto. Ao anatin'ny tanàna manintona an'i Antsirabe, Madagasikara, ny hetsika dia mihoatra noho ny fety fotsiny; fanomezam-boninahitra feno fitiavana ho an'ny faharetana, hafaliana, ary ny famoronana an'ny ankizy sy ny fiaraha-monina tianay hotohanana. Ny seho manaitaitra sy ny fampirantiana zavakanto dia niteraka fahatsapana maha-olona, nanasongadina ny talenta mivoatra ao anatin'ireto fiaraha-monina ireto. Amin'ny alalan'ny atrikasa manintona sy tetikasa iombonana, dia nanolotra sehatra ho an'ny mpandray anjara, indrindra ho an'ny tanora, ny fetin'ny kolontsaina sy kanto."
         },
         {
-          "newsPost": "News Post",
-          "title": "Stars Align for Madagascar at Paris Benefit Concert",
-          "writtenBy": "written by ChatGPT",
+          "newsPost": "Lahatsoratra Vaovao",
+          "title": "Ny Kintana Mivondrona ho an'i Madagasikara amin'ny Kaonseritra Fanampiana any Paris",
+          "writtenBy": "Nosoratana tamin'ny ChatGPT",
           "location": "Paris, France,",
-          "date": "June 22, 2023",
-          "description": "Last night, some of the world's most beloved musicians came together for a benefit concert, 'Voices for Madagascar,' to support the Music Changes Lives School. Held at the iconic La Seine Musicale, the event featured performances that spanned genres and generations, from classical to contemporary pop. The concert not only highlighted the universal language of music but also raised significant funds and awareness for music education in Madagascar. The event was a resounding success, with all proceeds going directly to the school, ensuring that music continues to change lives on the island."
+          "date": "22 Jona 2023",
+          "description": "Ny alina lasa, dia nifanampy ny sasany amin'ireo mpitendry mozika tena ankafizin'ny olona eran-tany ho amin'ny kaonseritra fanampiana, 'Feon'i Madagasikara', hanohanana ny Sekoly Mozika Manova Fiainana. Tany amin'ny La Seine Musicale malaza, ny hetsika dia nampiseho seho niampita ireo gadona sy taranaka, manomboka amin'ny klasika ka hatrany amin'ny pop maoderina. Tsy nanasongadina fotsiny ny fiteny iraisan'ny mozika ny kaonseritra fa nanangona vola sy nahatonga fahalalana betsaka momba ny fanabeazana amin'ny mozika tao Madagasikara ihany koa. Tena nahomby ny hetsika, satria ny vola azo dia natokana mivantana ho an'ny sekoly, miantoka fa mbola hanohy hanova fiainana amin'ny nosy ny mozika."
         },
         {
-          "newsPost": "News Post",
-          "title": "Malagasy Students Win Big at Youth Music Festival",
-          "writtenBy": "written by ChatGPT",
+          "newsPost": "Lahatsoratra Vaovao",
+          "title": "Ny Mpianatra Malagasy Mankalaza Be ao amin'ny Fetin'ny Mozika Tanora",
+          "writtenBy": "Nosoratana tamin'ny ChatGPT",
           "location": "Barcelona, Spain,",
-          "date": "August 8, 2023",
-          "description": "Students from the Music Changes Lives School in Madagascar took the world stage by storm at the International Youth Music Festival in Barcelona. Competing against young musicians from around the globe, the Malagasy contingent wowed audiences and judges alike with their skill, passion, and unique blend of traditional and modern musical influences. Their performances earned them several awards and international recognition, shining a spotlight on the talent being nurtured at the Music Changes Lives School and underscoring the importance of supporting music education worldwide."
+          "date": "8 Aogositra 2023",
+          "description": "Ny mpianatra avy ao amin'ny Sekoly Mozika Manova Fiainana ao Madagasikara dia nandresy lahatra tamin'ny sehatra iraisam-pirenena tao amin'ny Fetin'ny Mozika Tanora Iraisam-pirenena tao Barcelona. Nifaninana tamin'ireo mpitendry mozika tanora avy manerana izao tontolo izao, dia nahasarika ny mpanatrika sy ny mpitsara ny fahaiza-manaony, ny hafanam-pony, ary ny fifangaroan'ny gadona nentin-drazana sy maoderina. Ny seho nataony dia nahazo loka maro sy fankatoavana iraisam-pirenena, nanasongadina ny talenta tazonina ao amin'ny Sekoly Mozika Manova Fiainana ary nanamafy ny maha-zava-dehibe ny fanohanana ny fanabeazana mozika maneran-tany."
         },
         {
-          "newsPost": "News Post",
-          "title": "Music School Launches 'Melody Masters' App",
-          "writtenBy": "written by Chat GPT",
+          "newsPost": "Lahatsoratra Vaovao",
+          "title": "Sekoly Mozika Mampahafantatra ny App 'Melody Masters'",
+          "writtenBy": "Nosoratana tamin'ny ChatGPT",
           "location": "Antananarivo,",
-          "date": "November 30, 2023",
-          "description": "In a move to harness technology for education, the Music Changes Lives School has launched an innovative new app, 'Melody Masters,' designed to bring music education to students across Madagascar and beyond. The app combines interactive lessons, games, and virtual performances to make learning music accessible and fun for children everywhere, especially in remote areas with limited access to traditional music education. Developed in partnership with leading tech companies, 'Melody Masters' represents a significant step forward in the school's mission to make music education universally accessible, empowering students to explore their musical potential regardless of their circumstances."
+          "date": "30 Novambra 2023",
+          "description": "Amin'ny ezaka hampiasa ny teknolojia ho amin'ny fanabeazana, ny Sekoly Mozika Manova Fiainana dia nanomboka ny app vaovao sy manavao, 'Melody Masters', natao hanaparitaka ny fanabeazana mozika amin'ny mpianatra manerana an'i Madagasikara sy any ivelany. Mitambatra ao amin'ny app ny lesona ifampiresahana, lalao, ary seho virtoaly mba hahatonga ny fianarana mozika ho azon'ny ankizy sy mahafinaritra, indrindra fa any amin'ny faritra lavitra izay voafetra ny fahafahana mahazo fanabeazana mozika nentim-paharazana. Namboarina tamin'ny fiaraha-miasa amin'ireo orinasan-teknolojia mitarika, ny 'Melody Masters' dia maneho dingana lehibe amin'ny iraka ataon'ny sekoly hanaparitaka ny fanabeazana mozika ho azon'ny rehetra, manampy ny mpianatra hanavaka ny mety ho talenta mozika na inona na inona ny toe-javatra iainany."
         }
       ]
     },
