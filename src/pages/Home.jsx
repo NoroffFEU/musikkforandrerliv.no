@@ -1,7 +1,7 @@
 import { HeroSection } from "../components/homePage/heroSection";
 import VolunteerSection from "../components/homePage/volunteerSection";
 
-export function HomePage() {
+export default function HomePage() {
   return (
     <div>
       <HeroSection />
