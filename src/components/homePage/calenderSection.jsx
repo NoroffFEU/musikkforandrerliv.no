@@ -18,7 +18,7 @@ export default function CalenderSection() {
   const formatDate = (date) => date.toISOString().split("T")[0];
 
   return (
-    <section className="w-full max-w-6xl mx-auto p-8">
+    <section id="CalendarSection" className="w-full max-w-6xl mx-auto p-8">
       <h2 className="text-4xl mb-6 [font-family:var(--font-justAnotherHand)]">
         {data.calender.title}
       </h2>
