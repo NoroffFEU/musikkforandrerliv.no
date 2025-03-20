@@ -26,7 +26,6 @@ const SelectLanguageButton = () => {
 
 const Home = () => {
   const { t, i18n } = useTranslation();
-
   return (
     <div>
       <div className="h-screen w-full flex flex-col justify-center items-center">
