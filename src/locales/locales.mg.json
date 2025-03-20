@@ -486,41 +486,41 @@
     },
 
     "events": {
-      "_comment": "Section events for the Back-to-School Fundraiser Gala Event: This comment will be deleted later ( needs translation to malagasy )",
+      "_comment": "Section events for the Back-to-School Fundraiser Gala Event: This comment will be deleted later",
       "event_backToSchoolGala": {
-        "title": "Join Us for the Back-to-School Fundraiser Gala",
-        "event": "Event",
-        "date": "Date: August 25, 2024",
-        "location": "Location: Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar",
-        "description": "As summer winds down and the anticipation of a new school year begins, Music Makes Futures (MMF) invites you to an evening filled with elegance, inspiration, and purpose. Mark your calendars for August 25, 2024, as we host our annual Back-to-School Fundraiser Gala at the prestigious Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar. This gala isn't just an event; it's a celebration of hope, a testament to the power of education, and a night that promises to make a significant difference in the lives of children in Madagascar.",
+        "title": "Miara-mianatra Aminay Amin'ny Fetin'ny Fanangonam-bola ho an'ny Taom-pianarana Vaovao",
+        "event": "Hetsika",
+        "date": "Daty: 25 Aogositra 2024",
+        "location": "Toerana: Le Jardin Étoilé, Route Royale, Antananarivo, Madagasikara",
+        "description": "Rehefa miharatsy ny fahavaratra ary manomboka ny fiandrasana ny taom-pianarana vaovao, dia manasa anareo amin'ny alina feno hasina, aingam-panahy, ary tanjona izahay ao amin'ny Music Makes Futures (MMF). Apetraho ao an-tsaina ny 25 Aogositra 2024, satria handray ny Fetin'ny Fanangonam-bola ho an'ny Taom-pianarana Vaovao izahay ao amin'ny Le Jardin Étoilé malaza, Route Royale, Antananarivo, Madagasikara. Tsy fety fotsiny ity, fa fankalazana ny fanantenana, porofo amin'ny herin'ny fanabeazana, ary alina iray izay manome fanampiana lehibe ho an'ny fiainan'ny ankizy eto Madagasikara.",
         "topics": [
           {
-            "title": "Why Attend?",
-            "description": "The Back-to-School Fundraiser Gala is more than a gathering; it's a pivotal moment where you can directly impact the educational journey of countless children. Every ticket purchased, every auction item bid on, and every donation made during the gala will go directly towards supporting MMF's comprehensive education programs. From school supplies and tuition fees to teacher salaries and educational materials, your support will lay the foundation for a brighter, more promising future for the children we serve."
+            "title": "Nahoana no ho tonga?",
+            "description": "Ny Fetin'ny Fanangonam-bola ho an'ny Taom-pianarana Vaovao dia tsy fivoriana fotsiny; fa fotoana manan-danja izay ahafahanao mivantana manampy amin'ny dia fanabeazana ho an'ny ankizy maro. Ny tapakila rehetra mividy, ny entana rehetra amidy amin'ny aoka, ary ny fanomezana rehetra natao mandritra ny fety dia ho avy mivantana manohana ny programa fanabeazana manontolo MMF. Avy amin'ny fitaovam-pianarana, sara fianarana, karama ho an'ny mpampianatra sy fitaovana fanabeazana, ny fanohananao dia hametraka fototra ho an'ny hoavy mamiratra sy manantena ho an'ny ankizy izay tianay ho tohanana."
           },
           {
-            "title": "What to Expect?",
-            "description": "Elegant Dining Experience: Enjoy a gourmet dinner prepared by some of the finest chefs in Madagascar, accompanied by a selection of exquisite wines and beverages. Silent Auction: Bid on an array of unique items and experiences, with all proceeds going directly towards our educational initiatives. Inspiring Speeches: Hear firsthand from the founders of MMF, educators, and the children whose lives you've touched, sharing stories of hope and triumph. Live Entertainment: The evening will feature breathtaking performances by MMF students, showcasing the talents nurtured through your support. Networking: Mingle with like-minded individuals, philanthropists, and community leaders who share your passion for making a difference."
+            "title": "Inona no andrasana?",
+            "description": "Fiarovana Miaraka amin'ny Sakafo Mahafinaritra: Mankafy sakafo gourmet izay voahandrina avy amin'ny chef malaza indrindra ao Madagasikara, miaraka amin'ny fisafidianana divay sy zava-pisotro manankarena. Aoka Mangina: Mividiana entana sy traikefa manokana, miaraka amin'ny vola rehetra mankany amin'ny fanabeazana. Fandaharana Mahafinaritra: Henoy amin'ny fandraisana voalohany avy amin'ny mpanorina MMF, ny mpampianatra, ary ny ankizy izay nandalo fiainana vaovao, nizara tantara fanantenana sy fahombiazana. Fampisehoana Miaraka Amin'ny Mozika: Ny alina dia hisy fampisehoana mahatalanjona avy amin'ny mpianatra MMF, izay mampiseho ny talenta novolavolaina tamin'ny fanohananao. Fampifandraisana: Mifandray amin'ny olona mitovy hevitra, mpanao asa soa, sy mpitarika fiaraha-monina izay mizara ny fahaliananao amin'ny fanampiana ny hafa."
           },
           {
-            "title": "How Can You Support?",
-            "description": "Purchase a Ticket: Secure your spot at this unforgettable evening and be part of the change. Sponsor a Table: Gather friends, family, or colleagues for a special night out and amplify your impact. Donate: If you're unable to attend, consider making a donation to support MMF's mission. Every contribution, big or small, makes a difference. Volunteer: Lend your time and skills to make the gala a resounding success."
+            "title": "Ahoana no ahafahanao manampy?",
+            "description": "Mividiana Tapakila: Ataovy azo antoka ny toerana amin'ity alina tsy hay hadinoina ity ary ho lasa ampahany amin'ny fiovàna. Manohana Latabatra: Manangona namana, fianakaviana, na mpiara-miasa amin'ny fety manokana iray ary ampitao ny herinao. Manome: Raha tsy afaka tonga ianao, dia eritrereto ny hanome fanomezana ho an'ny tanjon'ny MMF. Ny fanomezana rehetra, na lehibe na kely, dia manampy. Maha-volontariat: Omeo ny fotoana sy ny fahaiza-manao ho an'ny fahombiazana amin'ny fety."
           },
           {
-            "title": "Details at a Glance:",
-            "description": "Date: August 25, 2024, Time: 6:00 PM - 11:00 PM, Dress Code: Formal Attire, Tickets: [Link to purchase tickets or reservation details]"
+            "title": "Antsipiriany amin'ny Tanjona:",
+            "description": "Daty: 25 Aogositra 2024, Fotoana: 6:00 PM - 11:00 PM, Fomba fitafiana: Fitafiana Manara-penitra, Tapakila: [Rohy amin'ny fividianana tapakila na antsipiriany fividianana]"
           }
         ],
 
         "additionalInfo": {
-          "paragraph": "Your presence and support at the Back-to-School Fundraiser Gala will echo in the classrooms and futures of the children we serve. Together, we can ensure that education, the most powerful tool for change, is within their reach. For more information, to purchase tickets, or to make a donation, please visit MMF's website or contact us. We look forward to welcoming you to an evening of celebration, hope, and impact. Let's make this back-to-school season a turning point for children who dream of a brighter tomorrow. Music Makes Futures (MMF) - Transforming lives through the power of education and music. Join us, because every child deserves a chance to succeed."
+          "paragraph": "Ny fisianao sy ny fanohananao amin'ny Fetin'ny Fanangonam-bola ho an'ny Taom-pianarana Vaovao dia hihaino ao amin'ny efitrano fianarana sy ny hoavin'ny ankizy izay tianay ho tohanana. Raha mivory isika, dia afaka miantoka fa ny fanabeazana, izay fitaovana manan-kery indrindra ho an'ny fiovàna, dia ho hita eo aminy. Raha mila fanazavana fanampiny, hividy tapakila, na hanao fanomezana ianao, dia tsidiho ny tranokalan'ny MMF na mifandraisa aminay. Manantena izahay fa hiaraka aminay ianao amin'ny alina feno fankalazana, fanantenana, ary fiantraikany. Andeha isika hanova ity taom-pianarana ity ho fotoan'ny fiovàna ho an'ny ankizy maniry ho amin'ny hoavy mamiratra. Music Makes Futures (MMF) - Manova fiainana amin'ny herin'ny fanabeazana sy ny mozika. Miara-miasa amintsika, satria ny ankizy tsirairay dia mendrika hahazo vintana hahomby."
         },
 
         "buttons": {
-          "like": "Like",
-          "share": "Share",
-          "previousEvent": "Previous Event",
-          "nextEvent": "Next Event"
+          "like": "Tsy maintsy tiana",
+          "share": "Zarao",
+          "previousEvent": "Hetsika Talohan'ity",
+          "nextEvent": "Hetsika Manaraka"
         }
       }
     },
