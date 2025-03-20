@@ -1,0 +1,229 @@
+{
+    "common": {
+        "_comment": "Buttons section - comment will be deleted later",
+        "buttons": {
+            "readMore": "Hamaky bebe kokoa",
+            "signUp": "Hisoratra anarana",
+            "donate": "Manome",
+            "send": "Mandefa",
+            "submit": "Manatitra"
+        },
+
+        "newsletter": {
+            "_comment": "Newsletter section - comment will be deleted later",
+            "title": "Misorata anarana amin'ny gazetinay!",
+            "description": "Mandraisa anjara amin'ny gazetinay anio mba hahazoana vaovao farany momba ny hetsika sy tetikasantsika!"
+        }
+        },
+
+        "screens": {
+        "contact": {
+            "_comment": "Contact us page - delete later",
+            "title": "Mifandraisa aminay",
+            "section": {
+            "ourMission": {
+                "title": "Ny iraka ataonay",
+                "description": "Ny vola miditra dia ampiasaina handrakofana ny zava-drehetra, manomboka amin’ny sakafo, fitafiana, fanabeazana, fitaovana, fahasalamana, fanafody, ary fikarakarana nify ho an’ny ankizy, ary koa amin’ny fampandehanana ny sekoly mozika sy ny karaman’ny mpiasanay. Tafiditra ao amin’ny fandaharan’asa sakafo ihany koa ny fianakavian’ny ankizy, ka mahazo fizarana sakafo sy vokatra fidiovana isam-bolana. Miezaka hatrany izahay hanatsara ny fari-piainan’ny ankizy, ary ampiasainay amin’ny fanamboarana trano fonenana ny ankamaroan’ny fanampiana sisa tavela."
+            }
+            }
+        },
+        "support": {
+            "_comment": "Support page - delete later",
+            "title": "Fanohanana",
+            "section": {
+            "funding": {
+                "title": "Avy aiza ny famatsiam-bola azontsika?",
+                "description": "Ny MMF dia fikambanana madinika miorim-paka amin’ny fiarahamonina, izay mahazo fanohanana indrindra avy amin’ireo mpanome tsy miankina any Norvezy. Ny mpanome tsy tapaka (mpanohana MMF) dia manome fahamarinan-toerana sy fahatokisana ara-bola ho anay. Ankoatr’izay, manam-bintana izahay manana olona maro be feno fahavitrihana izay manangom-bola amin’ny fotoana manokana, toy ny fitsingerenan’ny andro nahaterahana sy hetsika manokana. Ankoatra ireo mpanome tsy miankina, ny mpanohana lehibe indrindra anay dia ny Musikk Gir Liv (mpitendry mozika avy amin’ny Orkesitran’i Kristiansand), izay manome famatsiam-bola ho an’ny fandehanan’ny sekoly mozika sy ny fanamafisam-peo. Ankoatra izany, tato anatin’ny roa taona farany, dia tonga nitsidika an’i Antsirabe ry zareo Musikk Gir Liv niaraka amin’ny vondronà mpitendry mozika avy amin’ny orkesitra, ka nampianatra mozika ho an’ny ankizy ao amin’ny MMF sy nandray anjara tamin’ny fampisehoana niaraka tamin’ny mpianatra."
+            },
+            "navigation": [
+                {
+                "label": "Mpilatsaka an-tsitrapo"
+                },
+                {
+                "label": "Fanomezana"
+                },
+                {
+                "label": "Fanangonam-bola"
+                }
+            ],
+            "support": {
+                "title": "Misaotra anao tamin’ny fanohananao!",
+                "description": "Ny vola miditra dia ampiasaina hanampiana amin’ny zavatra rehetra, manomboka amin’ny sakafo, fitafiana, fanabeazana, fitaovana, fahasalamana, fanafody, ary fikarakarana nify ho an’ny ankizy, ary koa amin’ny fandehanan’ny sekoly mozika sy ny karaman’ny mpiasanay. Tafiditra ao amin’ny fandaharan’asa sakafo ihany koa ny fianakavian’ny ankizy, ka mahazo fizarana sakafo sy vokatra fidiovana isam-bolana. Miezaka hatrany izahay hanatsara ny fari-piainan’ny ankizy, ary ampiasainay amin’ny fanamboarana trano fonenana ny ankamaroan’ny fanampiana sisa tavela."
+            }
+            }
+        },
+        "history": {
+            "_comment": "History section - comment will be deleted later",
+            "title": "Tantaran'ny MMF",
+            "description": "Ny MMF dia naorina tamin'ny fomba ofisialy tao Antsirabe, Madagasikara, tamin'ny taona 2021, nataon'i Eline Rodvelt Hansen sy ny vadiny Dina Rasalina Andriamanalina. Ny tantaran'ny MMF dia niantomboka tamin'ny taona 2018, raha nitondra fiddle roa i Eline ary nankany Madagasikara tamin-kafanam-po. Raha mbola nianatra fiddle tao amin'ny Akademia Grieg tao Bergen izy, dia nanana faniriana mafy hampianatra ankizy izay tsy manana fahafahana hampivelatra ny talentany. Nanjary nofinofiny ny hanokatra sekoly mozika ho an'ireo ankizy mahantra indrindra any Madagasikara.",
+            "introduction": [
+            {
+                "title": "Aoka isika hiaraka hifampahafantatra",
+                "description": "Ny Mozika Manova Fiainana dia sekoly mozika ho an'ny vondrom-piarahamonina marefo amin'ny tanora ao Antsirabe, Madagasikara, izay naorina tamin'ny volana Janoary 2021 nataon'ny mpitendry violinista avy any Norvezy Eline Rodvelt Hansen sy ny mpanakanto Malagasy Dina Rasalina. Ny sekoly dia fiaraha-monina mavitrika sy manampy amin'ny lafiny rehetra, izay tsy manolotra fotsiny lesona amin'ny mozika sy zavakanto, fa manampy ihany koa ireo ankizy avy amin'ny fianakaviana mahantra indrindra ao Antsirabe amin'ny sakafo, fitsaboana, fitaovam-pianarana, fitafiana ary trano fonenana."
+            },
+            {
+                "title": "Fomba fianarana sy fanohanana manampy amin'ny lafiny rehetra",
+                "description": "Ny lesona mozika dia tsy vitan'ny fianarana fotsiny amin'ny fomba fanao amin'ny fitaovana mozika. Ho an'ny mpianatray, ny sekoly mozika dia lasa toerana fialofana, maha-ara-drariny, ary fahatsapana fa ampy fikarakarana avy amin'ny mpampianatra sy ny mpianatra hafa. Ny herin'ny fanabeazana sy ny fahatsapana mafy amin'ny fiaraha-monina dia niteraka ireo ankizy tanora maro avy amin'ny arabe, izay niandraikitra fiahiana sy herisetra – ho any amin'ny efitrano fianarana miaraka amin'ny tontolo iainana azo antoka sy manentana izay manampy amin'ny fahatsapany tanjona, maha-ara-drariny azy, ary ny fahafahany hanova ny fiainany ho tsara kokoa amin'ny alalan'ny fianarana."
+            },
+            {
+                "title": "Fampaherezana amin'ny alalan'ny fanabeazana",
+                "description": "Maromaro amin'ny mpianatray no tsy mbola nanana fahafahana nandeha tany an-tsekoly taloha. Noho izany, ny mpampianatra ao amin'ny MMF dia nanomana fanampiana fanampiny ho an'ny ankizy miatrika olana amin'ny fanaovana ny fanazaran-tenany – izay tetikasa izay efa naseho fa manana fiantraikany lehibe amin'ny fivoarana, ny fahaiza-mianatra, ary ny fiarovana ny ankizy. Vokatry ny fanampiana ara-akademika aorian'ny fianarana, ireo ankizy izay taloha tsy nahafantatra mamaky na manoratra dia efa manaporofo ny fandrosoana ara-akademika sy ara-tsosialy mahomby. Manampy lanja manokana amin'ny fanabeazana vehivavy sy ny fitovian-jo ara-pananahana izahay, ary mikendry ny hanampy ny zazavavy amin'ny alalan'ny mozika sy fanabeazana ankapobeny mba hahazoany fifehezana bebe kokoa amin'ny fiainany amin'ny alalan'ny fanapahan-kevitra tsara kokoa sy voamarina."
+            },
+            {
+                "title": "Fivoarana maharitra sy Fiantraikany amin'ny Fiaviana",
+                "description": "Manolotra tontolo iainana azo antoka, feno fiahiana sy fanohanana, dia hitanay ny fomba ahafahan'ny zazavavy sy vehivavy tanora manentana ny ray aman-dreniny hivelona amin'ny fomba salama kokoa sy maharitra kokoa. Noho izany, mahita fiovàna intergenerational izahay, izay manaporofo fa ny fanabeazana dia manana heriny hanetsika izany – ary izany no manentana anay hanohy hiasa amin'ny fahafoizan-tena, fitiavana, sy fanoloran-tena. Hatramin'ny taona 2021, Mozika Manova Fiainana dia nanoratra ho NGO ary manana filankevi-pitantanana tsy miankina, manohana ankizy mihoatra ny 60. Satria manitatra ny fahaiza-manao amin'ny fanabeazana izahay, faly izahay miara-miasa amin'ny mpampianatra mozika eo an-toerana ary mamorona asa vaovao ho an'ny mponina."
+            },
+            {
+                "title": "Fanohanana sy Tanjon'ny Hoavy",
+                "description": "Ny mpampianatray dia mandray anjara amin'ny fanomezana lesona momba ny fitaovana malagasy nentim-paharazana, ny perkusy, dihy sy hira, gitara klasika, bass roa, zavakanto hita maso, teôria mozika ary mozika kamarera ankoatra ny violin, viola, cello, piano, ary manana tanjona hamoaka ny fôlitra sy klarinety amin'ny taona 2022."
+            }
+            ],
+            "conclusion": {
+            "title": "Famaranana: Maodely ho an'ny Fiovàna",
+            "description": "Rehefa mijery ny fiovàna mahatalanjona izay ateraky ny tetikasanay ao amin'ny fiaraha-monina eo an-toerana, manantena izahay fa hanentana ny mpianatray hanjary olona mahaleo tena, tompon'andraikitra ary manampahaizana izay hanampy amin'ny fivoarana tsara kokoa amin'ny faritra."
+            }
+        },
+
+        "ourWork": {
+            "_comment": "Our Work section - comment will be deleted later",
+            "title": "Ny Asa Ataonay",
+            "description": "Ao Madagasikara, avo ny fatin'ny zaza ary maro no maty noho ny aretina izay azo tsaboina mora amin'ny fitsaboana maoderina. Ny antony mahazatra dia aretina mifindra toy ny aretin'andoha, tazo, aretina mifandray amin'ny kibo, ary tazomoka. I Madagasikara koa dia manana iray amin'ireo taha ambony indrindra amin'ny tazo eran-tany, ary misy areti-mifindra sy areti-pandemika izay efa voafitaka any amin'ny firenena hafa. Maro no mandalo lavitra any amin'ny klinika sy/na hopitaly akaiky, ary lafo ny saran'ny fitsaboana. Noho izany, tsy mitady fanampiana izy ireo raha tsy efa tara loatra. Maro amin'ireo ankizy izay hitanay eny an-dalambe no matetika manana olana ara-pahasalamana goavana, ary maro amin'izy ireo no miaina amin'ny tsy fahampian-tsakafo mafy.",
+
+            "topics": [
+            {
+                "title": "Fitsaboana",
+                "description": "Any Madagasikara, avo ny fatin'ny zaza ary maro no maty noho ny aretina izay azo tsaboina mora amin'ny fitsaboana maoderina. Ny antony mahazatra dia aretina mifindra toy ny aretin'andoha, tazo, aretina mifandray amin'ny kibo, ary tazomoka. I Madagasikara koa dia manana iray amin'ireo taha ambony indrindra amin'ny tazo eran-tany, ary misy areti-mifindra sy areti-pandemika izay efa voafitaka any amin'ny firenena hafa. Maro no mandalo lavitra any amin'ny klinika sy/na hopitaly akaiky, ary lafo ny saran'ny fitsaboana. Noho izany, tsy mitady fanampiana izy ireo raha tsy efa tara loatra. Maro amin'ireo ankizy izay hitanay eny an-dalambe no matetika manana olana ara-pahasalamana goavana, ary maro amin'izy ireo no miaina amin'ny tsy fahampian-tsakafo mafy."
+            },
+            {
+                "title": "Fanabeazana",
+                "description": "Ny fanabeazana dia manome fahatokisana ho an'ny ankizy amin'ny hoavy. Rehefa tsy ampy fahalalana sy fahaiza-manao fototra ny ankizy, dia misy fetra ny fahafahany manatanteraka ny nofinofiny. Manampy amin'ny fanavahana ny fihodinan'ny fahantrana ny fanabeazana ary fitaovana tena ilaina amin'ny ady amin'ny fahantrana. Ny tanjona lehibe amin'ny MMF dia ny hahatonga ny ankizy ho olon-dehibe mahaleo tena miaraka amin'ny fidiram-bola amin'ny hoavy. Noho izany, zava-dehibe ny manampy amin'ny fahombiazana sy ny fiainana ara-pahasalamana amin'ny sekoly. Ny fanabeazana ampahibemaso ao Madagasikara dia maimaim-poana, saingy lafo ny vidin'ny akanjo fianarana, boky fanazavana, taratasy, sy ny voasoratra. Noho izany, ny fianakaviana dia mandefa ny ankizy homba na hiasa hanohana azy ireo. Ireo ankizy izay hitanay eny an-dalambe dia efa niala tao amin'ny sekoly fototra na tsy nanana fahafahana nankany amin'ny sekoly mihitsy, ary tsy mahay mamaky na manoratra. Mba hahombiazana amin'ny fanarenana ireo ankizy ireo hiverina amin'ny sekoly, dia hitanay fa zava-dehibe ny manomana azy ireo tsara. Nanangana fandaharana pre-sekoly izahay, izay andraman'ny ankizy ny mamaky sy manoratra, ary mianatra matematika, malagasy, ary frantsay alohan'ny hanombohany ny sekoly. Ankehitriny, ny ankizy rehetra ao amin'ny MMF dia mianatra any an-tsekoly na mahazo fanabeazana hafa. Manana drafitra ho an'ny hoavy amin'ny ankizy tsirairay izahay araka ny zava-kendreny. Miara-miasa izahay hanampy sy hanohana azy ireo amin'ny fikasany. Ny fanabeazana ampahibemaso ao Madagasikara dia misokatra mandritra ny antsasaky ny andro (manodidina ny 4 ora), ary avy eo dia mankany amin'ny MMF ny ankizy isan'andro aorian'ny sekoly hanazatra fitaovana sy hanao fanazaran-tena. Satria maro amin'ny ray aman-dreny no tsy mahay mamaky na manoratra, dia nampiditra fanampiana amin'ny fanazaran-tena izahay mba hanampy ireo ankizy hahomby ao amin'ny sekoly. Mahita vokatra tsara izahay amin'izany, ary maro amin'ireo ankizy no nanao fandrosoana lehibe tao amin'ny sekoly. Ankoatra ny fanabeazana sy fianarana, dia manome lesona amin'ny teny anglisy ho an'ny ankizy izahay. Fantatray fa mety hanampy azy ireo hahita asa amin'ny hoavy izany. Vitsy ny Malagasy mahay miteny anglisy, ka tombony lehibe ho an'ny ankizy ny mianatra anglisy. Afaka misafidy asa izy ireo, toy ny maha-mpitarika, mpandika teny, na mpampianatra anglisy. Ankoatra izany, mora kokoa ho an'ny ankizy ny mifandray amin'ny mpitsidika sy mp volunteering ao amin'ny MMF. Misy ankizy vitsivitsy izay mitaky vahaolana hafa amin'ny fanabeazana noho ny antony isan-karazany, ary manana mpianatra efa lehibe izahay izay mandeha amin'ny fiofanana matihanina fa tsy amin'ny sekoly mahazatra. Mirehareha izahay fa tamin'ny taon-dasa dia nisy mpianatra iray nahazo taratasy fanamarinana amin'ny fanamboarana akanjo. Amin'izao fotoana izao, manamboatra akanjo fianarana ho an'ny mpianatra hafa izy, ankoatra ny asa hafa."
+            },
+            {
+                "title": "Toerana Onenana",
+                "description": "Maromaro amin'ireo ankizy voasoratra anarana ho mpianatra ao amin'ny MMF no monina eny an-dalambe rehefa mihaona voalohany amin'izy ireo izahay. Ny antony maha-enoan'ny ankizy ireo amin'ny arabe dia ny fahantrana. Ireo ankizy ireo dia tsy misy fanohanana, ary ny ankizy lehibe dia matetika mandray andraikitra amin'ny fikarakarana ny rahalahy sy ny anabaviny. Tena sarotra ny fiainana eny an-dalambe, ary isan'andro dia ady ho an'ny fahavelomana. Mandritra ny andro, mandany fotoana be ny ankizy mangataka vola sy mitady sakafo. Rehefa hariva, zava-dehibe ny mahita toerana azo antoka hatoriana mandritra ny alina. Mety ho mangatsiaka sy mampidi-doza ny alina, ka mivory miaraka ireo ankizy mba hifandray amin'ny hafanana."
+            },
+            {
+                "title": "Fizarana Sakafo",
+                "description": "Na dia malaza amin'ny toetr'andro mahavokatra aza i Madagasikara, dia voakasiky ny loza voajanahary sy ny haintany ratsy indrindra tao anatin'ny folo taona, vokatry ny fiovaovan'ny toetr'andro. Nitarika amin'ny fatiantoka amin'ny vokatra izany, izay niteraka krizy ara-tsakafo sy famine. Miezaka manome sakafo sy rano madio ho an'ny ankizy ny ray aman-dreny. Rehefa tsy afaka manome sakafo ho an'ny ankizy ny fianakaviana, dia lasa ny fandefasana azy ireo hangataka no safidy tokana ho an'ny fahavelomana. Ny ankizy izay monina eny an-dalambe dia mandany fotoana sy hery be mitady fako sakafo ary matetika dia miverina amin'ny fitadiavana zavatra ao amin'ny fako."
+            },
+            {
+                "title": "Lesona Mozika",
+                "description": "Zava-dehibe ny mamaly ny filàna fototra, saingy takatray fa ny ankizy dia mila zavatra mihoatra. Mila fanentanana, aingam-panahy, hafaliana, zavatra havelom-panahy, hevitra vaovao, ary finoana fa misy zavatra hafa azo atao. Izany no mitondra antsika amin'ny fototry ny tetikasa: ny mozika. Mampiseho ny fikarohana fa rehefa mihaino sy mianatra mozika vaovao, dia mipoitra ny sela vaovao ao amin'ny atidoha sy ny fifandraisana vaovao. Mampiseho ihany koa ny fikarohana fa manatsara ny fahatsiarovana ny mozika. Hitanao ao amin'ny MMF fa ireo ray aman-dreny manamarina fa manatsara ny fahaiza-mianatra amin'ny sekoly ny ankizy rehefa manomboka milalao fitaovana mozika. Manan-danja ihany koa ny fiaraha-miasa, mampianatra ny ankizy hifampitondra, hihaino ny tsirairay, ary haneho ny tenany."
+            },
+            {
+                "title": "Tanjon'ny Hoavy",
+                "description": "Ny iray amin'ireo tanjonay dia ny hahatonga ny MMF ho lehibe sy malaza kokoa, mba hahafahantsika mandray ankizy maro kokoa izay monina amin'ny fiainana sarotra eny an-dalambe. Ny tanjona fototra dia ny hahazoan'ny ankizy rehetra ao Antsirabe sakafo ampy, fitafiana, fiahiana, trano azo antoka sy tsara, fianarana, ary fahafahana hampivelatra ny talenta. Zava-dehibe ho anay fa ny fanampiana omena dia mitondra mankany amin'ny fahaleovantena. Ny tanjona dia ny hahatongavan'ny ankizy any an-tsekoly sy ny fampivoarana ny talenta mba ho lasa loharanon-karena ho an'ny fiarahamoniny amin'ny hoavy, hahita asa, ary hiforona amin'ny fahaiza-manao sy fahaleovantena."
+            },
+            {
+                "title": "Hetra",
+                "description": "Ny ankizy izay mitombo ao amin'ny fahantrana ao Antsirabe dia matetika manana andraikitra lehibe hatramin'ny fahazazany. Mikarakara ny rahalahy sy anabaviny izy ireo, mandray andraikitra amin'ny fanomanana sakafo, ary manao ny asa hahazoana vola ho an'ny fianakaviana amin'ny alalan'ny fanangonan-tsoa. Indraindray, omena asa mavesatra koa izy ireo, toy ny mitondra kitapo vary na manpusha tavoahangy rano mavesatra, ka mahazo karama kely na tsy mahazo karama mihitsy amin'ny asany. Ny fanomezana andraikitra amin'ny olon-dehibe amin'ny fikarakarana ny ankizy dia ampahany lehibe amin'ny asanay. Tokony hahazo fahafahana ho ankizy ny ankizy! Noho izany, zava-dehibe ho an'ny fiainana andavanandro ao amin'ny MMF ny filalaovana."
+            }
+            ]
+        }
+        },
+
+        "forms": {
+        "contact": {
+            "_comment": "Contact section - comment will be deleted later",
+            "title": "Antontan'isa fifandraisana",
+            "fields": {
+            "name": {
+                "label": "Ny Anaranao",
+                "error": "(error message here)"
+            },
+            "email": {
+                "label": "E-mail",
+                "error": "(error message here)"
+            },
+            "subject": {
+                "label": "Lohahevitra",
+                "error": "(error message here)"
+            },
+            "message": {
+                "label": "Ny Hafatrao",
+                "error": "(error message here)"
+            }
+            }
+        },
+
+        "support": {
+            "_comment": "Support section - comment will be deleted later",
+            "title": "Fifandraisana",
+            "contactInfo": {
+            "fields": {
+                "name": {
+                "label": "Anarana voalohany",
+                "error": "(error message here)"
+                },
+                "lastName": {
+                "label": "Anarana farany",
+                "error": "(error message here)"
+                },
+                "email": {
+                "label": "E-mail",
+                "error": "(error message here)"
+                },
+                "phone": {
+                "label": "Nomeraon-telefaona",
+                "error": "(error message here)"
+                },
+                "address": {
+                "label": "Adiresy",
+                "error": "(error message here)"
+                },
+                "postalCode": {
+                "label": "Kaody paositra",
+                "error": "(error message here)"
+                },
+                "city": {
+                "label": "Tanàna",
+                "error": "(error message here)"
+                },
+                "country": {
+                "label": "Firenena",
+                "error": "(error message here)"
+                }
+            }
+            }
+        },
+
+        "paymentPlan": {
+            "_comment": "Payment plan section - comment will be deleted later",
+            "title": "Safidio ny drafitra",
+            "fields": {
+            "oneTimePay": {
+                "label": "Fandoavana indray mandeha",
+                "error": "(error message here)"
+            },
+            "monthlyPay": {
+                "label": "Fanomezana isam-bolana",
+                "error": "(error message here)"
+            }
+            }
+        },
+
+        "paymentMethod": {
+            "_comment": "Payment method section - comment will be deleted later",
+            "title": "Safidio ny fomba fandoavana",
+            "fields": {
+            "creditCard": {
+                "label": "Karatra kredita",
+                "error": "(error message here)"
+            },
+            "debitCard": {
+                "label": "Karatra debit",
+                "error": "(error message here)"
+            },
+            "vipps": {
+                "label": "Vipps",
+                "error": "(error message here)"
+            }
+            }
+        },
+
+        "termsAndPrivacy": {
+            "_comment": "Terms and Privacy section - comment will be deleted later",
+            "label": "Amin'ny fanindriana Manatitra, manaiky ny Fepetra sy Fomba fiasa ianao, ary efa namaky ny Politikan'ny Fiarovana ny angon-drakitra."
+        }
+    }
+}

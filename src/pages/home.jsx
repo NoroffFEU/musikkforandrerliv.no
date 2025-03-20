@@ -1,7 +1,9 @@
+import { HeroSection } from "../components/homePage/heroSection";
+
 export function HomePage() {
   return (
     <div>
-      <section id="HeroSection"></section>
+      <HeroSection />
       <section id="HistorySection"></section>
       <section id="StaffSection"></section>
       <section id="WorkSection"></section>

@@ -21,8 +21,8 @@
     "i18next-http-backend": "^3.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.3.0",  // Merged from configure-react-router
-    "react-i18next": "^15.4.1",  // Merged from develop
+    "react-i18next": "^15.4.1",
+    "react-router-dom": "^7.3.0",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
