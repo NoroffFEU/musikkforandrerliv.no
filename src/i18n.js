@@ -1,7 +1,10 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import HttpApi from 'i18next-http-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from 'i18next'
+import { initReactI18next, Translation } from 'react-i18next'
+import HttpApi from 'i18next-http-backend'
+import LanguageDetector from 'i18next-browser-languagedetector'
+import en from './locales/locales.en.json'
+import mg from './locales/locales.mg.json'
+import no from './locales/locales.no.json'
 
 i18n
   .use(initReactI18next) // Initialize React-i18next
@@ -15,13 +18,13 @@ i18n
       escapeValue: false, // React already escapes values
     },
     backend: {
-      loadPath: '/locales/{{lng}}.json', // Path to your translation files
+      loadPath: '/locales/locales.{{lng}}.json', // Path to your translation files
     },
     resources: {
-      en: { translation: { greeting: "Hello!" } }, // Temporary translations
-      no: { translation: { greeting: "Hei!" } },
-      mg: { translation: { greeting: "Miarahaba!" } },
+      en: { translation: en },
+      no: { translation: no },
+      mg: { translation: mg },
     },
-  });
+  })
 
-export default i18n;
+export default i18n
