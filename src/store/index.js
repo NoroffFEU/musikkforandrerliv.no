@@ -1,3 +1,6 @@
 // Here we will export all the stores from Zustand.
+// Re-export, no need for imports
 
-import { useModalStore, useSidebarStore, useDarkModeStore } from "./UIStore/useUIStore.js";
+export { useModalStore } from "./UIStore/useModalStore.js";
+export { useSidebarStore } from "./UIStore/useSidebarStore.js";
+export { useDarkModeStore } from "./UIStore/useDarkmodeStore.js";
