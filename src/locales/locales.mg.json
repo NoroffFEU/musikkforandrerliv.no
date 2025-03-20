@@ -297,9 +297,9 @@
     },
 
     "volunteer": {
-      "_comment": "Section Volunteer: This comment will be deleted later ( needs translation to malagasy )",
-      "title": "Volunteer",
-      "description": "Would you like to make a difference for street children in one of the world's poorest countries? We are looking for individuals who want to volunteer with us in Madagascar. Primarily, we are seeking those with an interest in or education related to music. We find that students greatly benefit from instruction by professional musicians."
+      "_comment": "Section Volunteer: This comment will be deleted later",
+      "title": "Mpanolo-tsaina an-tsitrapo",
+      "description": "Te hanao fanovana ho an’ny ankizy eny an-dalambe amin’ny iray amin’ireo firenena mahantra indrindra eto an-tany ve ianao? Mitady olona vonona hanao asa an-tsitrapo miaraka aminay any Madagasikara izahay. Indrindra indrindra, dia mitady ireo manana fahalianana na fianarana mifandraika amin’ny mozika izahay. Hitanay fa tena mandray soa betsaka amin’ny fampianaran’ny mpitendry mozika matihanina ireo mpianatra."
     },
 
     "supportUs": {
