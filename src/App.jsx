@@ -6,12 +6,14 @@ import heart from "/assets/images/svgs/heart.svg";
 import SelectLanguageButton from "./components/lang/select-language-button";
 import "./index.css";
 import WorkSection from "./components/homePage/workSection";
-import VolunteerSection from "./components/homePage/volunteerSection";
+
+
 
 // You already get 'i18n' from this hook
 import "./i18n";
 
 import TestTranslations from "./pages/TestTranslations";
+
 
 const App = () => {
   const { t, i18n } = useTranslation();
@@ -28,8 +30,9 @@ const App = () => {
           <SelectLanguageButton />
         </div>
       </div>
+    
       <WorkSection />
-      <VolunteerSection />
+      
     </I18nextProvider>
   );
 };
