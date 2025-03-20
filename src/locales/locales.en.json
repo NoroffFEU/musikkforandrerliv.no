@@ -172,7 +172,9 @@
           "description": "Providing a safe, caring and supportive environment we see how the girls and young women further inspire their parents to live healthier, more stable lives. As such, we witness an intergenerational transformation that education has a power to set in motion– and that inspires us to continue to work with dedication, passion and commitment.\nSince 2021 Mozika Manova Fiainana registered as an NGO and has an independent board of directors, supporting over 60 children. As we are expanding our teaching capacities, we are happy to be working with the local music teachers and creating new local jobs."
         },
         {
-          "description": "“The Friends Association of the Music School in Madagascar”\nMartin Fröst Foundation\nSt. Johannes menighet, Stavanger\nForeningen Musikk gir liv, Kristiansand\nBuffet Crampon, Paris"
+          "supportedBy": {
+            "description": "MFF is supported by\n“The Friends Association of the Music School in Madagascar”\nMartin Fröst Foundation\nSt. Johannes menighet, Stavanger\nForeningen Musikk gir liv, Kristiansand\nBuffet Crampon, Paris"
+          }
         },
         {
           "title": "Support and future goals",
