@@ -226,28 +226,28 @@
     },
 
     "staff": {
-      "_comment": "Section Our Staff Overview: This comment will be deleted later ( needs translation to malagasy )",
-      "title": "Our Staff",
+      "_comment": "Section Our Staff Overview: This comment will be deleted later",
+      "title": "Ny Mpiasa",
       "members": [
         {
           "name": "Eline Rodvelt Hansen",
-          "occupation": "Violin Teacher",
-          "description": "Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres."
+          "occupation": "Mpampianatra violin",
+          "description": "Eline dia mpitendry sy mpampianatra violin, nahazo fianarana tao amin’ny Akademia Grieg any Bergen. Teraka tao Sandnes, Rogaland, efa nandehandeha betsaka eran-tany izy, nilalao niaraka tamin’ny mpanakanto maro manerana an’izao tontolo izao amin’ny karazana gadona samihafa."
         },
         {
           "name": "Dina Rasalina Andriamanalina",
-          "occupation": "Piano Teacher",
-          "description": "Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood. However, it was eventually the piano that became his dominant instrument."
+          "occupation": "Mpampianatra piano",
+          "description": "Dina dia namorona ny MMF niaraka tamin’ny vadiny, Eline Rodvelt Hansen, tamin’ny taona 2021. Teraka tao Antsirabe, Madagasikara, Dina dia manana gadona sy mozika amin’ny rà mandriaka ao aminy, satria efa nilalao zavamaneno maro hatramin’ny fahazazany. Saingy ny piano no lasa zavamaneno tena nifehy azy indrindra."
         },
         {
           "name": "Karoline Hartvigsen",
-          "occupation": "Nurse",
-          "description": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo. Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen."
+          "occupation": "Mpitsabo mpanampy",
+          "description": "Karoline dia nahavita fianarana ho mpitsabo mpanampy tamin’ny taona 2017 ary miasa feno amin’ny sampana fitsaboana homamiadana ao amin’ny Radiumhospitalet any Oslo. Alohan’ny fianarany licence dia nahavita fianarana herintaona momba ny fahatakarana ara-kolontsaina tao amin’ny Oniversiten’i NLA Bergen."
         },
         {
           "name": "Thea Harbo",
-          "occupation": "Nurse",
-          "description": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger. She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet."
+          "occupation": "Mpitsabo mpanampy",
+          "description": "Thea dia nahazo diplaoman’ny licence amin’ny fitsaboana mpanampy tamin’ny taona 2017 tao amin’ny Oniversiten’i Diakonova any Oslo. Nitoetra tany nandritra ny 9 taona izy talohan’ny niverinany tany amin’ny tanindrazany, Stavanger. Manana traikefa amin’ny fikarakarana marary an-trano izy, ary niasa nandritra ny taona maro tao amin’ny sampana pediatrika ao amin’ny Rikshospitalet."
         }
       ]
     },
