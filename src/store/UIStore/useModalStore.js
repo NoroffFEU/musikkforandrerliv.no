@@ -19,4 +19,4 @@ const useModalStore = create((set) => ({
   closeModal: () => set({ isModalOpen: false }),
 }));
 
-export default useModalStore;
+export { useModalStore };

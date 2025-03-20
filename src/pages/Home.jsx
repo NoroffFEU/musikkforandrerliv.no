@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 import { HeroSection } from "../components/homePage/heroSection";
->>>>>>> develop
 
 export function HomePage() {
   return (

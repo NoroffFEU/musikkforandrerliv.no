@@ -1,6 +1,10 @@
 @import "tailwindcss";
+@import "./fonts/font.css";
 
-@theme {
+
+
+@layer base {
+:root {
     --color-sunset-red: #EE6352;
     --color-primary-green: #5B8E7D;
     --color-mint-green: #b2cac2;
@@ -16,8 +20,12 @@
     --color-dark-charcoal: #333333;
     --color-cerebral-grey: #CCCCCC;
     --color-custom-gray: rgba(54, 55, 50, 1);
+
+
     --font-sans: Montserrat, sans-serif;
     --font-justAnotherHand: "Just Another Hand", sans-serif;
-    --font-inter: Inter, sans-serif;
+  
   }
+}
+
   
