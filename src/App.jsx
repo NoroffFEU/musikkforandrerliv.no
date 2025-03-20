@@ -6,11 +6,20 @@ import SelectLanguageButton from "./components/lang/select-language-button";
 import "./index.css";
 import CalenderSection from "./components/homePage/calenderSection";
 
-const App = () => {
-  const { t, i18n } = useTranslation(); // i18n from the hook
+import { useTranslation } from "react-i18next"; // You already get 'i18n' from this hook
+import "./i18n";
+
+
+import heart from "/assets/images/svgs/heart.svg";
+
+
+import TestTranslations from "./pages/TestTranslations";  
+
+const Home = () => {
+  const { t, i18n } = useTranslation();  
 
   return (
-    <I18nextProvider i18n={i18n}>
+
       <div className="h-screen w-full flex flex-col justify-center items-center">
         <h1 className="text-2xl font-extrabold">
           {t("Welcome to MMF project")}{" "}
@@ -26,4 +35,16 @@ const App = () => {
   );
 };
 
-export default App;
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/test-translations" element={<TestTranslations />} />
+      </Routes>
+    </Router>
+
+  );
+};
+
+export default App; 
