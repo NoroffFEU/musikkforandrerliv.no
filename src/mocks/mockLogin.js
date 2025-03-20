@@ -1,4 +1,4 @@
-import { login } from "../mocks/mockAuthTest";
+import { login } from "./mockAuthApi.js";
 
 export const testLoginSuccess = async () => {
   return await login("testuser@example.com", "password123");

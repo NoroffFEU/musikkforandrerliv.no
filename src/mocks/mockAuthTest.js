@@ -1,9 +1,9 @@
 import {
   testGetUserProfile,
   testGetUserProfileFail,
-} from "../mocks/mockGetUserProfile";
-import { testLoginSuccess, testLoginFail } from "../mocks/mockLogin";
-import { testLogout } from "../mocks/mockLogout";
+} from "./mockGetUserProfile.js";
+import { testLoginSuccess, testLoginFail } from "./mockLogin.js";
+import { testLogout } from "./mockLogout.js";
 
 const runMockTest = async () => {
   try {
