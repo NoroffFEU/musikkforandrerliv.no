@@ -253,35 +253,44 @@
     },
 
     "staffDetails": {
-      "_comment": "Section Detailed Staff Page: This comment will be deleted later ( needs translation to malagasy )",
-      "title": "Our Staff",
+      "_comment": "Section Detailed Staff Page: This comment will be deleted later",
+      "title": "Ny Mpiasa",
       "members": [
         {
           "name": "Eline Rodvelt Hansen",
-          "occupation": "Violin Teacher",
-          "description": "Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres. Additionally, she is a dedicated violin teacher. With two violins, she went to Madagascar with a desire to start a music school to help children out of poverty. In Antsirabe, she met her husband, Dina, who was also a musician and shared a similar dream. Together, they founded MMF in 2021 and now lead the work together. In addition, Eline works as a violin teacher at the music school, and she follows up ensembles and students on several instruments. Eline is also the leader of the Norwegian board of MMF.",
-          "roles": ["MMF Co-Founder, Madagascar", "MMF Board Leader, Norway"],
+          "occupation": "Mpampianatra violin",
+          "description": "Eline dia mpitendry sy mpampianatra violin, nahazo fianarana tao amin’ny Akademia Grieg any Bergen. Teraka tany Sandnes, Rogaland, efa nandehandeha betsaka eran-tany izy, nilalao niaraka tamin’ny mpanakanto maro manerana an’izao tontolo izao amin’ny karazana gadona samihafa. Ankoatra izany, dia mpampianatra violin tena manolo-tena izy. Nitondra violin roa izy nankany Madagasikara miaraka amin’ny faniriana hanomboka sekoly mozika mba hanampiana ny ankizy hiala amin’ny fahantrana. Tao Antsirabe, dia nihaona tamin’ny vadiny, Dina, izay mpanakanto ihany koa ary nanana nofinofy mitovy aminy. Tamin’ny taona 2021, dia niara-nanorina ny MMF izy ireo ary mitarika izany ankehitriny. Ankoatra izany, Eline dia mbola mpampianatra violin ao amin’ny sekoly mozika ary manara-maso ireo ansamblan’ny mpianatra amin’ny zavamaneno maro. Izy koa no filohan’ny biraon’ny MMF any Norvezy.",
+          "roles": [
+            "Mpiara-manorina MMF, Madagasikara",
+            "Filoha Birao MMF, Norvezy"
+          ],
           "email": "e-mail@mmf.no"
         },
         {
           "name": "Dina Rasalina Andriamanalina",
-          "occupation": "Piano Teacher",
-          "description": "Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood. However, it was eventually the piano that became his dominant instrument. In London, he studied music technology and eventually worked in a music studio. With enthusiasm for children and development work, he returned to Madagascar, where he has been, among other roles, a project manager for international aid projects. He now leads the work of MMF alongside Eline, in addition to teaching piano and traditional Malagasy music and dance in the project.",
-          "roles": ["MMF Co-Founder, Madagascar"],
+          "occupation": "Mpampianatra piano",
+          "description": "Dina dia mpiara-manorina ny MMF niaraka tamin’ny vadiny, Eline Rodvelt Hansen, tamin’ny taona 2021. Teraka tao Antsirabe, Madagasikara, Dina dia manana gadona sy mozika ao amin’ny rany, satria efa nilalao zavamaneno maro hatramin’ny fahazazany. Saingy, ny piano no lasa zavamaneno tena nifehy azy indrindra. Tao Londona, dia nianatra momba ny teknolojia mozika izy ary niasa tao amin’ny studio fandraketam-peo. Miaraka amin’ny hafanam-po amin’ny asa fampandrosoana sy ny ankizy, dia niverina tany Madagasikara izy, izay niandraikitra tetikasa fanampiana iraisam-pirenena. Ankehitriny, dia mitarika ny MMF izy miaraka amin’i Eline, ankoatra ny fampianarana piano sy mozika nentin-drazana Malagasy ary ny dihy ao amin’ny tetikasa.",
+          "roles": ["Mpiara-manorina MMF, Madagasikara"],
           "email": "e-mail@mmf.no"
         },
         {
           "name": "Karoline Hartvigsen",
-          "occupation": "B.A. Nursing (2017)",
-          "description": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo. Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen. In connection with this, she traveled to Bolivia to conduct fieldwork at an orphanage focusing on the children's quality of life. Karoline has always had a great interest and commitment to humanitarian work and has volunteered as a nurse at a public hospital in Madagascar alongside Thea. She is now the deputy leader of the Norwegian board of MMF and helps coordinate the work done from Norway.",
-          "roles": ["MMF Board Deputy Leader", "Project Coordinator, Norway"],
+          "occupation": "Licence amin’ny fitsaboana (2017)",
+          "description": "Karoline dia nahavita fianarana ho mpitsabo mpanampy tamin’ny taona 2017 ary miasa feno amin’ny sampana fitsaboana homamiadana ao amin’ny Radiumhospitalet any Oslo. Alohan’ny fianarany licence dia nahavita fianarana herintaona momba ny fahatakarana ara-kolontsaina tao amin’ny Oniversiten’i NLA Bergen. Nifandraika tamin’izany, dia nandeha tany Bolivia izy hanao fikarohana ifotony tao amin’ny toeram-pialofana ho an’ny kamboty izay mifantoka amin’ny fanatsarana ny kalitaon’ny fiainan’ny ankizy. Karoline dia manana fitiavana sy fanoloran-tena amin’ny asa fanasoavana ary efa nanao asa an-tsitrapo ho mpitsabo mpanampy tao amin’ny hopitaly-panjakana any Madagasikara niaraka tamin’i Thea. Ankehitriny, izy no lefitry ny filohan’ny biraon’ny MMF any Norvezy ary manampy amin’ny fandrindrana ny asa ataon’ny MMF avy any Norvezy.",
+          "roles": [
+            "Lefitry ny Filohan’ny Birao MMF",
+            "Mpiandraikitra Tetika, Norvezy"
+          ],
           "email": "e-mail@mmf.no"
         },
         {
           "name": "Thea Harbo",
-          "occupation": "B.A. Nursing (2017)",
-          "description": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger. She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet, and currently works full-time in a specially adapted department in a kindergarten. She has extensive experience working with children and enjoys it. Thea is a board member of MMF and is responsible for the finances of the project. She volunteers for the project and is responsible for the work carried out in Norway.",
-          "roles": ["MMF Board Member", "Project Manager, Norway"],
+          "occupation": "Licence amin’ny fitsaboana (2017)",
+          "description": "Thea dia nahazo diplaoman’ny licence amin’ny fitsaboana mpanampy tamin’ny taona 2017 tao amin’ny Oniversiten’i Diakonova any Oslo. Nitoetra tany nandritra ny 9 taona izy talohan’ny niverinany tany amin’ny tanindrazany, Stavanger. Manana traikefa amin’ny fikarakarana marary an-trano izy, ary niasa nandritra ny taona maro tao amin’ny sampana pediatrika ao amin’ny Rikshospitalet. Amin’izao fotoana izao, dia miasa feno amin’ny sampana manokana ao amin’ny sekoly fanabeazana fototra ho an’ny ankizy. Manana traikefa be amin’ny fiaraha-miasa amin’ny ankizy izy ary mankafy izany. Thea dia mpikambana ao amin’ny biraon’ny MMF ary tompon’andraikitra amin’ny fitantanam-bolan’ny tetikasa. Manao asa an-tsitrapo amin’ny tetikasa izy ary manara-maso ny asa atao any Norvezy.",
+          "roles": [
+            "Mpikambana ao amin’ny Birao MMF",
+            "Mpiandraikitra Tetika, Norvezy"
+          ],
           "email": "e-mail@mmf.no"
         }
       ]
