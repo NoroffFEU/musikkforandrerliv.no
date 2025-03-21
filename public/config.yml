@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main # Change to your branch
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
