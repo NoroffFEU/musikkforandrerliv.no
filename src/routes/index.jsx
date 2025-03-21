@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import NotFound from "../pages/NotFound";
-import TestTranslations from "../pages/TestTranslations";
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
+import About from '../pages/About';
+import Contact from '../pages/Contact';
+import Home from '../pages/Home';
+import NotFound from '../pages/NotFound';
+import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
   return (
