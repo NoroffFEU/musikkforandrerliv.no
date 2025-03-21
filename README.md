@@ -3,22 +3,26 @@
 ![img_3078](https://github.com/NoroffFEU/musikkforandrerliv.no/assets/152280051/bc5bf665-65b6-49ed-a267-758b3fc21cb3)
 
 # Description:
+
 Noroff Frontend Developer students are building a web application for the non profit organization Musikk Forandrer Liv (MMF).
 
 This project aim to build a web application:
+
 - with multipple language support (English, Norwegian and Malagasy)
 - that allows people to support MMF via donations
 - that allows the client, MMF, to update and post content on their page via CMS
 - that allows people visiting the page to sign up for newsletter
 
 ## Design
+
 - [Figma Design](Deshttps://www.figma.com/design/p3IKXs5ICTeFKQQ5hZ4ZAG/Design-File---MMF?node-id=0-1&p=f&t=OTHKwV3Alm2JN8Zz-0)
 
 ## Docs
 
-- [Musikk Forandre Liv](https://noroff-my.sharepoint.com/:o:/r/personal/tarbjo01657_stud_noroff_no/_layouts/15/Doc.aspx?sourcedoc=%7B86d2d933-f42c-42a3-ab7b-27d37688f881%7D&action=edit&wd=target(Questions%20for%20client.one%7Cc2d95cef-84b0-4461-994c-2cce927a47e6%2FQuestion%20we%20need%20to%20get%20answers%20from%20Client%7C6f534107-382f-4256-a68d-311a0d35fb29%2F)&wdorigin=NavigationUrl)
+- [Musikk Forandre Liv](<https://noroff-my.sharepoint.com/:o:/r/personal/tarbjo01657_stud_noroff_no/_layouts/15/Doc.aspx?sourcedoc=%7B86d2d933-f42c-42a3-ab7b-27d37688f881%7D&action=edit&wd=target(Questions%20for%20client.one%7Cc2d95cef-84b0-4461-994c-2cce927a47e6%2FQuestion%20we%20need%20to%20get%20answers%20from%20Client%7C6f534107-382f-4256-a68d-311a0d35fb29%2F)&wdorigin=NavigationUrl>)
 
 # Built with:
+
 - React
 - Tailwind
 - Decap CMS
@@ -28,7 +32,7 @@ This project aim to build a web application:
 - Node version `>=18.19.1`
 - NPM verion `>=10.2.4`
 
-# Getting started: 
+# Getting started:
 
 ## Installation:
 
@@ -38,19 +42,39 @@ This project aim to build a web application:
 4. Run `npm run build`
 5. Run `npm run dev`
 
-# Acknowledgments: 
+## Code Quality:
+
+### Formatting
+
+The project uses Prettier for code formatting with automatic import sorting. To format your code:
+
+- Format all files: `npm run format`
+- Format a specific file: `npx prettier --write path/to/file`
+
+### Linting
+
+ESLint is configured to ensure code quality. To lint your code:
+
+- Lint all files: `npm run lint`
+- Lint and fix automatically: `npm run lint:fix`
+- Lint a specific file: `npx eslint path/to/file`
+
+# Acknowledgments:
+
 2022-2023 Noroff fulltime Frontend development students
 2023-2024 Noroff fulltime Frontend development students
 
 # Tailwind:
+
 Tailwind is already configured for this project.
 
 ## Tailwind guide
+
 - Use Tailwind CSS utility classes in your HTML to style your components
 
 - If you are writing code and want it to update in the live server, remember to run the following code in terminal: **npm run dev**
 
-- If you are not gonna code, but just want to see how the project looks, run this code in the terminal: **npm run build** 
+- If you are not gonna code, but just want to see how the project looks, run this code in the terminal: **npm run build**
 
 - plugins you can use to help with tailwind: **Tailwind CSS IntelliSense & Tailwind Docs**
 
