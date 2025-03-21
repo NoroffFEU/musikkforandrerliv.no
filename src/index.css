@@ -1,23 +1,25 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import './fonts/font.css';
 
-@theme {
-    --color-sunset-red: #EE6352;
-    --color-primary-green: #5B8E7D;
+@layer base {
+  :root {
+    --color-sunset-red: #ee6352;
+    --color-primary-green: #5b8e7d;
     --color-mint-green: #b2cac2;
-    --color-ivory-beige: #F8EED1;
+    --color-ivory-beige: #f8eed1;
     --color-dark-green: #363732;
-    --color-alt-red: #81362C;
-    --color-alt-forest-green: #304B42;
-    --color-alt-light-red: #F1DBD3;
-    --color-light-red: #FCE2DB;
-    --color-hover-red: #F28077;
+    --color-alt-red: #81362c;
+    --color-alt-forest-green: #304b42;
+    --color-alt-light-red: #f1dbd3;
+    --color-light-red: #fce2db;
+    --color-hover-red: #f28077;
     --color-alt-hover-red: #be4e43;
-    --color-light-green: #B2CAC2;
+    --color-light-green: #b2cac2;
     --color-dark-charcoal: #333333;
-    --color-cerebral-grey: #CCCCCC;
+    --color-cerebral-grey: #cccccc;
     --color-custom-gray: rgba(54, 55, 50, 1);
+
     --font-sans: Montserrat, sans-serif;
-    --font-justAnotherHand: "Just Another Hand", sans-serif;
-    --font-inter: Inter, sans-serif;
+    --font-justAnotherHand: 'Just Another Hand', sans-serif;
   }
-  
+}
