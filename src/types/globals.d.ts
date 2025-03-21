@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 // Image declarations for TypeScript
 declare module '*.svg' {
   const content: string;
@@ -28,4 +30,12 @@ declare module '*.webp' {
 declare module '*.json' {
   const value: Record<string, unknown>;
   export default value;
+}
+
+// Additional Vite environment types
+interface ImportMetaEnv extends Readonly<Record<string, string | boolean | undefined>> {
+  readonly VITE_APP_TITLE?: string;
+  readonly DEV: boolean;
+  readonly PROD: boolean;
+  readonly MODE: string;
 }

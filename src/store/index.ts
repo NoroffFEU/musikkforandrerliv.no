@@ -1,7 +1,11 @@
-// Here we export all the stores from Zustand
-// Re-export, no need for imports
+/**
+ * Re-export all stores for easier imports
+ */
 
+// UI Stores
+export { useDarkModeStore } from './UIStore/useDarkmodeStore';
 export { useModalStore } from './UIStore/useModalStore';
 export { useSidebarStore } from './UIStore/useSidebarStore';
-export { useDarkModeStore } from './UIStore/useDarkmodeStore';
+
+// API Stores
 export { default as useRequestStore } from './APIStore/useRequestStore';

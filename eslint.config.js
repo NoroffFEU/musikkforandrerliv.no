@@ -7,7 +7,53 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
 export default [
-  { ignores: ['dist', 'node_modules', 'vite.config.ts'] },
+  { 
+    ignores: [
+      // Build output
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      
+      // Dependencies
+      'node_modules/**',
+      'package-lock.json',
+      
+      // Cache
+      '.cache/**',
+      '.npm/**',
+      '.eslintcache',
+      
+      // Environment and config files
+      '.env*',
+      '.env.local',
+      '.env.development.local',
+      '.env.test.local',
+      '.env.production.local',
+      
+      // Logs
+      'npm-debug.log*',
+      'yarn-debug.log*',
+      'yarn-error.log*',
+      
+      // Editor directories and files
+      '.idea/**',
+      '.vscode/**',
+      '*.suo',
+      '*.ntvs*',
+      '*.njsproj',
+      '*.sln',
+      '*.sw?',
+      
+      // System Files
+      '.DS_Store',
+      'Thumbs.db',
+      
+      // Config files
+      'vite.config.ts',
+      'postcss.config.js',
+      'tailwind.config.js'
+    ] 
+  },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -28,6 +74,11 @@ export default [
       react: react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -68,6 +119,11 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       '@typescript-eslint': tseslint,
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
     rules: {
       ...js.configs.recommended.rules,

@@ -4,6 +4,7 @@ import HttpApi from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 import { SupportedLanguage } from './types';
 
+// Initialize i18next with all necessary configurations
 i18n
   .use(initReactI18next) // Initialize React-i18next
   .use(HttpApi) // Load translations from backend (HTTP)
@@ -11,17 +12,18 @@ i18n
   .init({
     supportedLngs: ['en', 'no', 'mg'] as SupportedLanguage[], // Supported languages
     fallbackLng: 'en', // Default language
-    debug: false, // ❌ Disable debug logs
+    debug: import.meta.env.DEV, // Only enable debug in development
+    load: 'languageOnly', // Don't load country-specific locales (e.g., 'en-US')
     interpolation: {
       escapeValue: false, // React already escapes values
     },
-    backend: {
-      loadPath: '/locales/{{lng}}.json', // Path to your translation files
+    detection: {
+      order: ['localStorage', 'navigator'], // Check localStorage first, then browser
+      lookupLocalStorage: 'preferredLanguage', // Key to use in localStorage
+      caches: ['localStorage'], // Cache language in localStorage
     },
-    resources: {
-      en: { translation: { greeting: 'Hello!' } }, // Temporary translations
-      no: { translation: { greeting: 'Hei!' } },
-      mg: { translation: { greeting: 'Miarahaba!' } },
+    backend: {
+      loadPath: '/locales/{{lng}}.json', // Path to translation files
     },
   });
 

@@ -1,60 +1,89 @@
+/**
+ * Base interface for sections that have an image, title, and content
+ */
+export interface BaseSection {
+  id?: string;        // Optional section identifier
+  image: string;      // Path to the image
+  title: string;      // Section title, can be translation key
+  content: string;    // Section content, can be translation key
+}
+
+/**
+ * Hero section content
+ */
 export interface HeroContent {
-  image: string;
-  title: string;
-  subtitle: string;
+  image: string;      // Background image path
+  title: string;      // Main title, can be translation key
+  subtitle: string;   // Subtitle text, can be translation key
 }
 
-export interface HistoryContent {
-  image: string;
-  backIcon: string;
-  title: string;
-  content: string;
+/**
+ * History section content
+ */
+export interface HistoryContent extends BaseSection {
+  backIcon: string;   // Back to top icon
 }
 
+/**
+ * Staff member information
+ */
 export interface StaffMember {
-  image: string;
-  role: string;
-  teacher: string;
-  content: string;
+  image: string;      // Staff member's photo
+  role: string;       // Role/position, can be translation key
+  teacher: string;    // Teacher's name
+  content: string;    // Bio description, can be translation key
 }
 
+/**
+ * Staff section content
+ */
 export interface StaffContent {
-  title: string;
-  team: StaffMember[];
+  title: string;      // Section title, can be translation key
+  team: StaffMember[];  // Array of staff members
 }
 
-export interface WorkContent {
-  image: string;
-  title: string;
-  content: string;
-}
+/**
+ * Work section content
+ */
+export type WorkContent = BaseSection;
 
-export interface VolunteerContent {
-  image: string;
-  title: string;
-  content: string;
-}
+/**
+ * Volunteer section content
+ */
+export type VolunteerContent = BaseSection;
 
-export interface SupportContent {
-  image: string;
-  title: string;
-  content: string;
-}
+/**
+ * Support section content
+ */
+export type SupportContent = BaseSection;
 
+/**
+ * Gallery section content
+ */
 export interface GalleryContent {
-  image: string[];
+  title?: string;     // Optional section title
+  image: string[];    // Array of image paths
 }
 
+/**
+ * Calendar event information
+ */
 export interface CalendarEvent {
-  date: string;
-  title: string;
+  date: string;       // Event date
+  title: string;      // Event title, can be translation key
 }
 
+/**
+ * Calendar section content
+ */
 export interface CalendarContent {
-  title: string;
-  events: CalendarEvent[];
+  title: string;      // Section title, can be translation key
+  events: CalendarEvent[];  // Array of events
 }
 
+/**
+ * Complete landing page content structure
+ */
 export interface LandingPageContent {
   hero: HeroContent;
   history: HistoryContent;
@@ -63,5 +92,5 @@ export interface LandingPageContent {
   volunteer: VolunteerContent;
   support: SupportContent;
   gallery: GalleryContent;
-  calender: CalendarContent;
+  calender: CalendarContent;  // Note the spelling "calender" matches the JSON
 }

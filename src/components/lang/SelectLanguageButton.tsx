@@ -6,8 +6,16 @@ import { BaseProps, DisplayLanguage } from '../../types';
 import * as Icon from './LanguageIcons';
 import Option from './LanguageOption';
 
+/**
+ * Translates the language code to a human-readable name.
+ */
 function translateLangCode(value: DisplayLanguage): string {
-  return value === 'En' ? 'English' : value === 'Mg' ? 'Melayu' : 'Norsk';
+  const languageNames: Record<DisplayLanguage, string> = {
+    'En': 'English',
+    'No': 'Norsk',
+    'Mg': 'Malagasy'
+  };
+  return languageNames[value] || 'Unknown';
 }
 
 /**
