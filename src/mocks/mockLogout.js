@@ -1,4 +1,4 @@
-import { logout } from "./mockAuthApi.js";
+import { logout } from './mockAuthApi.js';
 
 export const testLogout = async () => {
   return await logout();
