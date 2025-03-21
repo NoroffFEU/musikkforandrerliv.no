@@ -30,13 +30,8 @@ function Navbar() {
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
 
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -77,13 +72,11 @@ function Navbar() {
     `${
       isActive
         ? "text-[var(--color-alt-forest-green)]"
-        : "text-[#000000] hover:text-[var(--color-alt-forest-green)] hover:border hover:border-dashed hover:border-[#9747FF] hover:rounded-[5px]"
-    } flex items-center font-montserrat text-[14px] font-semibold`;
+        : "text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200"
+    } flex items-center font-montserrat text-[14px] font-semibold px-2`;
 
-  const getMobileLinkClasses = ({ isActive }) =>
-    isActive
-      ? "block w-full py-2 px-4 bg-[var(--color-light-green)] rounded-[8px] font-montserrat text-[14px] font-semibold h-[54px] flex items-center"
-      : "block w-full py-2 px-4 font-montserrat text-[14px] text-[#000000] hover:text-[var(--color-alt-forest-green)] font-semibold";
+  const getMobileLinkClasses = () =>
+    "block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] hover:bg-[var(--color-light-green)] hover:text-[#000000] transition-colors duration-200";
 
   return (
     <>
@@ -103,11 +96,10 @@ function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6 ml-auto">
-            {/* Desktop search */}
             <div className="relative" ref={searchRef}>
               <button
                 onClick={toggleSearch}
-                className="search-toggle flex items-center text-[#000000] hover:text-[var(--color-alt-forest-green)] hover:border hover:border-dashed hover:border-[#9747FF] hover:rounded-[5px] font-montserrat text-[14px] font-semibold"
+                className="search-toggle flex items-center text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200 font-montserrat text-[14px] font-semibold px-2"
               >
                 <svg
                   className="mr-1 h-5 w-5"
@@ -124,7 +116,6 @@ function Navbar() {
                 </svg>
                 Search
               </button>
-
               {isSearchOpen && (
                 <div className="absolute mt-2 right-0 z-20 bg-white border border-[var(--color-sunset-red)] rounded-md shadow-lg p-2 w-72 transition-all duration-200">
                   <form onSubmit={handleSearch} className="flex items-center">
@@ -173,7 +164,7 @@ function Navbar() {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleDropdown}
-                className="dropdown-toggle inline-flex items-center text-[#000000] hover:text-[var(--color-alt-forest-green)] hover:border hover:border-dashed hover:border-[#9747FF] hover:rounded-[5px] font-montserrat text-[14px] font-semibold"
+                className="dropdown-toggle inline-flex items-center text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200 font-montserrat text-[14px] font-semibold px-2"
               >
                 More
                 <svg
@@ -195,19 +186,19 @@ function Navbar() {
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
                   <NavLink
                     to="/events"
-                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     Events
                   </NavLink>
                   <NavLink
                     to="/work"
-                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     Our Work
                   </NavLink>
                   <NavLink
                     to="/contact"
-                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     Contact
                   </NavLink>
@@ -246,10 +237,8 @@ function Navbar() {
           </button>
         </div>
       </nav>
-
-      {/* MOBILE MENU */}
       {isMenuOpen && (
-        <div className="fixed top-[199px] left-0 w-full bg-white z-40 md:hidden overflow-y-auto  shadow-md">
+        <div className="fixed top-[199px] left-0 w-full bg-white z-40 md:hidden overflow-y-auto shadow-md">
           <div className="px-4 pt-4 pb-8 space-y-5">
             <div className="space-y-2">
               <button
