@@ -1,5 +1,5 @@
 import React, {lazy, Suspense} from "react";
-import { HeroSection } from "../components/homePage/heroSection";
+import  {HeroSection}  from "../components/homePage/heroSection";
 import WorkSection from "../components/homePage/workSection";
 import { useTranslation } from "react-i18next"; // You already get 'i18n' from this hook
 import "../i18n";
@@ -80,13 +80,22 @@ const Home = () => {
       <HeroSection />
       <Suspense fallback={<div>Loading...</div>}>
         <HistorySection />
+    
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <StaffSection />
       </Suspense>
       <WorkSection />
       <Suspense fallback={<div>Loading...</div>}>
         <VolunteerSection />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <SupportSection />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <GallerySection />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <CalenderSection />
       </Suspense>
      
