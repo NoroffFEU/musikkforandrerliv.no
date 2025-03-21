@@ -11,14 +11,12 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Main navbar */}
+       
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <img src="/assets/placeholder-images/logo.png" alt="Logo" className="h-12 w-auto" />
           </div>
 
-          {/* Desktop menu - hidden on mobile - updated styles to match mobile */}
           <div className="hidden md:flex items-center space-x-6">
             <a href="#" className="flex items-center text-[#000000] hover:text-[var(--color-alt-forest-green)] font-montserrat text-[14px] uppercase font-semibold">
               <svg className="mr-1 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -40,13 +38,11 @@ const Navbar = () => {
             <LanguageSelector defaultText="Select a Language" />
           </div>
 
-          {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 text-[#000000]"
             aria-expanded={isMenuOpen}
           >
-            {/* Simple hamburger icon */}
             <svg
               className="h-6 w-6"
               xmlns="http://www.w3.org/2000/svg"
@@ -60,13 +56,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu overlay */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-50 md:hidden overflow-y-auto border-l-4 border-[#9C27B0]">
           <div className="px-4 py-3 flex justify-between items-center">
             <h2 className="text-[#9C27B0] text-lg font-medium">Mobile nav menu</h2>
             
-            {/* Close button */}
+           
             <button onClick={toggleMenu} className="text-[#000000]">
               <svg
                 className="h-6 w-6"
@@ -80,9 +75,9 @@ const Navbar = () => {
             </button>
           </div>
           
-          {/* Mobile menu links */}
+         
           <div className="px-4 pt-4 pb-8 space-y-5">
-            {/* Search box at top - no borders */}
+         
             <div className="relative mb-2">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -96,17 +91,14 @@ const Navbar = () => {
               />
             </div>
             
-            {/* Navigation links - adjust font weight and size */}
             <a href="#" className="block py-2 font-montserrat text-[#000000] text-[14px] uppercase font-semibold">News</a>
             <a href="#" className="block py-2 font-montserrat text-[#000000] text-[14px] uppercase font-semibold">About Us</a>
             <a href="#" className="block py-2 font-montserrat text-[#000000] text-[14px] uppercase font-semibold">Events</a>
             <a href="#" className="block py-2 font-montserrat text-[#000000] text-[14px] uppercase font-semibold">Our Work</a>
             <a href="#" className="block py-2 font-montserrat text-[#000000] text-[14px] uppercase font-semibold">Contact</a>
-            
-            {/* Donate button - adjust font */}
+          
             <a href="#" className="block py-3 mt-4 text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold">Donate</a>
-            
-            {/* Language selector - with placeholder text */}
+
             <div className="pt-4">
               <LanguageSelector className="w-full" defaultText="Select a Language" />
             </div>
