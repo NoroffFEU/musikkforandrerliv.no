@@ -21,7 +21,8 @@ collections:
     folder: "public/admin/_posts" # Temporary path
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # Add necessary field properties here
+    fields:
+      - { label: "Title", name: "title", widget: "string" } # Placeholder field - add necessary fields
 
 
   # Add more collections as needed based on your content structure
