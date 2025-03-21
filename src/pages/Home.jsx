@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"; // You already get 'i18n' from t
 import "../i18n";
 import { Link } from "react-router-dom";
 import heart from "/assets/images/svgs/heart.svg";
+import VolunteerSection from "../components/homePage/volunteerSection";
 
 const SelectLanguageButton = () => {
   const { t, i18n } = useTranslation();
