@@ -5,14 +5,9 @@ import heart from "/assets/images/svgs/heart.svg";
 import SelectLanguageButton from "./components/lang/select-language-button";
 import "./index.css";
 import CalenderSection from "./components/homePage/calenderSection";
-
 // import { useTranslation } from "react-i18next"; // You already get 'i18n' from this hook
 import "./i18n";
-
-
 // import heart from "/assets/images/svgs/heart.svg";
-
-
 import TestTranslations from "./pages/TestTranslations";  
 
 const Home = () => {
