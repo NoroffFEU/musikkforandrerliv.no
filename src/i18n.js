@@ -1,7 +1,7 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import HttpApi from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpApi from 'i18next-http-backend';
+import { initReactI18next } from 'react-i18next';
 
 i18n
   .use(initReactI18next) // Initialize React-i18next
@@ -18,9 +18,9 @@ i18n
       loadPath: '/locales/{{lng}}.json', // Path to your translation files
     },
     resources: {
-      en: { translation: { greeting: "Hello!" } }, // Temporary translations
-      no: { translation: { greeting: "Hei!" } },
-      mg: { translation: { greeting: "Miarahaba!" } },
+      en: { translation: { greeting: 'Hello!' } }, // Temporary translations
+      no: { translation: { greeting: 'Hei!' } },
+      mg: { translation: { greeting: 'Miarahaba!' } },
     },
   });
 

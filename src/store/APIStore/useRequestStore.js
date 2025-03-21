@@ -1,5 +1,5 @@
 // src/stores/useRequestStore.js
-import { create } from "zustand";
+import { create } from 'zustand';
 
 /**
  * Manages global API request states.
@@ -16,11 +16,11 @@ import { create } from "zustand";
  */
 
 const useRequestStore = create((set) => ({
-    loading: false,
-    error: null,
-    setLoading: (isLoading) => set({ loading: isLoading }),
-    setError: (error) => set({ error }),
-    reset: () => set({ loading: false, error: null }),
+  loading: false,
+  error: null,
+  setLoading: (isLoading) => set({ loading: isLoading }),
+  setError: (error) => set({ error }),
+  reset: () => set({ loading: false, error: null }),
 }));
 
 export default useRequestStore;
