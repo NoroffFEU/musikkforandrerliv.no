@@ -5,20 +5,27 @@ import { useTranslation } from "react-i18next"; // You already get 'i18n' from t
 import "../i18n";
 import { Link } from "react-router-dom";
 import heart from "/assets/images/svgs/heart.svg";
+import HistorySection from "../components/homePage/historySection";
+import StaffSection from "../components/homePage/staffSection";
+import VolunteerSection from "../components/homePage/volunteerSection";
+import SupportSection from "../components/homePage/supportSection";
+import GallerySection from "../components/homePage/gallerySection";
+import CalenderSection from "../components/homePage/calenderSection";
 
-const lazyImport = (importFunction) =>
-  lazy(() =>
-    importFunction().then((module) => ({
-      default: module.default || module[Object.keys(module)[0]], // ✅ Handles both export types
-    }))
-  );
 
-const HistorySection = lazyImport(() => import("../components/homePage/historySection"));
-const StaffSection = lazyImport(() => import("../components/homePage/staffSection"));
-const VolunteerSection = lazyImport(() => import("../components/homePage/volunteerSection"));
-const SupportSection = lazyImport(() => import("../components/homePage/supportSection"));
-const GallerySection = lazyImport(() => import("../components/homePage/gallerySection"));
-const CalenderSection = lazyImport(() => import("../components/homePage/calenderSection"));
+// const lazyImport = (importFunction) =>
+//   lazy(() =>
+//     importFunction().then((module) => ({
+//       default: module.default || module[Object.keys(module)[0]], // ✅ Handles both export types
+//     }))
+//   );
+
+// const HistorySection = lazyImport(() => import("../components/homePage/historySection"));
+// const StaffSection = lazyImport(() => import("../components/homePage/staffSection"));
+// const VolunteerSection = lazyImport(() => import("../components/homePage/volunteerSection"));
+// const SupportSection = lazyImport(() => import("../components/homePage/supportSection"));
+// const GallerySection = lazyImport(() => import("../components/homePage/gallerySection"));
+// const CalenderSection = lazyImport(() => import("../components/homePage/calenderSection"));
 
 const SelectLanguageButton = () => {
   const { t, i18n } = useTranslation();
@@ -85,7 +92,14 @@ const Home = () => {
         </button>
       </div>
       <HeroSection />
-      <Suspense fallback={<div>Loading...</div>}>
+      <HistorySection />
+      <StaffSection />
+      <WorkSection />
+      <VolunteerSection />
+      <SupportSection />
+      <GallerySection />
+      <CalenderSection />
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <HistorySection />
     
       </Suspense>
@@ -104,7 +118,7 @@ const Home = () => {
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
         <CalenderSection />
-      </Suspense>
+      </Suspense> */}
      
 
       {/* <section id="HistorySection"></section>
