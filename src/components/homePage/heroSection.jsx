@@ -1,4 +1,4 @@
-import heroContent from "../../data/landing-page-content.json";
+import heroContent from '../../data/landing-page-content.json';
 
 export function HeroSection() {
   const { title, subtitle } = heroContent.hero;
