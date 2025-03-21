@@ -15,7 +15,7 @@ This project aim to build a web application:
 
 ## Design
 
-- [Figma Design](Deshttps://www.figma.com/design/p3IKXs5ICTeFKQQ5hZ4ZAG/Design-File---MMF?node-id=0-1&p=f&t=OTHKwV3Alm2JN8Zz-0)
+- [Figma Design](https://www.figma.com/design/p3IKXs5ICTeFKQQ5hZ4ZAG/Design-File---MMF?node-id=0-1&p=f&t=OTHKwV3Alm2JN8Zz-0)
 
 ## Docs
 
