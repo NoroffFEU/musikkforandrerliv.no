@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"; // You already get 'i18n' from t
 import "../i18n";
 import { Link } from "react-router-dom";
 import heart from "/assets/images/svgs/heart.svg";
+import StaffSection from "../components/homePage/staffSection"; // ✅ Import StaffSection
 
 const SelectLanguageButton = () => {
   const { t, i18n } = useTranslation();
@@ -61,9 +62,13 @@ const Home = () => {
           {t("norwegian")}
         </button>
       </div>
+
       <HeroSection />
       <section id="HistorySection"></section>
-      <section id="StaffSection"></section>
+
+      {/* ✅ Use the StaffSection Component instead of an empty section */}
+      <StaffSection />
+
       <section id="WorkSection"></section>
       <section id="VolunteerSection"></section>
       <section id="SupportSection"></section>
