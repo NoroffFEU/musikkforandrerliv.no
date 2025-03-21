@@ -6,12 +6,19 @@ import "../i18n";
 import { Link } from "react-router-dom";
 import heart from "/assets/images/svgs/heart.svg";
 
-const HistorySection = lazy(() => import("../components/homePage/historySection"));
-const StaffSection = lazy(() => import("../components/homePage/staffSection"));
-const VolunteerSection = lazy(() => import("../components/homePage/volunteerSection"));
-const SupportSection = lazy(() => import("../components/homePage/supportSection"));
-const GallerySection = lazy(() => import("../components/homePage/gallerySection"));
-const CalenderSection = lazy(() => import("../components/homePage/calenderSection"));
+const lazyImport = (importFunction) =>
+  lazy(() =>
+    importFunction().then((module) => ({
+      default: module.default || module[Object.keys(module)[0]], // ✅ Handles both export types
+    }))
+  );
+
+const HistorySection = lazyImport(() => import("../components/homePage/historySection"));
+const StaffSection = lazyImport(() => import("../components/homePage/staffSection"));
+const VolunteerSection = lazyImport(() => import("../components/homePage/volunteerSection"));
+const SupportSection = lazyImport(() => import("../components/homePage/supportSection"));
+const GallerySection = lazyImport(() => import("../components/homePage/gallerySection"));
+const CalenderSection = lazyImport(() => import("../components/homePage/calenderSection"));
 
 const SelectLanguageButton = () => {
   const { t, i18n } = useTranslation();
@@ -26,9 +33,9 @@ const SelectLanguageButton = () => {
         className="px-4 py-2 bg-green-500 text-white rounded"
         onClick={() => i18n.changeLanguage("no")}>
         {t("norwegian")}
-        onClick={() => i18n.changeLanguage('en')}
+        {/* onClick={() => i18n.changeLanguage('en')}
       
-        {t('english')}
+        {t('english')} */}
       </button>
       <button
         className="px-4 py-2 bg-green-500 text-white rounded"
@@ -100,13 +107,13 @@ const Home = () => {
       </Suspense>
      
 
-      <section id="HistorySection"></section>
+      {/* <section id="HistorySection"></section>
       <section id="StaffSection"></section>
       <section id="WorkSection"></section>
       <section id="VolunteerSection"></section>
       <section id="SupportSection"></section>
       <section id="GallerySection"></section>
-      <section id="CalenderSection"></section>
+      <section id="CalenderSection"></section> */}
     </div>
   );
 };
