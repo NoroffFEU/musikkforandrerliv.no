@@ -11,13 +11,19 @@ const StaffSection = () => {
   return (
     <section className="py-16 bg-white flex justify-center" aria-labelledby="staff-heading">
       <div className="w-full max-w-[960px] mx-auto">
-        {/* Header */}
-        <h2 className="text-center text-gray-900 font-handwritten text-[50px] sm:text-[110px]">
+        {/* Header - Now Matches Figma */}
+        <h2
+          id="staff-heading"
+          className="text-center text-gray-900 
+            font-['Just_Another_Hand'] font-normal 
+            text-[50px] sm:text-[110px] leading-[100%] 
+            tracking-wide mt-8"
+        >
           Our staff
         </h2>
 
-        {/* Staff List */}
-        <div className="flex flex-col gap-10 sm:gap-12">
+        {/* Staff List with Proper Margins */}
+        <div className="flex flex-col gap-10 sm:gap-12 lg:gap-16 px-4 sm:px-0">
           {staff.map((member) => (
             <article
               key={member.id}
