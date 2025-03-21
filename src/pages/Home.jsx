@@ -1,13 +1,17 @@
 import React, {lazy, Suspense} from "react";
 import { HeroSection } from "../components/homePage/heroSection";
 import WorkSection from "../components/homePage/workSection";
-
-import  VolunteerSection  from "../components/homePage/volunteerSection";
-
 import { useTranslation } from "react-i18next"; // You already get 'i18n' from this hook
 import "../i18n";
 import { Link } from "react-router-dom";
 import heart from "/assets/images/svgs/heart.svg";
+
+const HistorySection = lazy(() => import("../components/homePage/historySection"));
+const StaffSection = lazy(() => import("../components/homePage/staffSection"));
+const VolunteerSection = lazy(() => import("../components/homePage/volunteerSection"));
+const SupportSection = lazy(() => import("../components/homePage/supportSection"));
+const GallerySection = lazy(() => import("../components/homePage/gallerySection"));
+const CalenderSection = lazy(() => import("../components/homePage/calenderSection"));
 
 const SelectLanguageButton = () => {
   const { t, i18n } = useTranslation();
@@ -62,9 +66,17 @@ const Home = () => {
         </button>
       </div>
       <HeroSection />
-     
+      <Suspense fallback={<div>Loading...</div>}>
+        <HistorySection />
+        <StaffSection />
+      </Suspense>
       <WorkSection />
-      <VolunteerSection />
+      <Suspense fallback={<div>Loading...</div>}>
+        <VolunteerSection />
+        <SupportSection />
+        <GallerySection />
+        <CalenderSection />
+      </Suspense>
      
 
       <section id="HistorySection"></section>
