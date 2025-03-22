@@ -1,11 +1,34 @@
-import { Link } from 'react-router-dom';
+import React, {lazy, Suspense} from "react";
+import  {HeroSection}  from "../components/homePage/heroSection";
+import WorkSection from "../components/homePage/workSection";
+import { useTranslation } from "react-i18next"; // You already get 'i18n' from this hook
+import "../i18n";
+import { Link } from "react-router-dom";
+import heart from "/assets/images/svgs/heart.svg";
 
-import { useTranslation } from 'react-i18next';
 
-import { HeroSection } from '../components/homePage/heroSection';
-// You already get 'i18n' from this hook
-import '../i18n';
-import heart from '/assets/images/svgs/heart.svg';
+// Safe lazy loader for components
+const safeLazy = (importFunc) =>
+  lazy(() =>
+    importFunc()
+      .then((mod) => {
+        const comp = mod.default || mod[Object.keys(mod)[0]];
+        if (!comp) throw new Error("Missing export in component");
+        return { default: comp };
+      })
+      .catch((err) => {
+        console.warn("Component not ready yet:", err);
+        // Load an empty fallback component
+        return { default: () => null };
+      })
+  );
+  const HistorySection = safeLazy(() => import("../components/homePage/historySection"));
+  const StaffSection = safeLazy(() => import("../components/homePage/staffSection"));
+  const VolunteerSection = safeLazy(() => import("../components/homePage/volunteerSection"));
+  const SupportSection = safeLazy(() => import("../components/homePage/supportSection"));
+  const GallerySection = safeLazy(() => import("../components/homePage/gallerySection"));
+  const CalenderSection = safeLazy(() => import("../components/homePage/calenderSection"));
+
 
 const SelectLanguageButton = () => {
   const { t, i18n } = useTranslation();
@@ -13,9 +36,16 @@ const SelectLanguageButton = () => {
     <div className="flex space-x-4">
       <button
         className="px-4 py-2 bg-blue-500 text-white rounded"
-        onClick={() => i18n.changeLanguage('en')}
-      >
-        {t('english')}
+        onClick={() => i18n.changeLanguage("en")}>
+        {t("english")}
+      </button>
+      <button
+        className="px-4 py-2 bg-green-500 text-white rounded"
+        onClick={() => i18n.changeLanguage("no")}>
+        {t("norwegian")}
+        {/* onClick={() => i18n.changeLanguage('en')}
+      
+        {t('english')} */}
       </button>
       <button
         className="px-4 py-2 bg-green-500 text-white rounded"
@@ -65,13 +95,22 @@ const Home = () => {
         </button>
       </div>
       <HeroSection />
-      <section id="HistorySection"></section>
-      <section id="StaffSection"></section>
-      <section id="WorkSection"></section>
-      <section id="VolunteerSection"></section>
-      <section id="SupportSection"></section>
-      <section id="GallerySection"></section>
-      <section id="CalenderSection"></section>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <HistorySection />
+        <StaffSection />
+      </Suspense>
+
+      <WorkSection />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <VolunteerSection />
+        <SupportSection />
+        <GallerySection />
+        <CalenderSection />
+      </Suspense>
+
+ 
     </div>
   );
 };
