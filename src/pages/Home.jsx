@@ -13,20 +13,6 @@ import GallerySection from "../components/homePage/gallerySection";
 import CalenderSection from "../components/homePage/calenderSection";
 
 
-// const lazyImport = (importFunction) =>
-//   lazy(() =>
-//     importFunction().then((module) => ({
-//       default: module.default || module[Object.keys(module)[0]], // ✅ Handles both export types
-//     }))
-//   );
-
-// const HistorySection = lazyImport(() => import("../components/homePage/historySection"));
-// const StaffSection = lazyImport(() => import("../components/homePage/staffSection"));
-// const VolunteerSection = lazyImport(() => import("../components/homePage/volunteerSection"));
-// const SupportSection = lazyImport(() => import("../components/homePage/supportSection"));
-// const GallerySection = lazyImport(() => import("../components/homePage/gallerySection"));
-// const CalenderSection = lazyImport(() => import("../components/homePage/calenderSection"));
-
 const SelectLanguageButton = () => {
   const { t, i18n } = useTranslation();
   return (
@@ -99,35 +85,7 @@ const Home = () => {
       <SupportSection />
       <GallerySection />
       <CalenderSection />
-      {/* <Suspense fallback={<div>Loading...</div>}>
-        <HistorySection />
-    
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
-        <StaffSection />
-      </Suspense>
-      <WorkSection />
-      <Suspense fallback={<div>Loading...</div>}>
-        <VolunteerSection />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
-        <SupportSection />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
-        <GallerySection />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
-        <CalenderSection />
-      </Suspense> */}
-     
-
-      {/* <section id="HistorySection"></section>
-      <section id="StaffSection"></section>
-      <section id="WorkSection"></section>
-      <section id="VolunteerSection"></section>
-      <section id="SupportSection"></section>
-      <section id="GallerySection"></section>
-      <section id="CalenderSection"></section> */}
+ 
     </div>
   );
 };
