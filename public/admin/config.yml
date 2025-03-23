@@ -16,6 +16,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
+          
+      - file: "src/data/our-work.json"
+        name: "our-work"
+        label: "Our Work Page"
+        fields:
+          - { label: "Title", name: "title", widget: "string" } # Placeholder field - add necessary fields
+
   - label: "Blog"
     name: "blog"
     folder: "public/admin/_posts" # Temporary path
