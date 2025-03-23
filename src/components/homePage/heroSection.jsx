@@ -1,6 +1,7 @@
+import React from 'react';
 import heroContent from '../../data/landing-page-content.json';
 
-export function HeroSection() {
+const HeroSection = () => {
   const { title, subtitle } = heroContent.hero;
 
   return (
@@ -13,4 +14,6 @@ export function HeroSection() {
       </h2>
     </section>
   );
-}
+};
+
+export default React.memo(HeroSection);

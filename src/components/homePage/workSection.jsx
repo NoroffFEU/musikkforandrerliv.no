@@ -1,11 +1,10 @@
 import React from 'react';
-
 import { IoIosArrowForward } from 'react-icons/io';
-
 import data from '../../data/landing-page-content.json';
 
-export default function WorkSection() {
+const WorkSection = () => {
   const { image, title, content } = data.work;
+
   return (
     <section
       id="WorkSection"
@@ -39,4 +38,6 @@ export default function WorkSection() {
       </div>
     </section>
   );
-}
+};
+
+export default React.memo(WorkSection);

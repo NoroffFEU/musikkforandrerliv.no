@@ -7,8 +7,9 @@ import { HeroSection } from '../components/homePage/heroSection';
 import '../i18n';
 import heart from '/assets/images/svgs/heart.svg';
 
-const SelectLanguageButton = () => {
+const SelectLanguageButton = React.memo(() => {
   const { t, i18n } = useTranslation();
+
   return (
     <div className="flex space-x-4">
       <button
@@ -25,7 +26,8 @@ const SelectLanguageButton = () => {
       </button>
     </div>
   );
-};
+});
+
 
 const Home = () => {
   const { t, i18n } = useTranslation();
