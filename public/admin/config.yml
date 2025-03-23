@@ -16,13 +16,22 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
-  - label: "Blog"
-    name: "blog"
-    folder: "public/admin/_posts" # Temporary path
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" } # Placeholder field - add necessary fields
+          - { label: "Hero Image", name: "hero_image", widget: "image" } # A large, attention-grabbing image typically placed at the top of a webpage to represent the main theme or message.
+          - { label: "Call to Action Text", name: "cta_text", widget: "string" } # Short, persuasive text that motivates the user to take an action, such as "Sign Up" or "Learn More."
+          - { label: "Main Content", name: "main_content", widget: "markdown" }
 
+      - label: "Blog"
+        name: "blog"
+        folder: "public/admin/_posts" # Temporary path
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true } # Placeholder field - add necessary fields
+          - { label: "Publish date", name: "date", widget: "datetime", required: true}
+          - { label: "Author", name: "author", widget: "string", required: true }
+          - { label: "Featured Image", name: "featured_image", widget: "image" }
+          - { label: "Excerpt", name: "excerpt", widget: "text" }
+          - { label: "Content", name: "content", widget: "markdown", required: true }
+          - { label: "Tags", name: "tags", widget: "list", field: { widget: "string" } } # Keywords or categories assigned to content, helping to organize it and make it easier to search or filter by topic.
 
   # Add more collections as needed based on your content structure
