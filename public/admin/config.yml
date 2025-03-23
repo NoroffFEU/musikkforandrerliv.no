@@ -16,6 +16,14 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
+
+      - file: "src/data/about.json"
+        name: "about"
+        label: "About Us Page"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+          
   - label: "Blog"
     name: "blog"
     folder: "public/admin/_posts" # Temporary path
