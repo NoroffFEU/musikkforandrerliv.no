@@ -16,6 +16,7 @@ export default function WorkSection() {
           <img
             src={image}
             alt={title}
+            loading="lazy"
             className="w-full aspect-[3/3] h-auto md:h-full object-cover"
           />
         </div>

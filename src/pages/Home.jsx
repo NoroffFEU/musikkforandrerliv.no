@@ -35,7 +35,7 @@ const Home = () => {
       <div className="h-screen w-full flex flex-col justify-center items-center">
         <h1 className="text-2xl font-extrabold">
           {t('Welcome to MMF project')}{' '}
-          <img className="inline bg-red-600" src={heart} alt="" />
+          <img className="inline bg-red-600" src={heart} alt="" loading="lazy" />
         </h1>
         <button onClick={() => i18n.changeLanguage('no')}>NO</button>
         <div className="flex items-center justify-center h-96 px-4 w-full">
