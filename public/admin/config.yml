@@ -10,7 +10,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/data/home.json"
+      - file: "content/home"
         name: "home"
         label: "Home Page"
         fields:
@@ -18,7 +18,7 @@ collections:
           - { label: "Intro", name: "intro", widget: "markdown" }
   - label: "Blog"
     name: "blog"
-    folder: "public/admin/_posts" # Temporary path
+    folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
