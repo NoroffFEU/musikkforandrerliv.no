@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-
+import MainLayout from '../components/MainLayout.jsx';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LoadingSpinner from '../components/LoadingSpinner.jsx';
 import { useEffect, useState } from 'react';
@@ -29,11 +29,13 @@ const AppRoutes = () => {
           <LoadingSpinner /> 
         ) : ( 
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/test-translations" element={<TestTranslations />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<MainLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/test-translations" element={<TestTranslations />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
           </Routes>
         )}
       </ErrorBoundary>
