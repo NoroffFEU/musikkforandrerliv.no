@@ -1,235 +1,355 @@
-import React, { useState, useEffect } from 'react';
-import SelectLanguageButton from './lang/select-language-button';
-import * as Icon from './lang/language-icons';
-const Navbar = () => {
+import React, { useEffect, useRef, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import SelectLanguageButton from "./lang/select-language-button";
+
+function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(null);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const searchRef = useRef(null);
+  const dropdownRef = useRef(null);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
+  const toggleSearch = () => setIsSearchOpen((prev) => !prev);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/search?q=${searchTerm}`);
+      setIsSearchOpen(false);
+      setSearchTerm("");
+      setIsMenuOpen(false);
+    }
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 430);
-    };
-    
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+
     handleResize();
-    window.addEventListener('resize', handleResize);
-    
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target) &&
+        !event.target.closest(".search-toggle")
+      ) {
+        setIsSearchOpen(false);
+      }
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        !event.target.closest(".dropdown-toggle")
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
 
-  const toggleLanguage = () => {
-    setIsLanguageOpen(!isLanguageOpen);
-  };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-  const selectLanguage = (lang) => {
-    setSelectedLanguage(lang);
-    setIsLanguageOpen(false);
-  };
+  const isHome = location.pathname === "/";
+  const navbarBgClass =
+    isHome && !isScrolled && !isMobile ? "bg-transparent" : "bg-white shadow";
 
-  const languages = [
-    { name: "Norwegian", code: "No" },
-    { name: "English", code: "En" },
-    { name: "Malagasy", code: "Mg" },
-  ];
+  const getDesktopLinkClasses = ({ isActive }) =>
+    `${
+      isActive
+        ? "text-[var(--color-alt-forest-green)]"
+        : "text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200"
+    } flex items-center font-montserrat text-[14px] font-semibold px-2`;
+
+  const getMobileLinkClasses = () =>
+    "block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] hover:bg-[var(--color-light-green)] hover:text-[#000000] transition-colors duration-200";
 
   return (
-    <nav className="bg-transparent font-montserrat">
-      <div className="max-w-screen-2xl mx-auto py-8 px-14">
-        <div className="flex justify-between items-center">
-          <div className="flex-shrink-0">
-            <img 
-              src="/assets/placeholder-images/logo.png" 
-              alt="Logo" 
-              className="h-36 w-36 rounded-full" 
-              style={{ width: '144px', height: '144px', borderRadius: '160px' }}
+    <>
+      <nav
+        className={`${navbarBgClass} transition-colors duration-300 fixed top-0 left-0 w-full z-50`}
+      >
+        <div className="max-w-[1440px] mx-auto px-[54px] py-[32px] flex flex-wrap items-center gap-[10px] h-[199px]">
+          <div
+            className="flex-shrink-0 cursor-pointer"
+            onClick={() => navigate("/")}
+          >
+            <img
+              src="/assets/placeholder-images/logo.png"
+              alt="Logo"
+              className="h-[64px] w-auto"
             />
           </div>
 
-        
-          <div className="hidden md:flex items-center gap-10">
-            <a href="#" className="flex items-center text-[#363732] hover:text-[var(--color-alt-forest-green)] text-2xl font-medium">
-              <svg className="mr-1 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              Search
-            </a>
-            <a href="#" className="text-[#363732] hover:text-[var(--color-alt-forest-green)] text-2xl font-medium">News</a>
-            <a href="#" className="text-[#363732] hover:text-[var(--color-alt-forest-green)] text-2xl font-medium">About Us</a>
-            <div className="relative">
-              <button className="text-[#363732] hover:text-[var(--color-alt-forest-green)] inline-flex items-center text-2xl font-medium">
+          <div className="hidden md:flex items-center space-x-6 ml-auto">
+            <div className="relative" ref={searchRef}>
+              <button
+                onClick={toggleSearch}
+                className="search-toggle flex items-center text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200 font-montserrat text-[14px] font-semibold px-2"
+              >
+                <svg
+                  className="mr-1 h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                Search
+              </button>
+              {isSearchOpen && (
+                <div className="absolute mt-2 right-0 z-20 bg-white border border-[var(--color-sunset-red)] rounded-md shadow-lg p-2 w-72 transition-all duration-200">
+                  <form onSubmit={handleSearch} className="flex items-center">
+                    <div className="relative w-full">
+                      <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
+                        <svg
+                          className="w-4 h-4 text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                          />
+                        </svg>
+                      </div>
+                      <input
+                        type="text"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        placeholder="Search..."
+                        className="w-full pl-8 pr-3 py-1 text-sm border border-gray-300 rounded-l-md font-montserrat outline-none"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="bg-[var(--color-sunset-red)] text-white px-4 py-1 rounded-r-md font-montserrat text-sm uppercase hover:bg-[var(--color-hover-red)]"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </div>
+              )}
+            </div>
+
+            <NavLink to="/news" className={getDesktopLinkClasses}>
+              News
+            </NavLink>
+            <NavLink to="/about" className={getDesktopLinkClasses}>
+              About Us
+            </NavLink>
+
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={toggleDropdown}
+                className="dropdown-toggle inline-flex items-center text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200 font-montserrat text-[14px] font-semibold px-2"
+              >
                 More
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg
+                  className="ml-1 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
+
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
+                  <NavLink
+                    to="/events"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
+                  >
+                    Events
+                  </NavLink>
+                  <NavLink
+                    to="/work"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
+                  >
+                    Our Work
+                  </NavLink>
+                  <NavLink
+                    to="/contact"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
+                  >
+                    Contact
+                  </NavLink>
+                </div>
+              )}
             </div>
-            
-        
-            <a 
-              href="#" 
-              className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white rounded-md uppercase font-medium"
-              style={{ 
-                width: '172px', 
-                height: '49px', 
-                borderRadius: '9px',
-                paddingTop: '16px',
-                paddingRight: '32px',
-                paddingBottom: '16px',
-                paddingLeft: '32px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
+
+            <NavLink
+              to="/donate"
+              className="ml-2 px-4 py-2 rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
             >
               Donate
-            </a>
-            
-        
-            <SelectLanguageButton />
+            </NavLink>
+
+            <SelectLanguageButton variant="iconOnly" className="ml-2" />
           </div>
 
-      
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 text-[#000000] hover:bg-[#B2CAC2] rounded-md"
+            className="md:hidden p-2 text-[#000000] ml-auto"
             aria-expanded={isMenuOpen}
-            style={{ borderRadius: '9px' }} 
           >
             <svg
               className="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
-      </div>
-
+      </nav>
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 md:hidden overflow-y-auto">
-          <div className="flex justify-between items-center p-3">
-            <div>
-              <img 
-                src="/assets/placeholder-images/logo.png" 
-                alt="Logo" 
-                style={{ 
-                  width: '84px', 
-                  height: '84px', 
-                  borderRadius: '160px',
-                  position: 'relative',
-                  top: '22px',
-                  left: '22px'
-                }} 
-              />
-            </div>
-            <button onClick={toggleMenu} className="text-[#000000]">
-              <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        <div className="fixed top-[199px] left-0 w-full bg-white z-40 md:hidden overflow-y-auto shadow-md">
+          <div className="px-4 pt-4 pb-8 space-y-5">
+            <div className="space-y-2">
+              <button
+                onClick={toggleSearch}
+                className="flex items-center text-[#000000] hover:text-[var(--color-alt-forest-green)] font-montserrat text-[14px] font-semibold"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          
-          <div className="px-4 pt-2 pb-8 space-y-4">
-          
-            <div className="relative mb-2">
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <svg
+                  className="mr-1 h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
                 </svg>
-              </div>
-              <input 
-                type="search" 
-                className="block w-full py-2 pl-10 pr-3 text-sm text-[#363732] border-0 rounded-md bg-transparent outline-none font-montserrat" 
-                placeholder="SEARCH" 
-              />
+                Search
+              </button>
+
+              {isSearchOpen && (
+                <form
+                  onSubmit={handleSearch}
+                  className="flex items-center border border-[var(--color-sunset-red)] rounded-md px-2 py-1"
+                >
+                  <div className="relative w-full">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
+                      <svg
+                        className="w-4 h-4 text-gray-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      placeholder="Search..."
+                      className="w-full pl-8 pr-3 py-1 text-sm border-none outline-none font-montserrat"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="ml-2 bg-[var(--color-sunset-red)] text-white px-3 py-1 rounded-md font-montserrat text-sm uppercase hover:bg-[var(--color-hover-red)]"
+                  >
+                    Search
+                  </button>
+                </form>
+              )}
             </div>
-            
-         
-            <a href="#" className="block py-2 font-montserrat text-[#363732] text-[16px] uppercase font-medium">News</a>
-            <a href="#" className="block py-2 font-montserrat text-[#363732] text-[16px] uppercase font-medium">About Us</a>
-            <a href="#" className="block py-2 font-montserrat text-[#363732] text-[16px] uppercase font-medium">Events</a>
-            <a href="#" className="block py-2 font-montserrat text-[#363732] text-[16px] uppercase font-medium">Our Work</a>
-            <a href="#" className="block py-2 font-montserrat text-[#363732] text-[16px] uppercase font-medium">Contact</a>
-          
-       
-            <a 
-              href="#" 
-              className="block text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[16px] uppercase font-medium"
-              style={{ 
-                borderRadius: '9px',
-                paddingTop: '16px',
-                paddingRight: '32px',
-                paddingBottom: '16px',
-                paddingLeft: '32px',
-                margin: '16px 0'
-              }}
+
+            <NavLink
+              to="/news"
+              className={getMobileLinkClasses}
+              onClick={toggleMenu}
+            >
+              News
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={getMobileLinkClasses}
+              onClick={toggleMenu}
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/events"
+              className={getMobileLinkClasses}
+              onClick={toggleMenu}
+            >
+              Events
+            </NavLink>
+            <NavLink
+              to="/work"
+              className={getMobileLinkClasses}
+              onClick={toggleMenu}
+            >
+              Our Work
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={getMobileLinkClasses}
+              onClick={toggleMenu}
+            >
+              Contact
+            </NavLink>
+
+            <NavLink
+              to="/donate"
+              className="block py-3 mt-4 text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
+              onClick={toggleMenu}
             >
               Donate
-            </a>
+            </NavLink>
 
-        
-            <div className="pt-4">
-              <div className="relative w-1/2 ml-4">
-                <button
-                  onClick={toggleLanguage}
-                  className="flex items-center justify-between w-full text-[#363732] py-2 focus:outline-none"
-                >
-                  {selectedLanguage ? (
-                    <>
-                      <span className="inline-block mr-2">
-                        {React.createElement(Icon[selectedLanguage.code])}
-                      </span>
-                      <span>{selectedLanguage.name}</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Select a Language</span>
-                      <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d={isLanguageOpen ? "M7 15l5-5 5 5" : "M7 9l5 5 5-5"} stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </>
-                  )}
-                </button>
-                
-                {isLanguageOpen && (
-                  <div className="absolute left-0 mt-1 bg-transparent z-50 py-1 w-full">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        className="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-100"
-                        onClick={() => selectLanguage(lang)}
-                      >
-                        <span>{lang.name}</span>
-                        <span className="inline-block ml-6">
-                          {React.createElement(Icon[lang.code])}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
+            <SelectLanguageButton variant="withText" className="mt-2 w-full" />
           </div>
         </div>
       )}
-    </nav>
+    </>
   );
-};
+}
 
 export default Navbar;
