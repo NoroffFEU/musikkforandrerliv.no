@@ -5,6 +5,7 @@ import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import TestTranslations from '../pages/TestTranslations';
+import Admin from "../pages/Admin";
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test-translations" element={<TestTranslations />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
