@@ -24,7 +24,7 @@ collections:
 
 
 
-      - file: "src/data/contact.json"
+      - file: "content/contact"
         name: "contact"
         label: "Contact Page"
         fields:
