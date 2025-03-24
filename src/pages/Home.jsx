@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { HeroSection } from '../components/homePage/heroSection';
 import '../i18n';
 import heart from '/assets/images/svgs/heart.svg';
+import VolunteerSection from '../components/homePage/volunteerSection';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 
 const SelectLanguageButton = () => {
@@ -64,7 +65,7 @@ const Home = () => {
         <section id="HistorySection"></section>
         <section id="StaffSection"></section>
         <section id="WorkSection"></section>
-        <section id="VolunteerSection"></section>
+        <VolunteerSection />
         <section id="SupportSection"></section>
         <section id="GallerySection"></section>
         <section id="CalenderSection"></section>
