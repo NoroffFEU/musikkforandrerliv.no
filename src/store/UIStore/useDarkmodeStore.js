@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 /**
  * Zustand store for managing dark mode state.
@@ -14,8 +14,8 @@ import { create } from "zustand";
  */
 
 const useDarkModeStore = create((set) => {
-  const savedTheme = localStorage.getItem("darkMode") === "true";
-  if (savedTheme) document.documentElement.classList.add("dark");
+  const savedTheme = localStorage.getItem('darkMode') === 'true';
+  if (savedTheme) document.documentElement.classList.add('dark');
 
   return {
     isDarkMode: savedTheme,
@@ -23,22 +23,22 @@ const useDarkModeStore = create((set) => {
     toggleDarkMode: () =>
       set((state) => {
         const newMode = !state.isDarkMode;
-        localStorage.setItem("darkMode", newMode);
-        document.documentElement.classList.toggle("dark", newMode);
+        localStorage.setItem('darkMode', newMode);
+        document.documentElement.classList.toggle('dark', newMode);
         return { isDarkMode: newMode };
       }),
 
     enableDarkMode: () =>
       set(() => {
-        localStorage.setItem("darkMode", true);
-        document.documentElement.classList.add("dark");
+        localStorage.setItem('darkMode', true);
+        document.documentElement.classList.add('dark');
         return { isDarkMode: true };
       }),
 
     disableDarkMode: () =>
       set(() => {
-        localStorage.setItem("darkMode", false);
-        document.documentElement.classList.remove("dark");
+        localStorage.setItem('darkMode', false);
+        document.documentElement.classList.remove('dark');
         return { isDarkMode: false };
       }),
   };
