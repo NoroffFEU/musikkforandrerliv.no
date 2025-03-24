@@ -17,7 +17,7 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
 
-      - file: "src/data/about.json"
+      - file: "content/about"
         name: "about"
         label: "About Us Page"
         fields:
