@@ -19,7 +19,56 @@ collections:
       - file: 'src/data/news-and-events.json'
         name: 'news-and-events'
         label: 'News and Events'
-        fields: {}
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+              label: 'Publish date',
+              name: 'date',
+              widget: 'datetime',
+              required: true,
+            }
+          - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
+          - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+          - {
+              label: 'Content',
+              name: 'content',
+              widget: 'markdown',
+              required: true,
+            }
+          - label: 'Event Details'
+            name: 'event_details'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Location',
+                  name: 'location',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Start Time',
+                  name: 'start_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'End Time',
+                  name: 'end_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'Organizer',
+                  name: 'organizer',
+                  widget: 'string',
+                  required: false,
+                }
+          - label: 'Categories'
+            name: 'categories'
+            widget: 'list'
+            summary: '{{fields.category}}'
+            field: { label: 'Category', name: 'category', widget: 'string' }
+
   - label: 'Blog'
     name: 'blog'
     folder: 'public/admin/_posts' # Temporary path
