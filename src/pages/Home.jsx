@@ -7,8 +7,9 @@ import { HeroSection } from '../components/homePage/heroSection';
 import '../i18n';
 import heart from '/assets/images/svgs/heart.svg';
 
-const SelectLanguageButton = () => {
+const SelectLanguageButton = React.memo(() => {
   const { t, i18n } = useTranslation();
+
   return (
     <div className="flex space-x-4">
       <button
@@ -25,7 +26,8 @@ const SelectLanguageButton = () => {
       </button>
     </div>
   );
-};
+});
+
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -35,7 +37,7 @@ const Home = () => {
       <div className="h-screen w-full flex flex-col justify-center items-center">
         <h1 className="text-2xl font-extrabold">
           {t('Welcome to MMF project')}{' '}
-          <img className="inline bg-red-600" src={heart} alt="" />
+          <img className="inline bg-red-600" src={heart} alt="" loading="lazy" />
         </h1>
         <button onClick={() => i18n.changeLanguage('no')}>NO</button>
         <div className="flex items-center justify-center h-96 px-4 w-full">
