@@ -27,8 +27,18 @@ collections:
               widget: 'datetime',
               required: true,
             }
-          - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
-          - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+          - {
+              label: 'Featured Image',
+              name: 'featured_image',
+              widget: 'image',
+              required: false,
+            }
+          - {
+              label: 'Excerpt',
+              name: 'excerpt',
+              widget: 'text',
+              required: false,
+            }
           - {
               label: 'Content',
               name: 'content',
