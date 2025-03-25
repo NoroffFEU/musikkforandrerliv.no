@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
+
 import { useTranslation } from 'react-i18next';
 
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
+import { GallerySection } from '../components/homePage/gallerySection';
 import { HeroSection } from '../components/homePage/heroSection';
-import VolunteerSection from '../components/homePage/volunteerSection';
+import { HistorySection } from '../components/homePage/historySection';
 import SupportSection from '../components/homePage/supportSection';
+import VolunteerSection from '../components/homePage/volunteerSection';
 import '../i18n';
 import heart from '/assets/images/svgs/heart.svg';
 
@@ -30,12 +33,14 @@ const Home = () => {
         </div>
 
         <HeroSection />
-        <section id="HistorySection"></section>
+        <HistorySection />
         <section id="StaffSection"></section>
         <section id="WorkSection"></section>
         <VolunteerSection />
-        <section id="SupportSection"><SupportSection /></section>
-        <section id="GallerySection"></section>
+        <section id="SupportSection">
+          <SupportSection />
+        </section>
+        <GallerySection />
         <section id="CalenderSection"></section>
       </div>
     </ErrorBoundary>
