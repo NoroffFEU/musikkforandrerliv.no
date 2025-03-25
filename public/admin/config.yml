@@ -91,7 +91,6 @@ collections:
         label: "Support Us"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blog'  
