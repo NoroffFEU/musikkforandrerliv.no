@@ -10,7 +10,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/home"
+      - file: "content/home/home.md"
         name: "home"
         label: "Home Page"
         fields:
