@@ -51,9 +51,13 @@
     "header": {
       "_comment": "Section Header: This comment will be deleted later",
       "search": "Search",
+      "searchPlaceholder": "Search...",
       "news": "News",
       "aboutUs": "About Us",
       "more": "More",
+      "events": "Events",
+      "ourWork": "Our Work",
+      "contact": "Contact",
       "donate": "Donate"
     },
 
