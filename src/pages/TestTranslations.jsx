@@ -3,13 +3,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
+import useLanguageSwitcher from '../hooks/useLanguageSwitcher.jsx';
 
 const TestTranslations = () => {
-  const { t, i18n } = useTranslation();
-
-  const handleLanguageChange = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
+  const { handleLanguageChange } = useLanguageSwitcher();
 
   return (
     <ErrorBoundary>
