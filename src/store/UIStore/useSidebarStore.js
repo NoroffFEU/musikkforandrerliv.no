@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 /**
  * A Zustand store for managing the sidebar's open/closed state.
