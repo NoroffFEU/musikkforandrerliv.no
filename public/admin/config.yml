@@ -16,7 +16,7 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Intro', name: 'intro', widget: 'markdown' }
-      - file: 'content/news'
+      - file: 'content/news/news.md'
         name: 'news-and-events'
         label: 'News and Events'
         fields:
