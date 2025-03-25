@@ -8,6 +8,7 @@ import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import TestTranslations from '../pages/TestTranslations';
+import OurWork from '../pages/OurWork';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -33,6 +34,7 @@ const AppRoutes = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/ourwork" element={<OurWork />} />
               <Route path="/test-translations" element={<TestTranslations />} />
               <Route path="*" element={<NotFound />} />
             </Route>
