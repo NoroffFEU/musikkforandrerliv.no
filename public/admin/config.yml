@@ -78,6 +78,12 @@ collections:
             widget: 'list'
             summary: '{{fields.category}}'
             field: { label: 'Category', name: 'category', widget: 'string' }
+        
+      - file: "content/support/support.md"
+        name: "support"
+        label: "Support Us"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
 
   - label: 'Blog'
     name: 'blog'
