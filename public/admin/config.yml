@@ -14,11 +14,11 @@ collections:
         name: 'home'
         label: 'Home Page'
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "markdown" }
-          - { label: "Hero Image", name: "hero_image", widget: "image" } # A large, attention-grabbing image typically placed at the top of a webpage to represent the main theme or message.
-          - { label: "Call to Action Text", name: "cta_text", widget: "string" } # Short, persuasive text that motivates the user to take an action, such as "Sign Up" or "Learn More."
-          - { label: "Main Content", name: "main_content", widget: "markdown" }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+          - { label: 'Hero Image', name: 'hero_image', widget: 'image' }
+          - { label: 'Call to Action Text', name: 'cta_text', widget: 'string' }
+          - { label: 'Main Content', name: 'main_content', widget: 'markdown' }
 
       - file: 'content/about/about.md'
         name: 'about'
@@ -114,13 +114,26 @@ collections:
     folder: 'content/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-        fields:
-          - { label: "Title", name: "title", widget: "string", required: true }
-          - { label: "Publish date", name: "date", widget: "datetime", required: true}
-          - { label: "Author", name: "author", widget: "string", required: true }
-          - { label: "Featured Image", name: "featured_image", widget: "image" }
-          - { label: "Excerpt", name: "excerpt", widget: "text" }
-          - { label: "Content", name: "content", widget: "markdown", required: true }
-          - { label: "Tags", name: "tags", widget: "list", field: { widget: "string" } }
-
-
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - {
+          label: 'Publish date',
+          name: 'date',
+          widget: 'datetime',
+          required: true,
+        }
+      - { label: 'Author', name: 'author', widget: 'string', required: true }
+      - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          required: true,
+        }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'list',
+          field: { widget: 'string' },
+        }
