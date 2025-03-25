@@ -5,7 +5,8 @@ import LoadingSpinner from '../components/LoadingSpinner.jsx';
 import { useEffect, useState } from 'react';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
-import Home from '../pages/Home';
+import Home from '../pages/Home'; 
+import News from '../pages/News';
 import NotFound from '../pages/NotFound';
 import TestTranslations from '../pages/TestTranslations';
 
@@ -33,6 +34,7 @@ const AppRoutes = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/news" element={<News />} />
               <Route path="/test-translations" element={<TestTranslations />} />
               <Route path="*" element={<NotFound />} />
             </Route>
