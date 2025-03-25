@@ -1,0 +1,670 @@
+{
+  "common": {
+    "_comment": "Buttons section - comment will be deleted later",
+    "buttons": {
+      "readMore": "Les mer",
+      "signUp": "Registrer deg",
+      "donate": "Doner",
+      "send": "Send",
+      "submit": "Send inn",
+      "support": "Støtte"
+    },
+
+    "card": {
+      "supportUs": {
+        "title": "Støtt oss",
+        "description": "Inntektene brukes til å dekke alt fra mat, klær, utdanning, utstyr, helse, medisiner og tannpleie for barna, samt til driften av musikkskolen og lønningene til våre ansatte.\nMatprogrammet inkluderer også barnas familier, som får månedlige rasjoner med mat og hygieneprodukter.\nVi jobber kontinuerlig for å forbedre barnas levekår, og det meste av den gjenværende støtten brukes til boligforbedringer."
+      }
+    },
+
+    "months": [
+      "Januar",
+      "Februar",
+      "Mars",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Desember"
+    ],
+
+    "days": [
+      "Søndag",
+      "Mandag",
+      "Tirsdag",
+      "Onsdag",
+      "Torsdag",
+      "Fredag",
+      "Lørdag"
+    ],
+
+    "newsletter": {
+      "_comment": "Newsletter section - comment will be deleted later",
+      "title": "Meld deg på vårt nyhetsbrev!",
+      "description": "Abonner på vårt nyhetsbrev i dag for å motta de siste oppdateringene om våre arrangementer og prosjekter!"
+    },
+
+    "header": {
+      "_comment": "Section Header: This comment will be deleted later",
+      "search": "Søk",
+      "news": "Nyheter",
+      "aboutUs": "Om oss",
+      "more": "Mer",
+      "donate": "Doner"
+    },
+
+    "footer": {
+      "_comment": "Section Footer: This comment will be deleted later",
+      "aboutUs": "Om oss",
+      "news": "Nyheter",
+      "events": "Arrangementer",
+      "gallery": "Galleri",
+      "ourWork": "Vårt arbeid",
+      "contactUs": "Kontakt oss",
+      "followUs": "Følg oss",
+      "privacyPolicy": "Personvernerklæring",
+      "termsAndConditions": "Vilkår og betingelser"
+    }
+  },
+
+  "screens": {
+    "404": {
+      "title": "404",
+      "description": "Side ikke funnet"
+    },
+    "ourTermsAndConditions": {
+      "title": "Våre vilkår og betingelser",
+      "description": "",
+      "accordion": [
+        {
+          "title": "Aksept av vilkår",
+          "content": ""
+        },
+        {
+          "title": "Bruk av nettstedet",
+          "content": ""
+        },
+        {
+          "title": "Lenker til andre nettsteder",
+          "content": ""
+        },
+        {
+          "title": "Begrenset garanti",
+          "content": ""
+        },
+        {
+          "title": "Ansvarsbegrensning",
+          "content": ""
+        },
+        {
+          "title": "Trakassering",
+          "content": ""
+        },
+        {
+          "title": "Gjeldende lovverk",
+          "content": ""
+        },
+        {
+          "title": "Endringer",
+          "content": ""
+        }
+      ],
+      "section": {
+        "lawSection": {
+          "title": "Gjeldende lover",
+          "description": "",
+          "updated": "Oppdatert {{date}}"
+        }
+      }
+    },
+    "contact": {
+      "_comment": "Contact us page - delete later",
+      "title": "Kontakt oss",
+      "section": {
+        "ourMission": {
+          "title": "Vårt oppdrag",
+          "description": "Inntektene brukes til å dekke alt fra mat, klær, utdanning, utstyr, helse, medisiner og tannpleie for barna, samt til driften av musikkskolen og lønningene til våre ansatte. Matprogrammet inkluderer også barnas familier, som mottar månedlige rasjoner med mat og hygieneprodukter. Vi jobber kontinuerlig for å forbedre barnas levekår, og mesteparten av den gjenværende støtten brukes til boligforbedringer."
+        }
+      }
+    },
+
+    "support": {
+      "_comment": "Support page - delete later",
+      "title": "Støtte",
+      "section": {
+        "funding": {
+          "title": "Hvor kommer vår finansiering fra?",
+          "description": "MMF er en liten, lokalt forankret organisasjon som hovedsakelig mottar støtte fra private givere i Norge. Våre faste givere (MMF-støttespillere) gir oss økonomisk stabilitet og forutsigbarhet. I tillegg er vi heldige som har mange engasjerte personer som samler inn penger til spesielle anledninger, som bursdager og arrangementer. Utover private givere er vår største støttespiller Musikk Gir Liv (musikere fra Kristiansand Symfoniorkester), som finansierer driften av musikkskolen og lydutstyr. I løpet av de siste to årene har Musikk Gir Liv også besøkt Antsirabe sammen med en gruppe musikere fra orkesteret, hvor de har undervist barna ved MMF og deltatt i konserter sammen med elevene."
+        },
+        "navigation": [
+          {
+            "label": "Frivillig arbeid"
+          },
+          {
+            "label": "Donasjoner"
+          },
+          {
+            "label": "Innsamling"
+          }
+        ],
+        "support": {
+          "title": "Tusen takk for din støtte!",
+          "description": "Inntektene brukes til å dekke alt fra mat, klær, utdanning, utstyr, helse, medisiner og tannpleie for barna, samt til driften av musikkskolen og lønningene til våre ansatte. Matprogrammet inkluderer også barnas familier, som mottar månedlige rasjoner med mat og hygieneprodukter. Vi jobber kontinuerlig for å forbedre barnas levekår, og mesteparten av den gjenværende støtten brukes til boligforbedringer."
+        }
+      }
+    },
+    "history": {
+      "_comment": "Historie-seksjon - kommentaren vil bli slettet senere",
+      "title": "Historien om MMF",
+      "description": "MMF ble offisielt grunnlagt i Antsirabe, Madagaskar, i 2021 av Eline Rodvelt Hansen og hennes ektemann Dina Rasalina Andriamanalina. Historien om MMF startet imidlertid i 2018, da Eline tok med seg to fioliner til Madagaskar med stor entusiasme. Mens hun studerte fiolin ved Griegakademiet i Bergen, hadde hun et sterkt ønske om å undervise barn som ikke hadde mulighet til å utvikle sitt talent. Drømmen hennes ble å åpne en musikkskole for de fattigste barna på Madagaskar.",
+      "introduction": [
+        {
+          "title": "La oss bli bedre kjent",
+          "description": "Musikk Forandrer Liv er en musikkskole for sårbare ungdommer i Antsirabe, Madagaskar, grunnlagt i januar 2021 av den norske fiolinisten Eline Rodvelt Hansen og den malagassiske artisten Dina Rasalina.\nSkolen er et levende og støttende fellesskap som ikke bare tilbyr musikk- og kunstundervisning, men også hjelper barna fra de fattigste familiene i Antsirabe med mat, medisinsk hjelp, skoleutstyr, klær og bolig."
+        },
+        {
+          "title": "Læring og støtte på flere nivåer",
+          "description": "Musikktimene handler ikke bare om å lære å spille et instrument. For våre elever har musikkskolen blitt et fristed, et sted hvor de føler seg trygge og verdsatt, med omsorg fra lærere og medelever.\nUtdanningens kraft og fellesskapsfølelsen har hjulpet mange gatebarn, som tidligere har opplevd omsorgssvikt og vold, med å finne trygghet i et inspirerende læringsmiljø. Dette gir dem en følelse av mening og muligheten til å skape en bedre fremtid gjennom læring."
+        },
+        {
+          "title": "Utdanning som styrker",
+          "description": "Mange av våre elever har aldri hatt muligheten til å gå på skole før. Derfor har MMFs lærere utviklet ekstra akademisk støtte for barn som sliter med skolearbeidet. Denne innsatsen har vist seg å ha stor effekt på deres utvikling, læringsevne og beskyttelse.\nGjennom leksehjelp og støtte har barn som tidligere ikke kunne lese eller skrive, begynt å gjøre akademiske og sosiale fremskritt.\nVi legger spesiell vekt på utdanning for jenter og likestilling, og vi jobber for å gi jenter muligheten til å få større kontroll over sitt liv gjennom utdanning og musikk."
+        },
+        {
+          "title": "Bærekraftig utvikling og sosial påvirkning",
+          "description": "Ved å tilby et trygt og støttende miljø ser vi hvordan unge jenter og kvinner inspirerer sine familier til å leve på en sunnere og mer bærekraftig måte. Dette skaper en generasjonsendring som beviser at utdanning kan være en drivkraft for forandring. Dette motiverer oss til å fortsette vårt arbeid med engasjement, kjærlighet og dedikasjon.\nSiden 2021 har Musikk Forandrer Liv blitt registrert som en NGO og har en uavhengig styregruppe. Organisasjonen støtter nå over 60 barn, og i takt med vår pedagogiske utvikling samarbeider vi med lokale musikklærere og skaper nye jobbmuligheter for lokalsamfunnet."
+        },
+        {
+          "supportedBy": {
+            "description": "MFF støttes av\n\"Vennskapsforeningen for Musikk Skolen i Madagaskar\"\nMartin Fröst Foundation\nSt. Johannes menighet, Stavanger\nForeningen Musikk gir liv, Kristiansand\nBuffet Crampon, Paris"
+          }
+        },
+        {
+          "title": "Støtte og fremtidige mål",
+          "description": "Våre lærere tilbyr undervisning i tradisjonelle malagassiske instrumenter, perkusjon, dans og sang, klassisk gitar, bass, visuell kunst, musikkteori og kammermusikk, i tillegg til fiolin, bratsj, cello og piano. Vårt mål er å inkludere fløyte og klarinett innen 2022."
+        }
+      ],
+      "conclusion": {
+        "title": "Konklusjon: En modell for endring",
+        "description": "Når vi ser den utrolige endringen vårt prosjekt har skapt i lokalsamfunnet, håper vi å inspirere våre elever til å bli selvstendige, ansvarsbevisste og kunnskapsrike individer som kan bidra til en bedre fremtid i sitt nærmiljø."
+      }
+    },
+
+    "ourWork": {
+      "_comment": "Our Work section - comment will be deleted later",
+      "title": "Vårt arbeid",
+      "description": "I Madagaskar er barnedødeligheten høy, og mange dør av sykdommer som lett kan behandles med moderne medisinsk behandling. Vanlige årsaker er smittsomme sykdommer som hodepine, feber, mageproblemer og malaria. Madagaskar har også en av de høyeste malariatakene i verden, og det er smittsomme sykdommer og epidemier som er kontrollert i andre land. Mange går langt til klinikker og/eller sykehus, og behandlingskostnadene er høye. Derfor søker de ikke hjelp før det er for sent. Mange av barna vi ser på gaten, har ofte store helseproblemer, og mange lever under alvorlig underernæring.",
+      "topics": [
+        {
+          "title": "Behandling",
+          "description": "I Madagaskar er barnedødeligheten høy, og mange dør av sykdommer som lett kan behandles med moderne medisinsk behandling. Vanlige årsaker er smittsomme sykdommer som hodepine, feber, mageproblemer og malaria. Madagaskar har også en av de høyeste malariatakene i verden, og det er smittsomme sykdommer og epidemier som er kontrollert i andre land. Mange går langt til klinikker og/eller sykehus, og behandlingskostnadene er høye. Derfor søker de ikke hjelp før det er for sent. Mange av barna vi ser på gaten, har ofte store helseproblemer, og mange lever under alvorlig underernæring."
+        },
+        {
+          "title": "Utdanning",
+          "description": "Utdanning gir barna tillit til fremtiden. Når barn ikke har grunnleggende kunnskaper og ferdigheter, er det begrenset hva de kan oppnå. Utdanning er en viktig faktor i å bryte fattigdomssyklusen og er et viktig verktøy i kampen mot fattigdom. MMF’s hovedmål er å gjøre barna til selvstendige voksne med inntekt i fremtiden. Derfor er det avgjørende å bidra til deres suksess og et sunt liv i skolen. Offentlig utdanning i Madagaskar er gratis, men kostnadene for skoleuniformer, lærebøker, papirer og registrering er høye. Derfor sender mange familier barna sine til å selge eller jobbe for å støtte dem. Barna vi ser på gaten har ofte droppet ut av grunnskolen eller har aldri hatt muligheten til å gå på skole, og kan verken lese eller skrive. For å sikre at disse barna kan komme tilbake til skolen, har vi sett at det er viktig å forberede dem godt. Vi har startet et førskoleprogram hvor barna lærer å lese og skrive, samt matematikk, malagasy og fransk før de begynner på skolen. Nå går alle barna på MMF på skole eller får annen utdanning. Vi har en fremtidsplan for hvert enkelt barn basert på deres mål. Vi samarbeider for å hjelpe og støtte dem i sine planer. Offentlig utdanning i Madagaskar er åpen i halvparten av dagen (rundt 4 timer), og deretter går barna til MMF hver ettermiddag etter skoletid for å øve på instrumenter og gjøre lekser. Siden mange foreldre ikke kan lese eller skrive, har vi lagt til støtte for øvelser for å hjelpe barna å lykkes på skolen. Vi ser gode resultater med dette, og mange av barna har gjort stor fremgang på skolen. I tillegg til utdanning og læring gir vi engelskundervisning til barna. Vi vet at dette kan hjelpe dem med å finne jobb i fremtiden. Få malagassere snakker engelsk, så det er en stor fordel for barna å lære det. De kan velge yrker som leder, oversetter eller engelsklærer. I tillegg er det lettere for barna å kommunisere med besøkende og frivillige i MMF. Noen få barn trenger alternative løsninger for utdanning på grunn av ulike årsaker, og vi har eldre studenter som går på yrkesopplæring i stedet for vanlig skole. Vi er stolte av at en av våre studenter i fjor fikk sertifikat i klesproduksjon. Nå lager hun skoleuniformer for andre elever, i tillegg til andre arbeider."
+        },
+        {
+          "title": "Hjemløshet",
+          "description": "Flere av barna som er registrert som elever på MMF, bodde på gaten da vi først møtte dem. Årsaken til at disse barna er på gaten, er fattigdom. Barna har ingen støtte, og de eldre barna tar ofte ansvar for å ta vare på sine yngre søsken. Livet på gaten er veldig vanskelig, og det er en daglig kamp for å overleve. I løpet av dagen bruker barna mye tid på å be om penger og lete etter mat. Når kvelden kommer, er det viktig å finne et trygt sted å sove om natten. Nettene kan være kalde og farlige, og barna samles sammen for å holde varmen."
+        },
+        {
+          "title": "Matutdeling",
+          "description": "Selv om Madagaskar er kjent for sitt fruktbare klima, har det vært alvorlige naturkatastrofer og tørke de siste ti årene, som er forårsaket av klimaendringer. Dette har ført til tap av avlinger og har skapt matkriser og sult. Foreldre prøver å gi mat og rent vann til barna sine. Når familiene ikke kan gi mat til barna sine, blir det å sende dem ut for å tigge den eneste måten å overleve på. Barna som bor på gaten, bruker mye tid og krefter på å lete etter matavfall og vender ofte tilbake til å lete etter ting i søppelet."
+        },
+        {
+          "title": "Musikkundervisning",
+          "description": "Det er viktig å møte de grunnleggende behovene, men vi forstår at barna trenger mer. De trenger inspirasjon, motivasjon, glede, noe som gir livskraft, nye ideer og tro på at det er noe annet som er mulig. Dette bringer oss til kjernen av prosjektet: musikk. Forskning viser at når man lytter til og lærer ny musikk, dannes nye hjerneceller og nye forbindelser. Forskning viser også at musikk forbedrer hukommelsen. På MMF ser vi at foreldrene bekrefter at barnas læring på skolen forbedres når de begynner å spille musikkinstrumenter. Samarbeid er også viktig, det lærer barna å samarbeide, lytte til hverandre og uttrykke seg selv."
+        },
+        {
+          "title": "Fremtidsmål",
+          "description": "Et av våre mål er å gjøre MMF større og mer kjent, slik at vi kan ta imot flere barn som lever et vanskelig liv på gaten. Hovedmålet er at alle barna i Antsirabe skal få tilstrekkelig mat, klær, omsorg, et trygt og godt hjem, utdanning og muligheten til å utvikle sine talenter. For oss er det viktig at hjelpen som gis, fører til uavhengighet. Målet er at barna kommer tilbake til skolen og utvikler sine talenter for å bli verdifulle ressurser for samfunnet i fremtiden, finne arbeid, og vokse gjennom ferdigheter og selvstendighet."
+        },
+        {
+          "title": "Arbeid",
+          "description": "Barna som vokser opp i fattigdom i Antsirabe, har ofte store ansvar allerede fra en ung alder. De tar vare på sine søsken, tar ansvar for matlaging og gjør arbeidet for å tjene penger til familien gjennom å samle inn donasjoner. Noen ganger får de også tunge oppgaver, som å bære ryggsekker med ris eller hente tunge vannflasker, og de får lite eller ingen betaling for arbeidet. Å gi voksne ansvar for å ta vare på barna er en stor del av vårt arbeid. Barna skal få være barn! Derfor er lek viktig for hverdagen på MMF."
+        }
+      ]
+    },
+
+    "staff": {
+      "_comment": "Section Our Staff Overview: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Vårt Team",
+      "members": [
+        {
+          "name": "Eline Rodvelt Hansen",
+          "occupation": "Fiolinlærer",
+          "description": "Eline er en fiolinist og fiolinlærer, utdannet ved Griegakademiet i Bergen. Hun er opprinnelig fra Sandnes i Rogaland og har reist mye rundt i verden, og spilt med musikere på flere kontinenter og i forskjellige sjangere."
+        },
+        {
+          "name": "Dina Rasalina Andriamanalina",
+          "occupation": "Pianolærer",
+          "description": "Dina co-grunnla MMF med sin kone, Eline Rodvelt Hansen, i 2021. Opprinnelig fra Antsirabe, Madagaskar, har Dina rytme og musikk i blodet, og har spilt mange instrumenter siden barndommen. Det var imidlertid pianoet som til slutt ble hans dominerende instrument."
+        },
+        {
+          "name": "Karoline Hartvigsen",
+          "occupation": "Sykepleier",
+          "description": "Karoline fullførte sin sykepleierutdanning i 2017 og jobber nå heltid på en kreftavdeling ved Radiumhospitalet i Oslo. Før bachelorstudiene fullførte hun et ettårig studium i interkulturell forståelse ved NLA University College Bergen."
+        },
+        {
+          "name": "Thea Harbo",
+          "occupation": "Sykepleier",
+          "description": "Thea fullførte sin bachelorgrad i sykepleie i 2017 ved Diakonhjemmets Høyskole i Oslo. Hun bodde der i 9 år før hun flyttet tilbake til hjembyen Stavanger. Hun har arbeidserfaring fra hjemmebehandling og flere år på en barneavdeling ved Rikshospitalet."
+        }
+      ]
+    },
+
+    "staffDetails": {
+      "_comment": "Section Detailed Staff Page: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Vårt Team",
+      "members": [
+        {
+          "name": "Eline Rodvelt Hansen",
+          "occupation": "Fiolinlærer",
+          "description": "Eline er en fiolinist og fiolinlærer, utdannet ved Griegakademiet i Bergen. Opprinnelig fra Sandnes i Rogaland, har hun reist mye rundt i verden, og spilt med musikere på flere kontinenter og i ulike sjangre.\nI tillegg er hun en dedikert fiolinlærer. Med to fioliner dro hun til Madagaskar med et ønske om å starte en musikkskole for å hjelpe barn ut av fattigdom.\nI Antsirabe møtte hun sin ektemann, Dina, som også var musiker og hadde en lignende drøm. Sammen grunnla de MMF i 2021 og leder nå arbeidet sammen.\nI tillegg jobber Eline som fiolinlærer ved musikkskolen, og hun følger opp ensembler og elever på flere instrumenter. Eline er også leder for det norske styret i MMF.",
+          "roles": ["MMF Medgründer, Madagaskar", "MMF Styreleder, Norge"],
+          "email": "e-mail@mmf.no"
+        },
+        {
+          "name": "Dina Rasalina Andriamanalina",
+          "occupation": "Pianolærer",
+          "description": "Dina co-grunnla MMF med sin kone, Eline Rodvelt Hansen, i 2021. Opprinnelig fra Antsirabe, Madagaskar, har Dina rytme og musikk i blodet, og har spilt mange instrumenter siden barndommen.\nDet var imidlertid pianoet som til slutt ble hans dominerende instrument. I London studerte han musikkteknologi og jobbet etter hvert i et musikkstudio.\nMed entusiasme for barn og utviklingsarbeid, vendte han tilbake til Madagaskar, hvor han blant annet har vært prosjektleder for internasjonale bistandsprosjekter.\nHan leder nå arbeidet i MMF sammen med Eline, i tillegg til å undervise i piano og tradisjonell malagassisk musikk og dans i prosjektet.",
+          "roles": ["MMF Medgründer, Madagaskar"],
+          "email": "e-mail@mmf.no"
+        },
+        {
+          "name": "Karoline Hartvigsen",
+          "occupation": "Sykepleier (B.A., 2017)",
+          "description": "Karoline fullførte sin sykepleierutdanning i 2017 og jobber nå heltid på en kreftavdeling ved Radiumhospitalet i Oslo.\nFør sine bachelorstudier fullførte hun et ettårig studium i interkulturell forståelse ved NLA University College Bergen.\nI forbindelse med dette, reiste hun til Bolivia for å gjennomføre feltarbeid på et barnehjem som fokuserte på barnas livskvalitet.\nKaroline har alltid hatt en stor interesse og engasjement for humanitært arbeid og har frivillig jobbet som sykepleier ved et offentlig sykehus i Madagaskar sammen med Thea.\nHun er nå nestleder i det norske styret for MMF og hjelper til med å koordinere arbeidet som utføres fra Norge.",
+          "roles": ["Nestleder MMF Styre", "Prosjektkoordinator, Norge"],
+          "email": "e-mail@mmf.no"
+        },
+        {
+          "name": "Thea Harbo",
+          "occupation": "Sykepleier (B.A., 2017)",
+          "description": "Thea fullførte sin bachelorgrad i sykepleie i 2017 ved Diakonhjemmet Høyskole i Oslo. Hun bodde der i 9 år før hun flyttet tilbake til hjembyen, Stavanger.\nHun har arbeidserfaring fra hjemmebehandling, flere år på en barneavdeling ved Rikshospitalet, og jobber for tiden heltid i en spesialtilpasset avdeling i en barnehage.\nHun har omfattende erfaring med å jobbe med barn og trives godt med det.\nThea er styremedlem i MMF og er ansvarlig for prosjektets økonomi. Hun jobber frivillig for prosjektet og er ansvarlig for arbeidet som utføres i Norge.",
+          "roles": ["Styremedlem MMF", "Prosjektleder, Norge"],
+          "email": "e-mail@mmf.no"
+        }
+      ]
+    },
+
+    "volunteer": {
+      "_comment": "Section Volunteer: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Bli frivillig",
+      "description": "Ønsker du å gjøre en forskjell for gatebarn i et av verdens fattigste land? Vi er på utkikk etter personer som ønsker å være frivillige med oss i Madagaskar.\nPrimært søker vi de som har interesse for eller utdanning relatert til musikk. Vi ser at elever har stor nytte av undervisning fra profesjonelle musikere."
+    },
+
+    "supportUs": {
+      "_comment": "Section Support Us: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Støtt oss",
+      "description": "Midler som kommer inn går til å dekke alt fra mat, klær, utdanning, utstyr, helsehjelp, medisiner og tannbehandling for barna, samt driften av musikkskolen og lønninger til vårt personale. Familien til barna er også inkludert i matprogrammet og mottar månedlige matdistribusjoner."
+    },
+
+    "galleryPreview": {
+      "_comment": "Section Gallery Preview: This comment will be deleted later ( needs translation to malagasy )",
+      "button": "Se galleriet"
+    },
+
+    "upcomingEventsPreview": {
+      "_comment": "Section Upcoming Events Preview: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Kommende Arrangementer",
+      "events": [
+        {
+          "date": "20. mai 2024",
+          "title": "MMF Årlige Veldedighetskonsert"
+        },
+        {
+          "date": "10. juni 2024",
+          "title": "Løp for Musikk 5K Veldedighetsløp"
+        },
+        {
+          "date": "15. juli 2024",
+          "title": "MMF Kultur- og Kunstfestival"
+        },
+        {
+          "date": "25. august 2024",
+          "title": "Back-to-School Innsamlingsgalla"
+        },
+        {
+          "date": "25. november 2024",
+          "title": "Høstkampanje for Gaveinnsamling"
+        }
+      ]
+    },
+
+    "latestNews": {
+      "_comment": "Section Latest News: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Siste Nytt",
+      "posts": [
+        {
+          "newsPost": "Nyhetsinnlegg",
+          "title": "MMF Kultur- og Kunstfestival",
+          "writtenBy": "Skrevet av ChatGPT",
+          "location": "Antsirabe,",
+          "date": "15. juli 2023",
+          "description": "MMF Kultur- og Kunstfestival var en livlig feiring av enhet, og viste den dype påvirkningen av musikk og kunst. Festivalen, som ble holdt i den vakre byen Antsirabe på Madagaskar, var mer enn bare en festival; det var en hjertelig hyllest til motstandskraften, gleden og kreativiteten til barna og samfunnene vi støtter. De livlige forestillingene og kunstutstillingene tente en følelse av tilhørighet, og fremhevet de blomstrende talentene i disse samfunnene. Gjennom engasjerende verksteder og felles prosjekter, tilbød festivalen en plattform for deltakerne, spesielt ungdommen, til å låse opp sine kreative evner."
+        },
+        {
+          "newsPost": "Nyhetsinnlegg",
+          "title": "Stjernene står på linje for Madagaskar under Paris Veldedighetskonsert",
+          "writtenBy": "Skrevet av ChatGPT",
+          "location": "Paris, Frankrike,",
+          "date": "22. juni 2023",
+          "description": "I går kveld kom noen av verdens mest elskede musikere sammen for en veldedighetskonsert, 'Voices for Madagascar,' for å støtte Music Changes Lives School. Konserten ble holdt på den ikoniske La Seine Musicale, og inkluderte forestillinger som spente over flere sjangre og generasjoner, fra klassisk til moderne pop. Konserten fremhevet ikke bare musikkens universelle språk, men samlet også betydelige midler og økte bevisstheten om musikkundervisning i Madagaskar. Arrangementet var en stor suksess, med alt overskuddet som går direkte til skolen, og sørger for at musikk fortsetter å forandre liv på øya."
+        },
+        {
+          "newsPost": "Nyhetsinnlegg",
+          "title": "Malagassiske studenter vinner stort på ungdomsmusikkfestival",
+          "writtenBy": "Skrevet av ChatGPT",
+          "location": "Barcelona, Spania,",
+          "date": "8. august 2023",
+          "description": "Studenter fra Music Changes Lives School på Madagaskar tok verden med storm under International Youth Music Festival i Barcelona. De konkurrerte mot unge musikere fra hele verden, og den malagassiske gruppen imponerte både publikum og dommere med sine ferdigheter, lidenskap og unike blanding av tradisjonelle og moderne musikalske innflytelser. Deres forestillinger ga dem flere priser og internasjonal anerkjennelse, og satte søkelys på talentet som blir dyrket ved Music Changes Lives School, samtidig som det understreker viktigheten av å støtte musikkundervisning på verdensbasis."
+        },
+        {
+          "newsPost": "Nyhetsinnlegg",
+          "title": "Musikkskolen lanserer 'Melody Masters' App",
+          "writtenBy": "Skrevet av ChatGPT",
+          "location": "Antananarivo,",
+          "date": "30. november 2023",
+          "description": "I et trekk for å utnytte teknologi til utdanning, har Musikk Forandrer Liv lansert en innovativ ny app, 'Melody Masters,' designet for å bringe musikkundervisning til studenter på Madagaskar og videre. Appen kombinerer interaktive leksjoner, spill og virtuelle forestillinger for å gjøre læring av musikk tilgjengelig og morsom for barn overalt, spesielt i avsidesliggende områder med begrenset tilgang til tradisjonell musikkundervisning. Utviklet i partnerskap med ledende teknologiselskaper, representerer 'Melody Masters' et betydelig skritt fremover i skolens misjon om å gjøre musikkundervisning universelt tilgjengelig, og gir studentene muligheten til å utforske sitt musikalske potensial uavhengig av deres omstendigheter."
+        }
+      ]
+    },
+
+    "upcomingEvents": {
+      "_comment": "Section Upcoming Events: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Kommende Arrangementer",
+      "events": [
+        {
+          "date": "1. september 2024",
+          "title": "Back-to-School Fundraiser Gala",
+          "description": "En sofistikert galla for å feire starten på det nye skoleåret, med elevopplevelser, en hovedtaler om viktigheten av musikkundervisning, og en auksjon for å samle inn penger."
+        },
+        {
+          "date": "10. mai 2024",
+          "title": "Run for Music 5k Veldedighetsløp",
+          "description": "Et morsomt og energisk 5K-løp der deltakerne oppfordres til å kle seg ut som sine favorittmusikere eller musikkikoner. Live-band langs ruten vil holde energien oppe."
+        },
+        {
+          "date": "20. juli 2024",
+          "title": "Harmony Under the Stars",
+          "description": "En fortryllende utendørskonsert med lokale og internasjonale artister, som blander tradisjonell malagassisk musikk med andre verdenssjanger. Deltakerne vil nyte en kveld med musikalsk mangfold under åpen himmel."
+        },
+        {
+          "date": "15. august 2024",
+          "title": "Tunes and Taste Festival",
+          "description": "En heldagsfestival som feirer Madagaskars rike kultur gjennom musikk, mat og kunst. Inkluderer live-opplevelser, matboder og verksteder."
+        },
+        {
+          "date": "10. september 2024",
+          "title": "Voices for Education",
+          "description": "En virtuell konsert som strømmes live globalt, med opptredener av kjente musikere og taler fra forkjempere for musikkundervisning."
+        },
+        {
+          "date": "5. oktober 2024",
+          "title": "Rhythms of Hope Gala",
+          "description": "En elegant kveld med middag, live musikk og en stille auksjon av kunst og minner, med mål om å samle inn penger til stipend og skoleforbedringer."
+        },
+        {
+          "date": "25. november 2024",
+          "title": "Holiday Giving Campaign",
+          "description": "Start en givende sesong med en konsert og et fellesskapsmøte. Dette arrangementet vil inkludere julemusikk fra hele verden og starte en kampanje for donasjoner av instrumenter og penger."
+        },
+        {
+          "date": "1. november 2024",
+          "title": "Music Marathon",
+          "description": "En 12-timers musikkmaraton hvor band og soloartister spiller uavbrutt. Publikum kan komme og gå, med billetter solgt ved døren og overskuddet går til skolen."
+        },
+        {
+          "date": "1. november 2024",
+          "title": "Jam for Education",
+          "description": "Et interaktivt arrangement der deltakerne kan delta i musikkverksteder, jam-sesjoner og en stor fellesopplevelse, som viser musikkens kraft til å forene og utdanne."
+        },
+        {
+          "date": "22. januar 2025",
+          "title": "Classic for a Cause",
+          "description": "En klassisk musikkonsert med lokale orkestre og kor, med fremføringer av både vestlige klassiske stykker og arrangementer av tradisjonelle malagassiske sanger."
+        },
+        {
+          "date": "18. februar 2025",
+          "title": "Rock the School",
+          "description": "En rock- og popkonsert rettet mot et yngre publikum, hvor hele overskuddet går til å modernisere skolens musikkutstyr og teknologi."
+        },
+        {
+          "date": "15. - 20. mars 2025",
+          "title": "Jazz Nights",
+          "description": "En serie jazzkvelder som holdes på forskjellige steder rundt om i byen, med lokale og internasjonale jazzmusikere. Hver kveld dedikert til en annen jazzsjangeren, og støtter musikkundervisning med stil."
+        }
+      ]
+    },
+
+    "posts": {
+      "_comment": "Section posts for MMF Culture and Arts Festival Post: This comment will be deleted later ( needs translation to malagasy )",
+      "post_mmfCultureAndArtsFestival": {
+        "title": "MMF Kultur- og Kunstfestival",
+        "newsPost": "Nyhetsinnlegg",
+        "date": "15. juli 2023",
+        "writtenBy": "skrevet av Chat GPT",
+        "topics": [
+          {
+            "title": "Feiring av hjertet i Madagascar",
+            "description": "15. juli 2023 markerer en dag med livlig feiring, enhet og den transformative kraften av musikk og kunst på MMF Kultur- og Kunstfestivalen. Arrangert i de pittoreske omgivelsene i Antsirabe, Madagascar, var festivalen mer enn bare et arrangement; det var et vitnesbyrd om motstandskraften, gleden og den kreative ånden til barna og samfunnene vi tjener."
+          },
+          {
+            "title": "En dag å huske",
+            "description": "Fra de tidlige timene summet luften av forventning mens besøkende fra nær og fjern samlet seg, ivrige etter å fordype seg i den rike veven av malagassisk kultur. Festivalen startet med en tradisjonell velkomstdans, utført av MMF-barna, og satte tonen for en dag fylt med latter, musikk og felles glede."
+          },
+          {
+            "title": "En symfoni av syn og lyder",
+            "description": "Festivalområdet ble levende med et mangfold av aktiviteter og forestillinger. Scenene viste talentene til MMF-studentene sammen med lokale kunstnere, hver forestilling var en historie fortalt gjennom rytme og melodi. Verksteder om tradisjonell dans, håndverk og musikkinstrumenter tilbød praktiske opplevelser som brøt ned barrierer mellom generasjoner og kulturer."
+          },
+          {
+            "title": "Med lokale kunstnere",
+            "description": "Et høydepunkt var kunstutstillingen, som presenterte verk laget av MMF-studenter og lokale kunstnere, og illustrerte deres håp, drømmer og den felles reisen med vekst og styrking. De levende fargene og intrikate mønstrene talte høyt om talentet og potensialet som lever i hjertene til disse unge kunstnerne."
+          }
+        ],
+
+        "published": {
+          "label": "Publisert:",
+          "date": "15. juli 2023"
+        },
+
+        "buttons": {
+          "like": "Liker",
+          "share": "Del",
+          "nextPost": "Neste innlegg"
+        }
+      }
+    },
+
+    "events": {
+      "_comment": "Section events for the Back-to-School Fundraiser Gala Event: This comment will be deleted later ( needs translation to malagasy )",
+      "event_backToSchoolGala": {
+        "title": "Bli med oss på Back-to-School Fundraiser Gala",
+        "event": "Arrangement",
+        "date": "Dato: 25. august 2024",
+        "location": "Sted: Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar",
+        "description": "Når sommeren nærmer seg slutten og forventningen om et nytt skoleår begynner, inviterer Music Makes Futures (MMF) deg til en kveld fylt med eleganse, inspirasjon og formål. Merk datoen 25. august 2024, når vi arrangerer vår årlige Back-to-School Fundraiser Gala på det prestisjetunge Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar. Denne galakvelden er ikke bare et arrangement; det er en feiring av håp, et vitnesbyrd om kraften av utdanning, og en kveld som lover å gjøre en betydelig forskjell i livene til barna i Madagascar.",
+        "topics": [
+          {
+            "title": "Hvorfor delta?",
+            "description": "Back-to-School Fundraiser Gala er mer enn et møte; det er et avgjørende øyeblikk hvor du direkte kan påvirke utdanningsreisen til utallige barn. Hver billett som kjøpes, hvert auksjonsobjekt som byr på, og hver donasjon som gjøres under galakvelden, vil gå direkte til å støtte MMFs omfattende utdanningsprogrammer. Fra skolesuppliser og skolepenger til lærerlønn og utdanningsmateriale, vil din støtte legge grunnlaget for en lysere og mer lovende fremtid for barna vi tjener."
+          },
+          {
+            "title": "Hva kan du forvente?",
+            "description": "Elegant middagsopplevelse: Nyt en gourmetmiddag tilberedt av noen av de beste kokkene i Madagascar, akkompagnert av et utvalg av utsøkte viner og drikkevarer.\nStille auksjon: By på et utvalg av unike gjenstander og opplevelser, med all inntekt som går direkte til våre utdanningsinitiativer.\nInspirerende taler: Hør direkte fra MMFs grunnleggere, lærere og barna hvis liv du har berørt, og hør deres historier om håp og seier.\nLive underholdning: Kvelden vil by på imponerende opptredener fra MMF-studenter, som viser frem talentene som er dyrket gjennom din støtte.\nNettverking: Møt likesinnede, filantroper og samfunnsledere som deler din lidenskap for å gjøre en forskjell."
+          },
+          {
+            "title": "Hvordan kan du støtte?",
+            "description": "Kjøp en billett: Sikre deg plass til denne uforglemmelige kvelden og vær en del av endringen.\nSponsor et bord: Samle venner, familie eller kolleger for en spesiell kveld og øk din innvirkning.\nDoner: Hvis du ikke kan delta, kan du vurdere å donere for å støtte MMFs oppdrag. Hver bidrag, stor eller liten, gjør en forskjell.\nVær frivillig: Bidra med din tid og ferdigheter for å gjøre galakvelden til en stor suksess."
+          },
+          {
+            "title": "Detaljer på et blikk:",
+            "description": "Dato: 25. august 2024\nTid: 18:00 - 23:00\nKleskode: Formell antrekk\nBilletter: [Link til å kjøpe billetter eller reservasjonsdetaljer]"
+          }
+        ],
+
+        "additionalInfo": {
+          "paragraph": "Din tilstedeværelse og støtte på Back-to-School Fundraiser Gala vil ekko i klasserommene og fremtiden til barna vi tjener. Sammen kan vi sikre at utdanning, det mest kraftfulle verktøyet for endring, er innenfor rekkevidde for dem. For mer informasjon, for å kjøpe billetter eller for å gjøre en donasjon, vennligst besøk MMFs nettside eller kontakt oss. Vi ser frem til å ønske deg velkommen til en kveld med feiring, håp og innvirkning. La oss gjøre denne tilbake-til-skolen sesongen til et vendepunkt for barna som drømmer om en lysere fremtid. Music Makes Futures (MMF) - Transformerer liv gjennom kraften av utdanning og musikk. Bli med oss, for hvert barn fortjener en sjanse til å lykkes."
+        },
+
+        "buttons": {
+          "like": "Liker",
+          "share": "Del",
+          "previousEvent": "Tidligere Arrangement",
+          "nextEvent": "Neste Arrangement"
+        }
+      }
+    }
+  },
+
+  "thankYouMessage": {
+    "title": "Takk for din støtte!"
+  },
+
+  "privacyPolicy": {
+    "_comment": " (needs translation to malagasy) ",
+    "title": "Vår personvernerklæring",
+    "description": "",
+    "sections": [
+      {
+        "title": "Omfang"
+      },
+      {
+        "title": "Data vi samler inn"
+      },
+      {
+        "title": "Data vi ikke samler inn"
+      },
+      {
+        "title": "Bruk av informasjon"
+      },
+      {
+        "title": "Datasikkerhet"
+      },
+      {
+        "title": "Tredjepartslenker"
+      },
+      {
+        "title": "Barnas personvern"
+      },
+      {
+        "title": "Endringer i vårt personvern"
+      },
+      {
+        "title": "Gjeldende lov",
+        "description": ""
+      }
+    ],
+    "updated": "Oppdatert: 00 / 00 / 00"
+  },
+
+  "forms": {
+    "contact": {
+      "_comment": "Kontaktseksjon - kommentaren vil bli slettet senere",
+      "title": "Kontaktinformasjon",
+      "fields": {
+        "name": {
+          "label": "Ditt navn",
+          "error": "(feilmelding her)"
+        },
+        "email": {
+          "label": "E-post",
+          "error": "(feilmelding her)"
+        },
+        "subject": {
+          "label": "Emne",
+          "error": "(feilmelding her)"
+        },
+        "message": {
+          "label": "Din melding",
+          "error": "(feilmelding her)"
+        }
+      }
+    },
+
+    "support": {
+      "_comment": "Støtteseksjon - kommentaren vil bli slettet senere",
+      "title": "Kontakt oss",
+      "contactInfo": {
+        "fields": {
+          "name": {
+            "label": "Fornavn",
+            "error": "(feilmelding her)"
+          },
+          "lastName": {
+            "label": "Etternavn",
+            "error": "(feilmelding her)"
+          },
+          "email": {
+            "label": "E-post",
+            "error": "(feilmelding her)"
+          },
+          "phone": {
+            "label": "Telefonnummer",
+            "error": "(feilmelding her)"
+          },
+          "address": {
+            "label": "Adresse",
+            "error": "(feilmelding her)"
+          },
+          "postalCode": {
+            "label": "Postnummer",
+            "error": "(feilmelding her)"
+          },
+          "city": {
+            "label": "By",
+            "error": "(feilmelding her)"
+          },
+          "country": {
+            "label": "Land",
+            "error": "(feilmelding her)"
+          }
+        }
+      }
+    },
+
+    "paymentPlan": {
+      "_comment": "Betalingsplan seksjon - kommentaren vil bli slettet senere",
+      "title": "Velg betalingsplan",
+      "fields": {
+        "oneTimePay": {
+          "label": "Engangsbetaling",
+          "error": "(feilmelding her)"
+        },
+        "monthlyPay": {
+          "label": "Månedlig betaling",
+          "error": "(feilmelding her)"
+        }
+      }
+    },
+
+    "paymentMethod": {
+      "_comment": "Betalingsmetode seksjon - kommentaren vil bli slettet senere",
+      "title": "Velg betalingsmetode",
+      "fields": {
+        "creditCard": {
+          "label": "Kredittkort",
+          "error": "(feilmelding her)"
+        },
+        "debitCard": {
+          "label": "Debetkort",
+          "error": "(feilmelding her)"
+        },
+        "vipps": {
+          "label": "Vipps",
+          "error": "(feilmelding her)"
+        }
+      }
+    },
+
+    "termsAndPrivacy": {
+      "_comment": "Vilkår og personvern seksjon - kommentaren vil bli slettet senere",
+      "label": "Ved å klikke på Send, godtar du vilkårene og betingelsene, og har lest personvernpolitikken."
+    }
+  }
+}
