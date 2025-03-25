@@ -10,12 +10,19 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: "content/home/home.md" 
+      - file: "content/home/home.md"
         name: "home"
         label: "Home Page"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
+          
+      - file: "content/work/work.md"
+        name: "our-work"
+        label: "Our Work Page"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          
       - file: 'content/news/news.md'
         name: 'news-and-events'
         label: 'News and Events'
@@ -78,17 +85,16 @@ collections:
             widget: 'list'
             summary: '{{fields.category}}'
             field: { label: 'Category', name: 'category', widget: 'string' }
+            
       - file: "content/support/support.md"
         name: "support"
         label: "Support Us"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blog'  
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' } 
-  # Add more collections as needed based on your content structure
+      - { label: 'Title', name: 'title', widget: 'string' } # Placeholder field - add necessary fields
