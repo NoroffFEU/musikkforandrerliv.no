@@ -4,32 +4,94 @@ backend:
   branch: 719-Decap-CMS # Change to main ???
   local_backend: true
 
-media_folder: "public/assets/images"
+media_folder: 'public/assets/images'
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/data/home.json"
-        name: "home"
-        label: "Home Page"
+      - file: 'src/data/home.json'
+        name: 'home'
+        label: 'Home Page'
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "markdown" }
-
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+      - file: 'content/news/news.md'
+        name: 'news-and-events'
+        label: 'News and Events'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+              label: 'Publish date',
+              name: 'date',
+              widget: 'datetime',
+              required: true,
+            }
+          - {
+              label: 'Featured Image',
+              name: 'featured_image',
+              widget: 'image',
+              required: false,
+            }
+          - {
+              label: 'Excerpt',
+              name: 'excerpt',
+              widget: 'text',
+              required: false,
+            }
+          - {
+              label: 'Content',
+              name: 'content',
+              widget: 'markdown',
+              required: true,
+            }
+          - label: 'Event Details'
+            name: 'event_details'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Location',
+                  name: 'location',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Start Time',
+                  name: 'start_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'End Time',
+                  name: 'end_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'Organizer',
+                  name: 'organizer',
+                  widget: 'string',
+                  required: false,
+                }
+          - label: 'Categories'
+            name: 'categories'
+            widget: 'list'
+            summary: '{{fields.category}}'
+            field: { label: 'Category', name: 'category', widget: 'string' }
+        
       - file: "content/support/support.md"
         name: "support"
         label: "Support Us"
         fields:
           - { label: "Title", name: "title", widget: "string" }
 
-  - label: "Blog"
-    name: "blog"
-    folder: "public/admin/_posts" # Temporary path
+  - label: 'Blog'
+    name: 'blog'
+    folder: 'public/admin/_posts' # Temporary path
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: "Title", name: "title", widget: "string" } # Placeholder field - add necessary fields
+      - { label: 'Title', name: 'title', widget: 'string' } # Placeholder field - add necessary fields
 
 
   # Add more collections as needed based on your content structure
