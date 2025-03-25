@@ -16,6 +16,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
+
+      - file: "content/support/support.md"
+        name: "support"
+        label: "Support Us"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+
   - label: "Blog"
     name: "blog"
     folder: "public/admin/_posts" # Temporary path
