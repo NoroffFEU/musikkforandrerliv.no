@@ -24,5 +24,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" } # Placeholder field - add necessary fields
 
+    - label: "Gallery"
+    name: "gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields: []
+
 
   # Add more collections as needed based on your content structure
