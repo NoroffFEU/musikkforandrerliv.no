@@ -3,15 +3,18 @@ import React, { useState } from 'react';
 function Footer() {
   const [email, setEmail] = useState('');
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
   function onEmailSubmit(event) {
     event.preventDefault();
-    setEmail(event.target.value);
     console.log(event.target.value);
   }
 
   return (
     <section className="font-sans">
-      {/* Subsrcibe section */}
+      {/* Subscribe section */}
       <section className="h-[364px] bg-(--color-sunset-red) flex justify-center items-center">
         <div className="grid gap-8 py-20 text-center text-black max-w-[480px] m-10 sm:m-0">
           <div className="flex flex-col justify-center gap-6">
@@ -29,7 +32,7 @@ function Footer() {
             <input
               type="text"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
               placeholder="example@example.com"
               className="h-[49px] w-full rounded-lg border-1 bg-white p-4 sm:w-[306px] md:h-[57px]"
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
