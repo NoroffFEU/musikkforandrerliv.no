@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function Footer() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   function onEmailSubmit(event) {
     event.preventDefault();
@@ -29,6 +29,7 @@ function Footer() {
             <input
               type="text"
               value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="example@example.com"
               className="h-[49px] w-full rounded-lg border-1 bg-white p-4 sm:w-[306px] md:h-[57px]"
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
