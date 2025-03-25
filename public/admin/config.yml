@@ -14,53 +14,165 @@ collections:
         name: 'home'
         label: 'Home Page'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Intro', name: 'intro', widget: 'markdown' }
-          - { label: 'Hero Image', name: 'hero_image', widget: 'image' }
-          - { label: 'Call to Action Text', name: 'cta_text', widget: 'string' }
-          - { label: 'Main Content', name: 'main_content', widget: 'markdown' }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string'
+            }
+          - {
+              label: 'Intro',
+              name: 'intro',
+              widget: 'markdown'
+            }
+          - {
+              label: 'Hero Image',
+              name: 'hero_image',
+              widget: 'image'
+            }
+          - {
+              label: 'Call to Action Text',
+              name: 'cta_text',
+              widget: 'string'
+            }
+          - {
+              label: 'Main Content',
+              name: 'main_content',
+              widget: 'markdown'
+            }
 
       - file: 'content/about/about.md'
         name: 'about'
         label: 'About Us Page'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Content', name: 'content', widget: 'markdown' }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              required: true
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              required: true
+            }
+          - label: 'Contact Form Settings'
+            name: 'contact_form_settings'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Success Message',
+                  name: 'success_message',
+                  widget: 'string'
+                }
+              - {
+                  label: 'Error Message',
+                  name: 'error_message',
+                  widget: 'string'
+                }
+          - label: 'Contact Information'
+            name: 'contact_info'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Address',
+                  name: 'address',
+                  widget: 'text'
+                }
+              - {
+                  label: 'Email',
+                  name: 'email',
+                  widget: 'string',
+                  pattern: ['^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$', 'Must be a valid email']
+                }
+              - {
+                  label: 'Phone',
+                  name: 'phone',
+                  widget: 'string'
+                }
 
       - file: 'content/work/work.md'
         name: 'our-work'
         label: 'Our Work Page'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              required: true
+            }
+          - {
+              label: 'Date',
+              name: 'date',
+              widget: 'datetime',
+              required: true
+            }
+          - {
+              label: 'Featured Image',
+              name: 'featured_image',
+              widget: 'image'
+            }
+          - label: 'Gallery'
+            name: 'gallery'
+            widget: 'list'
+            field: {
+              label: 'Image',
+              name: 'image',
+              widget: 'image'
+            }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
+              required: true
+            }
+          - label: 'Participants'
+            name: 'participants'
+            widget: 'list'
+            field: {
+              label: 'Name',
+              name: 'name',
+              widget: 'string'
+            }
+          - {
+              label: 'Results',
+              name: 'results',
+              widget: 'markdown'
+            }
 
       - file: 'content/news/news.md'
         name: 'news-and-events'
         label: 'News and Events'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              required: true
+            }
           - {
               label: 'Publish date',
               name: 'date',
               widget: 'datetime',
-              required: true,
+              required: true
             }
           - {
               label: 'Featured Image',
               name: 'featured_image',
               widget: 'image',
-              required: false,
+              required: false
             }
           - {
               label: 'Excerpt',
               name: 'excerpt',
               widget: 'text',
-              required: false,
+              required: false
             }
           - {
               label: 'Content',
               name: 'content',
               widget: 'markdown',
-              required: true,
+              required: true
             }
           - label: 'Event Details'
             name: 'event_details'
@@ -70,44 +182,60 @@ collections:
                   label: 'Location',
                   name: 'location',
                   widget: 'string',
-                  required: true,
+                  required: true
                 }
               - {
                   label: 'Start Time',
                   name: 'start_time',
                   widget: 'datetime',
-                  required: true,
+                  required: true
                 }
               - {
                   label: 'End Time',
                   name: 'end_time',
                   widget: 'datetime',
-                  required: true,
+                  required: true
                 }
               - {
                   label: 'Organizer',
                   name: 'organizer',
                   widget: 'string',
-                  required: false,
+                  required: false
                 }
           - label: 'Categories'
             name: 'categories'
             widget: 'list'
             summary: '{{fields.category}}'
-            field: { label: 'Category', name: 'category', widget: 'string' }
+            field: {
+              label: 'Category',
+              name: 'category',
+              widget: 'string'
+            }
 
       - file: 'content/support/support.md'
         name: 'support'
         label: 'Support Us'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string'
+            }
 
       - file: 'content/contact'
         name: 'contact'
         label: 'Contact Page'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string'
+            }
+          - {
+              label: 'Intro',
+              name: 'intro',
+              widget: 'markdown'
+            }
 
   - label: 'Blog'
     name: 'blog'
@@ -115,25 +243,45 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          required: true
+        }
       - {
           label: 'Publish date',
           name: 'date',
           widget: 'datetime',
-          required: true,
+          required: true
         }
-      - { label: 'Author', name: 'author', widget: 'string', required: true }
-      - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'string',
+          required: true
+        }
+      - {
+          label: 'Featured Image',
+          name: 'featured_image',
+          widget: 'image'
+        }
+      - {
+          label: 'Excerpt',
+          name: 'excerpt',
+          widget: 'text'
+        }
       - {
           label: 'Content',
           name: 'content',
           widget: 'markdown',
-          required: true,
+          required: true
         }
       - {
           label: 'Tags',
           name: 'tags',
           widget: 'list',
-          field: { widget: 'string' },
+          field: {
+            widget: 'string'
+          }
         }
