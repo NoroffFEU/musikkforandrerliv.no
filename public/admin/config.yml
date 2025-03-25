@@ -98,6 +98,19 @@ collections:
         label: "Support Us"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          
+          
+       - file: "content/contact"
+        name: "contact"
+        label: "Contact Page"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "markdown" }
+          
+         
+  - label: "Blog"
+    name: "blog"
+    folder: "public/admin/_posts" # Temporary path
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blog'  
@@ -105,3 +118,6 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' } # Placeholder field - add necessary fields
+
+
+
