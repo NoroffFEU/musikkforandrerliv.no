@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-
 import { useTranslation } from 'react-i18next';
 
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import { HeroSection } from '../components/homePage/heroSection';
 import VolunteerSection from '../components/homePage/volunteerSection';
+import SupportSection from '../components/homePage/supportSection';
 import '../i18n';
 import heart from '/assets/images/svgs/heart.svg';
 
@@ -34,7 +34,7 @@ const Home = () => {
         <section id="StaffSection"></section>
         <section id="WorkSection"></section>
         <VolunteerSection />
-        <section id="SupportSection"></section>
+        <section id="SupportSection"><SupportSection /></section>
         <section id="GallerySection"></section>
         <section id="CalenderSection"></section>
       </div>
