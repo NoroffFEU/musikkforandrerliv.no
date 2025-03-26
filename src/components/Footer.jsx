@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
-  const [email, setEmail] = useState("");
+  const { t } = useTranslation();
+
+  const [email, setEmail] = useState('');
 
   function onEmailSubmit(event) {
     event.preventDefault();
@@ -49,22 +53,24 @@ function Footer() {
           </div>
 
           <div className="text-2xl flex flex-col col-start-1 md:col-start-2 gap-8">
-            <a>About Us</a>
-            <a>News</a>
-            <a>Events</a>
+            <a>{t('common.footer.aboutUs')}</a>
+            <a>{t('common.footer.news')}</a>
+            <a>{t('common.footer.events')}</a>
           </div>
           <div className="text-2xl flex flex-col col-start-1 md:col-start-3 gap-8">
-            <a>Gallery</a>
-            <a>Our Work</a>
-            <a>Contact Us</a>
+            <a>{t('common.footer.gallery')}</a>
+            <a>{t('common.footer.ourWork')}</a>
+            <a>{t('common.footer.contactUs')}</a>
           </div>
 
           <div className="col-start-2 md:col-start-4 row-start-1 mt-12 gap-4 flex flex-col">
             <button className="bg-(--color-sunset-red) h-[57px] w-[147px] font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1">
-              Donate
+              {t('common.buttons.donate')}
             </button>
 
-            <p className="uppercase text-2xl font-bold">Follow us</p>
+            <p className="uppercase text-2xl font-bold">
+              {t('common.footer.followUs')}
+            </p>
             <div>
               <a>Facebook</a>
               <a>Instagram</a>
@@ -73,8 +79,8 @@ function Footer() {
         </div>
         <div className="absolute bottom-6 flex flex-col gap-4 m-0 items-center text-center">
           <div>
-            <a>Privacy Policy</a>
-            <a>Terms and Conditions</a>
+            <a>{t('common.footer.privacyPolicy')}</a>
+            <a>{t('common.footer.termsAndConditions')}</a>
           </div>
 
           <p>© Musikkforandrerliv</p>
