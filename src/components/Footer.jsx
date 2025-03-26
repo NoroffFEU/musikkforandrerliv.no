@@ -40,7 +40,7 @@ function Footer() {
               className="h-[49px] w-full rounded-lg border-1 bg-white p-4 sm:w-[306px] md:h-[57px]"
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
             />
-            <button className="h-[49px] md:h-[57px] w-full sm:w-[158px] bg-white text-(--color-sunset-red) rounded-lg font-semibold text-2xl active:bg-(--color-sunset-red) active:text-white hover:bg-(--color-sunset-red) hover:text-white focus:bg-(--color-sunset-red) focus:text-white focus:border focus:border-white">
+            <button className="h-[49px] md:h-[57px] w-full bg-white text-(--color-sunset-red) rounded-lg font-semibold text-2xl active:bg-(--color-sunset-red) active:text-white hover:bg-(--color-sunset-red) hover:text-white focus:bg-(--color-sunset-red) focus:text-white focus:border focus:border-white">
               {t('common.buttons.signUp')}
             </button>
           </form>
