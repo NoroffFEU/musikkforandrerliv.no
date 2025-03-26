@@ -1,39 +1,59 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import data from '../../data/landing-page-content.json';
 
 export function HistorySection() {
   const { image, title, content } = data.history;
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Paragraph truncated
-  const TRUNCATED_HEIGHT = 'h-[120px]';
+  
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Set up scroll event listener
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <section className="bg-white w-full py-[78px] px-[24px]">
+    <section className="bg-white w-full py-[78px] px-[24px] relative">
       <div className="max-w-[960px] mx-auto flex flex-col items-center gap-[32px]">
         {/* Heading */}
         <h2
           className="
             [font-family:var(--font-justAnotherHand)]
-            text-[50px]
+            text-[50px] sm:text-[110px]
             leading-[100%]
             tracking-[0.05em]
             text-center
             font-normal
-            md:text-[64px]
-            md:leading-[120%]
+        
+  
             text-black
           "
         >
           {title}
         </h2>
 
-        {/* Container holds text & fade */}
-        <div className="relative w-full max-w-[800px]">
-          {}
+        {/* Container holds text */}
+        <div className="w-full max-w-[800px]">
           <p
-            className={`
+            className="
               text-[18px]
               leading-[150%]
               tracking-[0]
@@ -42,70 +62,11 @@ export function HistorySection() {
               font-[var(--font-sans)]
               text-black
               mx-auto
-              transition-max-height duration-300 ease-in-out
-              ${isExpanded ? 'max-h-[1000px]' : `${TRUNCATED_HEIGHT} overflow-hidden`}
-            `}
+            "
           >
             {content}
           </p>
-
-          {/* Fade overlay */}
-          {!isExpanded && (
-            <div
-              className="
-                pointer-events-none
-                absolute
-                bottom-0
-                left-0
-                w-full
-                h-16
-                bg-gradient-to-t
-                from-white
-                to-transparent
-              "
-            />
-          )}
         </div>
-
-        {/* arrow */}
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="
-            flex
-            items-center
-            justify-center
-            text-red-600
-          "
-          aria-label={isExpanded ? 'Collapse text' : 'Expand text'}
-        >
-          {isExpanded ? (
-            /* Up arrow */
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M18 15l-6-6-6 6" />
-            </svg>
-          ) : (
-            /* Down arrow */
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          )}
-        </button>
 
         {/* img */}
         <img
@@ -113,7 +74,60 @@ export function HistorySection() {
           alt="History of MMF"
           className="mx-auto w-full h-auto object-cover"
         />
+        
+       
+        <button
+          onClick={() => {}}
+          className="px-10 py-4 border border-black cursor-pointer text-black font-bold rounded-lg"
+        >
+          READ MORE
+        </button>
       </div>
+      
+      
+      <button 
+        className={`
+          fixed 
+          bottom-8 
+          right-8 
+          w-[70px] 
+          h-[70px] 
+          rounded-full 
+          bg-[#FF6B61] 
+          text-black 
+          flex 
+          flex-col 
+          justify-center 
+          items-center 
+          cursor-pointer 
+          transition-opacity 
+          duration-300 
+          shadow-lg 
+          z-50
+          ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+        `}
+        onClick={scrollToTop}
+      >
+        <div className="flex flex-col items-center justify-center">
+          <svg 
+            width="20" 
+            height="18" 
+            viewBox="0 0 30 18" 
+            xmlns="http://www.w3.org/2000/svg"
+            className="mb-3"
+            stroke="black"
+            strokeWidth="5"
+            fill="none"
+          >
+            <polyline 
+              points="3,15 15,3 27,15" 
+            />
+          </svg>
+          <div className="text-center text-[12px] ">
+            BACK TO<br />TOP
+          </div>
+        </div>
+      </button>
     </section>
   );
 }
