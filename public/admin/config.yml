@@ -24,7 +24,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" } # Placeholder field - add necessary fields
 
-    - label: "Gallery"
+  - label: "Gallery"
     name: "gallery"
     folder: "content/gallery"
     create: true
