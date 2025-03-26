@@ -1,32 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
 import data from '../../data/landing-page-content.json';
 
 export function HistorySection() {
   const { image, title, content } = data.history;
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  
-
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  // Set up scroll event listener
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
 
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -58,7 +41,6 @@ export function HistorySection() {
               leading-[150%]
               tracking-[0]
               text-center
-              font-normal
               font-[var(--font-sans)]
               text-black
               mx-auto
@@ -74,15 +56,13 @@ export function HistorySection() {
           alt="History of MMF"
           className="mx-auto w-full h-auto object-cover"
         />
-        
-       
+
         <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
-            READ MORE
-          </button>
+          READ MORE
+        </button>
       </div>
-      
-      
-      <button 
+
+      <button
         className={`
           fixed 
           bottom-8 
@@ -101,27 +81,26 @@ export function HistorySection() {
           duration-300 
           shadow-lg 
           z-50
-          ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         `}
         onClick={scrollToTop}
       >
         <div className="flex flex-col items-center justify-center">
-          <svg 
-            width="20" 
-            height="18" 
-            viewBox="0 0 30 18" 
+          <svg
+            width="20"
+            height="18"
+            viewBox="0 0 30 18"
             xmlns="http://www.w3.org/2000/svg"
-            className="mb-3"
             stroke="black"
-            strokeWidth="5"
+            className="mb-1"
+            strokeWidth="4"
             fill="none"
           >
-            <polyline 
-              points="3,15 15,3 27,15" 
-            />
+            <polyline points="3,15 15,3 27,15" />
           </svg>
-          <div className="text-center text-[12px] ">
-            BACK TO<br />TOP
+          <div className="text-center text-[8px] font-medium">
+            BACK TO
+            <br />
+            TOP
           </div>
         </div>
       </button>
