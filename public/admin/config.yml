@@ -80,12 +80,6 @@ collections:
                   widget: 'text'
                 }
               - {
-                  label: 'Email',
-                  name: 'email',
-                  widget: 'string',
-                  pattern: ['^[^@\\s]+@stud\\.noroff\\.no$', 'Must be a valid email with @stud.noroff.no domain']
-                }
-              - {
                   label: 'Phone',
                   name: 'phone',
                   widget: 'number'
