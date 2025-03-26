@@ -1,5 +1,18 @@
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 
+// let us introduce ourselves
+
+// Props for about us 
+
+// Support and future ambitions (can be a about prop/component)
+
+// Conclusion A model for change
+
+// Header our staff
+
+// Props for Our staff
+
+
 function About() {
   return (
     <ErrorBoundary>
