@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
 
 export function HistorySection() {
   const { image, title, content } = data.history;
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Set up scroll event listener
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
 
   // Scroll to top function
   const scrollToTop = () => {
@@ -81,6 +96,7 @@ export function HistorySection() {
           duration-300 
           shadow-lg 
           z-50
+          ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         `}
         onClick={scrollToTop}
       >
