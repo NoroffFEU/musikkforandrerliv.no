@@ -43,12 +43,10 @@ export function GallerySection() {
         </div>
         
         <div className="flex justify-center mt-6">
-          <button
-            type="button"
-            className="w-[200px] md:w-[285px] h-[45px] md:h-[57px] px-4 md:px-10 py-2 md:py-4 border border-black cursor-pointer text-black font-bold rounded-lg"
-          >
-            SEE THE GALLERY
+        <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
+        SEE THE GALLERY
           </button>
+         
         </div>
       </div>
     </section>

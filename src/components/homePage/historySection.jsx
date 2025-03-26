@@ -76,12 +76,9 @@ export function HistorySection() {
         />
         
        
-        <button
-          onClick={() => {}}
-          className="px-10 py-4 border border-black cursor-pointer text-black font-bold rounded-lg"
-        >
-          READ MORE
-        </button>
+        <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
+            READ MORE
+          </button>
       </div>
       
       
