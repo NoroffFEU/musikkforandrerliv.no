@@ -1,14 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import SelectLanguageButton from "./lang/select-language-button";
+import React, { useEffect, useRef, useState } from 'react';
+
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+
+import { useTranslation } from 'react-i18next';
+
+import SelectLanguageButton from './lang/select-language-button';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const { t } = useTranslation();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,7 +30,7 @@ function Navbar() {
     if (searchTerm.trim()) {
       navigate(`/search?q=${searchTerm}`);
       setIsSearchOpen(false);
-      setSearchTerm("");
+      setSearchTerm('');
       setIsMenuOpen(false);
     }
   };
@@ -34,11 +40,11 @@ function Navbar() {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
 
     handleResize();
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -47,36 +53,36 @@ function Navbar() {
       if (
         searchRef.current &&
         !searchRef.current.contains(event.target) &&
-        !event.target.closest(".search-toggle")
+        !event.target.closest('.search-toggle')
       ) {
         setIsSearchOpen(false);
       }
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target) &&
-        !event.target.closest(".dropdown-toggle")
+        !event.target.closest('.dropdown-toggle')
       ) {
         setIsDropdownOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const isHome = location.pathname === "/";
+  const isHome = location.pathname === '/';
   const navbarBgClass =
-    isHome && !isScrolled && !isMobile ? "bg-transparent" : "bg-white shadow";
+    isHome && !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
 
   const getDesktopLinkClasses = ({ isActive }) =>
     `${
       isActive
-        ? "text-[var(--color-alt-forest-green)]"
-        : "text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200"
+        ? 'text-[var(--color-alt-forest-green)]'
+        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200'
     } flex items-center font-montserrat text-[14px] font-semibold px-2`;
 
   const getMobileLinkClasses = () =>
-    "block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] hover:bg-[var(--color-light-green)] hover:text-[#000000] transition-colors duration-200";
+    'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] hover:bg-[var(--color-light-green)] hover:text-[#000000] transition-colors duration-200';
 
   return (
     <>
@@ -86,7 +92,7 @@ function Navbar() {
         <div className="max-w-[1440px] mx-auto px-[54px] py-[32px] flex flex-wrap items-center gap-[10px] h-[199px]">
           <div
             className="flex-shrink-0 cursor-pointer"
-            onClick={() => navigate("/")}
+            onClick={() => navigate('/')}
           >
             <img
               src="/assets/placeholder-images/logo.png"
@@ -114,7 +120,7 @@ function Navbar() {
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
-                Search
+                {t('common.header.search')}
               </button>
               {isSearchOpen && (
                 <div className="absolute mt-2 right-0 z-20 bg-white border border-[var(--color-sunset-red)] rounded-md shadow-lg p-2 w-72 transition-all duration-200">
@@ -139,7 +145,7 @@ function Navbar() {
                         type="text"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        placeholder="Search..."
+                        placeholder={t('common.header.searchPlaceholder')}
                         className="w-full pl-8 pr-3 py-1 text-sm border border-gray-300 rounded-l-md font-montserrat outline-none"
                       />
                     </div>
@@ -147,7 +153,7 @@ function Navbar() {
                       type="submit"
                       className="bg-[var(--color-sunset-red)] text-white px-4 py-1 rounded-r-md font-montserrat text-sm uppercase hover:bg-[var(--color-hover-red)]"
                     >
-                      Search
+                      {t('common.header.search')}
                     </button>
                   </form>
                 </div>
@@ -155,10 +161,10 @@ function Navbar() {
             </div>
 
             <NavLink to="/news" className={getDesktopLinkClasses}>
-              News
+              {t('common.header.news')}
             </NavLink>
             <NavLink to="/about" className={getDesktopLinkClasses}>
-              About Us
+              {t('common.header.aboutUs')}
             </NavLink>
 
             <div className="relative" ref={dropdownRef}>
@@ -166,7 +172,7 @@ function Navbar() {
                 onClick={toggleDropdown}
                 className="dropdown-toggle inline-flex items-center text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200 font-montserrat text-[14px] font-semibold px-2"
               >
-                More
+                {t('common.header.more')}
                 <svg
                   className="ml-1 h-4 w-4"
                   fill="none"
@@ -188,19 +194,19 @@ function Navbar() {
                     to="/events"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
-                    Events
+                    {t('common.header.events')}
                   </NavLink>
                   <NavLink
                     to="/work"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
-                    Our Work
+                    {t('common.header.ourWork')}
                   </NavLink>
                   <NavLink
                     to="/contact"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
-                    Contact
+                    {t('common.header.contact')}
                   </NavLink>
                 </div>
               )}
@@ -210,7 +216,7 @@ function Navbar() {
               to="/donate"
               className="ml-2 px-4 py-2 rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
             >
-              Donate
+              {t('common.header.donate')}
             </NavLink>
 
             <SelectLanguageButton variant="iconOnly" className="ml-2" />
@@ -258,7 +264,7 @@ function Navbar() {
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
-                Search
+                {t('common.header.search')}
               </button>
 
               {isSearchOpen && (
@@ -286,7 +292,7 @@ function Navbar() {
                       type="text"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      placeholder="Search..."
+                      placeholder={t('common.header.searchPlaceholder')}
                       className="w-full pl-8 pr-3 py-1 text-sm border-none outline-none font-montserrat"
                     />
                   </div>
@@ -294,7 +300,7 @@ function Navbar() {
                     type="submit"
                     className="ml-2 bg-[var(--color-sunset-red)] text-white px-3 py-1 rounded-md font-montserrat text-sm uppercase hover:bg-[var(--color-hover-red)]"
                   >
-                    Search
+                    {t('common.header.search')}
                   </button>
                 </form>
               )}
@@ -305,35 +311,35 @@ function Navbar() {
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
-              News
+              {t('common.header.news')}
             </NavLink>
             <NavLink
               to="/about"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
-              About Us
+              {t('common.header.aboutUs')}
             </NavLink>
             <NavLink
               to="/events"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
-              Events
+              {t('common.header.events')}
             </NavLink>
             <NavLink
               to="/work"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
-              Our Work
+              {t('common.header.ourWork')}
             </NavLink>
             <NavLink
               to="/contact"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
-              Contact
+              {t('common.header.contact')}
             </NavLink>
 
             <NavLink
@@ -341,7 +347,7 @@ function Navbar() {
               className="block py-3 mt-4 text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
               onClick={toggleMenu}
             >
-              Donate
+              {t('common.header.donate')}
             </NavLink>
 
             <SelectLanguageButton variant="withText" className="mt-2 w-full" />
