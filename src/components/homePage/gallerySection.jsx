@@ -1,16 +1,37 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
 
 export function GallerySection() {
   const { image: galleryImages } = data.gallery;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+   
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+   
+    checkIfMobile();
+    
+   
+    window.addEventListener('resize', checkIfMobile);
+    
+   
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+
+  const displayImages = isMobile ? galleryImages.slice(0, 8) : galleryImages;
 
   return (
-    <section className="w-full my-8 md:my-20 bg-white md:bg-[#B2CAC2]">
-      <div className="mx-auto max-w-[1200px] p-0 md:p-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4">
-          {galleryImages.map((src, idx) => (
-            <div key={idx} className="w-full h-[459px] md:h-[650px]">
+    <section className="w-full my-8 md:my-20 bg-white">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4">
+          {displayImages.map((src, idx) => (
+            <div key={idx} className="aspect-square w-full">
               <img
                 src={src}
                 alt="MMF Gallery"
@@ -20,11 +41,11 @@ export function GallerySection() {
             </div>
           ))}
         </div>
-        {/* Centered button at the bottom */}
-        <div className="flex justify-center mt-4">
+        
+        <div className="flex justify-center mt-6">
           <button
             type="button"
-            className="w-[285px] h-[57px] rounded-[9px] border border-black flex items-center justify-center font-[Montserrat] font-semibold text-[24px] leading-[100%] tracking-[0] capitalize"
+            className="w-[200px] md:w-[285px] h-[45px] md:h-[57px] px-4 md:px-10 py-2 md:py-4 border border-black cursor-pointer text-black font-bold rounded-lg"
           >
             SEE THE GALLERY
           </button>
