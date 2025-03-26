@@ -71,8 +71,11 @@ function Navbar() {
   }, []);
 
   const isHome = location.pathname === '/';
+  const isOurWork = location.pathname === '/work';
   const navbarBgClass =
-    isHome && !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
+    isHome || (isOurWork && !isScrolled && !isMobile)
+      ? 'bg-transparent'
+      : 'bg-white shadow';
 
   const getDesktopLinkClasses = ({ isActive }) =>
     `${
