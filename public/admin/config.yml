@@ -83,12 +83,12 @@ collections:
                   label: 'Email',
                   name: 'email',
                   widget: 'string',
-                  pattern: ['^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$', 'Must be a valid email']
+                  pattern: ['^[^@\\s]+@stud\\.noroff\\.no$', 'Must be a valid email with @stud.noroff.no domain']
                 }
               - {
                   label: 'Phone',
                   name: 'phone',
-                  widget: 'string'
+                  widget: 'number'
                 }
 
       - file: 'content/work/work.md'
@@ -110,7 +110,8 @@ collections:
           - {
               label: 'Featured Image',
               name: 'featured_image',
-              widget: 'image'
+              widget: 'image',
+              required: false
             }
           - label: 'Gallery'
             name: 'gallery'
@@ -118,7 +119,8 @@ collections:
             field: {
               label: 'Image',
               name: 'image',
-              widget: 'image'
+              widget: 'image',
+              required: false
             }
           - {
               label: 'Description',
@@ -264,12 +266,14 @@ collections:
       - {
           label: 'Featured Image',
           name: 'featured_image',
-          widget: 'image'
+          widget: 'image',
+          required: false
         }
       - {
           label: 'Excerpt',
           name: 'excerpt',
-          widget: 'text'
+          widget: 'text',
+          required: false
         }
       - {
           label: 'Content',
@@ -282,6 +286,7 @@ collections:
           name: 'tags',
           widget: 'list',
           field: {
+            name: 'tag',
             widget: 'string'
           }
         }
