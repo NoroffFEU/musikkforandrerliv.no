@@ -128,12 +128,14 @@ collections:
             field: {
               label: 'Name',
               name: 'name',
-              widget: 'string'
+              widget: 'string',
+              required: false
             }
           - {
               label: 'Results',
               name: 'results',
-              widget: 'markdown'
+              widget: 'markdown',
+              required: false
             }
 
       - file: 'content/employees/employees.md'
