@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 
@@ -14,9 +14,10 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const { t } = useTranslation();
+  //test test test
+  const [activeSection, setActiveSection] = useState('about');
 
-  const location = useLocation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const searchRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -70,19 +71,31 @@ function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const isHome = location.pathname === '/';
   const navbarBgClass =
-    isHome && !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
+    !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
 
-  const getDesktopLinkClasses = ({ isActive }) =>
-    `${
-      isActive
-        ? 'text-[var(--color-alt-forest-green)]'
-        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200'
-    } flex items-center font-montserrat text-[14px] font-semibold px-2`;
+  // desctop
 
-  const getMobileLinkClasses = () =>
-    'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] hover:bg-[var(--color-light-green)] hover:text-[#000000] transition-colors duration-200';
+  const getDesktopLinkClasses = (sectionId) => {
+    const isActive = activeSection === sectionId;
+    return (
+      (isActive
+        ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
+        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200') +
+      ' flex items-center font-montserrat text-[14px] font-semibold px-2'
+    );
+  };
+
+  // mobile
+  const getMobileLinkClasses = (sectionId) => {
+    const isActive = activeSection === sectionId;
+    return (
+      'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] transition-colors duration-200 ' +
+      (isActive
+        ? 'bg-[var(--color-light-green)] text-[#000000]'
+        : 'hover:bg-[var(--color-light-green)] hover:text-[#000000]')
+    );
+  };
 
   return (
     <>
@@ -92,7 +105,7 @@ function Navbar() {
         <div className="max-w-[1440px] mx-auto px-[54px] py-[32px] flex flex-wrap items-center gap-[10px] h-[199px]">
           <div
             className="flex-shrink-0 cursor-pointer"
-            onClick={() => navigate('/')}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <img
               src="/assets/placeholder-images/logo.png"
@@ -160,12 +173,12 @@ function Navbar() {
               )}
             </div>
 
-            <NavLink to="/news" className={getDesktopLinkClasses}>
+            <a href="#news" className={getDesktopLinkClasses('news')}>
               {t('common.header.news')}
-            </NavLink>
-            <NavLink to="/about" className={getDesktopLinkClasses}>
+            </a>
+            <a href="#about" className={getDesktopLinkClasses('about')}>
               {t('common.header.aboutUs')}
-            </NavLink>
+            </a>
 
             <div className="relative" ref={dropdownRef}>
               <button
@@ -190,34 +203,34 @@ function Navbar() {
 
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
-                  <NavLink
-                    to="/events"
+                  <a
+                    href="#events"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     {t('common.header.events')}
-                  </NavLink>
-                  <NavLink
-                    to="/work"
+                  </a>
+                  <a
+                    href="#work"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     {t('common.header.ourWork')}
-                  </NavLink>
-                  <NavLink
-                    to="/contact"
+                  </a>
+                  <a
+                    href="#contact"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     {t('common.header.contact')}
-                  </NavLink>
+                  </a>
                 </div>
               )}
             </div>
 
-            <NavLink
-              to="/donate"
+            <button
+              onClick={() => navigate('/donate')}
               className="ml-2 px-4 py-2 rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
             >
               {t('common.header.donate')}
-            </NavLink>
+            </button>
 
             <SelectLanguageButton variant="iconOnly" className="ml-2" />
           </div>
@@ -243,6 +256,7 @@ function Navbar() {
           </button>
         </div>
       </nav>
+
       {isMenuOpen && (
         <div className="fixed top-[199px] left-0 w-full bg-white z-40 md:hidden overflow-y-auto shadow-md">
           <div className="px-4 pt-4 pb-8 space-y-5">
@@ -306,49 +320,51 @@ function Navbar() {
               )}
             </div>
 
-            <NavLink
-              to="/news"
-              className={getMobileLinkClasses}
+            <a
+              href="#news"
+              className={getMobileLinkClasses('news')}
               onClick={toggleMenu}
             >
               {t('common.header.news')}
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={getMobileLinkClasses}
+            </a>
+            <a
+              href="#about"
+              className={getMobileLinkClasses('about')}
               onClick={toggleMenu}
             >
               {t('common.header.aboutUs')}
-            </NavLink>
-            <NavLink
-              to="/events"
-              className={getMobileLinkClasses}
+            </a>
+            <a
+              href="#events"
+              className={getMobileLinkClasses('events')}
               onClick={toggleMenu}
             >
               {t('common.header.events')}
-            </NavLink>
-            <NavLink
-              to="/work"
-              className={getMobileLinkClasses}
+            </a>
+            <a
+              href="#work"
+              className={getMobileLinkClasses('work')}
               onClick={toggleMenu}
             >
               {t('common.header.ourWork')}
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={getMobileLinkClasses}
+            </a>
+            <a
+              href="#contact"
+              className={getMobileLinkClasses('contact')}
               onClick={toggleMenu}
             >
               {t('common.header.contact')}
-            </NavLink>
+            </a>
 
-            <NavLink
-              to="/donate"
-              className="block py-3 mt-4 text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
-              onClick={toggleMenu}
+            <button
+              onClick={() => {
+                toggleMenu();
+                navigate('/donate');
+              }}
+              className="block py-3 mt-4 w-full text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
             >
               {t('common.header.donate')}
-            </NavLink>
+            </button>
 
             <SelectLanguageButton variant="withText" className="mt-2 w-full" />
           </div>
