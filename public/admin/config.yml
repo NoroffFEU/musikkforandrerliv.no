@@ -142,6 +142,59 @@ collections:
               widget: 'markdown'
             }
 
+      - file: 'content/employees/employees.md'
+        name: 'employees'
+        label: 'Employees/team'
+        fields:
+          - label: 'Employees'
+            name: 'employees'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            sortable: true
+            fields:
+              - {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Display order',
+                  name: 'order',
+                  widget: 'number',
+                  required: false,
+                }
+              - {
+                  label: 'Image',
+                  name: 'image',
+                  widget: 'image',
+                  required: true,
+                }
+              - {
+                  label: 'Bio',
+                  name: 'bio',
+                  widget: 'markdown',
+                  required: true,
+                }
+              - {
+                  label: 'Job Title',
+                  name: 'job_title',
+                  widget: 'string',
+                  required: true,
+                }
+              - label: 'Charity Roles'
+                name: 'charity_roles'
+                widget: 'list'
+                field: { label: 'Role', name: 'role', widget: 'string' }
+                required: false
+              - {
+                  label: 'Email',
+                  name: 'email',
+                  widget: 'string',
+                  required: false,
+                }
+
       - file: 'content/news/news.md'
         name: 'news-and-events'
         label: 'News and Events'
