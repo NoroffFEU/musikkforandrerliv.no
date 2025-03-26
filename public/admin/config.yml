@@ -282,6 +282,7 @@ collections:
           name: 'tags',
           widget: 'list',
           field: {
+            name: 'tag',
             widget: 'string'
           }
         }
