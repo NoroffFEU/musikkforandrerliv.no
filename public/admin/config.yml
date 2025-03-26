@@ -4,6 +4,14 @@ backend:
   branch: 719-Decap-CMS # Change to main ???
   local_backend: true
 
+  commit_messages:
+    create: "Create {{collection}} entry: '{{slug}}'"
+    update: "Update {{collection}} entry: '{{slug}}'"
+    delete: "Delete {{collection}} entry: '{{slug}}'"
+    uploadMedia: "Upload media file: '{{path}}'"
+    deleteMedia: "Delete media file: '{{path}}'"
+
+
 media_folder: 'public/assets/images'
 
 collections:
