@@ -4,32 +4,189 @@ backend:
   branch: 719-Decap-CMS # Change to main ???
   local_backend: true
 
-media_folder: "public/assets/images"
+media_folder: 'public/assets/images'
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/data/home.json"
-        name: "home"
-        label: "Home Page"
+      - file: 'content/home/home.md'
+        name: 'home'
+        label: 'Home Page'
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "markdown" }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+          - { label: 'Hero Image', name: 'hero_image', widget: 'image' }
+          - { label: 'Call to Action Text', name: 'cta_text', widget: 'string' }
+          - { label: 'Main Content', name: 'main_content', widget: 'markdown' }
 
-      - file: "content/support/support.md"
-        name: "support"
-        label: "Support Us"
+      - file: 'content/about/about.md'
+        name: 'about'
+        label: 'About Us Page'
         fields:
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
 
-  - label: "Blog"
-    name: "blog"
-    folder: "public/admin/_posts" # Temporary path
+      - file: 'content/work/work.md'
+        name: 'our-work'
+        label: 'Our Work Page'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+
+      - file: 'content/employees/employees.md'
+        name: 'employees'
+        label: 'Employees/team'
+        fields:
+          - label: 'Employees'
+            name: 'employees'
+            widget: 'list'
+            allow_add: true
+            collapsed: true
+            sortable: true
+            fields:
+              - {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Display order',
+                  name: 'order',
+                  widget: 'number',
+                  required: false,
+                }
+              - {
+                  label: 'Image',
+                  name: 'image',
+                  widget: 'image',
+                  required: true,
+                }
+              - {
+                  label: 'Bio',
+                  name: 'bio',
+                  widget: 'markdown',
+                  required: true,
+                }
+              - {
+                  label: 'Job Title',
+                  name: 'job_title',
+                  widget: 'string',
+                  required: true,
+                }
+              - label: 'Charity Roles'
+                name: 'charity_roles'
+                widget: 'list'
+                field: { label: 'Role', name: 'role', widget: 'string' }
+                required: false
+              - {
+                  label: 'Email',
+                  name: 'email',
+                  widget: 'string',
+                  required: false,
+                }
+
+      - file: 'content/news/news.md'
+        name: 'news-and-events'
+        label: 'News and Events'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+              label: 'Publish date',
+              name: 'date',
+              widget: 'datetime',
+              required: true,
+            }
+          - {
+              label: 'Featured Image',
+              name: 'featured_image',
+              widget: 'image',
+              required: false,
+            }
+          - {
+              label: 'Excerpt',
+              name: 'excerpt',
+              widget: 'text',
+              required: false,
+            }
+          - {
+              label: 'Content',
+              name: 'content',
+              widget: 'markdown',
+              required: true,
+            }
+          - label: 'Event Details'
+            name: 'event_details'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Location',
+                  name: 'location',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Start Time',
+                  name: 'start_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'End Time',
+                  name: 'end_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'Organizer',
+                  name: 'organizer',
+                  widget: 'string',
+                  required: false,
+                }
+          - label: 'Categories'
+            name: 'categories'
+            widget: 'list'
+            summary: '{{fields.category}}'
+            field: { label: 'Category', name: 'category', widget: 'string' }
+
+      - file: 'content/support/support.md'
+        name: 'support'
+        label: 'Support Us'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+
+      - file: 'content/contact'
+        name: 'contact'
+        label: 'Contact Page'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+
+  - label: 'Blog'
+    name: 'blog'
+    folder: 'content/blog'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: "Title", name: "title", widget: "string" } # Placeholder field - add necessary fields
-
-
-  # Add more collections as needed based on your content structure
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - {
+          label: 'Publish date',
+          name: 'date',
+          widget: 'datetime',
+          required: true,
+        }
+      - { label: 'Author', name: 'author', widget: 'string', required: true }
+      - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          required: true,
+        }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'list',
+          field: { name: 'tag', widget: 'string' },
+        }
