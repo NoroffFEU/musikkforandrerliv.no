@@ -1,9 +1,23 @@
+import React, { useEffect } from 'react';
+
+import { useLocation } from 'react-router-dom';
+
 import locales from '../../public/locales/locales.en.json';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LatestNews from '../components/LatestNews.jsx';
 
 function News() {
   const newsPosts = locales.screens.latestNews.posts;
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        section.scrollIntoView();
+      }
+    }
+  }, [location]);
 
   return (
     <ErrorBoundary>
