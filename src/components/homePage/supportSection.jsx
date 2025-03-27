@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
 
 import supportData from '../../data/support.json';
@@ -31,9 +31,9 @@ const SupportSection = () => {
             {supportData.content}
           </p>
           <div className="hidden gap-[20px] sm:flex sm:flex-row md:flex-col lg:flex-row">
-            <button className="inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer whitespace-nowrap">
+            <Link to="/placeholder" className="inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer whitespace-nowrap">
               READ MORE
-            </button>
+            </Link>
             <button className="inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer text-white bg-[var(--color-sunset-red)] border-[var(--color-sunset-red)]">
               DONATE
             </button>
