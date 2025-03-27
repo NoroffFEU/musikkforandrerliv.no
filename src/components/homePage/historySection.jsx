@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import data from '../../data/landing-page-content.json';
-
 export function HistorySection() {
-  const { image, title, content } = data.history;
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
 
@@ -64,7 +61,7 @@ export function HistorySection() {
         </div>
 
         <img
-          src={image}
+          src="../../../public/assets/placeholder-images/history.webp"
           alt="History of MMF"
           className="mx-auto w-full h-auto object-cover"
         />
