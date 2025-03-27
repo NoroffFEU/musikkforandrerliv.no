@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { useTranslation } from 'react-i18next';
 
 function Footer() {
@@ -56,14 +58,14 @@ function Footer() {
           </div>
 
           <div className="text-2xl flex flex-col col-start-1 md:col-start-2 gap-8">
-            <a>{t('common.footer.aboutUs')}</a>
-            <a>{t('common.footer.news')}</a>
-            <a>{t('common.footer.events')}</a>
+            <Link to="/about">{t('common.footer.aboutUs')}</Link>
+            <Link to="/news#newsSection">{t('common.footer.news')}</Link>
+            <Link to="/news#eventsSection">{t('common.footer.events')}</Link>
           </div>
           <div className="text-2xl flex flex-col col-start-1 md:col-start-3 gap-8">
-            <a>{t('common.footer.gallery')}</a>
-            <a>{t('common.footer.ourWork')}</a>
-            <a>{t('common.footer.contactUs')}</a>
+            <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
+            <Link to="/work">{t('common.footer.ourWork')}</Link>
+            <Link to="/contact">{t('common.footer.contactUs')}</Link>
           </div>
 
           <div className="col-start-2 md:col-start-4 row-start-1 mt-12 gap-4 flex flex-col">
@@ -75,15 +77,15 @@ function Footer() {
               {t('common.footer.followUs')}
             </p>
             <div>
-              <a>Facebook</a>
-              <a>Instagram</a>
+              <Link to="#">Facebook</Link>
+              <Link to="#">Instagram</Link>
             </div>
           </div>
         </div>
         <div className="absolute bottom-6 flex flex-col gap-4 m-0 items-center text-center">
           <div>
-            <a>{t('common.footer.privacyPolicy')}</a>
-            <a>{t('common.footer.termsAndConditions')}</a>
+            <Link to="#">{t('common.footer.privacyPolicy')}</Link>
+            <Link to="#">{t('common.footer.termsAndConditions')}</Link>
           </div>
 
           <p>© Musikkforandrerliv</p>
