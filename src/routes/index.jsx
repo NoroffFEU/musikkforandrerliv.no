@@ -12,6 +12,7 @@ import TestTranslations from '../pages/TestTranslations';
 import OurWork from '../pages/OurWork';
 import Placeholder from '../pages/PlaceHolder';
 
+
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -36,7 +37,7 @@ const AppRoutes = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/news" element={<News />} />
+              <Route path="/news" element={<News />} />     
               <Route path="/work" element={<OurWork />} />
               <Route path="/test-translations" element={<TestTranslations />} />
               <Route path="*" element={<NotFound />} />
