@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const ReusableButton = ({
   text,
@@ -8,16 +9,16 @@ const ReusableButton = ({
   type = 'button',
 }) => {
   const baseClasses =
-    'inline-block border border-black text-black font-freeman px-6 py-2 rounded cursor-pointer ' +
+    'inline-block border border-black text-black font-freeman px-[clamp(0.5rem,1.5vw,1.5rem)] py-[clamp(0.5rem,1.5vw,1rem)] rounded-lg cursor-pointer ' +
     'hover:bg-gray-100 hover:scale-105 transform transition duration-200 ' +
     'focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2';
 
   // if href then renders as a <a> tag
   if (href) {
     return (
-      <a href={href} className={`${baseClasses} ${className}`} aria-label={text}>
+      <Link to={href} className={`${baseClasses} ${className}`} aria-label={text}>
         {text}
-      </a>
+      </Link>
     );
   }
 
