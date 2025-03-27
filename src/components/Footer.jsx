@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 
+import Logo from '/assets/placeholder-images/logo.png';
+
 function Footer() {
   const { t } = useTranslation();
 
@@ -51,24 +53,24 @@ function Footer() {
 
       {/* Links */}
       <section className="h-[1069px] bg-(--color-dark-green) text-white md:h-[553px] flex flex-col items-center relative">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-center items-center mt-22 md:mt-24">
-          {/* Placeholder for logo */}
-          <div className="w-[170px] h-[170px] lg:h-[250px] lg:w-[250px] col-start-1">
-            LOGO
-          </div>
-
-          <div className="text-2xl flex flex-col col-start-1 md:col-start-2 gap-8">
+        <div className="grid grid-cols-2 sm:grid-rows-1 md:grid-cols-3 gap-4 justify-center items-center mt-22 md:mt-24">
+          {/* Placeholder for logo */}¨
+          <img
+            src={Logo}
+            alt="Musikkforandrerliv Logo"
+            className="w-[170px] h-[170px] lg:h-[250px] lg:w-[250px] col-start-1 row-start-1"
+          />
+          <div className="text-2xl flex flex-col col-start-1 md:col-start-2 md:row-start-1 gap-8">
             <Link to="/about">{t('common.footer.aboutUs')}</Link>
             <Link to="/news#newsSection">{t('common.footer.news')}</Link>
             <Link to="/news#eventsSection">{t('common.footer.events')}</Link>
           </div>
-          <div className="text-2xl flex flex-col col-start-1 md:col-start-3 gap-8">
+          <div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
             <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
             <Link to="/work">{t('common.footer.ourWork')}</Link>
             <Link to="/contact">{t('common.footer.contactUs')}</Link>
           </div>
-
-          <div className="col-start-2 md:col-start-4 row-start-1 mt-12 gap-4 flex flex-col">
+          <div className="col-start-2 md:col-start-4  row-start-1 mt-12 gap-4 flex flex-col">
             <button className="bg-(--color-sunset-red) h-[57px] w-[147px] font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1">
               {t('common.buttons.donate')}
             </button>
