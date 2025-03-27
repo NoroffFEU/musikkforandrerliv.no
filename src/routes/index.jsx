@@ -10,7 +10,7 @@ import News from '../pages/News';
 import NotFound from '../pages/NotFound';
 import TestTranslations from '../pages/TestTranslations';
 import OurWork from '../pages/OurWork';
-import Placeholder from '../pages/Placeholder';
+import Placeholder from '../pages/PlaceHolder';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
