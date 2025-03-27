@@ -1,10 +1,9 @@
 backend:
-  name: auth0
+  name: git-gateway
+  branch: 719-Decap-CMS # Change to main later?
+  identity_url: https://dev-cmq8w8lm3zi6bqvh.auth0.com
   auth_type: implicit
   app_id: vHM7lJvDfOjicuFHmq3Geac8KUgWYjCl
-  identity_url: https://dev-cmq8w8lm3zi6bqvh.auth0.com
-  repo: NoroffFEU/musikkforandrerliv.no
-  branch: 719-Decap-CMS # Change to main later?
 
 media_folder: 'public/uploads' # Where uploaded files will be stored
 public_folder: '/uploads' # Path to access uploaded files
