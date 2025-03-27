@@ -3,7 +3,7 @@
   publish = "dist"
 
 [secrets]
-omit_keys = ["AUTH0_CLIENT_ID"]
+secret_scan_omit_keys = ["AUTH0_CLIENT_ID"]
 
 [[redirects]]
   from = "/*"
