@@ -10,17 +10,12 @@ i18n
   .init({
     supportedLngs: ['en', 'no', 'mg'], // Supported languages
     fallbackLng: 'en', // Default language
-    debug: false, // ❌ Disable debug logs
+    debug: import.meta.env.DEV, // Debug mode only in development using Vite's env variable
     interpolation: {
       escapeValue: false, // React already escapes values
     },
     backend: {
-      loadPath: '/locales/{{lng}}.json', // Path to your translation files
-    },
-    resources: {
-      en: { translation: { greeting: 'Hello!' } }, // Temporary translations
-      no: { translation: { greeting: 'Hei!' } },
-      mg: { translation: { greeting: 'Miarahaba!' } },
+      loadPath: '/locales/locales.{{lng}}.json', // Path to your translation files
     },
   });
 

@@ -1,0 +1,665 @@
+{
+  "common": {
+    "_comment": "Buttons section - comment will be deleted later",
+    "buttons": {
+      "readMore": "Read more",
+      "signUp": "Sign up",
+      "donate": "Donate",
+      "send": "Send",
+      "submit": "Submit",
+      "support": "Support"
+    },
+
+    "card": {
+      "supportUs": {
+        "title": "Support Us",
+        "description": "The funds that come in go towards covering everything from food, clothing, education, equipment, healthcare, medicines, and dental care for the children, as well as the operation of the music school and salaries for our staff.\nThe families of the children are also included in the food program and receive monthly distributions of food and hygiene products.\nWe are constantly working to improve the living conditions of the children, and we use much of the surplus we have to repair houses and homes."
+      }
+    },
+
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+
+    "newsletter": {
+      "_comment": "Newsletter section - comment will be deleted later",
+      "title": "Sign up for our newsletter!",
+      "description": "Join our newsletter today to get the latest updates on our events and projects!"
+    },
+
+    "header": {
+      "_comment": "Section Header: This comment will be deleted later",
+      "search": "Search",
+      "news": "News",
+      "aboutUs": "About Us",
+      "more": "More",
+      "donate": "Donate"
+    },
+
+    "footer": {
+      "_comment": "Section Footer: This comment will be deleted later",
+      "aboutUs": "About Us",
+      "news": "News",
+      "events": "Events",
+      "gallery": "Gallery",
+      "ourWork": "Our Work",
+      "contactUs": "Contact Us",
+      "followUs": "Follow Us",
+      "privacyPolicy": "Privacy Policy",
+      "termsAndConditions": "Terms and Conditions"
+    }
+  },
+
+  "screens": {
+    "404": {
+      "title": "404",
+      "description": "Page not found"
+    },
+    "ourTermsAndConditions": {
+      "title": "Our Terms and Conditions",
+      "description": "",
+      "accordion": [
+        {
+          "title": "Acceptance of Terms",
+          "content": ""
+        },
+        {
+          "title": "Website Usage",
+          "content": ""
+        },
+        {
+          "title": "Links to Other Websites",
+          "content": ""
+        },
+        {
+          "title": "Warranty Disclaimer",
+          "content": ""
+        },
+        {
+          "title": "Limitation of Liability",
+          "content": ""
+        },
+        {
+          "title": "Indemnification",
+          "content": ""
+        },
+        {
+          "title": "Governing Law",
+          "content": ""
+        },
+        {
+          "title": "Changes",
+          "content": ""
+        }
+      ],
+      "section": {
+        "lawSection": {
+          "title": "Governing Law",
+          "description": "",
+          "updated": "Updated {{date}}"
+        }
+      }
+    },
+    "contact": {
+      "_comment": "Contact us page - delete later",
+      "title": "Contact Us",
+      "section": {
+        "ourMission": {
+          "title": "Our Mission",
+          "description": "The income is used to cover everything — from food, clothing, education, supplies, healthcare, medicine, and dental care for children, as well as running the music school and paying our staff. The children's families are also included in the food program, receiving monthly food supplies and hygiene products. We continuously strive to improve the children's living conditions, and most of the remaining aid is used for housing repairs."
+        }
+      }
+    },
+    "support": {
+      "_comment": "Support page - delete later",
+      "title": "Support",
+      "section": {
+        "funding": {
+          "title": "Where does our funding come from?",
+          "description": "MMF is a small community-based organization primarily supported by private donors in Norway. Regular donors (MMF supporters) provide financial stability and reliability. Additionally, we are fortunate to have many enthusiastic people who raise funds during special occasions such as birthdays and events. Besides private donors, our biggest supporter is Musikk Gir Liv (musicians from the Kristiansand Orchestra), providing funding for the music school's operation and sound equipment. In the last two years, Musikk Gir Liv visited Antsirabe with a group of musicians from the orchestra, teaching music to MMF children and participating in performances alongside the students."
+        },
+        "navigation": [
+          { "label": "Volunteering" },
+          { "label": "Donations" },
+          { "label": "Fundraising" }
+        ],
+        "support": {
+          "title": "Thank you for your support!",
+          "description": "The income is used to support everything — from food, clothing, education, supplies, healthcare, medicine, and dental care for children, as well as keeping the music school running and paying our staff. The children’s families are also included in the food program, receiving monthly food supplies and hygiene products. We continuously strive to improve the children's living conditions, and most of the remaining aid is used for housing repairs."
+        }
+      }
+    },
+    "history": {
+      "_comment": "History section - comment will be deleted later",
+      "title": "The History of MMF",
+      "description": "MMF was officially founded in Antsirabe, Madagascar, in 2021 by Eline Rodvelt Hansen and her husband Dina Rasalina Andriamanalina. The MMF story began in 2018 when Eline brought two fiddles to Madagascar with passion and hope. While studying fiddle at the Grieg Academy in Bergen, she dreamed of teaching children who lacked opportunities to develop their talents. Her dream became to establish a music school for the poorest children in Madagascar.",
+      "introduction": [
+        {
+          "title": "Let us introduce ourselves",
+          "description": "Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care and learning supplies, clothing and shelter."
+        },
+        {
+          "title": "A Holistic Approach to Education and Support",
+          "description": "Music lessons are so much more than just learning how to play an instrument. To our students the music school has become a place of safety, worthiness, and a notion of being cared for by the teachers and other students.\nThe transforming power of education and the strong communal sense have brought so many young children from the streets where they were involved in begging and violence – into classrooms with a safe and stimulating environment that nurtures their sense of purpose, self-worth and ability to change their lives for the better through learning."
+        },
+        {
+          "title": "Empowering Through Education",
+          "description": "Many of our students have never had the opportunity to go to school previously. Therefore, the teachers of MMF have organized some additional support for children who struggle with their homework – the initiative that has proven to have a great impact on the development, learning capacity and safety of the children.\nAs a result of the after-school academic support, children who previously could not read or write are now proving successful academic and social development.\nWith a special emphasis on female education and gender equality we strive to empower the girls through music and general education to have an increased control over their lives though making better informed decisions."
+        },
+        {
+          "title": "Sustainable Growth and Community impact",
+          "description": "Providing a safe, caring and supportive environment we see how the girls and young women further inspire their parents to live healthier, more stable lives. As such, we witness an intergenerational transformation that education has a power to set in motion– and that inspires us to continue to work with dedication, passion and commitment.\nSince 2021 Mozika Manova Fiainana registered as an NGO and has an independent board of directors, supporting over 60 children. As we are expanding our teaching capacities, we are happy to be working with the local music teachers and creating new local jobs."
+        },
+        {
+          "supportedBy": {
+            "description": "MFF is supported by\n“The Friends Association of the Music School in Madagascar”\nMartin Fröst Foundation\nSt. Johannes menighet, Stavanger\nForeningen Musikk gir liv, Kristiansand\nBuffet Crampon, Paris"
+          }
+        },
+        {
+          "title": "Support and future goals",
+          "description": "Our teachers offer lessons on traditional Malagasy instruments, percussion, dance and singing, classical guitar, double bass, visual arts, music theory, and chamber music — alongside violin, viola, cello, and piano. We also aim to introduce flute and clarinet lessons by 2022."
+        }
+      ],
+      "conclusion": {
+        "title": "Conclusion: A Model for Change",
+        "description": "When we see the remarkable transformation brought by our projects within the local community, we hope to inspire our students to become independent, responsible, and skilled individuals who contribute to positive regional development."
+      }
+    },
+
+    "ourWork": {
+      "_comment": "Our Work section - comment will be deleted later",
+
+      "title": "Our Work",
+      "description": "In Madagascar, child mortality is high, and many children die from diseases that could be easily treated with modern medicine. Common causes include infectious diseases such as respiratory infections, fever, gastrointestinal illnesses, and malaria. Madagascar also has one of the highest rates of malaria in the world, alongside other epidemics and pandemics that have been eradicated in other countries. Many people must travel long distances to reach the nearest clinic or hospital, and medical costs are expensive. As a result, they often delay seeking help until it is too late. Many of the children we meet on the streets suffer from serious health problems, and a large number of them endure severe malnutrition.",
+
+      "topics": [
+        {
+          "title": "Healthcare",
+          "description": "In Madagascar, child mortality is high and many die from diseases that can be easily treated with modern medicine. Typical causes are infectious diseases such as pneumonia, tuberculosis, diarrheal diseases and malaria. The country also has one of the highest incidences of plague in the world, as well as epidemics and pandemics that have otherwise been fought in other countries. Many have a long way to the nearest clinic and/or hospital, and the costs are high. They therefore do not seek help until it is too late. Many of the children we meet on the streets often have major health challenges, and several suffer from severe malnutrition."
+        },
+        {
+          "title": "Education",
+          "description": "Schooling gives children hope for the future. When children lack basic knowledge and skills, they have limited opportunities. Education helps break the cycle of poverty and is a vital tool in combating poverty. The main goal of MMF is for children to become independent adults with their own income in the future. Therefore, it is important to facilitate the success and well-being of children in school."
+        },
+        {
+          "title": "Living Situation",
+          "description": "Many of the children we enroll as students in MMF live on the streets when we first meet them. The reason they live on the streets is poverty. These children are left to fend for themselves, and older children often take on the responsibility of caring for younger siblings. Life on the streets is extremely tough, and every day is a struggle for survival. During the day, children spend a lot of energy begging for money and searching for food. As night falls, it's important to find a safe place to sleep for the night. Nights can be cold and dangerous, and the children huddle together to keep warm."
+        },
+        {
+          "title": "Food Distribution",
+          "description": "Despite Madagascar being known for its lush climate, the country has been affected by natural disasters and the worst drought in decades, attributed to climate change. This has resulted in crop failure, leading to food crises and famine. Parents struggle to provide enough food and clean water for their children. When families cannot feed their children, sending them out to beg becomes the only option for survival. Children living on the streets spend a lot of time and energy searching for food scraps and often have to resort to scavenging through others' garbage."
+        },
+        {
+          "title": "Music Lessons",
+          "description": "Meeting basic needs is crucial, but we also recognize that children need more. They need motivation, inspiration, joy, something to aspire to, new thoughts, and a belief that something else is possible. This brings us to the essence of the project: music. Studies show that when listening to and learning new music, new brain cells and connections are created. Research also shows that music enhances memory. Parents in MMF observe that their children perform better in school after they start playing an instrument. Collaboration is also particularly valuable, teaching children to cooperate, listen to each other, and express themselves."
+        },
+        {
+          "title": "Future Goals",
+          "description": "One of our goals is to make MMF larger and more well-known so that we can include more children living tough lives on the streets. The main goal is for all children in Antsirabe to have enough food, clothing, experience care, have a safe and good home, attend school, and have the opportunity to develop their talents. It is important for us that the assistance we provide contributes to independence. The goal is for children to attend school and develop their talents so that one day they will become assets in their own communities, find employment, and stand on their own feet."
+        },
+        {
+          "title": "Activities",
+          "description": "Children growing up in poverty in Antsirabe often have significant responsibilities from a very young age. They take care of younger siblings, cook meals, and are tasked with earning money for the family through begging. Sometimes, children are also assigned physically demanding tasks such as carrying sacks of rice or pushing heavy water cans, receiving little to no pay for their work. Entrusting adults with the responsibility of caring for their own children is an important part of our work. Children should get to be children! Therefore, play is an essential part of everyday life at MMF."
+        }
+      ]
+    },
+
+    "staff": {
+      "_comment": "Section Our Staff Overview: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Our Staff",
+      "members": [
+        {
+          "name": "Eline Rodvelt Hansen",
+          "occupation": "Violin Teacher",
+          "description": "Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres."
+        },
+        {
+          "name": "Dina Rasalina Andriamanalina",
+          "occupation": "Piano Teacher",
+          "description": "Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood. However, it was eventually the piano that became his dominant instrument."
+        },
+        {
+          "name": "Karoline Hartvigsen",
+          "occupation": "Nurse",
+          "description": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo. Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen."
+        },
+        {
+          "name": "Thea Harbo",
+          "occupation": "Nurse",
+          "description": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger. She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet."
+        }
+      ]
+    },
+
+    "staffDetails": {
+      "_comment": "Section Detailed Staff Page: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Our Staff",
+      "members": [
+        {
+          "name": "Eline Rodvelt Hansen",
+          "occupation": "Violin Teacher",
+          "description": "Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres.\nAdditionally, she is a dedicated violin teacher. With two violins, she went to Madagascar with a desire to start a music school to help children out of poverty.\nIn Antsirabe, she met her husband, Dina, who was also a musician and shared a similar dream. Together, they founded MMF in 2021 and now lead the work together.\nIn addition, Eline works as a violin teacher at the music school, and she follows up ensembles and students on several instruments. Eline is also the leader of the Norwegian board of MMF.",
+          "roles": ["MMF Co-Founder, Madagascar", "MMF Board Leader, Norway"],
+          "email": "e-mail@mmf.no"
+        },
+        {
+          "name": "Dina Rasalina Andriamanalina",
+          "occupation": "Piano Teacher",
+          "description": "Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood.\nHowever, it was eventually the piano that became his dominant instrument. In London, he studied music technology and eventually worked in a music studio.\nWith enthusiasm for children and development work, he returned to Madagascar, where he has been, among other roles, a project manager for international aid projects.\nHe now leads the work of MMF alongside Eline, in addition to teaching piano and traditional Malagasy music and dance in the project.",
+          "roles": ["MMF Co-Founder, Madagascar"],
+          "email": "e-mail@mmf.no"
+        },
+        {
+          "name": "Karoline Hartvigsen",
+          "occupation": "B.A. Nursing (2017)",
+          "description": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo.\nBefore her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen.\nIn connection with this, she traveled to Bolivia to conduct fieldwork at an orphanage focusing on the children's quality of life.\nKaroline has always had a great interest and commitment to humanitarian work and has volunteered as a nurse at a public hospital in Madagascar alongside Thea.\nShe is now the deputy leader of the Norwegian board of MMF and helps coordinate the work done from Norway.",
+          "roles": ["MMF Board Deputy Leader", "Project Coordinator, Norway"],
+          "email": "e-mail@mmf.no"
+        },
+        {
+          "name": "Thea Harbo",
+          "occupation": "B.A. Nursing (2017)",
+          "description": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger.\nShe has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet, and currently works full-time in a specially adapted department in a kindergarten.\nShe has extensive experience working with children and enjoys it.\nThea is a board member of MMF and is responsible for the finances of the project. She volunteers for the project and is responsible for the work carried out in Norway.",
+          "roles": ["MMF Board Member", "Project Manager, Norway"],
+          "email": "e-mail@mmf.no"
+        }
+      ]
+    },
+
+    "volunteer": {
+      "_comment": "Section Volunteer: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Volunteer",
+      "description": "Would you like to make a difference for street children in one of the world's poorest countries? We are looking for individuals who want to volunteer with us in Madagascar.\nPrimarily, we are seeking those with an interest in or education related to music. We find that students greatly benefit from instruction by professional musicians."
+    },
+
+    "supportUs": {
+      "_comment": "Section Support Us: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Support Us",
+      "description": "The funds that come in go towards covering everything from food, clothing, education, equipment, healthcare, medicines, and dental care for the children, as well as the operation of the music school and salaries for our staff. The families of the children are also included in the food program and receive monthly distributions of food."
+    },
+
+    "galleryPreview": {
+      "_comment": "Section Gallery Preview: This comment will be deleted later ( needs translation to malagasy )",
+      "button": "See the Gallery"
+    },
+
+    "upcomingEventsPreview": {
+      "_comment": "Section Upcoming Events Preview: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Upcoming Events",
+      "events": [
+        {
+          "date": "May 20, 2024",
+          "title": "MMF  Annual  Charity  Concert"
+        },
+        {
+          "date": "June 10, 2024",
+          "title": "Run for Music 5K Charity Race"
+        },
+        {
+          "date": "July 15, 2024",
+          "title": "MMF Culture and Arts Festival"
+        },
+        {
+          "date": "August 25, 2024",
+          "title": "Back-to-School Fundraiser Gala"
+        },
+        {
+          "date": "November 25, 2024",
+          "title": "Holiday Giving Campaign Kickoff"
+        }
+      ]
+    },
+
+    "latestNews": {
+      "_comment": "Section Latest News: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Latest News",
+      "posts": [
+        {
+          "newsPost": "News Post",
+          "title": "MMF Culture and Arts Festival",
+          "writtenBy": "Written by ChatGPT",
+          "location": "Antsirabe,",
+          "date": "July 15, 2023",
+          "description": "The MMF Culture and Arts Festival was a vibrant celebration of unity, showcasing the profound impact of music and art. Nestled in the picturesque city of Antsirabe, Madagascar, the event went beyond being just a festival; it was a heartfelt homage to the resilience, joy, and creativity of the children and communities we champion. The lively performances and art exhibitions ignited a sense of belonging, highlighting the blossoming talents within these communities. Through engaging workshops and collective projects, the festival offered a platform for attendees, particularly the youth, to unlock their creative capabilities."
+        },
+        {
+          "newsPost": "News Post",
+          "title": "Stars Align for Madagascar at Paris Benefit Concert",
+          "writtenBy": "written by ChatGPT",
+          "location": "Paris, France,",
+          "date": "June 22, 2023",
+          "description": "Last night, some of the world's most beloved musicians came together for a benefit concert, 'Voices for Madagascar,' to support the Music Changes Lives School. Held at the iconic La Seine Musicale, the event featured performances that spanned genres and generations, from classical to contemporary pop. The concert not only highlighted the universal language of music but also raised significant funds and awareness for music education in Madagascar. The event was a resounding success, with all proceeds going directly to the school, ensuring that music continues to change lives on the island."
+        },
+        {
+          "newsPost": "News Post",
+          "title": "Malagasy Students Win Big at Youth Music Festival",
+          "writtenBy": "written by ChatGPT",
+          "location": "Barcelona, Spain,",
+          "date": "August 8, 2023",
+          "description": "Students from the Music Changes Lives School in Madagascar took the world stage by storm at the International Youth Music Festival in Barcelona. Competing against young musicians from around the globe, the Malagasy contingent wowed audiences and judges alike with their skill, passion, and unique blend of traditional and modern musical influences. Their performances earned them several awards and international recognition, shining a spotlight on the talent being nurtured at the Music Changes Lives School and underscoring the importance of supporting music education worldwide."
+        },
+        {
+          "newsPost": "News Post",
+          "title": "Music School Launches 'Melody Masters' App",
+          "writtenBy": "written by Chat GPT",
+          "location": "Antananarivo,",
+          "date": "November 30, 2023",
+          "description": "In a move to harness technology for education, the Music Changes Lives School has launched an innovative new app, 'Melody Masters', designed to bring music education to students across Madagascar and beyond.\nThe app combines interactive lessons, games, and virtual performances to make learning music accessible and fun for children everywhere, especially in remote areas with limited access to traditional music education.\nDeveloped in partnership with leading tech companies, 'Melody Masters' represents a significant step forward in the school's mission to make music education universally accessible, empowering students to explore their musical potential regardless of their circumstances."
+        }
+      ]
+    },
+
+    "upcomingEvents": {
+      "_comment": "Section Upcoming Events: This comment will be deleted later ( needs translation to malagasy )",
+      "title": "Upcoming Events",
+      "events": [
+        {
+          "date": "September 1, 2024",
+          "title": "Back-to-School Fundraiser Gala",
+          "description": "A sophisticated gala event to celebrate the beginning of the new school year, featuring student performances, a keynote speaker on the importance of music education, and a fundraising auction."
+        },
+        {
+          "date": "May 10, 2024",
+          "title": "Run for Music 5k Charity Race",
+          "description": "A fun and energetic 5K run where participants are encouraged to dress as their favorite musicians or music icons. Live bands along the route will keep the energy high."
+        },
+        {
+          "date": "July 20, 2024",
+          "title": "Harmony Under the Stars",
+          "description": "An enchanting outdoor concert featuring local and international artists, blending traditional Malagasy music with other world genres. Attendees will enjoy a night of musical diversity under the open sky."
+        },
+        {
+          "date": "August 15, 2024",
+          "title": "Tunes and Taste Festival",
+          "description": "A day-long festival celebrating the rich culture of Madagascar through its music, food, and arts. Includes live performances, food stalls, and workshops."
+        },
+        {
+          "date": "September 10, 2024",
+          "title": "Voices for Education",
+          "description": "A virtual concert live-streamed globally, featuring performances by renowned musicians and speeches by advocates for music education."
+        },
+        {
+          "date": "October 5, 2024",
+          "title": "Rhythms of Hope Gala",
+          "description": "An elegant evening event with a dinner, live music, and a silent auction of art and memorabilia, aimed at raising funds for scholarships and school improvements."
+        },
+        {
+          "date": "November 25, 2024",
+          "title": "Holiday Giving Campaign ",
+          "description": "Launch a season of giving with a concert and community gathering. This event will feature holiday music from around the world and launch a campaign for donations of instruments and funds."
+        },
+        {
+          "date": "November 1, 2024",
+          "title": "Music Marathon",
+          "description": "A 12-hour music marathon where bands and solo artists perform non-stop. Audiences can come and go, with tickets sold at the door and proceeds going to the school."
+        },
+        {
+          "date": "November 1, 2024",
+          "title": "Jam for Education",
+          "description": "An interactive event where attendees participate in music workshops, jam sessions, and a large communal performance, showcasing the power of music to unite and educate."
+        },
+        {
+          "date": "January 22, 2025",
+          "title": "Classic for a Cause",
+          "description": "A classical music concert featuring local orchestras and choirs, with performances of both Western classical pieces and arrangements of traditional Malagasy songs."
+        },
+        {
+          "date": "February 18, 2025",
+          "title": "Rock the School",
+          "description": "A rock and pop concert aimed at a younger audience, with all proceeds going towards modernizing the school's music technology and equipment."
+        },
+        {
+          "date": "March 15 - 20, 2025",
+          "title": "Jazz Nights",
+          "description": "A series of jazz evenings held at various venues around the city, with local and international jazz musicians. Each night dedicated to a different jazz genre, supporting music education with style."
+        }
+      ]
+    },
+
+    "posts": {
+      "_comment": "Section posts for MMF Culture and Arts Festival Post: This comment will be deleted later ( needs translation to malagasy )",
+      "post_mmfCultureAndArtsFestival": {
+        "title": "MMF Culture and Arts Festival",
+        "newsPost": "News Post",
+        "date": "July 15, 2023",
+        "writtenBy": "written by Chat GPT",
+        "topics": [
+          {
+            "title": "Celebrating the Heartbeat of Madagascar",
+            "description": "July 15, 2023, marked a day of vibrant celebration, unity, and the transformative power of music and art at the MMF Culture and Arts Festival. Held in the picturesque surroundings of Antsirabe, Madagascar, the festival was more than just an event; it was a testament to the resilience, joy, and creative spirit of the children and communities we serve."
+          },
+          {
+            "title": "A Day to Remember",
+            "description": "From the early hours, the air buzzed with anticipation as visitors from near and far gathered, eager to immerse themselves in the rich tapestry of Malagasy culture. The festival kicked off with a traditional welcome dance, performed by the children of MMF, setting the tone for a day filled with laughter, music, and collective joy."
+          },
+          {
+            "title": "A Symphony of Sights and Sounds",
+            "description": "The festival grounds came alive with a plethora of activities and performances. Stages showcased the talents of MMF students alongside local artists, each performance a story told through rhythm and melody. Workshops on traditional dance, crafts, and musical instruments offered hands-on experiences, bridging generations and cultures."
+          },
+          {
+            "title": "Featuring local artists",
+            "description": "A highlight was the art exhibit, featuring works created by MMF students and local artists, illustrating their hopes, dreams, and the shared journey of growth and empowerment. The vibrant colors and intricate patterns spoke volumes of the talent and potential that thrives within the hearts of these young artists."
+          }
+        ],
+
+        "published": {
+          "label": "Published:",
+          "date": "July 15, 2023"
+        },
+
+        "buttons": {
+          "like": "Like",
+          "share": "Share",
+          "nextPost": "Next Post"
+        }
+      }
+    },
+
+    "events": {
+      "_comment": "Section events for the Back-to-School Fundraiser Gala Event: This comment will be deleted later ( needs translation to malagasy )",
+      "event_backToSchoolGala": {
+        "title": "Join Us for the Back-to-School Fundraiser Gala",
+        "event": "Event",
+        "date": "Date: August 25, 2024",
+        "location": "Location: Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar",
+        "description": "As summer winds down and the anticipation of a new school year begins, Music Makes Futures (MMF) invites you to an evening filled with elegance, inspiration, and purpose. Mark your calendars for August 25, 2024, as we host our annual Back-to-School Fundraiser Gala at the prestigious Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar. This gala isn't just an event; it's a celebration of hope, a testament to the power of education, and a night that promises to make a significant difference in the lives of children in Madagascar.",
+        "topics": [
+          {
+            "title": "Why Attend?",
+            "description": "The Back-to-School Fundraiser Gala is more than a gathering; it's a pivotal moment where you can directly impact the educational journey of countless children. Every ticket purchased, every auction item bid on, and every donation made during the gala will go directly towards supporting MMF's comprehensive education programs. From school supplies and tuition fees to teacher salaries and educational materials, your support will lay the foundation for a brighter, more promising future for the children we serve."
+          },
+          {
+            "title": "What to Expect?",
+            "description": "Elegant Dining Experience: Enjoy a gourmet dinner prepared by some of the finest chefs in Madagascar, accompanied by a selection of exquisite wines and beverages.\nSilent Auction: Bid on an array of unique items and experiences, with all proceeds going directly towards our educational initiatives.\nInspiring Speeches: Hear firsthand from the founders of MMF, educators, and the children whose lives you've touched, sharing stories of hope and triumph.\nLive Entertainment: The evening will feature breathtaking performances by MMF students, showcasing the talents nurtured through your support.\nNetworking: Mingle with like-minded individuals, philanthropists, and community leaders who share your passion for making a difference."
+          },
+          {
+            "title": "How Can You Support?",
+            "description": "Purchase a Ticket: Secure your spot at this unforgettable evening and be part of the change.\nSponsor a Table: Gather friends, family, or colleagues for a special night out and amplify your impact.\nDonate: If you're unable to attend, consider making a donation to support MMF's mission. Every contribution, big or small, makes a difference.\nVolunteer: Lend your time and skills to make the gala a resounding success."
+          },
+          {
+            "title": "Details at a Glance:",
+            "description": "Date: August 25, 2024\nTime: 6:00 PM - 11:00 PM\nDress Code: Formal Attire\nTickets: [Link to purchase tickets or reservation details]"
+          }
+        ],
+
+        "additionalInfo": {
+          "paragraph": "Your presence and support at the Back-to-School Fundraiser Gala will echo in the classrooms and futures of the children we serve. Together, we can ensure that education, the most powerful tool for change, is within their reach.\nFor more information, to purchase tickets, or to make a donation, please visit MMF's website or contact us.\nWe look forward to welcoming you to an evening of celebration, hope, and impact. Let's make this back-to-school season a turning point for children who dream of a brighter tomorrow.\nMusic Makes Futures (MMF) - Transforming lives through the power of education and music. Join us, because every child deserves a chance to succeed."
+        },
+
+        "buttons": {
+          "like": "Like",
+          "share": "Share",
+          "previousEvent": "Previous Event",
+          "nextEvent": "Next Event"
+        }
+      }
+    },
+
+    "thankYouMessage": {
+      "title": "Thank you for your support!"
+    },
+
+    "privacyPolicy": {
+      "_comment": " ( needs translation to malagasy ) ",
+      "title": "Our Privacy Policy",
+      "description": "",
+      "sections": [
+        {
+          "title": "Scope"
+        },
+        {
+          "title": "Data We Collect"
+        },
+        {
+          "title": "Data We Don't Collect"
+        },
+        {
+          "title": "Use of Information"
+        },
+        {
+          "title": "Data Security"
+        },
+        {
+          "title": "Third Party Links"
+        },
+        {
+          "title": "Children's Privacy"
+        },
+        {
+          "title": "Changes to Our Privacy"
+        },
+        {
+          "title": "Governing Law",
+          "description": ""
+        }
+      ],
+      "updated": "Updated: 00 / 00 / 00"
+    }
+  },
+
+  "forms": {
+    "contact": {
+      "_comment": "Contact section - comment will be deleted later",
+      "title": "Contact Information",
+      "fields": {
+        "name": {
+          "label": "Your Name",
+          "error": "(error message here)"
+        },
+        "email": {
+          "label": "Email",
+          "error": "(error message here)"
+        },
+        "subject": {
+          "label": "Subject",
+          "error": "(error message here)"
+        },
+        "message": {
+          "label": "Your Message",
+          "error": "(error message here)"
+        }
+      }
+    },
+
+    "support": {
+      "_comment": "Support section - comment will be deleted later",
+      "title": "Support",
+      "contactInfo": {
+        "fields": {
+          "name": {
+            "label": "First Name",
+            "error": "(error message here)"
+          },
+          "lastName": {
+            "label": "Last Name",
+            "error": "(error message here)"
+          },
+          "email": {
+            "label": "Email",
+            "error": "(error message here)"
+          },
+          "phone": {
+            "label": "Phone Number",
+            "error": "(error message here)"
+          },
+          "address": {
+            "label": "Address",
+            "error": "(error message here)"
+          },
+          "postalCode": {
+            "label": "Postal Code",
+            "error": "(error message here)"
+          },
+          "city": {
+            "label": "City",
+            "error": "(error message here)"
+          },
+          "country": {
+            "label": "Country",
+            "error": "(error message here)"
+          }
+        }
+      }
+    },
+
+    "paymentPlan": {
+      "_comment": "Payment plan section - comment will be deleted later",
+      "title": "Choose Your Plan",
+      "fields": {
+        "oneTimePay": {
+          "label": "One-Time Payment",
+          "error": "(error message here)"
+        },
+        "monthlyPay": {
+          "label": "Monthly Donation",
+          "error": "(error message here)"
+        }
+      }
+    },
+
+    "paymentMethod": {
+      "_comment": "Payment method section - comment will be deleted later",
+      "title": "Select payment method",
+      "fields": {
+        "creditCard": {
+          "label": "Credit Card",
+          "error": "(error message here)"
+        },
+        "debitCard": {
+          "label": "Debit Card",
+          "error": "(error message here)"
+        },
+        "vipps": {
+          "label": "Vipps",
+          "error": "(error message here)"
+        }
+      }
+    },
+
+    "termsAndPrivacy": {
+      "_comment": "Terms and Privacy section - comment will be deleted later",
+      "label": "By clicking Submit, you agree to the Terms and Conditions and have read the Privacy Policy."
+    }
+  }
+}
