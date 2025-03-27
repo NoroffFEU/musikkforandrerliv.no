@@ -61,7 +61,7 @@ function Footer() {
           />
           <div className="text-2xl flex flex-col col-start-1 md:col-start-2 md:row-start-1 gap-8">
             <Link to="/about">{t('common.footer.aboutUs')}</Link>
-            <Link to="/news#newsSection">{t('common.footer.news')}</Link>
+            <Link to="/news#latestNewsSection">{t('common.footer.news')}</Link>
             <Link to="/news#eventsSection">{t('common.footer.events')}</Link>
           </div>
           <div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
