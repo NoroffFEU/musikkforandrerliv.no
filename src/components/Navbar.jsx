@@ -14,7 +14,6 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  //test test test
   const [activeSection, setActiveSection] = useState('about');
 
   const { t } = useTranslation();
@@ -32,6 +31,15 @@ function Navbar() {
       navigate(`/search?q=${searchTerm}`);
       setIsSearchOpen(false);
       setSearchTerm('');
+      setIsMenuOpen(false);
+    }
+  };
+
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     }
   };
@@ -71,10 +79,35 @@ function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionIds = ['news', 'about', 'events', 'work', 'contact'];
+      let currentSection = 'about';
+
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 120 && rect.bottom >= 120) {
+            currentSection = id;
+            break;
+          }
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const navbarBgClass =
     !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
 
-  // desctop
+  // desktop
 
   const getDesktopLinkClasses = (sectionId) => {
     const isActive = activeSection === sectionId;
@@ -173,10 +206,19 @@ function Navbar() {
               )}
             </div>
 
-            <a href="#news" className={getDesktopLinkClasses('news')}>
+            <a
+              href="#news"
+              onClick={(e) => scrollToSection(e, 'news')}
+              className={getDesktopLinkClasses('news')}
+            >
               {t('common.header.news')}
             </a>
-            <a href="#about" className={getDesktopLinkClasses('about')}>
+
+            <a
+              href="#about"
+              onClick={(e) => scrollToSection(e, 'about')}
+              className={getDesktopLinkClasses('about')}
+            >
               {t('common.header.aboutUs')}
             </a>
 
@@ -205,18 +247,23 @@ function Navbar() {
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
                   <a
                     href="#events"
+                    onClick={(e) => scrollToSection(e, 'events')}
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     {t('common.header.events')}
                   </a>
+
                   <a
                     href="#work"
+                    onClick={(e) => scrollToSection(e, 'work')}
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     {t('common.header.ourWork')}
                   </a>
+
                   <a
                     href="#contact"
+                    onClick={(e) => scrollToSection(e, 'contact')}
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     {t('common.header.contact')}
@@ -322,36 +369,40 @@ function Navbar() {
 
             <a
               href="#news"
+              onClick={(e) => scrollToSection(e, 'news')}
               className={getMobileLinkClasses('news')}
-              onClick={toggleMenu}
             >
               {t('common.header.news')}
             </a>
+
             <a
               href="#about"
+              onClick={(e) => scrollToSection(e, 'about')}
               className={getMobileLinkClasses('about')}
-              onClick={toggleMenu}
             >
               {t('common.header.aboutUs')}
             </a>
+
             <a
               href="#events"
+              onClick={(e) => scrollToSection(e, 'events')}
               className={getMobileLinkClasses('events')}
-              onClick={toggleMenu}
             >
               {t('common.header.events')}
             </a>
+
             <a
               href="#work"
+              onClick={(e) => scrollToSection(e, 'work')}
               className={getMobileLinkClasses('work')}
-              onClick={toggleMenu}
             >
               {t('common.header.ourWork')}
             </a>
+
             <a
               href="#contact"
+              onClick={(e) => scrollToSection(e, 'contact')}
               className={getMobileLinkClasses('contact')}
-              onClick={toggleMenu}
             >
               {t('common.header.contact')}
             </a>
