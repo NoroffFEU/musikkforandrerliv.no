@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,33 @@
     />
   </head>
   <body>
-    <h1>i am working yo</h1>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- set manual before script  -->
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <!-- Build script -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <!--  -->
+    <script>
+      // Initialize the CMS with a local backend for development // forced
+      if (window.location.hostname === 'localhost') {
+        window.netlifyIdentity = false; // Disable identity if it exists
+        window.CMS.init({
+          config: {
+            backend: {
+              name: 'test-repo',
+            },
+            media_folder: 'content/gallery',
+            public_folder: 'content/gallery',
+            // collections config will be loaded from config.yml
+          },
+        });
+      } else {
+        // In production, use default init
+        window.CMS.init();
+      }
+    </script>
+
+    <!-- <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script> -->
   </body>
 </html>

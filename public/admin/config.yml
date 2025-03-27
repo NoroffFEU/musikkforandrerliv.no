@@ -1,8 +1,11 @@
 backend:
-  name: github
-  repo: NoroffFEU/musikkforandrerliv.no
-  branch: 719-Decap-CMS # Change to main ???
-  local_backend: true
+name: 'test-repo'
+local_backend:
+  true
+  # name: github
+  # repo: NoroffFEU/musikkforandrerliv.no
+  # branch: 719-Decap-CMS # Change to main ???
+  # local_backend: true
 
 media_folder: 'public/assets/images'
 
