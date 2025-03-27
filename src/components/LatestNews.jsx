@@ -1,4 +1,5 @@
 import React from "react";
+import ReadMore from "./Readmore";
 
 const LatestNews = ({ newsPost, writtenBy, location, date, title, content, image }) => {
   return (
@@ -21,12 +22,8 @@ const LatestNews = ({ newsPost, writtenBy, location, date, title, content, image
                 <p className="text-gray-500 text-sm capitalize">{date}</p>
               </div>
             </div>
-            <p className="text-gray-600 mb-4 mt-6">{content}</p>
-          <button className="font-semibold hover:underline">
-            Read More
-          </button>
-          {/* Button wil be replace with read more component later */}
-        </div>
+            <ReadMore summary={content.slice(0, 120) + "..."} content={content} />
+            </div>
       </div>
     </article>
   );
