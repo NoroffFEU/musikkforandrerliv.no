@@ -54,7 +54,6 @@ function Footer() {
       {/* Links */}
       <section className="h-[1069px] bg-(--color-dark-green) text-white md:h-[553px] flex flex-col items-center relative">
         <div className="grid grid-cols-2 sm:grid-rows-1 md:grid-cols-3 gap-4 justify-center items-center mt-22 md:mt-24">
-          {/* Placeholder for logo */}¨
           <img
             src={Logo}
             alt="Musikkforandrerliv Logo"
