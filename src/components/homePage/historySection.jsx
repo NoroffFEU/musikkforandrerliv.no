@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import data from '../../data/landing-page-content.json';
 
 export function HistorySection() {
   const { image, title, content } = data.history;
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
@@ -31,7 +34,6 @@ export function HistorySection() {
   return (
     <section className="bg-white w-full py-[78px] px-[24px] relative">
       <div className="max-w-[960px] mx-auto flex flex-col items-center gap-[32px]">
-        {/* Heading */}
         <h2
           className="
             [font-family:var(--font-justAnotherHand)]
@@ -40,15 +42,11 @@ export function HistorySection() {
             tracking-[0.05em]
             text-center
             font-normal
-        
-  
             text-black
           "
         >
-          {title}
+          {t('screens.history.title')}
         </h2>
-
-        {/* Container holds text */}
         <div className="w-full max-w-[800px]">
           <p
             className="
@@ -61,11 +59,10 @@ export function HistorySection() {
               mx-auto
             "
           >
-            {content}
+            {t('screens.history.description')}
           </p>
         </div>
 
-        {/* img */}
         <img
           src={image}
           alt="History of MMF"
@@ -73,7 +70,7 @@ export function HistorySection() {
         />
 
         <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
-          READ MORE
+          {t('common.buttons.readMore')}
         </button>
       </div>
 
