@@ -23,11 +23,11 @@ const CategorySection = () => {
                   <img 
                     src={section.image} 
                     alt={section.imageAlt} 
-                    className="w-full h-full object-cover aspect-square"
+                    className="w-full h-full object-cover aspect-square max-md:rounded-t-lg"
                   />
                 </div>
-                <div className="md:order-2 p-14 ml-2">
-                  <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
+                <div className="md:order-2 p-8 sm:p-14 sm:mr-2">
+                  <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold mb-4">{section.title}</h2>
                   <p className="text-black">{section.content}</p>
                 </div>
               </>
@@ -37,11 +37,11 @@ const CategorySection = () => {
                   <img 
                     src={section.image} 
                     alt={section.imageAlt} 
-                    className="w-full h-full object-cover aspect-square"
+                    className="w-full h-full object-cover aspect-square max-md:rounded-t-lg"
                   />
                 </div>
-                <div className="md:order-1 p-14 mr-2">
-                  <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
+                <div className="md:order-1 p-8 sm:p-14 sm:mr-2">
+                  <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold mb-4">{section.title}</h2>
                   <p className="text-gray-600">{section.content}</p>
                 </div>
               </>
