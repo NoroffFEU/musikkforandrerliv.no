@@ -2,10 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
+[secrets]
+omit_keys = ["AUTH0_CLIENT_ID"]
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[secrets]
-  omit_keys = ["AUTH0_CLIENT_ID"]
