@@ -10,6 +10,7 @@ import News from '../pages/News';
 import NotFound from '../pages/NotFound';
 import TestTranslations from '../pages/TestTranslations';
 import OurWork from '../pages/OurWork';
+import Placeholder from '../pages/PlaceHolder';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -39,6 +40,7 @@ const AppRoutes = () => {
               <Route path="/work" element={<OurWork />} />
               <Route path="/test-translations" element={<TestTranslations />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/placeholder" element={<Placeholder/>} />
             </Route>
           </Routes>
         )}
