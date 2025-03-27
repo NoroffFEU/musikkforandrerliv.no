@@ -8,21 +8,16 @@ export function GallerySection() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-   
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
-   
+
     checkIfMobile();
-    
-   
+
     window.addEventListener('resize', checkIfMobile);
-    
-   
+
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-
 
   const displayImages = isMobile ? galleryImages.slice(0, 8) : galleryImages;
 
@@ -41,12 +36,14 @@ export function GallerySection() {
             </div>
           ))}
         </div>
-        
+
         <div className="flex justify-center mt-6">
-        <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
-        SEE THE GALLERY
-          </button>
-         
+          <a
+            href="/gallery"
+            className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer"
+          >
+            SEE THE GALLERY
+          </a>
         </div>
       </div>
     </section>

@@ -61,7 +61,7 @@ function Footer() {
             <a>{t('common.footer.events')}</a>
           </div>
           <div className="text-2xl flex flex-col col-start-1 md:col-start-3 gap-8">
-            <a>{t('common.footer.gallery')}</a>
+            <a href="/gallery">{t('common.footer.gallery')}</a>
             <a>{t('common.footer.ourWork')}</a>
             <a>{t('common.footer.contactUs')}</a>
           </div>
