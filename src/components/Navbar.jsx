@@ -307,7 +307,7 @@ function Navbar() {
             </div>
 
             <NavLink
-              to="/news"
+              to="/news#latestNewsSection"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
@@ -321,7 +321,7 @@ function Navbar() {
               {t('common.header.aboutUs')}
             </NavLink>
             <NavLink
-              to="/events"
+              to="/news#eventsSection"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
