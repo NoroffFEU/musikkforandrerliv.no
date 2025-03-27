@@ -2,9 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-[build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "AUTH0_CLIENT_ID"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
