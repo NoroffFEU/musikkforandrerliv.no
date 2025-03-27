@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: 719-Decap-CMS # Change to main later?
+  site_url: https://musikkforandrerliv.netlify.app
 
 media_folder: 'public/uploads' # Where uploaded files will be stored
 public_folder: '/uploads' # Path to access uploaded files
