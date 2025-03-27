@@ -11,6 +11,7 @@ import Gallery from '../pages/Gallery';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import TestTranslations from '../pages/TestTranslations';
+import OurWork from '../pages/OurWork';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);

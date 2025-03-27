@@ -52,8 +52,12 @@
       "_comment": "Section Header: This comment will be deleted later",
       "search": "Søk",
       "news": "Nyheter",
+      "searchPlaceholder": "Søk...",
       "aboutUs": "Om oss",
       "more": "Mer",
+      "events": "Arrangementer",
+      "ourWork": "Vårt arbeid",
+      "contact": "Kontakt oss",
       "donate": "Doner"
     },
 

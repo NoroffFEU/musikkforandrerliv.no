@@ -7,22 +7,24 @@ function Footer() {
 
   const [email, setEmail] = useState('');
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
   function onEmailSubmit(event) {
     event.preventDefault();
-    setEmail(event.target.value);
     console.log(event.target.value);
   }
 
   return (
     <section className="font-sans">
-      {/* Subsrcibe section */}
+      {/* Subscribe section */}
       <section className="h-[364px] bg-(--color-sunset-red) flex justify-center items-center">
         <div className="grid gap-8 py-20 text-center text-black max-w-[480px] m-10 sm:m-0">
           <div className="flex flex-col justify-center gap-6">
-            <h3 className="text-[32px]">Subscribe to our newsletter!</h3>
+            <h3 className="text-[32px]">{t('common.newsletter.title')}</h3>
             <p className="flex flex-wrap">
-              Join our newsletter today, to stay updated on our events and
-              projects!
+              {t('common.newsletter.description')}
             </p>
           </div>
 
@@ -33,12 +35,13 @@ function Footer() {
             <input
               type="text"
               value={email}
+              onChange={handleEmailChange}
               placeholder="example@example.com"
               className="h-[49px] w-full rounded-lg border-1 bg-white p-4 sm:w-[306px] md:h-[57px]"
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
             />
-            <button className="h-[49px] md:h-[57px] w-full sm:w-[158px] bg-white text-(--color-sunset-red) rounded-lg font-semibold text-2xl active:bg-(--color-sunset-red) active:text-white hover:bg-(--color-sunset-red) hover:text-white focus:bg-(--color-sunset-red) focus:text-white focus:border focus:border-white">
-              Sign Up
+            <button className="h-[49px] md:h-[57px] w-full bg-white text-(--color-sunset-red) rounded-lg font-semibold text-2xl active:bg-(--color-sunset-red) active:text-white hover:bg-(--color-sunset-red) hover:text-white focus:bg-(--color-sunset-red) focus:text-white focus:border focus:border-white">
+              {t('common.buttons.signUp')}
             </button>
           </form>
         </div>
