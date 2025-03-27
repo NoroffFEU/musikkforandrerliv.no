@@ -1,0 +1,97 @@
+{
+  "pagename": "About Us",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Let us introduce ourselves",
+      "content": "Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care, learning supplies, clothing and shelter.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": 2,
+      "title": "A Holistic Approach to Education and Support",
+      "content": "Music lessons are so much more than just learning how to play an instrument. To our students, the music school has become a place of safety, worthiness, and a notion of being cared for by teachers and other students.\nThe transforming power of education and the strong communal sense have brought many young children from the streets into classrooms, providing a safe and stimulating environment.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": 3,
+      "title": "Empowering Through Education",
+      "content": "Many of our students have never had the opportunity to attend school previously. Therefore, MMF teachers organize additional academic support for students struggling with homework, greatly impacting their development and learning capacity.\nSpecial emphasis is placed on female education and gender equality.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": 4,
+      "title": "Sustainable Growth and Community Impact",
+      "content": "Providing a safe and supportive environment inspires girls and young women to lead healthier, more stable lives, sparking intergenerational transformation through education.\nSince 2021 Mozika Manova Fiainana is registered as an NGO supporting over 60 children.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": 5,
+      "title": "Support and Future Ambitions",
+      "content": "Our teachers provide lessons in traditional Malagasy instruments, percussion, dance, singing, classical guitar, double bass, visual arts, music theory, chamber music, violin, viola, cello, and piano, with ambitions to include flute and clarinet.",
+      "image": "",
+      "imageAlt": ""
+    },
+
+    {
+      "id": 6,
+      "title": "Conclusion: A Model for Change",
+      "content": "Witnessing the incredible changes that our initiative provokes in the local communities, we hope to further inspire our students to become self-reliant, responsible and skilful individuals that will contribute to a wider positive development of the region.",
+      "image": "",
+      "imageAlt": ""
+    },
+
+    {
+      "id": 7,
+      "name": "Eline Rodvelt Hansen",
+      "roles": [
+        "Violin Teacher",
+        "MMF Co-Founder, Madagascar",
+        "MMF Board Leader, Norway"
+      ],
+      "email": "E-mail@mmf.no",
+      "content": "Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres.\n \n Additionally, she is a dedicated violin teacher. With two violins, she went to Madagascar with a desire to start a music school to help children out of poverty.\n \n In Antsirabe, she met her husband, Dina, who was also a musician and shared a similar dream. Together, they founded MMF in 2021 and now lead the work together.\n \n In addition, Eline works as a violin teacher at the music school, and she follows up ensembles and students on several instruments. Eline is also the leader of the Norwegian board of MMF.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": 8,
+      "name": "Dina Rasalina Andriamanalina",
+      "roles": ["Piano Teacher", "MMF Co-Founder; Madagascar"],
+      "email": "E-mail@mmf.no",
+      "content": "Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood.\n \n However, it was eventually the piano that became his dominant instrument. In London, he studied music technology and eventually worked in a music studio.\n \n With enthusiasm for children and development work, he returned to Madagascar, where he has been, among other roles, a project manager for international aid projects.\n \n He now leads the work of MMF alongside Eline, in addition to teaching piano and traditional Malagasy music and dance in the project.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": 9,
+      "name": "Karoline Hartvigsen",
+      "roles": [
+        "B.A Nursing (2017)",
+        "MMF Board Deputy Leader",
+        "Project Coordinator, Norway"
+      ],
+      "email": "e-mail@mmf.no",
+      "content": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo.\n \n Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen.\n \n In connection with this, she traveled to Bolivia to conduct fieldwork at an orphanage focusing on the children's quality of life.\n \n Karoline has always had a great interest and commitment to humanitarian work and has volunteered as a nurse at a public hospital in Madagascar alongside Thea.\n \n She is now the deputy leader of the Norwegian board of MMF and helps coordinate the work done from Norway.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": 10,
+      "name": "Thea Harbo",
+      "roles": [
+        "B.A Nursing (2017)",
+        "MMF Board Member",
+        "Project Manager, Norway"
+      ],
+      "email": "e-mail@mmf.no",
+      "content": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger.\n \n She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet, and currently works full-time in a specially adapted department in a kindergarten.\n \n She has extensive experience working with children and enjoys it.\n \n Thea is a board member of MMF and is responsible for the finances of the project. She volunteers for the project and is responsible for the work carried out in Norway.",
+      "image": "",
+      "imageAlt": ""
+    }
+  ]
+}
