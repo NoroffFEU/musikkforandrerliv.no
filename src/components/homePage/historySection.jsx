@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
-import data from '../../data/landing-page-content.json';
+import data from '../../data/landing-page-content.json'
+import ReadMoreButton from '../buttons/readMoreButton'
 
 export function HistorySection() {
   const { image, title, content } = data.history;
@@ -71,10 +72,7 @@ export function HistorySection() {
           alt="History of MMF"
           className="mx-auto w-full h-auto object-cover"
         />
-
-        <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
-          READ MORE
-        </button>
+        <ReadMoreButton href='/readmore'/>
       </div>
 
       <button

@@ -3,6 +3,7 @@ import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 
 import data from '../../data/landing-page-content.json';
+import ReadMoreButton from '../buttons/readMoreButton'
 
 export default function WorkSection() {
   const { image, title, content } = data.work;
@@ -31,9 +32,7 @@ export default function WorkSection() {
           <p className="[font-family:var(--font-sans)] text-sm sm:text-lg max-w-[462px] text-[#363732]">
             {content}
           </p>
-          <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
-            READ MORE
-          </button>
+          <ReadMoreButton href="/readmore" />
         </div>
       </div>
     </section>

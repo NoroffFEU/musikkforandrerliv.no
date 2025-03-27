@@ -3,6 +3,7 @@ import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 
 import supportData from '../../data/support.json';
+import ReadMoreButton from '../buttons/readMoreButton';
 
 const SupportSection = () => {
   return (
@@ -31,12 +32,7 @@ const SupportSection = () => {
             {supportData.content}
           </p>
           <div className="hidden gap-[20px] sm:flex sm:flex-row md:flex-col lg:flex-row">
-            <button className="inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer whitespace-nowrap">
-              READ MORE
-            </button>
-            <button className="inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer text-white bg-[var(--color-sunset-red)] border-[var(--color-sunset-red)]">
-              DONATE
-            </button>
+            <ReadMoreButton href="/readmore" />
           </div>
         </div>
       </div>
