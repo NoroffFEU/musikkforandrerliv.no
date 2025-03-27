@@ -1,10 +1,20 @@
+import React, { useState } from 'react';
 import locales from '../../public/locales/locales.en.json';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LatestNews from '../components/LatestNews.jsx';
-import useLatestPosts from '../data/getLatesNews.js';
+import useLatestPosts from '../data/getLatestNews.js';
+import ReusableButton from '../components/buttons/reusableButton.jsx'
 
 function News() {
+  const [visibleCount, setVisibleCount] = useState(3);
   const newsPosts = locales.screens.latestNews.posts;
+
+
+
+  const loadMoreArticles = () => {
+    setVisibleCount(visibleCount + 3);
+  };
+
   const { posts, loading, error } = useLatestPosts();
 
   if (loading) return <p>Loading posts...</p>;
@@ -19,7 +29,7 @@ function News() {
 
         <div className="px-4 py-8">
           <div className="flex flex-col gap-6">
-            {posts.map((post, index) => (
+          {posts.slice(0, visibleCount).map((post, index) => (
               <LatestNews
                 key={index}
                 newsPost={post.newsPost || newsPosts[index].newsPost}
@@ -32,6 +42,8 @@ function News() {
               />
             ))}
           </div>
+          <ReusableButton text="Load More" onClick={loadMoreArticles} className="mx-auto py-4" />
+
         </div>
       </div>
     </ErrorBoundary>
