@@ -96,79 +96,13 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
 
-      - file: 'content/contact/contact.md'
+      - file: 'content/contact'
         name: 'contact'
         label: 'Contact Page'
         i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-
-          - label: 'Description'
-            name: 'description'
-            widget: 'object'
-            fields:
-              - {
-                  label: 'Title',
-                  name: 'title',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Image',
-                  name: 'image',
-                  widget: 'image',
-                  required: true,
-                }
-              - { label: 'Text', name: 'text', widget: 'text', required: true }
-
-          - label: 'Contact Details'
-            name: 'contact_details'
-            widget: 'list'
-            fields:
-              - {
-                  label: 'Role',
-                  name: 'role',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Name',
-                  name: 'name',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Email',
-                  name: 'email',
-                  widget: 'string',
-                  required: true,
-                }
-              - { label: 'Phone', name: 'phone', widget: 'string' }
-              - { label: 'Address', name: 'address', widget: 'text' }
-
-          - label: 'Social Media'
-            name: 'social_media'
-            widget: 'list'
-            fields:
-              - { label: 'Platform', name: 'platform', widget: 'string' }
-              - { label: 'URL', name: 'url', widget: 'string' }
-              - { label: 'Icon', name: 'icon', widget: 'image' }
-
-          - label: 'Contact Form Settings'
-            name: 'contact_form'
-            widget: 'object'
-            fields:
-              - {
-                  label: 'Enable Form',
-                  name: 'enable',
-                  widget: 'boolean',
-                  default: true,
-                }
-              - {
-                  label: 'Success Message',
-                  name: 'success_message',
-                  widget: 'text',
-                }
+          - { label: 'Intro', name: 'intro', widget: 'markdown' }
 
   - label: 'Blog'
     name: 'blog'
