@@ -160,7 +160,10 @@ function Navbar() {
               )}
             </div>
 
-            <NavLink to="/news" className={getDesktopLinkClasses}>
+            <NavLink
+              to="/news#latestNewsSection"
+              className={getDesktopLinkClasses}
+            >
               {t('common.header.news')}
             </NavLink>
             <NavLink to="/about" className={getDesktopLinkClasses}>
@@ -191,7 +194,7 @@ function Navbar() {
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
                   <NavLink
-                    to="/events"
+                    to="/news#eventsSection"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
                   >
                     {t('common.header.events')}
@@ -307,7 +310,7 @@ function Navbar() {
             </div>
 
             <NavLink
-              to="/news"
+              to="/news#latestNewsSection"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
@@ -321,7 +324,7 @@ function Navbar() {
               {t('common.header.aboutUs')}
             </NavLink>
             <NavLink
-              to="/events"
+              to="/news#eventsSection"
               className={getMobileLinkClasses}
               onClick={toggleMenu}
             >
