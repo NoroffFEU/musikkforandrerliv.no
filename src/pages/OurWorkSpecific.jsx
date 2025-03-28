@@ -8,8 +8,8 @@ function CategorySpecific() {
           Our Work Category specific page
         </h1>
         <p>
-          When clicking the 'read more' button, the specific content for the
-          category sections will appear here{' '}
+          The specific content for the OurWork category sections will appear
+          here
         </p>
       </div>
     </ErrorBoundary>
