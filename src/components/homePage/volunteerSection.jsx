@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { IoIosArrowForward } from 'react-icons/io';
 
 import content from '../../data/landing-page-content.json';
+
 
 const VolunteerSection = () => {
   const volunteerContent = content.volunteer;
@@ -28,9 +30,9 @@ const VolunteerSection = () => {
               {paragraph}
             </p>
           ))}
-          <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
+          <Link to="/placeholder" className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
             READ MORE
-          </button>
+          </Link>
         </div>
         <div className="w-full md:w-1/2 md:h-full flex items-center justify-center">
           <img
