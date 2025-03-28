@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
-import { ImageModal } from '../ImageModal';
-
-// Import the modal component
 
 export function GallerySection() {
   const { image: galleryImages } = data.gallery;
   const [isMobile, setIsMobile] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -23,28 +18,6 @@ export function GallerySection() {
 
   const displayImages = isMobile ? galleryImages.slice(0, 8) : galleryImages;
 
-  // Open modal with selected image
-  const openModal = (index) => {
-    setCurrentImageIndex(index);
-    setIsModalOpen(true);
-  };
-
-  // Close modal
-  const closeModal = () => setIsModalOpen(false);
-
-  // Navigate images
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1,
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1,
-    );
-  };
-
   return (
     <section className="w-full my-8 md:my-20 bg-white">
       <div className="mx-auto max-w-[1200px] px-4 md:px-4">
@@ -56,7 +29,6 @@ export function GallerySection() {
                 alt="MMF Gallery"
                 loading="lazy"
                 className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition"
-                onClick={() => openModal(idx)}
               />
             </div>
           ))}
@@ -71,15 +43,6 @@ export function GallerySection() {
           </a>
         </div>
       </div>
-
-      {/* Image Modal */}
-      <ImageModal
-        isOpen={isModalOpen}
-        imageSrc={galleryImages[currentImageIndex]}
-        onClose={closeModal}
-        onNext={nextImage}
-        onPrev={prevImage}
-      />
     </section>
   );
 }
