@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: NoroffFEU/musikkforandrerliv.no
-  branch: 719-Decap-CMS # Change to main ???
+  branch: 719-Decap-CMS
   local_backend: true
 
 media_folder: 'public/assets/images'
@@ -31,15 +31,41 @@ collections:
         label: 'About Us Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Content', name: 'content', widget: 'markdown' }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Description', name: 'description', widget: 'text', required: true }
+          - label: 'Contact Form Settings'
+            name: 'contact_form_settings'
+            widget: 'object'
+            fields:
+              - { label: 'Success Message', name: 'success_message', widget: 'string' }
+              - { label: 'Error Message', name: 'error_message', widget: 'string' }
+          - label: 'Contact Information'
+            name: 'contact_info'
+            widget: 'object'
+            fields:
+              - { label: 'Address', name: 'address', widget: 'text' }
+              - { label: 'Phone', name: 'phone', widget: 'number' }
 
       - file: 'content/work/work.md'
         name: 'our-work'
         label: 'Our Work Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Date', name: 'date', widget: 'datetime', required: true }
+          - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
+          - label: 'Gallery'
+            name: 'gallery'
+            widget: 'list'
+            field:
+              { label: 'Image', name: 'image', widget: 'image', required: false }
+          - { label: 'Description', name: 'description', widget: 'markdown', required: true }
+          - label: 'Participants'
+            name: 'participants'
+            widget: 'list'
+            field:
+              { label: 'Name', name: 'name', widget: 'string', required: false }
+          - { label: 'Results', name: 'results', widget: 'markdown', required: false }
 
       - file: 'content/employees/employees.md'
         name: 'employees'
@@ -53,47 +79,18 @@ collections:
             collapsed: true
             sortable: true
             fields:
-              - {
-                  label: 'Name',
-                  name: 'name',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Display order',
-                  name: 'order',
-                  widget: 'number',
-                  required: false,
-                }
-              - {
-                  label: 'Image',
-                  name: 'image',
-                  widget: 'image',
-                  required: true,
-                }
-              - {
-                  label: 'Bio',
-                  name: 'bio',
-                  widget: 'markdown',
-                  required: true,
-                }
-              - {
-                  label: 'Job Title',
-                  name: 'job_title',
-                  widget: 'string',
-                  required: true,
-                }
+              - { label: 'Name', name: 'name', widget: 'string', required: true }
+              - { label: 'Display order', name: 'order', widget: 'number', required: false }
+              - { label: 'Image', name: 'image', widget: 'image', required: true }
+              - { label: 'Bio', name: 'bio', widget: 'markdown', required: true }
+              - { label: 'Job Title', name: 'job_title', widget: 'string', required: true }
               - label: 'Charity Roles'
                 name: 'charity_roles'
                 widget: 'list'
-                field: { label: 'Role', name: 'role', widget: 'string' }
+                field:
+                  { label: 'Role', name: 'role', widget: 'string' }
                 required: false
-              - {
-                  label: 'Email',
-                  name: 'email',
-                  widget: 'string',
-                  required: false,
-                }
+              - { label: 'Email', name: 'email', widget: 'string', required: false }
 
       - file: 'content/news/news.md'
         name: 'news-and-events'
@@ -101,63 +98,24 @@ collections:
         i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
-          - {
-              label: 'Publish date',
-              name: 'date',
-              widget: 'datetime',
-              required: true,
-            }
-          - {
-              label: 'Featured Image',
-              name: 'featured_image',
-              widget: 'image',
-              required: false,
-            }
-          - {
-              label: 'Excerpt',
-              name: 'excerpt',
-              widget: 'text',
-              required: false,
-            }
-          - {
-              label: 'Content',
-              name: 'content',
-              widget: 'markdown',
-              required: true,
-            }
+          - { label: 'Publish date', name: 'date', widget: 'datetime', required: true }
+          - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
+          - { label: 'Excerpt', name: 'excerpt', widget: 'text', required: false }
+          - { label: 'Content', name: 'content', widget: 'markdown', required: true }
           - label: 'Event Details'
             name: 'event_details'
             widget: 'object'
             fields:
-              - {
-                  label: 'Location',
-                  name: 'location',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Start Time',
-                  name: 'start_time',
-                  widget: 'datetime',
-                  required: true,
-                }
-              - {
-                  label: 'End Time',
-                  name: 'end_time',
-                  widget: 'datetime',
-                  required: true,
-                }
-              - {
-                  label: 'Organizer',
-                  name: 'organizer',
-                  widget: 'string',
-                  required: false,
-                }
+              - { label: 'Location', name: 'location', widget: 'string', required: true }
+              - { label: 'Start Time', name: 'start_time', widget: 'datetime', required: true }
+              - { label: 'End Time', name: 'end_time', widget: 'datetime', required: true }
+              - { label: 'Organizer', name: 'organizer', widget: 'string', required: false }
           - label: 'Categories'
             name: 'categories'
             widget: 'list'
-            summary: '{{fields.category}}'
-            field: { label: 'Category', name: 'category', widget: 'string' }
+            summary: "{{fields.category}}"
+            field:
+              { label: 'Category', name: 'category', widget: 'string' }
 
       - file: 'content/support/support.md'
         name: 'support'
@@ -165,6 +123,8 @@ collections:
         i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Description', name: 'description', widget: 'string' }
 
       - file: 'content/contact'
         name: 'contact'
@@ -178,28 +138,17 @@ collections:
     name: 'blog'
     folder: 'content/blog'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     i18n: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - {
-          label: 'Publish date',
-          name: 'date',
-          widget: 'datetime',
-          required: true,
-        }
+      - { label: 'Publish date', name: 'date', widget: 'datetime', required: true }
       - { label: 'Author', name: 'author', widget: 'string', required: true }
-      - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
-      - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          required: true,
-        }
-      - {
-          label: 'Tags',
-          name: 'tags',
-          widget: 'list',
-          field: { name: 'tag', widget: 'string' },
-        }
+      - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'text', required: false }
+      - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        field:
+          { name: 'tag', widget: 'string' }
