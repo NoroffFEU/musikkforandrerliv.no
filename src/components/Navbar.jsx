@@ -199,14 +199,15 @@ function Navbar() {
               )}
             </div>
 
-            <NavLink
-              to="/news#latestNewsSection"
-              className={() =>
-                getDesktopHashLinkClasses('/news', '#latestNewsSection')
-              }
-            >
-              {t('common.header.news')}
-            </NavLink>
+<NavLink
+  to="/news#latestNewsSection"
+  className={() =>
+    getDesktopHashLinkClasses('/news', '#latestNewsSection')
+  }
+>
+  {t('common.header.news')}
+</NavLink>
+
 
             <NavLink to="/about" className={getDesktopLinkClassesNoHash}>
               {t('common.header.aboutUs')}
@@ -236,13 +237,14 @@ function Navbar() {
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
                   <NavLink
-                    to="/news#eventsSection"
-                    className={() =>
-                      getDesktopHashLinkClasses('/news', '#eventsSection')
-                    }
-                  >
-                    {t('common.header.events')}
-                  </NavLink>
+  to="/news#eventsSection"
+  className={() =>
+    getDesktopHashLinkClasses('/news', '#eventsSection')
+  }
+>
+  {t('common.header.events')}
+</NavLink>
+
 
                   <NavLink to="/work" className={getDesktopLinkClassesNoHash}>
                     {t('common.header.ourWork')}
@@ -354,14 +356,15 @@ function Navbar() {
             </div>
 
             <NavLink
-              to="/news#latestNewsSection"
-              className={() =>
-                getMobileHashLinkClasses('/news', '#latestNewsSection')
-              }
-              onClick={toggleMenu}
-            >
-              {t('common.header.news')}
-            </NavLink>
+  to="/news#latestNewsSection"
+  className={() =>
+    getMobileHashLinkClasses('/news', '#latestNewsSection')
+  }
+  onClick={toggleMenu}
+>
+  {t('common.header.news')}
+</NavLink>
+
 
             <NavLink
               to="/about"
@@ -372,14 +375,15 @@ function Navbar() {
             </NavLink>
 
             <NavLink
-              to="/news#eventsSection"
-              className={() =>
-                getMobileHashLinkClasses('/news', '#eventsSection')
-              }
-              onClick={toggleMenu}
-            >
-              {t('common.header.events')}
-            </NavLink>
+  to="/news#eventsSection"
+  className={() =>
+    getMobileHashLinkClasses('/news', '#eventsSection')
+  }
+  onClick={toggleMenu}
+>
+  {t('common.header.events')}
+</NavLink>
+
             <NavLink
               to="/work"
               className={getMobileLinkClassesNoHash}

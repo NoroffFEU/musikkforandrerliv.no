@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-
 import data from '../../data/landing-page-content.json';
 
 // Importing JSON file
