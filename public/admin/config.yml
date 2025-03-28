@@ -53,17 +53,47 @@ collections:
             collapsed: true
             sortable: true
             fields:
-              - { label: 'Name', name: 'name', widget: 'string', required: true }
-              - { label: 'Display order', name: 'order', widget: 'number', required: false }
-              - { label: 'Image', name: 'image', widget: 'image', required: true }
-              - { label: 'Bio', name: 'bio', widget: 'markdown', required: true }
-              - { label: 'Job Title', name: 'job_title', widget: 'string', required: true }
+              - {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Display order',
+                  name: 'order',
+                  widget: 'number',
+                  required: false,
+                }
+              - {
+                  label: 'Image',
+                  name: 'image',
+                  widget: 'image',
+                  required: true,
+                }
+              - {
+                  label: 'Bio',
+                  name: 'bio',
+                  widget: 'markdown',
+                  required: true,
+                }
+              - {
+                  label: 'Job Title',
+                  name: 'job_title',
+                  widget: 'string',
+                  required: true,
+                }
               - label: 'Charity Roles'
                 name: 'charity_roles'
                 widget: 'list'
                 field: { label: 'Role', name: 'role', widget: 'string' }
                 required: false
-              - { label: 'Email', name: 'email', widget: 'string', required: false }
+              - {
+                  label: 'Email',
+                  name: 'email',
+                  widget: 'string',
+                  required: false,
+                }
 
       - file: 'content/news/news.md'
         name: 'news-and-events'
@@ -71,18 +101,58 @@ collections:
         i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
-          - { label: 'Publish date', name: 'date', widget: 'datetime', required: true }
-          - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
-          - { label: 'Excerpt', name: 'excerpt', widget: 'text', required: false }
-          - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+          - {
+              label: 'Publish date',
+              name: 'date',
+              widget: 'datetime',
+              required: true,
+            }
+          - {
+              label: 'Featured Image',
+              name: 'featured_image',
+              widget: 'image',
+              required: false,
+            }
+          - {
+              label: 'Excerpt',
+              name: 'excerpt',
+              widget: 'text',
+              required: false,
+            }
+          - {
+              label: 'Content',
+              name: 'content',
+              widget: 'markdown',
+              required: true,
+            }
           - label: 'Event Details'
             name: 'event_details'
             widget: 'object'
             fields:
-              - { label: 'Location', name: 'location', widget: 'string', required: true }
-              - { label: 'Start Time', name: 'start_time', widget: 'datetime', required: true }
-              - { label: 'End Time', name: 'end_time', widget: 'datetime', required: true }
-              - { label: 'Organizer', name: 'organizer', widget: 'string', required: false }
+              - {
+                  label: 'Location',
+                  name: 'location',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Start Time',
+                  name: 'start_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'End Time',
+                  name: 'end_time',
+                  widget: 'datetime',
+                  required: true,
+                }
+              - {
+                  label: 'Organizer',
+                  name: 'organizer',
+                  widget: 'string',
+                  required: false,
+                }
           - label: 'Categories'
             name: 'categories'
             widget: 'list'
@@ -112,14 +182,24 @@ collections:
     i18n: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Publish date', name: 'date', widget: 'datetime', required: true }
+      - {
+          label: 'Publish date',
+          name: 'date',
+          widget: 'datetime',
+          required: true,
+        }
       - { label: 'Author', name: 'author', widget: 'string', required: true }
       - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
       - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
-      - { label: 'Content', name: 'content', widget: 'markdown', required: true }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          required: true,
+        }
       - {
           label: 'Tags',
           name: 'tags',
           widget: 'list',
-          field: { name: 'tag', widget: 'string' }
+          field: { name: 'tag', widget: 'string' },
         }
