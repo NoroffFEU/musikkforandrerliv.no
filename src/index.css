@@ -23,3 +23,9 @@
     --font-justAnotherHand: 'Just Another Hand', sans-serif;
   }
 }
+
+@layer theme {
+  .font-justAnotherHand {
+    font-family: 'Just Another Hand';
+  }
+}
