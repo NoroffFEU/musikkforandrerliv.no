@@ -22,15 +22,12 @@ export function GallerySection() {
   // Check screen width for mobile responsiveness
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);  
+      setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkIfMobile();
-
-    // Add resize listener to check on screen size changes
     window.addEventListener('resize', checkIfMobile);
-
-    return () => window.removeEventListener('resize', checkIfMobile); 
+    return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
   // Show only 8 images on mobile devices
@@ -44,9 +41,9 @@ export function GallerySection() {
             <div key={idx} className="aspect-square w-full">
               <img
                 src={src}
-                alt={imageAltText[idx]}  
-                loading="lazy"  
-                className="w-full h-full object-cover"
+                alt={imageAltText[idx]}  // ✅ Beholder spesifikke alt-tekster
+                loading="lazy"
+                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition" // ✅ Beholder ekstra styling fra gallery
               />
             </div>
           ))}
