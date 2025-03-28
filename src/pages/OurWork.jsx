@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import CalenderSection from '../components/homePage/calenderSection';
-import HeroBanner from '../components/ourWorkPage/heroBanner';
+import HeroBanner from '../components/ourWorkPage/HeroBanner.jsx';
 
 function OurWork() {
   return (
