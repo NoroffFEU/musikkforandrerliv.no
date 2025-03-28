@@ -10,7 +10,7 @@ local_backend:
 media_folder: 'public/assets/images'
 
 
-  commit_messages:
+commit_messages:
     create: "Create {{collection}} entry: '{{slug}}'"
     update: "Update {{collection}} entry: '{{slug}}'"
     delete: "Delete {{collection}} entry: '{{slug}}'"
