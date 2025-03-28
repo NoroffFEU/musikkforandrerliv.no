@@ -16,6 +16,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
     "@tailwindcss/postcss": "^4.0.13",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",

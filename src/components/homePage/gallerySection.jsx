@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
 
@@ -13,9 +12,7 @@ export function GallerySection() {
     };
 
     checkIfMobile();
-
     window.addEventListener('resize', checkIfMobile);
-
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
@@ -31,7 +28,7 @@ export function GallerySection() {
                 src={src}
                 alt="MMF Gallery"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition"
               />
             </div>
           ))}
