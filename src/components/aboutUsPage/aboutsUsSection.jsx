@@ -26,6 +26,8 @@ const AboutUsSection = () => {
 
 
 const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) => {
+  const fallbackImage = '/assets/images/about/about-placeholder.jpg';
+
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-12">
       {layout === 'intro' ? (
@@ -40,34 +42,22 @@ const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) =>
             </div>
           )}
 
-          {image ? (
-            <img
-              src={image}
-              alt={imageAlt || ''}
-              className="w-full object-cover mt-6"
-            />
-          ) : (
-            <div className="w-full h-100 bg-gray-200 flex items-center justify-center mt-6">
-              <p className="text-gray-500">Image placeholder</p>
-            </div>
-          )}
+          <img
+            src={image || fallbackImage}
+            alt={imageAlt || 'About section image'}
+            className="w-full object-cover mt-6"
+          />
         </div>
       ) : (
         <div>
           <h3 className="text-2xl font-bold mb-4">{title}</h3>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
 
-          {image ? (
-            <img
-              src={image}
-              alt={imageAlt || ''}
-              className="w-full object-cover"
-            />
-          ) : (
-            <div className="w-full h-100 bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Image placeholder</p>
-            </div>
-          )}
+          <img
+            src={image || fallbackImage}
+            alt={imageAlt || 'About section image'}
+            className="w-full object-cover"
+          />
         </div>
       )}
     </div>
@@ -75,6 +65,7 @@ const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) =>
 };
 
 export default AboutUsSection;
+
 
 
 
