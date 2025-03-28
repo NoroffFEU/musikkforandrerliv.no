@@ -9,6 +9,21 @@ local_backend:
 
 media_folder: 'public/assets/images'
 
+
+  commit_messages:
+    create: "Create {{collection}} entry: '{{slug}}'"
+    update: "Update {{collection}} entry: '{{slug}}'"
+    delete: "Delete {{collection}} entry: '{{slug}}'"
+    uploadMedia: "Upload media file: '{{path}}'"
+    deleteMedia: "Delete media file: '{{path}}'"
+
+media_folder: 'public/assets/images'
+
+i18n:
+  structure: single_file
+  locales: [en, no, mg]
+  default_locale: en
+
 collections:
   - name: 'pages'
     label: 'Pages'
@@ -16,6 +31,7 @@ collections:
       - file: 'content/home/home.md'
         name: 'home'
         label: 'Home Page'
+        i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Intro', name: 'intro', widget: 'markdown' }
@@ -26,19 +42,81 @@ collections:
       - file: 'content/about/about.md'
         name: 'about'
         label: 'About Us Page'
+        i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Content', name: 'content', widget: 'markdown' }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              required: true,
+            }
+          - label: 'Contact Form Settings'
+            name: 'contact_form_settings'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Success Message',
+                  name: 'success_message',
+                  widget: 'string',
+                }
+              - {
+                  label: 'Error Message',
+                  name: 'error_message',
+                  widget: 'string',
+                }
+          - label: 'Contact Information'
+            name: 'contact_info'
+            widget: 'object'
+            fields:
+              - { label: 'Address', name: 'address', widget: 'text' }
+              - { label: 'Phone', name: 'phone', widget: 'number' }
 
       - file: 'content/work/work.md'
         name: 'our-work'
         label: 'Our Work Page'
+        i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Date', name: 'date', widget: 'datetime', required: true }
+          - {
+              label: 'Featured Image',
+              name: 'featured_image',
+              widget: 'image',
+              required: false,
+            }
+          - label: 'Gallery'
+            name: 'gallery'
+            widget: 'list'
+            field:
+              {
+                label: 'Image',
+                name: 'image',
+                widget: 'image',
+                required: false,
+              }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
+              required: true,
+            }
+          - label: 'Participants'
+            name: 'participants'
+            widget: 'list'
+            field:
+              { label: 'Name', name: 'name', widget: 'string', required: false }
+          - {
+              label: 'Results',
+              name: 'results',
+              widget: 'markdown',
+              required: false,
+            }
 
       - file: 'content/employees/employees.md'
         name: 'employees'
         label: 'Employees/team'
+        i18n: true
         fields:
           - label: 'Employees'
             name: 'employees'
@@ -92,6 +170,7 @@ collections:
       - file: 'content/news/news.md'
         name: 'news-and-events'
         label: 'News and Events'
+        i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string', required: true }
           - {
@@ -155,21 +234,88 @@ collections:
       - file: 'content/support/support.md'
         name: 'support'
         label: 'Support Us'
+        i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Description', name: 'description', widget: 'string' }
 
-      - file: 'content/contact'
+      - file: 'content/contact/contact.md'
         name: 'contact'
         label: 'Contact Page'
+        i18n: true
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+          - label: 'Description'
+            name: 'description'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Title',
+                  name: 'title',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Image',
+                  name: 'image',
+                  widget: 'image',
+                  required: true,
+                }
+              - { label: 'Text', name: 'text', widget: 'text', required: true }
+          - label: 'Contact Details'
+            name: 'contact_details'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Role',
+                  name: 'role',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Email',
+                  name: 'email',
+                  widget: 'string',
+                  required: true,
+                }
+              - { label: 'Phone', name: 'phone', widget: 'string' }
+              - { label: 'Address', name: 'address', widget: 'text' }
+          - label: 'Social Media'
+            name: 'social_media'
+            widget: 'list'
+            fields:
+              - { label: 'Platform', name: 'platform', widget: 'string' }
+              - { label: 'URL', name: 'url', widget: 'string' }
+              - { label: 'Icon', name: 'icon', widget: 'image' }
+          - label: 'Contact Form Settings'
+            name: 'contact_form'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Enable Form',
+                  name: 'enable',
+                  widget: 'boolean',
+                  default: true,
+                }
+              - {
+                  label: 'Success Message',
+                  name: 'success_message',
+                  widget: 'text',
+                }
 
   - label: 'Blog'
     name: 'blog'
     folder: 'content/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    i18n: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
@@ -179,17 +325,21 @@ collections:
           required: true,
         }
       - { label: 'Author', name: 'author', widget: 'string', required: true }
-      - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+      - {
+          label: 'Featured Image',
+          name: 'featured_image',
+          widget: 'image',
+          required: false,
+        }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'text', required: false }
       - {
           label: 'Content',
           name: 'content',
           widget: 'markdown',
           required: true,
         }
-      - {
-          label: 'Tags',
-          name: 'tags',
-          widget: 'list',
-          field: { name: 'tag', widget: 'string' },
-        }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        field: { name: 'tag', widget: 'string' }
+
