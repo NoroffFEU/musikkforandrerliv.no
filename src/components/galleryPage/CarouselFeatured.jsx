@@ -23,14 +23,16 @@ const CarouselFeatured = () => {
           align: 'center',
           loop: true,
         }}
-        className="max-w-[50rem] w-full relative"
+        className="max-w-[1280px] w-full relative"
       >
         <CarouselContent className="w-[80%]">
           {images.map((image, index) => {
+            console.log('image: ', image);
+
             return (
               <CarouselItem key={index} className="basis-1/5">
                 <div className="aspect-square flex justify-center items-center border ">
-                  {index}
+                  <img src={image}></img>
                 </div>
               </CarouselItem>
             );
