@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 
@@ -14,9 +14,9 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const [activeSection, setActiveSection] = useState('about');
-
   const { t } = useTranslation();
+
+  const location = useLocation();
   const navigate = useNavigate();
   const searchRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -35,15 +35,6 @@ function Navbar() {
     }
   };
 
-  const scrollToSection = (e, sectionId) => {
-    e.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
-
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -51,6 +42,7 @@ function Navbar() {
     handleResize();
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
@@ -79,56 +71,57 @@ function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sectionIds = ['news', 'about', 'events', 'work', 'contact'];
-      let currentSection = 'about';
-
-      for (const id of sectionIds) {
-        const section = document.getElementById(id);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            currentSection = id;
-            break;
-          }
-        }
-      }
-
-      setActiveSection(currentSection);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  const isHome = location.pathname === '/';
   const navbarBgClass =
-    !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
+    isHome && !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
 
-  // desktop
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 0);
+      }
+    }
+  }, [location]);
 
-  const getDesktopLinkClasses = (sectionId) => {
-    const isActive = activeSection === sectionId;
+  const getDesktopHashLinkClasses = (path, hash) => {
+    const isActive = location.pathname === path && location.hash === hash;
     return (
       (isActive
         ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
-        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200') +
+        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
+          'hover:h-[26px] hover:rounded-md transition-all duration-200') +
       ' flex items-center font-montserrat text-[14px] font-semibold px-2'
     );
   };
 
-  // mobile
-  const getMobileLinkClasses = (sectionId) => {
-    const isActive = activeSection === sectionId;
+  const getDesktopLinkClassesNoHash = ({ isActive }) =>
+    `${
+      isActive
+        ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
+        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
+          'hover:h-[26px] hover:rounded-md transition-all duration-200'
+    } flex items-center font-montserrat text-[14px] font-semibold px-2`;
+
+  const getMobileHashLinkClasses = (path, hash) => {
+    const isActive = location.pathname === path && location.hash === hash;
     return (
-      'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] transition-colors duration-200 ' +
+      'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] ' +
+      'flex items-center rounded-[8px] transition-colors duration-200 ' +
       (isActive
         ? 'bg-[var(--color-light-green)] text-[#000000]'
         : 'hover:bg-[var(--color-light-green)] hover:text-[#000000]')
     );
   };
+
+  const getMobileLinkClassesNoHash = ({ isActive }) =>
+    'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] ' +
+    'flex items-center rounded-[8px] transition-colors duration-200 ' +
+    (isActive
+      ? 'bg-[var(--color-light-green)] text-[#000000]'
+      : 'hover:bg-[var(--color-light-green)] hover:text-[#000000]');
 
   return (
     <>
@@ -138,7 +131,7 @@ function Navbar() {
         <div className="max-w-[1440px] mx-auto px-[54px] py-[32px] flex flex-wrap items-center gap-[10px] h-[199px]">
           <div
             className="flex-shrink-0 cursor-pointer"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => navigate('/')}
           >
             <img
               src="/assets/placeholder-images/logo.png"
@@ -206,21 +199,18 @@ function Navbar() {
               )}
             </div>
 
-            <a
-              href="#news"
-              onClick={(e) => scrollToSection(e, 'news')}
-              className={getDesktopLinkClasses('news')}
+            <NavLink
+              to="/news#latestNewsSection"
+              className={() =>
+                getDesktopHashLinkClasses('/news', '#latestNewsSection')
+              }
             >
               {t('common.header.news')}
-            </a>
+            </NavLink>
 
-            <a
-              href="#about"
-              onClick={(e) => scrollToSection(e, 'about')}
-              className={getDesktopLinkClasses('about')}
-            >
+            <NavLink to="/about" className={getDesktopLinkClassesNoHash}>
               {t('common.header.aboutUs')}
-            </a>
+            </NavLink>
 
             <div className="relative" ref={dropdownRef}>
               <button
@@ -245,39 +235,35 @@ function Navbar() {
 
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
-                  <a
-                    href="#events"
-                    onClick={(e) => scrollToSection(e, 'events')}
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
+                  <NavLink
+                    to="/news#eventsSection"
+                    className={() =>
+                      getDesktopHashLinkClasses('/news', '#eventsSection')
+                    }
                   >
                     {t('common.header.events')}
-                  </a>
+                  </NavLink>
 
-                  <a
-                    href="#work"
-                    onClick={(e) => scrollToSection(e, 'work')}
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
-                  >
+                  <NavLink to="/work" className={getDesktopLinkClassesNoHash}>
                     {t('common.header.ourWork')}
-                  </a>
+                  </NavLink>
 
-                  <a
-                    href="#contact"
-                    onClick={(e) => scrollToSection(e, 'contact')}
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
+                  <NavLink
+                    to="/contact"
+                    className={getDesktopLinkClassesNoHash}
                   >
                     {t('common.header.contact')}
-                  </a>
+                  </NavLink>
                 </div>
               )}
             </div>
 
-            <button
-              onClick={() => navigate('/donate')}
+            <NavLink
+              to="/donate"
               className="ml-2 px-4 py-2 rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
             >
               {t('common.header.donate')}
-            </button>
+            </NavLink>
 
             <SelectLanguageButton variant="iconOnly" className="ml-2" />
           </div>
@@ -367,55 +353,55 @@ function Navbar() {
               )}
             </div>
 
-            <a
-              href="#news"
-              onClick={(e) => scrollToSection(e, 'news')}
-              className={getMobileLinkClasses('news')}
+            <NavLink
+              to="/news#latestNewsSection"
+              className={() =>
+                getMobileHashLinkClasses('/news', '#latestNewsSection')
+              }
+              onClick={toggleMenu}
             >
               {t('common.header.news')}
-            </a>
+            </NavLink>
 
-            <a
-              href="#about"
-              onClick={(e) => scrollToSection(e, 'about')}
-              className={getMobileLinkClasses('about')}
+            <NavLink
+              to="/about"
+              className={getMobileLinkClassesNoHash}
+              onClick={toggleMenu}
             >
               {t('common.header.aboutUs')}
-            </a>
+            </NavLink>
 
-            <a
-              href="#events"
-              onClick={(e) => scrollToSection(e, 'events')}
-              className={getMobileLinkClasses('events')}
+            <NavLink
+              to="/news#eventsSection"
+              className={() =>
+                getMobileHashLinkClasses('/news', '#eventsSection')
+              }
+              onClick={toggleMenu}
             >
               {t('common.header.events')}
-            </a>
-
-            <a
-              href="#work"
-              onClick={(e) => scrollToSection(e, 'work')}
-              className={getMobileLinkClasses('work')}
+            </NavLink>
+            <NavLink
+              to="/work"
+              className={getMobileLinkClassesNoHash}
+              onClick={toggleMenu}
             >
               {t('common.header.ourWork')}
-            </a>
-
-            <a
-              href="#contact"
-              onClick={(e) => scrollToSection(e, 'contact')}
-              className={getMobileLinkClasses('contact')}
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={getMobileLinkClassesNoHash}
+              onClick={toggleMenu}
             >
               {t('common.header.contact')}
-            </a>
+            </NavLink>
 
-            <button
-              onClick={() => {
-                toggleMenu();
-                navigate('/donate');
-              }}
-              className="block py-3 mt-4 w-full text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
+            <NavLink
+              to="/donate"
+              className="block py-3 mt-4 text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
+              onClick={toggleMenu}
             >
               {t('common.header.donate')}
-            </button>
+            </NavLink>
 
             <SelectLanguageButton variant="withText" className="mt-2 w-full" />
           </div>
@@ -426,3 +412,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
