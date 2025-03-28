@@ -23,23 +23,22 @@ const ImageCarousel = () => {
   };
 
   return (
-    <div className="carousel-wrapper relative w-full flex justify-center items-center mt-10 max-h-[250px] h-full">
-      {/* Left Arrow */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
-      >
-        <IoIosArrowBack size={32} />
-      </button>
-
-      {/* Carousel Images */}
-      <div className="image-carousel flex items-center w-[80%] overflow-hidden">
-        <div className="image-wrapper flex justify-center gap-3 overflow-hidden">
+    <div className="carousel-wrapper relative w-full flex justify-center items-center mt-10 max-h-[250px] max-w-[1280px] h-full bg-amber-200">
+      <div className="image-carousel flex justify-center items-center bg-red-400 ">
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
+        >
+          <IoIosArrowBack size={32} />
+        </button>
+        <div className="image-wrapper flex gap-3 justify-center bg-blue-400 max-w-[1120px]">
           {images.slice(index, index + 5).map((src, i) => (
             <div
               key={index + i}
-              className={`image-container transition-all duration-300  flex justify-center items-center  ${
-                i === 2 ? 'scale-120 z-10' : 'scale-90 opacity-70 w-[300px]'
+              className={`image-container transition-all duration-300 flex justify-center items-center h-[200px] w-[235px] overflow-hidden${
+                i === 2
+                  ? 'h-[260px] w-[420px] transform-none scale-120 z-10'
+                  : ' opacity-70 '
               }`}
             >
               <img
@@ -50,15 +49,13 @@ const ImageCarousel = () => {
             </div>
           ))}
         </div>
+        <button
+          onClick={nextSlide}
+          className="absolute right-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
+        >
+          <IoIosArrowForward size={32} />
+        </button>
       </div>
-
-      {/* Right Arrow */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
-      >
-        <IoIosArrowForward size={32} />
-      </button>
     </div>
   );
 };
