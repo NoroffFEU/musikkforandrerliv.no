@@ -25,21 +25,26 @@ const CarouselFeatured = () => {
         }}
         className="max-w-[1280px] w-full relative"
       >
-        <CarouselContent className="w-[80%]">
+        <CarouselContent>
           {images.map((image, index) => {
             console.log('image: ', image);
 
             return (
-              <CarouselItem key={index} className="basis-1/5">
-                <div className="aspect-square flex justify-center items-center border ">
+              <CarouselItem key={index} className="basis-1/3 lg:basis-1/5">
+                <div className="aspect-square flex flex-col justify-center items-center border overflow-hidden relative">
                   <img src={image}></img>
+                  <span className="absolute text-red-600 top-0 font-extrabold">
+                    {index}
+                  </span>
                 </div>
               </CarouselItem>
             );
           })}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-2" />
-        <CarouselNext className="absolute right-2" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white" />
+        <CarouselPrevious className="absolute -left-10" />
+        <CarouselNext className="absolute -right-10" />
       </Carousel>
     </div>
   );
