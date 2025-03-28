@@ -8,12 +8,13 @@ async function prepare() {
     const { worker } = await import('./mocks/browser');
     await worker.start();
   }
+}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
   </StrictMode>,
 );
-}
+
 
 prepare();
