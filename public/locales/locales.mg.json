@@ -333,23 +333,28 @@
       "events": [
         {
           "date": "20 Mey 2024",
-          "title": "Kaonseritra Fanaovana Asa Soa MMF Isan-taona"
+          "title": "Kaonseritra Fanaovana Asa Soa MMF Isan-taona",
+          "dateEn": "May 20, 2024"
         },
         {
           "date": "10 Jona 2024",
-          "title": "Hazakazaka 5K Fanangonam-bola ho an'ny Mozika"
+          "title": "Hazakazaka 5K Fanangonam-bola ho an'ny Mozika",
+          "dateEn": "June 10, 2024"
         },
         {
           "date": "15 Jolay 2024",
-          "title": "Fetin'ny Kolontsaina sy Kanto MMF"
+          "title": "Fetin'ny Kolontsaina sy Kanto MMF",
+          "dateEn": "July 15, 2024"
         },
         {
           "date": "25 Aogositra 2024",
-          "title": "Gala Fanangonam-bola ho an'ny Fiverenana any an-tsekoly"
+          "title": "Gala Fanangonam-bola ho an'ny Fiverenana any an-tsekoly",
+          "dateEn": "August 25, 2024"
         },
         {
           "date": "25 Novambra 2024",
-          "title": "Fanombohan'ny Fanentanana Fanomezana Noely"
+          "title": "Fanombohan'ny Fanentanana Fanomezana Noely",
+          "dateEn": "November 25, 2024"
         }
       ]
     },

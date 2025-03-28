@@ -323,23 +323,28 @@
       "events": [
         {
           "date": "20. mai 2024",
-          "title": "MMF Årlige Veldedighetskonsert"
+          "title": "MMF Årlige Veldedighetskonsert",
+          "dateEn": "May 20, 2024"
         },
-        {
+        {         
           "date": "10. juni 2024",
-          "title": "Løp for Musikk 5K Veldedighetsløp"
+          "title": "Løp for Musikk 5K Veldedighetsløp",
+          "dateEn": "June 10, 2024"
         },
-        {
+        {          
           "date": "15. juli 2024",
-          "title": "MMF Kultur- og Kunstfestival"
+          "title": "MMF Kultur- og Kunstfestival",
+          "dateEn": "July 15, 2024"
         },
         {
           "date": "25. august 2024",
-          "title": "Back-to-School Innsamlingsgalla"
+          "title": "Back-to-School Innsamlingsgalla",
+          "dateEn": "August 25, 2024"
         },
         {
           "date": "25. november 2024",
-          "title": "Høstkampanje for Gaveinnsamling"
+          "title": "Høstkampanje for Gaveinnsamling",
+          "dateEn": "November 25, 2024"
         }
       ]
     },

@@ -318,23 +318,28 @@
       "events": [
         {
           "date": "May 20, 2024",
-          "title": "MMF  Annual  Charity  Concert"
+          "title": "MMF  Annual  Charity  Concert",
+          "dateEn": "May 20, 2024"
         },
         {
           "date": "June 10, 2024",
-          "title": "Run for Music 5K Charity Race"
+          "title": "Run for Music 5K Charity Race",
+          "dateEn": "June 10, 2024"
         },
         {
           "date": "July 15, 2024",
-          "title": "MMF Culture and Arts Festival"
+          "title": "MMF Culture and Arts Festival",
+          "dateEn": "July 15, 2024"
         },
         {
           "date": "August 25, 2024",
-          "title": "Back-to-School Fundraiser Gala"
+          "title": "Back-to-School Fundraiser Gala",
+          "dateEn": "August 25, 2024"
         },
         {
           "date": "November 25, 2024",
-          "title": "Holiday Giving Campaign Kickoff"
+          "title": "Holiday Giving Campaign Kickoff",
+          "dateEn": "November 25, 2024"
         }
       ]
     },
