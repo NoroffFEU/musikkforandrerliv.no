@@ -123,3 +123,28 @@ collections:
           widget: 'list',
           field: { name: 'tag', widget: 'string' }
         }
+
+  - label: 'Gallery'
+    name: 'gallery'
+    folder: 'content/gallery'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Intro', name: 'intro', widget: 'string', required: true }
+      - label: 'Image Carousel'
+        name: 'carousel'
+        widget: 'list'
+        field:
+          { label: 'Image', name: 'image', widget: 'image', required: true }
+      - label: 'Image List'
+        name: 'list'
+        widget: 'list'
+        fields:
+          - { label: 'Image', name: 'image', widget: 'image', required: true }
+          - {
+              label: 'Image Text',
+              name: 'text',
+              widget: 'string',
+              required: true,
+            }
