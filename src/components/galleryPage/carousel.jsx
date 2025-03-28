@@ -1,3 +1,4 @@
+// Shadcn UI component for a carousel using Embla Carousel
 import * as React from 'react';
 
 import useEmblaCarousel from 'embla-carousel-react';
