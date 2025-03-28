@@ -8,7 +8,7 @@ media_folder: 'public/assets/images'
 
 i18n:
   structure: single_file
-  locales: [en]
+  locales: [en, no, mg]
   default_locale: en
 
 collections:
