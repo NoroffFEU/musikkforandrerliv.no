@@ -1,4 +1,4 @@
-// src/components/aboutuspage/aboutussection.jsx
+// ./components/aboutuspage/aboutussection.jsx
 import React from "react";
 
 
