@@ -28,10 +28,19 @@ const GalleryItem = ({ src }) => {
 
 const Gallery = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center">
-      <h1 className="text-5xl animate-bounce">Galley</h1>
+    <section className="pt-60 pb-12 px-4 max-w-7xl mx-auto">
+      <h1 className="text-4xl font-bold text-center mb-8">Gallery</h1>
+      <p className='text-center mb-9'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9 place-items-center">
+        {images.map((img, index) => (
+          <GalleryItem key={index} src={img.src} />
+        ))}
+      </div>
     </section>
   );
 };
+
 
 export default Gallery;
