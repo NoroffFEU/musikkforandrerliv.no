@@ -1,5 +1,17 @@
 import React from 'react';
 
+/**
+ * Responsive image gallery.
+ *
+ * - Displays a grid of fixed-ratio images (298x224px).
+ * - Uses a responsive grid layout:
+ *   - 1 column on mobile
+ *   - 2 columns on tablet
+ *   - 3 columns on desktop
+ * - Applies a smooth highlight effect on each image.
+ * - Includes an heading and paragraph.
+ */
+
 const images = [
   { src: '../assets/placeholder-images/IMG_1457.webp'},
   { src: '../assets/placeholder-images/IMG_3205.webp' },
@@ -41,6 +53,5 @@ const Gallery = () => {
     </section>
   );
 };
-
 
 export default Gallery;
