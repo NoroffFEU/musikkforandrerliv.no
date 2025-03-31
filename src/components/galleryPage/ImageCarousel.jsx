@@ -27,7 +27,7 @@ const ImageCarousel = () => {
   };
 
   return (
-    <div className="carousel-wrapper relative w-full flex justify-center items-center mt-10 max-h-[250px] max-w-[1280px] h-full bg-amber-200">
+    <div className="carousel-wrapper relative flex justify-center items-center mt-10 max-h-[250px] max-w-[1280px] h-full  w-full bg-amber-200">
       <div className="image-carousel flex justify-center items-center bg-red-400 ">
         <button
           onClick={prevSlide}
