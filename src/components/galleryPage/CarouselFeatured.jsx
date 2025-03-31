@@ -31,10 +31,10 @@ const CarouselFeatured = () => {
 
             return (
               <CarouselItem key={index} className="basis-1/3 lg:basis-1/5">
-                <div className="aspect-square flex flex-col justify-center items-center border overflow-hidden relative">
-                  <img src={image}></img>
+                <div className="aspect-square flex flex-col justify-center items-center overflow-hidden relative">
+                  <img className="w-full h-full object-cover" src={image}></img>
                   <span className="absolute text-red-600 top-0 font-extrabold">
-                    {index}
+                    {/* {index} */}
                   </span>
                 </div>
               </CarouselItem>
