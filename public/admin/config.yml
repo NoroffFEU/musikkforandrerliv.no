@@ -27,8 +27,8 @@ collections:
         label: 'Home Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Intro', name: 'intro', widget: 'markdown' }
+          - { label: 'Title', name: 'title', widget: 'string', i18n: true }
+          - { label: 'Intro', name: 'intro', widget: 'markdown', i18n: true }
           - { label: 'Hero Image', name: 'hero_image', widget: 'image' }
           - { label: 'Call to Action Text', name: 'cta_text', widget: 'string' }
           - { label: 'Main Content', name: 'main_content', widget: 'markdown' }
@@ -38,12 +38,13 @@ collections:
         label: 'About Us Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
           - {
               label: 'Description',
               name: 'description',
               widget: 'text',
               required: true,
+              i18n: true
             }
           - label: 'Contact Form Settings'
             name: 'contact_form_settings'
@@ -53,11 +54,13 @@ collections:
                   label: 'Success Message',
                   name: 'success_message',
                   widget: 'string',
+                  i18n: true
                 }
               - {
                   label: 'Error Message',
                   name: 'error_message',
                   widget: 'string',
+                  i18n: true
                 }
           - label: 'Contact Information'
             name: 'contact_info'
@@ -71,7 +74,7 @@ collections:
         label: 'Our Work Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
           - { label: 'Date', name: 'date', widget: 'datetime', required: true }
           - {
               label: 'Featured Image',
@@ -124,6 +127,7 @@ collections:
                   name: 'name',
                   widget: 'string',
                   required: true,
+                  i18n: true
                 }
               - {
                   label: 'Display order',
@@ -166,7 +170,7 @@ collections:
         label: 'News and Events'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
           - {
               label: 'Publish date',
               name: 'date',
@@ -230,16 +234,16 @@ collections:
         label: 'Support Us'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string', i18n: true }
           - { label: 'Image', name: 'image', widget: 'image' }
-          - { label: 'Description', name: 'description', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'string', i18n: true }
 
       - file: 'content/contact/contact.md'
         name: 'contact'
         label: 'Contact Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string', i18n: true }
           - label: 'Description'
             name: 'description'
             widget: 'object'
@@ -249,6 +253,7 @@ collections:
                   name: 'title',
                   widget: 'string',
                   required: true,
+                  i18n: true
                 }
               - {
                   label: 'Image',
@@ -311,7 +316,7 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     i18n: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
       - {
           label: 'Publish date',
           name: 'date',
