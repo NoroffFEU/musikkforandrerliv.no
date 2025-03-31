@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-// Temporary image imports
 const imageImports = import.meta.glob(
   '../../../public/assets/placeholder-images/*.{png,jpg,jpeg,svg,webp}',
   { eager: true },
@@ -54,6 +53,14 @@ const ImageCarousel = () => {
       onTouchEnd={handleTouchEnd}
       className="carousel-wrapper relative flex justify-center items-center mt-10 max-h-[139px] md:max-h-[200px] lg:max-h-[200px] xl:max-h-[248px] md:max-w-[750px] lg:max-w-[1050px] xl:max-w-[1280px] h-full w-full overflow-hidden"
     >
+      <button
+        onClick={prevSlide}
+        className="absolute z-10 left-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
+      >
+        <IoIosArrowBack size={32} className="hidden md:flex" />
+      </button>
+      <div className="image-carousel flex justify-center items-center ">
+        <div className="image-wrapper flex gap-3 items-center justify-center overflow-hidden">
           {getVisibleImages().map((src, i) => (
             <div
               key={index + i}
@@ -70,18 +77,15 @@ const ImageCarousel = () => {
               />
             </div>
           ))}
-          {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div> */}
         </div>
-        <button
-          onClick={nextSlide}
-          className="absolute z-10 right-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
-        >
-          <IoIosArrowForward size={32} />
-        </button>
       </div>
+      <button
+        onClick={nextSlide}
+        className="absolute z-10 right-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
+      >
+        <IoIosArrowForward size={32} className="hidden md:flex" />
+      </button>
     </div>
   );
 };
-
 export default ImageCarousel;
