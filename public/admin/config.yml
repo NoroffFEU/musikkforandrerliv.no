@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: NoroffFEU/musikkforandrerliv.no
-  branch: 719-Decap-CMS
-  local_backend: true
+  branch: main
+  # local_backend: true
 
   commit_messages:
     create: "Create {{collection}} entry: '{{slug}}'"
@@ -11,7 +11,7 @@ backend:
     uploadMedia: "Upload media file: '{{path}}'"
     deleteMedia: "Delete media file: '{{path}}'"
 
-media_folder: 'public/assets/images'
+media_folder: 'content/gallery'
 
 i18n:
   structure: single_file
@@ -38,13 +38,19 @@ collections:
         label: 'About Us Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              required: true,
+              i18n: true,
+            }
           - {
               label: 'Description',
               name: 'description',
               widget: 'text',
               required: true,
-              i18n: true
+              i18n: true,
             }
           - label: 'Contact Form Settings'
             name: 'contact_form_settings'
@@ -54,13 +60,13 @@ collections:
                   label: 'Success Message',
                   name: 'success_message',
                   widget: 'string',
-                  i18n: true
+                  i18n: true,
                 }
               - {
                   label: 'Error Message',
                   name: 'error_message',
                   widget: 'string',
-                  i18n: true
+                  i18n: true,
                 }
           - label: 'Contact Information'
             name: 'contact_info'
@@ -74,7 +80,13 @@ collections:
         label: 'Our Work Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              required: true,
+              i18n: true,
+            }
           - { label: 'Date', name: 'date', widget: 'datetime', required: true }
           - {
               label: 'Featured Image',
@@ -127,7 +139,7 @@ collections:
                   name: 'name',
                   widget: 'string',
                   required: true,
-                  i18n: true
+                  i18n: true,
                 }
               - {
                   label: 'Display order',
@@ -170,7 +182,13 @@ collections:
         label: 'News and Events'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+          - {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+              required: true,
+              i18n: true,
+            }
           - {
               label: 'Publish date',
               name: 'date',
@@ -236,7 +254,12 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string', i18n: true }
           - { label: 'Image', name: 'image', widget: 'image' }
-          - { label: 'Description', name: 'description', widget: 'string', i18n: true }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'string',
+              i18n: true,
+            }
 
       - file: 'content/contact/contact.md'
         name: 'contact'
@@ -253,7 +276,7 @@ collections:
                   name: 'title',
                   widget: 'string',
                   required: true,
-                  i18n: true
+                  i18n: true,
                 }
               - {
                   label: 'Image',
@@ -316,7 +339,13 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     i18n: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          i18n: true,
+        }
       - {
           label: 'Publish date',
           name: 'date',
