@@ -1,5 +1,6 @@
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import StaffSection from '../components/aboutUsPage/staffSection.jsx';
+import AboutUsSection from '../components/aboutUsPage/aboutsUsSection.jsx';
 
 // let us introduce ourselves
 
@@ -19,6 +20,7 @@ function About() {
       <div className="w-full flex justify-center items-center flex-col mt-96">
         <h1 className="text-2xl font-extrabold">About Us</h1>
         <h2>Making a difference through music</h2>
+        <AboutUsSection />
         <StaffSection />
       </div>
     </ErrorBoundary>
