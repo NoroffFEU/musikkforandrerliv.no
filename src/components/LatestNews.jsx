@@ -15,7 +15,7 @@ const LatestNews = ({ id, newsPost, writtenBy, location, date, title, content, i
       image
     };
     sessionStorage.setItem("newsPostData", JSON.stringify(newsPostData));
-    console.log('saved to sessionStorage:', newsPostData);
+    console.log('saved to sessionStorage:', newsPostData); // Debugging line
   };
    
   return (
