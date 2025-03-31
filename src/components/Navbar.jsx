@@ -42,6 +42,7 @@ function Navbar() {
     handleResize();
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
@@ -74,15 +75,53 @@ function Navbar() {
   const navbarBgClass =
     isHome && !isScrolled && !isMobile ? 'bg-transparent' : 'bg-white shadow';
 
-  const getDesktopLinkClasses = ({ isActive }) =>
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 0);
+      }
+    }
+  }, [location]);
+
+  const getDesktopHashLinkClasses = (path, hash) => {
+    const isActive = location.pathname === path && location.hash === hash;
+    return (
+      (isActive
+        ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
+        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
+          'hover:h-[26px] hover:rounded-md transition-all duration-200') +
+      ' flex items-center font-montserrat text-[14px] font-semibold px-2'
+    );
+  };
+
+  const getDesktopLinkClassesNoHash = ({ isActive }) =>
     `${
       isActive
-        ? 'text-[var(--color-alt-forest-green)]'
-        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white hover:h-[26px] hover:rounded-md transition-all duration-200'
+        ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
+        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
+          'hover:h-[26px] hover:rounded-md transition-all duration-200'
     } flex items-center font-montserrat text-[14px] font-semibold px-2`;
 
-  const getMobileLinkClasses = () =>
-    'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] flex items-center rounded-[8px] hover:bg-[var(--color-light-green)] hover:text-[#000000] transition-colors duration-200';
+  const getMobileHashLinkClasses = (path, hash) => {
+    const isActive = location.pathname === path && location.hash === hash;
+    return (
+      'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] ' +
+      'flex items-center rounded-[8px] transition-colors duration-200 ' +
+      (isActive
+        ? 'bg-[var(--color-light-green)] text-[#000000]'
+        : 'hover:bg-[var(--color-light-green)] hover:text-[#000000]')
+    );
+  };
+
+  const getMobileLinkClassesNoHash = ({ isActive }) =>
+    'block w-full py-2 px-4 font-montserrat text-[14px] font-semibold h-[54px] ' +
+    'flex items-center rounded-[8px] transition-colors duration-200 ' +
+    (isActive
+      ? 'bg-[var(--color-light-green)] text-[#000000]'
+      : 'hover:bg-[var(--color-light-green)] hover:text-[#000000]');
 
   return (
     <>
@@ -160,10 +199,17 @@ function Navbar() {
               )}
             </div>
 
-            <NavLink to="/news" className={getDesktopLinkClasses}>
-              {t('common.header.news')}
-            </NavLink>
-            <NavLink to="/about" className={getDesktopLinkClasses}>
+<NavLink
+  to="/news#latestNewsSection"
+  className={() =>
+    getDesktopHashLinkClasses('/news', '#latestNewsSection')
+  }
+>
+  {t('common.header.news')}
+</NavLink>
+
+
+            <NavLink to="/about" className={getDesktopLinkClassesNoHash}>
               {t('common.header.aboutUs')}
             </NavLink>
 
@@ -191,20 +237,22 @@ function Navbar() {
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
                   <NavLink
-                    to="/events"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
-                  >
-                    {t('common.header.events')}
-                  </NavLink>
-                  <NavLink
-                    to="/work"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
-                  >
+  to="/news#eventsSection"
+  className={() =>
+    getDesktopHashLinkClasses('/news', '#eventsSection')
+  }
+>
+  {t('common.header.events')}
+</NavLink>
+
+
+                  <NavLink to="/work" className={getDesktopLinkClassesNoHash}>
                     {t('common.header.ourWork')}
                   </NavLink>
+
                   <NavLink
                     to="/contact"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-[var(--color-sunset-red)] hover:text-white transition-all duration-200"
+                    className={getDesktopLinkClassesNoHash}
                   >
                     {t('common.header.contact')}
                   </NavLink>
@@ -243,6 +291,7 @@ function Navbar() {
           </button>
         </div>
       </nav>
+
       {isMenuOpen && (
         <div className="fixed top-[199px] left-0 w-full bg-white z-40 md:hidden overflow-y-auto shadow-md">
           <div className="px-4 pt-4 pb-8 space-y-5">
@@ -307,36 +356,44 @@ function Navbar() {
             </div>
 
             <NavLink
-              to="/news"
-              className={getMobileLinkClasses}
-              onClick={toggleMenu}
-            >
-              {t('common.header.news')}
-            </NavLink>
+  to="/news#latestNewsSection"
+  className={() =>
+    getMobileHashLinkClasses('/news', '#latestNewsSection')
+  }
+  onClick={toggleMenu}
+>
+  {t('common.header.news')}
+</NavLink>
+
+
             <NavLink
               to="/about"
-              className={getMobileLinkClasses}
+              className={getMobileLinkClassesNoHash}
               onClick={toggleMenu}
             >
               {t('common.header.aboutUs')}
             </NavLink>
+
             <NavLink
-              to="/events"
-              className={getMobileLinkClasses}
-              onClick={toggleMenu}
-            >
-              {t('common.header.events')}
-            </NavLink>
+  to="/news#eventsSection"
+  className={() =>
+    getMobileHashLinkClasses('/news', '#eventsSection')
+  }
+  onClick={toggleMenu}
+>
+  {t('common.header.events')}
+</NavLink>
+
             <NavLink
               to="/work"
-              className={getMobileLinkClasses}
+              className={getMobileLinkClassesNoHash}
               onClick={toggleMenu}
             >
               {t('common.header.ourWork')}
             </NavLink>
             <NavLink
               to="/contact"
-              className={getMobileLinkClasses}
+              className={getMobileLinkClassesNoHash}
               onClick={toggleMenu}
             >
               {t('common.header.contact')}
@@ -359,3 +416,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

@@ -1,28 +1,26 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import data from '../../data/landing-page-content.json';
 
 export function GallerySection() {
   const { image: galleryImages } = data.gallery;
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
-   
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
-   
+
     checkIfMobile();
-    
-   
+
     window.addEventListener('resize', checkIfMobile);
-    
-   
+
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-
 
   const displayImages = isMobile ? galleryImages.slice(0, 8) : galleryImages;
 
@@ -41,12 +39,11 @@ export function GallerySection() {
             </div>
           ))}
         </div>
-        
+
         <div className="flex justify-center mt-6">
-        <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
-        SEE THE GALLERY
+          <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
+            {t('screens.galleryPreview.button')}
           </button>
-         
         </div>
       </div>
     </section>

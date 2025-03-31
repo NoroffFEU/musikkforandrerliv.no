@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import locales from '../../public/locales/locales.en.json';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LatestNews from '../components/LatestNews.jsx';
 import useLatestPosts from '../data/getLatestNews.js';
-import ReusableButton from '../components/buttons/reusableButton.jsx'
+import ReusableButton from '../components/buttons/reusableButton.jsx;
+import { useLocation } from 'react-router-dom';
 
 function News() {
   const [visibleCount, setVisibleCount] = useState(3);
   const newsPosts = locales.screens.latestNews.posts;
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        section.scrollIntoView();
+      }
+    }
+  }, [location]);
 
 
 
@@ -23,7 +34,7 @@ function News() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen container mt-64 mx-auto px-8">
-        <h1 className="text-4xl font-bold mb-8">
+        <h1 id="latestNewsSection" className="text-4xl font-bold mb-8">
           {locales.screens.latestNews.title}
         </h1>
 
@@ -44,6 +55,9 @@ function News() {
           </div>
           <ReusableButton text="Load More" onClick={loadMoreArticles} className="mx-auto py-4" />
 
+        </div>
+        <div id="eventsSection">
+          <h2>Events Section Placeholder</h2>
         </div>
       </div>
     </ErrorBoundary>
