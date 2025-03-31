@@ -1,4 +1,3 @@
-backend:
 name: 'test-repo'
 local_backend:
   true
@@ -7,15 +6,12 @@ local_backend:
   # branch: 719-Decap-CMS # Change to main ???
   # local_backend: true
 
-media_folder: 'public/assets/images'
-
-
 commit_messages:
-    create: "Create {{collection}} entry: '{{slug}}'"
-    update: "Update {{collection}} entry: '{{slug}}'"
-    delete: "Delete {{collection}} entry: '{{slug}}'"
-    uploadMedia: "Upload media file: '{{path}}'"
-    deleteMedia: "Delete media file: '{{path}}'"
+  create: "Create {{collection}} entry: '{{slug}}'"
+  update: "Update {{collection}} entry: '{{slug}}'"
+  delete: "Delete {{collection}} entry: '{{slug}}'"
+  uploadMedia: "Upload media file: '{{path}}'"
+  deleteMedia: "Delete media file: '{{path}}'"
 
 media_folder: 'public/assets/images'
 
@@ -342,4 +338,3 @@ collections:
         name: 'tags'
         widget: 'list'
         field: { name: 'tag', widget: 'string' }
-
