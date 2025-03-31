@@ -14,7 +14,7 @@ function News() {
     if (location.hash) {
       const section = document.querySelector(location.hash);
       if (section) {
-        section.scrollIntoView();
+        section.scrollIntoView({ behavior: 'smooth' });
       }
     }
   }, [location]);
