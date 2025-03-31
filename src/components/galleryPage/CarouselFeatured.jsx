@@ -17,7 +17,7 @@ console.log('imageArray: ', images);
 
 const CarouselFeatured = () => {
   return (
-    <div>
+    <div className="mt-10">
       <Carousel
         opts={{
           align: 'center',
@@ -43,8 +43,8 @@ const CarouselFeatured = () => {
         </CarouselContent>
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white" />
-        <CarouselPrevious className="absolute -left-10" />
-        <CarouselNext className="absolute -right-10" />
+        <CarouselPrevious className="absolute -left-10 hidden md:flex text-(--color-sunset-red)" />
+        <CarouselNext className="absolute -right-10 hidden md:flex text-(--color-sunset-red)" />
       </Carousel>
     </div>
   );
