@@ -52,9 +52,9 @@ const CategorySection = () => {
                   {/* ReusableButton with Read More action */}
                   <div className="hidden md:block">
                     <ReusableButton
-                     text="Read More"
-                     onClick={handleReadMoreClick}
-                      className="mt-4"
+                    text="Read More"
+                    onClick={handleReadMoreClick}
+                    className="mt-4"
                    />
                 </div>
                 </div>
@@ -84,9 +84,9 @@ const CategorySection = () => {
                   {/* ReusableButton with Read More action */}
                   <div className="hidden md:block">
                     <ReusableButton
-                     text="Read More"
-                     onClick={handleReadMoreClick}
-                      className="mt-4"
+                    text="Read More"
+                    onClick={handleReadMoreClick}
+                    className="mt-4"
                    />
                 </div>
                 </div>
