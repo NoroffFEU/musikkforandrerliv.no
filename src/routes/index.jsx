@@ -1,16 +1,24 @@
+import { useEffect, useState } from 'react';
+
+
+
 import { Route, Routes, useLocation } from 'react-router-dom';
-import MainLayout from '../components/MainLayout.jsx';
+
+
+
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LoadingSpinner from '../components/LoadingSpinner.jsx';
-import { useEffect, useState } from 'react';
+import MainLayout from '../components/MainLayout.jsx';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
-import Home from '../pages/Home'; 
+import Home from '../pages/Home';
 import News from '../pages/News';
+import NewsPost from '../pages/NewsPost';
 import NotFound from '../pages/NotFound';
-import TestTranslations from '../pages/TestTranslations';
 import OurWork from '../pages/OurWork';
 import Placeholder from '../pages/PlaceHolder';
+import TestTranslations from '../pages/TestTranslations';
+
 
 
 const AppRoutes = () => {
@@ -42,6 +50,7 @@ const AppRoutes = () => {
               <Route path="/test-translations" element={<TestTranslations />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/placeholder" element={<Placeholder/>} />
+              <Route path="/news-post" element={<NewsPost />} />
             </Route>
           </Routes>
         )}
