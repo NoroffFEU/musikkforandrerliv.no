@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function NewsPost() {
+  
   return (
     <div className="w-full max-w-[1000px] mx-auto mt-[100px] pb-[60px] px-4 font-montserrat">
       {/* Breadcrumb Navigation */}
