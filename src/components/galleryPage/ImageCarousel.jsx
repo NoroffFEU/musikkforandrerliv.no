@@ -35,14 +35,12 @@ const ImageCarousel = () => {
         >
           <IoIosArrowBack size={32} />
         </button>
-        <div className="image-wrapper flex gap-3 justify-center bg-blue-400  relative">
+        <div className="image-wrapper flex gap-3 items-center justify-center bg-blue-400  relative">
           {getVisibleImages().map((src, i) => (
             <div
               key={index + i}
-              className={`image-container transition duration-300 flex justify-center items-center h-[200px] w-[235px] overflow-hidden${
-                i === 2
-                  ? 'h-[260px] w-[420px] transform-none scale-120 z-10'
-                  : ' opacity-70 '
+              className={`image-container transition duration-500 flex justify-center items-center h-[198px] w-[234px] overflow-hidden${
+                i === 2 ? ' h-[262px] w-[416px] z-10' : ' '
               }`}
             >
               <img
@@ -52,8 +50,8 @@ const ImageCarousel = () => {
               />
             </div>
           ))}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div>
+          {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div> */}
         </div>
         <button
           onClick={nextSlide}
