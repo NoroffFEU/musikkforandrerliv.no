@@ -1,8 +1,6 @@
 import { useState } from 'react';
-
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-// Temporary image imports
 const imageImports = import.meta.glob(
   '../../../public/assets/placeholder-images/*.{png,jpg,jpeg,svg,webp}',
   { eager: true },
@@ -27,32 +25,36 @@ const ImageCarousel = () => {
   };
 
   return (
-    <div className="carousel-wrapper relative flex justify-center items-center mt-10 max-h-[250px] max-w-[1280px] h-full  w-full bg-amber-200">
-      <div className="image-carousel flex justify-center items-center bg-red-400 ">
+    <div className="carousel-wrapper relative flex justify-center items-center mt-10 max-h-[250px] max-w-[1280px] h-full w-full overflow-hidden">
+      <div className="image-carousel flex justify-center items-center relative">
         <button
           onClick={prevSlide}
           className="absolute z-10 left-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
         >
           <IoIosArrowBack size={32} />
         </button>
-        <div className="image-wrapper flex gap-3 items-center justify-center bg-blue-400  relative">
+
+        <div className="image-wrapper flex gap-3 items-center justify-center relative overflow-hidden">
           {getVisibleImages().map((src, i) => (
             <div
               key={index + i}
-              className={`image-container transition duration-500 flex justify-center items-center h-[198px] w-[234px] overflow-hidden${
-                i === 2 ? ' h-[262px] w-[416px] z-10' : ' '
+              className={`image-container transition duration-500 flex justify-center items-center h-[198px] w-[234px] overflow-hidden ${
+                i === 2 ? 'h-[262px] w-[416px] z-10' : ''
+              } ${
+                i === 0 ? 'ml-[-85px]' : ''
+              } ${
+                i === 4 ? 'mr-[-85px]' : ''
               }`}
             >
               <img
                 src={src}
                 alt={`carousel-${index + i}`}
-                className="w-full h-full object-cover shadow-lg"
+                className="transition-all duration-500 transform w-full h-full object-cover shadow-lg"
               />
             </div>
           ))}
-          {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div> */}
         </div>
+
         <button
           onClick={nextSlide}
           className="absolute z-10 right-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
