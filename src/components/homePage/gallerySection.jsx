@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
+import ImagePreview from '../galleryPage/ImagePreview';
 
 export function GallerySection() {
   const { image: galleryImages } = data.gallery;
@@ -24,11 +25,17 @@ export function GallerySection() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4">
           {displayImages.map((src, idx) => (
             <div key={idx} className="aspect-square w-full">
-              <img
-                src={src}
-                alt="MMF Gallery"
-                loading="lazy"
-                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition"
+              <ImagePreview
+                images={displayImages}
+                startingIndex={idx}
+                thumbnail={
+                  <img
+                    src={src}
+                    alt="MMF Gallery"
+                    loading="lazy"
+                    className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition"
+                  />
+                }
               />
             </div>
           ))}
