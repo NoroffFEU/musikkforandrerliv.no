@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -13,6 +13,9 @@ console.log('imageArray: ', images);
 
 const ImageCarousel = () => {
   const [index, setIndex] = useState(0);
+  const carouselRef = useRef(null);
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   const prevSlide = () => {
     setIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
@@ -22,11 +25,33 @@ const ImageCarousel = () => {
     setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    const swipeThreshold = 50;
+    if (touchStartX - touchEndX > swipeThreshold) {
+      nextSlide();
+    } else if (touchEndX - touchStartX > swipeThreshold) {
+      prevSlide();
+    }
+  };
+
   const getVisibleImages = () => {
     return [...images, ...images].slice(index, index + 5);
   };
 
   return (
+    <div
+      ref={carouselRef}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       className="carousel-wrapper relative flex justify-center items-center mt-10 max-h-[139px] md:max-h-[200px] lg:max-h-[200px] xl:max-h-[248px] md:max-w-[750px] lg:max-w-[1050px] xl:max-w-[1280px] h-full w-full overflow-hidden"
     >
           {getVisibleImages().map((src, i) => (
