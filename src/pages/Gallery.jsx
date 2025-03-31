@@ -1,16 +1,5 @@
 import React from 'react';
 
-/**
- * Responsive image gallery.
- *
- * - Displays a grid of fixed-ratio images (298x224px).
- * - Uses a responsive grid layout:
- *   - 1 column on mobile
- *   - 2 columns on tablet
- *   - 3 columns on desktop
- * - Applies a smooth highlight effect on each image.
- * - Includes an heading and paragraph.
- */
 
 const images = [
   { src: '../assets/placeholder-images/IMG_1457.webp'},
@@ -24,13 +13,16 @@ const images = [
   { src: '../assets/placeholder-images/IMG_5348.webp' },
 ];
 
-const GalleryItem = ({ src }) => {
+const GalleryItem = ({ src, aspectClass, className }) => {
   return (
-    <div className="group w-full max-w-[298px] mx-auto">
-      <div className="relative w-full h-[224px] overflow-hidden shadow-sm">
+    <div className={`group w-full ${className}`}>
+      <div
+        className={`relative w-full overflow-hidden shadow-sm rounded-xl ${aspectClass}`}
+      >
         <img
           src={src}
-          loading='lazy'
+          loading="lazy"
+          alt=""
           className="absolute inset-0 w-full h-full object-cover cursor-pointer shadow-md hover:opacity-80 transition"
         />
       </div>
@@ -42,12 +34,41 @@ const Gallery = () => {
   return (
     <section className="pt-60 pb-12 px-4 max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center mb-8">Gallery</h1>
-      <p className='text-center mb-9'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9 place-items-center">
-        {images.map((img, index) => (
-          <GalleryItem key={index} src={img.src} />
-        ))}
+      <p className="text-center mb-9">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {images.map((img, index) => {
+          const pos = index % 6;
+          let aspectClass = '';
+          let colSpan = '';
+
+          
+          if (pos === 4) {
+            colSpan = 'col-span-2 sm:col-span-2 lg:col-span-1 lg:col-start-2';
+            aspectClass = 'pb-[58%] sm:pb-[58%] lg:pb-[44%]';
+          }
+          
+          else if (pos === 3 || pos === 5) {
+            colSpan = 'col-span-1';
+            aspectClass = 'pb-[66%] sm:pb-[66%] lg:pb-[89%]';
+          }
+          else {
+            colSpan = 'col-span-1';
+            aspectClass = 'pb-[66%] sm:pb-[66%] lg:pb-[59%]';
+          }
+
+          return (
+            <GalleryItem
+              key={index}
+              src={img.src}
+              aspectClass={aspectClass}
+              className={colSpan}
+            />
+          );
+        })}
       </div>
     </section>
   );
