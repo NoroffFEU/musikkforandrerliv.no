@@ -76,6 +76,7 @@ const CategorySection = () => {
                     <img 
                       src="/assets/placeholder-images/Arrow-forward-circle.png" 
                       alt="Arrow to the right" 
+                      onClick={handleReadMoreClick}
                       className="ml-2 w-[30px] h-[30px] md:hidden mb-4" 
                     />
                   </div>
