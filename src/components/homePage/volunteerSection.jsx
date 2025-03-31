@@ -35,7 +35,7 @@ const VolunteerSection = () => {
         <div className="w-full md:w-1/2 md:h-full flex items-center justify-center">
           <img
             src={volunteerContent.image}
-            alt={volunteerContent.title}
+            alt= "Several children smiling and holding their violins"
             className="w-full aspect-[1/1] h-auto md:h-full object-cover"
           />
         </div>
