@@ -12,6 +12,7 @@ import News from '../pages/News';
 import NotFound from '../pages/NotFound';
 import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
+import Placeholder from '../pages/PlaceHolder';
 import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
@@ -42,11 +43,13 @@ const AppRoutes = () => {
             <Route path="/work" element={<OurWork />} />
             <Route path="/work-specific" element={<CategorySpecific />} />
             <Route path="/test-translations" element={<TestTranslations />} />
+            <Route path="/placeholder" element={<Placeholder />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       )}
     </ErrorBoundary>
+
   );
 };
 
