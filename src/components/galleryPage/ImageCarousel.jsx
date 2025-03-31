@@ -31,11 +31,11 @@ const ImageCarousel = () => {
       <div className="image-carousel flex justify-center items-center bg-red-400 ">
         <button
           onClick={prevSlide}
-          className="absolute left-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
+          className="absolute z-10 left-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
         >
           <IoIosArrowBack size={32} />
         </button>
-        <div className="image-wrapper flex gap-3 justify-center bg-blue-400 max-w-[1120px] relative">
+        <div className="image-wrapper flex gap-3 justify-center bg-blue-400  relative">
           {getVisibleImages().map((src, i) => (
             <div
               key={index + i}
@@ -57,7 +57,7 @@ const ImageCarousel = () => {
         </div>
         <button
           onClick={nextSlide}
-          className="absolute right-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
+          className="absolute z-10 right-0 p-2 text-(--color-sunset-red) rounded-full cursor-pointer"
         >
           <IoIosArrowForward size={32} />
         </button>
