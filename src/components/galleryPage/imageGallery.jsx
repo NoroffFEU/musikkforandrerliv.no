@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import data from '../../data/landing-page-content.json';
 
+/**
+ * ImageGallery
+ *
+ * A responsive image grid:
+ * - Desktop: Structured 6-image repeating layout using a 12-column grid
+ * - Tablet/Mobile: 2-column grid with wide image taking up full width
+ * - Images have hover effects and captions
+ */
+
 const GalleryItem = ({ src, aspectClass }) => (
     <div className="group w-full h-full flex flex-col">
       <div className={`relative w-full h-full overflow-hidden shadow-sm ${aspectClass}`}>
