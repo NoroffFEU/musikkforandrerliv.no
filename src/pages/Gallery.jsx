@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ImageCarousel from '../components/galleryPage/imageCarousel';
+import ImageCarousel from '../components/galleryPage/ImageCarousel';
 
 const Gallery = () => {
   return (
