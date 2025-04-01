@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import data from '../data/landing-page-content.json';
 
-
-
 const GalleryItem = ({ src, aspectClass }) => (
   <div className="group w-full">
     <div
-      className={`relative w-full overflow-hidden shadow-sm  ${aspectClass}`}
+      className={`relative w-full overflow-hidden shadow-sm rounded-xl ${aspectClass}`}
     >
       <img
         src={src}
@@ -48,47 +46,69 @@ const Gallery = () => {
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
 
-      {groups.map((group, groupIndex) => (
-        <div key={groupIndex} className="mb-16 space-y-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-12">
-            {group.map((img, index) => {
-              const pos = index % 6;
+      {/* Desktop layout */}
+      <div className="hidden lg:block">
+        {groups.map((group, groupIndex) => (
+          <div key={groupIndex} className="mb-16 space-y-10">
+            <div className="grid grid-cols-12 gap-x-6 gap-y-12">
+              {group.map((img, index) => {
+                const pos = index % 6;
 
-              let colSpan = '';
-              let aspectClass = '';
-              let wrapperClass = '';
+                let colSpan = '';
+                let aspectClass = '';
+                let wrapperClass = '';
 
-              if (pos === 0) {
-                colSpan = 'col-span-1 sm:col-span-1 lg:col-span-4 lg:col-start-1';
-                aspectClass = 'pb-[66%] sm:pb-[66%] lg:pb-[59%]';
-              } else if (pos === 1) {
-                colSpan = 'col-span-1 sm:col-span-1 lg:col-span-4 lg:col-start-5';
-                aspectClass = 'pb-[66%] sm:pb-[66%] lg:pb-[59%]';
-              } else if (pos === 2) {
-                colSpan = 'col-span-1 sm:col-span-1 lg:col-span-4 lg:col-start-9';
-                aspectClass = 'pb-[66%] sm:pb-[66%] lg:pb-[59%]';
-              } else if (pos === 3) {
-                colSpan = 'col-span-1 sm:col-span-1 lg:col-span-3 lg:col-start-1';
-                aspectClass = 'pb-[66%] sm:pb-[66%] lg:pb-[89%]';
-                wrapperClass = 'lg:flex lg:justify-center';
-              } else if (pos === 4) {
-                colSpan = 'col-span-2 sm:col-span-2 lg:col-span-6 lg:col-start-4';
-                aspectClass = 'pb-[58%] sm:pb-[58%] lg:pb-[44%]';
-              } else if (pos === 5) {
-                colSpan = 'col-span-1 sm:col-span-1 lg:col-span-3 lg:col-start-10';
-                aspectClass = 'pb-[66%] sm:pb-[66%] lg:pb-[89%]';
-                wrapperClass = 'lg:flex lg:justify-center';
-              }
+                if (pos === 0) {
+                  colSpan = 'lg:col-span-4 lg:col-start-1';
+                  aspectClass = 'lg:pb-[59%]';
+                } else if (pos === 1) {
+                  colSpan = 'lg:col-span-4 lg:col-start-5';
+                  aspectClass = 'lg:pb-[59%]';
+                } else if (pos === 2) {
+                  colSpan = 'lg:col-span-4 lg:col-start-9';
+                  aspectClass = 'lg:pb-[59%]';
+                } else if (pos === 3) {
+                  colSpan = 'lg:col-span-3 lg:col-start-1';
+                  aspectClass = 'lg:pb-[89%]';
+                  wrapperClass = 'lg:flex lg:justify-center';
+                } else if (pos === 4) {
+                  colSpan = 'lg:col-span-6 lg:col-start-4';
+                  aspectClass = 'lg:pb-[44%]';
+                } else if (pos === 5) {
+                  colSpan = 'lg:col-span-3 lg:col-start-10';
+                  aspectClass = 'lg:pb-[89%]';
+                  wrapperClass = 'lg:flex lg:justify-center';
+                }
 
-              return (
-                <div key={index} className={`${colSpan} ${wrapperClass}`}>
-                  <GalleryItem src={img.src} aspectClass={aspectClass} />
-                </div>
-              );
-            })}
+                return (
+                  <div
+                    key={index}
+                    className={`col-span-1 sm:col-span-1 ${colSpan} ${wrapperClass}`}
+                  >
+                    <GalleryItem src={img.src} aspectClass={aspectClass} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      {/* Mobile / Tablet layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
+        {displayImages.map((img, index) => {
+          const isWideMobile = index % 6 === 4;
+
+          return (
+            <div key={index} className={isWideMobile ? 'col-span-2' : ''}>
+              <GalleryItem
+                src={img.src}
+                aspectClass={isWideMobile ? 'pb-[58%]' : 'pb-[66%]'}
+              />
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };
