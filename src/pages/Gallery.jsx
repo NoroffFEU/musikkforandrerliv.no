@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ImageGallery from '../components/galleryPage/imageGallery';
 
 const Gallery = () => {
