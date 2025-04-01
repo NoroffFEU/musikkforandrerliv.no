@@ -4,12 +4,11 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 // Temporary image imports
 const imageImports = import.meta.glob(
-  '../../../public/assets/placeholder-images/*.{png,jpg,jpeg,svg,webp}',
+  '/src/compressed-images/*.{png,jpg,jpeg,svg,webp}',
   { eager: true },
 );
-const images = Object.values(imageImports).map((mod) => mod.default);
 
-console.log('imageArray: ', images);
+const images = Object.values(imageImports).map((mod) => mod.default);
 
 const ImageCarousel = () => {
   const [index, setIndex] = useState(0);
