@@ -3,7 +3,8 @@ import ReadMore from "./Readmore";
 import {Link} from "react-router-dom";
 
 
-const LatestNews = ({ id, newsPost, writtenBy, location, date, title, content, image }) => {
+const LatestNews = ({ newsPost, writtenBy, location, date, title, content, image }) => {
+
   const handleClick = () => {
     const newsPostData = {
       newsPost,
@@ -14,6 +15,7 @@ const LatestNews = ({ id, newsPost, writtenBy, location, date, title, content, i
       content,
       image
     };
+ 
     sessionStorage.setItem("newsPostData", JSON.stringify(newsPostData));
     console.log('saved to sessionStorage:', newsPostData); // Debugging line
   };
@@ -33,8 +35,9 @@ const LatestNews = ({ id, newsPost, writtenBy, location, date, title, content, i
             <Link to={`/news-post`} className="no-underline"
             onClick={handleClick}
             >
-            <h3 className="text-4xl font-semibold mt-8">{title}</h3>
+            <h3   className="text-4xl font-semibold mt-8">{title}</h3>
             </Link>
+            
             <div className="flex flex-col sm:flex-row justify-between mt-8">
               <p className="text-gray-500 text-sm capitalize">{writtenBy}</p>
               <div className="flex flex-col sm:flex-row sm:gap-2">
