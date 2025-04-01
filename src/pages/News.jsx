@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 
 function News() {
   const [visibleCount, setVisibleCount] = useState(3);
+  const [newItems, setNewItems] = useState([]);
   const newsPosts = locales.screens.latestNews.posts;
   const location = useLocation();
 
@@ -20,8 +21,27 @@ function News() {
     }
   }, [location]);
 
+  useEffect(() => {
+    if (newItems.length > 0) {
+      const timer = setTimeout(() => {
+        setNewItems([]);
+      }, 1000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [newItems]);
+
   const loadMoreArticles = () => {
-    setVisibleCount(visibleCount + 3);
+    const currentCount = visibleCount;
+    const newCount = visibleCount + 3;
+    
+    const itemsToAnimate = [];
+    for (let i = currentCount; i < newCount; i++) {
+      itemsToAnimate.push(i);
+    }
+    
+    setVisibleCount(newCount);
+    setNewItems(itemsToAnimate);
   };
 
   const { posts, loading, error } = useLatestPosts();
@@ -42,22 +62,33 @@ function News() {
 
         <div className="px-4 py-8">
           <div className="flex flex-col gap-6">
-          {combinedPosts.slice(0, visibleCount).map((post, index) => (
-              <LatestNews
-                key={index}
-                newsPost={post.newsPost || newsPosts[index].newsPost}
-                writtenBy={post.writtenBy || newsPosts[index].writtenBy}
-                location={post.location || newsPosts[index].location}
-                date={post.date || newsPosts[index].date}
-                title={post.title || newsPosts[index].title}
-                content={post.body || newsPosts[index].description}
-                image={post.image || newsPosts[index].image}
-              />
+            {combinedPosts.slice(0, visibleCount).map((post, index) => (
+              <div 
+                key={index} 
+                className={`transform transition-all duration-700 ease-out ${
+                  newItems.includes(index) 
+                    ? 'opacity-0 translate-y-6' 
+                    : 'opacity-100 translate-y-0'
+                }`}
+                style={{
+                  transitionDelay: `${(index % 3) * 150}ms`,
+                }}
+              >
+                <LatestNews
+                  newsPost={post.newsPost || newsPosts[index].newsPost}
+                  writtenBy={post.writtenBy || newsPosts[index].writtenBy}
+                  location={post.location || newsPosts[index].location}
+                  date={post.date || newsPosts[index].date}
+                  title={post.title || newsPosts[index].title}
+                  content={post.body || newsPosts[index].description}
+                  image={post.image || newsPosts[index].image}
+                />
+              </div>
             ))}
           </div>
           {hasMorePosts && (
             <div className="mt-8 flex justify-center">
-            <ReusableButton text="Load More" onClick={loadMoreArticles} className="mx-auto py-4"/>
+              <ReusableButton text="Load More" onClick={loadMoreArticles} className="mx-auto py-4"/>
             </div>
           )}
         </div>
