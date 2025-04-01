@@ -6,7 +6,7 @@ import data from '../data/landing-page-content.json';
 const GalleryItem = ({ src, aspectClass }) => (
   <div className="group w-full">
     <div
-      className={`relative w-full overflow-hidden shadow-sm rounded-xl ${aspectClass}`}
+      className={`relative w-full overflow-hidden shadow-sm  ${aspectClass}`}
     >
       <img
         src={src}
