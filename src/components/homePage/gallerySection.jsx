@@ -5,8 +5,23 @@ import ImagePreview from '../galleryPage/ImagePreview';
 
 export function GallerySection() {
   const { image: galleryImages } = data.gallery;
+
+  // Define alt descriptions for each image.
+  const imageAltText = [
+    "Child Smiling to camera", 
+    "Three children smiling to camera", 
+    "Group photo of kids outside", 
+    "Child holding a baby", 
+    "Smiling child in a classroom", 
+    "Poor child sleeping outside", 
+    "Children playing various instruments", 
+    "Children with a violin", 
+    "Child holding something"
+  ];
+
   const [isMobile, setIsMobile] = useState(false);
 
+  // Check screen width for mobile responsiveness
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -17,6 +32,7 @@ export function GallerySection() {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
+  // Show only 8 images on mobile devices
   const displayImages = isMobile ? galleryImages.slice(0, 8) : galleryImages;
 
   return (
@@ -27,9 +43,9 @@ export function GallerySection() {
             <div key={idx} className="aspect-square w-full">
               <img
                 src={src}
-                alt="MMF Gallery"
+                alt={imageAltText[idx]}  // ✅ Beholder spesifikke alt-tekster
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition" // ✅ Beholder ekstra styling fra gallery
               />
             </div>
           ))}
@@ -38,7 +54,7 @@ export function GallerySection() {
         <div className="flex justify-center mt-6">
           <a
             href="/gallery"
-            className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer"
+            className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans)] font-semibold md:text-2xl cursor-pointer"
           >
             SEE THE GALLERY
           </a>
