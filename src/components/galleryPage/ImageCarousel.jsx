@@ -13,6 +13,9 @@ console.log('imageArray: ', images);
 
 const ImageCarousel = () => {
   const [index, setIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState(
+    Array(images.length).fill(false),
+  );
   const carouselRef = useRef(null);
   let touchStartX = 0;
   let touchEndX = 0;
@@ -43,8 +46,27 @@ const ImageCarousel = () => {
     }
   };
 
+  // const getVisibleImages = () => {
+  //   return [...images, ...images].slice(index, index + 5);
+  // };
+
   const getVisibleImages = () => {
-    return [...images, ...images].slice(index, index + 5);
+    if (index + 5 <= images.length) {
+      return images.slice(index, index + 5);
+    } else {
+      return [
+        ...images.slice(index),
+        ...images.slice(0, (index + 5) % images.length),
+      ];
+    }
+  };
+
+  const handleImageLoad = (i) => {
+    setLoadedImages((prev) => {
+      const newLoadedImages = [...prev];
+      newLoadedImages[i] = true;
+      return newLoadedImages;
+    });
   };
 
   return (
@@ -62,23 +84,42 @@ const ImageCarousel = () => {
       </button>
       <div className="image-carousel flex justify-center items-center ">
         <div className="image-wrapper flex gap-3 items-center justify-center overflow-hidden">
-          {getVisibleImages().map((src, i) => (
-            <div
-              key={index + i}
-              className={`image-container transition duration-1000 flex justify-center items-center h-[111px] w-[131px] md:h-[111px] md:w-[131px] lg:h-[145px] lg:w-[200px] xl:h-[198px] xl:w-[234px] overflow-hidden ${
-                i === 2
-                  ? 'h-[139px] w-[219px] md:h-[145px] md:w-[250px] lg:h-[200px] lg:w-[300px] xl:h-[248px] xl:w-[416px]  z-10'
-                  : ''
-              } ${i === 0 ? 'ml-[-200px] md:ml-[-82px] lg:ml-[-100px] xl:ml-[-124px]' : ''} ${i === 4 ? 'mr-[-200px] md:mr-[-82px] lg:mr-[-100px] xl:mr-[-124px]' : ''}`}
-            >
-              <img
-                src={src}
-                alt={`carousel-${index + i}`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
+          {getVisibleImages().map((src, i) => {
+            const imgIndex = (index + i) % images.length;
+            console.log('imgIndex: ', imgIndex);
+
+            return (
+              <div
+                key={imgIndex}
+                className={`image-container transition-x duration-100 flex justify-center items-center h-[111px] w-[131px] md:h-[111px] md:w-[131px] lg:h-[145px] lg:w-[200px] xl:h-[198px] xl:w-[234px] overflow-hidden ${
+                  i === 2
+                    ? 'h-[139px] w-[219px] md:h-[145px] md:w-[250px] lg:h-[200px] lg:w-[300px] xl:h-[248px] xl:w-[416px] z-10'
+                    : ''
+                } ${i === 0 ? 'ml-[-200px] md:ml-[-82px] lg:ml-[-100px] xl:ml-[-124px]' : ''} ${
+                  i === 4
+                    ? 'mr-[-200px] md:mr-[-82px] lg:mr-[-100px] xl:mr-[-124px]'
+                    : ''
+                }`}
+              >
+                <div className="relative w-full h-full">
+                  {/* Skeleton Loader */}
+                  {!loadedImages[imgIndex] && (
+                    <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
+                  )}
+
+                  <img
+                    src={src}
+                    alt={`carousel-${imgIndex}`}
+                    className={`w-full h-full object-cover shadow-lg transition-opacity duration-300 ${
+                      loadedImages[imgIndex] ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    loading="lazy"
+                    onLoad={() => handleImageLoad(imgIndex)}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <button
