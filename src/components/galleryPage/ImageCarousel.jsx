@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-// Import the alt text JSON
+// Import the alt text JSON file
 import altTextData from '../../../public/assets/images-gallery-alt.json';
 
 // Temporary image imports
@@ -13,7 +13,7 @@ const images = Object.values(imageImports).map((mod) => mod.default);
 
 console.log('imageArray: ', images);
 
-// Function to extract the filename from the image path (without the directory part)
+// Function to extract the filename from the image path
 const getFilename = (path) => path.split('/').pop();
 
 const ImageCarousel = () => {
@@ -72,9 +72,9 @@ const ImageCarousel = () => {
 
   // Function to get alt text for an image based on the filename
   const getAltText = (src) => {
-    const filename = getFilename(src); // Extract filename from path
+    const filename = getFilename(src);
     const imageData = altTextData.find((item) => {
-      return item.src === filename; // Compare the filename in JSON with the extracted filename
+      return item.src === filename; 
     });
     return imageData ? imageData.alt : `carousel-${filename}`; // Fallback to the filename if not found
   };
@@ -119,7 +119,7 @@ const ImageCarousel = () => {
 
                   <img
                     src={src}
-                    alt={getAltText(src)} // Fetch alt text using the function
+                    alt={getAltText(src)} // Fetch alt text 
                     className={`w-full h-full object-cover shadow-lg transition-opacity duration-300 ${
                       loadedImages[imgIndex] ? 'opacity-100' : 'opacity-0'
                     }`}
