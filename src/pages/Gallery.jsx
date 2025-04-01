@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import data from '../data/landing-page-content.json';
 
 const GalleryItem = ({ src, aspectClass }) => (
-  <div className="group w-full h-full">
+  <div className="group w-full h-full flex flex-col">
     <div
-      className={`relative w-full h-full overflow-hidden shadow-sm ${aspectClass}`}
+      className={`relative w-full overflow-hidden shadow-sm ${aspectClass}`}
     >
       <img
         src={src}
@@ -13,6 +13,7 @@ const GalleryItem = ({ src, aspectClass }) => (
         className="absolute inset-0 w-full h-full object-cover cursor-pointer shadow-md hover:opacity-80 transition"
       />
     </div>
+    <p className="mt-2 text-l text-center text-gray-600">Lorem ipsum  dolor sit amet</p>
   </div>
 );
 
@@ -50,7 +51,7 @@ const Gallery = () => {
       <div className="hidden lg:block">
         {groups.map((group, groupIndex) => (
           <div key={groupIndex} className="mb-16 space-y-10">
-            <div className="grid grid-cols-12 gap-x-6 gap-y-12">
+            <div className="grid grid-cols-12 gap-x-12 gap-y-12">
               {group.map((img, index) => {
                 const pos = index % 6;
 
