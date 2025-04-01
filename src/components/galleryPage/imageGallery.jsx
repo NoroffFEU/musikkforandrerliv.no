@@ -20,7 +20,6 @@ const GalleryItem = ({ src, alt, aspectClass }) => (
         className="absolute inset-0 w-full h-full object-cover cursor-pointer shadow-md hover:opacity-80 transition"
       />
     </div>
-    {/* Keep the placeholder text under images */}
     <p className="mt-2 mb-4 text-lg text-center text-gray-600">Lorem ipsum dolor sit amet</p>
   </div>
 );
