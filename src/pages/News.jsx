@@ -22,10 +22,11 @@ function News() {
   }, [location]);
 
   useEffect(() => {
+   
     if (newItems.length > 0) {
       const timer = setTimeout(() => {
         setNewItems([]);
-      }, 1000);
+      }, 500);
       
       return () => clearTimeout(timer);
     }
@@ -34,7 +35,7 @@ function News() {
   const loadMoreArticles = () => {
     const currentCount = visibleCount;
     const newCount = visibleCount + 3;
-    
+   
     const itemsToAnimate = [];
     for (let i = currentCount; i < newCount; i++) {
       itemsToAnimate.push(i);
@@ -65,13 +66,13 @@ function News() {
             {combinedPosts.slice(0, visibleCount).map((post, index) => (
               <div 
                 key={index} 
-                className={`transform transition-all duration-700 ease-out ${
+                className={`transform transition-all duration-300 ease-out ${
                   newItems.includes(index) 
                     ? 'opacity-0 translate-y-6' 
                     : 'opacity-100 translate-y-0'
                 }`}
                 style={{
-                  transitionDelay: `${(index % 3) * 150}ms`,
+                  transitionDelay: `${(index % 3) * 80}ms`,
                 }}
               >
                 <LatestNews
