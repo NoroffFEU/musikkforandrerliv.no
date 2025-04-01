@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import data from '../data/landing-page-content.json';
 
 const GalleryItem = ({ src, aspectClass }) => (
-  <div className="group w-full">
+  <div className="group w-full h-full">
     <div
-      className={`relative w-full overflow-hidden shadow-sm rounded-xl ${aspectClass}`}
+      className={`relative w-full h-full overflow-hidden shadow-sm ${aspectClass}`}
     >
       <img
         src={src}
@@ -69,15 +69,15 @@ const Gallery = () => {
                   aspectClass = 'lg:pb-[59%]';
                 } else if (pos === 3) {
                   colSpan = 'lg:col-span-3 lg:col-start-1';
-                  aspectClass = 'lg:pb-[89%]';
-                  wrapperClass = 'lg:flex lg:justify-center';
+                  aspectClass = 'h-full'; 
+                  wrapperClass = 'lg:flex lg:items-stretch';
                 } else if (pos === 4) {
                   colSpan = 'lg:col-span-6 lg:col-start-4';
                   aspectClass = 'lg:pb-[44%]';
                 } else if (pos === 5) {
                   colSpan = 'lg:col-span-3 lg:col-start-10';
-                  aspectClass = 'lg:pb-[89%]';
-                  wrapperClass = 'lg:flex lg:justify-center';
+                  aspectClass = 'h-full'; 
+                  wrapperClass = 'lg:flex lg:items-stretch';
                 }
 
                 return (
