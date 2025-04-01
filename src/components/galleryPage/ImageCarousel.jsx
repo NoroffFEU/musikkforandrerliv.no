@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 // Import the alt text JSON file
@@ -74,10 +74,19 @@ const ImageCarousel = () => {
   const getAltText = (src) => {
     const filename = getFilename(src);
     const imageData = altTextData.find((item) => {
-      return item.src === filename; 
+      return item.src === filename;
     });
     return imageData ? imageData.alt : `carousel-${filename}`; // Fallback to the filename if not found
   };
+
+  // Preload images to avoid loading delay
+  useEffect(() => {
+    const preloadImages = images.slice(index, index + 5); // Preload the next few images for smoothness
+    preloadImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [index]);
 
   return (
     <div
@@ -93,15 +102,14 @@ const ImageCarousel = () => {
         <IoIosArrowBack size={32} className="hidden md:flex" />
       </button>
       <div className="image-carousel flex justify-center items-center">
-        <div className="image-wrapper flex gap-3 items-center justify-center overflow-hidden">
+        <div className="image-wrapper flex gap-3 items-center justify-center overflow-hidden transition-transform duration-500 ease-in-out">
           {getVisibleImages().map((src, i) => {
             const imgIndex = (index + i) % images.length;
-            console.log('imgIndex: ', imgIndex);
 
             return (
               <div
                 key={imgIndex}
-                className={`image-container transition-x duration-100 flex justify-center items-center h-[111px] w-[131px] md:h-[111px] md:w-[131px] lg:h-[145px] lg:w-[200px] xl:h-[198px] xl:w-[234px] overflow-hidden ${
+                className={`image-container flex justify-center items-center h-[111px] w-[131px] md:h-[111px] md:w-[131px] lg:h-[145px] lg:w-[200px] xl:h-[198px] xl:w-[234px] overflow-hidden transition-all duration-500 ease-in-out ${
                   i === 2
                     ? 'h-[139px] w-[219px] md:h-[145px] md:w-[250px] lg:h-[200px] lg:w-[300px] xl:h-[248px] xl:w-[416px] z-10'
                     : ''
@@ -119,8 +127,8 @@ const ImageCarousel = () => {
 
                   <img
                     src={src}
-                    alt={getAltText(src)} // Fetch alt text 
-                    className={`w-full h-full object-cover shadow-lg transition-opacity duration-300 ${
+                    alt={getAltText(src)} // Fetch alt text
+                    className={`w-full h-full object-cover shadow-lg transition-opacity duration-300 ease-in-out ${
                       loadedImages[imgIndex] ? 'opacity-100' : 'opacity-0'
                     }`}
                     loading="lazy"
@@ -143,6 +151,7 @@ const ImageCarousel = () => {
 };
 
 export default ImageCarousel;
+
 
 
 // -------- Carousel with colors to see how the carousel should behave
