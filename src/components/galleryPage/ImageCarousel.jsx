@@ -67,14 +67,14 @@ const ImageCarousel = () => {
               key={index + i}
               className={`image-container transition duration-1000 flex justify-center items-center h-[111px] w-[131px] md:h-[111px] md:w-[131px] lg:h-[145px] lg:w-[200px] xl:h-[198px] xl:w-[234px] overflow-hidden ${
                 i === 2
-                  ? 'h-[139px] w-[219px] md:h-[145px] md:w-[250px] lg:h-[200px] lg:w-[300px] xl:h-[248px] xl:w-[416px] scale-105 z-10'
+                  ? 'h-[139px] w-[219px] md:h-[145px] md:w-[250px] lg:h-[200px] lg:w-[300px] xl:h-[248px] xl:w-[416px]  z-10'
                   : ''
               } ${i === 0 ? 'ml-[-200px] md:ml-[-82px] lg:ml-[-100px] xl:ml-[-124px]' : ''} ${i === 4 ? 'mr-[-200px] md:mr-[-82px] lg:mr-[-100px] xl:mr-[-124px]' : ''}`}
             >
               <img
                 src={src}
                 alt={`carousel-${index + i}`}
-                className="w-full h-full object-cover shadow-lg"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
