@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
+// Temporary image imports
 const imageImports = import.meta.glob(
   '../../../public/assets/placeholder-images/*.{png,jpg,jpeg,svg,webp}',
   { eager: true },
