@@ -6,7 +6,14 @@ import useCarousel from '../../hooks/useCarousel';
 import { Modal, ModalContent, ModalTrigger } from '../Modal';
 
 const ImagePreview = ({ images, thumbnail, startingIndex }) => {
-  const { index, prevSlide, nextSlide } = useCarousel({
+  const {
+    index,
+    prevSlide,
+    nextSlide,
+    carouselRef,
+    handleTouchStart,
+    handleTouchEnd,
+  } = useCarousel({
     images,
     startingIndex,
   });
@@ -15,23 +22,28 @@ const ImagePreview = ({ images, thumbnail, startingIndex }) => {
     <Modal>
       <ModalTrigger asChild>{thumbnail}</ModalTrigger>
       <ModalContent>
-        <div className="relative">
+        <div
+          className="relative"
+          ref={carouselRef}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <img
-            src={images[index]}
+            src={images[index].src}
             alt="placeholder-for-now"
-            className="aspect-square max-w-[50rem] w-full object-cover m-auto rounded-sm"
+            className="aspect-square max-w-[50rem] w-full object-cover m-auto"
           />
           <button
             onClick={prevSlide}
             className="absolute left-5 -bottom-10 sm:top-1/2 sm:-translate-y-1/2 cursor-pointer h-fit"
           >
-            <IoIosArrowBack className="size-8" />
+            <IoIosArrowBack className="size-8 sm:size-10" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-5 -bottom-10 sm:top-1/2 sm:-translate-y-1/2 cursor-pointer h-fit"
           >
-            <IoIosArrowForward className="size-8" />
+            <IoIosArrowForward className="size-8 sm:size-10 " />
           </button>
         </div>
       </ModalContent>
