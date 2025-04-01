@@ -68,7 +68,7 @@ export function HistorySection() {
         {/* img */}
         <img
           src={image}
-          alt="History of MMF"
+          alt="History of MMF - Image of three children smiling"
           className="mx-auto w-full h-auto object-cover"
         />
 
