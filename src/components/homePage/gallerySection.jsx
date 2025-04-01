@@ -25,17 +25,11 @@ export function GallerySection() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4">
           {displayImages.map((src, idx) => (
             <div key={idx} className="aspect-square w-full">
-              <ImagePreview
-                images={displayImages}
-                startingIndex={idx}
-                thumbnail={
-                  <img
-                    src={src}
-                    alt="MMF Gallery"
-                    loading="lazy"
-                    className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition"
-                  />
-                }
+              <img
+                src={src}
+                alt="MMF Gallery"
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
