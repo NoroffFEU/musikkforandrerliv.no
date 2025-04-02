@@ -2,20 +2,7 @@ import React, { useEffect, useState } from 'react';
 import data from '../../data/landing-page-content.json';
 
 export function GallerySection() {
-  const { image: galleryImages } = data.gallery;
-
-  // Define alt descriptions for each image.
-  const imageAltText = [
-    "Child Smiling to camera", 
-    "Three children smiling to camera", 
-    "Group photo of kids outside", 
-    "Child holding a baby", 
-    "Smiling child in a classroom", 
-    "Poor child sleeping outside", 
-    "Children playing various instruments", 
-    "Children with a violin", 
-    "Child holding something"
-  ];
+  const { image: galleryImages = [] } = data.gallery || {}; // Ensure galleryImages is always an array
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -37,13 +24,13 @@ export function GallerySection() {
     <section className="w-full my-8 md:my-20 bg-white">
       <div className="mx-auto max-w-[1200px] px-4 md:px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4">
-          {displayImages.map((src, idx) => (
+          {displayImages.map((image, idx) => (
             <div key={idx} className="aspect-square w-full">
               <img
-                src={src}
-                alt={imageAltText[idx]}  // ✅ Beholder spesifikke alt-tekster
+                src={image.src}
+                alt={image.alt}  
                 loading="lazy"
-                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition" // ✅ Beholder ekstra styling fra gallery
+                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition" 
               />
             </div>
           ))}
@@ -61,3 +48,4 @@ export function GallerySection() {
     </section>
   );
 }
+
