@@ -1,7 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: NoroffFEU/musikkforandrerliv.no
-  branch: main
+  branch: develop
   # local_backend: true
 
   commit_messages:
