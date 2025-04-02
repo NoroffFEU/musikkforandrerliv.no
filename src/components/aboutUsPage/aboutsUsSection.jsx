@@ -1,12 +1,19 @@
 import aboutUsPageContent from '../../data/about-us-page-content.json';
 
 const AboutUsSection = () => {
-  const contentSections = aboutUsPageContent.sections.filter((section) => section.title);
+  const contentSections = aboutUsPageContent.sections.filter((section) => 
+    section.title || section.supporters
+  );
 
   return (
     <section id="AboutUsSection" className="w-full pt-28">
       {contentSections.map((section, index) => {
         const isFirst = index === 0;
+        
+        // Check if section has standard content or is a supporters section
+        if (section.supporters) {
+          return null; // We'll render this separately in the About page
+        }
 
         return (
           <InfoSection
