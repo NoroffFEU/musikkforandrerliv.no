@@ -1,6 +1,8 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+
+import useCarousel from '../../hooks/useCarousel';
 
 // Temporary image imports
 const imageImports = import.meta.glob(
@@ -11,30 +13,18 @@ const imageImports = import.meta.glob(
 const images = Object.values(imageImports).map((mod) => mod.default);
 
 const ImageCarousel = () => {
-  const [index, setIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState(
     Array(images.length).fill(false),
   );
-  const carouselRef = useRef(null);
-  let touchStartX = 0;
-  let touchEndX = 0;
 
-  const prevSlide = () => {
-    setIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
-  };
-
-  const nextSlide = () => {
-    setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
-  };
-
-  const handleTouchStart = (e) => {
-    touchStartX = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    handleSwipe();
-  };
+  const {
+    index,
+    nextSlide,
+    prevSlide,
+    handleTouchStart,
+    handleTouchEnd,
+    carouselRef,
+  } = useCarousel({ images: images });
 
   const handleSwipe = () => {
     const swipeThreshold = 50;
@@ -73,7 +63,7 @@ const ImageCarousel = () => {
       ref={carouselRef}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className="carousel-wrapper relative flex justify-center items-center mt-10 max-h-[139px] md:max-h-[200px] lg:max-h-[200px] xl:max-h-[248px] md:max-w-[750px] lg:max-w-[1050px] xl:max-w-[1280px] h-full w-full overflow-hidden"
+      className="carousel-wrapper relative flex justify-center items-center my-12 min-h-[139px] md:min-h-[200px] lg:min-h-[200px] xl:min-h-[248px] md:max-w-[750px] lg:max-w-[1050px] xl:max-w-[1280px] h-full w-full overflow-hidden "
     >
       <button
         onClick={prevSlide}
