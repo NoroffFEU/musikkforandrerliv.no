@@ -17,7 +17,6 @@ import aboutUsData from '../data/about-us-page-content.json';
 // Props for Our staff
 
 function About() {
-  // Find the supporters section from the data
   const supportersSection = aboutUsData.sections.find(section => section.id === 11);
 
   return (
@@ -26,10 +25,10 @@ function About() {
         <h1 className="text-2xl font-extrabold">About Us</h1>
         <h2>Making a difference through music</h2>
         <AboutUsSection />
-        <StaffSection />
         {supportersSection && (
           <SupportersSection section={supportersSection} />
         )}
+        <StaffSection />
       </div>
     </ErrorBoundary>
   );
