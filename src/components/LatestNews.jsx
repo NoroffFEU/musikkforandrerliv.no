@@ -1,7 +1,25 @@
 import React from "react";
 import ReadMore from "./Readmore";
+import {Link} from "react-router-dom";
+
 
 const LatestNews = ({ newsPost, writtenBy, location, date, title, content, image }) => {
+
+  const handleClick = () => {
+    const newsPostData = {
+      newsPost,
+      writtenBy,
+      location,
+      date,
+      title,
+      content,
+      image
+    };
+ 
+    sessionStorage.setItem("newsPostData", JSON.stringify(newsPostData));
+    console.log('saved to sessionStorage:', newsPostData); // Debugging line
+  };
+   
   return (
     <article className="bg-white overflow-hidden mb-12">
       <div className="flex flex-col md:flex-row">
@@ -14,7 +32,12 @@ const LatestNews = ({ newsPost, writtenBy, location, date, title, content, image
         </div>
         <div className="w-full md:w-2/4 md:px-6">
             <p className="text-gray-500 uppercase md:mt-0 sm:mt-10">{newsPost}</p>
-            <h3 className="text-4xl font-semibold mt-8">{title}</h3>
+            <Link to={`/news-post`} className="no-underline"
+            onClick={handleClick}
+            >
+            <h3   className="text-4xl font-semibold mt-8">{title}</h3>
+            </Link>
+            
             <div className="flex flex-col sm:flex-row justify-between mt-8">
               <p className="text-gray-500 text-sm capitalize">{writtenBy}</p>
               <div className="flex flex-col sm:flex-row sm:gap-2">

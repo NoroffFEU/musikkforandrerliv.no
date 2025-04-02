@@ -26,7 +26,10 @@ export default function CalenderSection() {
   }, [t]);
 
   return (
-    <section id="CalendarSection" className="w-full max-w-6xl mx-auto p-8">
+    <section
+      id="CalendarSection"
+      className="w-full max-w-6xl mx-auto py-8 px-4"
+    >
       <h2 className="text-4xl mb-6 [font-family:var(--font-justAnotherHand)] md:text-left text-center">
         {t('screens.upcomingEventsPreview.title')}
       </h2>
