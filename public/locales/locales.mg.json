@@ -51,9 +51,13 @@
     "header": {
       "_comment": "Section Header: This comment will be deleted later",
       "search": "Karoka",
+      "searchPlaceholder": "Mal...",
       "news": "Vaovao",
       "aboutUs": "Momba anay",
       "more": "Bebe kokoa",
+      "events": "Hetsika",
+      "ourWork": "Ny asanay",
+      "contact": "Mifandraisa aminay",
       "donate": "Manome"
     },
 
@@ -236,21 +240,25 @@
       "title": "Ny Mpiasa",
       "members": [
         {
+          "image": "/assets/placeholder-images/IMG_7511.webp",
           "name": "Eline Rodvelt Hansen",
           "occupation": "Mpampianatra violin",
           "description": "Eline dia mpitendry sy mpampianatra violin, nahazo fianarana tao amin’ny Akademia Grieg any Bergen. Teraka tao Sandnes, Rogaland, efa nandehandeha betsaka eran-tany izy, nilalao niaraka tamin’ny mpanakanto maro manerana an’izao tontolo izao amin’ny karazana gadona samihafa."
         },
         {
+          "image": "/assets/placeholder-images/IMG_3078.webp",
           "name": "Dina Rasalina Andriamanalina",
           "occupation": "Mpampianatra piano",
           "description": "Dina dia namorona ny MMF niaraka tamin’ny vadiny, Eline Rodvelt Hansen, tamin’ny taona 2021. Teraka tao Antsirabe, Madagasikara, Dina dia manana gadona sy mozika amin’ny rà mandriaka ao aminy, satria efa nilalao zavamaneno maro hatramin’ny fahazazany. Saingy ny piano no lasa zavamaneno tena nifehy azy indrindra."
         },
         {
+          "image": "/assets/placeholder-images/IMG_7544.webp",
           "name": "Karoline Hartvigsen",
           "occupation": "Mpitsabo mpanampy",
           "description": "Karoline dia nahavita fianarana ho mpitsabo mpanampy tamin’ny taona 2017 ary miasa feno amin’ny sampana fitsaboana homamiadana ao amin’ny Radiumhospitalet any Oslo. Alohan’ny fianarany licence dia nahavita fianarana herintaona momba ny fahatakarana ara-kolontsaina tao amin’ny Oniversiten’i NLA Bergen."
         },
         {
+          "image": "/assets/placeholder-images/IMG_3597.webp",
           "name": "Thea Harbo",
           "occupation": "Mpitsabo mpanampy",
           "description": "Thea dia nahazo diplaoman’ny licence amin’ny fitsaboana mpanampy tamin’ny taona 2017 tao amin’ny Oniversiten’i Diakonova any Oslo. Nitoetra tany nandritra ny 9 taona izy talohan’ny niverinany tany amin’ny tanindrazany, Stavanger. Manana traikefa amin’ny fikarakarana marary an-trano izy, ary niasa nandritra ny taona maro tao amin’ny sampana pediatrika ao amin’ny Rikshospitalet."
@@ -325,23 +333,28 @@
       "events": [
         {
           "date": "20 Mey 2024",
-          "title": "Kaonseritra Fanaovana Asa Soa MMF Isan-taona"
+          "title": "Kaonseritra Fanaovana Asa Soa MMF Isan-taona",
+          "dateEn": "May 20, 2024"
         },
         {
           "date": "10 Jona 2024",
-          "title": "Hazakazaka 5K Fanangonam-bola ho an'ny Mozika"
+          "title": "Hazakazaka 5K Fanangonam-bola ho an'ny Mozika",
+          "dateEn": "June 10, 2024"
         },
         {
           "date": "15 Jolay 2024",
-          "title": "Fetin'ny Kolontsaina sy Kanto MMF"
+          "title": "Fetin'ny Kolontsaina sy Kanto MMF",
+          "dateEn": "July 15, 2024"
         },
         {
           "date": "25 Aogositra 2024",
-          "title": "Gala Fanangonam-bola ho an'ny Fiverenana any an-tsekoly"
+          "title": "Gala Fanangonam-bola ho an'ny Fiverenana any an-tsekoly",
+          "dateEn": "August 25, 2024"
         },
         {
           "date": "25 Novambra 2024",
-          "title": "Fanombohan'ny Fanentanana Fanomezana Noely"
+          "title": "Fanombohan'ny Fanentanana Fanomezana Noely",
+          "dateEn": "November 25, 2024"
         }
       ]
     },

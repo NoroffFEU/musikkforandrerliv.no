@@ -21,5 +21,45 @@
 
     --font-sans: Montserrat, sans-serif;
     --font-justAnotherHand: 'Just Another Hand', sans-serif;
+    --font-freeman: "Freeman", sans-serif;
   }
+}
+
+/* src/index.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-section {
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.125rem; /* lg */
+  line-height: 1.75rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Tailwind defaults for sections */
+.bg-gray-100 {
+  background-color: #f7fafc;
 }

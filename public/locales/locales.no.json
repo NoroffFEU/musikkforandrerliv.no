@@ -52,8 +52,12 @@
       "_comment": "Section Header: This comment will be deleted later",
       "search": "Søk",
       "news": "Nyheter",
+      "searchPlaceholder": "Søk...",
       "aboutUs": "Om oss",
       "more": "Mer",
+      "events": "Arrangementer",
+      "ourWork": "Vårt arbeid",
+      "contact": "Kontakt oss",
       "donate": "Doner"
     },
 
@@ -235,21 +239,25 @@
       "title": "Vårt Team",
       "members": [
         {
+          "image": "/assets/placeholder-images/IMG_7511.webp",
           "name": "Eline Rodvelt Hansen",
           "occupation": "Fiolinlærer",
           "description": "Eline er en fiolinist og fiolinlærer, utdannet ved Griegakademiet i Bergen. Hun er opprinnelig fra Sandnes i Rogaland og har reist mye rundt i verden, og spilt med musikere på flere kontinenter og i forskjellige sjangere."
         },
         {
+          "image": "/assets/placeholder-images/IMG_3078.webp",
           "name": "Dina Rasalina Andriamanalina",
           "occupation": "Pianolærer",
           "description": "Dina co-grunnla MMF med sin kone, Eline Rodvelt Hansen, i 2021. Opprinnelig fra Antsirabe, Madagaskar, har Dina rytme og musikk i blodet, og har spilt mange instrumenter siden barndommen. Det var imidlertid pianoet som til slutt ble hans dominerende instrument."
         },
         {
+          "image": "/assets/placeholder-images/IMG_7544.webp",
           "name": "Karoline Hartvigsen",
           "occupation": "Sykepleier",
           "description": "Karoline fullførte sin sykepleierutdanning i 2017 og jobber nå heltid på en kreftavdeling ved Radiumhospitalet i Oslo. Før bachelorstudiene fullførte hun et ettårig studium i interkulturell forståelse ved NLA University College Bergen."
         },
         {
+          "image": "/assets/placeholder-images/IMG_3597.webp",
           "name": "Thea Harbo",
           "occupation": "Sykepleier",
           "description": "Thea fullførte sin bachelorgrad i sykepleie i 2017 ved Diakonhjemmets Høyskole i Oslo. Hun bodde der i 9 år før hun flyttet tilbake til hjembyen Stavanger. Hun har arbeidserfaring fra hjemmebehandling og flere år på en barneavdeling ved Rikshospitalet."
@@ -315,23 +323,28 @@
       "events": [
         {
           "date": "20. mai 2024",
-          "title": "MMF Årlige Veldedighetskonsert"
+          "title": "MMF Årlige Veldedighetskonsert",
+          "dateEn": "May 20, 2024"
         },
-        {
+        {         
           "date": "10. juni 2024",
-          "title": "Løp for Musikk 5K Veldedighetsløp"
+          "title": "Løp for Musikk 5K Veldedighetsløp",
+          "dateEn": "June 10, 2024"
         },
-        {
+        {          
           "date": "15. juli 2024",
-          "title": "MMF Kultur- og Kunstfestival"
+          "title": "MMF Kultur- og Kunstfestival",
+          "dateEn": "July 15, 2024"
         },
         {
           "date": "25. august 2024",
-          "title": "Back-to-School Innsamlingsgalla"
+          "title": "Back-to-School Innsamlingsgalla",
+          "dateEn": "August 25, 2024"
         },
         {
           "date": "25. november 2024",
-          "title": "Høstkampanje for Gaveinnsamling"
+          "title": "Høstkampanje for Gaveinnsamling",
+          "dateEn": "November 25, 2024"
         }
       ]
     },

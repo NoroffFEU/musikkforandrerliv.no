@@ -29,10 +29,8 @@ import useRequestStore from '../APIStore/useRequestStore';
  * User Store to manage authentication state and user information
  *
  * @typedef {Object} User
- * @property {string|null} id - User ID
  * @property {string|null} name - User's full name
  * @property {string|null} email - User's email address
- * @property {string|null} avatar - URL to user's avatar image
  *
  * @typedef {Object} UserState
  * @property {User} user - Current user information
@@ -45,10 +43,8 @@ import useRequestStore from '../APIStore/useRequestStore';
 const useUserStore = create((set) => ({
   // Initial state
   user: {
-    id: null,
     name: null,
     email: null,
-    avatar: null,
   },
   token: null,
 
@@ -63,20 +59,16 @@ const useUserStore = create((set) => ({
    *
    * // Replace entire user object
    * updateUser({
-   *   id: "12345",
    *   name: "Ola Nordmann",
    *   email: "olanordmann@gmail.com",
-   *   avatar: "https://google.no/avatar.jpg"
    * });
    *
    * @example Fetching user data from a third-party service
    * async function fetchAndSetUser() {
    *   const userData = await fetchUserData();
    *   updateUser({
-   *     id: userData.id,
    *     name: userData.name,
    *     email: userData.email,
-   *     avatar: userData.avatar,
    *   });
    * }
    */
@@ -95,11 +87,10 @@ const useUserStore = create((set) => ({
    * // Update only specific fields
    * updatePartialUser({ name: "Jane Doe" }); // Updates only the name field
    * updatePartialUser({ email: "nordmann1@gmail.com" }); // Updates only the email field
-   * updatePartialUser({ name: "Jane", avatar: "https://example.com/avatar.png" }); // Updates name and avatar
    */
   updatePartialUser: (partialUserData) =>
     set((state) => {
-      const validKeys = ['id', 'name', 'email', 'avatar']; // 👈 Add new keys here if the user object expands in the future.
+      const validKeys = ['name', 'email']; // 👈 Add new keys here if the user object expands in the future.
       const updatedUser = { ...state.user };
       Object.keys(partialUserData).forEach((key) => {
         if (validKeys.includes(key)) {
@@ -186,7 +177,7 @@ const useUserStore = create((set) => ({
     try {
       await logout();
       set({
-        user: { id: null, name: null, email: null, avatar: null },
+        user: { name: null, email: null },
         token: null,
       });
 
