@@ -80,7 +80,7 @@ const ImageCarousel = () => {
             return (
               <div
                 key={imgIndex}
-                className={`image-container transition-x duration-100 flex justify-center items-center h-[111px] w-[131px] md:h-[111px] md:w-[131px] lg:h-[145px] lg:w-[200px] xl:h-[198px] xl:w-[234px] overflow-hidden ${
+                className={`image-container transition-x duration-300 flex justify-center items-center h-[111px] w-[131px] md:h-[111px] md:w-[131px] lg:h-[145px] lg:w-[200px] xl:h-[198px] xl:w-[234px] overflow-hidden ${
                   i === 2
                     ? 'h-[139px] w-[219px] md:h-[145px] md:w-[250px] lg:h-[200px] lg:w-[300px] xl:h-[248px] xl:w-[416px] z-10'
                     : ''
