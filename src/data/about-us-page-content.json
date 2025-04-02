@@ -31,7 +31,7 @@
     },
     {
       "id": 11,
-      "title": "MFF is supported by:",
+      "title": "MFF is supported by",
       "supporters": [
         { "id": 1, "name": "The Friends Association of the Music School in Madagascar", "type": "quote" },
         { "id": 2, "name": "Martin Fröst Foundation", "type": "foundation" },
