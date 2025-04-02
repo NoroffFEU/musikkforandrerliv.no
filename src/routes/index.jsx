@@ -9,6 +9,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import News from '../pages/News';
+import NewsPost from '../pages/NewsPost';
 import NotFound from '../pages/NotFound';
 import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
@@ -43,13 +44,13 @@ const AppRoutes = () => {
             <Route path="/work" element={<OurWork />} />
             <Route path="/work-specific" element={<CategorySpecific />} />
             <Route path="/test-translations" element={<TestTranslations />} />
-            <Route path="/placeholder" element={<Placeholder />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/placeholder" element={<Placeholder />} />
+            <Route path="/news-post" element={<NewsPost />} />
           </Route>
         </Routes>
       )}
     </ErrorBoundary>
-
   );
 };
 
