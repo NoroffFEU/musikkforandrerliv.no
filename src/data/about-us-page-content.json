@@ -30,6 +30,17 @@
       "imageAlt": ""
     },
     {
+      "id": 11,
+      "title": "MFF is supported by:",
+      "supporters": [
+        { "id": 1, "name": "The Friends Association of the Music School in Madagascar", "type": "quote" },
+        { "id": 2, "name": "Martin Fröst Foundation", "type": "foundation" },
+        { "id": 3, "name": "St. Johannes menighet, Stavanger", "type": "organization" },
+        { "id": 4, "name": "Foreningen Musikk gir liv, Kristiansand", "type": "organization" },
+        { "id": 5, "name": "Buffet Crampon, Paris", "type": "organization" }
+      ]
+    },
+    {
       "id": 5,
       "title": "Support and Future Ambitions",
       "content": "Our teachers provide lessons in traditional Malagasy instruments, percussion, dance, singing, classical guitar, double bass, visual arts, music theory, chamber music, violin, viola, cello, and piano, with ambitions to include flute and clarinet.",
@@ -92,17 +103,6 @@
       "content": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger.\n \n She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet, and currently works full-time in a specially adapted department in a kindergarten.\n \n She has extensive experience working with children and enjoys it.\n \n Thea is a board member of MMF and is responsible for the finances of the project. She volunteers for the project and is responsible for the work carried out in Norway.",
       "image": "",
       "imageAlt": ""
-    },
-    {
-      "id": 11,
-      "title": "MFF is supported by:",
-      "supporters": [
-        { "id": 1, "name": "The Friends Association of the Music School in Madagascar", "type": "quote" },
-        { "id": 2, "name": "Martin Fröst Foundation", "type": "foundation" },
-        { "id": 3, "name": "St. Johannes menighet, Stavanger", "type": "organization" },
-        { "id": 4, "name": "Foreningen Musikk gir liv, Kristiansand", "type": "organization" },
-        { "id": 5, "name": "Buffet Crampon, Paris", "type": "organization" }
-      ]
     }
   ]
 }
