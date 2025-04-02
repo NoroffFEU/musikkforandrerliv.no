@@ -5,30 +5,34 @@
       "id": 1,
       "title": "Let us introduce ourselves",
       "content": "Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care, learning supplies, clothing and shelter.",
-      "image": "",
+      "image": "assets/placeholder-images/IMG_3568.webp",
       "imageAlt": ""
     },
+    
     {
       "id": 2,
       "title": "A Holistic Approach to Education and Support",
       "content": "Music lessons are so much more than just learning how to play an instrument. To our students, the music school has become a place of safety, worthiness, and a notion of being cared for by teachers and other students.\nThe transforming power of education and the strong communal sense have brought many young children from the streets into classrooms, providing a safe and stimulating environment.",
-      "image": "",
+      "image": "assets/placeholder-images/IMG_7425.webp",
       "imageAlt": ""
     },
+
     {
       "id": 3,
       "title": "Empowering Through Education",
       "content": "Many of our students have never had the opportunity to attend school previously. Therefore, MMF teachers organize additional academic support for students struggling with homework, greatly impacting their development and learning capacity.\nSpecial emphasis is placed on female education and gender equality.",
-      "image": "",
+      "image": "assets/placeholder-images/IMG_8979.webp",
       "imageAlt": ""
     },
+
     {
       "id": 4,
       "title": "Sustainable Growth and Community Impact",
       "content": "Providing a safe and supportive environment inspires girls and young women to lead healthier, more stable lives, sparking intergenerational transformation through education.\nSince 2021 Mozika Manova Fiainana is registered as an NGO supporting over 60 children.",
-      "image": "",
+      "image": "assets/placeholder-images/IMG_3473.webp",
       "imageAlt": ""
     },
+
     {
       "id": 11,
       "title": "MFF is supported by:",
@@ -40,6 +44,7 @@
         { "id": 5, "name": "Buffet Crampon, Paris", "type": "organization" }
       ]
     },
+
     {
       "id": 5,
       "title": "Support and Future Ambitions",
@@ -52,7 +57,7 @@
       "id": 6,
       "title": "Conclusion: A Model for Change",
       "content": "Witnessing the incredible changes that our initiative provokes in the local communities, we hope to further inspire our students to become self-reliant, responsible and skilful individuals that will contribute to a wider positive development of the region.",
-      "image": "",
+      "image": "assets/placeholder-images/IMG_3749.webp",
       "imageAlt": ""
     },
 

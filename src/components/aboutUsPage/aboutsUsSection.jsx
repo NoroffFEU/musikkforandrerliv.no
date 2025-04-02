@@ -41,23 +41,30 @@ const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) =>
               </button>
             </div>
           )}
-
-          <img
-            src={image || fallbackImage}
-            alt={imageAlt || 'About section image'}
-            className="w-full object-cover mt-6"
-          />
+          {
+            image &&
+            <img
+              src={image || fallbackImage}
+              alt={imageAlt || 'About section image'}
+              className="w-full object-cover mt-6 aspect-16/9"
+            />
+          }
+          
         </div>
       ) : (
         <div>
           <h3 className="text-2xl font-bold mb-4">{title}</h3>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
-
-          <img
-            src={image || fallbackImage}
-            alt={imageAlt || 'About section image'}
-            className="w-full object-cover"
-          />
+          
+          {
+            image &&
+            <img
+              src={image || fallbackImage}
+              alt={imageAlt || 'About section image'}
+              className="w-full object-cover aspect-16/9"
+            />
+          }
+          
         </div>
       )}
     </div>
@@ -65,6 +72,7 @@ const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) =>
 };
 
 export default AboutUsSection;
+
 
 
 
