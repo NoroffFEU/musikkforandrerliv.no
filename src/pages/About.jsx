@@ -2,7 +2,7 @@ import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import StaffSection from '../components/aboutUsPage/staffSection.jsx';
 import AboutUsSection from '../components/aboutUsPage/aboutsUsSection.jsx';
 import SupportersSection from '../components/aboutUsPage/SupportersSection.jsx';
-import aboutUsData from '../data/about-us/about-us.json';
+import aboutUsData from '../data/about-us-page-content.json';
 
 // let us introduce ourselves
 
