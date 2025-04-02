@@ -21,7 +21,7 @@ const ModalOverlay = React.forwardRef(({ className, ...props }, ref) => (
   <ModalPrimitive.Overlay
     ref={ref}
     className={cn(
-      'fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      'fixed inset-0 z-50 bg-white/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
       className,
     )}
     {...props}
@@ -44,8 +44,8 @@ const ModalContent = React.forwardRef(
         <ModalTitle className="sr-only">{title}</ModalTitle>
         <ModalDescription className="sr-only">{description}</ModalDescription>
         {children}
-        <ModalPrimitive.Close className="absolute right-1 -top-2 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none">
-          <BiX className="size-8 text-white" />
+        <ModalPrimitive.Close className="absolute right-5 -top-5 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none">
+          <BiX className="size-12 text-black" />
           <span className="sr-only">Close</span>
         </ModalPrimitive.Close>
       </ModalPrimitive.Content>

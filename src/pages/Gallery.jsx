@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ImageGallery from '../components/galleryPage/imageGallery';
 
 const Gallery = () => {
@@ -9,7 +10,6 @@ const Gallery = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
-
       <ImageGallery />
     </section>
   );

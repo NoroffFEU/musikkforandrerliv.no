@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+
 import data from '../../data/landing-page-content.json';
+import ImagePreview from '../galleryPage/ImagePreview';
 
 export function GallerySection() {
   const { image: galleryImages } = data.gallery;
