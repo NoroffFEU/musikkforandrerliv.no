@@ -19,12 +19,12 @@ const CategorySection = () => {
   };
 
   return (
-    <section className="container mx-auto max-w-6xl px-4">
+    <section className="container mx-auto max-w-6xl px-4 py-8">
       <div className="space-y-16">
         {sections.map((section, index) => (
           <div
             key={section.id}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center "
           >
             {index % 2 === 0 ? (
               <>
@@ -48,7 +48,10 @@ const CategorySection = () => {
                     />
                   </div>
 
-                  <p className="text-black line-clamp-7">{section.content}</p>
+                  <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent  to-black ">
+                    {section.content}
+                  </p>
+
                   {/* ReusableButton with Read More action */}
                   <div className="hidden md:block">
                     <ReusableButton
@@ -81,7 +84,7 @@ const CategorySection = () => {
                     />
                   </div>
 
-                  <p className="text-gray-600 line-clamp-7">
+                  <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent  to-black ">
                     {section.content}
                   </p>
                   {/* ReusableButton with Read More action */}
