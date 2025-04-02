@@ -40,23 +40,23 @@ const CategorySection = () => {
                     <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold mb-4 text-center">
                       {section.title}
                     </h2>
-                    <img 
-                      src="/assets/placeholder-images/Arrow-forward-circle.png" 
-                      alt="Arrow to the right" 
+                    <img
+                      src="/assets/placeholder-images/Arrow-forward-circle.png"
+                      alt="Arrow to the right"
                       onClick={handleReadMoreClick}
-                      className="ml-2 w-[30px] h-[30px] md:hidden mb-4" 
+                      className="ml-2 w-[30px] h-[30px] md:hidden mb-4"
                     />
                   </div>
 
-                  <p className="text-black">{section.content}</p>
+                  <p className="text-black line-clamp-7">{section.content}</p>
                   {/* ReusableButton with Read More action */}
                   <div className="hidden md:block">
                     <ReusableButton
-                    text="Read More"
-                    onClick={handleReadMoreClick}
-                    className="mt-4"
-                   />
-                </div>
+                      text="Read More"
+                      onClick={handleReadMoreClick}
+                      className="mt-4"
+                    />
+                  </div>
                 </div>
               </>
             ) : (
@@ -73,23 +73,25 @@ const CategorySection = () => {
                     <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold mb-4 text-center">
                       {section.title}
                     </h2>
-                    <img 
-                      src="/assets/placeholder-images/Arrow-forward-circle.png" 
-                      alt="Arrow to the right" 
+                    <img
+                      src="/assets/placeholder-images/Arrow-forward-circle.png"
+                      alt="Arrow to the right"
                       onClick={handleReadMoreClick}
-                      className="ml-2 w-[30px] h-[30px] md:hidden mb-4" 
+                      className="ml-2 w-[30px] h-[30px] md:hidden mb-4"
                     />
                   </div>
 
-                  <p className="text-gray-600">{section.content}</p>
+                  <p className="text-gray-600 line-clamp-7">
+                    {section.content}
+                  </p>
                   {/* ReusableButton with Read More action */}
                   <div className="hidden md:block">
                     <ReusableButton
-                    text="Read More"
-                    onClick={handleReadMoreClick}
-                    className="mt-4"
-                   />
-                </div>
+                      text="Read More"
+                      onClick={handleReadMoreClick}
+                      className="mt-4"
+                    />
+                  </div>
                 </div>
               </>
             )}
