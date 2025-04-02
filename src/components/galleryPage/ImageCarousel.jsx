@@ -35,10 +35,6 @@ const ImageCarousel = () => {
     }
   };
 
-  // const getVisibleImages = () => {
-  //   return [...images, ...images].slice(index, index + 5);
-  // };
-
   const getVisibleImages = () => {
     if (index + 5 <= images.length) {
       return images.slice(index, index + 5);
