@@ -11,6 +11,22 @@ const useCarousel = ({ images, startingIndex = 0 }) => {
     setIndex(startingIndex);
   }, [startingIndex]);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   const prevSlide = () => {
     setIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
   };
