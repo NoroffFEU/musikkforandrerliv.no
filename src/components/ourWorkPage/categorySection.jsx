@@ -56,7 +56,7 @@ const CategorySection = () => {
                     <ReusableButton
                       text="Read More"
                       onClick={handleReadMoreClick}
-                      className="mt-4"
+                      className="mt-6 uppercase font-medium"
                     />
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const CategorySection = () => {
                     <ReusableButton
                       text="Read More"
                       onClick={handleReadMoreClick}
-                      className="mt-4"
+                      className="mt-6 uppercase font-medium"
                     />
                   </div>
                 </div>
