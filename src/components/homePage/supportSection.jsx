@@ -14,7 +14,7 @@ const SupportSection = () => {
         <div className="w-full md:w-1/2 md:h-full flex items-center justify-center">
           <img
             src={supportData.image}
-            alt={supportData.title}
+            alt="Two children smiling, one of them holding a violin"
             className="w-full aspect-[1/1] h-auto md:h-full object-cover"
           />
         </div>

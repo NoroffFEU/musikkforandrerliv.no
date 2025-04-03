@@ -15,7 +15,7 @@ export default function WorkSection() {
         <div className="w-full md:w-1/2 md:h-full flex items-center justify-center">
           <img
             src={image}
-            alt={title}
+            alt="A smiling boy holding drawing supplies"
             className="w-full aspect-[1/1] h-auto md:h-full object-cover"
           />
         </div>
