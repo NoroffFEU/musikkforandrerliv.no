@@ -36,19 +36,19 @@ const CategorySection = () => {
                   />
                 </div>
                 <div className="md:order-2 p-8 sm:p-14 sm:mr-2">
-                  <div className="flex items-center">
-                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold mb-4 text-center">
+                  <div className="flex items-center gap-1.5">
+                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left">
                       {section.title}
                     </h2>
                     <img
                       src="/assets/placeholder-images/Arrow-forward-circle.png"
                       alt="Arrow to the right"
                       onClick={handleReadMoreClick}
-                      className="ml-2 w-[30px] h-[30px] md:hidden mb-4"
+                      className="w-[24px] h-[24px] md:hidden"
                     />
                   </div>
 
-                  <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent  to-black ">
+                  <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent mt-4  to-black ">
                     {section.content}
                   </p>
 
@@ -72,19 +72,19 @@ const CategorySection = () => {
                   />
                 </div>
                 <div className="md:order-1 p-8 sm:p-14 sm:mr-2">
-                  <div className="flex items-center">
-                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold mb-4 text-center">
+                  <div className="flex items-center gap-1.5">
+                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left">
                       {section.title}
                     </h2>
                     <img
                       src="/assets/placeholder-images/Arrow-forward-circle.png"
                       alt="Arrow to the right"
                       onClick={handleReadMoreClick}
-                      className="ml-2 w-[30px] h-[30px] md:hidden mb-4"
+                      className="w-[24px] h-[24px] md:hidden"
                     />
                   </div>
 
-                  <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent  to-black ">
+                  <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent mt-4  to-black ">
                     {section.content}
                   </p>
                   {/* ReusableButton with Read More action */}
