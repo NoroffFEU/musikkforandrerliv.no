@@ -1,6 +1,8 @@
 import { useState } from 'react';
-
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+
+
+import altTextData from '../../../public/assets/images-gallery-alt.json'; 
 
 import useCarousel from '../../hooks/useCarousel';
 
@@ -11,6 +13,18 @@ const imageImports = import.meta.glob(
 );
 
 const images = Object.values(imageImports).map((mod) => mod.default);
+
+
+const extractFilename = (url) => {
+  const urlWithoutQuery = url.split('?')[0]; 
+  return urlWithoutQuery.split('/').pop(); 
+};
+
+const getAltText = (src) => {
+  const filename = extractFilename(src); 
+  const imageData = altTextData.find((item) => item.src === filename); 
+  return imageData ? imageData.alt : `Image-${filename}`; 
+};
 
 const ImageCarousel = () => {
   const [loadedImages, setLoadedImages] = useState(
@@ -95,7 +109,7 @@ const ImageCarousel = () => {
 
                     <img
                       src={src}
-                      alt={`carousel-${imgIndex}`}
+                      alt={getAltText(src)}
                       className={`w-full h-full object-cover shadow-lg transition-opacity duration-300 ${
                         loadedImages[imgIndex] ? 'opacity-100' : 'opacity-0'
                       }`}
@@ -118,4 +132,5 @@ const ImageCarousel = () => {
     </div>
   );
 };
+
 export default ImageCarousel;
