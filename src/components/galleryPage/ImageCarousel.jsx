@@ -109,7 +109,7 @@ const ImageCarousel = () => {
 
                     <img
                       src={src}
-                      alt={getAltText(src)} // Fetch the alt text from the JSON
+                      alt={getAltText(src)}
                       className={`w-full h-full object-cover shadow-lg transition-opacity duration-300 ${
                         loadedImages[imgIndex] ? 'opacity-100' : 'opacity-0'
                       }`}
