@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import SupportUsSection from '../components/SupportUsSection';
 
 function NewsPost() {
   const [postData, setPostData] = useState(null);
@@ -109,6 +110,7 @@ function NewsPost() {
           Published: {postData.date || ""}
         </p>
       </section>
+      <SupportUsSection/>
     </div>
   );
 }
