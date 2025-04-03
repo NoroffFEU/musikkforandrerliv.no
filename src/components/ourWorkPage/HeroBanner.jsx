@@ -18,6 +18,23 @@ export default function HeroBanner() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // function to scroll to a section based on index
+  const scrollToSection = (index) => {
+    const section = document.getElementById(`section-${index}`);
+    if (section) {
+      const sectionPosition =
+        section.getBoundingClientRect().top + window.scrollY; // absolute position for section
+      const windowHeight = window.innerHeight;
+      const offset = windowHeight * 0.2; // 20% height offset
+      const scrollPosition = sectionPosition - offset; // adjusting position to offset
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth', // smooth scrolling
+      });
+    }
+  };
+
   return (
     <section
       className="relative flex flex-col items-center"
@@ -28,7 +45,7 @@ export default function HeroBanner() {
         alt="Hero banner image"
         className="w-full h-screen md:max-h-[1000px] object-cover lg:object-center object-[83%]"
       />
-      <div className="flex flex-col absolute inset-0 items-center justify-end  mb-4  ">
+      <div className="flex flex-col absolute inset-0 items-center justify-end mb-4">
         <h1
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium [font-family:var(--font-justAnotherHand)] text-white flex items-center justify-center uppercase tracking-wider mb-12"
           aria-label="Hero section showcasing our work"
@@ -41,33 +58,33 @@ export default function HeroBanner() {
           aria-label="Work navigation"
         >
           <div
-            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px]"
+            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
             aria-label="Healthcare"
+            onClick={() => scrollToSection(0)} //index 0
           >
             <img
               className="w-[41px] h-[37px] xl:w-[71px] sm:h-[64px]"
               src="/assets/images/svgs/ourWorkPage/healthcare.svg"
               alt="Healthcare button icon"
             />
-            <p className="text-[12px] font-semibold xl:text-base">
-              {' '}
-              Healthcare
-            </p>
+            <p className="text-[12px] font-semibold xl:text-base">Healthcare</p>
           </div>
           <div
-            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px]"
+            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
             aria-label="Education"
+            onClick={() => scrollToSection(1)} //index 1
           >
             <img
               className="w-[48px] xl:w-[82px]"
               src="/assets/images/svgs/ourWorkPage/graduation.svg"
               alt="Graduation button icon"
             />
-            <p className="text-[12px] font-semibold xl:text-base"> Education</p>
+            <p className="text-[12px] font-semibold xl:text-base">Education</p>
           </div>
           <div
-            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px]"
+            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
             aria-label="Living Situation"
+            onClick={() => scrollToSection(2)} //index 2
           >
             <img
               className="w-[35px] xl:w-[65px]"
@@ -79,8 +96,9 @@ export default function HeroBanner() {
             </p>
           </div>
           <div
-            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px]"
+            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
             aria-label="Food Distribution"
+            onClick={() => scrollToSection(3)} //index 3
           >
             <img
               className="w-[32px] xl:w-[60px]"
@@ -92,8 +110,9 @@ export default function HeroBanner() {
             </p>
           </div>
           <div
-            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px]"
+            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
             aria-label="Music Lesson"
+            onClick={() => scrollToSection(4)} //index 4
           >
             <img
               className="w-[37px] xl:w-[65px]"
@@ -105,8 +124,9 @@ export default function HeroBanner() {
             </p>
           </div>
           <div
-            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px]"
+            className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
             aria-label="Future Goals"
+            onClick={() => scrollToSection(5)} //index 5
           >
             <img
               className="w-[49px] xl:w-[81px]"
@@ -118,8 +138,9 @@ export default function HeroBanner() {
             </p>
           </div>
           <div
-            className="workNavButton flex flex-col items-center justify-between xl:justify-center lg:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px]"
+            className="workNavButton flex flex-col items-center justify-between xl:justify-center lg:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
             aria-label="Activities"
+            onClick={() => scrollToSection(6)} //index 6
           >
             <img
               className="w-[38px] xl:w-[65px]"
