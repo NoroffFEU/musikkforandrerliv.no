@@ -4,7 +4,7 @@ import data from '../../data/landing-page-content.json';
 import ImagePreview from '../galleryPage/ImagePreview';
 
 export function GallerySection() {
-  const { image: galleryImages = [] } = data.gallery || {}; // Ensure galleryImages is always an array
+  const { image: galleryImages = [] } = data.gallery || {}; 
 
   const [isMobile, setIsMobile] = useState(false);
 
