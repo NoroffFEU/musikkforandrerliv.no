@@ -25,7 +25,7 @@ export default function HeroBannerNav() {
       const sectionPosition =
         section.getBoundingClientRect().top + window.scrollY; // absolute position for section
       const windowHeight = window.innerHeight;
-      const offset = windowHeight * 0.2; // 20% height offset
+      const offset = windowHeight * 0.25; // 20% height offset
       const scrollPosition = sectionPosition - offset; // adjusting position to offset
 
       window.scrollTo({

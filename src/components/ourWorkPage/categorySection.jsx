@@ -19,7 +19,7 @@ const CategorySection = () => {
   };
 
   return (
-    <section className="container mx-auto max-w-6xl px-4 py-8">
+    <section className="container mx-auto max-w-6xl px-8 md:px-4 py-8">
       <div className="space-y-16">
         {sections.map((section, index) => (
           <div
@@ -36,7 +36,7 @@ const CategorySection = () => {
                     className="w-full h-full object-cover aspect-square max-md:rounded-t-lg"
                   />
                 </div>
-                <div className="md:order-2 p-8 sm:p-14 sm:mr-2">
+                <div className="md:order-2 px-6 md:px-14 sm:mr-2">
                   <div className="flex items-center gap-1.5">
                     <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left">
                       {section.title}
@@ -56,7 +56,7 @@ const CategorySection = () => {
                     <ReusableButton
                       text="Read More"
                       onClick={handleReadMoreClick}
-                      className="mt-6 uppercase font-semibold"
+                      className="mt-4"
                     />
                   </div>
                 </div>
@@ -70,7 +70,7 @@ const CategorySection = () => {
                     className="w-full h-full object-cover aspect-square max-md:rounded-t-lg"
                   />
                 </div>
-                <div className="md:order-1 p-8 sm:p-14 sm:mr-2">
+                <div className="md:order-1 px-6 md:px-14 sm:mr-2">
                   <div className="flex items-center gap-1.5">
                     <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left">
                       {section.title}
@@ -89,7 +89,7 @@ const CategorySection = () => {
                     <ReusableButton
                       text="Read More"
                       onClick={handleReadMoreClick}
-                      className="mt-6 uppercase font-semibold"
+                      className="mt-4"
                     />
                   </div>
                 </div>
