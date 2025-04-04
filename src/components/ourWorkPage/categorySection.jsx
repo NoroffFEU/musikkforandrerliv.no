@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import ReusableButton from '../../components/buttons/ReusableButton';
+import ReusableButton from '../../components/buttons/reusableButton';
 import ourWorkData from '../../data/our-work-page.json';
 
 const CategorySection = () => {
