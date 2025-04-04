@@ -39,7 +39,7 @@ export default function HeroBannerNav() {
       className={`workNavWrapper text-white flex flex-row flex-wrap gap-[10px] xl:gap-[30px] ${bottomPosition} items-center justify-center my-6`}
       aria-label="Work navigation"
     >
-      <div
+      <button
         className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
         aria-label="Healthcare"
         onClick={() => scrollToSection(0)} //index 0
@@ -50,11 +50,11 @@ export default function HeroBannerNav() {
           alt="Healthcare button icon"
         />
         <p className="text-[12px] font-semibold xl:text-base">Healthcare</p>
-      </div>
-      <div
+      </button>
+      <button
         className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
         aria-label="Education"
-        onClick={() => scrollToSection(1)} //index 1
+        onClick={() => scrollToSection(1)}
       >
         <img
           className="w-[48px] xl:w-[82px]"
@@ -62,11 +62,11 @@ export default function HeroBannerNav() {
           alt="Graduation button icon"
         />
         <p className="text-[12px] font-semibold xl:text-base">Education</p>
-      </div>
-      <div
+      </button>
+      <button
         className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
         aria-label="Living Situation"
-        onClick={() => scrollToSection(2)} //index 2
+        onClick={() => scrollToSection(2)}
       >
         <img
           className="w-[35px] xl:w-[65px]"
@@ -76,11 +76,11 @@ export default function HeroBannerNav() {
         <p className="text-[12px] font-semibold xl:text-base">
           Living Situation
         </p>
-      </div>
-      <div
+      </button>
+      <button
         className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
         aria-label="Food Distribution"
-        onClick={() => scrollToSection(3)} //index 3
+        onClick={() => scrollToSection(3)}
       >
         <img
           className="w-[32px] xl:w-[60px]"
@@ -90,11 +90,11 @@ export default function HeroBannerNav() {
         <p className="text-[12px] font-semibold xl:text-base">
           Food Distribution
         </p>
-      </div>
-      <div
+      </button>
+      <button
         className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
         aria-label="Music Lesson"
-        onClick={() => scrollToSection(4)} //index 4
+        onClick={() => scrollToSection(4)}
       >
         <img
           className="w-[37px] xl:w-[65px]"
@@ -102,11 +102,11 @@ export default function HeroBannerNav() {
           alt="Music Lessons button icon"
         />
         <p className="text-[12px] font-semibold xl:text-base">Music Lesson</p>
-      </div>
-      <div
+      </button>
+      <button
         className="workNavButton flex flex-col items-center justify-between xl:justify-center xl:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
         aria-label="Future Goals"
-        onClick={() => scrollToSection(5)} //index 5
+        onClick={() => scrollToSection(5)}
       >
         <img
           className="w-[49px] xl:w-[81px]"
@@ -114,11 +114,11 @@ export default function HeroBannerNav() {
           alt="Future goals button icon"
         />
         <p className="text-[12px] font-semibold xl:text-base">Future Goals</p>
-      </div>
-      <div
+      </button>
+      <button
         className="workNavButton flex flex-col items-center justify-between xl:justify-center lg:gap-[10%] p-2 text-center bg-[#5b8e7d] rounded-lg w-[85px] h-[85px] xl:w-[150px] xl:h-[150px] cursor-pointer"
         aria-label="Activities"
-        onClick={() => scrollToSection(6)} //index 6
+        onClick={() => scrollToSection(6)}
       >
         <img
           className="w-[38px] xl:w-[65px]"
@@ -126,7 +126,7 @@ export default function HeroBannerNav() {
           alt="Activities button icon"
         />
         <p className="text-[12px] font-semibold xl:text-base">Activities</p>
-      </div>
+      </button>
     </nav>
   );
 }
