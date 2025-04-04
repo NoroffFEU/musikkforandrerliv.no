@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -13,13 +13,24 @@ const ImagePreview = ({ images, thumbnail, startingIndex }) => {
     carouselRef,
     handleTouchStart,
     handleTouchEnd,
+    setIndex,
   } = useCarousel({
     images,
     startingIndex,
   });
 
+  const handleKeyDown = useCallback(({ key }) => {
+    if (key === 'ArrowRight') nextSlide();
+
+    if (key === 'ArrowLeft') prevSlide();
+  }, []);
+
   return (
-    <Modal>
+    <Modal
+      onOpenChange={(open) => {
+        if (!open) setIndex(0);
+      }}
+    >
       <ModalTrigger asChild>{thumbnail}</ModalTrigger>
       <ModalContent>
         <div
@@ -27,6 +38,7 @@ const ImagePreview = ({ images, thumbnail, startingIndex }) => {
           ref={carouselRef}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
+          onKeyDown={handleKeyDown}
         >
           <img
             src={images[index].src}

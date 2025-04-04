@@ -7,10 +7,6 @@ const useCarousel = ({ images, startingIndex = 0 }) => {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  useEffect(() => {
-    setIndex(startingIndex);
-  }, [startingIndex]);
-
   const prevSlide = () => {
     setIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
   };
@@ -18,6 +14,10 @@ const useCarousel = ({ images, startingIndex = 0 }) => {
   const nextSlide = () => {
     setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
   };
+
+  useEffect(() => {
+    setIndex(startingIndex);
+  }, [startingIndex]);
 
   const handleTouchStart = (e) => {
     touchStartX = e.touches[0].clientX;
@@ -39,6 +39,7 @@ const useCarousel = ({ images, startingIndex = 0 }) => {
 
   return {
     index,
+    setIndex,
     nextSlide,
     prevSlide,
     handleTouchStart,
