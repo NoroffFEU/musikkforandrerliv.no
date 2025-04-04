@@ -37,16 +37,20 @@ const CategorySection = () => {
                   />
                 </div>
                 <div className="md:order-2 px-6 md:px-14 sm:mr-2">
-                  <div className="flex items-center gap-1.5">
-                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left">
+                  <div
+                    className="flex items-center gap-1.5 cursor-pointer group"
+                    onClick={handleReadMoreClick}
+                  >
+                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left  group-hover:underline underline-offset-4">
                       {section.title}
                     </h2>
-                    <img
-                      src="/assets/placeholder-images/Arrow-forward-circle.png"
-                      alt="Arrow to the right"
-                      onClick={handleReadMoreClick}
-                      className="w-[24px] h-[24px] md:hidden"
-                    />
+                    <button type="button" className="block md:hidden">
+                      <img
+                        src="/assets/placeholder-images/Arrow-forward-circle.png"
+                        alt="Arrow to the right"
+                        className="w-[24px] h-[24px] cursor-pointer group-hover:translate-x-1 transition-transform "
+                      />
+                    </button>
                   </div>
                   <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent to-black mt-4">
                     {section.content}
@@ -71,16 +75,21 @@ const CategorySection = () => {
                   />
                 </div>
                 <div className="md:order-1 px-6 md:px-14 sm:mr-2">
-                  <div className="flex items-center gap-1.5">
-                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left">
+                  <div
+                    className="flex items-center gap-1.5 cursor-pointer group"
+                    onClick={handleReadMoreClick}
+                  >
+                    <h2 className="text-2xl md:text-2xl font-bold sm:font-semibold text-left  group-hover:underline underline-offset-4">
                       {section.title}
                     </h2>
-                    <img
-                      src="/assets/placeholder-images/Arrow-forward-circle.png"
-                      alt="Arrow to the right"
-                      onClick={handleReadMoreClick}
-                      className="w-[24px] h-[24px] md:hidden"
-                    />
+
+                    <button type="button" className="block md:hidden">
+                      <img
+                        src="/assets/placeholder-images/Arrow-forward-circle.png"
+                        alt="Arrow to the right"
+                        className="w-[24px] h-[24px] cursor-pointer group-hover:translate-x-1 transition-transform "
+                      />
+                    </button>
                   </div>
                   <p className="line-clamp-7 text-transparent bg-clip-text bg-gradient-to-t from-transparent to-black mt-4">
                     {section.content}
