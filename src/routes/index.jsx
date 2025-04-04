@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 
-
-
 import { Route, Routes, useLocation } from 'react-router-dom';
-
-
 
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LoadingSpinner from '../components/LoadingSpinner.jsx';
@@ -16,10 +12,9 @@ import News from '../pages/News';
 import NewsPost from '../pages/NewsPost';
 import NotFound from '../pages/NotFound';
 import OurWork from '../pages/OurWork';
+import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import TestTranslations from '../pages/TestTranslations';
-
-
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -33,29 +28,29 @@ const AppRoutes = () => {
     }, 200);
 
     return () => clearTimeout(timer);
-    }, [location]);
+  }, [location]);
 
   return (
-      <ErrorBoundary>
-        {loading ? ( 
-          <LoadingSpinner /> 
-        ) : ( 
-          <Routes>
-            <Route path="/" element={<MainLayout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/news" element={<News />} />     
-              <Route path="/work" element={<OurWork />} />
-              <Route path="/test-translations" element={<TestTranslations />} />
-              <Route path="*" element={<NotFound />} />
-              <Route path="/placeholder" element={<Placeholder/>} />
-              <Route path="/news-post" element={<NewsPost />} />
-            </Route>
-          </Routes>
-        )}
-      </ErrorBoundary>
-
+    <ErrorBoundary>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/work" element={<OurWork />} />
+            <Route path="/work-specific" element={<CategorySpecific />} />
+            <Route path="/test-translations" element={<TestTranslations />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/placeholder" element={<Placeholder />} />
+            <Route path="/news-post" element={<NewsPost />} />
+          </Route>
+        </Routes>
+      )}
+    </ErrorBoundary>
   );
 };
 
