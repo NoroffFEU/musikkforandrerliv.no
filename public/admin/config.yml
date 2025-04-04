@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: NoroffFEU/musikkforandrerliv.no
   branch: develop
   # local_backend: true
