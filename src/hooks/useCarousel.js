@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 const useCarousel = ({ images, startingIndex = 0 }) => {
   const [index, setIndex] = useState(startingIndex);
   const carouselRef = useRef(null);
-  const keyboardListenerRef = useRef(null);
 
   let touchStartX = 0;
   let touchEndX = 0;
@@ -19,26 +18,6 @@ const useCarousel = ({ images, startingIndex = 0 }) => {
   useEffect(() => {
     setIndex(startingIndex);
   }, [startingIndex]);
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'ArrowLeft') {
-      prevSlide();
-    } else if (e.key === 'ArrowRight') {
-      nextSlide();
-    }
-  };
-
-  const enableKeyboardNavigation = () => {
-    keyboardListenerRef.current = handleKeyDown;
-    window.addEventListener('keydown', keyboardListenerRef.current);
-  };
-
-  const disableKeyboardNavigation = () => {
-    if (keyboardListenerRef.current) {
-      window.removeEventListener('keydown', keyboardListenerRef.current);
-      keyboardListenerRef.current = null;
-    }
-  };
 
   const handleTouchStart = (e) => {
     touchStartX = e.touches[0].clientX;
@@ -60,13 +39,12 @@ const useCarousel = ({ images, startingIndex = 0 }) => {
 
   return {
     index,
+    setIndex,
     nextSlide,
     prevSlide,
     handleTouchStart,
     handleTouchEnd,
     carouselRef,
-    enableKeyboardNavigation,
-    disableKeyboardNavigation,
   };
 };
 
