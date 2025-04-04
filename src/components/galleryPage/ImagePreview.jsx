@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -13,10 +13,19 @@ const ImagePreview = ({ images, thumbnail, startingIndex }) => {
     carouselRef,
     handleTouchStart,
     handleTouchEnd,
+    enableKeyboardNavigation,
+    disableKeyboardNavigation,
   } = useCarousel({
     images,
     startingIndex,
   });
+
+  useEffect(() => {
+    enableKeyboardNavigation();
+    return () => {
+      disableKeyboardNavigation();
+    };
+  }, [enableKeyboardNavigation, disableKeyboardNavigation]);
 
   return (
     <Modal>
