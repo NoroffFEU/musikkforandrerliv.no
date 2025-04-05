@@ -24,3 +24,9 @@
     --font-freeman: "Freeman", sans-serif;
   }
 }
+
+@layer theme {
+  .font-justAnotherHand {
+    font-family: 'Just Another Hand';
+  }
+}
