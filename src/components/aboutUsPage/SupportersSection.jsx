@@ -5,20 +5,19 @@ const SupportersSection = ({ section }) => {
 
   return (
     <div className="text-center py-16 px-4 bg-white">
-      <h2 className="text-3xl mb-8 text-black">
-        {section.title}
-      </h2>
+      <h2 className="text-3xl mb-8 text-black">{section.title}</h2>
       <div className="max-w-2xl mx-auto space-y-2">
         {section.supporters.map((supporter, index) => {
-          // TODO: Consider adding URL property to supporters 
+          // TODO: Consider adding URL property to supporters
           // If URLs are intended, modify this to create clickable links
-          const textColor = supporter.name === "Martin Fröst Foundation"
-            ? "text-[#EF476F]"
-            : "text-black";
+          const textColor =
+            supporter.name === 'Martin Fröst Foundation'
+              ? 'text-[#EF476F]'
+              : 'text-black';
 
           return (
-            <p 
-              key={supporter.id} 
+            <p
+              key={supporter.id}
               className={`text-lg ${textColor} transition-colors duration-300 hover:text-opacity-80`}
             >
               {index === 0 ? `"${supporter.name}"` : supporter.name}
