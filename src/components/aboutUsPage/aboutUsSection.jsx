@@ -69,7 +69,7 @@ const InfoSection = ({
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand  text-xl font-bold mb-4">
+          <h3 className="font-justAnotherHand   md:text-[70px]  text-[30px]font-bold mb-4">
             {title}
           </h3>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
