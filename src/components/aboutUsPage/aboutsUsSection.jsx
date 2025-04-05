@@ -1,16 +1,15 @@
 import aboutUsPageContent from '../../data/about-us-page-content.json';
 
 const AboutUsSection = () => {
-  const contentSections = aboutUsPageContent.sections.filter((section) => 
-    section.title || section.supporters
+  const contentSections = aboutUsPageContent.sections.filter(
+    (section) => section.title || section.supporters,
   );
 
   return (
     <section id="AboutUsSection" className="w-full pt-28">
       {contentSections.map((section, index) => {
         const isFirst = index === 0;
-        
-        // Check if section has standard content or is a supporters section
+
         if (section.supporters) {
           return null; // We'll render this separately in the About page
         }
@@ -31,8 +30,14 @@ const AboutUsSection = () => {
   );
 };
 
-
-const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) => {
+const InfoSection = ({
+  title,
+  content,
+  image,
+  imageAlt,
+  layout,
+  showButton,
+}) => {
   const fallbackImage = '/assets/images/about/about-placeholder.jpg';
 
   return (
@@ -48,30 +53,28 @@ const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) =>
               </button>
             </div>
           )}
-          {
-            image &&
+          {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
               className="w-full object-cover mt-6 aspect-16/9"
             />
-          }
-          
+          )}
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand  text-xl font-bold mb-4">{title}</h3>
+          <h3 className="font-justAnotherHand  text-xl font-bold mb-4">
+            {title}
+          </h3>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
-          
-          {
-            image &&
+
+          {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
               className="w-full object-cover aspect-16/9"
             />
-          }
-          
+          )}
         </div>
       )}
     </div>
@@ -79,9 +82,3 @@ const InfoSection = ({ title, content, image, imageAlt, layout, showButton }) =>
 };
 
 export default AboutUsSection;
-
-
-
-
-
-
