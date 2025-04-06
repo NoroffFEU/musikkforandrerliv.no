@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
+import { useLightbox } from '../../hooks/useLightbox';
 import GalleryItem from './GalleryItem';
-import Lightbox from './Lightbox';
 
 /**
  * ImageGallery
@@ -10,8 +10,8 @@ import Lightbox from './Lightbox';
 const ImageGallery = () => {
   const { image: galleryImages } = data.gallery;
   const [isMobile, setIsMobile] = useState(false);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const { openLightbox } = useLightbox();
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -26,13 +26,8 @@ const ImageGallery = () => {
   const images = galleryImages.map(({ src, alt }) => ({ src, alt }));
   const displayImages = isMobile ? images.slice(0, 8) : images;
 
-  const openLightbox = (index) => {
-    setCurrentImageIndex(index);
-    setLightboxOpen(true);
-  };
-
-  const closeLightbox = () => {
-    setLightboxOpen(false);
+  const handleOpenLightbox = (index) => {
+    openLightbox(images, index);
   };
 
   const groups = [];
@@ -86,7 +81,7 @@ const ImageGallery = () => {
                       src={img.src}
                       alt={img.alt}
                       aspectClass={aspectClass}
-                      onClick={() => openLightbox(globalIndex)}
+                      onClick={() => handleOpenLightbox(globalIndex)}
                     />
                   </div>
                 );
@@ -107,19 +102,12 @@ const ImageGallery = () => {
                 src={img.src}
                 alt={img.alt}
                 aspectClass={isWideMobile ? 'pb-[58%]' : 'pb-[66%]'}
-                onClick={() => openLightbox(index)}
+                onClick={() => handleOpenLightbox(index)}
               />
             </div>
           );
         })}
       </div>
-
-      <Lightbox
-        images={images}
-        initialIndex={currentImageIndex}
-        isOpen={lightboxOpen}
-        onClose={closeLightbox}
-      />
     </>
   );
 };

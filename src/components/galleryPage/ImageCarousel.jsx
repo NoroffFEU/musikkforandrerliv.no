@@ -4,6 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 import altTextData from '../../../public/assets/images-gallery-alt.json';
 import useCarousel from '../../hooks/useCarousel';
+import { useLightbox } from '../../hooks/useLightbox';
 
 // Temporary image imports
 const imageImports = import.meta.glob(
@@ -28,6 +29,9 @@ const ImageCarousel = () => {
   const [loadedImages, setLoadedImages] = useState(
     Array(images.length).fill(false),
   );
+
+  // Use the global lightbox hook
+  const { openLightbox } = useLightbox();
 
   const {
     index,
@@ -55,6 +59,17 @@ const ImageCarousel = () => {
       newLoadedImages[i] = true;
       return newLoadedImages;
     });
+  };
+
+  // Format images for lightbox
+  const lightboxImages = images.map((src) => ({
+    src,
+    alt: getAltText(src),
+  }));
+
+  // Handler to open lightbox with the selected image
+  const handleOpenLightbox = (imgIndex) => {
+    openLightbox(lightboxImages, imgIndex);
   };
 
   return (
@@ -89,7 +104,10 @@ const ImageCarousel = () => {
                       : ''
                   }`}
                 >
-                  <div className="relative w-full h-full">
+                  <div
+                    className="relative w-full h-full cursor-pointer"
+                    onClick={() => handleOpenLightbox(imgIndex)}
+                  >
                     {/* Skeleton Loader */}
                     {!loadedImages[imgIndex] && (
                       <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>

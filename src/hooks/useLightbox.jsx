@@ -1,80 +1,74 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { createContext, useCallback, useContext, useState } from 'react';
 
 import { createPortal } from 'react-dom';
 
 import { IoIosArrowBack, IoIosArrowForward, IoMdClose } from 'react-icons/io';
 
-/**
- * Lightbox Component for image gallery
- * @param {Object[]} images - Array of image objects with src and alt properties
- * @param {number} initialIndex - Index of the initial image to display
- * @param {boolean} isOpen - Whether the lightbox is currently open
- * @param {function} onClose - Function to close the lightbox
- * @returns {React.ReactNode} - Lightbox component
- */
-const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
-  const [isLoading, setIsLoading] = useState(true);
-  const lightboxRef = useRef(null);
-  const imageRef = useRef(null);
+const LightboxContext = createContext(null);
 
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+export const LightboxProvider = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [images, setImages] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrevious = useCallback(() => {
-    setIsLoading(true);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
-    );
-  }, [images.length]);
+  const openLightbox = useCallback((imageArray, initialIndex = 0) => {
+    setImages(imageArray);
+    setCurrentIndex(initialIndex);
+    setIsOpen(true);
+    document.body.style.overflow = 'hidden';
+  }, []);
 
-  const handleNext = useCallback(() => {
-    setIsLoading(true);
+  const closeLightbox = useCallback(() => {
+    setIsOpen(false);
+    document.body.style.overflow = '';
+  }, []);
+
+  const goToNext = useCallback(() => {
+    if (!images.length) return;
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
-  }, [images.length]);
+  }, [images]);
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (!isOpen) return;
+  const goToPrevious = useCallback(() => {
+    if (!images.length) return;
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
+    );
+  }, [images]);
 
-      switch (e.key) {
-        case 'ArrowLeft':
-          handlePrevious();
-          break;
-        case 'ArrowRight':
-          handleNext();
-          break;
-        case 'Escape':
-          onClose();
-          break;
-        default:
-          break;
-      }
-    };
+  return (
+    <LightboxContext.Provider
+      value={{
+        isOpen,
+        openLightbox,
+        closeLightbox,
+        currentIndex,
+        goToNext,
+        goToPrevious,
+      }}
+    >
+      {children}
+      {isOpen && (
+        <LightboxComponent images={images} currentIndex={currentIndex} />
+      )}
+    </LightboxContext.Provider>
+  );
+};
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, handlePrevious, handleNext, onClose]);
+export const useLightbox = () => {
+  const context = useContext(LightboxContext);
+  if (!context) {
+    throw new Error('useLightbox must be used within a LightboxProvider');
+  }
+  return context;
+};
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (isOpen && lightboxRef.current) {
-      lightboxRef.current.focus();
-    }
-  }, [isOpen, currentIndex]);
+const LightboxComponent = ({ images, currentIndex }) => {
+  const { closeLightbox, goToNext, goToPrevious } = useLightbox();
+  const [isLoading, setIsLoading] = useState(true);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -92,9 +86,9 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
     const isRightSwipe = distance < -50;
 
     if (isLeftSwipe) {
-      handleNext();
+      goToNext();
     } else if (isRightSwipe) {
-      handlePrevious();
+      goToPrevious();
     }
 
     setTouchStart(0);
@@ -105,9 +99,33 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
     setIsLoading(false);
   };
 
-  if (!isOpen) return null;
+  React.useEffect(() => {
+    setIsLoading(true);
+  }, [currentIndex]);
+
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      switch (e.key) {
+        case 'ArrowLeft':
+          goToPrevious();
+          break;
+        case 'ArrowRight':
+          goToNext();
+          break;
+        case 'Escape':
+          closeLightbox();
+          break;
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [goToPrevious, goToNext, closeLightbox]);
 
   const current = images[currentIndex];
+  if (!current) return null;
 
   return createPortal(
     <div
@@ -115,10 +133,9 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
       role="dialog"
       aria-modal="true"
       aria-label="Image lightbox"
-      ref={lightboxRef}
       tabIndex={-1}
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (e.target === e.currentTarget) closeLightbox();
       }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -126,7 +143,7 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
     >
       <button
         className="absolute top-4 right-4 z-50 text-white p-2 rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
-        onClick={onClose}
+        onClick={closeLightbox}
         aria-label="Close lightbox"
       >
         <IoMdClose size={24} />
@@ -134,7 +151,7 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
 
       <button
         className="absolute left-4 z-50 text-white p-2 rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
-        onClick={handlePrevious}
+        onClick={goToPrevious}
         aria-label="Previous image"
       >
         <IoIosArrowBack size={24} />
@@ -142,7 +159,7 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
 
       <button
         className="absolute right-4 z-50 text-white p-2 rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
-        onClick={handleNext}
+        onClick={goToNext}
         aria-label="Next image"
       >
         <IoIosArrowForward size={24} />
@@ -156,7 +173,6 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
 
       <div className="relative max-w-[90vw] max-h-[90vh]">
         <img
-          ref={imageRef}
           src={current.src}
           alt={current.alt || 'Gallery image'}
           className={`max-h-[90vh] max-w-[90vw] object-contain transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
@@ -183,4 +199,4 @@ const Lightbox = ({ images, initialIndex = 0, isOpen, onClose }) => {
   );
 };
 
-export default Lightbox;
+export default useLightbox;
