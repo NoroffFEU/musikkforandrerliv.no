@@ -1,9 +1,8 @@
 import { useState } from 'react';
+
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-
-import altTextData from '../../../public/assets/images-gallery-alt.json'; 
-
+import altTextData from '../../../public/assets/images-gallery-alt.json';
 import useCarousel from '../../hooks/useCarousel';
 
 // Temporary image imports
@@ -14,16 +13,15 @@ const imageImports = import.meta.glob(
 
 const images = Object.values(imageImports).map((mod) => mod.default);
 
-
 const extractFilename = (url) => {
-  const urlWithoutQuery = url.split('?')[0]; 
-  return urlWithoutQuery.split('/').pop(); 
+  const urlWithoutQuery = url.split('?')[0];
+  return urlWithoutQuery.split('/').pop();
 };
 
 const getAltText = (src) => {
-  const filename = extractFilename(src); 
-  const imageData = altTextData.find((item) => item.src === filename); 
-  return imageData ? imageData.alt : `Image-${filename}`; 
+  const filename = extractFilename(src);
+  const imageData = altTextData.find((item) => item.src === filename);
+  return imageData ? imageData.alt : `Image-${filename}`;
 };
 
 const ImageCarousel = () => {
@@ -86,7 +84,6 @@ const ImageCarousel = () => {
           <div className="image-wrapper flex gap-3 items-center justify-center overflow-hidden">
             {getVisibleImages().map((src, i) => {
               const imgIndex = (index + i) % images.length;
-              console.log('imgIndex: ', imgIndex);
 
               return (
                 <div
