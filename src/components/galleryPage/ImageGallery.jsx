@@ -23,7 +23,12 @@ const ImageGallery = () => {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
-  const images = galleryImages.map(({ src, alt }) => ({ src, alt }));
+  const images = galleryImages.map(({ src, alt, description }) => ({
+    src,
+    alt,
+    caption: alt,
+    description,
+  }));
   const displayImages = isMobile ? images.slice(0, 8) : images;
 
   const handleOpenLightbox = (index) => {
@@ -80,6 +85,7 @@ const ImageGallery = () => {
                     <GalleryItem
                       src={img.src}
                       alt={img.alt}
+                      caption={img.caption}
                       aspectClass={aspectClass}
                       onClick={() => handleOpenLightbox(globalIndex)}
                     />
@@ -101,6 +107,7 @@ const ImageGallery = () => {
               <GalleryItem
                 src={img.src}
                 alt={img.alt}
+                caption={img.caption}
                 aspectClass={isWideMobile ? 'pb-[58%]' : 'pb-[66%]'}
                 onClick={() => handleOpenLightbox(index)}
               />

@@ -55,17 +55,53 @@
     "content": "The funds that come in go towards covering everything from food, clothing, education, equipment, healthcare, medicines, and dental care for the children, as well as the operation of the music school and salaries for our staff. The families of the children are also included in the food program and receive monthly distributions of food and hygiene products. We are constantly working to improve the living conditions of the children, and we use much of the surplus we have to repair houses and homes."
   },
   "gallery": {
-      "image": [
-        { "src": "/assets/placeholder-images/IMG_4116.webp", "alt": "Child smiling" },
-        { "src": "/assets/placeholder-images/IMG_4130.webp", "alt": "Group photo of children smiling" },
-        { "src": "/assets/placeholder-images/IMG_4202.webp", "alt": "Big group photo of people" },
-        { "src": "/assets/placeholder-images/IMG_4216.webp", "alt": "Child holding a baby" },
-        { "src": "/assets/placeholder-images/IMG_6391.webp", "alt": "Child drawing and smiling to camera" },
-        { "src": "/assets/placeholder-images/IMG_7331_jpg.webp", "alt": "Poor child sleeping outside" },
-        { "src": "/assets/placeholder-images/IMG_6436.webp", "alt": "Children playing violin" },
-        { "src": "/assets/placeholder-images/IMG_6438.webp", "alt": "Child smiling and another holding a violin" },
-        { "src": "/assets/placeholder-images/IMG_8979.webp", "alt": "Child holding something" }
-      ]
+    "image": [
+      {
+        "src": "/assets/placeholder-images/IMG_4116.webp",
+        "alt": "Child smiling",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_4130.webp",
+        "alt": "Group photo of children smiling",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_4202.webp",
+        "alt": "Big group photo of people",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_4216.webp",
+        "alt": "Child holding a baby",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_6391.webp",
+        "alt": "Child drawing and smiling to camera",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_7331_jpg.webp",
+        "alt": "Poor child sleeping outside",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_6436.webp",
+        "alt": "Children playing violin",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_6438.webp",
+        "alt": "Child smiling and another holding a violin",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      },
+      {
+        "src": "/assets/placeholder-images/IMG_8979.webp",
+        "alt": "Child holding something",
+        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
+      }
+    ]
   },
   "calender": {
     "title": "Upcoming Events",

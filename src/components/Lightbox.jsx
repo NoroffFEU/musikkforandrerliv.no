@@ -1,65 +1,12 @@
-import React, { createContext, useCallback, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { createPortal } from 'react-dom';
 
 import { IoIosArrowBack, IoIosArrowForward, IoMdClose } from 'react-icons/io';
 
-// Create context for lightbox
-export const LightboxContext = createContext(null);
+import { LightboxContext } from '../providers/LightboxProvider';
 
-// Provider component that wraps the entire app
-export const LightboxProvider = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [images, setImages] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const openLightbox = useCallback((imageArray, initialIndex = 0) => {
-    setImages(imageArray);
-    setCurrentIndex(initialIndex);
-    setIsOpen(true);
-    document.body.style.overflow = 'hidden';
-  }, []);
-
-  const closeLightbox = useCallback(() => {
-    setIsOpen(false);
-    document.body.style.overflow = '';
-  }, []);
-
-  const goToNext = useCallback(() => {
-    if (!images.length) return;
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
-    );
-  }, [images]);
-
-  const goToPrevious = useCallback(() => {
-    if (!images.length) return;
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
-    );
-  }, [images]);
-
-  return (
-    <LightboxContext.Provider
-      value={{
-        isOpen,
-        openLightbox,
-        closeLightbox,
-        currentIndex,
-        goToNext,
-        goToPrevious,
-      }}
-    >
-      {children}
-      {isOpen && (
-        <LightboxComponent images={images} currentIndex={currentIndex} />
-      )}
-    </LightboxContext.Provider>
-  );
-};
-
-// The actual Lightbox component (internal to the provider)
-const LightboxComponent = ({ images, currentIndex }) => {
+const Lightbox = ({ images, currentIndex }) => {
   const { closeLightbox, goToNext, goToPrevious } = useContext(LightboxContext);
   const [isLoading, setIsLoading] = useState(true);
   const [touchStart, setTouchStart] = useState(0);
@@ -94,12 +41,10 @@ const LightboxComponent = ({ images, currentIndex }) => {
     setIsLoading(false);
   };
 
-  // Reset loading state when image changes
   React.useEffect(() => {
     setIsLoading(true);
   }, [currentIndex]);
 
-  // Set up keyboard navigation
   React.useEffect(() => {
     const handleKeyDown = (e) => {
       switch (e.key) {
@@ -176,13 +121,18 @@ const LightboxComponent = ({ images, currentIndex }) => {
           onLoad={handleImageLoad}
         />
 
-        {current.caption && (
+        {(current.caption || current.description) && (
           <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 text-center">
-            <p>{current.caption}</p>
+            {current.caption && (
+              <p className="text-lg font-medium mb-1">{current.caption}</p>
+            )}
+            {current.description && (
+              <p className="text-sm text-gray-200">{current.description}</p>
+            )}
           </div>
         )}
 
-        <div className="absolute bottom-4 left-0 right-0 text-center text-white">
+        <div className="absolute top-4 left-0 right-0 text-center text-white">
           <span
             aria-live="polite"
             className="px-4 py-1 bg-black bg-opacity-50 rounded-full"
@@ -195,3 +145,5 @@ const LightboxComponent = ({ images, currentIndex }) => {
     document.body,
   );
 };
+
+export default Lightbox;
