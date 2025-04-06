@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import data from '../../data/landing-page-content.json';
 import ImagePreview from '../galleryPage/ImagePreview';
 
 export function GallerySection() {
-  const { image: galleryImages = [] } = data.gallery || {}; 
+  const { image: galleryImages = [] } = data.gallery || {};
 
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslation();
 
   // Check screen width for mobile responsiveness
   useEffect(() => {
@@ -30,9 +33,9 @@ export function GallerySection() {
             <div key={idx} className="aspect-square w-full">
               <img
                 src={image.src}
-                alt={image.alt}  
+                alt={image.alt}
                 loading="lazy"
-                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition" 
+                className="w-full h-full object-cover cursor-pointer rounded-lg shadow-md hover:opacity-80 transition"
               />
             </div>
           ))}

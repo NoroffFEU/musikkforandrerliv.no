@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { useTranslation } from 'react-i18next';
+
+import Logo from '/assets/placeholder-images/logo.png';
 
 function Footer() {
   const { t } = useTranslation();
@@ -49,16 +53,21 @@ function Footer() {
 
       {/* Links */}
       <section className="h-[1069px] bg-(--color-dark-green) text-white md:h-[553px] flex flex-col items-center relative">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-center items-center mt-22 md:mt-24">
-          {/* Placeholder for logo */}
-          <div className="w-[170px] h-[170px] lg:h-[250px] lg:w-[250px] col-start-1">
-            LOGO
+        <div className="grid grid-cols-2 sm:grid-rows-1 md:grid-cols-3 gap-4 justify-center items-center mt-22 md:mt-24">
+          <img
+            src={Logo}
+            alt="Musikkforandrerliv Logo"
+            className="w-[170px] h-[170px] lg:h-[250px] lg:w-[250px] col-start-1 row-start-1"
+          />
+          <div className="text-2xl flex flex-col col-start-1 md:col-start-2 md:row-start-1 gap-8">
+            <Link to="/about">{t('common.footer.aboutUs')}</Link>
+            <Link to="/news#latestNewsSection">{t('common.footer.news')}</Link>
+            <Link to="/news#eventsSection">{t('common.footer.events')}</Link>
           </div>
-
-          <div className="text-2xl flex flex-col col-start-1 md:col-start-2 gap-8">
-            <a>{t('common.footer.aboutUs')}</a>
-            <a>{t('common.footer.news')}</a>
-            <a>{t('common.footer.events')}</a>
+          <div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
+            <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
+            <Link to="/work">{t('common.footer.ourWork')}</Link>
+            <Link to="/contact">{t('common.footer.contactUs')}</Link>
           </div>
           <div className="text-2xl flex flex-col col-start-1 md:col-start-3 gap-8">
             <a href="/gallery">{t('common.footer.gallery')}</a>
@@ -75,15 +84,15 @@ function Footer() {
               {t('common.footer.followUs')}
             </p>
             <div>
-              <a>Facebook</a>
-              <a>Instagram</a>
+              <Link to="#">Facebook</Link>
+              <Link to="#">Instagram</Link>
             </div>
           </div>
         </div>
         <div className="absolute bottom-6 flex flex-col gap-4 m-0 items-center text-center">
           <div>
-            <a>{t('common.footer.privacyPolicy')}</a>
-            <a>{t('common.footer.termsAndConditions')}</a>
+            <Link to="#">{t('common.footer.privacyPolicy')}</Link>
+            <Link to="#">{t('common.footer.termsAndConditions')}</Link>
           </div>
 
           <p>© Musikkforandrerliv</p>

@@ -1,11 +1,10 @@
 import React from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { IoIosArrowForward } from 'react-icons/io';
 
-import content from '../../data/landing-page-content.json';
-
 const VolunteerSection = () => {
-  const volunteerContent = content.volunteer;
+  const { t } = useTranslation();
 
   return (
     <section
@@ -16,26 +15,28 @@ const VolunteerSection = () => {
         <div className="w-full h-auto px-6 md:px-0 md:w-1/2 lg:w-1/2 flex flex-col justify-center md:items-start gap-6 lg:py-10">
           <div className="w-full flex justify-between items-center">
             <h2 className="text-3xl font-['Freeman'] sm:font-['Montserrat'] sm:font-semibold">
-              {volunteerContent.title}
+              {t('screens.volunteer.title')}
             </h2>
             <IoIosArrowForward className="flex sm:hidden cursor-pointer text-2xl text-[var(--color-sunset-red)]" />
           </div>
-          {volunteerContent.content.split('\n').map((paragraph, index) => (
-            <p
-              key={index}
-              className="[font-family:var(--font-sans)] text-sm sm:text-lg max-w-[462px] text-[#363732]"
-            >
-              {paragraph}
-            </p>
-          ))}
+          {t('screens.volunteer.description')
+            .split('\n')
+            .map((paragraph, index) => (
+              <p
+                key={index}
+                className="[font-family:var(--font-sans)] text-sm sm:text-lg max-w-[462px] text-[#363732]"
+              >
+                {paragraph}
+              </p>
+            ))}
           <button className="hidden sm:inline-block w-fit py-4 px-[30px] border rounded-[9px] [font-family:var(--font-sans) ] font-semibold md:text-2xl cursor-pointer">
-            READ MORE
+            {t('common.buttons.readMore')}
           </button>
         </div>
         <div className="w-full md:w-1/2 md:h-full flex items-center justify-center">
           <img
-            src={volunteerContent.image}
-            alt= "Several children smiling and holding their violins"
+            src="../../../public/assets/placeholder-images/IMG_6437.webp"
+            alt={t('screens.volunteer.title')}
             className="w-full aspect-[1/1] h-auto md:h-full object-cover"
           />
         </div>
