@@ -2,6 +2,7 @@
   "name": "musikkforandrerliv.no",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "engine": {
     "node": ">=18.19.1",

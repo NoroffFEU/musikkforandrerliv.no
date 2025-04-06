@@ -38,15 +38,6 @@ const ImageCarousel = () => {
     carouselRef,
   } = useCarousel({ images: images });
 
-  const handleSwipe = () => {
-    const swipeThreshold = 50;
-    if (touchStartX - touchEndX > swipeThreshold) {
-      nextSlide();
-    } else if (touchEndX - touchStartX > swipeThreshold) {
-      prevSlide();
-    }
-  };
-
   const getVisibleImages = () => {
     if (index + 5 <= images.length) {
       return images.slice(index, index + 5);
