@@ -1,16 +1,21 @@
+import { useEffect, useState } from 'react';
+
 import { Route, Routes, useLocation } from 'react-router-dom';
-import MainLayout from '../components/MainLayout.jsx';
+
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LoadingSpinner from '../components/LoadingSpinner.jsx';
-import { useEffect, useState } from 'react';
+import MainLayout from '../components/MainLayout.jsx';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
-import Home from '../pages/Home'; 
-import News from '../pages/News';
 import Gallery from '../pages/Gallery';
+import Home from '../pages/Home';
+import News from '../pages/News';
+import NewsPost from '../pages/NewsPost';
 import NotFound from '../pages/NotFound';
-import TestTranslations from '../pages/TestTranslations';
 import OurWork from '../pages/OurWork';
+import CategorySpecific from '../pages/OurWorkSpecific.jsx';
+import Placeholder from '../pages/PlaceHolder';
+import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -36,10 +41,13 @@ const AppRoutes = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/news" element={<News />} /> 
-            <Route path="/gallery" element={<Gallery />} /> 
-            <Route path="/work" element={<OurWork />} /> 
+            <Route path="/news" element={<News />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/work" element={<OurWork />} />
+            <Route path="/work-specific" element={<CategorySpecific />} />
             <Route path="/test-translations" element={<TestTranslations />} />
+            <Route path="/placeholder" element={<Placeholder />} />
+            <Route path="/news-post" element={<NewsPost />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

@@ -234,21 +234,25 @@
       "title": "Our Staff",
       "members": [
         {
+          "image": "/assets/placeholder-images/IMG_7511.webp",
           "name": "Eline Rodvelt Hansen",
           "occupation": "Violin Teacher",
           "description": "Eline is a violinist and violin teacher, educated at the Grieg Academy in Bergen. Originally from Sandnes in Rogaland, she has traveled extensively around the world, playing with musicians on several continents and in various genres."
         },
         {
+          "image": "/assets/placeholder-images/IMG_3078.webp",
           "name": "Dina Rasalina Andriamanalina",
           "occupation": "Piano Teacher",
           "description": "Dina co-founded MMF with his wife, Eline Rodvelt Hansen, in 2021. Originally from Antsirabe, Madagascar, Dina has rhythm and music in his blood, having played many instruments since childhood. However, it was eventually the piano that became his dominant instrument."
         },
         {
+          "image": "/assets/placeholder-images/IMG_7544.webp",
           "name": "Karoline Hartvigsen",
           "occupation": "Nurse",
           "description": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo. Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen."
         },
         {
+          "image": "/assets/placeholder-images/IMG_3597.webp",
           "name": "Thea Harbo",
           "occupation": "Nurse",
           "description": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger. She has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet."
@@ -314,23 +318,28 @@
       "events": [
         {
           "date": "May 20, 2024",
-          "title": "MMF  Annual  Charity  Concert"
+          "title": "MMF  Annual  Charity  Concert",
+          "dateEn": "May 20, 2024"
         },
         {
           "date": "June 10, 2024",
-          "title": "Run for Music 5K Charity Race"
+          "title": "Run for Music 5K Charity Race",
+          "dateEn": "June 10, 2024"
         },
         {
           "date": "July 15, 2024",
-          "title": "MMF Culture and Arts Festival"
+          "title": "MMF Culture and Arts Festival",
+          "dateEn": "July 15, 2024"
         },
         {
           "date": "August 25, 2024",
-          "title": "Back-to-School Fundraiser Gala"
+          "title": "Back-to-School Fundraiser Gala",
+          "dateEn": "August 25, 2024"
         },
         {
           "date": "November 25, 2024",
-          "title": "Holiday Giving Campaign Kickoff"
+          "title": "Holiday Giving Campaign Kickoff",
+          "dateEn": "November 25, 2024"
         }
       ]
     },

@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 
-import landingPageContent from '../../data/landing-page-content.json';
+import { useTranslation } from 'react-i18next';
 
 const StaffSection = () => {
   const [team, setTeam] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
-    setTeam(landingPageContent.staff.team);
-  }, []);
+    setTeam(t('screens.staff.members', { returnObjects: true }));
+  }, [t]);
 
   return (
     <section
@@ -15,7 +16,6 @@ const StaffSection = () => {
       aria-labelledby="staff-heading"
     >
       <div className="w-full max-w-[960px] mx-auto">
-        {/* Header */}
         <h2
           id="staff-heading"
           className="mb-3 sm:mb-7 text-center text-gray-900 
@@ -23,7 +23,7 @@ const StaffSection = () => {
             text-[50px] sm:text-[110px] leading-[100%] 
             tracking-wide"
         >
-          {landingPageContent.staff.title}
+          {t('screens.staff.title')}
         </h2>
 
         {/* Staff Cards */}
@@ -48,19 +48,19 @@ const StaffSection = () => {
               {/* Text Content */}
               <div className="p-6 sm:w-2/3 flex flex-col justify-center gap-2">
                 <p className="uppercase text-[14px] sm:text-[16px] leading-[130%]">
-                  {member.role}
+                  {member.occupation}
                 </p>
                 <h3
                   className="text-[20px] sm:text-[32px]
                     leading-[150%] font-['Freeman'] sm:font-['Montserrat'] font-semibold"
                 >
-                  {member.teacher}
+                  {member.name}
                 </h3>
                 <p
                   className="text-[14px] sm:text-[18px]
                     font-['Montserrat'] font-normal leading-[130%] sm:leading-[150%]"
                 >
-                  {member.content}
+                  {member.description}
                 </p>
               </div>
             </article>
