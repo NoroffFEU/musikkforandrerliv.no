@@ -2,6 +2,7 @@ import React from 'react';
 
 import ImageCarousel from '../components/galleryPage/ImageCarousel';
 import ImageGallery from '../components/galleryPage/ImageGallery';
+import ReadMoreSection from '../components/galleryPage/ReadMoreSection';
 
 const Gallery = () => {
   return (
@@ -13,6 +14,7 @@ const Gallery = () => {
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <ImageGallery />
+      <ReadMoreSection />
     </section>
   );
 };
