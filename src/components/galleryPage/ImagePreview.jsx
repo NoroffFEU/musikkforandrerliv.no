@@ -23,7 +23,7 @@ const ImagePreview = ({ images, thumbnail, startingIndex }) => {
     if (key === 'ArrowRight') nextSlide();
 
     if (key === 'ArrowLeft') prevSlide();
-  }, []);
+  }, [nextSlide, prevSlide]);
 
   return (
     <Modal
