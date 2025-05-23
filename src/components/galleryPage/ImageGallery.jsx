@@ -1,17 +1,39 @@
 import React, { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
-import { useLightbox } from '../../hooks/useLightbox';
-import GalleryItem from './GalleryItem';
+import ImagePreview from './ImagePreview';
 
 /**
  * ImageGallery
  */
+
+export const GalleryItem = ({ images, index, src, alt, aspectClass }) => (
+  <ImagePreview
+    images={images}
+    startingIndex={index}
+    thumbnail={
+      <div className="group w-full h-full flex flex-col">
+        <div
+          className={`relative w-full h-full overflow-hidden shadow-sm ${aspectClass}`}
+        >
+          <img
+            src={src}
+            loading="lazy"
+            alt={alt}
+            className="absolute inset-0 w-full h-full object-cover cursor-pointer shadow-md hover:opacity-80 transition"
+          />
+        </div>
+        <p className="mt-2 mb-4 text-lg text-center text-gray-600">
+          Lorem ipsum dolor sit amet
+        </p>
+      </div>
+    }
+  />
+);
+
 const ImageGallery = () => {
   const { image: galleryImages } = data.gallery;
   const [isMobile, setIsMobile] = useState(false);
-
-  const { openLightbox } = useLightbox();
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -23,17 +45,8 @@ const ImageGallery = () => {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
-  const images = galleryImages.map(({ src, alt, description }) => ({
-    src,
-    alt,
-    caption: alt,
-    description,
-  }));
+  const images = galleryImages.map(({ src, alt }) => ({ src, alt }));
   const displayImages = isMobile ? images.slice(0, 8) : images;
-
-  const handleOpenLightbox = (index) => {
-    openLightbox(images, index);
-  };
 
   const groups = [];
   for (let i = 0; i < displayImages.length; i += 6) {
@@ -49,7 +62,6 @@ const ImageGallery = () => {
             <div className="grid grid-cols-12 gap-x-12 gap-y-12">
               {group.map((img, index) => {
                 const pos = index % 6;
-                const globalIndex = groupIndex * 6 + index;
 
                 let colSpan = '';
                 let aspectClass = '';
@@ -83,11 +95,11 @@ const ImageGallery = () => {
                     className={`col-span-1 sm:col-span-1 ${colSpan} ${wrapperClass}`}
                   >
                     <GalleryItem
+                      images={displayImages}
+                      index={index + groupIndex * 6}
                       src={img.src}
                       alt={img.alt}
-                      caption={img.caption}
                       aspectClass={aspectClass}
-                      onClick={() => handleOpenLightbox(globalIndex)}
                     />
                   </div>
                 );
@@ -105,11 +117,11 @@ const ImageGallery = () => {
           return (
             <div key={index} className={isWideMobile ? 'col-span-2' : ''}>
               <GalleryItem
+                images={displayImages}
+                index={index}
                 src={img.src}
                 alt={img.alt}
-                caption={img.caption}
                 aspectClass={isWideMobile ? 'pb-[58%]' : 'pb-[66%]'}
-                onClick={() => handleOpenLightbox(index)}
               />
             </div>
           );
