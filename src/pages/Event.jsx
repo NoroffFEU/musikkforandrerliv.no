@@ -1,5 +1,6 @@
 import ErrorBoundary from '../components/ErrorBoundary';
 import EventHeader from '../components/event/EventHeader';
+import EventVisuals from '../components/event/EventVisuals';
 
 // Placeholder components – will be replaced later
 // const EventHeader = () => <div>EventHeader placeholder</div>;
@@ -12,6 +13,7 @@ export default function Event() {
       <div className="min-h-screen container mt-64 mx-auto px-8">
         <section>
           <EventHeader />
+          <EventVisuals />
         </section>
         <section>
           <WhyAttend />
