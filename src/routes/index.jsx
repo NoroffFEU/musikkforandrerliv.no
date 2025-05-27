@@ -15,6 +15,8 @@ import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import TestTranslations from '../pages/TestTranslations';
+import Event from "../pages/Event";
+
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -47,6 +49,8 @@ const AppRoutes = () => {
             <Route path="*" element={<NotFound />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
+            <Route path="/event" element={<Event />} />
+
           </Route>
         </Routes>
       )}
