@@ -15,6 +15,7 @@ import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import TestTranslations from '../pages/TestTranslations';
+import SupportPage from '../pages/SupportPage.jsx';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -45,6 +46,7 @@ const AppRoutes = () => {
             <Route path="/work-specific" element={<CategorySpecific />} />
             <Route path="/test-translations" element={<TestTranslations />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/donate" element={<SupportPage />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
           </Route>
