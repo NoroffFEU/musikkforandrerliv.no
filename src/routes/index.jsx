@@ -46,7 +46,7 @@ const AppRoutes = () => {
             <Route path="/work-specific" element={<CategorySpecific />} />
             <Route path="/test-translations" element={<TestTranslations />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="/donate" element={<SupportPage />} />
+            <Route path="/support" element={<SupportPage />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
           </Route>
