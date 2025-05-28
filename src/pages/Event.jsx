@@ -1,27 +1,12 @@
-import ErrorBoundary from '../components/ErrorBoundary';
-import EventHeader from '../components/event/EventHeader';
-import EventVisuals from '../components/event/EventVisuals';
+import React from 'react';
 
-// Placeholder components – will be replaced later
-// const EventHeader = () => <div>EventHeader placeholder</div>;
-const WhyAttend = () => <div>WhyAttend placeholder</div>;
-const SupportSection = () => <div>SupportSection placeholder</div>;
-
-export default function Event() {
+const Event = () => {
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen container mt-64 mx-auto px-8">
-        <section>
-          <EventHeader />
-          <EventVisuals />
-        </section>
-        <section>
-          <WhyAttend />
-        </section>
-        <section>
-          <SupportSection />
-        </section>
-      </div>
-    </ErrorBoundary>
+    <div style={{ padding: '2rem', textAlign: 'center' }}>
+      <h1>Event Page</h1>
+      <p>This is a placeholder for the Event page content.</p>
+    </div>
   );
-}
+};
+
+export default Event;

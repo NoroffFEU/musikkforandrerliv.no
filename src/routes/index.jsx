@@ -7,6 +7,7 @@ import LoadingSpinner from '../components/LoadingSpinner.jsx';
 import MainLayout from '../components/MainLayout.jsx';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
+import Event from '../pages/Event';
 import Home from '../pages/Home';
 import News from '../pages/News';
 import NewsPost from '../pages/NewsPost';
@@ -15,8 +16,6 @@ import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import TestTranslations from '../pages/TestTranslations';
-import Event from "../pages/Event";
-
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -49,8 +48,7 @@ const AppRoutes = () => {
             <Route path="*" element={<NotFound />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
-            <Route path="/event" element={<Event />} />
-
+            <Route path="/event" element={<Placeholder />} />
           </Route>
         </Routes>
       )}
