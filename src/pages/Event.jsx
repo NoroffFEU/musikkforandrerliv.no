@@ -1,4 +1,5 @@
 import ErrorBoundary from '../components/ErrorBoundary';
+import ReasonsToAttend from '../components/ReasonsToAttend';
 import EventHeader from '../components/event/EventHeader';
 import EventVisuals from '../components/event/EventVisuals';
 
@@ -17,6 +18,9 @@ export default function Event() {
         </section>
         <section>
           <WhyAttend />
+        </section>
+        <section>
+          <ReasonsToAttend />
         </section>
         <section>
           <SupportSection />
