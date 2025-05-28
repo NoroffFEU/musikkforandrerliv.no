@@ -3,9 +3,9 @@ const SupportOptionSingle = ({ title, textContent, ctaText }) => {
     <div>
       <h3>{title}</h3>
       <p>{textContent}</p>
-      <button className='cursor-pointer'>{ctaText}</button>
+      <button className="cursor-pointer">{ctaText}</button>
     </div>
-  )
-}
+  );
+};
 
 export default SupportOptionSingle;
