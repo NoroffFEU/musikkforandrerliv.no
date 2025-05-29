@@ -4,7 +4,7 @@ import { TiHeartOutline } from 'react-icons/ti';
 
 const ImpactOfContributions = () => {
   return (
-    <div className="w-full flex justify-center items-center py-20 bg-[var(--color-mint-green)]">
+    <section className="w-full flex justify-center items-center py-20 bg-[var(--color-mint-green)]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-[110px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-x-[110px] gap-y-7 items-start">
           <p className="font-normal leading-[1.5] tracking-[0.02em] text-base max-w-[440px]">
@@ -22,11 +22,12 @@ const ImpactOfContributions = () => {
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.5] tracking-[0.02em] mb-4 font-justAnotherHand">
               Thank you for your support!
             </h1>
+            <span className="sr-only">Heart icon showing appreciation</span>
             <TiHeartOutline className="text-6xl" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
