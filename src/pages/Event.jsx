@@ -1,10 +1,11 @@
 import ErrorBoundary from '../components/ErrorBoundary';
 import EventHeader from '../components/event/EventHeader';
 import EventVisuals from '../components/event/EventVisuals';
+import ReasonsToAttend from '../components/event/ReasonsToAttend';
 
 // Placeholder components – will be replaced later
 // const EventHeader = () => <div>EventHeader placeholder</div>;
-const WhyAttend = () => <div>WhyAttend placeholder</div>;
+// WhyAttend = () => <div>WhyAttend placeholder</div>;
 const SupportSection = () => <div>SupportSection placeholder</div>;
 
 export default function Event() {
@@ -16,7 +17,7 @@ export default function Event() {
           <EventVisuals />
         </section>
         <section>
-          <WhyAttend />
+          <ReasonsToAttend />
         </section>
         <section>
           <SupportSection />
