@@ -1,14 +1,16 @@
-import ErrorBoundary from "../components/ErrorBoundary";
 import React from 'react';
 
-function SupportPage() {
-  
+import ErrorBoundary from '../components/ErrorBoundary';
+import FundingInfo from '../components/FundingInfo';
 
+function SupportPage() {
   return (
     <ErrorBoundary>
       <div className="w-full flex justify-center items-center flex-col mt-60 mb-200 ">
-        <h1 className="text-4xl  text-center font-[var(--font-justAnotherHand)]">Support</h1>
-        
+        <h1 className="text-[50px] sm:text-[100px]  text-center font-justAnotherHand">
+          Support
+        </h1>
+        <FundingInfo />
       </div>
     </ErrorBoundary>
   );
