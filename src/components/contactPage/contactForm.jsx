@@ -50,8 +50,8 @@ const ContactForm = () => {
         Contact form
       </h2>
       {submitted && (
-        <div className="bg-green-100 text-green-800 p-4 mb-6 rounded-lg text-center font-medium text-[32px] leading-[120%] tracking-[0] font-[600] font-montserrat">
-          Your message has been sent!
+        <div className="bg-green-100 text-green-800 p-4 mb-6 rounded-lg text-center font-medium text-[32px] leading-[120%] tracking-[0] font-montserrat">
+          Thank you - Your message has been sent!
         </div>
       )}
       <form onSubmit={handleSubmit} noValidate className="space-y-6">
@@ -141,7 +141,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="inline-flex items-center justify-center bg-transparent text-black font-semibold rounded-[9px] border border-black px-[30px] py-[20px] gap-[10px] hover:bg-black hover:text-white transition duration-200 font-montserrat text-[24px] leading-[100%] tracking-[0] font-[600] capitalize"
+          className="inline-flex items-center justify-center bg-transparent text-black font-semibold rounded-[9px] border border-black px-[30px] py-[20px] gap-[10px] hover:bg-black hover:text-white transition duration-200 font-montserrat text-[24px] leading-[100%] tracking-[0] capitalize cursor-pointer"
         >
           SEND
         </button>
