@@ -2,7 +2,7 @@ import SupportOptionSingle from './SupportOptionSingle.jsx';
 
 const supportOptionsData = [
   {
-    title: 'Volunteering',
+    title: 'Volunteer',
     ariaDescription: '',
     textContent: "Would you like to make a difference for street children in one of the world's poorest countries? We are looking for individuals who want to volunteer with us in Madagascar. Primarily, we are seeking those with an interest in or education related to music.We find that students greatly benefit from instruction by professional musicians.Currently, there is no professional symphony orchestra in Madagascar, so we rely on bringing in teaching expertise from outside.We hope to have volunteers in shorter or longer periods during 2024, especially for viola, cello, flute, and clarinet, possibly a conductor as well. Furthermore, we always need people with talents for practical work such as maintenance, carpentry, artists, arts and crafts teachers, healthcare professionals, photographers, and more. We are also open to other groups and talents, so please get in touch, and we'll see if MMF is the right fit for you! If you are curious and think this could be exciting, please fill out the form, and we will contact you."
   },
