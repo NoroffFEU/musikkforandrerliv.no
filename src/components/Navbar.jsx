@@ -95,17 +95,16 @@ function Navbar() {
       (isActive
         ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
         : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
-          'hover:h-[26px] hover:rounded-md transition-all duration-200') +
+        'hover:h-[26px] hover:rounded-md transition-all duration-200') +
       ' flex items-center font-montserrat text-[14px] font-semibold px-2'
     );
   };
 
   const getDesktopLinkClassesNoHash = ({ isActive }) =>
-    `${
-      isActive
-        ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
-        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
-          'hover:h-[26px] hover:rounded-md transition-all duration-200'
+    `${isActive
+      ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
+      : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
+      'hover:h-[26px] hover:rounded-md transition-all duration-200'
     } flex items-center font-montserrat text-[14px] font-semibold px-2`;
 
   const getMobileHashLinkClasses = (path, hash) => {
@@ -202,14 +201,14 @@ function Navbar() {
               )}
             </div>
 
-<NavLink
-  to="/news#latestNewsSection"
-  className={() =>
-    getDesktopHashLinkClasses('/news', '#latestNewsSection')
-  }
->
-  {t('common.header.news')}
-</NavLink>
+            <NavLink
+              to="/news#latestNewsSection"
+              className={() =>
+                getDesktopHashLinkClasses('/news', '#latestNewsSection')
+              }
+            >
+              {t('common.header.news')}
+            </NavLink>
 
 
             <NavLink to="/about" className={getDesktopLinkClassesNoHash}>
@@ -240,13 +239,13 @@ function Navbar() {
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow-md rounded-md z-10">
                   <NavLink
-  to="/news#eventsSection"
-  className={() =>
-    getDesktopHashLinkClasses('/news', '#eventsSection')
-  }
->
-  {t('common.header.events')}
-</NavLink>
+                    to="/news#eventsSection"
+                    className={() =>
+                      getDesktopHashLinkClasses('/news', '#eventsSection')
+                    }
+                  >
+                    {t('common.header.events')}
+                  </NavLink>
 
 
                   <NavLink to="/work" className={getDesktopLinkClassesNoHash}>
@@ -264,7 +263,7 @@ function Navbar() {
             </div>
 
             <NavLink
-              to="/donate"
+              to="/support"
               className="ml-2 px-4 py-2 rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
             >
               {t('common.header.donate')}
@@ -359,14 +358,14 @@ function Navbar() {
             </div>
 
             <NavLink
-  to="/news#latestNewsSection"
-  className={() =>
-    getMobileHashLinkClasses('/news', '#latestNewsSection')
-  }
-  onClick={toggleMenu}
->
-  {t('common.header.news')}
-</NavLink>
+              to="/news#latestNewsSection"
+              className={() =>
+                getMobileHashLinkClasses('/news', '#latestNewsSection')
+              }
+              onClick={toggleMenu}
+            >
+              {t('common.header.news')}
+            </NavLink>
 
 
             <NavLink
@@ -378,14 +377,14 @@ function Navbar() {
             </NavLink>
 
             <NavLink
-  to="/news#eventsSection"
-  className={() =>
-    getMobileHashLinkClasses('/news', '#eventsSection')
-  }
-  onClick={toggleMenu}
->
-  {t('common.header.events')}
-</NavLink>
+              to="/news#eventsSection"
+              className={() =>
+                getMobileHashLinkClasses('/news', '#eventsSection')
+              }
+              onClick={toggleMenu}
+            >
+              {t('common.header.events')}
+            </NavLink>
 
             <NavLink
               to="/work"
@@ -403,7 +402,7 @@ function Navbar() {
             </NavLink>
 
             <NavLink
-              to="/donate"
+              to="/support"
               className="block py-3 mt-4 text-center rounded-md bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-montserrat text-[14px] uppercase font-semibold"
               onClick={toggleMenu}
             >
