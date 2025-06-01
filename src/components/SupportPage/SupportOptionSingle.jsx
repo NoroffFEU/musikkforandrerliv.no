@@ -1,5 +1,5 @@
+import React from 'react';
 import { useState } from 'react';
-
 import { Link } from 'react-router-dom';
 
 const SupportOptionSingle = ({ title, ariaDescription, textContent }) => {
@@ -9,11 +9,11 @@ const SupportOptionSingle = ({ title, ariaDescription, textContent }) => {
     <div className="w-full grid pb-4 lg:pb-16">
       {/* Mobile Accordion Toggle */}
       <div
-        className={`relative flex items-center justify-between md:hidden ${isOpen ? 'translate-y-[-9px]' : 'translate-y-0'
+        className={`relative flex items-center justify-between md:hidden transition-discrete ${isOpen ? 'translate-y-[-9px]' : 'translate-y-0'
           }`}
       >
         <h3
-          className={`font-bold uppercase text-4xl text-left ${!isOpen && ' cursor-pointer'}`}
+          className={`font-bold uppercase text-4xl text-left  ${!isOpen && ' cursor-pointer'}`}
           onClick={() => !isOpen && setIsOpen((prev) => !prev)}
         >
           {title}
@@ -42,11 +42,11 @@ const SupportOptionSingle = ({ title, ariaDescription, textContent }) => {
       </div>
       {/* Larger Screen size Accordion Toggle */}
       <div
-        className={`relative hidden md:grid items-center justify-center grid-cols-[270px_auto] gap-x-4 ${isOpen ? 'translate-y-[-6px]' : 'translate-y-0 cursor-pointer'
+        className={`relative hidden md:grid items-center justify-center grid-cols-[350px_auto] gap-x-4 transition-all duration-300 ${isOpen ? ' translate-y-[-12px]' : ' translate-y-0 cursor-pointer'
           }`}
       >
         <h3
-          className="font-bold uppercase text-4xl text-center"
+          className="font-bold uppercase text-[40px] text-center"
           onClick={() => !isOpen && setIsOpen((prev) => !prev)}
         >
           {title}
@@ -81,18 +81,27 @@ const SupportOptionSingle = ({ title, ariaDescription, textContent }) => {
           }`}
         aria-hidden={!isOpen}
       >
-        <p>{textContent}</p>
+        <div>
+          {textContent.map((text, index) => (
+            <React.Fragment key={index}>
+              <p className="font-[var(--font-sans)] whitespace-pre-wrap text-[18px]">
+                {text}
+              </p><br></br>
+            </React.Fragment>
+          ))}
+        </div>
+
         <div className="flex">
           <Link
             to="#"
             id="cta-support"
-            className="uppercase text-white font-bold bg-[var(--color-sunset-red)] py-2 px-4 rounded-[9px] my-8"
+            className="uppercase text-white font-bold bg-[var(--color-sunset-red)] py-3 px-6 rounded-[9px] my-8"
           >
             Go to Form
           </Link>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
