@@ -1,7 +1,8 @@
 import React from 'react';
-
 import ErrorBoundary from '../components/ErrorBoundary';
 import ImpactOfContributions from '../components/ImpactOfContributions';
+import FundingInfo from '../components/FundingInfo';
+
 
 function SupportPage() {
   return (
@@ -10,6 +11,11 @@ function SupportPage() {
         <h1 className="text-4xl  text-center font-[var(--font-justAnotherHand)]">
           Support
         </h1>
+        <ImpactOfContributions />
+        <h1 className="text-[50px] sm:text-[100px]  text-center font-justAnotherHand">
+          Support
+        </h1>
+        <FundingInfo />
         <ImpactOfContributions />
       </div>
     </ErrorBoundary>
