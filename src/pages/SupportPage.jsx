@@ -1,9 +1,9 @@
 import React from 'react';
-
 import ErrorBoundary from '../components/ErrorBoundary';
 import BackToTopButton from '../components/buttons/BackToTop';
 import FundingInfo from '../components/FundingInfo';
 import SupportOptions from '../components/SupportPage/SupportOptions.jsx';
+import ImpactOfContributions from '../components/ImpactOfContributions';
 
 function SupportPage() {
   return (
@@ -14,6 +14,7 @@ function SupportPage() {
         </h1>
         <FundingInfo />
         <SupportOptions />
+        <ImpactOfContributions />
       </div>
       <BackToTopButton />
     </ErrorBoundary>
