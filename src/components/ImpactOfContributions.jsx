@@ -19,9 +19,9 @@ const ImpactOfContributions = () => {
           </p>
 
           <div className="flex flex-col items-center justify-start text-center">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.5] tracking-[0.02em] mb-4 font-justAnotherHand">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.5] tracking-[0.02em] mb-4 font-justAnotherHand">
               Thank you for your support!
-            </h1>
+            </h2>
             <span className="sr-only">Heart icon showing appreciation</span>
             <TiHeartOutline className="text-6xl" />
           </div>
