@@ -95,17 +95,16 @@ function Navbar() {
       (isActive
         ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
         : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
-          'hover:h-[26px] hover:rounded-md transition-all duration-200') +
+        'hover:h-[26px] hover:rounded-md transition-all duration-200') +
       ' flex items-center font-montserrat text-[14px] font-semibold px-2'
     );
   };
 
   const getDesktopLinkClassesNoHash = ({ isActive }) =>
-    `${
-      isActive
-        ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
-        : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
-          'hover:h-[26px] hover:rounded-md transition-all duration-200'
+    `${isActive
+      ? 'text-[var(--color-alt-forest-green)] border-b border-[#EE6352]'
+      : 'text-[#000000] hover:bg-[var(--color-sunset-red)] hover:text-white ' +
+      'hover:h-[26px] hover:rounded-md transition-all duration-200'
     } flex items-center font-montserrat text-[14px] font-semibold px-2`;
 
   const getMobileHashLinkClasses = (path, hash) => {
