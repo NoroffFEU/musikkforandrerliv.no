@@ -2,6 +2,7 @@ import React from 'react';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import FundingInfo from '../components/FundingInfo';
+import SupportOptions from '../components/SupportPage/SupportOptions.jsx';
 
 function SupportPage() {
   return (
@@ -11,6 +12,7 @@ function SupportPage() {
           Support
         </h1>
         <FundingInfo />
+        <SupportOptions />
       </div>
     </ErrorBoundary>
   );
