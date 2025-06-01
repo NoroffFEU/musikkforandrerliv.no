@@ -1,6 +1,5 @@
-import SupportOptionSingle from './SupportOptionSingle.jsx';
-
 import supportOptionsData from '../../data/supportOptionsData.json';
+import SupportOptionSingle from './SupportOptionSingle.jsx';
 
 const SupportOptions = () => {
   return (
