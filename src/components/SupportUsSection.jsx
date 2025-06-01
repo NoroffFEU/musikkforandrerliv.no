@@ -27,7 +27,7 @@ const SupportUsSection = () => {
 
         <ReusableButton
           text="SUPPORT"
-          href="/support"
+          href="#"
           className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] text-white font-medium px-10 py-2 rounded-md text-2xl"
         />
       </div>
