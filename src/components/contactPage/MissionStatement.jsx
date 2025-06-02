@@ -16,11 +16,11 @@ import { useState } from 'react';
  * 
  * ⚠️ Known issues:
  * - On the contact page, the top and bottom of this component may appear cut off. This is likely due to
- *   layout or scroll constraints outside this component and needs to be addressed at the page level.
+ *   layout or scroll constraints outside this component and needs to be addressed at the page level. This happens within the top div that contains the h1 and h2.
  * - The "READ MORE" and "DONATE" buttons are static/mock buttons and currently do not navigate or trigger any action.
+ * - I am missing many of the colors and font sizes in index.css amongst the variables, for example the CTA button color, the black text color, and font sizes that are different from Tailwinds' kit (like 32px). I have used the correct fonts and colors but hope that they can be replaced with variables later on.
 
  */
-
 
 export default function MissionStatement() {
   const [expanded, setExpanded] = useState(false);
@@ -28,7 +28,7 @@ export default function MissionStatement() {
   return (
     <section className="bg-[var(--color-mint-green)] w-full font-sans p-20 ">
       <div className="flex flex-col lg:flex-row flex-wrap justify-center m-auto lg:items-start items-center max-w-[1200px] gap-20">
-        <div className="w-full xl:max-w-[500px] max-w-[400px] aspect-square ">
+        <div className="w-full xl:max-w-[600px] max-w-[400px] aspect-square ">
           <img
             src="/assets/placeholder-images/IMG_6438.webp"
             alt="Two young children smiling, one holding a small violin."
@@ -36,8 +36,8 @@ export default function MissionStatement() {
           />
         </div>
 
-        <div className="space-y-6 max-w-96">
-          <h2 className="text-2xl font-bold lg:text-left text-center">
+        <div className="space-y-6 max-w-96 text-center lg:text-left">
+          <h2 className="text-[32px] font-bold  ">
             Our mission
           </h2>
 
@@ -47,7 +47,7 @@ export default function MissionStatement() {
               expanded ? 'max-h-full' : 'max-h-[160px] overflow-hidden'
             } lg:max-h-full lg:overflow-visible`}
           >
-            <p className="text-gray-700 leading-relaxed text-base m-auto">
+            <p className="text-black leading-relaxed text-lg m-auto">
               The funds that come in go towards covering everything from food,
               clothing, education, equipment, healthcare, medicines, and dental
               care for the children, as well as the operation of the music
@@ -66,7 +66,7 @@ export default function MissionStatement() {
 
           {/* Toggle button for mobile */}
           <button
-            className="lg:hidden mt-2 flex justify-center w-full"
+            className="lg:hidden mt-2 flex justify-center w-full hover:cursor-pointer"
             onClick={() => setExpanded(!expanded)}
             aria-label={
               expanded ? 'Collapse mission text' : 'Expand mission text'
@@ -88,11 +88,25 @@ export default function MissionStatement() {
           </button>
 
           {/* Action buttons */}
-          <div className="flex gap-4 py-8">
-            <button className="border border-gray-500 text-gray-800 text-sm px-4 py-2 rounded hover:bg-gray-100 transition">
+          <div className="flex gap-4 py-8 flex-wrap justify-center lg:justify-start">
+            <button
+              className="
+    border border-black font-semibold text-black text-2xl
+    px-6 py-2 rounded-lg hover:cursor-pointer
+    focus:outline-none focus:ring-0 focus:border-2 focus:border-black focus:bg-white
+  "
+            >
               READ MORE
             </button>
-            <button className="bg-white text-[var(--color-hover-red)] text-sm px-4 py-2 rounded hover:bg-rose-600 transition">
+
+            <button
+              className="    bg-white text-[#EF476F] font-semibold text-2xl
+    px-4 py-2 rounded-lg border-2 border-transparent
+    hover:cursor-pointer hover:text-white hover:bg-[#EF476F]
+    focus:outline-none focus:border-[#EF476F]
+    focus:bg-white focus:text-[#EF476F]
+    transition"
+            >
               DONATE
             </button>
           </div>
