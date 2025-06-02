@@ -7,6 +7,7 @@ import LoadingSpinner from '../components/LoadingSpinner.jsx';
 import MainLayout from '../components/MainLayout.jsx';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
+import Event from '../pages/Event';
 import Home from '../pages/Home';
 import News from '../pages/News';
 import NewsPost from '../pages/NewsPost';
@@ -14,9 +15,9 @@ import NotFound from '../pages/NotFound';
 import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
+// TEMP: Placeholder Support page for CTA button testing
+import SupportPage from '../pages/SupportPage';
 import TestTranslations from '../pages/TestTranslations';
-import Event from "../pages/Event";
-
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -50,7 +51,10 @@ const AppRoutes = () => {
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
             <Route path="/event" element={<Event />} />
-
+            {/*
+  TEMP ROUTE: Will be replaced when the actual Support page is implemented
+*/}
+            <Route path="/support" element={<SupportPage />} />
           </Route>
         </Routes>
       )}
