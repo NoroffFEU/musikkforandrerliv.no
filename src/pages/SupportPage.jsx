@@ -20,6 +20,7 @@ function SupportPage() {
         <SupportOptions openModal={openModal} />
         <ImpactOfContributions />
       </div>
+      {/* takes closeModal function and isModalOpen state as props */}
       <FormModal closeModal={closeModal} isModalOpen={isModalOpen}>
         {/* passes closeModal function from hook and isModalOpen state to component */}
         {currentForm && <currentForm.Component />}
