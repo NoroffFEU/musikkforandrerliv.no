@@ -1,9 +1,13 @@
-import React from 'react';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
-import { Link } from 'react-router-dom';
-
-const SupportOptionSingle = ({ title, ariaDescription, textContent }) => {
+const SupportOptionSingle = ({
+  title,
+  buttonId,
+  ariaDescription,
+  textContent,
+  openModal,
+  formComponent,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -89,23 +93,23 @@ const SupportOptionSingle = ({ title, ariaDescription, textContent }) => {
       >
         <div>
           {textContent.map((text, index) => (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
               <p className="font-[var(--font-sans)] whitespace-pre-wrap text-[18px]">
                 {text}
               </p>
               <br></br>
-            </React.Fragment>
+            </Fragment>
           ))}
         </div>
 
         <div className="flex">
-          <Link
-            to="#"
-            id="cta-support"
+          <button
+            id={buttonId}
+            onClick={() => openModal(formComponent)}
             className="uppercase text-white font-bold bg-[var(--color-sunset-red)] py-3 px-6 rounded-[9px] my-8"
           >
             Go to Form
-          </Link>
+          </button>
         </div>
       </div>
     </div>
