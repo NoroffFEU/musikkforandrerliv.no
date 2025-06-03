@@ -1,14 +1,13 @@
-import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
-import BackToTopButton from '../components/buttons/BackToTop';
 import FundingInfo from '../components/FundingInfo';
-import SupportOptions from '../components/SupportPage/SupportOptions.jsx';
 import ImpactOfContributions from '../components/ImpactOfContributions';
-
+import SupportOptions from '../components/SupportPage/SupportOptions.jsx';
+import BackToTopButton from '../components/buttons/BackToTop';
 import FormModal from '../components/modal/FormModal.jsx';
+import useFormModal from '../hooks/useFormModal.jsx';
 
 function SupportPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isModalOpen, currentForm, openModal, closeModal } = useFormModal();
 
   return (
     <ErrorBoundary>
@@ -17,10 +16,14 @@ function SupportPage() {
           Support
         </h1>
         <FundingInfo />
-        <SupportOptions />
+        {/* passes openModal function from hook to component */}
+        <SupportOptions openModal={openModal} />
         <ImpactOfContributions />
       </div>
-      <FormModal />
+      <FormModal closeModal={closeModal} isModalOpen={isModalOpen}>
+        {/* passes closeModal function from hook and isModalOpen state to component */}
+        {currentForm && <currentForm.Component />}
+      </FormModal>
       <BackToTopButton />
     </ErrorBoundary>
   );
