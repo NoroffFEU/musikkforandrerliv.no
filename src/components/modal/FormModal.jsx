@@ -5,14 +5,14 @@ export const ModalContainer = ({ closeModal, children }) => {
       onClick={closeModal}
     >
       <div
-        className="relative p-6 bg-white"
+        className="relative md:mt-[36px] mb-auto p-[46px] bg-white overflow-y-auto max-h-[98vh]"
         onClick={
           (e) =>
-            e.stopPropagation() /* prevents clicking within the modal from closing it */
+            e.stopPropagation() /* prevents from closing modal while clicking within it  */
         }
       >
-        <button className="absolute top-1 right-1" onClick={closeModal}>
-          X
+        <button className="absolute top-4 right-4 font-bold cursor-pointer scale-85" onClick={closeModal} aria-label="closes modal">
+          <img src="./assets/icons/closeX.svg" alt="button to closee" />
         </button>
         {children}
       </div>
