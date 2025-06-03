@@ -9,7 +9,9 @@ export const ModalContainer = ({ handleClose, children }) => {
 const FormModal = ({ isModalOpen, handleClose, children }) => {
   return (
     isModalOpen && (
-      <ModalContainer />
+      <ModalContainer>
+        {children}
+      </ModalContainer>
     )
   )
 }
