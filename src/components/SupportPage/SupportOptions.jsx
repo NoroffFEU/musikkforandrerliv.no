@@ -3,7 +3,7 @@ import SupportOptionSingle from './SupportOptionSingle.jsx';
 
 const SupportOptions = () => {
   return (
-    <div className="w-full grid justify-center text-center my-24 gap-8 bg-white">
+    <section className="w-full grid justify-center text-center my-24 gap-8 bg-white">
       {supportOptionsData.map((option, index) => (
         <SupportOptionSingle
           key={option.title}
@@ -13,7 +13,7 @@ const SupportOptions = () => {
           tabIndex={index + 1}
         />
       ))}
-    </div>
+    </section>
   );
 };
 
