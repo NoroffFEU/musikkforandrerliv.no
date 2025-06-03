@@ -22,7 +22,7 @@ function SupportPage() {
       </div>
       {/* takes closeModal function and isModalOpen state as props */}
       <FormModal closeModal={closeModal} isModalOpen={isModalOpen}>
-        {/* passes closeModal function from hook and isModalOpen state to component */}
+        {/* renders the current selected form as a component */}
         {currentForm && <currentForm.Component />}
       </FormModal>
       <BackToTopButton />
