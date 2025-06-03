@@ -2,15 +2,15 @@ import React from 'react';
 
 const EventHeader = () => {
   return (
-    <div className="w-full max-w-[1000px] mx-auto mt-[100px] pb-[60px] px-4 font-montserrat">
-      <h1 className="font-semibold text-[56px] mb-8 leading-[150%] whitespace-normal">
+    <div className="w-full max-w-[1000px] mx-auto mt-10 md:mt-[100px] pb-10 md:pb-[60px] px-4 font-montserrat">
+      <h1>
         Join Us for the Back-to-School Fundraiser Gala
       </h1>
-      <p className="text-[18px] text-[#212121]">Date: August 25, 2024</p>
-      <p className="text-[18px] text-[#212121] py-[24px]">
+      <p>Date: August 25, 2024</p>
+      <p>
         Location: Le Jardin Étoilé, Route Royale, Antananarivo, Madagascar
       </p>
-      <p className="text-[18px] pb-[24px] leading-[150%]">
+      <p>
         As summer winds down and the anticipation of a new school year begins,
         Music Makes Futures (MMF) invites you to an evening filled with
         elegance, inspiration, and purpose. Mark your calendars for August 25,
