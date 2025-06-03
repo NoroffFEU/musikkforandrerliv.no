@@ -1,4 +1,5 @@
 // Mock data for team members used until cms is set up with contact information
+import { SocialLinks } from './SocialLinks';
 
 const team = [
   {
@@ -26,23 +27,30 @@ const team = [
 
 export const ContactInfo = () => {
   return (
-    <div className="p-6 text-black font-sans">
-      <h2 className="text-2xl font-bold mb-4">Contact details</h2>
+    <div className="text-black font-sans">
+      <h2 className="text-[32px] font-[600] font-montserrat mb-6">
+        Contact details
+      </h2>
       {team.map((member, index) => (
-        <div key={index} className="mb-6">
-          <p className="font-bold">{member.role}</p>
-          <p>{member.name}</p>
-          <p>
+        <div key={index} className="mb-10">
+          <p className="font-semibold">{member.role}</p>
+          <p className="text-[18px]">{member.name}</p>
+          <p className="text-[18px]">
             Email:{' '}
-            <a href={`mailto:${member.email}`} className="text-blue-700">
+            <a
+              href={`mailto:${member.email}`}
+              className="text-blue-700 text-[18px]"
+            >
               {member.email}
             </a>
           </p>
           {member.phone && <p>Phone number/WhatsApp: {member.phone}</p>}
         </div>
       ))}
-      <p>You can always reach out to us on our social: </p>
-      {/* Insert socials component here */}
+      <p className="text-[18px]">
+        You can always reach out to us on our social:{' '}
+      </p>
+      <SocialLinks />
     </div>
   );
 };

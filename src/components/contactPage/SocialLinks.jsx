@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 export function SocialLinks() {
   return (
-    <div className="flex gap-8 justify-center mt-6">
+    <div className="flex gap-8 justify-center md:justify-normal mt-6">
       <a
         href="https://facebook.com"
         target="_blank"
