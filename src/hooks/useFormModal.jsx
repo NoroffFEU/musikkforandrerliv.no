@@ -5,7 +5,7 @@ const useFormModal = () => {
   const [currentForm, setCurrentForm] = useState(null);
 
   const openModal = (formComponent) => {
-    setCurrentForm({ Component: formComponent });
+    setCurrentForm({ Component: formComponent }); //sets a dynamic component from the formComponent
     setIsModalOpen(true);
   };
 
