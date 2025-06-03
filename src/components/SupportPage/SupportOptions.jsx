@@ -43,7 +43,7 @@ const SupportOptions = ({ openModal }) => {
           textContent={option.textContent}
           tabIndex={index + 1}
           openModal={openModal}
-          formComponent={formMap[option.title.toLowerCase()] || exampleForm}
+          formComponent={formMap[option.title.toLowerCase()] || exampleForm} // if no form is present to match the key in the map, render exampleForm
         />
       ))}
     </section>
