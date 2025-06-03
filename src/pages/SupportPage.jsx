@@ -7,6 +7,7 @@ import FormModal from '../components/modal/FormModal.jsx';
 import useFormModal from '../hooks/useFormModal.jsx';
 
 function SupportPage() {
+  // destructures state, the form component and open/close modal functions from hook
   const { isModalOpen, currentForm, openModal, closeModal } = useFormModal();
 
   return (
