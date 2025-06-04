@@ -69,7 +69,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             aria-label="Name"
-            className="w-full border border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full bg-white px-15 border border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.name && (
             <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -90,7 +90,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             aria-label="Email"
-            className="w-full border border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border bg-white px-15 border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -111,7 +111,7 @@ const ContactForm = () => {
             value={formData.subject}
             onChange={handleChange}
             aria-label="Subject"
-            className="w-full border border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border bg-white px-15 border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.subject && (
             <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
@@ -132,7 +132,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             aria-label="Message"
-            className="w-full border border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border bg-white px-15 border-gray-300 p-3 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.message && (
             <p className="text-red-500 text-sm mt-1">{errors.message}</p>
