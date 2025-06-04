@@ -30,3 +30,22 @@
     font-family: 'Just Another Hand';
   }
 }
+
+@layer base {
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-[56px] font-semibold leading-snug md:leading-[150%] mb-6 md:mb-8 whitespace-normal;
+  }
+
+  p {
+    @apply text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[150%] text-[#212121] mb-4;
+  }
+
+  p:last-of-type {
+    @apply mb-0;
+  }
+    ul {
+    @apply list-disc pl-5 text-sm md:text-[18px] leading-relaxed space-y-3 mb-6;
+  }
+
+}
+
