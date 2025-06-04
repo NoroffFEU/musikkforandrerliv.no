@@ -1,6 +1,3 @@
-// ContactForm.jsx
-import React from 'react';
-
 import TextInput from '../../components/supportForms/TextInput';
 
 const ContactForm = () => {
