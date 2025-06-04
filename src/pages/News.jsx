@@ -98,16 +98,19 @@ function News() {
         </div>
 
         {/* Upcoming Events */}
-        <div id="eventsSection" className="mt-24">
+        <section id="eventsSection" aria-labelledby="upcoming-events-heading" className="mt-24">
           <div className="relative left-[calc(-50vw+50%)] w-screen h-[162px] bg-[var(--color-dark-green)] flex justify-center items-center mb-24">
-            <h2 className="font-justAnotherHand text-white text-[100px]">
+            <h2
+              id="upcoming-events-heading"
+              className="font-justAnotherHand text-white text-[100px]"
+            >
               Upcoming events
             </h2>
           </div>
 
           {/* ✅ Uses paginated version of events */}
           <EventPagination />
-        </div>
+        </section>
       </div>
     </ErrorBoundary>
   );
