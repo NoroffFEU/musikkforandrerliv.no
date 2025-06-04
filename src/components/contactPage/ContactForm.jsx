@@ -46,7 +46,7 @@ const ContactForm = () => {
 
   return (
     <div className="max-w-lg mx-auto">
-      <h2 className="text-[32px] leading-[120%] tracking-[0] font-[600] font-montserrat mb-6 text-left">
+      <h2 className="text-[32px] leading-[120%] tracking-[0] font-[600] font-montserrat mb-6 md:text-left text-center pb-5">
         Contact form
       </h2>
       {submitted && (
@@ -138,13 +138,14 @@ const ContactForm = () => {
             <p className="text-red-500 text-sm mt-1">{errors.message}</p>
           )}
         </div>
-
-        <button
-          type="submit"
-          className="inline-flex items-center justify-center bg-transparent text-black font-semibold rounded-[9px] border border-black px-[30px] py-[20px] gap-[10px] hover:bg-black hover:text-white transition duration-200 font-montserrat text-[24px] leading-[100%] tracking-[0] capitalize cursor-pointer"
-        >
-          SEND
-        </button>
+        <div className="flex justify-center md:justify-start pb-5">
+          <button
+            type="submit"
+            className="inline-flex items-center justify-center bg-transparent text-black font-semibold rounded-[9px] border border-black px-[30px] py-[20px] gap-[10px] hover:bg-black hover:text-white transition duration-200 font-montserrat text-[24px] leading-[100%] tracking-[0] capitalize cursor-pointer"
+          >
+            SEND
+          </button>
+        </div>
       </form>
     </div>
   );
