@@ -1,4 +1,3 @@
-// supportForms/RadioGroup.jsx
 import React from 'react';
 
 const RadioGroup = ({ label, name, options = [], required = false }) => {
