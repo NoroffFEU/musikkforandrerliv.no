@@ -92,7 +92,7 @@ function Footer() {
         <div className="absolute bottom-6 flex flex-col gap-4 m-0 items-center text-center">
           <div>
             <Link to="#">{t('common.footer.privacyPolicy')}</Link>
-            <Link to="#">{t('common.footer.termsAndConditions')}</Link>
+            <Link to="/terms">{t('common.footer.termsAndConditions')}</Link>
           </div>
 
           <p>© Musikkforandrerliv</p>
