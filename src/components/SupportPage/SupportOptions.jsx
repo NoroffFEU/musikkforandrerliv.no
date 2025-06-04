@@ -54,9 +54,9 @@ const exampleForm = () => (
 );
 
 const formMap = {
-  volunteer: exampleForm, // replaced by correct form when completed
-  donations: exampleForm, // replaced by correct form when completed
-  fundraising: exampleForm, // replaced by correct form when completed
+  volunteer: exampleForm, // replace exampleForm with correct form when completed
+  donations: exampleForm, // replace exampleForm with correct form when completed
+  fundraising: exampleForm, // replace exampleForm with correct form when completed
 };
 
 const SupportOptions = ({ openModal }) => {
