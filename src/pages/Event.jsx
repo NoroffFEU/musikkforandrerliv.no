@@ -1,10 +1,10 @@
 import ErrorBoundary from '../components/ErrorBoundary';
 import SupportUsSection from '../components/SupportUsSection';
+import EventBreadcrumb from '../components/event/EventBreadcrumb';
 import EventHeader from '../components/event/EventHeader';
+import EventNavigation from '../components/event/EventNavigation';
 import EventVisuals from '../components/event/EventVisuals';
-import ReasonsToAttend from '../components/event/ReasonsToAttend';
-import EventBreadcrumb from "../components/event/EventBreadcrumb";
-import EventNavigation from "../components/event/EventNavigation";
+import WhyAttend from '../components/event/WhyAttend';
 
 export default function Event() {
   return (
@@ -13,17 +13,17 @@ export default function Event() {
         <section>
           <EventBreadcrumb />
           <div className="flex flex-col-reverse lg:flex-col gap-8">
-            <EventHeader />           
+            <EventHeader />
             <EventVisuals />
           </div>
         </section>
         <section>
-          <ReasonsToAttend />
+          <WhyAttend />
         </section>
         <EventNavigation />
         <section>
           <SupportUsSection />
-        </section>   
+        </section>
       </div>
     </ErrorBoundary>
   );
