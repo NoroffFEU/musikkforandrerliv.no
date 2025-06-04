@@ -6,6 +6,9 @@ import SupportOptionSingle from './SupportOptionSingle.jsx';
 // import DonationsForm from '../forms/DonationsForm';
 // import FundraisingForm from '../forms/FundraisingForm';
 
+import ContactForm from './SupportContactForm.jsx';
+
+
 const exampleForm = () => (
   <form className="lg:grid lg:grid-cols-2 flex flex-col gap-[12px] md:gap-[24px] justify-center bg-[var(--color-mint-green)] rounded-[5px] pt-[32px] pb-[28px] px-[48px]">
     <h2 className="col-span-2 text-center md:text-[32px] text-[20px]">
@@ -54,9 +57,9 @@ const exampleForm = () => (
 );
 
 const formMap = {
-  volunteer: exampleForm, // replaced by correct form when completed
+  volunteer: ContactForm, // replaced by correct form when completed
   donations: exampleForm, // replaced by correct form when completed
-  fundraising: exampleForm, // replaced by correct form when completed
+  fundraising: ContactForm, // replaced by correct form when completed
 };
 
 const SupportOptions = ({ openModal }) => {
