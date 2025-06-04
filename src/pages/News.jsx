@@ -100,25 +100,33 @@ function News() {
             </div>
           )}
         </div>
-        <div id="eventsSection" className="mt-24">
+        <section id="eventsSection" aria-labelledby="upcoming-events-heading" className="mt-24">
           <div className="relative left-[calc(-50vw+50%)] w-screen h-[162px] bg-[var(--color-dark-green)] flex justify-center items-center mb-24">
-            <h2 className="font-justAnotherHand text-white text-[100px]">
+            <h2
+              id="upcoming-events-heading"
+              className="font-justAnotherHand text-white text-[48px] sm:text-[72px] md:text-[100px]"
+            >
               Upcoming events
             </h2>
           </div>
+
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-12 mb-14">
             {mockEvents.slice(0, 12).map((event, index) => (
               <EventCard key={index} {...event} />
             ))}
           </div>
+
           <div className="flex justify-center mb-14">
-            <a href="#more-events" aria-label="Read More">
+            <a href="#more-events" aria-label="Scroll to more events" className="focus:outline-none focus-visible:ring-2 rounded-full">
+              <span className="sr-only">Scroll to more events</span>
               <svg
                 width="40"
                 height="20"
                 viewBox="0 0 40 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-hidden="true"
               >
                 <path
                   d="M39.2084 3.96313L21.4776 19.4931C21.2665 19.6774 21.0378 19.8077 20.7916 19.8839C20.5453 19.9613 20.2814 20 20 20C19.7186 20 19.4547 19.9613 19.2084 19.8839C18.9622 19.8077 18.7335 19.6774 18.5224 19.4931L0.738786 3.96313C0.246262 3.53303 0 2.99539 0 2.35023C0 1.70507 0.263852 1.15207 0.791557 0.691244C1.31926 0.230413 1.93492 0 2.63852 0C3.34213 0 3.95778 0.230413 4.48549 0.691244L20 14.2396L35.5145 0.691244C36.007 0.261137 36.6135 0.0460815 37.334 0.0460815C38.0559 0.0460815 38.6807 0.276497 39.2084 0.737326C39.7361 1.19816 40 1.73579 40 2.35023C40 2.96467 39.7361 3.5023 39.2084 3.96313Z"
@@ -127,7 +135,7 @@ function News() {
               </svg>
             </a>
           </div>
-        </div>
+        </section>
       </div>
     </ErrorBoundary>
   );
