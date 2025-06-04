@@ -27,7 +27,7 @@ const team = [
 
 export const ContactInfo = () => {
   return (
-    <div className="text-black font-sans">
+    <div className="text-black font-sans md:text-left text-center">
       <h2 className="text-[32px] font-[600] font-montserrat mb-6">
         Contact details
       </h2>
@@ -39,7 +39,7 @@ export const ContactInfo = () => {
             Email:{' '}
             <a
               href={`mailto:${member.email}`}
-              className="text-blue-700 text-[18px]"
+              className="text-blue-700 text-[18px] pr-5"
             >
               {member.email}
             </a>
