@@ -48,7 +48,7 @@ const AppRoutes = () => {
             <Route path="/support" element={<SupportPage />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
-
+            
 
             <Route path="*" element={<NotFound />} />
           </Route>
