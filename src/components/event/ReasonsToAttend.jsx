@@ -1,5 +1,7 @@
 import React from 'react';
 
+import EngagementButtons from './EngagementButtons';
+
 const ReasonsToAttend = () => {
   return (
     <div className="w-full max-w-[1000px] mx-auto px-4 pb-10 md:pb-[60px] font-montserrat text-[#212121]">
@@ -105,6 +107,7 @@ const ReasonsToAttend = () => {
         education and music. Join us, because every child deserves a chance to
         succeed.
       </p>
+      <EngagementButtons />
     </div>
   );
 };
