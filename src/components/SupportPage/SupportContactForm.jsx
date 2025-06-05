@@ -1,6 +1,7 @@
 import TextInput from '../../components/supportForms/TextInput';
+import DonationsForm from '../supportForms/DonationRadioGroup';
 
-const ContactForm = () => {
+const ContactForm = ({ children }) => {
   return (
     <form className="max-w-4xl p-6 bg-[#B2CAC2] shadow-md rounded-sm">
       <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
@@ -21,6 +22,7 @@ const ContactForm = () => {
           <TextInput label="Country" id="country" required />
         </div>
       </div>
+      {children}
       <p className="mt-6 ">
         By clicking Submit, you agree to our Terms & Conditions, and that you
         have read our Privacy Policy.
