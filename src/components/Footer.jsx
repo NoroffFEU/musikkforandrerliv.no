@@ -86,7 +86,7 @@ function Footer() {
               </NavLink>
             )}
           </div>
-          <div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col mb-auto mt-3">
+          <div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
             {!isBelowMd && (
               <NavLink
                 to="/support"
