@@ -106,7 +106,7 @@ const SupportOptionSingle = ({
           <button
             id={buttonId} // sets dynamic buttonId based on the title of the mapped json
             onClick={() => openModal(formComponent)} // opens modal with dynamic form component
-            className="uppercase text-white font-bold bg-[var(--color-sunset-red)] py-3 px-6 rounded-[9px] my-8"
+            className="uppercase text-white font-bold bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-3 px-6 rounded-[9px] my-8 cursor-pointer"
           >
             Go to Form
           </button>
