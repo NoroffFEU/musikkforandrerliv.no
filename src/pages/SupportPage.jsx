@@ -22,6 +22,7 @@ function SupportPage() {
         <ImpactOfContributions />
       </div>
       {/* takes closeModal function and isModalOpen state as props */}
+      {/* this only needs to be added (as is) to each page it will be implmented */}
       <FormModal closeModal={closeModal} isModalOpen={isModalOpen}>
         {/* renders the current selected form as a component */}
         {currentForm && <currentForm.Component />}
