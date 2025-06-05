@@ -86,15 +86,11 @@ function Footer() {
               </NavLink>
             )}
           </div>
-          <div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
-            {!isBelowMd && (
-              <NavLink
-                to="/support"
-                className="bg-(--color-sunset-red) hover:bg-(--color-hover-red) py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
-              >
-                {t('common.buttons.donate')}
-              </NavLink>
-            )}
+
+          <div className="col-start-2 md:col-start-4 row-start-1 mt-12 gap-4 flex flex-col">
+            <button className="bg-(--color-sunset-red) h-[57px] w-[147px] font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1">
+              {t('common.buttons.donate')}
+            </button>
 
             <p className="uppercase text-2xl font-bold">
               {t('common.footer.followUs')}
