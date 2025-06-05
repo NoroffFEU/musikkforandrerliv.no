@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 
@@ -19,6 +17,15 @@ function Footer() {
     event.preventDefault();
     console.log(event.target.value);
   }
+
+  // Helper to check if screen is below 'md'
+  const [isBelowMd, setIsBelowMd] = useState(window.innerWidth < 768);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsBelowMd(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <section className="font-sans">
@@ -68,11 +75,24 @@ function Footer() {
             <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
             <Link to="/work">{t('common.footer.ourWork')}</Link>
             <Link to="/contact">{t('common.footer.contactUs')}</Link>
+            {isBelowMd && (
+              <NavLink
+                to="/support"
+                className="bg-(--color-sunset-red) hover:bg-(--color-hover-red) py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
+              >
+                {t('common.buttons.donate')}
+              </NavLink>
+            )}
           </div>
-          <div className="col-start-2 md:col-start-4  row-start-1 mt-12 gap-4 flex flex-col">
-            <button className="bg-(--color-sunset-red) h-[57px] w-[147px] font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1">
-              {t('common.buttons.donate')}
-            </button>
+          <div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
+            {!isBelowMd && (
+              <NavLink
+                to="/support"
+                className="bg-(--color-sunset-red) hover:bg-(--color-hover-red) py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
+              >
+                {t('common.buttons.donate')}
+              </NavLink>
+            )}
 
             <p className="uppercase text-2xl font-bold">
               {t('common.footer.followUs')}

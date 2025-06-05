@@ -1,11 +1,9 @@
-import React from 'react';
-
 import RadioGroup from '../../components/supportForms/RadioGroup';
 import TextInput from '../../components/supportForms/TextInput';
 
 const ContactForm = () => {
   return (
-    <form className="max-w-4xl mx-auto p-6 bg-[#B2CAC2] mt-40 shadow-md rounded-sm">
+    <form className="max-w-4xl p-6 bg-[#B2CAC2] shadow-md rounded-sm">
       <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
 
       <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 gap-6">
