@@ -1,4 +1,17 @@
-import React from 'react';
+import RadioInput from "./RadioInput";
+
+/**
+ * DonationRadioGroup component.
+ *
+ * Displays two grouped radio input fieldsets for:
+ * - Donation frequency (plan)
+ * - Payment method
+ *
+ * Used as a child of the ContactForm.
+ *
+ * @component
+ * @returns {JSX.Element}
+*/
 
 
 const DonationRadioGroup = () => {
