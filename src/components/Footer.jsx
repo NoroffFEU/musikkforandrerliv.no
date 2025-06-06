@@ -86,6 +86,11 @@ function Footer() {
               </NavLink>
             )}
           </div>
+          <div className="text-2xl flex flex-col col-start-1 md:col-start-3 gap-8">
+            <a href="/gallery">{t('common.footer.gallery')}</a>
+            <a>{t('common.footer.ourWork')}</a>
+            <a>{t('common.footer.contactUs')}</a>
+          </div>
 
           <div className="col-start-2 md:col-start-4 row-start-1 mt-12 gap-4 flex flex-col">
             <button className="bg-(--color-sunset-red) h-[57px] w-[147px] font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1">
