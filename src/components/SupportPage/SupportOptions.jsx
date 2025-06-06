@@ -1,5 +1,7 @@
 import supportOptionsData from '../../data/supportOptionsData.json';
 import SupportOptionSingle from './SupportOptionSingle.jsx';
+import DonationForm from '../supportForms/DonationForm.jsx';
+import ContactInterestForm from '../supportForms/ContactInterestForm.jsx';
 
 // example imports until they are created:
 // import VolunteerForm from '../forms/VolunteerForm';
@@ -57,8 +59,8 @@ const exampleForm = () => (
 );
 
 const formMap = {
-  volunteer: ContactForm, // replaced by correct form when completed
-  donations: exampleForm, // replaced by correct form when completed
+  volunteer: ContactInterestForm, // replaced by correct form when completed
+  donations: DonationForm, // replaced by correct form when completed
   fundraising: ContactForm, // replaced by correct form when completed
 };
 
