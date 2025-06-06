@@ -1,6 +1,3 @@
-// TextInput.jsx
-import React from 'react';
-
 const TextInput = ({ label, id, type = 'text', required = false }) => {
   return (
     <div>

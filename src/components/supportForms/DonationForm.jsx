@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ContactForm from '../SupportPage/SupportContactForm';
 import DonationRadioGroup from './DonationRadioGroup';
 
