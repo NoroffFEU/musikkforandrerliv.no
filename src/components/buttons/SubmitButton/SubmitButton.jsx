@@ -17,13 +17,14 @@ import { useSubmitButton } from './useSubmitButton';
  * - Shows a checkmark icon on successful submit for 2 seconds.
  * - Disables button while loading or after success.
  */
-export const SubmitButton = ({ onClick, label = 'Submit', className = '' }) => {
+export const SubmitButton = ({ onClick, label = 'Submit', className = '', type='button' }) => {
   const { isLoading, isSuccess, handleClick } = useSubmitButton(onClick);
 
   return (
     <button
       onClick={handleClick}
       disabled={isLoading || isSuccess}
+      type={type}
       className={`px-8 py-6 rounded-md font-medium text-black transition
         flex justify-center items-center text-center gap-2 relative overflow-hidden
         ${isSuccess ? 'bg-white' : 'bg-transparent hover:bg-blue-700'} border border-black
