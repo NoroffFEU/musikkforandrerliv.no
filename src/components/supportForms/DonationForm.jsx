@@ -39,14 +39,15 @@ import DonationRadioGroup from './DonationRadioGroup';
 */
 
 export function DonationForm() {
-  const handleSubmit = async () => {
-    await new Promise((r) => setTimeout(r,500))
+  const navigate = useNavigate();
+
+  const handleDonationSubmit = async () => {
+    await new Promise((r) => setTimeout(r, 1000));
+    navigate('/thank-you');
   };
 
   return (
-    <ContactForm 
-    onSubmit={handleSubmit}
-    redirectTo='/thank-you'>
+    <ContactForm onSubmit={handleDonationSubmit}>
       <div className="mt-[82px] mb-16">
         <DonationRadioGroup />
       </div>
