@@ -56,51 +56,15 @@
   },
   "gallery": {
     "image": [
-      {
-        "src": "/assets/placeholder-images/IMG_4116.webp",
-        "alt": "Child smiling",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_4130.webp",
-        "alt": "Group photo of children smiling",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_4202.webp",
-        "alt": "Big group photo of people",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_4216.webp",
-        "alt": "Child holding a baby",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_6391.webp",
-        "alt": "Child drawing and smiling to camera",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_7331_jpg.webp",
-        "alt": "Poor child sleeping outside",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_6436.webp",
-        "alt": "Children playing violin",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_6438.webp",
-        "alt": "Child smiling and another holding a violin",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      },
-      {
-        "src": "/assets/placeholder-images/IMG_8979.webp",
-        "alt": "Child holding something",
-        "description": "This is a description that will need to be updated with a real one. It contains a fair amount of text to test the layout of the lightbox. "
-      }
+      "/assets/placeholder-images/IMG_4116.webp",
+      "/assets/placeholder-images/IMG_4130.webp",
+      "/assets/placeholder-images/IMG_4202.webp",
+      "/assets/placeholder-images/IMG_4216.webp",
+      "/assets/placeholder-images/IMG_6391.webp",
+      "/assets/placeholder-images/IMG_7331_jpg.webp",
+      "/assets/placeholder-images/IMG_6436.webp",
+      "/assets/placeholder-images/IMG_6438.webp",
+      "/assets/placeholder-images/IMG_8979.webp"
     ]
   },
   "calender": {

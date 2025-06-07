@@ -73,22 +73,22 @@ export function HistorySection() {
 
       <button
         className={`
-          fixed
-          bottom-8
-          right-8
-          w-[70px]
-          h-[70px]
-          rounded-full
-          bg-[#FF6B61]
-          text-black
-          flex
-          flex-col
-          justify-center
-          items-center
-          cursor-pointer
-          transition-opacity
-          duration-300
-          shadow-lg
+          fixed 
+          bottom-8 
+          right-8 
+          w-[70px] 
+          h-[70px] 
+          rounded-full 
+          bg-[#FF6B61] 
+          text-black 
+          flex 
+          flex-col 
+          justify-center 
+          items-center 
+          cursor-pointer 
+          transition-opacity 
+          duration-300 
+          shadow-lg 
           z-50
           ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         `}
