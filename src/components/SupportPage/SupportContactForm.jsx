@@ -19,6 +19,7 @@ import { useNavigate } from 'react-router-dom';
  * @param {Object} props
  * @param {React.ReactNode} props.children - Optional content to insert between form fields and the agreement section.
  * @param {Function} props.onSubmit - Function to call when the user submits the form.
+ * @param {string} [props.redirectTo='/thank-you'] - Optional redirect path
  *
  * @example
  * import ContactForm from './ContactForm';
@@ -45,6 +46,18 @@ const ContactForm = ({ children, onSubmit, redirectTo='/thank-you' }) => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
+    const form = document.getElementById('support-contact-form')
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    if (!agreed) {
+      alert('You must agree to terms and conditions before submitting.');
+      return;
+    }
+    
     if (onSubmit) {
       await onSubmit();
     }
@@ -56,10 +69,9 @@ const ContactForm = ({ children, onSubmit, redirectTo='/thank-you' }) => {
     }
   }
 
-
   return (
     <form 
-    onSubmit={(e) => e.preventDefault()}
+    id='support-contact-form'
     className="max-w-4xl p-6 bg-[#B2CAC2] shadow-md rounded-sm">
       <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
       <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 gap-6">
@@ -97,6 +109,7 @@ const ContactForm = ({ children, onSubmit, redirectTo='/thank-you' }) => {
       <div className='w-full flex justify-center items-center mt-[45px] md:mt-16 mb-[61px] md:mb-[20px]'>
           <SubmitButton
             label='Submit'
+            type='button'
             className='uppercase font-sans text-[24px] font-semibold'
             disabled={!agreed}
             onClick={handleSubmit}
