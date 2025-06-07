@@ -1,11 +1,13 @@
 import supportOptionsData from '../../data/supportOptionsData.json';
+import SupportOptionSingle from './SupportOptionSingle.jsx';
+import DonationForm from '../supportForms/DonationForm.jsx';
+import ContactInterestForm from '../supportForms/ContactInterestForm.jsx';
+import ContactForm from './SupportContactForm.jsx';
+
 // example imports until they are created:
 // import VolunteerForm from '../forms/VolunteerForm';
 // import DonationsForm from '../forms/DonationsForm';
 // import FundraisingForm from '../forms/FundraisingForm';
-
-import ContactForm from './SupportContactForm.jsx';
-import SupportOptionSingle from './SupportOptionSingle.jsx';
 
 const exampleForm = () => (
   <form className="lg:grid lg:grid-cols-2 flex flex-col gap-[12px] md:gap-[24px] justify-center bg-[var(--color-mint-green)] rounded-[5px] pt-[32px] pb-[28px] px-[48px]">
@@ -44,7 +46,7 @@ const exampleForm = () => (
       className="bg-white lg:w-[350px] rounded-[7px] p-2 placeholder:px-3 border-2"
       placeholder="eighth thing"
     />
-    <label className="col-span-2 flex justify-center" for="input">
+    <label className="col-span-2 flex justify-center" htmlFor="input">
       <input id="input" type="radio" />
       By clicking submit, you give me your SOUL!
     </label>
@@ -55,8 +57,8 @@ const exampleForm = () => (
 );
 
 const formMap = {
-  volunteer: ContactForm, // replaced by correct form when completed
-  donations: exampleForm, // replaced by correct form when completed
+  volunteer: ContactInterestForm, // replaced by correct form when completed
+  donations: DonationForm, // replaced by correct form when completed
   fundraising: ContactForm, // replaced by correct form when completed
 };
 
@@ -72,7 +74,7 @@ const SupportOptions = ({ openModal }) => {
           textContent={option.textContent}
           tabIndex={index + 1}
           openModal={openModal}
-          formComponent={formMap[option.title.toLowerCase()] || exampleForm} // if no form is present to match the key in the map, render exampleForm
+          formComponent={formMap[option.title.toLowerCase()] || exampleForm}
         />
       ))}
     </section>
