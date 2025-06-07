@@ -7,6 +7,7 @@ import LoadingSpinner from '../components/LoadingSpinner.jsx';
 import MainLayout from '../components/MainLayout.jsx';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
+import Gallery from '../pages/Gallery';
 import Home from '../pages/Home';
 import News from '../pages/News';
 import NewsPost from '../pages/NewsPost';
@@ -42,13 +43,14 @@ const AppRoutes = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/news" element={<News />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/work" element={<OurWork />} />
             <Route path="/work-specific" element={<CategorySpecific />} />
             <Route path="/test-translations" element={<TestTranslations />} />
-            <Route path="*" element={<NotFound />} />
             <Route path="/support" element={<SupportPage />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       )}
