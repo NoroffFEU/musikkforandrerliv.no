@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LoadingSpinner from '../components/LoadingSpinner.jsx';
 import MainLayout from '../components/MainLayout.jsx';
+
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Gallery from '../pages/Gallery';
@@ -24,11 +24,9 @@ const AppRoutes = () => {
 
   useEffect(() => {
     setLoading(true);
-
     const timer = setTimeout(() => {
       setLoading(false);
     }, 200);
-
     return () => clearTimeout(timer);
   }, [location]);
 
