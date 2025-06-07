@@ -56,11 +56,13 @@ const exampleForm = () => (
   </form>
 );
 
+
 const formMap = {
   volunteer: ContactInterestForm, // replaced by correct form when completed
   donations: DonationForm, // replaced by correct form when completed
   fundraising: ContactForm, // replaced by correct form when completed
 };
+
 
 const SupportOptions = ({ openModal }) => {
   return (

@@ -3,45 +3,23 @@ import TextInput from '../../components/supportForms/TextInput';
 import AgreementRadio from '../supportForms/AgreementRadio';
 import { useState } from 'react';
 import { SubmitButton } from '../buttons/SubmitButton/SubmitButton';
+import { useNavigate } from 'react-router-dom';
 
-/**
- * ContactForm component
- *
- * A reusable form layout for collecting user contact details, including
- * text inputs and agreement confirmation. Accepts children to extend the form
- * (e.g., donation options) and an optional `onSubmit` handler for custom behavior.
- *
- * The form prevents default browser submission and relies on a SubmitButton
- * to trigger the `onSubmit` callback manually.
- *
- * @component
- *
- * @param {Object} props
- * @param {React.ReactNode} props.children - Optional content to insert between form fields and the agreement section.
- * @param {Function} props.onSubmit - Function to call when the user submits the form.
- *
- * @example
- * import ContactForm from './ContactForm';
- *
- * function CustomFormWrapper() {
- *   const handleFormSubmit = async () => {
- * //submit function
- *   };
- *
- *   return (
- *     <ContactForm onSubmit={handleFormSubmit}>
- *       <div>Child component</div>
- *     </ContactForm>
- *   );
- * }
- *
- * export default CustomFormWrapper;
- *
- * @returns {JSX.Element} Contact form layout with input fields and submit button
-*/
-
-const ContactForm = ({ children, onSubmit }) => {
+const ContactForm = ({ children, onSubmit, redirectTo = '/thank-you' }) => {
   const [agreed, setAgreed] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    if (onSubmit) {
+      await onSubmit();
+    }
+
+    if (redirectTo) {
+      setTimeout(() => {
+        navigate(redirectTo);
+      }, 1000);
+    }
+  };
 
   return (
     <form 
@@ -82,7 +60,6 @@ const ContactForm = ({ children, onSubmit }) => {
         ]}
       />
 
-      {/* AgreementRadio with actual state control */}
       <div className="mt-6">
         <AgreementRadio
           name="terms"
@@ -98,13 +75,12 @@ const ContactForm = ({ children, onSubmit }) => {
         />
       </div>
 
-      {/* Submit button controlled by `agreed` */}
       <div className="w-full flex justify-center items-center mt-[45px] md:mt-16 mb-[61px] md:mb-[20px]">
         <SubmitButton
           label="Submit"
           className="uppercase font-sans text-[24px] font-semibold"
           disabled={!agreed}
-          onClick={onSubmit}
+          onClick={handleSubmit}
         />
       </div>
     </form>
@@ -112,4 +88,3 @@ const ContactForm = ({ children, onSubmit }) => {
 };
 
 export default ContactForm;
-

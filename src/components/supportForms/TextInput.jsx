@@ -7,7 +7,7 @@ const TextInput = ({ label, id, type = 'text', required = false }) => {
         name={id}
         required={required}
         placeholder={label}
-        className="w-full p-2 border border-black bg-gray-100 rounded-md placeholder-gray-600 focus:ring-blue-500 focus:border-blue-500"
+        className="w-full p-2 border border-black bg-gray-100 rounded-md placeholder-gray-600 focus:ring-blue-500 focus:ring-offset-0 focus:border-blue-500"
       />
     </div>
   );
