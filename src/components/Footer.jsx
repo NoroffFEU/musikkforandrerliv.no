@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 import { RiFacebookBoxLine, RiInstagramLine } from 'react-icons/ri';
@@ -21,6 +21,15 @@ function Footer() {
     event.preventDefault();
     console.log(event.target.value);
   }
+
+  // Helper to check if screen is below 'md'
+  const [isBelowMd, setIsBelowMd] = useState(window.innerWidth < 768);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsBelowMd(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <section className="font-sans">
@@ -80,28 +89,30 @@ function Footer() {
               {t('common.footer.events')}
             </Link>
           </div>
-          <div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8 mt-4 md:mt-0">
-            <Link
-              to="/#gallerySection"
-              className="hover:text-gray-300 hover:underline"
-            >
-              {t('common.footer.gallery')}
-            </Link>
-            <Link to="/work" className="hover:text-gray-300 hover:underline">
-              {t('common.footer.ourWork')}
-            </Link>
-            <Link to="/contact" className="hover:text-gray-300 hover:underline">
-              {t('common.footer.contactUs')}
-            </Link>
-          </div>
+<div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
+  <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
+  <Link to="/work">{t('common.footer.ourWork')}</Link>
+  <Link to="/contact">{t('common.footer.contactUs')}</Link>
+  {isBelowMd && (
+    <NavLink
+      to="/support"
+      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
+    >
+      {t('common.buttons.donate')}
+    </NavLink>
+  )}
+</div>
 
-          <div className="col-start-2 md:col-start-4 row-start-1 mt-12 gap-4 flex flex-col items-center">
-            <Link
-              to="/support"
-              className=" text-center py-3 bg-(--color-sunset-red) hover:bg-[var(--color-hover-red)] w-[147px] font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 cursor-pointer"
-            >
-              {t('common.buttons.donate')}
-            </Link>
+<div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
+  {!isBelowMd && (
+    <NavLink
+      to="/support"
+      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
+    >
+      {t('common.buttons.donate')}
+    </NavLink>
+  )}
+
 
             <p className="uppercase text-2xl font-bold">
               {t('common.footer.followUs')}
