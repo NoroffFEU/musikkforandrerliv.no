@@ -51,18 +51,18 @@ const ContactForm = ({ children, onSubmit }) => {
       <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 gap-6">
         {/* Left Column */}
         <div className="space-y-4 ">
-          <TextInput label="First Name" id="firstName" required />
-          <TextInput label="Email" id="email" type="email" required />
-          <TextInput label="Address" id="address" required />
-          <TextInput label="City" id="city" required />
+          <TextInput label="First Name" id="firstName" name="firstName" required />
+          <TextInput label="Email" id="email" type="email" name="email" required />
+          <TextInput label="Address" id="address" name="address" required />
+          <TextInput label="City" id="city" name="city" required />
         </div>
 
         {/* Right Column */}
         <div className="space-y-4">
-          <TextInput label="Last Name" id="lastName" required />
-          <TextInput label="Phone Number" id="phone" type="tel" required />
-          <TextInput label="Postal Code" id="postalCode" required />
-          <TextInput label="Country" id="country" required />
+          <TextInput label="Last Name" id="lastName" name="lastName" required />
+          <TextInput label="Phone Number" id="phone" type="tel" name="phone" required />
+          <TextInput label="Postal Code" id="postalCode" name="postalCode" required />
+          <TextInput label="Country" id="country" name="country" required />
         </div>
       </div>
       {children}
