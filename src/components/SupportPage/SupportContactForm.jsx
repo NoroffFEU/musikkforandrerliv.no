@@ -2,6 +2,7 @@ import TextInput from '../../components/supportForms/TextInput';
 import AgreementRadio from '../supportForms/AgreementRadio';
 import { useState } from 'react';
 import { SubmitButton } from '../buttons/SubmitButton/SubmitButton';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * ContactForm component
@@ -39,8 +40,21 @@ import { SubmitButton } from '../buttons/SubmitButton/SubmitButton';
  * @returns {JSX.Element} Contact form layout with input fields and submit button
 */
 
-const ContactForm = ({ children, onSubmit }) => {
+const ContactForm = ({ children, onSubmit, redirectTo='/thank-you' }) => {
   const [agreed, setAgreed] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    if (onSubmit) {
+      await onSubmit();
+    }
+
+    if (redirectTo) {
+      setTimeout(() => {
+        navigate(redirectTo);
+      }, 1000);
+    }
+  }
 
 
   return (
@@ -85,7 +99,7 @@ const ContactForm = ({ children, onSubmit }) => {
             label='Submit'
             className='uppercase font-sans text-[24px] font-semibold'
             disabled={!agreed}
-            onClick={onSubmit}
+            onClick={handleSubmit}
           />
       </div>
     </form>
