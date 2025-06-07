@@ -1,8 +1,8 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import BackToTopBtn from "../components/buttons/BackToTopButton"; 
+import React from "react";
+import { Outlet } from "react-router-dom";
+import BackToTopButton from "./buttons/BackToTop";
 
 const MainLayout = () => {
   return (
@@ -10,14 +10,12 @@ const MainLayout = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
-          <Outlet /> 
+          <Outlet />
         </main>
         <Footer />
       </div>
-      {/* Include the BackToTopButton to be visible on all pages */}
-      <BackToTopBtn />
+      <BackToTopButton />
     </>
   );
-};
-
+}
 export default MainLayout;
