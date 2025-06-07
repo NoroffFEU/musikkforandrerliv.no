@@ -2,6 +2,7 @@ import TextInput from '../../components/supportForms/TextInput';
 import AgreementRadio from '../supportForms/AgreementRadio';
 import { useState } from 'react';
 import { SubmitButton } from '../buttons/SubmitButton/SubmitButton';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * ContactForm component
@@ -39,8 +40,21 @@ import { SubmitButton } from '../buttons/SubmitButton/SubmitButton';
  * @returns {JSX.Element} Contact form layout with input fields and submit button
 */
 
-const ContactForm = ({ children, onSubmit }) => {
+const ContactForm = ({ children, onSubmit, redirectTo='/thank-you' }) => {
   const [agreed, setAgreed] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    if (onSubmit) {
+      await onSubmit();
+    }
+
+    if (redirectTo) {
+      setTimeout(() => {
+        navigate(redirectTo);
+      }, 1000);
+    }
+  }
 
 
   return (
@@ -51,18 +65,18 @@ const ContactForm = ({ children, onSubmit }) => {
       <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 gap-6">
         {/* Left Column */}
         <div className="space-y-4 ">
-          <TextInput label="First Name" id="firstName" required />
-          <TextInput label="Email" id="email" type="email" required />
-          <TextInput label="Address" id="address" required />
-          <TextInput label="City" id="city" required />
+          <TextInput label="First Name" id="firstName" name="firstName" required />
+          <TextInput label="Email" id="email" type="email" name="email" required />
+          <TextInput label="Address" id="address" name="address" required />
+          <TextInput label="City" id="city" name="city" required />
         </div>
 
         {/* Right Column */}
         <div className="space-y-4">
-          <TextInput label="Last Name" id="lastName" required />
-          <TextInput label="Phone Number" id="phone" type="tel" required />
-          <TextInput label="Postal Code" id="postalCode" required />
-          <TextInput label="Country" id="country" required />
+          <TextInput label="Last Name" id="lastName" name="lastName" required />
+          <TextInput label="Phone Number" id="phone" type="tel" name="phone" required />
+          <TextInput label="Postal Code" id="postalCode" name="postalCode" required />
+          <TextInput label="Country" id="country" name="country" required />
         </div>
       </div>
       {children}
@@ -85,7 +99,7 @@ const ContactForm = ({ children, onSubmit }) => {
             label='Submit'
             className='uppercase font-sans text-[24px] font-semibold'
             disabled={!agreed}
-            onClick={onSubmit}
+            onClick={handleSubmit}
           />
       </div>
     </form>
