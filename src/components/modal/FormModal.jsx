@@ -11,7 +11,11 @@ export const ModalContainer = ({ closeModal, children }) => {
             e.stopPropagation() /* prevents from closing modal while clicking within it  */
         }
       >
-        <button className="absolute top-4 right-4 font-bold cursor-pointer scale-85" onClick={closeModal} aria-label="closes modal">
+        <button
+          className="absolute top-4 right-4 font-bold cursor-pointer scale-85"
+          onClick={closeModal}
+          aria-label="closes modal"
+        >
           <img src="./assets/icons/closeX.svg" alt="button to closee" />
         </button>
         {children}
