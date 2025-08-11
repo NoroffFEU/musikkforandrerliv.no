@@ -46,7 +46,7 @@ const terms = [
   },
 ];
 
-export const CollapsableContentTerms = () => {
+export const CollapsibleContentTerms = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleSection = (index) => {
@@ -54,7 +54,7 @@ export const CollapsableContentTerms = () => {
   };
 
   return (
-    <div className="w-full max-w-[85%] mx-auto px-4 font-sans py-20">
+    <div className="w-full max-w-[85%] mx-auto px-4 font-sans py-10">
       {terms.map((term, index) => {
         const isOpen = openIndex === index;
 
