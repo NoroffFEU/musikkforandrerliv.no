@@ -1,4 +1,5 @@
 import ErrorBoundary from '../components/ErrorBoundary';
+import { CollapsibleContentTerms } from '../components/termsConditions/CollapsibleContentTerms';
 import GoverningLaw from '../components/termsConditions/GoverningLaw';
 
 function TermsConditions() {
@@ -15,7 +16,7 @@ function TermsConditions() {
           Lorem ipsum dolor sit amet, consectetur
         </p>
         <section>
-          {/* Collapsable component goes here  */}
+          {<CollapsibleContentTerms />}
           {<GoverningLaw />}
         </section>
       </div>
