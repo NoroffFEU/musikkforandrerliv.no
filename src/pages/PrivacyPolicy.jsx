@@ -1,16 +1,39 @@
+import { useEffect, useState } from "react";
 import ErrorBoundary from "../components/ErrorBoundary";
 
 export default function PrivacyPolicy() {
+  const [navOffset, setNavOffset] = useState(199); // fallback matches your h-[199px] for navbar
+  const GAP = 12;
+
+  useEffect(() => {
+    const update = () => {
+      const nav = document.querySelector("nav");
+      if (nav) setNavOffset(nav.offsetHeight || 199);
+    };
+    update();
+    window.addEventListener("resize", update, { passive: true });
+    // fonts/layout might change after load; this catches it
+    document.fonts?.ready?.then(update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  
+
   return (
     <ErrorBoundary>
       <main
         id="pp-content"
         role="main"
         aria-labelledby="pp-title"
-        className="mx-auto max-w-3xl px-4 sm:px-6 md:px-8 py-10 sm:py-12 md:py-16 space-y-12 md:space-y-16"
+        style={{ paddingTop: navOffset + GAP }}
+        className="mx-auto max-w-3xl px-4 sm:px-6 md:px-8 pb-10 sm:pb-12 md:pb-16 space-y-12 md:space-y-16"
       >
         <header>
-          <h1 id="pp-title" className="text-3xl sm:text-4xl font-semibold leading-tight">
+          <h1
+            id="pp-title"
+            style={{ scrollMarginTop: navOffset + GAP }}
+            className="text-3xl sm:text-4xl font-semibold leading-tight"
+          >
             Privacy Policy
           </h1>
           <p className="mt-2 text-sm text-gray-600">Last updated: August 2025</p>
