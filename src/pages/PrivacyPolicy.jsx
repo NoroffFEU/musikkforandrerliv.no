@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
             style={{ scrollMarginTop: navOffset + GAP }}
             className="text-3xl sm:text-4xl font-semibold leading-tight text-center"
           >
-            Privacy Policy
+            Our Privacy Policy
           </h1>
           <p className="text-center justify-center text-sm pt-9">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
