@@ -17,6 +17,8 @@ import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import TestTranslations from '../pages/TestTranslations';
 import SupportPage from '../pages/SupportPage.jsx';
+import PrivacyPolicy from '../pages/PrivacyPolicy.jsx';
+
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -42,6 +44,7 @@ const AppRoutes = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/news" element={<News />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/work" element={<OurWork />} />
