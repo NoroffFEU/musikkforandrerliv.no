@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 
 import ErrorBoundary from '../components/ErrorBoundary';
+import PolicyAccordion from './PolicyAccordian';
+
+// same folder as this file
 
 export default function PrivacyPolicy() {
   const [navOffset, setNavOffset] = useState(199); // fallback matches your h-[199px] for navbar
@@ -25,9 +28,9 @@ export default function PrivacyPolicy() {
         role="main"
         aria-labelledby="pp-title"
         style={{ paddingTop: navOffset + GAP }}
-        className="mx-auto max-w-3xl px-4 sm:px-6 md:px-8 pb-10 sm:pb-12 md:pb-16 space-y-12 md:space-y-16"
+        className="mx-auto max-w-3xl px-4 sm:px-6 md:px-8 pb-10 sm:pb-12 md:pb-16 space-y-0"
       >
-        <header>
+        <header className="mb-8 sm:mb-10 md:mb-12">
           <h1
             id="pp-title"
             style={{ scrollMarginTop: navOffset + GAP }}
@@ -35,7 +38,7 @@ export default function PrivacyPolicy() {
           >
             Privacy Policy
           </h1>
-          <p className='text-center justify-center text-sm pt-9 '>
+          <p className="text-center justify-center text-sm pt-9">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
@@ -43,169 +46,121 @@ export default function PrivacyPolicy() {
           </p>
         </header>
 
-        {/* Sections as placeholders – teammates will fill in / add expand-collapse */}
-        <section id="scope" className="space-y-4" aria-labelledby="scope-title">
-          <h2 id="scope-title" className="text-2xl font-semibold leading-snug">
-            SCOPE
-          </h2>
+        {/* Accordion sections (IDs + aria-labelledby preserved) */}
+        <PolicyAccordion sectionId="scope" titleId="scope-title" title="SCOPE">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
             luctus lorem. Lorem ipsum dolor sit amet, consectetur.
           </p>
-        </section>
+        </PolicyAccordion>
 
-        <section
-          id="data-collection"
-          className="space-y-4"
-          aria-labelledby="collect-title"
+        <PolicyAccordion
+          sectionId="data-collection"
+          titleId="collect-title"
+          title="DATA WE COLLECT"
         >
-          <h2
-            id="collect-title"
-            className="text-2xl font-semibold leading-snug"
-          >
-            DATA WE COLLECT
-          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
             luctus lorem. Lorem ipsum dolor sit amet, consectetur.
           </p>
-        </section>
+        </PolicyAccordion>
 
-        <section
-          id="data-we-dont-collect"
-          className="space-y-4"
-          aria-labelledby="data-we-dont-collect-title"
+        <PolicyAccordion
+          sectionId="data-we-dont-collect"
+          titleId="data-we-dont-collect-title"
+          title={"DATA WE DON'T COLLECT"}
         >
-          <h2
-            id="data-we-dont-collect"
-            className="text-2xl font-semibold leading-snug"
-          >
-            DATA WE DON&apos;T COLLECT
-          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
             luctus lorem. Lorem ipsum dolor sit amet, consectetur.
           </p>
-        </section>
-        <section
-          id="use-of-information"
-          className="space-y-4"
-          aria-labelledby="use-of-information-title"
-        >
-          <h2
-            id="use-of-information-title"
-            className="text-2xl font-semibold leading-snug"
-          >
-            USE OF INFORMATION
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            sodales lorem in eros elementum tristique. Duis congue nibh a nibh
-            viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
-            luctus lorem. Lorem ipsum dolor sit amet, consectetur.
-          </p>
-        </section>
+        </PolicyAccordion>
 
-        <section
-          id="data-security"
-          className="space-y-4"
-          aria-labelledby="data-security-title"
+        <PolicyAccordion
+          sectionId="use-of-information"
+          titleId="use-of-information-title"
+          title="USE OF INFORMATION"
         >
-          <h2
-            id="data-security-title"
-            className="text-2xl font-semibold leading-snug"
-          >
-            DATA SECURITY
-          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
             luctus lorem. Lorem ipsum dolor sit amet, consectetur.
           </p>
-        </section>
+        </PolicyAccordion>
 
-        <section
-          id="third-party-links"
-          className="space-y-4"
-          aria-labelledby="third-party-links-title"
+        <PolicyAccordion
+          sectionId="data-security"
+          titleId="data-security-title"
+          title="DATA SECURITY"
         >
-          <h2
-            id="third-party-links-title"
-            className="text-2xl font-semibold leading-snug"
-          >
-            THIRD PARTY LINKS
-          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
             luctus lorem. Lorem ipsum dolor sit amet, consectetur.
           </p>
-        </section>
-        <section
-          id="childrens-privacy"
-          className="space-y-4"
-          aria-labelledby="childrens-privacy-title"
-        >
-          <h2
-            id="childrens-privacy-title"
-            className="text-2xl font-semibold leading-snug"
-          >
-            CHILDREN&apos;S PRIVACY
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            sodales lorem in eros elementum tristique. Duis congue nibh a nibh
-            viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
-            luctus lorem. Lorem ipsum dolor sit amet, consectetur.
-          </p>
-        </section>
+        </PolicyAccordion>
 
-        <section
-          id="changes-to-our-privacy"
-          className="space-y-4"
-          aria-labelledby="changes-to-our-privacy-title"
+        <PolicyAccordion
+          sectionId="third-party-links"
+          titleId="third-party-links-title"
+          title="THIRD PARTY LINKS"
         >
-          <h2
-            id="changes-to-our-privacy-title"
-            className="text-2xl font-semibold leading-snug"
-          >
-            CHANGES TO OUR PRIVACY
-          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
             luctus lorem. Lorem ipsum dolor sit amet, consectetur.
           </p>
-        </section>
+        </PolicyAccordion>
 
-        <section
-          id="governing-law"
-          className="space-y-4"
-          aria-labelledby="governing-law-title"
+        <PolicyAccordion
+          sectionId="childrens-privacy"
+          titleId="childrens-privacy-title"
+          title={"CHILDREN'S PRIVACY"}
         >
-          <h2
-            id="governing-law-title"
-            className="text-2xl font-semibold leading-snug"
-          >
-            GOVERNING LAW
-          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales lorem in eros elementum tristique. Duis congue nibh a nibh
             viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
             luctus lorem. Lorem ipsum dolor sit amet, consectetur.
           </p>
-        </section>
-        <div className="text-sm  ">
+        </PolicyAccordion>
+
+        <PolicyAccordion
+          sectionId="changes-to-our-privacy"
+          titleId="changes-to-our-privacy-title"
+          title="CHANGES TO OUR PRIVACY"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            sodales lorem in eros elementum tristique. Duis congue nibh a nibh
+            viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
+            luctus lorem. Lorem ipsum dolor sit amet, consectetur.
+          </p>
+        </PolicyAccordion>
+
+        <PolicyAccordion
+          sectionId="governing-law"
+          titleId="governing-law-title"
+          title="GOVERNING LAW"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            sodales lorem in eros elementum tristique. Duis congue nibh a nibh
+            viverra posuere. Nullam sit amet diam volutpat, luctus velit non,
+            luctus lorem. Lorem ipsum dolor sit amet, consectetur.
+          </p>
+        </PolicyAccordion>
+
+        <div className="text-sm pt-6">
           <small>Updated: 00/00/00</small>
         </div>
       </main>
