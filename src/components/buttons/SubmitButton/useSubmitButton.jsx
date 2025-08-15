@@ -19,6 +19,7 @@ export const useSubmitButton = (onSubmit) => {
     setIsLoading(true);
     try {
       await onSubmit();
+      setTimeout(() => {}, 5000);
       setIsSuccess(true);
     } catch (error) {
       console.error('Submit failed:', error);
@@ -29,7 +30,7 @@ export const useSubmitButton = (onSubmit) => {
 
   useEffect(() => {
     if (isSuccess) {
-      const timer = setTimeout(() => setIsSuccess(false), 2000);
+      const timer = setTimeout(() => setIsSuccess(false), 4000);
       return () => clearTimeout(timer);
     }
   }, [isSuccess]);
