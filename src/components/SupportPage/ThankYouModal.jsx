@@ -4,7 +4,7 @@ import heartIcon from '/assets/placeholder-images/heartgreen.png';
 
 const ThankYouModal = ({ loading, onClose }) => {
   return (
-    <div className="fixed inset-0 bg-[#000000]/54 bg-opacity-50 flex justify-center items-center z-50">
+    <div className="fixed inset-10 bg-[#000000]/54 bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-white shadow-lg w-[376px] h-[429px] sm:w-[700px] sm:h-[600px] md:w-[1100px] md:h-[580px] lg:w-[1280px] lg:h-[650px] max-w-[90%] text-center relative flex flex-col justify-center items-center px-8">
         {/* Close button */}
         <button onClick={onClose} className="absolute top-7 right-7">

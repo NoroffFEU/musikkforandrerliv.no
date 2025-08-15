@@ -43,7 +43,7 @@ export function DonationForm() {
 
   const handleDonationSubmit = async () => {
     await new Promise((r) => setTimeout(r, 1000));
-    navigate('/thank-you');
+    // navigate('/thank-you');
   };
 
   return (
