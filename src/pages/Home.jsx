@@ -1,6 +1,4 @@
-import React, { Suspense, lazy } from 'react';
-
-import { Link } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
