@@ -1,0 +1,6 @@
+@media (min-width: 489px) and (max-width: 640px) {
+  .support-padding-tweak {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

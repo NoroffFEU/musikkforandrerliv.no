@@ -1,80 +1,72 @@
-import { Link } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import { HeroSection } from '../components/homePage/heroSection';
-// You already get 'i18n' from this hook
+import WorkSection from '../components/homePage/workSection';
 import '../i18n';
 import heart from '/assets/images/svgs/heart.svg';
 
-const SelectLanguageButton = React.memo(() => {
-  const { t, i18n } = useTranslation();
-
-  return (
-    <div className="flex space-x-4">
-      <button
-        className="px-4 py-2 bg-blue-500 text-white rounded"
-        onClick={() => i18n.changeLanguage('en')}
-      >
-        {t('english')}
-      </button>
-      <button
-        className="px-4 py-2 bg-green-500 text-white rounded"
-        onClick={() => i18n.changeLanguage('no')}
-      >
-        {t('norwegian')}
-      </button>
-    </div>
+// Safe lazy loader for components
+const safeLazy = (importFunc) =>
+  lazy(() =>
+    importFunc()
+      .then((mod) => {
+        const comp = mod.default || mod[Object.keys(mod)[0]];
+        if (!comp) throw new Error('Missing export in component');
+        return { default: comp };
+      })
+      .catch((err) => {
+        console.warn('Component not ready yet:', err);
+        return { default: () => null };
+      }),
   );
-});
 
+const HistorySection = safeLazy(
+  () => import('../components/homePage/historySection'),
+);
+const StaffSection = safeLazy(
+  () => import('../components/homePage/staffSection'),
+);
+const VolunteerSection = safeLazy(
+  () => import('../components/homePage/volunteerSection'),
+);
+const SupportSection = safeLazy(
+  () => import('../components/homePage/supportSection'),
+);
+const GallerySection = safeLazy(
+  () => import('../components/homePage/gallerySection'),
+);
+const CalenderSection = safeLazy(
+  () => import('../components/homePage/calenderSection'),
+);
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <div>
-      <div className="h-screen w-full flex flex-col justify-center items-center">
-        <h1 className="text-2xl font-extrabold">
-          {t('Welcome to MMF project')}{' '}
-          <img className="inline bg-red-600" src={heart} alt="" loading="lazy" />
-        </h1>
-        <button onClick={() => i18n.changeLanguage('no')}>NO</button>
-        <div className="flex items-center justify-center h-96 px-4 w-full">
-          <SelectLanguageButton />
-        </div>
-      </div>
+    <ErrorBoundary>
+      <div>
+        <HeroSection />
 
-      <Link
-        to="/test-translations"
-        className="px-4 py-2 bg-blue-500 text-white rounded"
-      >
-        {t('goToTestTranslations')}
-      </Link>
+        <Suspense fallback={<div>Loading...</div>}>
+          <HistorySection />
+          <StaffSection />
+        </Suspense>
 
-      <div className="space-x-4">
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded"
-          onClick={() => i18n.changeLanguage('en')}
-        >
-          {t('english')}
-        </button>
-        <button
-          className="px-4 py-2 bg-green-500 text-white rounded"
-          onClick={() => i18n.changeLanguage('no')}
-        >
-          {t('norwegian')}
-        </button>
+        <WorkSection />
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <VolunteerSection />
+          <section id="SupportSection">
+            <SupportSection />
+          </section>
+          <GallerySection />
+          <CalenderSection />
+        </Suspense>
       </div>
-      <HeroSection />
-      <section id="HistorySection"></section>
-      <section id="StaffSection"></section>
-      <section id="WorkSection"></section>
-      <section id="VolunteerSection"></section>
-      <section id="SupportSection"></section>
-      <section id="GallerySection"></section>
-      <section id="CalenderSection"></section>
-    </div>
+    </ErrorBoundary>
   );
 };
 

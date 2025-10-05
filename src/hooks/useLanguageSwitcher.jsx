@@ -20,12 +20,27 @@ const useLanguageSwitcher = () => {
     i18n.changeLanguage(language.toLowerCase());
   }, [i18n, language]);
 
+  useEffect(() => {
+    const syncLanguage = () => {
+      const storedLanguage = getSavedLanguage();
+      if (storedLanguage !== language) {
+        console.log('Updating language from localStorage:', storedLanguage);
+        setLanguage(storedLanguage);
+      }
+    };
+
+    window.addEventListener('storage', syncLanguage);
+    return () => window.removeEventListener('storage', syncLanguage);
+  }, [language]);
+
   /**
    * Updates the language when the user selects a new one.
    */
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
     localStorage.setItem('preferredLanguage', newLanguage);
+    i18n.changeLanguage(newLanguage.toLowerCase());
+    window.dispatchEvent(new Event('storage'));
   };
 
   return { language, handleLanguageChange };

@@ -1,0 +1,58 @@
+{
+    "pageName": "Our Work",
+    "sections": [
+      {
+        "id": 1,
+        "title": "Healthcare",
+        "content": "In Madagascar, child mortality is high and many die from diseases that can be easily treated with modern medicine. Typical causes are infectious diseases such as pneumonia, tuberculosis, diarrheal diseases and malaria. The country also has one of the highest incidences of plague in the world, as well as epidemics and pandemics that have otherwise been fought in other countries. Many have a long way to the nearest clinic and/or hospital, and the costs are high. They therefore do not seek help until it is too late. Many of the children we meet on the streets often have major health challenges, and several suffer from severe malnutrition.",
+        "image": "/assets/placeholder-images/IMG_5348.webp",
+        "imageAlt": "Child holding school supplies."
+      },
+      {
+        "id": 2, 
+        "title": "Education",
+        "content": "Schooling gives children hope for the future. When children lack basic knowledge and skills, they have limited opportunities. Education helps break the cycle of poverty and is a vital tool in combating poverty. The main goal of MMF is for children to become independent adults with their own income in the future. Therefore, it is important to facilitate the success and well-being of children in school.\n\nPublic schooling in Madagascar is free, but the cost of uniforms, textbooks, stationery, and notebooks is often too high for families. As a result, children are sent out to beg or work to support their families. The children we encounter on the streets have either dropped out of primary school or never had the opportunity to attend school, and they cannot read or write. To succeed in getting these children back to school, we have found it important to prepare them well. We have established a pre-school program where children practice reading and writing, and learn mathematics, Malagasy, and French before starting school.\n\nAll children in MMF are now attending school or receiving other forms of education. We have a future plan for each child based on their interests. Together, we will help and support them towards their goals. Public schooling in Madagascar is half a day (about 4 hours), and the children come to MMF every day after school to practice instruments and do homework. As many parents cannot read or write themselves, we have introduced homework assistance so that children have a chance to succeed in school. We are experiencing good results with this, and several children have excelled in school.\n\nIn addition to schooling and education, children also receive English lessons from us. We know that this can potentially help children secure a job in the future. Few Malagasy people speak English, so it is a great advantage for children to learn English. They can then have job opportunities such as being a guide, interpreter, or English teacher. Additionally, it is easier for children to communicate with visitors and volunteers at MMF.\n\nSome students need alternative solutions for education for various reasons, and we have some older students who attend vocational training instead of regular school. We are proud that last year we had a student who obtained a tailoring certificate. She now sews school uniforms for the other students among other things.",
+        "image": "/assets/placeholder-images/IMG_3568.webp", 
+        "imageAlt": "A girl looking at her colored pencils."
+      },
+      {
+        "id": 3,
+        "title": "Living Situation",
+        "content": "Many of the children we enroll as students in MMF live on the streets when we first meet them. The reason they live on the streets is poverty. These children are left to fend for themselves, and older children often take on the responsibility of caring for younger siblings. Life on the streets is extremely tough, and every day is a struggle for survival. During the day, children spend a lot of energy begging for money and searching for food. As night falls, it's important to find a safe place to sleep for the night. Nights can be cold and dangerous, and the children huddle together to keep warm.",
+        "image": "/assets/placeholder-images/IMG_7331_jpg.webp",
+        "imageAlt": "A girl is sitting on the ground with her head down."
+      },
+      {
+        "id": 4,
+        "title": "Food Distribution",
+        "content": "Despite Madagascar being known for its lush climate, the country has been affected by natural disasters and the worst drought in decades, attributed to climate change. This has resulted in crop failure, leading to food crises and famine. Parents struggle to provide enough food and clean water for their children. When families cannot feed their children, sending them out to beg becomes the only option for survival. Children living on the streets spend a lot of time and energy searching for food scraps and often have to resort to scavenging through others' garbage.",
+        "image": "/assets/placeholder-images/IMG_6433.webp",
+        "imageAlt": "A group of children eating food together."
+      },
+      {
+        "id": 5,
+        "title": "Music Lessons",
+        "content": "Meeting basic needs is crucial, but we also recognize that children need more. They need motivation, inspiration, joy, something to aspire to, new thoughts, and a belief that something else is possible. This brings us to the essence of the project: music. Studies show that when listening to and learning new music, new brain cells and connections are created. Research also shows that music enhances memory. Parents in MMF observe that their children perform better in school after they start playing an instrument. Collaboration is also particularly valuable, teaching children to cooperate, listen to each other, and express themselves.",
+        "image": "/assets/placeholder-images/IMG_7544.webp",
+        "imageAlt": "A girl playing on her instrument."
+      },
+      {
+        "id": 6,
+        "title": "Future Goals",
+        "content": "One of our goals is to make MMF larger and more well-known so that we can include more children living tough lives on the streets. The main goal is for all children in Antsirabe to have enough food, clothing, experience care, have a safe and good home, attend school, and have the opportunity to develop their talents. It is important for us that the assistance we provide contributes to independence. The goal is for children to attend school and develop their talents so that one day they will become assets in their own communities, find employment, and stand on their own feet.",
+        "image": "/assets/placeholder-images/IMG_7425.webp",
+        "imageAlt": "A group of children holding and throwing basketballs."
+      },
+      {
+        "id": 7,
+        "title": "Activities",
+        "content": "Children growing up in poverty in Antsirabe often have significant responsibilities from a very young age. They take care of younger siblings, cook meals, and are tasked with earning money for the family through begging. Sometimes, children are also assigned physically demanding tasks such as carrying sacks of rice or pushing heavy water cans, receiving little to no pay for their work. Entrusting adults with the responsibility of caring for their own children is an important part of our work. Children should get to be children! Therefore, play is an essential part of everyday life at MMF.",
+        "image": "/assets/placeholder-images/IMG_3538.webp",
+        "imageAlt": "A group of children sitting around a desk with their note books."
+      }
+    ],
+    "metadata": {
+      "lastUpdated": "2025-03-27",
+      "version": "1.0"
+    }
+  }

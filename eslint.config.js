@@ -5,7 +5,35 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 
 export default [
-  { ignores: ['dist'] },
+  {
+    ignores: [
+      'dist',
+      'node_modules',
+      'package-lock.json',
+      'build',
+      'coverage',
+      '.cache',
+      '.npm',
+      '.eslintcache',
+      '.env*',
+      '.env.local',
+      '.env.development.local',
+      '.env.test.local',
+      '.env.production.local',
+      'npm-debug.log*',
+      'yarn-debug.log*',
+      'yarn-error.log*',
+      '.idea',
+      '.vscode',
+      '*.suo',
+      '*.ntvs*',
+      '*.njsproj',
+      '*.sln',
+      '*.sw?',
+      '.DS_Store',
+      'Thumbs.db',
+    ],
+  },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -26,6 +54,11 @@ export default [
       react: react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
     rules: {
       ...js.configs.recommended.rules,

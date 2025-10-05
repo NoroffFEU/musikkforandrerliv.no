@@ -1,0 +1,16 @@
+{
+  "title": "Support Us",
+  "content": "The funds that come in go towards covering everything from food, clothing, education, equipment, healthcare, medicines, and dental care for the children, as well as the operation of the music school and salaries for our staff. The families of the children are also included in the food program and receive monthly distributions of food and hygiene products. We are constantly working to improve the living conditions of the children, and we use much of the surplus we have to repair houses and homes.",
+  "image": "/assets/images/supportImg.png",
+  "imageAlt": "Children receiving support from our organization",
+  "buttons": {
+    "readMore": {
+      "text": "READ MORE",
+      "url": "#"
+    },
+    "donate": {
+      "text": "DONATE",
+      "url": "#"
+    }
+  }
+}
