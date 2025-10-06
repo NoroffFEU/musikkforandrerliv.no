@@ -7,9 +7,7 @@ import ReadMoreSection from '../components/galleryPage/ReadMoreSection';
 const Gallery = () => {
   return (
     <section className="pt-60 pb-12 px-4 max-w-7xl mx-auto">
-      <h1 className="text-[50px] sm:text-[110px] leading-none tracking-wider font-justAnotherHand font-regular text-center mb-8">
-        Gallery
-      </h1>
+      <h1 className="text-4xl font-bold text-center mb-8">Gallery</h1>
       <ImageCarousel />
       <p className="text-center mb-9">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
