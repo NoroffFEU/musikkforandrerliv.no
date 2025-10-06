@@ -1,6 +1,5 @@
 import aboutUsPageContent from '../../data/about-us-page-content.json';
 
-
 //Hello Testing
 const AboutUsSection = () => {
   const contentSections = aboutUsPageContent.sections.filter(
@@ -8,7 +7,7 @@ const AboutUsSection = () => {
   );
 
   return (
-    <section id="AboutUsSection" className="w-full pt-10">
+    <section id="AboutUsSection" className="w-full pt-2">
       {contentSections.map((section, index) => {
         const isFirst = index === 0;
 
@@ -44,7 +43,7 @@ const InfoSection = ({
   const fallbackImage = '/assets/images/about/about-placeholder.jpg';
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-12">
+    <div className="w-full max-w-5xl mx-auto px-4 pt-3 pb-12 md:py-12">
       {layout === 'intro' ? (
         <div>
           <div className="flex justify-center items-center">
@@ -52,7 +51,9 @@ const InfoSection = ({
               {title}
             </h1>
           </div>
-          <p className="mb-6 whitespace-pre-line text-left">{content}</p>
+          <p className="mb-6 whitespace-pre-line text-center mx-auto max-w-prose">
+            {content}
+          </p>
 
           {showButton && (
             <div className="flex justify-center">

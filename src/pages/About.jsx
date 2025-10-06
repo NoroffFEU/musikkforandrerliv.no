@@ -25,7 +25,7 @@ function About() {
     <ErrorBoundary>
       <div className="w-full flex justify-center items-center flex-col ">
         <img
-          className="w-full h-[300px] mt-[130px] md:w-full md:h-[601px] md:mt-[13push0px] object-cover"
+          className="w-full h-[350px] mt-[130px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[850px] md:mt-[130px] object-contain md:object-cover object-center max-h-[950px]"
           src="assets/placeholder-images/IMG_7359.webp"
           alt=""
         />
