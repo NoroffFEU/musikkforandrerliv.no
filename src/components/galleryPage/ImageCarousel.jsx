@@ -78,7 +78,7 @@ const ImageCarousel = () => {
         ref={carouselRef}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className="carousel-wrapper relative flex justify-center items-center my-12 min-h-[139px] md:min-h-[200px] lg:min-h-[200px] xl:min-h-[248px] md:max-w-[750px] lg:max-w-[1050px] xl:max-w-[1280px] h-full w-full overflow-hidden "
+        className="carousel-wrapper relative flex justify-center items-center my-5 min-h-[139px]  lg:min-h-[200px] xl:min-h-[248px] md:max-w-[750px] lg:max-w-[1050px] xl:max-w-[1280px] h-full w-full overflow-hidden "
       >
         <button
           onClick={prevSlide}
@@ -86,8 +86,8 @@ const ImageCarousel = () => {
         >
           <IoIosArrowBack size={32} className="hidden md:flex" />
         </button>
-        <div className="image-carousel flex justify-center items-center ">
-          <div className="image-wrapper flex gap-3 items-center justify-center overflow-hidden">
+        <div className="image-carousel w-full md:w-auto flex justify-center items-center ">
+          <div className="image-wrapper w-full md:w-auto flex gap-3 items-center justify-center overflow-hidden">
             {getVisibleImages().map((src, i) => {
               const imgIndex = (index + i) % images.length;
 

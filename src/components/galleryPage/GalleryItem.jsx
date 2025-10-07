@@ -1,3 +1,5 @@
+import ImagePreview from './ImagePreview';
+
 /**
  * GalleryItem Component
  *
@@ -11,29 +13,29 @@
  * @param {function} onClick - The function to call when the image is clicked
  * @returns {React.ReactNode} - The GalleryItem component
  */
-const GalleryItem = ({ src, alt, caption, aspectClass, onClick }) => (
-  <div className="group w-full h-full flex flex-col">
-    <div
-      className={`relative w-full h-full overflow-hidden shadow-sm ${aspectClass}`}
-    >
-      <img
-        src={src}
-        loading="lazy"
-        alt={alt}
-        className="absolute inset-0 w-full h-full object-cover cursor-pointer shadow-md hover:opacity-80 transition"
-        onClick={onClick}
-      />
-    </div>
-    {caption && (
-      <div className="w-full mt-2 mb-4">
-        <div className="bg-white py-2 px-3 rounded">
-          <p className="text-sm md:text-base text-center font-semibold text-gray-900">
-            {caption}
-          </p>
+
+const GalleryItem = ({ images, index, src, alt, aspectClass }) => (
+  <ImagePreview
+    images={images}
+    startingIndex={index}
+    thumbnail={
+      <div className="group w-full h-auto flex flex-col">
+        <div
+          className={`relative w-full overflow-hidden shadow-sm ${aspectClass}`}
+        >
+          <img
+            src={src}
+            loading="lazy"
+            alt={alt}
+            className="absolute inset-0 w-full h-full object-cover cursor-pointer shadow-md hover:opacity-80 transition"
+          />
         </div>
+        <p className="mt-2 text-lg text-center text-black">
+          Lorem ipsum dolor sit amet
+        </p>
       </div>
-    )}
-  </div>
+    }
+  />
 );
 
 export default GalleryItem;
