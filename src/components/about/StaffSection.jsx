@@ -1,6 +1,6 @@
 import React from 'react';
 
-import aboutUsPageContent from '../../data/about-us-page-content.json';
+import aboutUsPageContent from '@/data/about-us-page-content.json';
 
 const StaffSection = () => {
   const staffItems = aboutUsPageContent.sections.filter(
