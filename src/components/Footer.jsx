@@ -89,30 +89,29 @@ function Footer() {
               {t('common.footer.events')}
             </Link>
           </div>
-<div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
-  <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
-  <Link to="/work">{t('common.footer.ourWork')}</Link>
-  <Link to="/contact">{t('common.footer.contactUs')}</Link>
-  {isBelowMd && (
-    <NavLink
-      to="/support"
-      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
-    >
-      {t('common.buttons.donate')}
-    </NavLink>
-  )}
-</div>
+          <div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
+            <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
+            <Link to="/work">{t('common.footer.ourWork')}</Link>
+            <Link to="/contact">{t('common.footer.contactUs')}</Link>
+            {isBelowMd && (
+              <NavLink
+                to="/support"
+                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
+              >
+                {t('common.buttons.donate')}
+              </NavLink>
+            )}
+          </div>
 
-<div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
-  {!isBelowMd && (
-    <NavLink
-      to="/support"
-      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
-    >
-      {t('common.buttons.donate')}
-    </NavLink>
-  )}
-
+          <div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
+            {!isBelowMd && (
+              <NavLink
+                to="/support"
+                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
+              >
+                {t('common.buttons.donate')}
+              </NavLink>
+            )}
 
             <p className="uppercase text-2xl font-bold">
               {t('common.footer.followUs')}
@@ -148,7 +147,10 @@ function Footer() {
           <Link to="#" className="underline hover:text-gray-300">
             {t('common.footer.privacyPolicy')}
           </Link>
-          <Link to="#" className="underline hover:text-gray-300">
+          <Link
+            to="/terms-and-conditions"
+            className="underline hover:text-gray-300"
+          >
             {t('common.footer.termsAndConditions')}
           </Link>
         </div>
