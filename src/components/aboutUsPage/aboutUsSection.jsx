@@ -32,14 +32,7 @@ const AboutUsSection = () => {
   );
 };
 
-const InfoSection = ({
-  title,
-  content,
-  image,
-  imageAlt,
-  layout,
-  showButton,
-}) => {
+const InfoSection = ({ title, content, image, imageAlt, layout }) => {
   const fallbackImage = '/assets/images/about/about-placeholder.jpg';
 
   return (
@@ -54,14 +47,6 @@ const InfoSection = ({
           <p className="mb-6 whitespace-pre-line text-center mx-auto max-w-prose">
             {content}
           </p>
-
-          {showButton && (
-            <div className="flex justify-center">
-              <button className="font-montserrat uppercase font-semibold px-6 py-2 border border-black rounded">
-                Read more
-              </button>
-            </div>
-          )}
           {image && (
             <img
               src={image || fallbackImage}
