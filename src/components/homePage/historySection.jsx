@@ -108,9 +108,7 @@ export function HistorySection() {
             <polyline points="3,15 15,3 27,15" />
           </svg>
           <div className="text-center text-[8px] font-medium">
-            BACK TO
-            <br />
-            TOP
+            BACK TO TOP
           </div>
         </div>
       </button>
