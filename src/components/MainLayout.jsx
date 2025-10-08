@@ -1,8 +1,10 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import BackToTopBtn from "../components/buttons/BackToTopButton"; 
+import React from 'react';
+
+import { Outlet } from 'react-router-dom';
+
+import BackToTopBtn from '../components/buttons/BackToTopButton';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 const MainLayout = () => {
   return (
@@ -10,7 +12,7 @@ const MainLayout = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
-          <Outlet /> 
+          <Outlet />
         </main>
         <Footer />
       </div>
