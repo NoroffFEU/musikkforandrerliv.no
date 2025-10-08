@@ -34,7 +34,7 @@ function Footer() {
   return (
     <section className="font-sans">
       {/* Subscribe section */}
-      <section className="h-[364px] w-full px-4 bg-(--color-sunset-red) flex justify-center items-center">
+      <section className="h-[364px] w-full px-4 bg-[var(--color-sunset-red)] flex justify-center items-center">
         <div className="grid gap-8 py-20 text-center text-black max-w-[480px] m-10 sm:m-0">
           <div className="flex flex-col justify-center gap-6">
             <h3 className="text-[32px] font-semibold">
@@ -54,10 +54,10 @@ function Footer() {
               value={email}
               onChange={handleEmailChange}
               placeholder="example@example.com"
-              className="h-[49px] w-full rounded-lg border-1 bg-white p-4 sm:w-[306px] md:h-[57px]"
+              className="h-[49px] w-full rounded-lg border bg-white p-4 sm:w-[306px] md:h-[57px]"
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
             />
-            <button className="cursor-pointer h-[49px] md:h-[57px] w-40 bg-white text-(--color-sunset-red) rounded-lg font-semibold text-2xl active:bg-(--color-hover-red) hover:bg-(--color-hover-red) hover:text-white focus:bg-(--color-hover-red) focus:text-white focus:border focus:border-white">
+            <button className="cursor-pointer h-[49px] md:h-[57px] w-40 bg-white text-[var(--color-sunset-red)] rounded-lg font-semibold text-2xl active:bg-[var(--color-hover-red)] hover:bg-[var(--color-hover-red)] hover:text-white focus:bg-[var(--color-hover-red)] focus:text-white focus:border focus:border-white">
               {t('common.buttons.signUp')}
             </button>
           </form>
@@ -65,14 +65,14 @@ function Footer() {
       </section>
 
       {/* Links */}
-      <section className="h-[900px] w-full px-6 md:px-4 bg-(--color-dark-green) text-white md:h-[553px] flex flex-col items-center relative">
-        <div className="w-full max-w-[1200px]  grid grid-cols-2 sm:grid-rows-1 md:grid-cols-3 gap-4 justify-center items-center mt-22 md:mt-24">
-          <img
-            src={Logo}
-            alt="Musikkforandrerliv Logo"
-            className="w-[170px] h-[170px] lg:h-[250px] lg:w-[250px] col-start-1 row-start-1"
-          />
-          <div className="text-2xl flex flex-col col-start-1 md:col-start-2 md:row-start-1 gap-8">
+      <section className="h-[900px] w-full px-6 md:px-4 bg-[var(--color-dark-green)] text-white md:h-[553px] flex flex-col items-center relative pb-12">
+      <div className="w-full max-w-[1200px] mx-auto grid grid-cols-2 sm:grid-rows-1 md:grid-cols-4 gap-x-16 gap-y-12 justify-center items-start justify-items-start md:justify-items-start mt-16 md:mt-35">
+    <img
+    src={Logo}
+    alt="Musikkforandrerliv Logo"
+    className="w-[150px] h-[150px] lg:h-[220px] lg:w-[220px] col-start-1 row-start-1 self-start mt-[-20px]"
+    />
+          <div className="text-2xl flex flex-col col-span-2 row-start-2 md:col-span-1 md:col-start-2 md:row-start-1 gap-10 md:gap-8">
             <Link to="/about" className="hover:text-gray-300 hover:underline">
               {t('common.footer.aboutUs')}
             </Link>
@@ -89,25 +89,25 @@ function Footer() {
               {t('common.footer.events')}
             </Link>
           </div>
-<div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
+          <div className="text-2xl flex flex-col col-span-2 row-start-3 md:col-span-1 md:col-start-3 md:row-start-1 gap-8">
   <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
   <Link to="/work">{t('common.footer.ourWork')}</Link>
   <Link to="/contact">{t('common.footer.contactUs')}</Link>
   {isBelowMd && (
     <NavLink
       to="/support"
-      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
+      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 mt"
     >
       {t('common.buttons.donate')}
     </NavLink>
   )}
 </div>
 
-<div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
+<div className="col-start-2 row-start-1 md:col-start-4 flex flex-col items-center md:items-center gap-6 md:gap-8">
   {!isBelowMd && (
     <NavLink
       to="/support"
-      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
+      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-3 px-8 font-bold uppercase tracking-wide text-white text-2xl rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white md:mb-4"
     >
       {t('common.buttons.donate')}
     </NavLink>
@@ -117,7 +117,7 @@ function Footer() {
             <p className="uppercase text-2xl font-bold">
               {t('common.footer.followUs')}
             </p>
-            <div className="w-fit flex gap-4 justify-center items-center">
+            <div className="w-fit flex gap-6 justify-center items-center mt-1">
               {/* Add correct 'href' when the time comes*/}
               <Button
                 href="#"
@@ -144,17 +144,17 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 bottom-12 flex flex-col md:flex-row gap-6">
-          <Link to="#" className="underline hover:text-gray-300">
-            {t('common.footer.privacyPolicy')}
-          </Link>
-          <Link to="#" className="underline hover:text-gray-300">
-            {t('common.footer.termsAndConditions')}
-          </Link>
-        </div>
-        <p className="absolute left-1/2 -translate-x-1/2 bottom-2">
-          © Musikkforandrerliv
-        </p>
+        <div className="w-full flex flex-col items-center gap-4 mt-10">
+  <div className="flex flex-row items-center justify-center gap-8">
+    <Link to="#" className="underline hover:text-gray-300">
+      {t('common.footer.privacyPolicy')}
+    </Link>
+    <Link to="#" className="underline hover:text-gray-300">
+      {t('common.footer.termsAndConditions')}
+    </Link>
+  </div>
+  <p className="text-center">© Musikkforandrerliv</p>
+</div>
       </section>
     </section>
   );
