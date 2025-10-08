@@ -50,14 +50,19 @@ function Footer() {
             className="flex flex-wrap sm:flex-nowrap gap-4 justify-center sm:mt-2"
             onSubmit={onEmailSubmit}
           >
+            <label className="sr-only" htmlFor="email">
+              Email address
+            </label>
             <input
-              type="text"
+              type="email"
               value={email}
               onChange={handleEmailChange}
               placeholder="example@example.com"
+              required
+              aria-required="true"
               className="h-[49px] sm:h-[57px] w-full sm:w-[306px] rounded-lg border-1 bg-white p-4"
-              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
             />
+
             <button className="cursor-pointer h-[49px] sm:h-[57px] w-full md:w-40 bg-white text-(--color-sunset-red) rounded-lg font-semibold text-2xl active:bg-(--color-hover-red) hover:bg-(--color-hover-red) hover:text-white focus:bg-(--color-hover-red) focus:text-white focus:border focus:border-white">
               {t('common.buttons.signUp')}
             </button>
@@ -97,7 +102,7 @@ function Footer() {
             {isBelowMd && (
               <NavLink
                 to="/support"
-                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
+                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 focus:border-black "
               >
                 {t('common.buttons.donate')}
               </NavLink>
@@ -108,7 +113,7 @@ function Footer() {
             {!isBelowMd && (
               <NavLink
                 to="/support"
-                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
+                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 focus:border-black col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
               >
                 {t('common.buttons.donate')}
               </NavLink>
