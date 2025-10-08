@@ -1,6 +1,5 @@
 import aboutUsPageContent from '../../data/about-us-page-content.json';
 
-
 //Hello Testing
 const AboutUsSection = () => {
   const contentSections = aboutUsPageContent.sections.filter(
@@ -66,6 +65,8 @@ const InfoSection = ({
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
               className="w-full object-cover mt-6 aspect-16/9"
+              fetchPriority="high"
+              decoding="async"
             />
           )}
         </div>
@@ -81,6 +82,8 @@ const InfoSection = ({
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
               className="w-full object-cover aspect-16/9"
+              loading="lazy"
+              decoding="async"
             />
           )}
         </div>

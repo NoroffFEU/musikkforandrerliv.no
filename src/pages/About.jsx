@@ -25,9 +25,12 @@ function About() {
     <ErrorBoundary>
       <div className="w-full flex justify-center items-center flex-col ">
         <img
-          className="w-full h-[300px] mt-[130px] md:w-full md:h-[601px] md:mt-[13push0px] object-cover"
-          src="assets/placeholder-images/IMG_7359.webp"
+          className="w-full h-[300px] mt-[130px] md:w-full md:h-[601px] md:mt-[130px] object-cover"
+          src="/assets/compressed-images/IMG_7359.webp"
           alt=""
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
         {/* <h1 className="text-2xl font-extrabold">About Us</h1>
         <h2>Making a difference through music</h2> */}
