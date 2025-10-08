@@ -73,6 +73,7 @@ export function HistorySection() {
 
       <button
         className={`
+          group
           fixed
           bottom-8
           right-8
@@ -86,10 +87,15 @@ export function HistorySection() {
           justify-center
           items-center
           cursor-pointer
-          transition-opacity
+          transition-all
           duration-300
           shadow-lg
           z-50
+          hover:scale-110
+          hover:bg-[#FF5A52]
+          hover:shadow-xl
+          hover:-translate-y-1
+          active:scale-95
           ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         `}
         onClick={scrollToTop}
@@ -101,7 +107,7 @@ export function HistorySection() {
             viewBox="0 0 30 18"
             xmlns="http://www.w3.org/2000/svg"
             stroke="black"
-            className="mb-1"
+            className="mb-1 transition-transform duration-200 group-hover:animate-bounce"
             strokeWidth="4"
             fill="none"
           >
