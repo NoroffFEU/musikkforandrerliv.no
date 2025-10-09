@@ -96,9 +96,18 @@ function Footer() {
             </Link>
           </div>
           <div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
-            <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
-            <Link to="/work">{t('common.footer.ourWork')}</Link>
-            <Link to="/contact">{t('common.footer.contactUs')}</Link>
+            <Link
+              to="/#gallerySection"
+              className="hover:text-gray-300 hover:underline"
+            >
+              {t('common.footer.gallery')}
+            </Link>
+            <Link to="/work" className="hover:text-gray-300 hover:underline">
+              {t('common.footer.ourWork')}
+            </Link>
+            <Link to="/contact" className="hover:text-gray-300 hover:underline">
+              {t('common.footer.contactUs')}
+            </Link>
             {isBelowMd && (
               <NavLink
                 to="/support"
