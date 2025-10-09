@@ -80,7 +80,7 @@ export function HistorySection() {
           w-[70px]
           h-[70px]
           rounded-full
-          bg-[#FF6B61]
+          bg-[#EE6352]
           text-black
           flex
           flex-col
@@ -106,7 +106,7 @@ export function HistorySection() {
             height="18"
             viewBox="0 0 30 18"
             xmlns="http://www.w3.org/2000/svg"
-            stroke="black"
+            stroke="#1C1B1F"
             className="mb-1 transition-transform duration-200 group-hover:animate-bounce"
             strokeWidth="4"
             fill="none"

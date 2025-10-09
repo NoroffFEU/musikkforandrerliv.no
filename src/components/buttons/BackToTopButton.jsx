@@ -29,7 +29,7 @@ const BackToTopButton = () => {
 
     return (
         <button
-        className={`group fixed bottom-8 right-8 w-[70px] h-[70px] rounded-full bg-[#FF6B61] text-black flex flex-col justify-center items-center cursor-pointer transition-all duration-300 shadow-lg z-50 hover:scale-110 hover:bg-[#FF5A52] hover:shadow-xl hover:-translate-y-1 active:scale-95 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`group fixed bottom-8 right-8 w-[70px] h-[70px] rounded-full bg-[#EE6352] text-black flex flex-col justify-center items-center cursor-pointer transition-all duration-300 shadow-lg z-50 hover:scale-110 hover:bg-[#FF5A52] hover:shadow-xl hover:-translate-y-1 active:scale-95 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         onClick={scrollToTop}
         >
         <div className="flex flex-col items-center justify-center">
@@ -38,7 +38,7 @@ const BackToTopButton = () => {
             height="18"
             viewBox="0 0 30 18"
             xmlns="http://www.w3.org/2000/svg"
-            stroke="black"
+            stroke="#1C1B1F"
             className="mb-1 transition-transform duration-200 group-hover:animate-bounce"
             strokeWidth="4"
             fill="none"
