@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/components/aboutUsPage/aboutUsSection.jsx
 import aboutUsPageContent from '../../data/about-us-page-content.json';
-=======
-import aboutUsPageContent from '@/data/about-us-page-content.json';
->>>>>>> develop:src/components/about/AboutUsSection.jsx
 
 //Hello Testing
 const AboutUsSection = () => {
@@ -56,13 +52,9 @@ const InfoSection = ({ title, content, image, imageAlt, layout }) => {
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
-<<<<<<< HEAD:src/components/aboutUsPage/aboutUsSection.jsx
-              className="w-full object-cover mt-6 aspect-16/9"
               fetchPriority="high"
-=======
               className="w-full object-cover mt-6 aspect-[16/9]"
-              loading="lazy"
->>>>>>> develop:src/components/about/AboutUsSection.jsx
+              loading="eager"
               decoding="async"
             />
           )}
@@ -79,11 +71,7 @@ const InfoSection = ({ title, content, image, imageAlt, layout }) => {
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
-<<<<<<< HEAD:src/components/aboutUsPage/aboutUsSection.jsx
-              className="w-full object-cover aspect-16/9"
-=======
               className="w-full object-cover aspect-[16/9]"
->>>>>>> develop:src/components/about/AboutUsSection.jsx
               loading="lazy"
               decoding="async"
             />

@@ -4,13 +4,8 @@
     {
       "id": 1,
       "title": "Let us introduce ourselves",
-<<<<<<< HEAD
-      "content": "Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care, learning supplies, clothing and shelter.",
-      "image": "/assets/compressed-images/IMG_3568.webp",
-=======
       "content": "Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\n\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care, learning supplies, clothing and shelter.",
       "image": "assets/images/compressed-images/IMG_3568.webp",
->>>>>>> develop
       "imageAlt": ""
     },
 
@@ -18,11 +13,7 @@
       "id": 2,
       "title": "A Holistic Approach to Education and Support",
       "content": "Music lessons are so much more than just learning how to play an instrument. To our students, the music school has become a place of safety, worthiness, and a notion of being cared for by teachers and other students.\nThe transforming power of education and the strong communal sense have brought many young children from the streets into classrooms, providing a safe and stimulating environment.",
-<<<<<<< HEAD
-      "image": "/assets/compressed-images/IMG_7424.webp",
-=======
       "image": "assets/images/compressed-images/IMG_7424.webp",
->>>>>>> develop
       "imageAlt": ""
     },
 
@@ -38,11 +29,7 @@
       "id": 4,
       "title": "Sustainable Growth and Community Impact",
       "content": "Providing a safe and supportive environment inspires girls and young women to lead healthier, more stable lives, sparking intergenerational transformation through education.\nSince 2021 Mozika Manova Fiainana is registered as an NGO supporting over 60 children.",
-<<<<<<< HEAD
-      "image": "/assets/compressed-images/IMG_3473.webp",
-=======
       "image": "assets/images/compressed-images/IMG_3473.webp",
->>>>>>> develop
       "imageAlt": ""
     },
 
