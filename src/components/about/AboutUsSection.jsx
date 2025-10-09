@@ -1,21 +1,15 @@
 import aboutUsPageContent from '@/data/about-us-page-content.json';
 
-
-//Hello Testing
 const AboutUsSection = () => {
+  // Only get content sections (1-6), exclude staff (7-10) and supporters (11)
   const contentSections = aboutUsPageContent.sections.filter(
-    (section) => section.title || section.supporters,
+    (section) => section.content && !section.name && !section.supporters,
   );
 
   return (
     <section id="AboutUsSection" className="w-full pt-10">
       {contentSections.map((section, index) => {
         const isFirst = index === 0;
-
-        // Check if section has standard content or is a supporters section
-        if (section.supporters) {
-          return null; // We'll render this separately in the About page
-        }
 
         return (
           <InfoSection
@@ -48,7 +42,7 @@ const InfoSection = ({
       {layout === 'intro' ? (
         <div>
           <div className="flex justify-center items-center">
-            <h1 className="font-justAnotherHand text-[50px] md:text-[110px]  mb-4 text-center">
+            <h1 className="font-justAnotherHand text-[50px] md:text-[110px] mb-4 text-center">
               {title}
             </h1>
           </div>
@@ -71,7 +65,7 @@ const InfoSection = ({
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand text-[30px]  md:text-[70px]  text-[30px]font-bold mb-4">
+          <h3 className="font-justAnotherHand text-[30px] md:text-[70px] font-bold mb-4">
             {title}
           </h3>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
