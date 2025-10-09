@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/components/aboutUsPage/aboutUsSection.jsx
 import aboutUsPageContent from '../../data/about-us-page-content.json';
+=======
+import aboutUsPageContent from '@/data/about-us-page-content.json';
+>>>>>>> develop:src/components/about/AboutUsSection.jsx
 
 //Hello Testing
 const AboutUsSection = () => {
@@ -7,7 +11,7 @@ const AboutUsSection = () => {
   );
 
   return (
-    <section id="AboutUsSection" className="w-full pt-10">
+    <section id="AboutUsSection" className="w-full pt-2">
       {contentSections.map((section, index) => {
         const isFirst = index === 0;
 
@@ -24,7 +28,6 @@ const AboutUsSection = () => {
             image={section.image}
             imageAlt={section.imageAlt}
             layout={isFirst ? 'intro' : 'standard'}
-            showButton={isFirst}
           />
         );
       })}
@@ -32,56 +35,55 @@ const AboutUsSection = () => {
   );
 };
 
-const InfoSection = ({
-  title,
-  content,
-  image,
-  imageAlt,
-  layout,
-  showButton,
-}) => {
+const InfoSection = ({ title, content, image, imageAlt, layout }) => {
   const fallbackImage = '/assets/images/about/about-placeholder.jpg';
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-12">
+    <div className="w-full max-w-5xl mx-auto px-4 pt-3 pb-12 md:py-12">
       {layout === 'intro' ? (
         <div>
           <div className="flex justify-center items-center">
-            <h1 className="font-justAnotherHand text-[50px] md:text-[110px]  mb-4 text-center">
+            <h1 className="font-justAnotherHand text-[50px] md:text-[110px] mb-4 text-center">
               {title}
             </h1>
           </div>
-          <p className="mb-6 whitespace-pre-line text-left">{content}</p>
 
-          {showButton && (
-            <div className="flex justify-center">
-              <button className="font-montserrat uppercase font-semibold px-6 py-2 border border-black rounded">
-                Read more
-              </button>
-            </div>
-          )}
+          <p className="mb-6 whitespace-pre-line text-center mx-auto max-w-prose">
+            {content}
+          </p>
+
           {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
+<<<<<<< HEAD:src/components/aboutUsPage/aboutUsSection.jsx
               className="w-full object-cover mt-6 aspect-16/9"
               fetchPriority="high"
+=======
+              className="w-full object-cover mt-6 aspect-[16/9]"
+              loading="lazy"
+>>>>>>> develop:src/components/about/AboutUsSection.jsx
               decoding="async"
             />
           )}
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand   md:text-[70px]  text-[30px]font-bold mb-4">
+          <h3 className="font-justAnotherHand text-[30px] md:text-[70px] font-bold mb-4">
             {title}
           </h3>
+
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
 
           {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
+<<<<<<< HEAD:src/components/aboutUsPage/aboutUsSection.jsx
               className="w-full object-cover aspect-16/9"
+=======
+              className="w-full object-cover aspect-[16/9]"
+>>>>>>> develop:src/components/about/AboutUsSection.jsx
               loading="lazy"
               decoding="async"
             />
