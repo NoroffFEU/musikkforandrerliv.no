@@ -24,7 +24,6 @@ const AboutUsSection = () => {
             image={section.image}
             imageAlt={section.imageAlt}
             layout={isFirst ? 'intro' : 'standard'}
-            showButton={isFirst}
           />
         );
       })}
