@@ -1,6 +1,6 @@
 import React from 'react';
 
-import aboutUsPageContent from '../../data/about-us-page-content.json';
+import aboutUsPageContent from '@/data/about-us-page-content.json';
 
 const StaffSection = () => {
   const staffItems = aboutUsPageContent.sections.filter(
@@ -22,7 +22,6 @@ const StaffSection = () => {
 
         return (
           <React.Fragment key={member.id}>
-            
             {/* mobile layout */}
             <div
               tabIndex={0}
@@ -36,7 +35,7 @@ const StaffSection = () => {
                 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5B8E7D]
   `}
             >
-              <div className="grid grid-cols-2 md:grid-cols-2 items-center justify-items-center gap-4 mt-8">
+               <div className="grid grid-cols-2 md:grid-cols-2 items-center justify-items-center gap-4 mt-8">
                 <div className="rounded-full w-32 h-32 sm:w-40 sm:h-40 overflow-hidden">
                   <img
                     src={member.image || '/assets/images/staff/placeholder.jpg'}
@@ -67,7 +66,7 @@ const StaffSection = () => {
             </div>
 
             {/* desktop layout */}
-            <div
+                <div
               className={`
     ${outerBg}
     p-6 sm:p-10 md:p-28
