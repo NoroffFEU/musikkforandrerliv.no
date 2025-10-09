@@ -1,4 +1,4 @@
-import aboutUsPageContent from '../../data/about-us-page-content.json';
+import aboutUsPageContent from '@/data/about-us-page-content.json';
 
 //Hello Testing
 const AboutUsSection = () => {
@@ -46,6 +46,14 @@ const InfoSection = ({ title, content, image, imageAlt, layout }) => {
           <p className="mb-6 whitespace-pre-line text-center mx-auto max-w-prose">
             {content}
           </p>
+
+          {showButton && (
+            <div className="flex justify-center">
+              <button className="font-montserrat uppercase font-semibold px-6 py-2 border border-black rounded">
+                Read more
+              </button>
+            </div>
+          )}
           {image && (
             <img
               src={image || fallbackImage}
@@ -56,7 +64,7 @@ const InfoSection = ({ title, content, image, imageAlt, layout }) => {
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand   md:text-[70px]  text-[30px]font-bold mb-4">
+          <h3 className="font-justAnotherHand text-[30px]  md:text-[70px]  text-[30px]font-bold mb-4">
             {title}
           </h3>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>

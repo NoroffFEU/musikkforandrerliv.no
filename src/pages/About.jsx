@@ -1,20 +1,8 @@
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
-import SupportersSection from '../components/aboutUsPage/SupportersSection.jsx';
-import AboutUsSection from '../components/aboutUsPage/aboutUsSection.jsx';
-import StaffSection from '../components/aboutUsPage/staffSection.jsx';
+import AboutUsSection from '@/components/about/AboutUsSection.jsx';
+import SupportersSection from '@/components/about/SupportersSection.jsx';
+import StaffSection from '@/components/about/StaffSection.jsx';
 import aboutUsData from '../data/about-us-page-content.json';
-
-// let us introduce ourselves
-
-// Props for about us
-
-// Support and future ambitions (can be a about prop/component)
-
-// Conclusion A model for change
-
-// Header our staff
-
-// Props for Our staff
 
 function About() {
   const supportersSection = aboutUsData.sections.find(
@@ -29,8 +17,6 @@ function About() {
           src="assets/placeholder-images/IMG_7359.webp"
           alt=""
         />
-        {/* <h1 className="text-2xl font-extrabold">About Us</h1>
-        <h2>Making a difference through music</h2> */}
         <AboutUsSection />
         {supportersSection && <SupportersSection section={supportersSection} />}
         <StaffSection />
