@@ -1,4 +1,4 @@
-import aboutUsPageContent from '../../data/about-us-page-content.json';
+import aboutUsPageContent from '@/data/about-us-page-content.json';
 
 
 //Hello Testing
