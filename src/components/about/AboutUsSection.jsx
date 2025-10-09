@@ -52,7 +52,7 @@ const InfoSection = ({
               {title}
             </h1>
           </div>
-          <p className="mb-6 whitespace-pre-line text-left">{content}</p>
+          <p className="mb-6 whitespace-pre-line text-center">{content}</p>
 
           {showButton && (
             <div className="flex justify-center">
@@ -71,7 +71,7 @@ const InfoSection = ({
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand   md:text-[70px]  text-[30px]font-bold mb-4">
+          <h3 className="font-justAnotherHand text-[30px]  md:text-[70px]  text-[30px]font-bold mb-4">
             {title}
           </h3>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
