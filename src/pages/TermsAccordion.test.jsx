@@ -1,6 +1,7 @@
+import { describe, expect, test } from '@jest/globals';
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import { TermsAccordion } from './TermsAccordion';
+import { TermsAccordion } from '../components/TermsAccordion/TermsAccordion';
 
 describe('TermsAccordion', () => {
   const title = 'Test Title';
