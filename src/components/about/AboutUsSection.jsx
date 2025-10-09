@@ -39,41 +39,40 @@ const InfoSection = ({ title, content, image, imageAlt, layout }) => {
       {layout === 'intro' ? (
         <div>
           <div className="flex justify-center items-center">
-            <h1 className="font-justAnotherHand text-[50px] md:text-[110px]  mb-4 text-center">
+            <h1 className="font-justAnotherHand text-[50px] md:text-[110px] mb-4 text-center">
               {title}
             </h1>
           </div>
+
           <p className="mb-6 whitespace-pre-line text-center mx-auto max-w-prose">
             {content}
           </p>
 
-          {showButton && (
-            <div className="flex justify-center">
-              <button className="font-montserrat uppercase font-semibold px-6 py-2 border border-black rounded">
-                Read more
-              </button>
-            </div>
-          )}
           {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
-              className="w-full object-cover mt-6 aspect-16/9"
+              className="w-full object-cover mt-6 aspect-[16/9]"
+              loading="lazy"
+              decoding="async"
             />
           )}
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand text-[30px]  md:text-[70px]  text-[30px]font-bold mb-4">
+          <h3 className="font-justAnotherHand text-[30px] md:text-[70px] font-bold mb-4">
             {title}
           </h3>
+
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
 
           {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
-              className="w-full object-cover aspect-16/9"
+              className="w-full object-cover aspect-[16/9]"
+              loading="lazy"
+              decoding="async"
             />
           )}
         </div>
