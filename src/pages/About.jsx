@@ -1,40 +1,40 @@
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
-import SupportersSection from '../components/aboutUsPage/SupportersSection.jsx';
-import AboutUsSection from '../components/aboutUsPage/aboutUsSection.jsx';
-import StaffSection from '../components/aboutUsPage/staffSection.jsx';
+import AboutUsSection from '../components/about/aboutUsSection.jsx';
+import SupportersSection from '../components/about/SupportersSection.jsx';
+import StaffSection from '../components/about/StaffSection.jsx';
 import aboutUsData from '../data/about-us-page-content.json';
 
-// let us introduce ourselves
-
-// Props for about us
-
-// Support and future ambitions (can be a about prop/component)
-
-// Conclusion A model for change
-
-// Header our staff
-
-// Props for Our staff
-
 function About() {
-  const supportersSection = aboutUsData.sections.find(
-    (section) => section.id === 11,
-  );
+  const supportersSection = aboutUsData.sections.find((section) => section.id === 11);
 
   return (
     <ErrorBoundary>
-      <div className="w-full flex justify-center items-center flex-col ">
+      <main id="main" role="main" className="w-full flex flex-col items-center">
+        <h1 className="sr-only">About Us</h1>
+
         <img
-          className="w-full h-[300px] mt-[130px] md:w-full md:h-[601px] md:mt-[13push0px] object-cover"
-          src="assets/placeholder-images/IMG_7359.webp"
-          alt=""
+          className="w-full h-[300px] mt-[130px] md:h-[601px] md:mt-[130px] object-cover"
+          src="/assets/placeholder-images/IMG_7359.webp"
+          alt="Children participating in a music activity"
         />
-        {/* <h1 className="text-2xl font-extrabold">About Us</h1>
-        <h2>Making a difference through music</h2> */}
-        <AboutUsSection />
-        {supportersSection && <SupportersSection section={supportersSection} />}
-        <StaffSection />
-      </div>
+
+        <section aria-labelledby="about-intro" className="w-full">
+          <h2 id="about-intro" className="sr-only">Introduction</h2>
+          <AboutUsSection />
+        </section>
+
+        {supportersSection && (
+          <section aria-labelledby="about-supporters" className="w-full">
+            <h2 id="about-supporters" className="sr-only">Supporters</h2>
+            <SupportersSection section={supportersSection} />
+          </section>
+        )}
+
+        <section aria-labelledby="about-staff" className="w-full">
+          <h2 id="about-staff" className="sr-only">Our Staff</h2>
+          <StaffSection />
+        </section>
+      </main>
     </ErrorBoundary>
   );
 }
