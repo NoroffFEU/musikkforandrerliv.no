@@ -8,7 +8,7 @@ import { useLightbox } from '../../hooks/useLightbox';
 
 // Temporary image imports
 const imageImports = import.meta.glob(
-  '/src/compressed-images/*.{png,jpg,jpeg,svg,webp}',
+  '/public/assets/placeholder-images/*.{jpg,jpeg,webp}',
   { eager: true },
 );
 
@@ -29,6 +29,8 @@ const ImageCarousel = () => {
   const [loadedImages, setLoadedImages] = useState(
     Array(images.length).fill(false),
   );
+
+  console.log('imageImports', images);
 
   // Use the global lightbox hook
   const { openLightbox } = useLightbox();
