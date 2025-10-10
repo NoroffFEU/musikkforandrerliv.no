@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-import altTextData from '../../../public/assets/images-gallery-alt.json';
+import altTextData from '../../data/images-gallery-alt.json';
 import useCarousel from '../../hooks/useCarousel';
 import { useLightbox } from '../../hooks/useLightbox';
 
