@@ -227,9 +227,6 @@ function Footer() {
           </div>
           <p className="text-center">© Musikkforandrerliv</p>
         </div>
-        <p className="absolute left-1/2 -translate-x-1/2 bottom-2">
-          © Musikkforandrerliv
-        </p>
       </section>
     </footer>
   );
