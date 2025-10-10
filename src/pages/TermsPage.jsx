@@ -48,6 +48,12 @@ const sections = [
   },
 ];
 
+const governingLaw = {
+  title: 'Governing Law',
+  content:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet.',
+};
+
 const lastUpdated = new Date().toLocaleDateString('en-GB', {
   day: '2-digit',
   month: '2-digit',
@@ -65,11 +71,19 @@ export const TermsPage = () => (
         accusantium eaque porro.
       </p>
     </div>
+
+    {/* Rendrer accordion-seksjonene */}
     {sections.map((section, index) => (
       <TermsAccordion key={index} title={section.title}>
         <p className="font-normal text-lg">{section.content}</p>
-        <p className="pt-4 text-md">Updated: {lastUpdated}</p>
       </TermsAccordion>
     ))}
+
+    {/* Seksjon for Governing Law */}
+    <div className="mt-10">
+      <h2 className="text-3xl font-semibold mb-2">{governingLaw.title}</h2>
+      <p className="text-lg mb-4">{governingLaw.content}</p>
+      <p className="pt-4 text-md">Updated: {lastUpdated}</p>
+    </div>
   </div>
 );
