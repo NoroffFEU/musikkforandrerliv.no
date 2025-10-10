@@ -6,7 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import { HeroSection } from '../components/homePage/heroSection';
 import WorkSection from '../components/homePage/workSection';
 import '../i18n';
-import heart from '/assets/images/svgs/heart.svg';
+
+//import heart from '/assets/images/svgs/heart.svg';
 
 // Safe lazy loader for components
 const safeLazy = (importFunc) =>

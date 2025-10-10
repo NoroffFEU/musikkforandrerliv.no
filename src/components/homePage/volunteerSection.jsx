@@ -35,7 +35,7 @@ const VolunteerSection = () => {
         </div>
         <div className="w-full md:w-1/2 md:h-full flex items-center justify-center">
           <img
-            src="../../../public/assets/placeholder-images/IMG_6437.webp"
+            src="/assets/placeholder-images/IMG_6437.webp"
             alt={t('screens.volunteer.title')}
             className="w-full aspect-[1/1] h-auto md:h-full object-cover"
           />
