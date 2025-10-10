@@ -1,4 +1,4 @@
-import aboutUsPageContent from '@/data/about-us-page-content.json';
+import aboutUsPageContent from '../../data/about-us-page-content.json';
 
 //Hello Testing
 const AboutUsSection = () => {
@@ -52,8 +52,9 @@ const InfoSection = ({ title, content, image, imageAlt, layout }) => {
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
+              fetchPriority="high"
               className="w-full object-cover mt-6 aspect-[16/9]"
-              loading="lazy"
+              loading="eager"
               decoding="async"
             />
           )}

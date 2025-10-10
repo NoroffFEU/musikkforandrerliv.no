@@ -39,6 +39,8 @@ const StaffSection = () => {
                 <div className="rounded-full w-32 h-32 sm:w-40 sm:h-40 overflow-hidden">
                   <img
                     src={member.image || '/assets/images/staff/placeholder.jpg'}
+                    loading="lazy"
+                    decoding="async"
                     alt={
                       member.imageAlt
                         ? member.imageAlt
