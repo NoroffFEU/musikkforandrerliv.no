@@ -1,10 +1,13 @@
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import BackToTopButton from '../components/buttons/BackToTop';
-import CalenderSection from '../components/homePage/calenderSection';
 import HeroBanner from '../components/ourWorkPage/HeroBanner.jsx';
 import CategorySection from '../components/ourWorkPage/categorySection';
+
+const CalenderSection = lazy(
+  () => import('../components/homePage/calenderSection'),
+);
 
 function OurWork() {
   return (

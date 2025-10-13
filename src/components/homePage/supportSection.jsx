@@ -13,7 +13,7 @@ const SupportSection = () => {
       <div className="w-full flex flex-col items-center justify-center md:flex-row gap-8 md:gap-16 lg:gap-20 xl:gap-32">
         <div className="w-full md:w-1/2 md:h-full flex items-center justify-center">
           <img
-            src="../../../public/assets/placeholder-images/IMG_6438.webp"
+            src="/assets/placeholder-images/IMG_6438.webp"
             alt={t('screens.supportUs.title')}
             className="w-full aspect-[1/1] h-auto md:h-full object-cover"
           />

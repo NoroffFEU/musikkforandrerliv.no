@@ -1,9 +1,9 @@
 import React from 'react';
 
-import aboutUsPageContent from '@/data/about-us-page-content.json';
+import staffContent from "../../data/about-us-page-content.json";
 
 const StaffSection = () => {
-  const staffItems = aboutUsPageContent.sections.filter(
+  const staffItems = staffContent.sections.filter(
     (section) => section.name,
   );
 
@@ -24,19 +24,23 @@ const StaffSection = () => {
           <React.Fragment key={member.id}>
             {/* mobile layout */}
             <div
+              tabIndex={0}
               className={`
                 ${mobileBg}
                 block lg:hidden
-                w-full
+               w-full
                 m-0
                 p-6 sm:p-10
                 rounded-none
-              `}
+                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5B8E7D]
+  `}
             >
-              <div className="grid grid-cols-2 items-center justify-items-center gap-4 mt-8">
+               <div className="grid grid-cols-2 md:grid-cols-2 items-center justify-items-center gap-4 mt-8">
                 <div className="rounded-full w-32 h-32 sm:w-40 sm:h-40 overflow-hidden">
                   <img
                     src={member.image || '/assets/images/staff/placeholder.jpg'}
+                    loading="lazy"
+                    decoding="async"
                     alt={
                       member.imageAlt
                         ? member.imageAlt
@@ -64,56 +68,55 @@ const StaffSection = () => {
             </div>
 
             {/* desktop layout */}
-            <div
+                <div
               className={`
-                ${outerBg}
-                p-6 sm:p-10 md:p-28
-                hidden lg:flex
-                justify-center
-              `}
+    ${outerBg}
+    p-6 sm:p-10 md:p-28
+    hidden lg:flex
+    justify-center
+  `}
             >
               <div
                 className={`
-                  ${innerBg}
-                  p-6 sm:p-10 md:p-[3.75rem]
-                  mx-1 max-w-[75rem]
-                  sm:rounded-tl-[150px] md:rounded-tl-[200px]
-                  grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 items-center
-                `}
+      ${innerBg}
+      p-6 sm:p-10 md:p-[3.75rem]
+      mx-1 max-w-[75rem]
+      sm:rounded-tl-[150px] md:rounded-tl-[200px]
+      grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 items-stretch
+      h-full
+    `}
               >
                 {/* left section */}
-                <div className="flex flex-col text-center items-center">
-                  <div className="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64 overflow-hidden">
+                <div className="flex flex-col items-center text-center h-full">
+                  <div className="rounded-full w-32 h-32 md:w-80 md:h-80 overflow-hidden md:-ml-28">
                     <img
                       src={
                         member.image || '/assets/images/staff/placeholder.jpg'
                       }
-                      alt={
-                        member.imageAlt
-                          ? member.imageAlt
-                          : `Portrait of ${member.name}`
-                      }
+                      alt={member.imageAlt || `Portrait of ${member.name}`}
                       className="object-cover w-full h-full rounded-full"
                     />
                   </div>
-                  <p className="hidden lg:flex md:text-3xl mt-4 font-justAnotherHand">
-                    {member.name}
-                  </p>
-                  {/* show all roles on desktop view*/}
-                  {member.roles?.map((role, i) => (
-                    <p key={i} className="text-sm">
-                      {role}
+
+                  <div className="flex flex-col items-center mt-4 space-y-1 md:-ml-32">
+                    <p className="hidden lg:flex md:text-3xl font-justAnotherHand">
+                      {member.name}
                     </p>
-                  ))}
-                  <p className="text-sm">{member.email}</p>
+                    {member.roles?.map((role, i) => (
+                      <p key={i} className="text-sm">
+                        {role}
+                      </p>
+                    ))}
+                    <p className="text-sm">{member.email}</p>
+                  </div>
                 </div>
 
-                {/*right section */}
-                <div className="text-center">
+                {/* right section */}
+                <div className="flex flex-col justify-between text-center h-full">
                   <h3 className="text-3xl md:text-7xl font-justAnotherHand">
                     {member.name}
                   </h3>
-                  <p className="mt-[1rem] text-sm md:text-lg whitespace-pre-line">
+                  <p className="mt-[1rem] text-sm md:text-lg whitespace-pre-line flex-grow">
                     {member.content}
                   </p>
                 </div>
