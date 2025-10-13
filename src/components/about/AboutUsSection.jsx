@@ -50,7 +50,10 @@ const InfoSection = ({
 
           {showButton && (
             <div className="flex justify-center">
-              <button className="font-montserrat uppercase font-semibold px-6 py-2 border border-black rounded">
+              <button
+                className="font-montserrat uppercase font-semibold px-6 py-2 border border-black rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                aria-label="Read more about Mozika Manova Fiainana"
+              >
                 Read more
               </button>
             </div>
@@ -65,9 +68,9 @@ const InfoSection = ({
         </div>
       ) : (
         <div>
-          <h3 className="font-justAnotherHand text-[30px] md:text-[70px] font-bold mb-4">
+          <h2 className="font-justAnotherHand text-[30px] md:text-[70px] font-bold mb-4">
             {title}
-          </h3>
+          </h2>
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
 
           {image && (

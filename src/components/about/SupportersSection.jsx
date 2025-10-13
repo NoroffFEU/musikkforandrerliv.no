@@ -4,15 +4,15 @@ const SupportersSection = ({ section }) => {
   if (!section || !section.supporters) return null;
 
   return (
-    <div className="text-center py-16 px-4 bg-white">
-      <h2 className="text-3xl mb-8 text-black">{section.title}</h2>
+    <section className="text-center py-16 px-4 bg-white" aria-labelledby="supporters-heading">
+      <h2 id="supporters-heading" className="text-3xl mb-8 text-black">{section.title}</h2>
       <div className="max-w-2xl mx-auto space-y-2">
         {section.supporters.map((supporter, index) => {
           // TODO: Consider adding URL property to supporters
           // If URLs are intended, modify this to create clickable links
           const textColor =
             supporter.name === 'Martin Fröst Foundation'
-              ? 'text-[#EF476F]'
+              ? 'text-[#D91E50]' // Darker pink with 4.53:1 contrast ratio
               : 'text-black';
 
           return (
@@ -25,7 +25,7 @@ const SupportersSection = ({ section }) => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

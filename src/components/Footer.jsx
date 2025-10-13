@@ -34,7 +34,7 @@ function Footer() {
   return (
     <section className="font-sans">
       {/* Subscribe section */}
-      <section className="h-[364px] w-full px-4 bg-(--color-sunset-red) flex justify-center items-center">
+      <section className="h-[364px] w-full px-4 bg-[var(--color-sunset-red)] flex justify-center items-center">
         <div className="grid gap-8 py-20 text-center text-black max-w-[480px] m-10 sm:m-0">
           <div className="flex flex-col justify-center gap-6">
             <h3 className="text-[32px] font-semibold">
@@ -49,15 +49,19 @@ function Footer() {
             className="flex flex-wrap sm:flex-nowrap gap-4 justify-center"
             onSubmit={onEmailSubmit}
           >
+            <label htmlFor="newsletter-email" className="sr-only">
+              Email address
+            </label>
             <input
-              type="text"
+              id="newsletter-email"
+              type="email"
               value={email}
               onChange={handleEmailChange}
               placeholder="example@example.com"
               className="h-[49px] w-full rounded-lg border-1 bg-white p-4 sm:w-[306px] md:h-[57px]"
               pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
             />
-            <button className="cursor-pointer h-[49px] md:h-[57px] w-40 bg-white text-(--color-sunset-red) rounded-lg font-semibold text-2xl active:bg-(--color-hover-red) hover:bg-(--color-hover-red) hover:text-white focus:bg-(--color-hover-red) focus:text-white focus:border focus:border-white">
+            <button className="cursor-pointer h-[49px] md:h-[57px] w-40 bg-white text-[var(--color-sunset-red)] rounded-lg font-semibold text-2xl active:bg-[var(--color-hover-red)] hover:bg-[var(--color-hover-red)] hover:text-white focus:bg-[var(--color-hover-red)] focus:text-white focus:border focus:border-white">
               {t('common.buttons.signUp')}
             </button>
           </form>
@@ -65,7 +69,7 @@ function Footer() {
       </section>
 
       {/* Links */}
-      <section className="h-[900px] w-full px-6 md:px-4 bg-(--color-dark-green) text-white md:h-[553px] flex flex-col items-center relative">
+      <section className="h-[900px] w-full px-6 md:px-4 bg-[var(--color-dark-green)] text-white md:h-[553px] flex flex-col items-center relative">
         <div className="w-full max-w-[1200px]  grid grid-cols-2 sm:grid-rows-1 md:grid-cols-3 gap-4 justify-center items-center mt-22 md:mt-24">
           <img
             src={Logo}
@@ -89,30 +93,29 @@ function Footer() {
               {t('common.footer.events')}
             </Link>
           </div>
-<div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
-  <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
-  <Link to="/work">{t('common.footer.ourWork')}</Link>
-  <Link to="/contact">{t('common.footer.contactUs')}</Link>
-  {isBelowMd && (
-    <NavLink
-      to="/support"
-      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
-    >
-      {t('common.buttons.donate')}
-    </NavLink>
-  )}
-</div>
+          <div className="text-2xl flex flex-col col-start-1 md:col-start-3 md:row-start-1 gap-8">
+            <Link to="/#gallerySection">{t('common.footer.gallery')}</Link>
+            <Link to="/work">{t('common.footer.ourWork')}</Link>
+            <Link to="/contact">{t('common.footer.contactUs')}</Link>
+            {isBelowMd && (
+              <NavLink
+                to="/support"
+                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2"
+              >
+                {t('common.buttons.donate')}
+              </NavLink>
+            )}
+          </div>
 
-<div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
-  {!isBelowMd && (
-    <NavLink
-      to="/support"
-      className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
-    >
-      {t('common.buttons.donate')}
-    </NavLink>
-  )}
-
+          <div className="col-start-2 md:col-start-4 row-start-1 gap-4 flex flex-col">
+            {!isBelowMd && (
+              <NavLink
+                to="/support"
+                className="bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-[12px] px-7 mr-auto font-semibold text-white text-2xl rounded-lg focus:border-2 col-start-1 md:col-start-4 md:row-start-1 md:mb-3 relative -top-3"
+              >
+                {t('common.buttons.donate')}
+              </NavLink>
+            )}
 
             <p className="uppercase text-2xl font-bold">
               {t('common.footer.followUs')}

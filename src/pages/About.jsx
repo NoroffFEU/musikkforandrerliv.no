@@ -1,7 +1,8 @@
-import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import AboutUsSection from '@/components/about/AboutUsSection.jsx';
-import SupportersSection from '@/components/about/SupportersSection.jsx';
 import StaffSection from '@/components/about/StaffSection.jsx';
+import SupportersSection from '@/components/about/SupportersSection.jsx';
+
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import aboutUsData from '../data/about-us-page-content.json';
 
 function About() {
@@ -15,7 +16,7 @@ function About() {
         <img
           className="w-full h-[300px] mt-[130px] md:w-full md:h-[601px] md:mt-[13push0px] object-cover"
           src="assets/placeholder-images/IMG_7359.webp"
-          alt=""
+          alt="Students at Mozika Manova Fiainana music school"
         />
         <AboutUsSection />
         {supportersSection && <SupportersSection section={supportersSection} />}
