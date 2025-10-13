@@ -30,8 +30,6 @@ const ImageCarousel = () => {
     Array(images.length).fill(false),
   );
 
-  console.log('imageImports', images);
-
   // Use the global lightbox hook
   const { openLightbox } = useLightbox();
 
