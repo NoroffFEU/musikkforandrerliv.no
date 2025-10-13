@@ -1,5 +1,6 @@
-import aboutUsPageContent from '@/data/about-us-page-content.json';
+import aboutUsPageContent from '../../data/about-us-page-content.json';
 
+//Hello Testing
 const AboutUsSection = () => {
   // Only get content sections (1-6), exclude staff (7-10) and supporters (11)
   const contentSections = aboutUsPageContent.sections.filter(
@@ -7,7 +8,7 @@ const AboutUsSection = () => {
   );
 
   return (
-    <section id="AboutUsSection" className="w-full pt-10">
+    <section id="AboutUsSection" className="w-full pt-2">
       {contentSections.map((section, index) => {
         const isFirst = index === 0;
 
@@ -19,7 +20,6 @@ const AboutUsSection = () => {
             image={section.image}
             imageAlt={section.imageAlt}
             layout={isFirst ? 'intro' : 'standard'}
-            showButton={isFirst}
           />
         );
       })}
@@ -27,18 +27,11 @@ const AboutUsSection = () => {
   );
 };
 
-const InfoSection = ({
-  title,
-  content,
-  image,
-  imageAlt,
-  layout,
-  showButton,
-}) => {
+const InfoSection = ({ title, content, image, imageAlt, layout }) => {
   const fallbackImage = '/assets/images/about/about-placeholder.jpg';
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-12">
+    <div className="w-full max-w-5xl mx-auto px-4 pt-3 pb-12 md:py-12">
       {layout === 'intro' ? (
         <div>
           <div className="flex justify-center items-center">
@@ -46,38 +39,37 @@ const InfoSection = ({
               {title}
             </h1>
           </div>
-          <p className="mb-6 whitespace-pre-line text-center">{content}</p>
 
-          {showButton && (
-            <div className="flex justify-center">
-              <button
-                className="font-montserrat uppercase font-semibold px-6 py-2 border border-black rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
-                aria-label="Read more about Mozika Manova Fiainana"
-              >
-                Read more
-              </button>
-            </div>
-          )}
+          <p className="mb-6 whitespace-pre-line text-center mx-auto max-w-prose">
+            {content}
+          </p>
+
           {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
-              className="w-full object-cover mt-6 aspect-16/9"
+              fetchPriority="high"
+              className="w-full object-cover mt-6 aspect-[16/9]"
+              loading="eager"
+              decoding="async"
             />
           )}
         </div>
       ) : (
         <div>
-          <h2 className="font-justAnotherHand text-[30px] md:text-[70px] font-bold mb-4">
+          <h3 className="font-justAnotherHand text-[30px] md:text-[70px] font-bold mb-4">
             {title}
-          </h2>
+          </h3>
+
           <p className="mb-6 whitespace-pre-line text-left">{content}</p>
 
           {image && (
             <img
               src={image || fallbackImage}
               alt={imageAlt || 'About section image'}
-              className="w-full object-cover aspect-16/9"
+              className="w-full object-cover aspect-[16/9]"
+              loading="lazy"
+              decoding="async"
             />
           )}
         </div>
