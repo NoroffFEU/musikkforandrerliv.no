@@ -15,9 +15,10 @@ import NotFound from '../pages/NotFound';
 import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
-import TestTranslations from '../pages/TestTranslations';
+import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
 import SupportPage from '../pages/SupportPage.jsx';
 import TermsPage from '../pages/TermsPage.jsx';
+import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -52,6 +53,7 @@ const AppRoutes = () => {
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
             <Route path="/tos" element={<TermsPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
