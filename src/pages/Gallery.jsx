@@ -11,7 +11,7 @@ const Gallery = () => {
         Gallery
       </h1>
       <ImageCarousel />
-      <p className="text-center mb-9">
+      <p className="text-center mb-8">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>

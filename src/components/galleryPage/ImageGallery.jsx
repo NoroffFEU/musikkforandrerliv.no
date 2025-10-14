@@ -1,35 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 import data from '../../data/landing-page-content.json';
-import ImagePreview from './ImagePreview';
+import GalleryItem from './GalleryItem';
 
 /**
  * ImageGallery
  */
-
-export const GalleryItem = ({ images, index, src, alt, aspectClass }) => (
-  <ImagePreview
-    images={images}
-    startingIndex={index}
-    thumbnail={
-      <div className="group w-full h-full flex flex-col">
-        <div
-          className={`relative w-full h-full overflow-hidden shadow-sm ${aspectClass}`}
-        >
-          <img
-            src={src}
-            loading="lazy"
-            alt={alt}
-            className="absolute inset-0 w-full h-full object-cover cursor-pointer shadow-md hover:opacity-80 transition"
-          />
-        </div>
-        <p className="mt-2 mb-4 text-lg text-center text-gray-600">
-          Lorem ipsum dolor sit amet
-        </p>
-      </div>
-    }
-  />
-);
 
 const ImageGallery = () => {
   const { image: galleryImages } = data.gallery;
@@ -58,7 +34,7 @@ const ImageGallery = () => {
       {/* Desktop layout */}
       <div className="hidden lg:block">
         {groups.map((group, groupIndex) => (
-          <div key={groupIndex} className="mb-16 space-y-10">
+          <div key={groupIndex} className="mb-10 space-y-10">
             <div className="grid grid-cols-12 gap-x-12 gap-y-12">
               {group.map((img, index) => {
                 const pos = index % 6;
@@ -110,12 +86,12 @@ const ImageGallery = () => {
       </div>
 
       {/* Mobile / Tablet layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:hidden">
         {displayImages.map((img, index) => {
           const isWideMobile = index % 6 === 4;
 
           return (
-            <div key={index} className={isWideMobile ? 'col-span-2' : ''}>
+            <div key={index} className={isWideMobile ? 'sm:col-span-2' : ''}>
               <GalleryItem
                 images={displayImages}
                 index={index}
