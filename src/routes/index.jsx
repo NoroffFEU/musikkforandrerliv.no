@@ -18,6 +18,7 @@ import Placeholder from '../pages/PlaceHolder';
 import TestTranslations from '../pages/TestTranslations';
 import SupportPage from '../pages/SupportPage.jsx';
 import TermsPage from '../pages/TermsPage.jsx';
+import PrivacyPage from '../pages/PrivacyPage.jsx';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -52,6 +53,7 @@ const AppRoutes = () => {
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
             <Route path="/tos" element={<TermsPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
