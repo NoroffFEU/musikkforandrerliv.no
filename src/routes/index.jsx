@@ -16,7 +16,6 @@ import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import SupportPage from '../pages/SupportPage.jsx';
-import TermsPage from '../pages/TermsPage.jsx';
 import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
@@ -51,7 +50,6 @@ const AppRoutes = () => {
             <Route path="/support" element={<SupportPage />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
-            <Route path="/terms" element={<TermsPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
