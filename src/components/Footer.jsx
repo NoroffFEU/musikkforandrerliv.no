@@ -234,7 +234,7 @@ function Footer() {
             <Link to="#" className="underline hover:text-gray-300">
               {t('common.footer.privacyPolicy') || 'Privacy Policy'}
             </Link>
-            <Link to="/terms" className="underline hover:text-gray-300">
+            <Link to="#" className="underline hover:text-gray-300">
               {t('common.footer.termsAndConditions') || 'Terms and Conditions'}
             </Link>
           </div>
