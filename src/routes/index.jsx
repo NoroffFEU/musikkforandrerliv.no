@@ -15,7 +15,13 @@ import NotFound from '../pages/NotFound';
 import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
+<<<<<<< HEAD
 import SupportPage from '../pages/SupportPage.jsx';
+=======
+import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
+import SupportPage from '../pages/SupportPage.jsx';
+import TermsPage from '../pages/TermsPage.jsx';
+>>>>>>> develop
 import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
@@ -50,6 +56,8 @@ const AppRoutes = () => {
             <Route path="/support" element={<SupportPage />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/news-post" element={<NewsPost />} />
+            <Route path="/tos" element={<TermsPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
