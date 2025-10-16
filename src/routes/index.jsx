@@ -15,13 +15,7 @@ import NotFound from '../pages/NotFound';
 import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
-<<<<<<< HEAD
 import SupportPage from '../pages/SupportPage.jsx';
-=======
-import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
-import SupportPage from '../pages/SupportPage.jsx';
-import TermsPage from '../pages/TermsPage.jsx';
->>>>>>> develop
 import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
