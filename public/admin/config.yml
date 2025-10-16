@@ -14,7 +14,7 @@ backend:
 media_folder: 'content/gallery'
 
 i18n:
-  structure: multiple_files
+  structure: single_file
   locales: [en, no, mg]
   default_locale: en
 
@@ -42,13 +42,15 @@ collections:
               label: 'Title',
               name: 'title',
               widget: 'string',
-              required: true
+              required: true,
+              i18n: true,
             }
           - {
               label: 'Description',
               name: 'description',
               widget: 'text',
-              required: true
+              required: true,
+              i18n: true,
             }
           - label: 'Contact Form Settings'
             name: 'contact_form_settings'
@@ -58,11 +60,13 @@ collections:
                   label: 'Success Message',
                   name: 'success_message',
                   widget: 'string',
+                  i18n: true,
                 }
               - {
                   label: 'Error Message',
                   name: 'error_message',
-                  widget: 'string'
+                  widget: 'string',
+                  i18n: true,
                 }
           - label: 'Contact Information'
             name: 'contact_info'
