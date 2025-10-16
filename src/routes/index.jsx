@@ -16,6 +16,7 @@ import OurWork from '../pages/OurWork';
 import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import SupportPage from '../pages/SupportPage.jsx';
+import TermsPage from '../pages/TermsPage.jsx';
 import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
