@@ -33,7 +33,7 @@ collections:
           - { label: 'Call to Action Text', name: 'cta_text', widget: 'string' }
           - { label: 'Main Content', name: 'main_content', widget: 'markdown' }
 
-      - file: 'public/locales/locales.{{locale}}.json"'
+      - file: 'content/about/about.md'
         name: 'about'
         label: 'About Us Page'
         i18n: true
