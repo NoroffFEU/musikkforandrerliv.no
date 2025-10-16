@@ -17,7 +17,6 @@ import CategorySpecific from '../pages/OurWorkSpecific.jsx';
 import Placeholder from '../pages/PlaceHolder';
 import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
 import SupportPage from '../pages/SupportPage.jsx';
-import TermsPage from '../pages/TermsPage.jsx';
 import TestTranslations from '../pages/TestTranslations';
 
 const AppRoutes = () => {
