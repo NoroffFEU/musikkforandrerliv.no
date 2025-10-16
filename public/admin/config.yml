@@ -21,6 +21,7 @@ i18n:
 collections:
   - name: 'pages'
     label: 'Pages'
+    i18n: true
     files:
       - file: 'content/home/home.md'
         name: 'home'
@@ -33,7 +34,7 @@ collections:
           - { label: 'Call to Action Text', name: 'cta_text', widget: 'string' }
           - { label: 'Main Content', name: 'main_content', widget: 'markdown' }
 
-      - file: 'content/about/about.md'
+      - file: 'public/locales/locales.{{locale}}.json"'
         name: 'about'
         label: 'About Us Page'
         i18n: true
