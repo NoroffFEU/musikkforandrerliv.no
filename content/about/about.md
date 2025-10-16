@@ -1,5 +1,5 @@
 ---
-title: test
+title: test updated
 description: test
 contact_form_settings:
   success_message: test
