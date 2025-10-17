@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import { Link, NavLink } from 'react-router-dom';
+
 import { useTranslation } from 'react-i18next';
 import { RiFacebookBoxLine, RiInstagramLine } from 'react-icons/ri';
 
-import SelectLanguageButton from './lang/select-language-button';
 import Button from './Button';
+import SelectLanguageButton from './lang/select-language-button';
 import Logo from '/assets/placeholder-images/logo.png';
 
 function Footer() {
@@ -12,7 +14,7 @@ function Footer() {
 
   const [email, setEmail] = useState('');
   const [isBelowMd, setIsBelowMd] = useState(
-    typeof window !== 'undefined' ? window.innerWidth < 768 : true
+    typeof window !== 'undefined' ? window.innerWidth < 768 : true,
   );
 
   function onEmailSubmit(e) {
@@ -62,7 +64,6 @@ function Footer() {
       {/* ───────── Footer Main ───────── */}
       <section className="w-full bg-[var(--color-dark-green)] text-white flex items-center">
         <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10 py-20 md:py-28">
-
           {/* MOBILE-ONLY: Logo + Follow/Language side-by-side */}
           <div className="md:hidden mb-10 flex items-center justify-between gap-6">
             <img
@@ -100,7 +101,7 @@ function Footer() {
 
               {/* Language — mobile only */}
               <div className="md:hidden mt-2">
-              <SelectLanguageButton className="!outline-none !border-none !shadow-none focus:!outline-none focus:!ring-0" />
+                <SelectLanguageButton className="!outline-none !border-none !shadow-none focus:!outline-none focus:!ring-0" />
               </div>
             </div>
           </div>
@@ -121,7 +122,10 @@ function Footer() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 sm:gap-x-32 text-left w-full">
                 <ul className="flex flex-col gap-8 text-xl sm:text-2xl ml-2 md:ml-0">
                   <li>
-                    <Link to="/about" className="hover:underline hover:text-gray-300">
+                    <Link
+                      to="/about"
+                      className="hover:underline hover:text-gray-300"
+                    >
                       {t('common.footer.aboutUs') || 'About Us'}
                     </Link>
                   </li>
@@ -145,17 +149,26 @@ function Footer() {
 
                 <ul className="flex flex-col gap-8 text-xl sm:text-2xl ml-2 md:ml-0">
                   <li>
-                    <Link to="/#gallerySection" className="hover:underline hover:text-gray-300">
+                    <Link
+                      to="/#gallerySection"
+                      className="hover:underline hover:text-gray-300"
+                    >
                       {t('common.footer.gallery') || 'Gallery'}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/work" className="hover:underline hover:text-gray-300">
+                    <Link
+                      to="/work"
+                      className="hover:underline hover:text-gray-300"
+                    >
                       {t('common.footer.ourWork') || 'Our work'}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/contact" className="hover:underline hover:text-gray-300">
+                    <Link
+                      to="/contact"
+                      className="hover:underline hover:text-gray-300"
+                    >
                       {t('common.footer.contactUs') || 'Contact Us'}
                     </Link>
                   </li>
@@ -197,7 +210,7 @@ function Footer() {
                   >
                     <RiInstagramLine />
                   </Button>
-                </div >
+                </div>
               </div>
             </div>
           </div>
