@@ -1,3 +1,5 @@
+import data from '@/data/privacyPolicy.json';
+
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import PrivacyPolicySection from '../components/PrivacyPolicySection/index.jsx';
 
@@ -11,20 +13,18 @@ export default function PrivacyPolicyPage() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Lorem ipsum dolor sit amet, consectetur{' '}
+            vitae erat. Lorem ipsum dolor sit amet.
           </p>
         </div>
 
         <div>
-          <PrivacyPolicySection title="Scope" />
-          <PrivacyPolicySection title="Data we collect" />
-          <PrivacyPolicySection title="Data we don't collect" />
-          <PrivacyPolicySection title="Use of information" />
-          <PrivacyPolicySection title="Data security" />
-          <PrivacyPolicySection title="Third party links" />
-          <PrivacyPolicySection title="Childrens privacy" />
-          <PrivacyPolicySection title="Changes to our privacy" />
-          <PrivacyPolicySection title="Governing law" />
+          {data.sections.map((section, index) => (
+            <PrivacyPolicySection key={index} title={section.title}>
+              <p>{section.content}</p>
+            </PrivacyPolicySection>
+          ))}
+
+          <p>Updated: {data.lastUpdated}</p>
         </div>
       </section>
     </ErrorBoundary>

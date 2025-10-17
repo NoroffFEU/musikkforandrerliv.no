@@ -1,14 +1,39 @@
-export default function PrivacyPolicySection({ title }) {
+import { useRef, useState } from 'react';
+
+export default function PrivacyPolicySection({ title, children }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const sectionId = title.toLowerCase().replace(/\s+/g, '-');
+  const toggleSection = () => setIsOpen((previous) => !previous);
+  const contentRef = useRef(null);
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleSection();
+    }
+  };
+
   return (
-    <div className="mb-4">
-      <div className="flex justify-between items-center">
+    <div className="mb-2" role="region" aria-labelledby={`${sectionId}-header`}>
+      {/* Toggle header */}
+      <button
+        id={`${sectionId}-header`}
+        onKeyDown={handleKeyDown}
+        onClick={toggleSection}
+        aria-expanded={isOpen}
+        aria-controls={`${sectionId}-content`}
+        className="flex justify-between items-center w-full"
+      >
         <h2>{title.toUpperCase()}</h2>
-        {/* Chevron toggle */}
+        {/* Toggle chevron */}
         <svg
-          className="h-4 w-4"
+          className={`h-4 w-4 transform transition-transform duration-300 ${
+            isOpen ? 'rotate-180' : ''
+          }`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"
@@ -17,15 +42,24 @@ export default function PrivacyPolicySection({ title }) {
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </div>
+      </button>
 
-      <p>
-        {/* Placeholder content */}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-        Lorem ipsum dolor sit amet.
-      </p>
+      {/* Collapsible content */}
+      <div
+        id={`${sectionId}-content`}
+        ref={contentRef}
+        role="region"
+        aria-hidden={!isOpen}
+        className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
+        style={{
+          maxHeight: isOpen
+            ? `${contentRef.current?.scrollHeight || 0}px`
+            : '0px',
+          marginTop: isOpen ? '0.5rem' : '0',
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
