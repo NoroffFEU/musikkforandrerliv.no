@@ -1,3 +1,5 @@
+local_backend: true
+
 backend:
   name: github
   repo: NoroffFEU/musikkforandrerliv.no
@@ -11,7 +13,8 @@ backend:
     uploadMedia: "Upload media file: '{{path}}'"
     deleteMedia: "Delete media file: '{{path}}'"
 
-media_folder: 'content/gallery'
+media_folder: 'public/uploads'
+public_folder: '/uploads'
 
 i18n:
   structure: single_file

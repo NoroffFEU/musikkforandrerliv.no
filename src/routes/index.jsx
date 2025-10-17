@@ -19,20 +19,20 @@ import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
 import SupportPage from '../pages/SupportPage.jsx';
 import TermsPage from '../pages/TermsPage.jsx';
 import TestTranslations from '../pages/TestTranslations';
+import AdminCMS from '../pages/AdminCMS.jsx';
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
 
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
   useEffect(() => {
+    if (isAdminRoute) return;
     setLoading(true);
-
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 200);
-
+    const timer = setTimeout(() => setLoading(false), 200);
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [location, isAdminRoute]);
 
   return (
     <ErrorBoundary>
@@ -40,6 +40,9 @@ const AppRoutes = () => {
         <LoadingSpinner />
       ) : (
         <Routes>
+
+          <Route path="/admin/*" element={<AdminCMS />} />
+
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
