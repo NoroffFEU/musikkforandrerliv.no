@@ -30,102 +30,53 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string', i18n: true }
           - { label: 'Intro', name: 'intro', widget: 'markdown', i18n: true }
+          - { label: 'Description', name: 'description', widget: 'markdown', i18n: true }
           - { label: 'Hero Image', name: 'hero_image', widget: 'image' }
-          - { label: 'Call to Action Text', name: 'cta_text', widget: 'string' }
-          - { label: 'Main Content', name: 'main_content', widget: 'markdown' }
+          - { label: 'Call to Action Text', name: 'cta_text', widget: 'string', i18n: true }
+          - { label: 'Main Content', name: 'main_content', widget: 'markdown', i18n: true }
 
-      - file: 'public/locales/locales.{{locale}}.json"'
+      - file: 'content/about/about.md'
         name: 'about'
         label: 'About Us Page'
         i18n: true
         fields:
-          - {
-              label: 'Title',
-              name: 'title',
-              widget: 'string',
-              required: true,
-              i18n: true,
-            }
-          - {
-              label: 'Description',
-              name: 'description',
-              widget: 'text',
-              required: true,
-              i18n: true,
-            }
+          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+          - { label: 'Description', name: 'description', widget: 'text', required: true, i18n: true }
           - label: 'Contact Form Settings'
             name: 'contact_form_settings'
             widget: 'object'
             fields:
-              - {
-                  label: 'Success Message',
-                  name: 'success_message',
-                  widget: 'string',
-                  i18n: true,
-                }
-              - {
-                  label: 'Error Message',
-                  name: 'error_message',
-                  widget: 'string',
-                  i18n: true,
-                }
+              - { label: 'Success Message', name: 'success_message', widget: 'string', i18n: true }
+              - { label: 'Error Message', name: 'error_message', widget: 'string', i18n: true }
           - label: 'Contact Information'
             name: 'contact_info'
             widget: 'object'
             fields:
-              - { label: 'Address', name: 'address', widget: 'text' }
-              - { label: 'Phone', name: 'phone', widget: 'number' }
+              - { label: 'Address', name: 'address', widget: 'text', i18n: true }
+              - { label: 'Phone', name: 'phone', widget: 'string', i18n: true }
 
       - file: 'content/work/work.md'
         name: 'our-work'
         label: 'Our Work Page'
         i18n: true
         fields:
-          - {
-              label: 'Title',
-              name: 'title',
-              widget: 'string',
-              required: true,
-              i18n: true,
-            }
+          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
           - { label: 'Date', name: 'date', widget: 'datetime', required: true }
-          - {
-              label: 'Featured Image',
-              name: 'featured_image',
-              widget: 'image',
-              required: false,
-            }
+          - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
           - label: 'Gallery'
             name: 'gallery'
             widget: 'list'
-            field:
-              {
-                label: 'Image',
-                name: 'image',
-                widget: 'image',
-                required: false,
-              }
-          - {
-              label: 'Description',
-              name: 'description',
-              widget: 'markdown',
-              required: true,
-            }
+            field: { label: 'Image', name: 'image', widget: 'image', required: false }
+          - { label: 'Description', name: 'description', widget: 'markdown', required: true, i18n: true }
           - label: 'Participants'
             name: 'participants'
             widget: 'list'
-            field:
-              { label: 'Name', name: 'name', widget: 'string', required: false }
-          - {
-              label: 'Results',
-              name: 'results',
-              widget: 'markdown',
-              required: false,
-            }
+            field: { label: 'Name', name: 'name', widget: 'string', required: false, i18n: true }
+          - { label: 'Results', name: 'results', widget: 'markdown', required: false, i18n: true }
 
       - file: 'content/employees/employees.md'
         name: 'employees'
-        label: 'Employees/team'
+        label: 'Employees / Team'
         i18n: true
         fields:
           - label: 'Employees'
@@ -135,118 +86,39 @@ collections:
             collapsed: true
             sortable: true
             fields:
-              - {
-                  label: 'Name',
-                  name: 'name',
-                  widget: 'string',
-                  required: true,
-                  i18n: true,
-                }
-              - {
-                  label: 'Display order',
-                  name: 'order',
-                  widget: 'number',
-                  required: false,
-                }
-              - {
-                  label: 'Image',
-                  name: 'image',
-                  widget: 'image',
-                  required: true,
-                }
-              - {
-                  label: 'Bio',
-                  name: 'bio',
-                  widget: 'markdown',
-                  required: true,
-                }
-              - {
-                  label: 'Job Title',
-                  name: 'job_title',
-                  widget: 'string',
-                  required: true,
-                }
+              - { label: 'Name', name: 'name', widget: 'string', required: true, i18n: true }
+              - { label: 'Display order', name: 'order', widget: 'number' }
+              - { label: 'Image', name: 'image', widget: 'image', required: true }
+              - { label: 'Bio', name: 'bio', widget: 'markdown', required: true, i18n: true }
+              - { label: 'Job Title', name: 'job_title', widget: 'string', required: true, i18n: true }
               - label: 'Charity Roles'
                 name: 'charity_roles'
                 widget: 'list'
-                field: { label: 'Role', name: 'role', widget: 'string' }
-                required: false
-              - {
-                  label: 'Email',
-                  name: 'email',
-                  widget: 'string',
-                  required: false,
-                }
+                field: { label: 'Role', name: 'role', widget: 'string', i18n: true }
+              - { label: 'Email', name: 'email', widget: 'string' }
 
       - file: 'content/news/news.md'
         name: 'news-and-events'
         label: 'News and Events'
         i18n: true
         fields:
-          - {
-              label: 'Title',
-              name: 'title',
-              widget: 'string',
-              required: true,
-              i18n: true,
-            }
-          - {
-              label: 'Publish date',
-              name: 'date',
-              widget: 'datetime',
-              required: true,
-            }
-          - {
-              label: 'Featured Image',
-              name: 'featured_image',
-              widget: 'image',
-              required: false,
-            }
-          - {
-              label: 'Excerpt',
-              name: 'excerpt',
-              widget: 'text',
-              required: false,
-            }
-          - {
-              label: 'Content',
-              name: 'content',
-              widget: 'markdown',
-              required: true,
-            }
+          - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+          - { label: 'Publish date', name: 'date', widget: 'datetime', required: true }
+          - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
+          - { label: 'Excerpt', name: 'excerpt', widget: 'text', i18n: true }
+          - { label: 'Content', name: 'content', widget: 'markdown', required: true, i18n: true }
           - label: 'Event Details'
             name: 'event_details'
             widget: 'object'
             fields:
-              - {
-                  label: 'Location',
-                  name: 'location',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Start Time',
-                  name: 'start_time',
-                  widget: 'datetime',
-                  required: true,
-                }
-              - {
-                  label: 'End Time',
-                  name: 'end_time',
-                  widget: 'datetime',
-                  required: true,
-                }
-              - {
-                  label: 'Organizer',
-                  name: 'organizer',
-                  widget: 'string',
-                  required: false,
-                }
+              - { label: 'Location', name: 'location', widget: 'string', required: true, i18n: true }
+              - { label: 'Start Time', name: 'start_time', widget: 'datetime', required: true }
+              - { label: 'End Time', name: 'end_time', widget: 'datetime', required: true }
+              - { label: 'Organizer', name: 'organizer', widget: 'string', i18n: true }
           - label: 'Categories'
             name: 'categories'
             widget: 'list'
-            summary: '{{fields.category}}'
-            field: { label: 'Category', name: 'category', widget: 'string' }
+            field: { label: 'Category', name: 'category', widget: 'string', i18n: true }
 
       - file: 'content/support/support.md'
         name: 'support'
@@ -255,12 +127,7 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string', i18n: true }
           - { label: 'Image', name: 'image', widget: 'image' }
-          - {
-              label: 'Description',
-              name: 'description',
-              widget: 'string',
-              i18n: true,
-            }
+          - { label: 'Description', name: 'description', widget: 'markdown', i18n: true }
 
       - file: 'content/contact/contact.md'
         name: 'contact'
@@ -272,66 +139,31 @@ collections:
             name: 'description'
             widget: 'object'
             fields:
-              - {
-                  label: 'Title',
-                  name: 'title',
-                  widget: 'string',
-                  required: true,
-                  i18n: true,
-                }
-              - {
-                  label: 'Image',
-                  name: 'image',
-                  widget: 'image',
-                  required: true,
-                }
-              - { label: 'Text', name: 'text', widget: 'text', required: true }
+              - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+              - { label: 'Image', name: 'image', widget: 'image', required: true }
+              - { label: 'Text', name: 'text', widget: 'text', required: true, i18n: true }
           - label: 'Contact Details'
             name: 'contact_details'
             widget: 'list'
             fields:
-              - {
-                  label: 'Role',
-                  name: 'role',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Name',
-                  name: 'name',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Email',
-                  name: 'email',
-                  widget: 'string',
-                  required: true,
-                }
+              - { label: 'Role', name: 'role', widget: 'string', required: true, i18n: true }
+              - { label: 'Name', name: 'name', widget: 'string', required: true, i18n: true }
+              - { label: 'Email', name: 'email', widget: 'string', required: true }
               - { label: 'Phone', name: 'phone', widget: 'string' }
-              - { label: 'Address', name: 'address', widget: 'text' }
+              - { label: 'Address', name: 'address', widget: 'text', i18n: true }
           - label: 'Social Media'
             name: 'social_media'
             widget: 'list'
             fields:
-              - { label: 'Platform', name: 'platform', widget: 'string' }
+              - { label: 'Platform', name: 'platform', widget: 'string', i18n: true }
               - { label: 'URL', name: 'url', widget: 'string' }
               - { label: 'Icon', name: 'icon', widget: 'image' }
           - label: 'Contact Form Settings'
             name: 'contact_form'
             widget: 'object'
             fields:
-              - {
-                  label: 'Enable Form',
-                  name: 'enable',
-                  widget: 'boolean',
-                  default: true,
-                }
-              - {
-                  label: 'Success Message',
-                  name: 'success_message',
-                  widget: 'text',
-                }
+              - { label: 'Enable Form', name: 'enable', widget: 'boolean', default: true }
+              - { label: 'Success Message', name: 'success_message', widget: 'text', i18n: true }
 
   - label: 'Blog'
     name: 'blog'
@@ -340,34 +172,13 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     i18n: true
     fields:
-      - {
-          label: 'Title',
-          name: 'title',
-          widget: 'string',
-          required: true,
-          i18n: true,
-        }
-      - {
-          label: 'Publish date',
-          name: 'date',
-          widget: 'datetime',
-          required: true,
-        }
-      - { label: 'Author', name: 'author', widget: 'string', required: true }
-      - {
-          label: 'Featured Image',
-          name: 'featured_image',
-          widget: 'image',
-          required: false,
-        }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'text', required: false }
-      - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          required: true,
-        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
+      - { label: 'Publish date', name: 'date', widget: 'datetime', required: true }
+      - { label: 'Author', name: 'author', widget: 'string', required: true, i18n: true }
+      - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'text', i18n: true }
+      - { label: 'Content', name: 'content', widget: 'markdown', required: true, i18n: true }
       - label: 'Tags'
         name: 'tags'
         widget: 'list'
-        field: { name: 'tag', widget: 'string' }
+        field: { name: 'tag', widget: 'string', i18n: true }
