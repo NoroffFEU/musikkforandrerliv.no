@@ -22,7 +22,7 @@ export default function PrivacyPolicySection({ title, children }) {
         onClick={toggleSection}
         aria-expanded={isOpen}
         aria-controls={`${sectionId}-content`}
-        className="flex justify-between items-center w-full"
+        className="w-full text-left px-4 py-3 flex gap-2 justify-between items-center uppercase font-semibold text-3xl"
       >
         <h2>{title.toUpperCase()}</h2>
         {/* Toggle chevron */}
@@ -50,7 +50,7 @@ export default function PrivacyPolicySection({ title, children }) {
         ref={contentRef}
         role="region"
         aria-hidden={!isOpen}
-        className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
+        className="overflow-hidden transition-[max-height] duration-300 ease-in-out text-center"
         style={{
           maxHeight: isOpen
             ? `${contentRef.current?.scrollHeight || 0}px`
