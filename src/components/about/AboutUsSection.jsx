@@ -2,19 +2,15 @@ import aboutUsPageContent from '../../data/about-us-page-content.json';
 
 //Hello Testing
 const AboutUsSection = () => {
+  // Only get content sections (1-6), exclude staff (7-10) and supporters (11)
   const contentSections = aboutUsPageContent.sections.filter(
-    (section) => section.title || section.supporters,
+    (section) => section.content && !section.name && !section.supporters,
   );
 
   return (
     <section id="AboutUsSection" className="w-full pt-2">
       {contentSections.map((section, index) => {
         const isFirst = index === 0;
-
-        // Check if section has standard content or is a supporters section
-        if (section.supporters) {
-          return null; // We'll render this separately in the About page
-        }
 
         return (
           <InfoSection
