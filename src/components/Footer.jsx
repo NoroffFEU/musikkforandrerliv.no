@@ -38,6 +38,7 @@ function Footer() {
     setLoading(true);
 
     try {
+        // ===== Back-end function needed for API call =====
       const res = await fetch('/.netlify/functions/newsletter', {
         method: 'POST',
         headers: {
