@@ -107,7 +107,6 @@ function Footer() {
 
   return (
     <footer className="font-sans">
-      {/* ───────── Newsletter (validering + proff loading) ───────── */}
       <section className="w-full bg-[var(--color-sunset-red)] px-6 py-16 flex flex-col items-center justify-center text-center text-black">
         <div className="max-w-[720px] w-full grid gap-6">
           <h3 className="text-[32px] font-semibold">
@@ -124,7 +123,6 @@ function Footer() {
             className="mt-4 flex flex-col sm:flex-row items-stretch justify-center gap-4"
             noValidate
           >
-            {/* Input – nøytral kant, fokusring matcher designet */}
             <input
               type="email"
               inputMode="email"
@@ -148,7 +146,6 @@ function Footer() {
               aria-describedby="newsletter-feedback"
             />
 
-            {/* Knapp – original stil + liten spinner når loading */}
             <button
               type="submit"
               disabled={loading}
