@@ -1,3 +1,4 @@
+local_backend: true
 
 backend:
   name: github
