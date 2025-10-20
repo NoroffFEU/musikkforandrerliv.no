@@ -41,7 +41,8 @@ const AppRoutes = () => {
       ) : (
         <Routes>
 
-          <Route path="/admin/*" element={<AdminCMS />} />
+        
+          <Route path="/admin/" element={<AdminCMS />} />
 
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<Home />} />
