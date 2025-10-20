@@ -25,7 +25,7 @@ export default function AdminCMS() {
         const mod = await import("decap-cms-app"); 
         const CMS = mod.default || mod;
 
-        CMS.init({ load_config_file: true });
+        CMS.init();
       } catch (err) {
         console.error("Failed to boot Decap CMS:", err);
       }
