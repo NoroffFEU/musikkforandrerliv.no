@@ -1,11 +1,135 @@
+import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
+import ContactMission from '../components/contact/ContactMission.jsx';
+import ContactForm from '../components/contact/ContactForm.jsx';
+import ContactInfo from '../components/contact/ContactInfo.jsx';
+import { ContactNotifications } from '../components/contact/ContactMessage.jsx';
+import BackToTopButton from '../components/buttons/BackToTopButton.jsx';
 
+/**
+ * Contact Page Component
+ * 
+ * Main contact page that combines mission section, contact form, and contact information.
+ * Handles form submissions and notifications. Prepared for Mailchimp integration.
+ * 
+ * @component
+ * @returns {JSX.Element} Complete contact page with form and information
+ */
 function Contact() {
+  const [notifications, setNotifications] = useState(null);
+  
+  /**
+   * Handle contact form submission
+   * This is where your partner will integrate the Mailchimp API
+   * 
+   * @param {Object} formData - Form data including name, email, subject, message, gdprConsent
+   */
+  const handleFormSubmit = async (formData) => {
+    // Show loading state
+    setNotifications({
+      loading: 'Sending your message...'
+    });
+    
+    try {
+      // TODO: Your partner will implement Mailchimp API integration here
+      // Example API call structure:
+      /*
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      
+      const result = await response.json();
+      */
+      
+      // Simulate API call for now (remove this when API is implemented)
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Success notification
+      setNotifications({
+        success: 'Your message has been sent successfully! We will get back to you soon.'
+      });
+      
+    } catch (error) {
+      console.error('Contact form submission error:', error);
+      
+      // Error notification
+      setNotifications({
+        error: 'There was an error sending your message. Please try again or contact us directly.'
+      });
+    }
+  };
+  
+  /**
+   * Clear all notifications
+   */
+  const clearNotifications = () => {
+    setNotifications(null);
+  };
+  
   return (
     <ErrorBoundary>
-      <div className="h-screen w-full flex justify-center items-center flex-col">
-        <h1 className="text-2xl font-extrabold">Contact</h1>
-        <p>Get in touch with us to learn more about how music changes lives.</p>
+      <div className="min-h-screen bg-gray-50">
+        {/* Page Title */}
+        <div className="bg-white py-16">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-6xl font-justAnotherHand mb-4">
+              Contact Us
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get in touch with us to learn more about how music changes lives. 
+              We'd love to hear from you and answer any questions you may have.
+            </p>
+          </div>
+        </div>
+        
+        {/* Mission Section */}
+        <ContactMission />
+        
+        {/* Contact Form and Info Section - Single Green Background */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="bg-[#B2CAC2] rounded-lg p-8">
+              {/* Mobile Layout */}
+              <div className="lg:hidden space-y-8">
+                <ContactForm onSubmit={handleFormSubmit} />
+                <ContactInfo />
+              </div>
+              
+              {/* Desktop Layout with Divider */}
+              <div className="hidden lg:flex lg:relative">
+                {/* Contact Information */}
+                <div className="flex-1 pr-6">
+                  <ContactInfo />
+                </div>
+                
+                {/* Vertical Divider */}
+                <div className="bg-black absolute left-1/2 transform -translate-x-1/2" style={{top: '80px', bottom: '200px', width: '0.1px'}}></div>
+                
+                {/* Contact Form */}
+                <div className="flex-1 pl-6">
+                  <ContactForm onSubmit={handleFormSubmit} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Notifications */}
+        <ContactNotifications 
+          notifications={notifications}
+          clearNotifications={clearNotifications}
+        />
+        
+        {/* Back to Top Button */}
+        <BackToTopButton />
       </div>
     </ErrorBoundary>
   );
