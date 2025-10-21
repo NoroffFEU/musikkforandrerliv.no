@@ -14,16 +14,15 @@ backend:
 media_folder: 'content/gallery'
 
 i18n:
-  structure: multiple_files
+  structure: single_file
   locales: [en, no, mg]
   default_locale: en
-
 collections:
   - name: 'pages'
     label: 'Pages'
     i18n: true
     files:
-      - file: 'public/contents/locales.{{locale}}.json'
+      - file: 'public/home.json'
         name: 'home'
         label: 'Home Page'
         i18n: true
@@ -35,7 +34,7 @@ collections:
           - { label: 'Call to Action Text', name: 'cta_text', widget: 'string', i18n: true, required: false }
           - { label: 'Main Content', name: 'main_content', widget: 'markdown', i18n: true, required: false }
 
-      - file: 'content/about/about.md'
+      - file: 'public/about.json'
         name: 'about'
         label: 'About Us Page'
         i18n: true
@@ -55,7 +54,7 @@ collections:
               - { label: 'Address', name: 'address', widget: 'text', i18n: true }
               - { label: 'Phone', name: 'phone', widget: 'string', i18n: true }
 
-      - file: 'content/work/work.md'
+      - file: 'public/work.json'
         name: 'our-work'
         label: 'Our Work Page'
         i18n: true
@@ -74,7 +73,7 @@ collections:
             field: { label: 'Name', name: 'name', widget: 'string', required: false, i18n: true }
           - { label: 'Results', name: 'results', widget: 'markdown', required: false, i18n: true }
 
-      - file: 'content/employees/employees.md'
+      - file: 'public/employees.json'
         name: 'employees'
         label: 'Employees / Team'
         i18n: true
@@ -97,7 +96,7 @@ collections:
                 field: { label: 'Role', name: 'role', widget: 'string', i18n: true }
               - { label: 'Email', name: 'email', widget: 'string' }
 
-      - file: 'content/news/news.md'
+      - file: 'public/news.json'
         name: 'news-and-events'
         label: 'News and Events'
         i18n: true
@@ -120,7 +119,7 @@ collections:
             widget: 'list'
             field: { label: 'Category', name: 'category', widget: 'string', i18n: true }
 
-      - file: 'content/support/support.md'
+      - file: 'publicsupport.json'
         name: 'support'
         label: 'Support Us'
         i18n: true
@@ -129,7 +128,7 @@ collections:
           - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Description', name: 'description', widget: 'markdown', i18n: true }
 
-      - file: 'content/contact/contact.md'
+      - file: 'public/contact.json'
         name: 'contact'
         label: 'Contact Page'
         i18n: true
@@ -167,7 +166,7 @@ collections:
 
   - label: 'Blog'
     name: 'blog'
-    folder: 'content/blog'
+    folder: 'public/blog.json'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     i18n: true

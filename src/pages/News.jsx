@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import locales from '../../public/contents/locales.en.json';
+import locales from '../../public/locales/locales.en.json';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import LatestNews from '../components/LatestNews.jsx';
 import useLatestPosts from '../data/getLatestNews.js';

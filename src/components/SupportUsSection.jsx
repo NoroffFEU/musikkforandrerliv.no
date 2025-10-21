@@ -1,4 +1,4 @@
-import locales from '../../public/contents/locales.en.json';
+import locales from '../../public/locales/locales.en.json';
 import ReusableButton from './buttons/reusableButton';
 
 const SupportUsSection = () => {
