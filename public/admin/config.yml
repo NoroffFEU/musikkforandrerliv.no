@@ -14,7 +14,7 @@ backend:
 media_folder: 'content/gallery'
 
 i18n:
-  structure: single_file
+  structure: multiple_files
   locales: [en, no, mg]
   default_locale: en
 
@@ -23,7 +23,7 @@ collections:
     label: 'Pages'
     i18n: true
     files:
-      - file: 'public/locales/locales.{{locale}}.json'
+      - file: 'public/contents/locales.{{locale}}.json'
         name: 'home'
         label: 'Home Page'
         i18n: true
