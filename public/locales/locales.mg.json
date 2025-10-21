@@ -1,0 +1,20 @@
+{
+  "home": {
+    "title": "Home page malagasy",
+    "intro": "intro",
+    "hero_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png"
+  },
+  "news-and-events": {
+    "title": "Testing",
+    "date": "2025-10-21T15:34:00.000+01:00",
+    "featured_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png",
+    "excerpt": "Testing",
+    "content": "This testing is tricky",
+    "event_details": {
+      "location": "Nigeroa",
+      "start_time": "2025-10-21T15:34:00.000+01:00",
+      "end_time": "2025-10-21T15:34:00.000+01:00",
+      "organizer": "PGR"
+    }
+  }
+}
