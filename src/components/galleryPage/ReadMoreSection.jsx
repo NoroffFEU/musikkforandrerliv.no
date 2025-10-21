@@ -3,10 +3,10 @@ import Button from '../Button';
 const ReadMoreSection = () => {
   return (
     <section className="mt-[67px] -mb-[19px] lg:mb-[117px] ">
-      <h2 className="md:text-4xl text-[20px] font-semibold [font-family:var(--freeman)] text-center mb-[43px]">
+      <h2 className="md:text-4xl text-[20px] font-semibold text-center mb-[43px]">
         READ MORE
       </h2>
-      <div className="px-[53px]">
+      <div className="px-[37px]">
         <div className="flex flex-col md:flex-row gap-[32px] justify-center items-center md:items-stretch">
           <div
             className="
@@ -53,7 +53,7 @@ const ReadMoreSection = () => {
             className="
     -mt-[32px] md:hidden 
     h-[80px] 
-    text-[20px] font-semibold [font-family:var(--freeman)]
+    text-[20px] font-semibold
     flex items-center justify-between
     px-6 py-4 
     w-full max-w-[324px] mx-auto
@@ -114,7 +114,7 @@ const ReadMoreSection = () => {
             className="
     -mt-[32px] md:hidden 
     h-[80px] 
-    text-[20px] font-semibold [font-family:var(--freeman)]
+    text-[20px] font-semibold
     flex items-center justify-between
     px-6 py-4 
     w-full max-w-[324px] mx-auto
