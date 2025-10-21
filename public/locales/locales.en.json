@@ -1,0 +1,20 @@
+{
+  "home": {
+    "title": "Homepage for english",
+    "intro": "Intro",
+    "hero_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png"
+  },
+  "news-and-events": {
+    "title": "Testing decap cms with i18n",
+    "date": "2025-10-21T15:32:00.000+01:00",
+    "featured_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png",
+    "excerpt": "Testing",
+    "content": "The testing is tricky somehow",
+    "event_details": {
+      "location": "Nigeria",
+      "start_time": "2025-10-21T15:33:00.000+01:00",
+      "end_time": "2025-10-21T15:33:00.000+01:00",
+      "organizer": "PGR"
+    }
+  }
+}
