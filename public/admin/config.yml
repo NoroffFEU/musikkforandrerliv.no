@@ -23,17 +23,17 @@ collections:
     label: 'Pages'
     i18n: true
     files:
-      - file: 'content/home/home.md'
+      - file: 'public/locales/locales.{{locale}}.json'
         name: 'home'
         label: 'Home Page'
         i18n: true
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', i18n: true }
-          - { label: 'Intro', name: 'intro', widget: 'markdown', i18n: true }
-          - { label: 'Description', name: 'description', widget: 'markdown', i18n: true }
+          - { label: 'Title', name: 'title', widget: 'string', i18n: true, required: false }
+          - { label: 'Intro', name: 'intro', widget: 'markdown', i18n: true, required: false }
+          - { label: 'Description', name: 'description', widget: 'markdown', i18n: true, required: false }
           - { label: 'Hero Image', name: 'hero_image', widget: 'image' }
-          - { label: 'Call to Action Text', name: 'cta_text', widget: 'string', i18n: true }
-          - { label: 'Main Content', name: 'main_content', widget: 'markdown', i18n: true }
+          - { label: 'Call to Action Text', name: 'cta_text', widget: 'string', i18n: true, required: false }
+          - { label: 'Main Content', name: 'main_content', widget: 'markdown', i18n: true, required: false }
 
       - file: 'content/about/about.md'
         name: 'about'
