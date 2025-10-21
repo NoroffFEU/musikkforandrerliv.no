@@ -77,19 +77,19 @@ collections:
               i18n: true,
               widget: 'object',
               fields: [
-                { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true },
-                { label: 'Publish date', name: 'date', widget: 'datetime', required: true },
+                { label: 'Title', name: 'title', widget: 'string', required: false, i18n: true },
+                { label: 'Publish date', name: 'date', widget: 'datetime', required: false },
                 { label: 'Featured Image', name: 'featured_image', widget: 'image' },
                 { label: 'Excerpt', name: 'excerpt', widget: 'text', i18n: true },
-                { label: 'Content', name: 'content', widget: 'markdown', required: true, i18n: true },
+                { label: 'Content', name: 'content', widget: 'markdown', required: false, i18n: true },
                 {
                   label: 'Event Details',
                   name: 'event_details',
                   widget: 'object',
                   fields: [
-                    { label: 'Location', name: 'location', widget: 'string', required: true, i18n: true },
-                    { label: 'Start Time', name: 'start_time', widget: 'datetime', required: true },
-                    { label: 'End Time', name: 'end_time', widget: 'datetime', required: true },
+                    { label: 'Location', name: 'location', widget: 'string', required: false, i18n: true },
+                    { label: 'Start Time', name: 'start_time', widget: 'datetime', required: false },
+                    { label: 'End Time', name: 'end_time', widget: 'datetime', required: false },
                     { label: 'Organizer', name: 'organizer', widget: 'string', i18n: true }
                   ]
                 },
@@ -231,19 +231,19 @@ collections:
               i18n: true,
               widget: 'object',
               fields: [
-                { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true },
-                { label: 'Publish date', name: 'date', widget: 'datetime', required: true },
+                { label: 'Title', name: 'title', widget: 'string', required: false, i18n: true },
+                { label: 'Publish date', name: 'date', widget: 'datetime', required: false },
                 { label: 'Featured Image', name: 'featured_image', widget: 'image' },
                 { label: 'Excerpt', name: 'excerpt', widget: 'text', i18n: true },
-                { label: 'Content', name: 'content', widget: 'markdown', required: true, i18n: true },
+                { label: 'Content', name: 'content', widget: 'markdown', required: false, i18n: true },
                 {
                   label: 'Event Details',
                   name: 'event_details',
                   widget: 'object',
                   fields: [
-                    { label: 'Location', name: 'location', widget: 'string', required: true, i18n: true },
-                    { label: 'Start Time', name: 'start_time', widget: 'datetime', required: true },
-                    { label: 'End Time', name: 'end_time', widget: 'datetime', required: true },
+                    { label: 'Location', name: 'location', widget: 'string', required: false, i18n: true },
+                    { label: 'Start Time', name: 'start_time', widget: 'datetime', required: false },
+                    { label: 'End Time', name: 'end_time', widget: 'datetime', required: false },
                     { label: 'Organizer', name: 'organizer', widget: 'string', i18n: true }
                   ]
                 },
@@ -331,7 +331,7 @@ collections:
                 { label: 'Tags', name: 'tags', widget: 'list', field: { name: 'tag', widget: 'string', required: false }, required: false }
               ] 
             }
-      - label: 'Norwegian'
+      - label: 'Norsk'
         name: 'no'
         file: 'public/locales/locales.no.json'
         fields:
@@ -385,19 +385,19 @@ collections:
               i18n: true,
               widget: 'object',
               fields: [
-                { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true },
-                { label: 'Publish date', name: 'date', widget: 'datetime', required: true },
+                { label: 'Title', name: 'title', widget: 'string', required: false, i18n: true },
+                { label: 'Publish date', name: 'date', widget: 'datetime', required: false },
                 { label: 'Featured Image', name: 'featured_image', widget: 'image' },
                 { label: 'Excerpt', name: 'excerpt', widget: 'text', i18n: true },
-                { label: 'Content', name: 'content', widget: 'markdown', required: true, i18n: true },
+                { label: 'Content', name: 'content', widget: 'markdown', required: false, i18n: true },
                 {
                   label: 'Event Details',
                   name: 'event_details',
                   widget: 'object',
                   fields: [
-                    { label: 'Location', name: 'location', widget: 'string', required: true, i18n: true },
-                    { label: 'Start Time', name: 'start_time', widget: 'datetime', required: true },
-                    { label: 'End Time', name: 'end_time', widget: 'datetime', required: true },
+                    { label: 'Location', name: 'location', widget: 'string', required: false, i18n: true },
+                    { label: 'Start Time', name: 'start_time', widget: 'datetime', required: false },
+                    { label: 'End Time', name: 'end_time', widget: 'datetime', required: false },
                     { label: 'Organizer', name: 'organizer', widget: 'string', i18n: true }
                   ]
                 },
