@@ -275,6 +275,7 @@ function Navbar() {
             onClick={toggleMenu}
             className="md:hidden p-2 text-[#000000] ml-auto"
             aria-expanded={isMenuOpen}
+            aria-label="Toggle navigation menu"
           >
             <svg
               className="h-6 w-6"

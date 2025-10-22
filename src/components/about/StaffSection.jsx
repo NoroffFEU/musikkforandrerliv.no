@@ -2,6 +2,8 @@ import React from 'react';
 
 import staffContent from "../../data/about-us-page-content.json";
 
+import React from 'react';
+
 const StaffSection = () => {
   const staffItems = staffContent.sections.filter(
     (section) => section.name,
@@ -51,9 +53,9 @@ const StaffSection = () => {
                 </div>
 
                 <div className="text-center">
-                  <p className="text-3xl mt-4 font-justAnotherHand">
+                  <h3 className="text-3xl mt-4 font-justAnotherHand">
                     {member.name}
-                  </p>
+                  </h3>
                   {/* on mobile - only display first / main role*/}
                   {member.roles?.[0] && (
                     <p className="text-sm">{member.roles[0]}</p>

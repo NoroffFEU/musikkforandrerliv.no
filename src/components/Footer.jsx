@@ -43,6 +43,9 @@ function Footer() {
             onSubmit={onEmailSubmit}
             className="mt-4 flex flex-col sm:flex-row items-stretch justify-center gap-4"
           >
+            <label htmlFor="newsletter-email" className="sr-only">
+              Email address
+            </label>
             <input
               type="email"
               value={email}
