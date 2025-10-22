@@ -15,7 +15,7 @@ i18n
       escapeValue: false, // React already escapes values
     },
     backend: {
-      loadPath: '/contents/locales.{{lng}}.json', // Path to your translation files
+      loadPath: '/locales/locales.{{lng}}.json', // Path to your translation files
     },
   });
 
