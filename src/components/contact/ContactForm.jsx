@@ -1,12 +1,13 @@
 import { useState } from 'react';
+
 import { useTranslation } from 'react-i18next';
 
 /**
  * ContactForm Component
- * 
+ *
  * A comprehensive contact form with validation, accessibility features, and GDPR compliance.
  * Handles form state, validation, and prepares data for API submission.
- * 
+ *
  * @component
  * @param {Object} props
  * @param {Function} props.onSubmit - Callback function for form submission
@@ -14,76 +15,82 @@ import { useTranslation } from 'react-i18next';
  */
 const ContactForm = ({ onSubmit }) => {
   const { t } = useTranslation();
-  
+
   // Form state
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
-  
+
   // Validation state
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [gdprConsent, setGdprConsent] = useState(false);
-  
+
   // Validation functions
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-  
+
   const validateField = (name, value) => {
     switch (name) {
       case 'name':
-        return value.trim().length >= 2 ? '' : 'Name must be at least 2 characters long';
+        return value.trim().length >= 2
+          ? ''
+          : 'Name must be at least 2 characters long';
       case 'email':
         return validateEmail(value) ? '' : 'Please enter a valid email address';
       case 'subject':
-        return value.trim().length >= 3 ? '' : 'Subject must be at least 3 characters long';
+        return value.trim().length >= 3
+          ? ''
+          : 'Subject must be at least 3 characters long';
       case 'message':
-        return value.trim().length >= 10 ? '' : 'Message must be at least 10 characters long';
+        return value.trim().length >= 10
+          ? ''
+          : 'Message must be at least 10 characters long';
       default:
         return '';
     }
   };
-  
+
   // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
+
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: '',
       }));
     }
   };
-  
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Validate all fields
     const newErrors = {};
-    Object.keys(formData).forEach(key => {
+    Object.keys(formData).forEach((key) => {
       const error = validateField(key, formData[key]);
       if (error) newErrors[key] = error;
     });
-    
+
     // Check GDPR consent
     if (!gdprConsent) {
       newErrors.gdpr = 'You must agree to the privacy policy to continue';
     }
-    
+
     setErrors(newErrors);
-    
+
     // If no errors, submit form
     if (Object.keys(newErrors).length === 0) {
       setIsSubmitting(true);
@@ -92,37 +99,41 @@ const ContactForm = ({ onSubmit }) => {
         const submissionData = {
           ...formData,
           gdprConsent,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         };
-        
+
         await onSubmit(submissionData);
-        
+
         // Reset form on successful submission
         setFormData({
           name: '',
           email: '',
           subject: '',
-          message: ''
+          message: '',
         });
         setGdprConsent(false);
       } catch (error) {
         console.error('Form submission error:', error);
-        setErrors({ submit: 'There was an error sending your message. Please try again.' });
+        setErrors({
+          submit: 'There was an error sending your message. Please try again.',
+        });
       } finally {
         setIsSubmitting(false);
       }
     }
   };
-  
+
   return (
     <div className="p-6 h-fit">
-      <h2 className="text-2xl font-bold mb-6 text-left text-gray-800">Contact form</h2>
-      
+      <h2 className="text-2xl font-bold mb-6 text-left text-gray-800">
+        Contact form
+      </h2>
+
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name Field */}
         <div>
-          <label 
-            htmlFor="name" 
+          <label
+            htmlFor="name"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Your name
@@ -141,16 +152,20 @@ const ContactForm = ({ onSubmit }) => {
             required
           />
           {errors.name && (
-            <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">
+            <p
+              id="name-error"
+              className="mt-1 text-sm text-red-600"
+              role="alert"
+            >
               {errors.name}
             </p>
           )}
         </div>
-        
+
         {/* Email Field */}
         <div>
-          <label 
-            htmlFor="email" 
+          <label
+            htmlFor="email"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             E-mail
@@ -169,16 +184,20 @@ const ContactForm = ({ onSubmit }) => {
             required
           />
           {errors.email && (
-            <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
+            <p
+              id="email-error"
+              className="mt-1 text-sm text-red-600"
+              role="alert"
+            >
               {errors.email}
             </p>
           )}
         </div>
-        
+
         {/* Subject Field */}
         <div>
-          <label 
-            htmlFor="subject" 
+          <label
+            htmlFor="subject"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Subject
@@ -197,16 +216,20 @@ const ContactForm = ({ onSubmit }) => {
             required
           />
           {errors.subject && (
-            <p id="subject-error" className="mt-1 text-sm text-red-600" role="alert">
+            <p
+              id="subject-error"
+              className="mt-1 text-sm text-red-600"
+              role="alert"
+            >
               {errors.subject}
             </p>
           )}
         </div>
-        
+
         {/* Message Field */}
         <div>
-          <label 
-            htmlFor="message" 
+          <label
+            htmlFor="message"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Your message
@@ -225,19 +248,45 @@ const ContactForm = ({ onSubmit }) => {
             required
           />
           {errors.message && (
-            <p id="message-error" className="mt-1 text-sm text-red-600" role="alert">
+            <p
+              id="message-error"
+              className="mt-1 text-sm text-red-600"
+              role="alert"
+            >
               {errors.message}
             </p>
           )}
         </div>
-        
+
+        {/* GDPR Consent */}
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            id="gdprConsent"
+            checked={gdprConsent}
+            onChange={(e) => setGdprConsent(e.target.checked)}
+            className="mr-2"
+          />
+          <label htmlFor="gdprConsent" className="text-sm text-gray-700">
+            I agree to the privacy policy
+          </label>
+        </div>
+        {errors.gdpr && (
+          <p className="mt-1 text-sm text-red-600" role="alert">
+            {errors.gdpr}
+          </p>
+        )}
+
         {/* Submit Error */}
         {errors.submit && (
-          <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded" role="alert">
+          <div
+            className="p-3 bg-red-100 border border-red-400 text-red-700 rounded"
+            role="alert"
+          >
             {errors.submit}
           </div>
         )}
-        
+
         {/* Submit Button */}
         <div className="flex justify-center sm:justify-start">
           <button

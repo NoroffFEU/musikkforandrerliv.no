@@ -3,7 +3,7 @@ export async function mockContactFormSubmit(formData) {
 
   await new Promise((r) => setTimeout(r, 700));
 
-  if (!formData.consent) {
+  if (!formData.gdprConsent) {
     throw new Error('You must consent to data collection (GDPR).');
   }
 
