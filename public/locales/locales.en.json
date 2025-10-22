@@ -16,5 +16,20 @@
       "end_time": "2025-10-21T15:33:00.000+01:00",
       "organizer": "PGR"
     }
-  }
+  },
+  "employees": [
+    {
+      "employee": {
+        "name": "Karoline Hartvigsen",
+        "bio": "Karoline completed her nursing education in 2017 and now works full-time at a cancer ward at Radiumhospitalet in Oslo.  Before her bachelor's studies, she completed a one-year study in intercultural understanding at NLA University College Bergen.  In connection with this, she traveled to Bolivia to conduct fieldwork at an orphanage focusing on the children's quality of life.  Karoline has always had a great interest and commitment to humanitarian work and has volunteered as a nurse at a public hospital in Madagascar alongside Thea.  She is now the deputy leader of the Norwegian board of MMF and helps coordinate the work done from Norway.",
+        "job_title": "B.A Nursing (2017)",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "MMF Board Deputy Leader"
+        ],
+        "role": "Project Coordinator, Norway",
+        "photo": "http://localhost:5173/assets/placeholder-images/IMG_7542.webp"
+      }
+    }
+  ]
 }
