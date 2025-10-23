@@ -44,5 +44,13 @@
         "photo": "http://localhost:5173/assets/placeholder-images/IMG_7542.webp"
       }
     }
-  ]
+  ],
+  "about": {
+    "title": "test",
+    "description": "test",
+    "contact_form_success_message": "test",
+    "contact_form_error_message": "test",
+    "contact_info_address": "test",
+    "contact_info_phone": 293848484
+  }
 }
