@@ -231,10 +231,13 @@ function Footer() {
       <section className="w-full bg-[var(--color-dark-green)] text-white">
         <div className="mx-auto max-w-[1200px] px-6 md:px-10 pt-4 pb-8 flex flex-col items-center gap-3">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 whitespace-nowrap text-sm md:text-base">
-            <Link to="#" className="underline hover:text-gray-300">
+            <Link
+              to="/privacy-policy"
+              className="underline hover:text-gray-300"
+            >
               {t('common.footer.privacyPolicy') || 'Privacy Policy'}
             </Link>
-            <Link to="#" className="underline hover:text-gray-300">
+            <Link to="/tos" className="underline hover:text-gray-300">
               {t('common.footer.termsAndConditions') || 'Terms and Conditions'}
             </Link>
           </div>

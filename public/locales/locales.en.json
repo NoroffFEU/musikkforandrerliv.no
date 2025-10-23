@@ -699,10 +699,23 @@
         "email": "e-mail@mmf.no",
         "photo": "http://localhost:5173/assets/placeholder-images/IMG_7542.webp"
       }
+    },
+    {
+      "employee": {
+        "name": "Thea Harbo",
+        "role": "B.A. Nursing (2017)",
+        "bio": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger. \nShe has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet, and currently works full-time in a specially adapted department in a kindergarten. \nShe has extensive experience working with children  and enjoys it. \nThea is a board member of MMF and is responsible for the finances of the project. She volunteers for the project and is responsible for the work carried out in Norway.",
+        "job_title": "Project Manager, Norway",
+        "charity_role": [
+          "MMF Board Member"
+        ],
+        "email": "e-mail@mmf.no",
+        "photo": "http://localhost:5173/assets/placeholder-images/IMG_7542.webp"
+      }
     }
   ],
   "about": {
-    "title": "test1",
+    "title": "test",
     "description": "test",
     "contact_form_success_message": "test",
     "contact_form_error_message": "test",
