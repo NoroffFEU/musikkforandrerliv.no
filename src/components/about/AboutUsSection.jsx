@@ -12,10 +12,18 @@ const AboutUsSection = () => {
   const introImage = aboutUsPageContent.sections[0]?.image || '';
   const introImageAlt = aboutUsPageContent.sections[0]?.imageAlt || 'About section image';
 
-  // Get other sections from static data (excluding the first intro section and supporters)
-  const otherSections = aboutUsPageContent.sections.filter(
+  // Get middle sections from CMS
+  const cmsSections = t('about.sections', [], { returnObjects: true });
+  
+  // Fallback to static data if CMS sections are not available
+  const fallbackSections = aboutUsPageContent.sections.filter(
     (section, index) => index > 0 && !section.supporters,
   );
+
+  // Use CMS sections if available, otherwise fallback to static data
+  const middleSections = Array.isArray(cmsSections) && cmsSections.length > 0 
+    ? cmsSections 
+    : fallbackSections;
 
   return (
     <section id="AboutUsSection" className="w-full pt-2">
@@ -28,17 +36,22 @@ const AboutUsSection = () => {
         layout="intro"
       />
       
-      {/* Other sections from static data */}
-      {otherSections.map((section, index) => (
-        <InfoSection
-          key={section.id}
-          title={section.title}
-          content={section.content}
-          image={section.image}
-          imageAlt={section.imageAlt}
-          layout="standard"
-        />
-      ))}
+      {/* Middle sections from CMS or fallback to static data */}
+      {middleSections.map((section, index) => {
+        // Handle both CMS format (with nested section object) and static format
+        const sectionData = section.section || section;
+        
+        return (
+          <InfoSection
+            key={sectionData.id || index}
+            title={sectionData.title}
+            content={sectionData.content}
+            image={sectionData.image}
+            imageAlt={sectionData.imageAlt}
+            layout="standard"
+          />
+        );
+      })}
     </section>
   );
 };
