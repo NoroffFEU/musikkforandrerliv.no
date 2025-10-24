@@ -51,6 +51,17 @@ collections:
                     ]
                   }
                 },
+                { label: 'Supporters Title', name: 'supporters_title', widget: 'string', required: false, i18n: true },
+                { label: 'Supporters', name: 'supporters', widget: 'list',
+                  field: {
+                    label: 'Supporter', name: 'supporter', widget: 'object',
+                    fields: [
+                      { label: 'Name', name: 'name', widget: 'string', required: false, i18n: true },
+                      { label: 'Type', name: 'type', widget: 'select', options: ['quote', 'foundation', 'organization'], required: false },
+                      { label: 'URL', name: 'url', widget: 'string', required: false }
+                    ]
+                  }
+                },
                 { label: 'Contact Form Success Message', name: 'contact_form_success_message', widget: 'string', required: false,  i18n: true },
                 { label: 'Contact Form Error Message', name: 'contact_form_error_message', widget: 'string', required: false,  i18n: true },
                 { label: 'Contact Info Address', name: 'contact_info_address', widget: 'text', required: false,  i18n: true },
@@ -216,6 +227,17 @@ collections:
                     ]
                   }
                 },
+                { label: 'Supporters Title', name: 'supporters_title', widget: 'string', required: false, i18n: true },
+                { label: 'Supporters', name: 'supporters', widget: 'list',
+                  field: {
+                    label: 'Supporter', name: 'supporter', widget: 'object',
+                    fields: [
+                      { label: 'Name', name: 'name', widget: 'string', required: false, i18n: true },
+                      { label: 'Type', name: 'type', widget: 'select', options: ['quote', 'foundation', 'organization'], required: false },
+                      { label: 'URL', name: 'url', widget: 'string', required: false }
+                    ]
+                  }
+                },
                 { label: 'Contact Form Success Message', name: 'contact_form_success_message', widget: 'string', required: false,  i18n: true },
                 { label: 'Contact Form Error Message', name: 'contact_form_error_message', widget: 'string', required: false,  i18n: true },
                 { label: 'Contact Info Address', name: 'contact_info_address', widget: 'text', required: false,  i18n: true },
@@ -378,6 +400,17 @@ collections:
                       { label: 'Content', name: 'content', widget: 'markdown', required: false, i18n: true },
                       { label: 'Image', name: 'image', widget: 'image', required: false },
                       { label: 'Image Alt Text', name: 'imageAlt', widget: 'string', required: false, i18n: true }
+                    ]
+                  }
+                },
+                { label: 'Supporters Title', name: 'supporters_title', widget: 'string', required: false, i18n: true },
+                { label: 'Supporters', name: 'supporters', widget: 'list',
+                  field: {
+                    label: 'Supporter', name: 'supporter', widget: 'object',
+                    fields: [
+                      { label: 'Name', name: 'name', widget: 'string', required: false, i18n: true },
+                      { label: 'Type', name: 'type', widget: 'select', options: ['quote', 'foundation', 'organization'], required: false },
+                      { label: 'URL', name: 'url', widget: 'string', required: false }
                     ]
                   }
                 },

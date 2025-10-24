@@ -90,6 +90,39 @@
         }
       }
     ],
+    "supporters_title": "MFF is supported by",
+    "supporters": [
+      {
+        "supporter": {
+          "name": "The Friends Association of the Music School in Madagascar",
+          "type": "quote"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Martin Fröst Foundation",
+          "type": "foundation"
+        }
+      },
+      {
+        "supporter": {
+          "name": "St. Johannes menighet, Stavanger",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Foreningen Musikk gir liv, Kristiansand",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Buffet Crampon, Paris",
+          "type": "organization"
+        }
+      }
+    ],
     "contact_form_success_message": "Thank you for your message! We'll get back to you soon.",
     "contact_form_error_message": "Sorry, there was an error sending your message. Please try again.",
     "contact_info_address": "Antsirabe, Madagascar",
