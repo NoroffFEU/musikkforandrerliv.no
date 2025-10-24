@@ -1,0 +1,189 @@
+{
+  "common": {
+    "header": {
+      "search": "Søk",
+      "searchPlaceholder": "Søk...",
+      "news": "Nyheter",
+      "aboutUs": "Om oss",
+      "more": "Mer",
+      "events": "Arrangementer",
+      "ourWork": "Vårt arbeid",
+      "contact": "Kontakt",
+      "donate": "Doner"
+    },
+    "footer": {
+      "followUs": "Følg oss",
+      "aboutUs": "Om oss",
+      "news": "Nyheter",
+      "events": "Arrangementer",
+      "gallery": "Galleri",
+      "ourWork": "Vårt arbeid",
+      "contactUs": "Kontakt oss",
+      "privacyPolicy": "Personvernpolicy",
+      "termsAndConditions": "Vilkår og betingelser"
+    },
+    "newsletter": {
+      "title": "Abonner på vårt nyhetsbrev!",
+      "description": "Bli med i vårt nyhetsbrev i dag for å holde deg oppdatert på våre arrangementer og prosjekter!"
+    },
+    "buttons": {
+      "signUp": "Meld deg på",
+      "donate": "Doner",
+      "readMore": "Les mer"
+    },
+    "staff": {
+      "title": "Vårt personale"
+    }
+  },
+  "home": {
+    "title": "Hjemmeside norsk",
+    "intro": "intro",
+    "hero_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png"
+  },
+  "news-and-events": {
+    "title": "Testing",
+    "date": "2025-10-21T15:34:00.000+01:00",
+    "featured_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png",
+    "excerpt": "Testing",
+    "content": "Denne testingen er vanskelig",
+    "event_details": {
+      "location": "Niger",
+      "start_time": "2025-10-21T15:34:00.000+01:00",
+      "end_time": "2025-10-21T15:34:00.000+01:00",
+      "organizer": "PGR"
+    }
+  },
+  "employees": [
+    {
+      "employee": {
+        "name": "Eline Rodvelt Hansen",
+        "bio": "Eline er en norsk fiolinist som grunnla MMF sammen med sin mann, Dina Rasalina Andriamanalina, i 2021. Hun har en sterk bakgrunn innen klassisk musikk og har dedikert sitt liv til å bringe musikkutdanning til utsatte samfunn i Madagaskar.",
+        "job_title": "Fiolinlærer",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "MMF Medgrunnlegger, Madagaskar"
+        ],
+        "role": "Fiolinlærer",
+        "photo": "assets/placeholder-images/IMG_7544.webp"
+      }
+    },
+    {
+      "employee": {
+        "name": "Dina Rasalina Andriamanalina",
+        "bio": "Dina grunnla MMF sammen med sin kone, Eline Rodvelt Hansen, i 2021. Opprinnelig fra Antsirabe, Madagaskar, har Dina rytme og musikk i blodet, og har spilt mange instrumenter siden barndommen. Det var til slutt pianoet som ble hans dominerende instrument. I London studerte han musikkteknologi og jobbet til slutt i et musikkstudio. Med entusiasme for barn og utviklingsarbeid returnerte han til Madagaskar, hvor han har vært, blant annet, prosjektleder for internasjonale bistandsprosjekter. Han leder nå MMF-arbeidet sammen med Eline, i tillegg til å undervise i piano og tradisjonell malagassisk musikk og dans i prosjektet.",
+        "job_title": "Pianolærer",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "MMF Medgrunnlegger, Madagaskar"
+        ],
+        "role": "Pianolærer",
+        "photo": "assets/placeholder-images/IMG_3078.webp"
+      }
+    },
+    {
+      "employee": {
+        "name": "Karoline Hartvigsen",
+        "bio": "Karoline fullførte sin sykepleierutdanning i 2017 og jobber nå fulltid på en kreftavdeling på Radiumhospitalet i Oslo. Før bachelorstudiene fullførte hun et ettårig studium i interkulturell forståelse ved NLA Høgskolen Bergen. I forbindelse med dette reiste hun til Bolivia for å gjennomføre feltarbeid på et barnehjem med fokus på barnaes livskvalitet. Karoline har alltid hatt stor interesse og engasjement for humanitært arbeid og har frivillig arbeidet som sykepleier på et offentlig sykehus i Madagaskar sammen med Thea. Hun er nå nestleder i det norske styret i MMF og hjelper til med å koordinere arbeidet som gjøres fra Norge.",
+        "job_title": "B.A Sykepleie (2017)",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "MMF Styre Nestleder"
+        ],
+        "role": "Prosjektkoordinator, Norge",
+        "photo": "assets/placeholder-images/IMG_7542.webp"
+      }
+    },
+    {
+      "employee": {
+        "name": "Thea Harbo",
+        "bio": "Thea fullførte sin sykepleierutdanning i 2017 og jobber nå fulltid på en kreftavdeling på Radiumhospitalet i Oslo. Hun har en sterk bakgrunn innen humanitært arbeid og har frivillig arbeidet som sykepleier på et offentlig sykehus i Madagaskar sammen med Karoline. Thea er nå styremedlem i MMF og hjelper til med å koordinere arbeidet som gjøres fra Norge.",
+        "job_title": "B.A Sykepleie (2017)",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "MMF Styremedlem"
+        ],
+        "role": "Styremedlem, Norge",
+        "photo": "assets/placeholder-images/IMG_7542.webp"
+      }
+    }
+  ],
+  "about": {
+    "title": "La oss introdusere oss selv",
+    "description": "Mozika Manova Fiainana er en musikkskole for utsatte samfunn av unge mennesker i Antsirabe, Madagaskar, grunnlagt januar 2021 av den norske fiolinisten Eline Rodvelt Hansen og den malagassiske musikeren Dina Rasalina.\n\nSkolen er et levende helhetlig samfunn som ikke bare gir musikk- og kunsttimer, men støtter også barn fra de mest utsatte bakgrunnene i Antsirabe med mat, helsevesen, læringsmateriell, klær og husly.",
+    "sections": [
+      {
+        "section": {
+          "title": "En helhetlig tilnærming til utdanning og støtte",
+          "content": "Musikktimer er så mye mer enn bare å lære å spille et instrument. For våre studenter har musikkskolen blitt et sted for trygghet, verdighet og en følelse av å bli omsorgsfullt behandlet av lærere og andre studenter.\nDen transformerende kraften til utdanning og den sterke fellesskapsfølelsen har brakt mange unge barn fra gatene inn i klasserom, og gir et trygt og stimulerende miljø.",
+          "image": "assets/images/compressed-images/IMG_7424.webp",
+          "imageAlt": "Studenter lærer musikk sammen"
+        }
+      },
+      {
+        "section": {
+          "title": "Styrking gjennom utdanning",
+          "content": "Mange av våre studenter har aldri hatt muligheten til å gå på skole tidligere. Derfor organiserer MMF-lærere ekstra akademisk støtte for studenter som sliter med lekser, noe som påvirker deres utvikling og læringskapasitet betydelig.\nSpesiell vektlegging legges på kvinnelig utdanning og kjønnslikestilling.",
+          "image": "assets/placeholder-images/IMG_8979.webp",
+          "imageAlt": "Studenter i klasserom"
+        }
+      },
+      {
+        "section": {
+          "title": "Bærekraftig vekst og samfunnspåvirkning",
+          "content": "Å gi et trygt og støttende miljø inspirerer jenter og unge kvinner til å leve sunnere, mer stabile liv, og utløser tverrgenerasjons transformasjon gjennom utdanning.\nSiden 2021 er Mozika Manova Fiainana registrert som en NGO som støtter over 60 barn.",
+          "image": "assets/images/compressed-images/IMG_3473.webp",
+          "imageAlt": "Samfunnspåvirkning"
+        }
+      },
+      {
+        "section": {
+          "title": "Støtte og fremtidige ambisjoner",
+          "content": "Våre lærere gir timer i tradisjonelle malagassiske instrumenter, perkusjon, dans, sang, klassisk gitar, kontrabass, visuell kunst, musikkteori, kammermusikk, fiolin, bratsj, cello og piano, med ambisjoner om å inkludere fløyte og klarinett.",
+          "image": "",
+          "imageAlt": ""
+        }
+      },
+      {
+        "section": {
+          "title": "Konklusjon: En modell for endring",
+          "content": "Ved å være vitne til de utrolige endringene som vårt initiativ fremkaller i de lokale samfunnene, håper vi å inspirere våre studenter til å bli selvhjulpne, ansvarlige og dyktige individer som vil bidra til en bredere positiv utvikling av regionen.",
+          "image": "assets/placeholder-images/IMG_3749.webp",
+          "imageAlt": "Studenter og samfunnsmedlemmer"
+        }
+      }
+    ],
+    "supporters_title": "MFF støttes av",
+    "supporters": [
+      {
+        "supporter": {
+          "name": "Vennforeningen for musikkskolen på Madagaskar",
+          "type": "quote"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Martin Fröst Foundation",
+          "type": "foundation"
+        }
+      },
+      {
+        "supporter": {
+          "name": "St. Johannes menighet, Stavanger",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Foreningen Musikk gir liv, Kristiansand",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Buffet Crampon, Paris",
+          "type": "organization"
+        }
+      }
+    ]
+  }
+}

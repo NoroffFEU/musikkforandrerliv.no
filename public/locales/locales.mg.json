@@ -1,4 +1,40 @@
 {
+  "common": {
+    "header": {
+      "search": "Hikaroka",
+      "searchPlaceholder": "Hikaroka...",
+      "news": "Vaovao",
+      "aboutUs": "Momba antsika",
+      "more": "Bebe kokoa",
+      "events": "Zava-nitranga",
+      "ourWork": "Ny asanay",
+      "contact": "Fifandraisana",
+      "donate": "Manome"
+    },
+    "footer": {
+      "followUs": "Araho antsika",
+      "aboutUs": "Momba antsika",
+      "news": "Vaovao",
+      "events": "Zava-nitranga",
+      "gallery": "Sary",
+      "ourWork": "Ny asanay",
+      "contactUs": "Mifandraisa aminay",
+      "privacyPolicy": "Politika fiarovana ny fiainana manokana",
+      "termsAndConditions": "Fepetra sy fepetra"
+    },
+    "newsletter": {
+      "title": "Misoratra anarana amin'ny gazetintsika!",
+      "description": "Miaraha amin'ny gazetintsika ankehitriny mba hifanaraka amin'ny zava-nitranga sy tetikasanay!"
+    },
+    "buttons": {
+      "signUp": "Misoratra anarana",
+      "donate": "Manome",
+      "readMore": "Vakio bebe kokoa"
+    },
+    "staff": {
+      "title": "Ny mpiasanay"
+    }
+  },
   "home": {
     "title": "Home page malagasy",
     "intro": "intro",
@@ -16,5 +52,138 @@
       "end_time": "2025-10-21T15:34:00.000+01:00",
       "organizer": "PGR"
     }
+  },
+  "employees": [
+    {
+      "employee": {
+        "name": "Eline Rodvelt Hansen",
+        "bio": "Eline dia mpilalao violina norveziana izay nanorina ny MMF miaraka amin'ny vadiny, Dina Rasalina Andriamanalina, tamin'ny 2021. Manana fahalalana lalina momba ny mozika klasika izy ary nanolo-tena ny fiainany amin'ny fampianarana mozika ho an'ny vondrom-piarahamonina tsy manan-karena any Madagasikara.",
+        "job_title": "Mpampianatra violina",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "Mpanorina MMF, Madagasikara"
+        ],
+        "role": "Mpampianatra violina",
+        "photo": "assets/placeholder-images/IMG_7544.webp"
+      }
+    },
+    {
+      "employee": {
+        "name": "Dina Rasalina Andriamanalina",
+        "bio": "Dina nanorina ny MMF miaraka amin'ny vadiny, Eline Rodvelt Hansen, tamin'ny 2021. Teraka tao Antsirabe, Madagasikara, Dina manana ny gadona sy ny mozika ao amin'ny rany, ary nampiasa fitaovana maro hatramin'ny fahazazany. Ny piano no lasa fitaovana lehibe indrindra. Tany Londres, nianatra teknolojia mozika izy ary niasa tao amin'ny studio mozika. Amin'ny fahazotoana ho an'ny ankizy sy ny asa fampandrosoana, dia niverina tany Madagasikara izy, izay niasa, anisan'ny andraikitra hafa, ho mpitantana tetikasa fanampiana iraisam-pirenena. Izy no mitarika ny asan'ny MMF miaraka amin'i Eline, ankoatra ny fampianarana piano sy ny mozika malagasy nentim-paharazana ary ny dihy ao amin'ny tetikasa.",
+        "job_title": "Mpampianatra piano",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "Mpanorina MMF, Madagasikara"
+        ],
+        "role": "Mpampianatra piano",
+        "photo": "assets/placeholder-images/IMG_3078.webp"
+      }
+    },
+    {
+      "employee": {
+        "name": "Karoline Hartvigsen",
+        "bio": "Karoline nahavita ny fianarana mpanampy amin'ny fahasalamana tamin'ny 2017 ary miasa ankehitriny amin'ny fomba feno ao amin'ny hopitaly homamiadana ao Radiumhospitalet any Oslo. Alohan'ny fianarana bachelor, dia nahavita fianarana taona iray momba ny fahatakarana eo amin'ny kolontsaina ao amin'ny NLA University College Bergen. Miaraka amin'izany, dia nandeha tany Bolivia hanao asa fikarohana tao amin'ny trano fitaizana zaza izay mifantoka amin'ny kalitaon'ny fiainan'ny ankizy. Karoline dia manana fahalianana sy fahazotoana lehibe amin'ny asa mahaolona hatrizay ary niasa ho an'ny tsy maintsy ho mpampianatra mpanampy amin'ny fahasalamana tao amin'ny hopitaly ho an'ny daholobe any Madagasikara miaraka amin'i Thea. Izy ankehitriny no lefitra ao amin'ny filankevitry ny norveziana ao amin'ny MMF ary manampy amin'ny fampifanarahana ny asa atao avy any Norvezy.",
+        "job_title": "B.A Mpanampy amin'ny fahasalamana (2017)",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "Mpitarika filankevitra MMF"
+        ],
+        "role": "Mpandrindra tetikasa, Norvezy",
+        "photo": "assets/placeholder-images/IMG_7542.webp"
+      }
+    },
+    {
+      "employee": {
+        "name": "Thea Harbo",
+        "bio": "Thea nahavita ny fianarana mpanampy amin'ny fahasalamana tamin'ny 2017 ary miasa ankehitriny amin'ny fomba feno ao amin'ny hopitaly homamiadana ao Radiumhospitalet any Oslo. Manana fahalalana lalina momba ny asa mahaolona izy ary niasa ho an'ny tsy maintsy ho mpampianatra mpanampy amin'ny fahasalamana tao amin'ny hopitaly ho an'ny daholobe any Madagasikara miaraka amin'i Karoline. Thea ankehitriny no mpikambana ao amin'ny filankevitry ny MMF ary manampy amin'ny fampifanarahana ny asa atao avy any Norvezy.",
+        "job_title": "B.A Mpanampy amin'ny fahasalamana (2017)",
+        "email": "e-mail@mmf.no",
+        "charity_role": [
+          "Mpikambana filankevitra MMF"
+        ],
+        "role": "Mpikambana filankevitra, Norvezy",
+        "photo": "assets/placeholder-images/IMG_7542.webp"
+      }
+    }
+  ],
+  "about": {
+    "title": "Andao hifampitondra",
+    "description": "Mozika Manova Fiainana dia sekoly mozika ho an'ny vondrom-piarahamonina tsy manana fitaovana ao Antsirabe, Madagasikara, niorina tamin'ny Janoary 2021 tamin'ny alalan'ny mpitendry violina norveziana Eline Rodvelt Hansen sy ny mpitendry mozika malagasy Dina Rasalina.\n\nNy sekoly dia vondrom-piarahamonina mavitrika izay tsy manome fiofanana mozika sy zavakanto fotsiny, fa manampy koa ny ankizy avy amin'ny fiarahamonina tsy manana fitaovana indrindra ao Antsirabe amin'ny sakafo, fikarakarana ara-pahasalamana, fitaovana fianarana, akanjo ary fialofana.",
+    "sections": [
+      {
+        "section": {
+          "title": "Fomba fiasa manontolo amin'ny fanabeazana sy fanampiana",
+          "content": "Ny fiofanana mozika dia mihoatra lavitra ny fiofanana fitaovana mozika fotsiny. Ho an'ny mpianatra antsika, ny sekoly mozika dia lasa toerana fiarovana, mendrika, ary hevitra ny fikarakarana avy amin'ny mpampianatra sy ny mpianatra hafa.\nNy hery miova amin'ny fanabeazana sy ny fahatsapana vondrom-piarahamonina matanjaka dia nitondra ankizy maro avy amin'ny lalana ho any amin'ny efitrano fianarana, manome toerana azo antoka sy mampirisika.",
+          "image": "assets/images/compressed-images/IMG_7424.webp",
+          "imageAlt": "Mpianatra mianatra mozika miaraka"
+        }
+      },
+      {
+        "section": {
+          "title": "Manome hery amin'ny alalan'ny fanabeazana",
+          "content": "Mpianatra maro aminay tsy mbola nanana fahafahana nianatra mihitsy. Noho izany, ny mpampianatra MMF dia mandamina fanampiana akademika fanampiny ho an'ny mpianatra miady amin'ny asa an-trano, miantraika be amin'ny fivoarany sy ny fahafahany mianatra.\nFametrahana manokana ny fanabeazana vehivavy sy ny fitoviana amin'ny lahy sy ny vavy.",
+          "image": "assets/placeholder-images/IMG_8979.webp",
+          "imageAlt": "Mpianatra ao amin'ny efitrano fianarana"
+        }
+      },
+      {
+        "section": {
+          "title": "Fivoarana maharitra sy fiantraikan'ny vondrom-piarahamonina",
+          "content": "Ny fametrahana toerana azo antoka sy manampy dia mampirisika ny zazavavy sy ny vehivavy tanora ho amin'ny fiainana mahasalama kokoa, milamina kokoa, miteraka fiovana eo amin'ny taranaka amin'ny alalan'ny fanabeazana.\nHatramin'ny 2021 Mozika Manova Fiainana dia voasoratra ho ONG manampy ankizy mihoatra ny 60.",
+          "image": "assets/images/compressed-images/IMG_3473.webp",
+          "imageAlt": "Fiantraikan'ny vondrom-piarahamonina"
+        }
+      },
+      {
+        "section": {
+          "title": "Fanampiana sy faniriana ho avy",
+          "content": "Ny mpampianatra antsika dia manome fiofanana amin'ny fitaovana malagasy nentim-paharazana, amponga, dihy, hira, gitara klasika, basy roa, zavakanto hita maso, teoria mozika, mozika efitrano, violina, viola, cello, ary piano, miaraka amin'ny faniriana hanampy sodina sy klarineta.",
+          "image": "",
+          "imageAlt": ""
+        }
+      },
+      {
+        "section": {
+          "title": "Famaranana: Modely ho an'ny fiovana",
+          "content": "Rehefa mahita ny fiovana tsy azo inoana izay miteraka ny hetsika antsika amin'ny vondrom-piarahamonina eo an-toerana, manantena izahay hanampy mampirisika ny mpianatra antsika ho lasa olona mahaleo tena, tompon'andraikitra ary mahay izay hanampy amin'ny fivoarana tsara kokoa amin'ny faritra.",
+          "image": "assets/placeholder-images/IMG_3749.webp",
+          "imageAlt": "Mpianatra sy ny mpikambana ao amin'ny vondrom-piarahamonina"
+        }
+      }
+    ],
+    "supporters_title": "MFF dia nohohana",
+    "supporters": [
+      {
+        "supporter": {
+          "name": "Fikambanana namana amin'ny sekoly mozika ao Madagasikara",
+          "type": "quote"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Martin Fröst Foundation",
+          "type": "foundation"
+        }
+      },
+      {
+        "supporter": {
+          "name": "St. Johannes menighet, Stavanger",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Foreningen Musikk gir liv, Kristiansand",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Buffet Crampon, Paris",
+          "type": "organization"
+        }
+      }
+    ]
   }
 }
