@@ -1,32 +1,44 @@
+import { useTranslation } from 'react-i18next';
 import aboutUsPageContent from '../../data/about-us-page-content.json';
 
-//Hello Testing
 const AboutUsSection = () => {
-  const contentSections = aboutUsPageContent.sections.filter(
-    (section) => section.title || section.supporters,
+  const { t } = useTranslation();
+  
+  // Get intro content from CMS
+  const introTitle = t('about.title', 'Let us introduce ourselves');
+  const introDescription = t('about.description', 'Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\n\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care, learning supplies, clothing and shelter.');
+  
+  // Get the intro image from the first section of the static data as fallback
+  const introImage = aboutUsPageContent.sections[0]?.image || '';
+  const introImageAlt = aboutUsPageContent.sections[0]?.imageAlt || 'About section image';
+
+  // Get other sections from static data (excluding the first intro section and supporters)
+  const otherSections = aboutUsPageContent.sections.filter(
+    (section, index) => index > 0 && !section.supporters,
   );
 
   return (
     <section id="AboutUsSection" className="w-full pt-2">
-      {contentSections.map((section, index) => {
-        const isFirst = index === 0;
-
-        // Check if section has standard content or is a supporters section
-        if (section.supporters) {
-          return null; // We'll render this separately in the About page
-        }
-
-        return (
-          <InfoSection
-            key={section.id}
-            title={section.title}
-            content={section.content}
-            image={section.image}
-            imageAlt={section.imageAlt}
-            layout={isFirst ? 'intro' : 'standard'}
-          />
-        );
-      })}
+      {/* Intro section from CMS */}
+      <InfoSection
+        title={introTitle}
+        content={introDescription}
+        image={introImage}
+        imageAlt={introImageAlt}
+        layout="intro"
+      />
+      
+      {/* Other sections from static data */}
+      {otherSections.map((section, index) => (
+        <InfoSection
+          key={section.id}
+          title={section.title}
+          content={section.content}
+          image={section.image}
+          imageAlt={section.imageAlt}
+          layout="standard"
+        />
+      ))}
     </section>
   );
 };

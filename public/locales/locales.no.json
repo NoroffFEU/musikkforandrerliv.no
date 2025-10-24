@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Hjemmeside norsk",
+    "intro": "intro",
+    "hero_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png"
+  },
+  "about": {
+    "title": "La oss introdusere oss selv",
+    "description": "Mozika Manova Fiainana er en musikkskole for utsatte samfunn av unge mennesker i Antsirabe, Madagaskar, grunnlagt januar 2021 av den norske fiolinisten Eline Rodvelt Hansen og den madagassiske musikeren Dina Rasalina.\n\nSkolen er et levende helhetlig samfunn som ikke bare gir musikk- og kunsttimer, men også støtter barn fra de mest underprivilegerte bakgrunnene i Antsirabe med mat, helsevesen, læringsmateriell, klær og husly.",
+    "contact_form_success_message": "Takk for din melding! Vi kommer tilbake til deg snart.",
+    "contact_form_error_message": "Beklager, det oppstod en feil ved sending av din melding. Prøv igjen.",
+    "contact_info_address": "Antsirabe, Madagaskar",
+    "contact_info_phone": 293848484
+  },
+  "news-and-events": {
+    "title": "Testing",
+    "date": "2025-10-21T15:34:00.000+01:00",
+    "featured_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png",
+    "excerpt": "Testing",
+    "content": "Denne testingen er vanskelig",
+    "event_details": {
+      "location": "Nigeria",
+      "start_time": "2025-10-21T15:34:00.000+01:00",
+      "end_time": "2025-10-21T15:34:00.000+01:00",
+      "organizer": "PGR"
+    }
+  }
+}

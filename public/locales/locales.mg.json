@@ -4,6 +4,14 @@
     "intro": "intro",
     "hero_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png"
   },
+  "about": {
+    "title": "Andao hifampitondra antsika",
+    "description": "Mozika Manova Fiainana dia sekoly mozika ho an'ireo vondrom-piarahamonina tsy manana fahafahana amin'ny tanora ao Antsirabe, Madagasikara, niorina tamin'ny Janoary 2021 tamin'ny mpitendry violina norveziana Eline Rodvelt Hansen sy ny mpitendry mozika malagasy Dina Rasalina.\n\nNy sekoly dia vondrom-piarahamonina mavitrika izay tsy manome fiofanana mozika sy zavakanto fotsiny, fa manohana koa ny ankizy avy amin'ny fiarahamonina tsy manana fahafahana indrindra ao Antsirabe amin'ny sakafo, fikarakarana ara-pahasalamana, fitaovana fianarana, akanjo ary trano fialofana.",
+    "contact_form_success_message": "Misaotra anao noho ny hafatrao! Hiverina amin'ny hafatrao izahay tsy ho ela.",
+    "contact_form_error_message": "Miala tsiny, nisy fahadisoana nandefasana ny hafatrao. Andramo indray azafady.",
+    "contact_info_address": "Antsirabe, Madagasikara",
+    "contact_info_phone": 293848484
+  },
   "news-and-events": {
     "title": "Testing",
     "date": "2025-10-21T15:34:00.000+01:00",

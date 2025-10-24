@@ -46,11 +46,11 @@
     }
   ],
   "about": {
-    "title": "test",
-    "description": "test",
-    "contact_form_success_message": "test",
-    "contact_form_error_message": "test",
-    "contact_info_address": "test",
+    "title": "Let us introduce ourselves",
+    "description": "Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\n\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care, learning supplies, clothing and shelter.",
+    "contact_form_success_message": "Thank you for your message! We'll get back to you soon.",
+    "contact_form_error_message": "Sorry, there was an error sending your message. Please try again.",
+    "contact_info_address": "Antsirabe, Madagascar",
     "contact_info_phone": 293848484
   }
 }
