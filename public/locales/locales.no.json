@@ -1,0 +1,103 @@
+{
+  "home": {
+    "title": "Hjemmeside norsk",
+    "intro": "intro",
+    "hero_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png"
+  },
+  "about": {
+    "title": "La oss introdusere oss selv",
+    "description": "Mozika Manova Fiainana er en musikkskole for utsatte samfunn av unge mennesker i Antsirabe, Madagaskar, grunnlagt januar 2021 av den norske fiolinisten Eline Rodvelt Hansen og den madagassiske musikeren Dina Rasalina.\n\nSkolen er et levende helhetlig samfunn som ikke bare gir musikk- og kunsttimer, men også støtter barn fra de mest underprivilegerte bakgrunnene i Antsirabe med mat, helsevesen, læringsmateriell, klær og husly.",
+    "sections": [
+      {
+        "section": {
+          "title": "En helhetlig tilnærming til utdanning og støtte",
+          "content": "Musikktimer er så mye mer enn bare å lære å spille et instrument. For våre studenter har musikkskolen blitt et sted for trygghet, verdi, og en følelse av å bli omsorgsfullt behandlet av lærere og andre studenter.\nDen transformerende kraften til utdanning og den sterke fellesskapsfølelsen har brakt mange unge barn fra gatene inn i klasserom, og gir et trygt og stimulerende miljø.",
+          "image": "assets/images/compressed-images/IMG_7424.webp",
+          "imageAlt": "Studenter som lærer musikk sammen"
+        }
+      },
+      {
+        "section": {
+          "title": "Styrking gjennom utdanning",
+          "content": "Mange av våre studenter har aldri hatt muligheten til å gå på skole tidligere. Derfor organiserer MMF-lærere ekstra akademisk støtte for studenter som sliter med lekser, noe som påvirker deres utvikling og læringskapasitet betydelig.\nSpesiell vektlegging legges på kvinners utdanning og kjønnslikhet.",
+          "image": "assets/placeholder-images/IMG_8979.webp",
+          "imageAlt": "Studenter i klasserom"
+        }
+      },
+      {
+        "section": {
+          "title": "Bærekraftig vekst og samfunnspåvirkning",
+          "content": "Å gi et trygt og støttende miljø inspirerer jenter og unge kvinner til å leve sunnere, mer stabile liv, og utløser tverrgenerasjonsforvandling gjennom utdanning.\nSiden 2021 er Mozika Manova Fiainana registrert som en NGO som støtter over 60 barn.",
+          "image": "assets/images/compressed-images/IMG_3473.webp",
+          "imageAlt": "Samfunnspåvirkning og vekst"
+        }
+      },
+      {
+        "section": {
+          "title": "Støtte og fremtidige ambisjoner",
+          "content": "Våre lærere gir timer i tradisjonelle madagassiske instrumenter, perkusjon, dans, sang, klassisk gitar, kontrabass, visuell kunst, musikkteori, kammermusikk, fiolin, bratsj, cello og piano, med ambisjoner om å inkludere fløyte og klarinett.",
+          "image": "",
+          "imageAlt": ""
+        }
+      },
+      {
+        "section": {
+          "title": "Konklusjon: En modell for endring",
+          "content": "Ved å være vitne til de utrolige endringene som vårt initiativ fremkaller i de lokale samfunnene, håper vi å inspirere våre studenter til å bli selvhjulpne, ansvarlige og dyktige individer som vil bidra til en bredere positiv utvikling av regionen.",
+          "image": "assets/placeholder-images/IMG_3749.webp",
+          "imageAlt": "Studenter og samfunnsmedlemmer"
+        }
+      }
+    ],
+    "supporters_title": "MFF støttes av",
+    "supporters": [
+      {
+        "supporter": {
+          "name": "Vennforeningen for musikkskolen på Madagaskar",
+          "type": "quote"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Martin Fröst Foundation",
+          "type": "foundation"
+        }
+      },
+      {
+        "supporter": {
+          "name": "St. Johannes menighet, Stavanger",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Foreningen Musikk gir liv, Kristiansand",
+          "type": "organization"
+        }
+      },
+      {
+        "supporter": {
+          "name": "Buffet Crampon, Paris",
+          "type": "organization"
+        }
+      }
+    ],
+    "contact_form_success_message": "Takk for din melding! Vi kommer tilbake til deg snart.",
+    "contact_form_error_message": "Beklager, det oppstod en feil ved sending av din melding. Prøv igjen.",
+    "contact_info_address": "Antsirabe, Madagaskar",
+    "contact_info_phone": 293848484
+  },
+  "news-and-events": {
+    "title": "Testing",
+    "date": "2025-10-21T15:34:00.000+01:00",
+    "featured_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png",
+    "excerpt": "Testing",
+    "content": "Denne testingen er vanskelig",
+    "event_details": {
+      "location": "Nigeria",
+      "start_time": "2025-10-21T15:34:00.000+01:00",
+      "end_time": "2025-10-21T15:34:00.000+01:00",
+      "organizer": "PGR"
+    }
+  }
+}
