@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-import staffContent from "../../data/about-us-page-content.json";
+export default function StaffSection() {
+  const [employees, setEmployees] = useState([]);
+  const { t } = useTranslation();
 
-const StaffSection = () => {
-  const staffItems = staffContent.sections.filter(
-    (section) => section.name,
-  );
+  useEffect(() => {
+    setEmployees(t('employees', { returnObjects: true }));
+  }, [t]);
 
   return (
     <section id="StaffSection" className="w-full pt-28">
@@ -13,7 +15,7 @@ const StaffSection = () => {
         Our Staff
       </h2>
 
-      {staffItems.map((member, index) => {
+      {employees.map((emp, index) => {
         const isEven = index % 2 === 0;
         const outerBg = isEven ? 'bg-[#FFFFFF]' : 'bg-[#5B8E7D]';
         const innerBg = isEven ? 'bg-[#FBF7E8]' : 'bg-[#FFFFFF]';
@@ -21,7 +23,7 @@ const StaffSection = () => {
         const mobileBg = index % 2 === 0 ? 'bg-white' : 'bg-[#B2CAC2]';
 
         return (
-          <React.Fragment key={member.id}>
+          <React.Fragment key={index}>
             {/* mobile layout */}
             <div
               tabIndex={0}
@@ -38,13 +40,13 @@ const StaffSection = () => {
                <div className="grid grid-cols-2 md:grid-cols-2 items-center justify-items-center gap-4 mt-8">
                 <div className="rounded-full w-32 h-32 sm:w-40 sm:h-40 overflow-hidden">
                   <img
-                    src={member.image || '/assets/images/staff/placeholder.jpg'}
+                    src={emp.employee.photo || '/assets/images/staff/placeholder.jpg'}
                     loading="lazy"
                     decoding="async"
                     alt={
-                      member.imageAlt
-                        ? member.imageAlt
-                        : `Portrait of ${member.name}`
+                      emp.employee.imageAlt
+                        ? emp.employee.imageAlt
+                        : `Portrait of ${emp.employee.name}`
                     }
                     className="object-cover w-full h-full rounded-full"
                   />
@@ -52,18 +54,18 @@ const StaffSection = () => {
 
                 <div className="text-center">
                   <p className="text-3xl mt-4 font-justAnotherHand">
-                    {member.name}
+                    {emp.employee.name}
                   </p>
                   {/* on mobile - only display first / main role*/}
-                  {member.roles?.[0] && (
-                    <p className="text-sm">{member.roles[0]}</p>
+                  {emp.employee.role && (
+                    <p className="text-sm">{emp.employee.role}</p>
                   )}
-                  <p className="text-sm">{member.email}</p>
+                  <p className="text-sm">{emp.employee.email}</p>
                 </div>
               </div>
 
               <div className="mt-6 mb-10 px-6 text-sm whitespace-pre-line text-center">
-                {member.content}
+                {emp.employee.bio}
               </div>
             </div>
 
@@ -91,33 +93,32 @@ const StaffSection = () => {
                   <div className="rounded-full w-32 h-32 md:w-80 md:h-80 overflow-hidden md:-ml-28">
                     <img
                       src={
-                        member.image || '/assets/images/staff/placeholder.jpg'
+                        emp.employee.photo || '/assets/images/staff/placeholder.jpg'
                       }
-                      alt={member.imageAlt || `Portrait of ${member.name}`}
+                      alt={emp.employee.imageAlt || `Portrait of ${emp.employee.name}`}
                       className="object-cover w-full h-full rounded-full"
                     />
                   </div>
 
                   <div className="flex flex-col items-center mt-4 space-y-1 md:-ml-32">
                     <p className="hidden lg:flex md:text-3xl font-justAnotherHand">
-                      {member.name}
+                      {emp.employee.name}
                     </p>
-                    {member.roles?.map((role, i) => (
-                      <p key={i} className="text-sm">
-                        {role}
-                      </p>
-                    ))}
-                    <p className="text-sm">{member.email}</p>
+
+                    <p className="text-sm">
+                      {emp.employee.role}
+                    </p>
+                    <p className="text-sm">{emp.employee.email}</p>
                   </div>
                 </div>
 
                 {/* right section */}
                 <div className="flex flex-col justify-between text-center h-full">
                   <h3 className="text-3xl md:text-7xl font-justAnotherHand">
-                    {member.name}
+                    {emp.employee.name}
                   </h3>
                   <p className="mt-[1rem] text-sm md:text-lg whitespace-pre-line flex-grow">
-                    {member.content}
+                    {emp.employee.bio}
                   </p>
                 </div>
               </div>
@@ -128,5 +129,3 @@ const StaffSection = () => {
     </section>
   );
 };
-
-export default StaffSection;
