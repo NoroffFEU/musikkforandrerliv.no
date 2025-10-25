@@ -1,19 +1,34 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import staffContent from "../../data/about-us-page-content.json";
 
 const StaffSection = () => {
-  const staffItems = staffContent.sections.filter(
+  const { t } = useTranslation();
+
+  // Get staff from CMS
+  const cmsEmployees = t('employees', { returnObjects: true });
+
+  // Fallback to static data if CMS employees are not available
+  const fallbackStaffItems = staffContent.sections.filter(
     (section) => section.name,
   );
+
+  // Use CMS employees if available, otherwise fallback to static data
+  const staffItems = Array.isArray(cmsEmployees) && cmsEmployees.length > 0
+    ? cmsEmployees
+    : fallbackStaffItems;
 
   return (
     <section id="StaffSection" className="w-full pt-28">
       <h2 className="font-justAnotherHand text-5xl md:text-8xl text-center bg-[#363732] text-white h-[190px] md:h-[296px] flex items-center justify-center dark:bg-[#363732] dark:text-white">
-        Our Staff
+        {t('common.staff.title', 'Our Staff')}
       </h2>
 
       {staffItems.map((member, index) => {
+        // Handle both CMS format (with nested employee object) and static format
+        const memberData = member.employee || member;
+        
         const isEven = index % 2 === 0;
         const outerBg = isEven ? 'bg-[#FFFFFF]' : 'bg-[#5B8E7D]';
         const innerBg = isEven ? 'bg-[#FBF7E8]' : 'bg-[#FFFFFF]';
@@ -21,7 +36,7 @@ const StaffSection = () => {
         const mobileBg = index % 2 === 0 ? 'bg-white' : 'bg-[#B2CAC2]';
 
         return (
-          <React.Fragment key={member.id}>
+          <React.Fragment key={memberData.id || index}>
             {/* mobile layout */}
             <div
               tabIndex={0}
@@ -38,13 +53,13 @@ const StaffSection = () => {
                <div className="grid grid-cols-2 md:grid-cols-2 items-center justify-items-center gap-4 mt-8">
                 <div className="rounded-full w-32 h-32 sm:w-40 sm:h-40 overflow-hidden">
                   <img
-                    src={member.image || '/assets/images/staff/placeholder.jpg'}
+                    src={memberData.photo || memberData.image || '/assets/images/staff/placeholder.jpg'}
                     loading="lazy"
                     decoding="async"
                     alt={
-                      member.imageAlt
-                        ? member.imageAlt
-                        : `Portrait of ${member.name}`
+                      memberData.imageAlt
+                        ? memberData.imageAlt
+                        : `Portrait of ${memberData.name}`
                     }
                     className="object-cover w-full h-full rounded-full"
                   />
@@ -52,18 +67,18 @@ const StaffSection = () => {
 
                 <div className="text-center">
                   <p className="text-3xl mt-4 font-justAnotherHand">
-                    {member.name}
+                    {memberData.name}
                   </p>
                   {/* on mobile - only display first / main role*/}
-                  {member.roles?.[0] && (
-                    <p className="text-sm">{member.roles[0]}</p>
+                  {(memberData.roles?.[0] || memberData.role) && (
+                    <p className="text-sm">{memberData.roles?.[0] || memberData.role}</p>
                   )}
-                  <p className="text-sm">{member.email}</p>
+                  <p className="text-sm">{memberData.email}</p>
                 </div>
               </div>
 
               <div className="mt-6 mb-10 px-6 text-sm whitespace-pre-line text-center">
-                {member.content}
+                {memberData.bio || memberData.content}
               </div>
             </div>
 
@@ -91,33 +106,33 @@ const StaffSection = () => {
                   <div className="rounded-full w-32 h-32 md:w-80 md:h-80 overflow-hidden md:-ml-28">
                     <img
                       src={
-                        member.image || '/assets/images/staff/placeholder.jpg'
+                        memberData.photo || memberData.image || '/assets/images/staff/placeholder.jpg'
                       }
-                      alt={member.imageAlt || `Portrait of ${member.name}`}
+                      alt={memberData.imageAlt || `Portrait of ${memberData.name}`}
                       className="object-cover w-full h-full rounded-full"
                     />
                   </div>
 
                   <div className="flex flex-col items-center mt-4 space-y-1 md:-ml-32">
                     <p className="hidden lg:flex md:text-3xl font-justAnotherHand">
-                      {member.name}
+                      {memberData.name}
                     </p>
-                    {member.roles?.map((role, i) => (
+                    {(memberData.roles || memberData.charity_role)?.map((role, i) => (
                       <p key={i} className="text-sm">
                         {role}
                       </p>
                     ))}
-                    <p className="text-sm">{member.email}</p>
+                    <p className="text-sm">{memberData.email}</p>
                   </div>
                 </div>
 
                 {/* right section */}
                 <div className="flex flex-col justify-between text-center h-full">
                   <h3 className="text-3xl md:text-7xl font-justAnotherHand">
-                    {member.name}
+                    {memberData.name}
                   </h3>
                   <p className="mt-[1rem] text-sm md:text-lg whitespace-pre-line flex-grow">
-                    {member.content}
+                    {memberData.bio || memberData.content}
                   </p>
                 </div>
               </div>
