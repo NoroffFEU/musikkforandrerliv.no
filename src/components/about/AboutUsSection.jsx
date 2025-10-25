@@ -1,29 +1,28 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import aboutUsPageContent from '../../data/about-us-page-content.json';
 
 const AboutUsSection = () => {
   const { t } = useTranslation();
-
+  
   // Get intro content from CMS
   const introTitle = t('about.title', 'Let us introduce ourselves');
   const introDescription = t('about.description', 'Mozika Manova Fiainana is a music school for deprived communities of young people in Antsirabe, Madagascar, founded January 2021 by the Norwegian violinist Eline Rodvelt Hansen and the Malagasy musician Dina Rasalina.\n\nThe school is a vibrant holistic community that not only provides music and art lessons, but also supports children from the most underprivileged backgrounds in Antsirabe with food, health care, learning supplies, clothing and shelter.');
-
+  
   // Get the intro image from the first section of the static data as fallback
   const introImage = aboutUsPageContent.sections[0]?.image || '';
   const introImageAlt = aboutUsPageContent.sections[0]?.imageAlt || 'About section image';
 
   // Get middle sections from CMS
-  const cmsSections = t('about.sections', { returnObjects: true });
-
+  const cmsSections = t('about.sections', [], { returnObjects: true });
+  
   // Fallback to static data if CMS sections are not available
   const fallbackSections = aboutUsPageContent.sections.filter(
-    (section, index) => index > 0 && !section.supporters && !section.name,
+    (section, index) => index > 0 && !section.supporters,
   );
 
   // Use CMS sections if available, otherwise fallback to static data
-  const middleSections = Array.isArray(cmsSections) && cmsSections.length > 0
-    ? cmsSections
+  const middleSections = Array.isArray(cmsSections) && cmsSections.length > 0 
+    ? cmsSections 
     : fallbackSections;
 
   return (
@@ -36,12 +35,12 @@ const AboutUsSection = () => {
         imageAlt={introImageAlt}
         layout="intro"
       />
-
+      
       {/* Middle sections from CMS or fallback to static data */}
       {middleSections.map((section, index) => {
         // Handle both CMS format (with nested section object) and static format
         const sectionData = section.section || section;
-
+        
         return (
           <InfoSection
             key={sectionData.id || index}

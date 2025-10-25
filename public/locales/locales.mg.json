@@ -40,6 +40,56 @@
     "intro": "intro",
     "hero_image": "/content/gallery/skjermbilde-2025-10-13-kl.-10.31.15.png"
   },
+  "about": {
+    "title": "Andao hifampitondra antsika",
+    "description": "Mozika Manova Fiainana dia sekoly mozika ho an'ireo vondrom-piarahamonina tsy manana fahafahana amin'ny tanora ao Antsirabe, Madagasikara, niorina tamin'ny Janoary 2021 tamin'ny mpitendry violina norveziana Eline Rodvelt Hansen sy ny mpitendry mozika malagasy Dina Rasalina.\n\nNy sekoly dia vondrom-piarahamonina mavitrika izay tsy manome fiofanana mozika sy zavakanto fotsiny, fa manohana koa ny ankizy avy amin'ny fiarahamonina tsy manana fahafahana indrindra ao Antsirabe amin'ny sakafo, fikarakarana ara-pahasalamana, fitaovana fianarana, akanjo ary trano fialofana.",
+    "sections": [
+      {
+        "section": {
+          "title": "Fomba fiasa holistika amin'ny fanabeazana sy ny fanohanana",
+          "content": "Ny fiofanana mozika dia mihoatra lavitra ny fianarana fitaovana fotsiny. Ho an'ny mpianatra antsika, ny sekoly mozika dia lasa toerana fiarovana, mendrika, ary hevitra ny fikarakarana avy amin'ny mpampianatra sy ny mpianatra hafa.\nNy herin'ny fanabeazana sy ny fahatsapana vondrom-piarahamonina matanjaka dia nitondra ankizy maro avy any an-dalambe ho any an-dakilasy, manome toerana azo antoka sy mampirisika.",
+          "image": "assets/images/compressed-images/IMG_7424.webp",
+          "imageAlt": "Mpianatra mianatra mozika miaraka"
+        }
+      },
+      {
+        "section": {
+          "title": "Manome hery amin'ny alalan'ny fanabeazana",
+          "content": "Mpianatra maro tsy mbola nanana fahafahana nianatra mihitsy. Noho izany, ny mpampianatra MMF dia mandamina fanohanana akademika fanampiny ho an'ny mpianatra miady amin'ny asa an-trano, miantra amin'ny fivoarana sy ny fahafahan'ny fianarana.\nFametrahana manokana ny fanabeazana vehivavy sy ny fitoviana amin'ny lahy sy ny vavy.",
+          "image": "assets/placeholder-images/IMG_8979.webp",
+          "imageAlt": "Mpianatra ao amin'ny efitrano fianarana"
+        }
+      },
+      {
+        "section": {
+          "title": "Fivoarana maharitra sy ny fiantraikany amin'ny vondrom-piarahamonina",
+          "content": "Ny fametrahana toerana azo antoka sy manohana dia mampirisika ny tovovavy sy ny vehivavy tanora hizotra fiainana mahasalama sy milamina kokoa, mampiroborobo ny fiovana amin'ny taranaka amin'ny alalan'ny fanabeazana.\nHatramin'ny 2021 Mozika Manova Fiainana dia voasoratra anarana ho ONG manohana ankizy mihoatra ny 60.",
+          "image": "assets/images/compressed-images/IMG_3473.webp",
+          "imageAlt": "Fiantraikany amin'ny vondrom-piarahamonina sy ny fivoarana"
+        }
+      },
+      {
+        "section": {
+          "title": "Fanohanana sy ny faniriana ho avy",
+          "content": "Ny mpampianatra antsika dia manome fiofanana amin'ny fitaovana malagasy nentim-paharazana, ampongatranga, dihy, hira, gitara klasika, basy roa, zavakanto hita maso, teoria mozika, mozika efitrano, violina, viola, cello, ary piano, miaraka amin'ny faniriana hanampy sodina sy klarineta.",
+          "image": "",
+          "imageAlt": ""
+        }
+      },
+      {
+        "section": {
+          "title": "Famaranana: Modely ho an'ny fiovana",
+          "content": "Rehefa mahita ny fiovana tsy azo inoana izay miteraka ny hetsika antsika amin'ny vondrom-piarahamonina eo an-toerana, manantena izahay hanampy mampirisika ny mpianatra antsika ho lasa olona mahaleo tena, tompon'andraikitra ary mahay izay hanampy amin'ny fivoarana tsara kokoa amin'ny faritra.",
+          "image": "assets/placeholder-images/IMG_3749.webp",
+          "imageAlt": "Mpianatra sy ny mpikambana ao amin'ny vondrom-piarahamonina"
+        }
+      }
+    ],
+    "contact_form_success_message": "Misaotra anao noho ny hafatrao! Hiverina amin'ny hafatrao izahay tsy ho ela.",
+    "contact_form_error_message": "Miala tsiny, nisy fahadisoana nandefasana ny hafatrao. Andramo indray azafady.",
+    "contact_info_address": "Antsirabe, Madagasikara",
+    "contact_info_phone": 293848484
+  },
   "news-and-events": {
     "title": "Testing",
     "date": "2025-10-21T15:34:00.000+01:00",

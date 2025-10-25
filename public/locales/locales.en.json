@@ -105,6 +105,19 @@
         "role": "Board Member, Norway",
         "photo": "assets/placeholder-images/IMG_7542.webp"
       }
+    },
+    {
+      "employee": {
+        "name": "Thea Harbo",
+        "role": "B.A. Nursing (2017)",
+        "bio": "Thea completed her bachelor's degree in nursing in 2017 at Diakonova University College in Oslo. She lived there for 9 years before moving back to her hometown, Stavanger. \nShe has work experience from home nursing care, several years in a pediatric ward at Rikshospitalet, and currently works full-time in a specially adapted department in a kindergarten. \nShe has extensive experience working with children  and enjoys it. \nThea is a board member of MMF and is responsible for the finances of the project. She volunteers for the project and is responsible for the work carried out in Norway.",
+        "job_title": "Project Manager, Norway",
+        "charity_role": [
+          "MMF Board Member"
+        ],
+        "email": "e-mail@mmf.no",
+        "photo": "http://localhost:5173/assets/placeholder-images/IMG_7542.webp"
+      }
     }
   ],
   "about": {
@@ -124,7 +137,7 @@
           "title": "Empowering Through Education",
           "content": "Many of our students have never had the opportunity to attend school previously. Therefore, MMF teachers organize additional academic support for students struggling with homework, greatly impacting their development and learning capacity.\nSpecial emphasis is placed on female education and gender equality.",
           "image": "assets/placeholder-images/IMG_8979.webp",
-          "imageAlt": "Students in classroom"
+          "imageAlt": "Students in classroom setting"
         }
       },
       {
@@ -132,7 +145,7 @@
           "title": "Sustainable Growth and Community Impact",
           "content": "Providing a safe and supportive environment inspires girls and young women to lead healthier, more stable lives, sparking intergenerational transformation through education.\nSince 2021 Mozika Manova Fiainana is registered as an NGO supporting over 60 children.",
           "image": "assets/images/compressed-images/IMG_3473.webp",
-          "imageAlt": "Community impact"
+          "imageAlt": "Community impact and growth"
         }
       },
       {
@@ -152,38 +165,9 @@
         }
       }
     ],
-    "supporters_title": "MFF is supported by",
-    "supporters": [
-      {
-        "supporter": {
-          "name": "The Friends Association of the Music School in Madagascar",
-          "type": "quote"
-        }
-      },
-      {
-        "supporter": {
-          "name": "Martin Fröst Foundation",
-          "type": "foundation"
-        }
-      },
-      {
-        "supporter": {
-          "name": "St. Johannes menighet, Stavanger",
-          "type": "organization"
-        }
-      },
-      {
-        "supporter": {
-          "name": "Foreningen Musikk gir liv, Kristiansand",
-          "type": "organization"
-        }
-      },
-      {
-        "supporter": {
-          "name": "Buffet Crampon, Paris",
-          "type": "organization"
-        }
-      }
-    ]
+    "contact_form_success_message": "Thank you for your message! We'll get back to you soon.",
+    "contact_form_error_message": "Sorry, there was an error sending your message. Please try again.",
+    "contact_info_address": "Antsirabe, Madagascar",
+    "contact_info_phone": 293848484
   }
 }
