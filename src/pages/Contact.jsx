@@ -58,8 +58,6 @@ function Contact() {
       });
       
     } catch (error) {
-      console.error('Contact form submission error:', error);
-      
       // Error notification
       setNotifications({
         error: 'There was an error sending your message. Please try again or contact us directly.'
@@ -85,7 +83,7 @@ function Contact() {
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Get in touch with us to learn more about how music changes lives. 
-              We'd love to hear from you and answer any questions you may have.
+              We&apos;d love to hear from you and answer any questions you may have.
             </p>
           </div>
         </div>

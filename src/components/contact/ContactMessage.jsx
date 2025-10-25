@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 /**
  * ContactMessage Component
@@ -30,14 +30,14 @@ const ContactMessage = ({
       
       return () => clearTimeout(timer);
     }
-  }, [autoClose, type]);
+  }, [autoClose, type, handleClose]);
   
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setIsVisible(false);
     setTimeout(() => {
       onClose();
     }, 300); // Wait for fade out animation
-  };
+  }, [onClose]);
   
   if (!message) return null;
   

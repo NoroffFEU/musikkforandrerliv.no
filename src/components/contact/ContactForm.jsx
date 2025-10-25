@@ -26,6 +26,7 @@ const ContactForm = ({ onSubmit }) => {
   // Validation state
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [gdprConsent, setGdprConsent] = useState(false);
   
   // Validation functions
@@ -97,16 +98,21 @@ const ContactForm = ({ onSubmit }) => {
         
         await onSubmit(submissionData);
         
-        // Reset form on successful submission
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-        setGdprConsent(false);
+        // Show success state
+        setIsSuccess(true);
+        
+        // Reset form after showing success
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+          setGdprConsent(false);
+          setIsSuccess(false);
+        }, 2000);
       } catch (error) {
-        console.error('Form submission error:', error);
         setErrors({ submit: 'There was an error sending your message. Please try again.' });
       } finally {
         setIsSubmitting(false);
@@ -118,7 +124,7 @@ const ContactForm = ({ onSubmit }) => {
     <div className="p-6 h-fit">
       <h2 className="text-2xl font-bold mb-6 text-left text-gray-800">Contact form</h2>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         {/* Name Field */}
         <div>
           <label 
@@ -138,7 +144,6 @@ const ContactForm = ({ onSubmit }) => {
             }`}
             placeholder="Enter your full name"
             aria-describedby={errors.name ? 'name-error' : undefined}
-            required
           />
           {errors.name && (
             <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -166,7 +171,6 @@ const ContactForm = ({ onSubmit }) => {
             }`}
             placeholder="your.email@example.com"
             aria-describedby={errors.email ? 'email-error' : undefined}
-            required
           />
           {errors.email && (
             <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -194,7 +198,6 @@ const ContactForm = ({ onSubmit }) => {
             }`}
             placeholder="Brief subject of your message"
             aria-describedby={errors.subject ? 'subject-error' : undefined}
-            required
           />
           {errors.subject && (
             <p id="subject-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -222,7 +225,6 @@ const ContactForm = ({ onSubmit }) => {
             }`}
             placeholder="Please describe your inquiry or message in detail..."
             aria-describedby={errors.message ? 'message-error' : undefined}
-            required
           />
           {errors.message && (
             <p id="message-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -242,15 +244,48 @@ const ContactForm = ({ onSubmit }) => {
         <div className="flex justify-center sm:justify-start">
           <button
             type="submit"
-            disabled={isSubmitting}
-            className={`px-8 py-2 rounded-lg font-bold text-lg transition-colors duration-200 border-2 ${
-              isSubmitting
+            disabled={isSubmitting || isSuccess}
+            className={`relative px-8 py-2 rounded-lg font-bold text-lg transition-all duration-200 border-2 ${
+              isSubmitting || isSuccess
                 ? 'bg-transparent border-gray-300 text-gray-400 cursor-not-allowed'
                 : 'bg-transparent border-black text-black hover:bg-gray-100 focus:bg-gray-100'
             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300`}
-            aria-label={isSubmitting ? 'Sending message...' : 'Send message'}
+            aria-label={isSubmitting ? 'Sending message...' : isSuccess ? 'Message sent successfully' : 'Send message'}
           >
-            {isSubmitting ? 'SENDING...' : 'SEND'}
+            {/* Button Content */}
+            <span className={`transition-opacity duration-200 ${isSubmitting || isSuccess ? 'opacity-0' : 'opacity-100'}`}>
+              SEND
+            </span>
+            
+            {/* Loading Animation - Circle Ripple */}
+            {isSubmitting && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative">
+                  <div className="w-6 h-6 border-2 border-gray-400 rounded-full animate-pulse"></div>
+                  <div className="absolute inset-0 w-6 h-6 border-2 border-transparent border-t-gray-600 rounded-full animate-spin"></div>
+                </div>
+              </div>
+            )}
+            
+            {/* Success Animation - Checkmark */}
+            {isSuccess && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg 
+                  className="w-6 h-6 text-green-600 animate-bounce" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M5 13l4 4L19 7" 
+                    className="animate-pulse"
+                  />
+                </svg>
+              </div>
+            )}
           </button>
         </div>
       </form>
