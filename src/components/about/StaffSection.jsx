@@ -1,13 +1,14 @@
 import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 
-import staffContent from "../../data/about-us-page-content.json";
+import staffContent from '../../data/about-us-page-content.json';
 
 const StaffSection = () => {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
 
   // Get staff from CMS
-  const cmsEmployees = t('employees', { returnObjects: true });
+  const cmsEmployees = ready ? t('employees', { returnObjects: true }) : [];
 
   // Fallback to static data if CMS employees are not available
   const fallbackStaffItems = staffContent.sections.filter(
@@ -15,9 +16,10 @@ const StaffSection = () => {
   );
 
   // Use CMS employees if available, otherwise fallback to static data
-  const staffItems = Array.isArray(cmsEmployees) && cmsEmployees.length > 0
-    ? cmsEmployees
-    : fallbackStaffItems;
+  const staffItems =
+    Array.isArray(cmsEmployees) && cmsEmployees.length > 0
+      ? cmsEmployees
+      : fallbackStaffItems;
 
   return (
     <section id="StaffSection" className="w-full pt-28">
@@ -28,7 +30,7 @@ const StaffSection = () => {
       {staffItems.map((member, index) => {
         // Handle both CMS format (with nested employee object) and static format
         const memberData = member.employee || member;
-        
+
         const isEven = index % 2 === 0;
         const outerBg = isEven ? 'bg-[#FFFFFF]' : 'bg-[#5B8E7D]';
         const innerBg = isEven ? 'bg-[#FBF7E8]' : 'bg-[#FFFFFF]';
@@ -50,10 +52,14 @@ const StaffSection = () => {
                 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5B8E7D]
   `}
             >
-               <div className="grid grid-cols-2 md:grid-cols-2 items-center justify-items-center gap-4 mt-8">
+              <div className="grid grid-cols-2 md:grid-cols-2 items-center justify-items-center gap-4 mt-8">
                 <div className="rounded-full w-32 h-32 sm:w-40 sm:h-40 overflow-hidden">
                   <img
-                    src={memberData.photo || memberData.image || '/assets/images/staff/placeholder.jpg'}
+                    src={
+                      memberData.photo ||
+                      memberData.image ||
+                      '/assets/images/staff/placeholder.jpg'
+                    }
                     loading="lazy"
                     decoding="async"
                     alt={
@@ -71,7 +77,9 @@ const StaffSection = () => {
                   </p>
                   {/* on mobile - only display first / main role*/}
                   {(memberData.roles?.[0] || memberData.role) && (
-                    <p className="text-sm">{memberData.roles?.[0] || memberData.role}</p>
+                    <p className="text-sm">
+                      {memberData.roles?.[0] || memberData.role}
+                    </p>
                   )}
                   <p className="text-sm">{memberData.email}</p>
                 </div>
@@ -83,7 +91,7 @@ const StaffSection = () => {
             </div>
 
             {/* desktop layout */}
-                <div
+            <div
               className={`
     ${outerBg}
     p-6 sm:p-10 md:p-28
@@ -106,9 +114,13 @@ const StaffSection = () => {
                   <div className="rounded-full w-32 h-32 md:w-80 md:h-80 overflow-hidden md:-ml-28">
                     <img
                       src={
-                        memberData.photo || memberData.image || '/assets/images/staff/placeholder.jpg'
+                        memberData.photo ||
+                        memberData.image ||
+                        '/assets/images/staff/placeholder.jpg'
                       }
-                      alt={memberData.imageAlt || `Portrait of ${memberData.name}`}
+                      alt={
+                        memberData.imageAlt || `Portrait of ${memberData.name}`
+                      }
                       className="object-cover w-full h-full rounded-full"
                     />
                   </div>
@@ -117,11 +129,13 @@ const StaffSection = () => {
                     <p className="hidden lg:flex md:text-3xl font-justAnotherHand">
                       {memberData.name}
                     </p>
-                    {(memberData.roles || memberData.charity_role)?.map((role, i) => (
-                      <p key={i} className="text-sm">
-                        {role}
-                      </p>
-                    ))}
+                    {(memberData.roles || memberData.charity_role)?.map(
+                      (role, i) => (
+                        <p key={i} className="text-sm">
+                          {role}
+                        </p>
+                      ),
+                    )}
                     <p className="text-sm">{memberData.email}</p>
                   </div>
                 </div>
