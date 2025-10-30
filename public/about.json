@@ -1,0 +1,20 @@
+{
+  "en": {
+    "title": "About page for english",
+    "description": "Description for about page",
+    "contact_form_settings": {
+      "success_message": "sucess",
+      "error_message": "error"
+    },
+    "contact_info": {
+      "address": "address",
+      "phone": "+2343423423423"
+    }
+  },
+  "no": {
+    "title": "About page for Norsk"
+  },
+  "mg": {
+    "title": "About page for malagasy"
+  }
+}

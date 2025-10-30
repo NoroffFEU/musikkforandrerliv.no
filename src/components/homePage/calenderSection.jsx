@@ -37,7 +37,7 @@ export default function CalenderSection() {
 
       {/* Event List */}
       <div className="w-full flex max-md:flex-col items-center">
-        <div className="flex flex-col w-3/4 gap-2 max-md:hidden ">
+        <div className="flex flex-col w-3/4 gap-2">
           {eventsArray.map((event, index) => (
             <div
               key={index}
