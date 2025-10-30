@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+
 
 /**
  * ContactInfo Component
@@ -10,7 +10,6 @@ import { useTranslation } from 'react-i18next';
  * @returns {JSX.Element} Simple contact information display section
  */
 const ContactInfo = () => {
-  const { t } = useTranslation();
   
   // Simple contact details data to match picture 2
   const contactDetails = [

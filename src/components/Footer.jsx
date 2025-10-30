@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Link, NavLink } from 'react-router-dom';
 
@@ -13,19 +13,10 @@ function Footer() {
   const { t } = useTranslation();
 
   const [email, setEmail] = useState('');
-  const [isBelowMd, setIsBelowMd] = useState(
-    typeof window !== 'undefined' ? window.innerWidth < 768 : true,
-  );
 
   function onEmailSubmit(e) {
     e.preventDefault();
   }
-
-  useEffect(() => {
-    const handleResize = () => setIsBelowMd(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <footer className="font-sans">

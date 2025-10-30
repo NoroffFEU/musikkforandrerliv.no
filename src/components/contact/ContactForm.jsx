@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import { useTranslation } from 'react-i18next';
 
 /**
  * ContactForm Component
@@ -14,7 +13,7 @@ import { useTranslation } from 'react-i18next';
  * @returns {JSX.Element} Contact form with validation and accessibility features
  */
 const ContactForm = ({ onSubmit }) => {
-  const { t } = useTranslation();
+
 
   // Form state
   const [formData, setFormData] = useState({
