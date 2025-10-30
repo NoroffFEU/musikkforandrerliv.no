@@ -7,46 +7,83 @@ import { RiFacebookBoxLine, RiInstagramLine } from 'react-icons/ri';
 
 import Button from './Button';
 import SelectLanguageButton from './lang/select-language-button';
+import showMessage from './showMessage';
 import Logo from '/assets/placeholder-images/logo.png';
 
 function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
+  // ===== UI-state =====
   const [email, setEmail] = useState('');
+  const [isBelowMd, setIsBelowMd] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < 768 : true,
+  );
 
   function onEmailSubmit(e) {
     e.preventDefault();
   }
 
+  useEffect(() => {
+    const handleResize = () => setIsBelowMd(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <footer className="font-sans">
-      {/* ───────── Newsletter ───────── */}
       <section className="w-full bg-[var(--color-sunset-red)] px-6 py-16 flex flex-col items-center justify-center text-center text-black">
         <div className="max-w-[720px] w-full grid gap-6">
           <h3 className="text-[32px] font-semibold">
-            {t('common.newsletter.title') || 'Subscribe to our newsletter!'}
+            {t('common.newsletter.title') || 'Sign up for our newsletter!'}
           </h3>
+
           <p className="leading-relaxed text-base md:text-lg">
             {t('common.newsletter.description') ||
-              'Join our newsletter today to stay updated on our events and projects!'}
+              'Join our newsletter today to get the latest updates on our events and projects!'}
           </p>
+
           <form
             onSubmit={onEmailSubmit}
             className="mt-4 flex flex-col sm:flex-row items-stretch justify-center gap-4"
+            noValidate
           >
             <input
               type="email"
+              inputMode="email"
+              autoComplete="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (status) {
+                  setStatus(null);
+                  setMessage('');
+                }
+              }}
               placeholder="example@example.com"
-              className="h-[49px] md:h-[57px] w-full sm:w-[320px] rounded-lg border border-gray-200 bg-white px-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--color-hover-red)]"
+              className={[
+                'h-[49px] md:h-[57px] w-full sm:w-[320px] rounded-lg border bg-white px-4',
+                'text-gray-900 placeholder-gray-500 border-gray-200',
+                'focus:outline-none focus:ring-2 focus:ring-[var(--color-dark-green)]',
+              ].join(' ')}
               required
+              aria-invalid={status === 'error'}
+              aria-describedby="newsletter-feedback"
             />
+
             <button
               type="submit"
-              className="h-[49px] md:h-[57px] w-full sm:w-[160px] rounded-lg bg-white text-[var(--color-sunset-red)] text-xl font-semibold transition-colors hover:bg-[var(--color-hover-red)] hover:text-white focus:ring-2 focus:ring-white"
+              disabled={loading}
+              aria-busy={loading}
+              className="h-[49px] md:h-[57px] w-full sm:w-[160px] rounded-lg bg-white text-[var(--color-sunset-red)] text-xl font-semibold transition-colors hover:bg-[var(--color-hover-red)] hover:text-white focus:ring-2 focus:ring-white disabled:opacity-60"
             >
-              {t('common.buttons.signUp') || 'Sign Up'}
+              {loading ? (
+                <span className="inline-flex items-center justify-center gap-2">
+                  <span className="h-4 w-4 rounded-full border-2 border-[var(--color-sunset-red)] border-t-transparent animate-spin" />
+                  Loading...
+                </span>
+              ) : (
+                t('common.buttons.signUp') || 'Sign up'
+              )}
             </button>
           </form>
         </div>
@@ -168,10 +205,10 @@ function Footer() {
             </nav>
 
             {/* Donate + Follow — desktop only (no Language here) */}
-            <div className="hidden md:flex md:col-span-3 md:justify-self-end flex-col items-center gap-8">
+            <div className="hidden md:flex md:col-span-3 md:justify-self-end flex-col items-center gap-8 w-full">
               <NavLink
                 to="/support"
-                className="w-[240px] text-center bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-3 font-bold uppercase tracking-wide text-white text-2xl rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="w-full text-center bg-[var(--color-sunset-red)] hover:bg-[var(--color-hover-red)] py-3 font-bold uppercase tracking-wide text-white text-2xl rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 {t('common.buttons.donate') || 'Donate'}
               </NavLink>
@@ -222,10 +259,13 @@ function Footer() {
       <section className="w-full bg-[var(--color-dark-green)] text-white">
         <div className="mx-auto max-w-[1200px] px-6 md:px-10 pt-4 pb-8 flex flex-col items-center gap-3">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 whitespace-nowrap text-sm md:text-base">
-            <Link to="#" className="underline hover:text-gray-300">
+            <Link
+              to="/privacy-policy"
+              className="underline hover:text-gray-300"
+            >
               {t('common.footer.privacyPolicy') || 'Privacy Policy'}
             </Link>
-            <Link to="#" className="underline hover:text-gray-300">
+            <Link to="/tos" className="underline hover:text-gray-300">
               {t('common.footer.termsAndConditions') || 'Terms and Conditions'}
             </Link>
           </div>
