@@ -23,7 +23,7 @@ export default function CalenderSection() {
       dateEn: new Date(event.dateEn),
     }));
     setEvents(formattedEvents);
-  }, [t]);
+  }, [t, eventsArray]);
 
   return (
     <section

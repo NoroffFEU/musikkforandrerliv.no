@@ -48,7 +48,7 @@ const exampleForm = () => (
       className="bg-white lg:w-[350px] rounded-[7px] p-2 placeholder:px-3 border-2"
       placeholder="eighth thing"
     />
-    <label className="col-span-2 flex justify-center" for="input">
+   <label className="col-span-2 flex justify-center" htmlFor="input">
       <input id="input" type="radio" />
       By clicking submit, you give me your SOUL!
     </label>

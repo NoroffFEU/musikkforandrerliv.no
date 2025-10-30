@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Link, NavLink } from 'react-router-dom';
 
@@ -15,90 +15,14 @@ function Footer() {
 
   // ===== UI-state =====
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState(null); // 'error' | 'success' | null
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  // ===== Submit =====
-  async function onEmailSubmit(e) {
-    e.preventDefault();
-    setStatus(null);
-    setMessage('');
-
-    // E-mail validation
-    const value = email.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!value || !emailRegex.test(value)) {
-      setStatus('error');
-      setMessage('Please enter a valid email address.');
-      showMessage(message, status);
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-        // ===== Back-end function needed for API call =====
-      const res = await fetch('/.netlify/functions/newsletter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          firstName: '',
-          lastName: '',
-          lang: i18n?.language || 'en',
-        }),
-      });
-      const data = await res.json().catch(() => ({}));
-
-      if (res.ok && data.status !== 'error') {
-        const already =
-          data.status === 'already_subscribed' ||
-          data.error?.includes('Member Exists');
-        setStatus('success');
-        setMessage(
-          already
-            ? 'You are already subscribed.'
-            : 'Thank you! Please check your email to confirm your subscription.',
-        );
-        setEmail('');
-      } else {
-        setStatus('error');
-        setMessage(
-          data.error ||
-            data.message ||
-            'Something went wrong. Please try again.',
-        );
-      }
-    } catch (error) {
-      setStatus('error');
-      setMessage(error.message || 'Something went wrong. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-
-    // ===== Fake send for testing =====
-    // await new Promise((r) => setTimeout(r, 600));
-    // setStatus('success');
-    // setMessage(
-    //   'Thank you! Please check your email to confirm your subscription.',
-    // );
-    // setEmail('');
-    // setLoading(false);
-    return;
-  }
-
-  useEffect(() => {
-    if (status && message) {
-      showMessage(message, status);
-    }
-  }, [status, message]);
-
   const [isBelowMd, setIsBelowMd] = useState(
     typeof window !== 'undefined' ? window.innerWidth < 768 : true,
   );
+
+  function onEmailSubmit(e) {
+    e.preventDefault();
+  }
+
   useEffect(() => {
     const handleResize = () => setIsBelowMd(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);
