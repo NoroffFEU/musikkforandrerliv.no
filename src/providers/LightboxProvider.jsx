@@ -1,53 +1,65 @@
-import React, { createContext, useCallback, useState } from 'react';
-
+import React, { useCallback, useEffect, useState } from 'react';
+import LightboxContext from './lightbox-context';
 import Lightbox from '../components/Lightbox';
 
-export const LightboxContext = createContext(null);
-
-export const LightboxProvider = ({ children }) => {
+const LightboxProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openLightbox = useCallback((imageArray, initialIndex = 0) => {
+  const openLightbox = useCallback((imageArray = [], initialIndex = 0) => {
+    if (!Array.isArray(imageArray) || imageArray.length === 0) return;
+    const safeIndex = Math.min(Math.max(0, initialIndex), imageArray.length - 1);
     setImages(imageArray);
-    setCurrentIndex(initialIndex);
+    setCurrentIndex(safeIndex);
     setIsOpen(true);
-    document.body.style.overflow = 'hidden';
   }, []);
 
   const closeLightbox = useCallback(() => {
     setIsOpen(false);
-    document.body.style.overflow = '';
   }, []);
 
   const goToNext = useCallback(() => {
-    if (!images.length) return;
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+    setCurrentIndex((prev) =>
+      images.length ? (prev + 1) % images.length : 0
     );
-  }, [images]);
+  }, [images.length]);
 
   const goToPrevious = useCallback(() => {
-    if (!images.length) return;
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
+    setCurrentIndex((prev) =>
+      images.length ? (prev - 1 + images.length) % images.length : 0
     );
-  }, [images]);
+  }, [images.length]);
+
+  // Lock body scroll while the lightbox is open
+  useEffect(() => {
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow || '';
+    };
+  }, [isOpen]);
+
+  const value = {
+    isOpen,
+    openLightbox,
+    closeLightbox,
+    currentIndex,
+    goToNext,
+    goToPrevious,
+    images,
+    setCurrentIndex, // optional if consumers need direct control
+  };
 
   return (
-    <LightboxContext.Provider
-      value={{
-        isOpen,
-        openLightbox,
-        closeLightbox,
-        currentIndex,
-        goToNext,
-        goToPrevious,
-      }}
-    >
+    <LightboxContext.Provider value={value}>
       {children}
       {isOpen && <Lightbox images={images} currentIndex={currentIndex} />}
     </LightboxContext.Provider>
   );
 };
+
+export { LightboxProvider };
+export default LightboxProvider;
+export { LightboxContext } from './lightbox-context';

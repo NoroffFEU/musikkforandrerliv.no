@@ -48,8 +48,8 @@ const exampleForm = () => (
       className="bg-white lg:w-[350px] rounded-[7px] p-2 placeholder:px-3 border-2"
       placeholder="eighth thing"
     />
-    <label className="col-span-2 flex justify-center" for="input">
-      <input id="input" type="radio" />
+  <label className="col-span-2 flex justify-center" htmlFor="support-input">
+     <input id="support-input" type="radio" name="support-choice" />
       By clicking submit, you give me your SOUL!
     </label>
     <button className="uppercase text-white font-bold bg-[var(--color-sunset-red)] py-3 px-6 rounded-[9px] cursor-pointer col-span-2 text-center mx-auto">

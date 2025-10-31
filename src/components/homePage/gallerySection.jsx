@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next'; // unused
 
 import data from '../../data/landing-page-content.json';
-import ImagePreview from '../galleryPage/ImagePreview';
+// import ImagePreview from '../galleryPage/ImagePreview'; // not used
 
 export function GallerySection() {
   const { image: galleryImages = [] } = data.gallery || {};
 
   const [isMobile, setIsMobile] = useState(false);
-  const { t } = useTranslation();
+// no translations used here
 
   // Check screen width for mobile responsiveness
   useEffect(() => {
