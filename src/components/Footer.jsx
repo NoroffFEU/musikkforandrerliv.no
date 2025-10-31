@@ -96,15 +96,6 @@ function Footer() {
     }
   }, [status, message]);
 
-  const [isBelowMd, setIsBelowMd] = useState(
-    typeof window !== 'undefined' ? window.innerWidth < 768 : true,
-  );
-  useEffect(() => {
-    const handleResize = () => setIsBelowMd(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <footer className="font-sans">
       <section className="w-full bg-[var(--color-sunset-red)] px-6 py-16 flex flex-col items-center justify-center text-center text-black">

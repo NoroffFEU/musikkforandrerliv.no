@@ -1,7 +1,4 @@
 import { Suspense, lazy } from 'react';
-
-import { useTranslation } from 'react-i18next';
-
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import { HeroSection } from '../components/homePage/heroSection';
 import WorkSection from '../components/homePage/workSection';
@@ -44,7 +41,7 @@ const CalenderSection = safeLazy(
 );
 
 const Home = () => {
-  const { t } = useTranslation();
+ // const { t } = useTranslation(); // not used
 
   return (
     <ErrorBoundary>
