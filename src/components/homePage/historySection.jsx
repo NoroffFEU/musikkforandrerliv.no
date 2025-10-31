@@ -61,7 +61,7 @@ export function HistorySection() {
         </div>
 
         <img
-          src="../../../public/assets/placeholder-images/history.webp"
+          src="/assets/placeholder-images/history.webp"
           alt="History of MMF"
           className="mx-auto w-full h-auto object-cover"
         />
