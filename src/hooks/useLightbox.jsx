@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { LightboxContext } from '../providers/LightboxProvider';
+import { LightboxContext } from '../providers/lightbox-context';
 
 /**
  * Hook to use the lightbox context
