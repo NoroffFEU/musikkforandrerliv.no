@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 
 import { IoIosArrowBack, IoIosArrowForward, IoMdClose } from 'react-icons/io';
 
-import { LightboxContext } from '../providers/LightboxProvider';
+import { LightboxContext } from '../providers/lightbox-context';
 
 const Lightbox = ({ images, currentIndex }) => {
   const { closeLightbox, goToNext, goToPrevious } = useContext(LightboxContext);

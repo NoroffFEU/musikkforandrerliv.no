@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import { useTranslation } from 'react-i18next';
-
 import data from '../../data/landing-page-content.json';
-import ImagePreview from '../galleryPage/ImagePreview';
 
 export function GallerySection() {
   const { image: galleryImages = [] } = data.gallery || {};
 
   const [isMobile, setIsMobile] = useState(false);
-  const { t } = useTranslation();
 
   // Check screen width for mobile responsiveness
   useEffect(() => {

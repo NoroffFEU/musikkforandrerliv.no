@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './index.css';
-import { LightboxProvider } from './providers/LightboxProvider';
+import LightboxProvider from './providers/LightboxProvider';
 import AppRoutes from './routes';
 
 const App = () => {

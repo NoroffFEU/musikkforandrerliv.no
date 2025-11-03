@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
 import { Link, NavLink } from 'react-router-dom';
-
 import { useTranslation } from 'react-i18next';
 import { RiFacebookBoxLine, RiInstagramLine } from 'react-icons/ri';
 
@@ -30,20 +28,19 @@ function Footer() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!value || !emailRegex.test(value)) {
       setStatus('error');
-      setMessage('Please enter a valid email address.');
-      showMessage(message, status);
+      const msg = 'Please enter a valid email address.';
+      setMessage(msg);
+      showMessage(msg, 'error');
       return;
     }
 
     setLoading(true);
 
     try {
-        // ===== Back-end function needed for API call =====
+      // ===== Back-end function needed for API call =====
       const res = await fetch('/.netlify/functions/newsletter', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
           firstName: '',
@@ -57,37 +54,25 @@ function Footer() {
         const already =
           data.status === 'already_subscribed' ||
           data.error?.includes('Member Exists');
+        const msg = already
+          ? 'You are already subscribed.'
+          : 'Thank you! Please check your email to confirm your subscription.';
         setStatus('success');
-        setMessage(
-          already
-            ? 'You are already subscribed.'
-            : 'Thank you! Please check your email to confirm your subscription.',
-        );
+        setMessage(msg);
         setEmail('');
       } else {
+        const msg =
+          data.error || data.message || 'Something went wrong. Please try again.';
         setStatus('error');
-        setMessage(
-          data.error ||
-            data.message ||
-            'Something went wrong. Please try again.',
-        );
+        setMessage(msg);
       }
     } catch (error) {
+      const msg = error.message || 'Something went wrong. Please try again.';
       setStatus('error');
-      setMessage(error.message || 'Something went wrong. Please try again.');
+      setMessage(msg);
     } finally {
       setLoading(false);
     }
-
-    // ===== Fake send for testing =====
-    // await new Promise((r) => setTimeout(r, 600));
-    // setStatus('success');
-    // setMessage(
-    //   'Thank you! Please check your email to confirm your subscription.',
-    // );
-    // setEmail('');
-    // setLoading(false);
-    return;
   }
 
   useEffect(() => {
@@ -95,15 +80,6 @@ function Footer() {
       showMessage(message, status);
     }
   }, [status, message]);
-
-  const [isBelowMd, setIsBelowMd] = useState(
-    typeof window !== 'undefined' ? window.innerWidth < 768 : true,
-  );
-  useEffect(() => {
-    const handleResize = () => setIsBelowMd(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <footer className="font-sans">
@@ -226,10 +202,7 @@ function Footer() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 sm:gap-x-32 text-left w-full">
                 <ul className="flex flex-col gap-8 text-xl sm:text-2xl ml-2 md:ml-0">
                   <li>
-                    <Link
-                      to="/about"
-                      className="hover:underline hover:text-gray-300"
-                    >
+                    <Link to="/about" className="hover:underline hover:text-gray-300">
                       {t('common.footer.aboutUs') || 'About Us'}
                     </Link>
                   </li>
@@ -253,26 +226,17 @@ function Footer() {
 
                 <ul className="flex flex-col gap-8 text-xl sm:text-2xl ml-2 md:ml-0">
                   <li>
-                    <Link
-                      to="/#gallerySection"
-                      className="hover:underline hover:text-gray-300"
-                    >
+                    <Link to="/#gallerySection" className="hover:underline hover:text-gray-300">
                       {t('common.footer.gallery') || 'Gallery'}
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/work"
-                      className="hover:underline hover:text-gray-300"
-                    >
+                    <Link to="/work" className="hover:underline hover:text-gray-300">
                       {t('common.footer.ourWork') || 'Our work'}
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/contact"
-                      className="hover:underline hover:text-gray-300"
-                    >
+                    <Link to="/contact" className="hover:underline hover:text-gray-300">
                       {t('common.footer.contactUs') || 'Contact Us'}
                     </Link>
                   </li>
@@ -335,10 +299,7 @@ function Footer() {
       <section className="w-full bg-[var(--color-dark-green)] text-white">
         <div className="mx-auto max-w-[1200px] px-6 md:px-10 pt-4 pb-8 flex flex-col items-center gap-3">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 whitespace-nowrap text-sm md:text-base">
-            <Link
-              to="/privacy-policy"
-              className="underline hover:text-gray-300"
-            >
+            <Link to="/privacy-policy" className="underline hover:text-gray-300">
               {t('common.footer.privacyPolicy') || 'Privacy Policy'}
             </Link>
             <Link to="/tos" className="underline hover:text-gray-300">
